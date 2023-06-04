@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>15. Video &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="16. Edit Subtitles" href="texttrack.html" />
+    <link rel="prev" title="14. Screenshot" href="photograph.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Video</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#index-0">15.1. Record</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#index-1">15.2. look</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">15. </span>Video</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man5/videorec.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">15. </span>Video</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<p>With this application, you can shoot not only still images by screenshots, but also movies of the WebGL screen.</p>
+<p>Of course, it can be used not only for each OS version but also for the web application version.</p>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id4">Video</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-0" id="id5">Record</a></p></li>
+<li><p><a class="reference internal" href="#index-1" id="id6">look</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="index-0">
+<span id="id2"></span><h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">15.1. </span>Record</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Although the standard functions of the browser are used, the following browsers are recommended for stable operation.</p>
+<ul class="simple">
+<li><p>Chrome</p></li>
+<li><p>Edge (Chromium version)</p></li>
+</ul>
+<p>There are no restrictions for the PC version.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click the record button under <code class="docutils literal notranslate"><span class="pre">Record</span></code> in the Screen tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/photograph_4.png" class="align-center" src="../_images/photograph_4.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Play the action or animation you want to include in your video.</p></li>
+</ol>
+<img alt="../_images/photograph_5.png" class="align-center" src="../_images/photograph_5.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All actions on the WebGL screen are recorded. (Because settings such as IK marker on/off are recorded as they are, please turn them off in advance.)</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Click the Stop button.</p></li>
+</ol>
+<img alt="../_images/photograph_6.png" class="align-center" src="../_images/photograph_6.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If you start and stop recording even once, you will be able to press the download button.</p>
+<img alt="../_images/photograph_7.png" class="align-center" src="../_images/photograph_7.png" />
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Mute video audio</p>
+<img alt="../_images/photograph_c.png" class="align-center" src="../_images/photograph_c.png" />
+<p>When recording with this app, you can also record audio. In the future, we plan to support narration by voice synthesis. In general, it can also be used for the purpose of recording sound effects, etc. However, there may be times when you don’t want to add sound unnecessarily because you don’t have a microphone or you’re not feeling well.</p>
+<p>In such a case, you can switch between activating and muting the audio by pressing this button.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-1">
+<span id="id3"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">15.2. </span>look</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<p>This application has a built-in video player, so you can immediately check the video recorded by the application.</p>
+<img alt="../_images/photograph_8.png" class="align-center" src="../_images/photograph_8.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Click the “Video player” button on the screen tab of the ribbon bar.</p>
+<img alt="../_images/photograph_9.png" class="align-center" src="../_images/photograph_9.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><img alt="appvideo" src="../_images/photograph_a.png" /> Loads videos recorded with the app. The content will be rewritten each time you record, so save it if you want to see it forever.</p>
+<p><img alt="localvideo" src="../_images/photograph_b.png" /> Loads a video file on the device. Supported formats follow the specifications of the video element of each browser. Only <code class="docutils literal notranslate"><span class="pre">.webm</span></code> and <code class="docutils literal notranslate"><span class="pre">.mp4</span></code> can be opened as apps.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can also use the <a class="reference internal" href="texttrack.html"><span class="doc">Edit Subtitles</span></a> feature described later.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="photograph.html" class="btn btn-neutral float-left" title="14. Screenshot" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="texttrack.html" class="btn btn-neutral float-right" title="16. Edit Subtitles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.2. VRoid/VRM &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.3. OtherObject" href="prop_obj.html" />
+    <link rel="prev" title="9.1. Common" href="prop_common.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object_about.html">8. Usable object</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="property.html">9. Property list</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="prop_common.html">9.1. Common</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.2. VRoid/VRM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ik">9.2.1. IK、Body</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-6">9.2.2. Arm, Hand</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">9.2.2.1. Manual operation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-7">9.2.3. BlendShape</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#index-8">9.2.3.1. Automatic blink</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-9">9.2.4. wearing an object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">9.2.5. Texture</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="prop_obj.html">9.3. OtherObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_light.html">9.4. Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_camera.html">9.5. Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_effect.html">9.6. Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_image.html">9.7. Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_text.html">9.8. Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_uimage.html">9.9. UImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_stage.html">9.10. Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_syseffect.html">9.11. SystemEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_audio.html">9.12. Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="property.html"><span class="section-number">9. </span>Property list</a> &raquo;</li>
+      <li><span class="section-number">9.2. </span>VRoid/VRM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man2/prop_vrm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vroid-vrm">
+<span id="index-0"></span><h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">9.2. </span>VRoid/VRM</a><a class="headerlink" href="#vroid-vrm" title="Permalink to this heading"></a></h1>
+<p>This is a property that can be used with VRoid/VRM.</p>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#vroid-vrm" id="id7">VRoid/VRM</a></p>
+<ul>
+<li><p><a class="reference internal" href="#ik" id="id8">IK、Body</a></p></li>
+<li><p><a class="reference internal" href="#index-6" id="id9">Arm, Hand</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id10">Manual operation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-7" id="id11">BlendShape</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-8" id="id12">Automatic blink</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-9" id="id13">wearing an object</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id14">Texture</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<span class="target" id="index-1"></span><span class="target" id="index-2"></span><span class="target" id="index-3"></span><span class="target" id="index-4"></span><section id="ik">
+<span id="index-5"></span><h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">9.2.1. </span>IK、Body</a><a class="headerlink" href="#ik" title="Permalink to this heading"></a></h2>
+<img alt="../_images/prop_vrm_1.png" class="align-center" src="../_images/prop_vrm_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Properties related to IK (mechanism for manipulating each part of the VRoid/VRM body).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Positioning mode<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Switch to the mode that moves and rotates the entire VRoid/VRM at once. You can also move and rotate each IK part while this is enabled.</p>
+</dd>
+<dt class="field-even">Batch change of IK position<span class="colon">:</span></dt>
+<dd class="field-even"><p>Displays a window that allows you to specify the position and rotation of IK parts in a spreadsheet format.</p>
+</dd>
+<dt class="field-odd">Gravity settings<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the gravity for the bones that VRM has as standard.</p>
+</dd>
+<dt class="field-even">Assign the IK marker<span class="colon">:</span></dt>
+<dd class="field-even"><p>Switch the VRM’s IK markers to another object.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Assign the IK marker</dt><dd><dl class="simple">
+<dt>IK marker in body:</dt><dd><p>Select the part of the IK marker to be switched.</p>
+</dd>
+<dt>Assigning role:</dt><dd><p>Select which objects to assign as IK markers for the selected part.</p>
+</dd>
+<dt>Reset:</dt><dd><p>Reverts the IK markers back to their original markers.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-6">
+<span id="id1"></span><h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">9.2.2. </span>Arm, Hand</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
+<img alt="../_images/prop_vrm_2.png" class="align-center" src="../_images/prop_vrm_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Right hand left hand:</strong></p>
+<dl class="field-list simple">
+<dt class="field-odd">combo box<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Switch between manual operation, open, normal, close, pointing, V sign, thumbs up, and grasp.</p>
+</dd>
+<dt class="field-even">Slider<span class="colon">:</span></dt>
+<dd class="field-even"><p>Specifies the degree of change of the pose specified in the combo box.</p>
+</dd>
+</dl>
+<section id="id2">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">9.2.2.1. </span>Manual operation</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<p>Introduced from ver 1.0.4. You can edit the pose of the palm in detail by rotating each finger of the hand.</p>
+<img alt="../_images/prop_vrm_8.png" class="align-center" src="../_images/prop_vrm_8.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>When <code class="docutils literal notranslate"><span class="pre">manual</span> <span class="pre">operation</span></code> is selected, the UI will be displayed. The finger UI mimics a real palm and fingers.</p>
+</section>
+</section>
+<section id="index-7">
+<span id="id3"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">9.2.3. </span>BlendShape</a><a class="headerlink" href="#index-7" title="Permalink to this heading"></a></h2>
+<p>This is an item for finely adjusting the facial expressions of the VRoid/VRM.</p>
+<img alt="../_images/prop_vrm_4.png" class="align-center" src="../_images/prop_vrm_4.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>VRoid/VRM has two types of blendshapes. The Unity meaning and how to capture it in this application are classified as follows.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Unity</p></th>
+<th class="head"><p>VRM version</p></th>
+<th class="head"><p>This app(1.x)</p></th>
+<th class="head"><p>This app(2.x)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SkinnedMeshRenderer</p></td>
+<td><p>0.x/1.x</p></td>
+<td><p>Generic</p></td>
+<td><p>Dedicated</p></td>
+</tr>
+<tr class="row-odd"><td><p>VRMBlendShapeProxy</p></td>
+<td><p>0.x</p></td>
+<td><p>Dedicated</p></td>
+<td><p>Deprecated</p></td>
+</tr>
+<tr class="row-even"><td><p>VRM10RuntimeExpression</p></td>
+<td><p>1.x</p></td>
+<td><p>Dedicated</p></td>
+<td><p>Common</p></td>
+</tr>
+</tbody>
+</table>
+<p>The naming convention for the SkinnedMeshRenderer’s blendshapes is roughly determined as follows. Please note that the actual number varies depending on the character.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Key</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>~Fcl_All_~</p></td>
+<td><p>Move all facial parts</p></td>
+</tr>
+<tr class="row-odd"><td><p>~Fcl_BRW_~</p></td>
+<td><p>Move eyebrows</p></td>
+</tr>
+<tr class="row-even"><td><p>~Fcl_EYE_~</p></td>
+<td><p>Move your eyes</p></td>
+</tr>
+<tr class="row-odd"><td><p>~Fcl_MTH_~</p></td>
+<td><p>Move mouth</p></td>
+</tr>
+<tr class="row-even"><td><p>~Fcl_HA_~</p></td>
+<td><p>Move teeth</p></td>
+</tr>
+<tr class="row-odd"><td><p>~Other~</p></td>
+<td><p>Move parts that do not apply to the above</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>For VRM made by VRoidStudio.</p></li>
+<li><p>In this application, for the sake of clarity, the prefixes of the original blendshapes are all hidden. note that.</p></li>
+<li><p>In addition, I think that it is easy to find blendshapes in other apps if you use the above as a mark.</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to VRM 1.x specifications, Expression and BlendShape behave differently. See <a class="reference internal" href="operation_vrm.html#blendshape-vrm"><span class="std std-ref">BlendShape</span></a> for details.</p>
+<p>With plain VRM1.x, the following BlendShapes tend not to work.</p>
+<ul class="simple">
+<li><p>Emotions (Type where eyebrows, eyes, and mouth all move, such as Fcl_All)</p></li>
+<li><p>mouth</p></li>
+<li><p>etc</p></li>
+</ul>
+<p>Since this application cannot determine which blend shape of which VRM is stuck, the function has been moved to the new method “Expression”. (with original repairs)</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="index-8">
+<span id="id4"></span><h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">9.2.3.1. </span>Automatic blink</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h3>
+<p>Make the VRoid/VRM facial expressions blink automatically.</p>
+<img alt="../_images/prop_vrm_3.png" class="align-center" src="../_images/prop_vrm_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Enable Auto Blink<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Toggles automatic blinking on and off. Default is on.</p>
+</dd>
+<dt class="field-even">Blink interval<span class="colon">:</span></dt>
+<dd class="field-even"><p>Blink at intervals of this number of seconds.</p>
+</dd>
+<dt class="field-odd">Seconds to open eyelids<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Take this number of seconds to open your eyelids.</p>
+</dd>
+<dt class="field-even">Seconds to close the eyelids<span class="colon">:</span></dt>
+<dd class="field-even"><p>Take this number of seconds to open your eyelids.</p>
+</dd>
+<dt class="field-odd">Time when eyelids are closed<span class="colon">:</span></dt>
+<dd class="field-odd"><p>VRM has closed its eyelids for this few seconds.</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="index-9">
+<span id="id5"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">9.2.4. </span>wearing an object</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h2>
+<p>This is a list of functions that link different objects with the movement of each part of the VRoid/VRM.</p>
+<img alt="../_images/prop_vrm_5.png" class="align-center" src="../_images/prop_vrm_5.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>You can attach objects to the following parts of your body. There is no limit to how many you can wear.</p>
+<dl class="field-list simple">
+<dt class="field-odd">combo box<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Select the parts you want to equip.</p>
+</dd>
+<dt class="field-even">Equipment button<span class="colon">:</span></dt>
+<dd class="field-even"><p>Shows the attach object dialog.</p>
+</dd>
+<dt class="field-odd">Current equipment column<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Unequip it with the delete button on the far right.</p>
+<ul class="simple">
+<li><p>Hip, left thigh, right thigh, left lower leg, right lower leg, left leg, right leg</p></li>
+<li><p>spine, chest, neck, head</p></li>
+<li><p>Left shoulder, right shoulder, left upper arm, right upper arm</p></li>
+<li><p>left forearm, right forearm, left hand, right hand, upper chest</p></li>
+</ul>
+</dd>
+</dl>
+<img alt="../_images/prop_vrm_6.png" class="align-left" src="../_images/prop_vrm_6.png" />
+<dl class="field-list simple">
+<dt class="field-odd">ID<span class="colon">:</span></dt>
+<dd class="field-odd"><p>ID of the object.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p>The type of object.</p>
+</dd>
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the object.</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<p>Select the object you want to equip and press the “OK” button to equip it.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id6">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">9.2.5. </span>Texture</a><a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<img alt="../_images/prop_obj_1.png" class="align-center" src="../_images/prop_obj_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>This is a property related to textures owned by VRM. If there are multiple textures or materials, you can select them from the combo box. The number of textures that can be detected depends on the actual VRM.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Material name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the material held by the currently selected texture.</p>
+</dd>
+<dt class="field-even">Shader<span class="colon">:</span></dt>
+<dd class="field-even"><p>Switch the shader to Unity’s Standard, VRM’s VRM/MToon, or StandardAsset’s Water (FX/Water4).</p>
+</dd>
+</dl>
+<p>You can change the settings of the following shaders. For details, please refer to Unity Help.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Standard<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Color, Blend Mode, Metallic, Glossy, Emission Color, Texture</p>
+</dd>
+<dt class="field-even">VRM/MToon<span class="colon">:</span></dt>
+<dd class="field-even"><p>Colors, Blending Modes, Culling Modes, Metallic, Glossy, Emission Color, Shade Color, Shading Toony, Rim Color, Rim fresnel power, SrcBlend, DstBlend, Texture</p>
+</dd>
+<dt class="field-odd">Water<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Fresnel scale, reflection color, specular color, wave amplitude, wave frequency, wave steepness, wave velocity, wave direction AB, wave direction CD</p>
+</dd>
+<dt class="field-even">Sketch<span class="colon">:</span></dt>
+<dd class="field-even"><p>Outline width、Stroke density、Add brightness、Mult brightness、Shadow brightness</p>
+</dd>
+<dt class="field-odd">PostSketch<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Outline width、Stroke density、Add brightness、Mult brightness</p>
+</dd>
+<dt class="field-even">Comic<span class="colon">:</span></dt>
+<dd class="field-even"><p>enableTexTransparent, Line width, Color, Tone threshold</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>It is the same as setting the texture of OtherObject described later.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Some shaders are not suitable for VRM. Please use with caution as it may change differently than expected.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="prop_common.html" class="btn btn-neutral float-left" title="9.1. Common" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prop_obj.html" class="btn btn-neutral float-right" title="9.3. OtherObject" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9.1. Common &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.2. VRoid/VRM" href="prop_vrm.html" />
+    <link rel="prev" title="9. Property list" href="property.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object_about.html">8. Usable object</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="property.html">9. Property list</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.1. Common</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#d">9.1.1. Common (3D model)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#index-2">9.1.1.1. Jump (common)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index-3">9.1.1.2. Linear sway (common)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index-4">9.1.1.3. Random shaking (common)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-5">9.1.2. Common (2D model)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="prop_vrm.html">9.2. VRoid/VRM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_obj.html">9.3. OtherObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_light.html">9.4. Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_camera.html">9.5. Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_effect.html">9.6. Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_image.html">9.7. Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_text.html">9.8. Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_uimage.html">9.9. UImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_stage.html">9.10. Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_syseffect.html">9.11. SystemEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_audio.html">9.12. Audio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="property.html"><span class="section-number">9. </span>Property list</a> &raquo;</li>
+      <li><span class="section-number">9.1. </span>Common</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man2/prop_common.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="index-0">
+<span id="id1"></span><h1><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">9.1. </span>Common</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#index-0" id="id6">Common</a></p>
+<ul>
+<li><p><a class="reference internal" href="#d" id="id7">Common (3D model)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-2" id="id8">Jump (common)</a></p></li>
+<li><p><a class="reference internal" href="#index-3" id="id9">Linear sway (common)</a></p></li>
+<li><p><a class="reference internal" href="#index-4" id="id10">Random shaking (common)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-5" id="id11">Common (2D model)</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="d">
+<span id="index-1"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">9.1.1. </span>Common (3D model)</a><a class="headerlink" href="#d" title="Permalink to this heading"></a></h2>
+<p>This is a transformation property that can be used in common for 3D models.</p>
+<img alt="../_images/prop_common_1.png" class="align-center" src="../_images/prop_common_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">position<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the X, Y, and Z coordinates respectively.</p>
+</dd>
+<dt class="field-even">rotation<span class="colon">:</span></dt>
+<dd class="field-even"><p>Set the X, Y, and Z coordinates respectively. When <code class="docutils literal notranslate"><span class="pre">Consider</span> <span class="pre">360</span> <span class="pre">degree</span> <span class="pre">rotation</span></code> is turned on, it tries to rotate as much as possible when the rotation angle is reached.</p>
+</dd>
+<dt class="field-odd">Scale<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the magnification for all coordinates. If you turn on <code class="docutils literal notranslate"><span class="pre">Fix</span> <span class="pre">ratio</span></code>, you can fix the X/Y/Z coordinates and only need one input.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Scale is only X/Z coordinates for Stage. Other 3D model objects are X/Y/Z coordinates.</p>
+</div>
+<section id="index-2">
+<span id="id2"></span><h3><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">9.1.1.1. </span>Jump (common)</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">number of times<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Specifies the number of times to jump.</p>
+</dd>
+<dt class="field-even">strength<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sets the strength (the amount added to the current Y-axis).</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In an animation project, if the keyframe interval is too short, it can appear to jump too quickly.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-3">
+<span id="id3"></span><h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">9.1.1.2. </span>Linear sway (common)</a><a class="headerlink" href="#index-3" title="Permalink to this heading"></a></h3>
+<p>This is a setting for the linear shaking animation effect that can be used commonly for 3D models.</p>
+<img alt="../_images/prop_common_3.png" class="align-center" src="../_images/prop_common_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">On<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Enable.</p>
+</dd>
+<dt class="field-even">Position, Rotation, Scale<span class="colon">:</span></dt>
+<dd class="field-even"><p>Type of shaking.</p>
+</dd>
+<dt class="field-odd">X, Y, Z<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Specifies the swing direction.</p>
+</dd>
+<dt class="field-even">Vibration amount<span class="colon">:</span></dt>
+<dd class="field-even"><p>Specifies the number of shakes.</p>
+</dd>
+<dt class="field-odd">Elasticity<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Specifies the upper limit of the bounce range when shaken.</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-4">
+<span id="id4"></span><h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">9.1.1.3. </span>Random shaking (common)</a><a class="headerlink" href="#index-4" title="Permalink to this heading"></a></h3>
+<p>This is a random shaking animation effect setting that can be used commonly for 3D models.</p>
+<img alt="../_images/prop_common_4.png" class="align-center" src="../_images/prop_common_4.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">On<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Enable.</p>
+</dd>
+<dt class="field-even">Position, Rotation, Scale<span class="colon">:</span></dt>
+<dd class="field-even"><p>type of shaking</p>
+</dd>
+<dt class="field-odd">strength<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Specifies the strength of shaking</p>
+</dd>
+<dt class="field-even">Vibration amount<span class="colon">:</span></dt>
+<dd class="field-even"><p>specify the number of swings</p>
+</dd>
+<dt class="field-odd">Randomness<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Specifies the randomness of shaking</p>
+</dd>
+<dt class="field-even">Fade out<span class="colon">:</span></dt>
+<dd class="field-even"><p>Allow it to taper off when the shaking ends. (If it is off, it will end quickly.)</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<div class="line-block">
+<div class="line">Jumps, linear shakes, and random shakes do not work properly in consecutive frames in the animation described later. (due to the specifications of the library used)</div>
+<div class="line">If you really want to use them continuously, be sure to insert a frame of those non-moving operations in between.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="index-5">
+<span id="id5"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">9.1.2. </span>Common (2D model)</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
+<p>This is a transformation property that can be used in common for 2D models.</p>
+<img alt="../_images/prop_common_2.png" class="align-center" src="../_images/prop_common_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">position<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the X and Y coordinates as <strong>percentages</strong>. Therefore, if the screen size changes, the position may shift slightly.</p>
+</dd>
+<dt class="field-even">rotation<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sets the angle of rotation for the Z coordinate only.</p>
+</dd>
+<dt class="field-odd">Size<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Set the X and Y coordinates as the direct drawing area.</p>
+</dd>
+<dt class="field-even">Scale<span class="colon">:</span></dt>
+<dd class="field-even"><p>Set the scale of X coordinate and Y coordinate respectively. Unlike size, this one scales.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="property.html" class="btn btn-neutral float-left" title="9. Property list" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="prop_vrm.html" class="btn btn-neutral float-right" title="9.2. VRoid/VRM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.2. Texture &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10.3. VRoid/VRM" href="operation_vrm.html" />
+    <link rel="prev" title="10.1. Basics of object manipulation" href="operation_initial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">9. Property list</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="operation.html">10. Manipulating Objects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="operation_initial.html">10.1. Basics of object manipulation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.2. Texture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">10.2.1. Manipulating Textures</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">10.2.1.1. Apply to all parts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">10.2.2. Ttexture details</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#standard">10.2.2.1. Standard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vrm10-mtoon10">10.2.2.2. VRM10/MToon10</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#water">10.2.2.3. Water</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sketchpostsketch">10.2.2.4. Sketch / PostSketch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#comic">10.2.2.5. Comic</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ice">10.2.2.6. Ice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pixelizetexture">10.2.2.7. PixelizeTexture</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html">10.3. VRoid/VRM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_obj.html">10.4. OtherObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_light.html">10.5. Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_camera.html">10.6. Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_image.html">10.7. Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_effect.html">10.8. Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_text.html">10.9. Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_uimage.html">10.10. UImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_audio.html">10.11. Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_syseff.html">10.12. SystemEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_stage.html">10.13. Stage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="operation.html"><span class="section-number">10. </span>Manipulating Objects</a> &raquo;</li>
+      <li><span class="section-number">10.2. </span>Texture</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man2/operation_texture.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="index-0"></span><section id="index-1">
+<span id="id1"></span><h1><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">10.2. </span>Texture</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h1>
+<p>Texture settings are common to VRM and OtherObject.</p>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#index-1" id="id9">Texture</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id10">Manipulating Textures</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id3" id="id11">Apply to all parts</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id4" id="id12">Ttexture details</a></p>
+<ul>
+<li><p><a class="reference internal" href="#standard" id="id13">Standard</a></p></li>
+<li><p><a class="reference internal" href="#vrm10-mtoon10" id="id14">VRM10/MToon10</a></p></li>
+<li><p><a class="reference internal" href="#water" id="id15">Water</a></p></li>
+<li><p><a class="reference internal" href="#sketchpostsketch" id="id16">Sketch / PostSketch</a></p></li>
+<li><p><a class="reference internal" href="#comic" id="id17">Comic</a></p></li>
+<li><p><a class="reference internal" href="#ice" id="id18">Ice</a></p></li>
+<li><p><a class="reference internal" href="#pixelizetexture" id="id19">PixelizeTexture</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>Please see each site for detailed explanations.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Standard asset Water</p></td>
+<td><p><a class="reference external" href="https://docs.unity3d.com/ja/2019.1/Manual/HOWTO-Water.html">https://docs.unity3d.com/ja/2019.1/Manual/HOWTO-Water.html</a></p></td>
+</tr>
+<tr class="row-even"><td><p>MToon reference</p></td>
+<td><p><a class="reference external" href="https://virtualcast.jp/wiki/unity/shader/mtoonreference">https://virtualcast.jp/wiki/unity/shader/mtoonreference</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>drawing style shader</p></td>
+<td><p><a class="reference external" href="https://usagi-meteor.booth.pm/items/4453497">https://usagi-meteor.booth.pm/items/4453497</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Comic shader</p></td>
+<td><p><a class="reference external" href="https://booth.pm/ja/items/2138884">https://booth.pm/ja/items/2138884</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ice shader</p></td>
+<td><p><a class="reference external" href="https://booth.pm/ja/items/2138863">https://booth.pm/ja/items/2138863</a></p></td>
+</tr>
+</tbody>
+</table>
+<section id="id2">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">10.2.1. </span>Manipulating Textures</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>You can finely change the settings of the textures held by VRM and OtherObject. Both settings and usage are exactly the same.</p>
+<img alt="../_images/prop_obj_1.png" class="align-center" src="../_images/prop_obj_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li><p>If there are multiple materials, select the target material from the upper combo box.</p></li>
+</ol>
+<p>The contents of the texture settings are switched.</p>
+<ol class="arabic simple" start="2">
+<li><p>Change various settings as you like.</p></li>
+</ol>
+<section id="id3">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">10.2.1.1. </span>Apply to all parts</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<img alt="../_images/prop_obj_3.png" class="align-center" src="../_images/prop_obj_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Basically, it will be set for each material, but if there are many materials or you want to change the appearance of the model all at once, check this option and change the texture setting This will allow you to change them all at the same time.</p>
+<p>Note that you cannot select a material while the checkbox is checked.</p>
+</section>
+</section>
+<section id="id4">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">10.2.2. </span>Ttexture details</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Shader<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Choose one of the following: <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">VRM/MToon</span></code>, <code class="docutils literal notranslate"><span class="pre">VRM10/MToon1</span></code>, <code class="docutils literal notranslate"><span class="pre">Water</span></code>, <code class="docutils literal notranslate"><span class="pre">Sketch</span></code>, <code class="docutils literal notranslate"><span class="pre">PostSketch</span></code>, <code class="docutils literal notranslate"><span class="pre">Comic</span></code>, <code class="docutils literal notranslate"><span class="pre">Ice</span></code></p>
+</dd>
+</dl>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<ul class="simple">
+<li><p>The texture changes are not actually changed only while using this app.</p></li>
+<li><p>The opacity of each color property may not be properly reflected in WebGL. note that.</p></li>
+<li><p>If you have multiple textures (meshes) that use the same material, only the settings of the last texture will be reflected in the final animation project. (e.g. if there are 3 textures using material A, the 3rd setting will be applied last)</p></li>
+<li><p>VRM 0.x models also follow the VRM 1.x specifications when loaded with this app. Therefore, basically use <code class="docutils literal notranslate"><span class="pre">VRM10/MToon10</span></code> shaders.</p></li>
+</ul>
+</div>
+<section id="standard">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">10.2.2.1. </span>Standard</a><a class="headerlink" href="#standard" title="Permalink to this heading"></a></h3>
+<p>Unity standard texture.</p>
+<dl class="field-list">
+<dt class="field-odd">Color<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Change the base color of the texture.</p>
+</dd>
+<dt class="field-even">blend mode<span class="colon">:</span></dt>
+<dd class="field-even"><p>Choose one of the following: <code class="docutils literal notranslate"><span class="pre">Opaque</span></code>, <code class="docutils literal notranslate"><span class="pre">Cutout</span></code>, <code class="docutils literal notranslate"><span class="pre">Fade</span></code>, <code class="docutils literal notranslate"><span class="pre">Transparent</span></code></p>
+</dd>
+<dt class="field-odd">culling mode<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Choose one of the following: <code class="docutils literal notranslate"><span class="pre">Off</span></code>,  <code class="docutils literal notranslate"><span class="pre">Front</span></code>,  <code class="docutils literal notranslate"><span class="pre">Back</span></code></p>
+</dd>
+<dt class="field-even">metallic<span class="colon">:</span></dt>
+<dd class="field-even"><p>Makes the surface look like metal.</p>
+</dd>
+<dt class="field-odd">Glossiness<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Adds shine to the surface.</p>
+</dd>
+<dt class="field-even">Emitting color<span class="colon">:</span></dt>
+<dd class="field-even"><p>Emission Color</p>
+</dd>
+<dt class="field-odd">Texture type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Select <code class="docutils literal notranslate"><span class="pre">From</span> <span class="pre">File</span></code> or <code class="docutils literal notranslate"><span class="pre">From</span> <span class="pre">Camera</span></code>. In either case, you can unreference it by choosing <code class="docutils literal notranslate"><span class="pre">--</span></code>.</p>
+<dl class="simple">
+<dt>From file <a class="footnote-reference brackets" href="#id7" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></dt><dd><p>Select and load the material name given to the separately loaded texture file. Select <code class="docutils literal notranslate"><span class="pre">--</span></code> to return to the original texture.</p>
+</dd>
+<dt>From camera <a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></dt><dd><p>Select a camera object that exists in your project. It is necessary to set the render texture separately on the camera object side.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<aside class="footnote brackets" id="id7" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">1</a><span class="fn-bracket">]</span></span>
+<p>Load the necessary texture files in advance from the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab on the ribbon bar → <code class="docutils literal notranslate"><span class="pre">Settings</span></code> button → <code class="docutils literal notranslate"><span class="pre">Material</span></code> tab.</p>
+</aside>
+<aside class="footnote brackets" id="id8" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">2</a><span class="fn-bracket">]</span></span>
+<p>Set the render texture in advance with the Camera object.</p>
+</aside>
+</div>
+</section>
+<section id="vrm10-mtoon10">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">10.2.2.2. </span>VRM10/MToon10</a><a class="headerlink" href="#vrm10-mtoon10" title="Permalink to this heading"></a></h3>
+<p>VRM 1.0 standard shader. It is slightly different from that of VRM 0.x.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Color<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Change the base color of the texture.</p>
+</dd>
+<dt class="field-even">blend mode<span class="colon">:</span></dt>
+<dd class="field-even"><p>Choose one of the following: <code class="docutils literal notranslate"><span class="pre">Opaque</span></code>, <code class="docutils literal notranslate"><span class="pre">Cutout</span></code>, <code class="docutils literal notranslate"><span class="pre">Fade</span></code>, <code class="docutils literal notranslate"><span class="pre">Transparent</span></code></p>
+</dd>
+<dt class="field-odd">culling mode<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Choose one of the following: <code class="docutils literal notranslate"><span class="pre">Off</span></code>,  <code class="docutils literal notranslate"><span class="pre">Front</span></code>,  <code class="docutils literal notranslate"><span class="pre">Back</span></code></p>
+</dd>
+<dt class="field-even">cut off<span class="colon">:</span></dt>
+<dd class="field-even"><p>0.5 is the base value. Anything lower than that will gradually reveal missing textures. 1.0 is completely transparent.</p>
+</dd>
+<dt class="field-odd">Emitting color<span class="colon">:</span></dt>
+<dd class="field-odd"><p>_EmissionColor</p>
+</dd>
+<dt class="field-even">shade color<span class="colon">:</span></dt>
+<dd class="field-even"><p>_ShadeColor</p>
+</dd>
+<dt class="field-odd">Shadow border smoothness<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shading Toony</p>
+</dd>
+<dt class="field-even">shadowed area<span class="colon">:</span></dt>
+<dd class="field-even"><p>Shade Shift</p>
+</dd>
+<dt class="field-odd">Acceptance of shadows<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Receive Shadow</p>
+</dd>
+<dt class="field-even">shading grade<span class="colon">:</span></dt>
+<dd class="field-even"><p>Shading Grade</p>
+</dd>
+<dt class="field-odd">Degree of reflection of ambient light<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Light Color Attenuation</p>
+</dd>
+<dt class="field-even">rim light color<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rim color</p>
+</dd>
+<dt class="field-odd">Rimlight border strength<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Rim Fresnel Power</p>
+</dd>
+<dt class="field-even">SrcBlend ~ DstBlend<span class="colon">:</span></dt>
+<dd class="field-even"><p>Applies complex changes in color and transparency. For details, please search the explanation site of VRM/MToon.</p>
+</dd>
+<dt class="field-odd">Texture type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Same as Standard</p>
+</dd>
+</dl>
+</section>
+<section id="water">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">10.2.2.3. </span>Water</a><a class="headerlink" href="#water" title="Permalink to this heading"></a></h3>
+<p>A shader that represents the water surface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Fresnel Scale<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Fresnel Scale</p>
+</dd>
+<dt class="field-even">reflection color<span class="colon">:</span></dt>
+<dd class="field-even"><p>The color of the water surface when illuminated by light.</p>
+</dd>
+<dt class="field-odd">mirror surface color<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The color of the reflection on the water surface.</p>
+</dd>
+<dt class="field-even">Wave amplitude, wave frequency, wave steepness, wave velocity, wave direction AB, wave direction CD<span class="colon">:</span></dt>
+<dd class="field-even"><p>Changes the frequency and magnitude of waves.</p>
+</dd>
+</dl>
+</section>
+<section id="sketchpostsketch">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">10.2.2.4. </span>Sketch / PostSketch</a><a class="headerlink" href="#sketchpostsketch" title="Permalink to this heading"></a></h3>
+<p>This is a shader that creates a sketch-like depiction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">outline width<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Draw lines around textured objects.</p>
+</dd>
+<dt class="field-even">stroke density<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">extra brightness<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">multi brightness<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">shadow brightness<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Only Sketch</p>
+</dd>
+</dl>
+<div class="admonition- admonition">
+<p class="admonition-title">Distribution/Purchase</p>
+<p>うさぎ流星群様</p>
+<p><a class="reference external" href="https://usagi-meteor.booth.pm/items/4453497">https://usagi-meteor.booth.pm/items/4453497</a></p>
+</div>
+</section>
+<section id="comic">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">10.2.2.5. </span>Comic</a><a class="headerlink" href="#comic" title="Permalink to this heading"></a></h3>
+<p>It is a shader that creates a cartoon-like depiction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">texture transparency<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The effect is similar to the VRM10/MToon10 cutoff. Make missing textures transparent.</p>
+</dd>
+<dt class="field-even">line width<span class="colon">:</span></dt>
+<dd class="field-even"><p>Draw lines around textured objects.</p>
+</dd>
+<dt class="field-odd">Color<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Change the color of lines and shadows.</p>
+</dd>
+<dt class="field-even">tone threshold<span class="colon">:</span></dt>
+<dd class="field-even"><p>Change the tone range.</p>
+</dd>
+</dl>
+<div class="admonition- admonition">
+<p class="admonition-title">Distributor</p>
+<p>Xin Games様</p>
+<p><a class="reference external" href="https://booth.pm/ja/items/2138884">https://booth.pm/ja/items/2138884</a></p>
+</div>
+</section>
+<section id="ice">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">10.2.2.6. </span>Ice</a><a class="headerlink" href="#ice" title="Permalink to this heading"></a></h3>
+<p>This is a shader that renders like ice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Color<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Change the color of the ice surface.</p>
+</dd>
+<dt class="field-even">Transparency<span class="colon">:</span></dt>
+<dd class="field-even"><p>If the transparency is a positive value, the color becomes clear as ice. As it approaches 0, it becomes transparent. More negatives start to invert colors instead of being transparent.</p>
+</dd>
+<dt class="field-odd">basic transparency<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Multiply the transparency by the transparency.</p>
+</dd>
+<dt class="field-even">roughness of ice<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rough the ice into jagged edges.</p>
+</dd>
+<dt class="field-odd">distortion<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Changes the twist of the shape of the reflection on the ice.</p>
+</dd>
+</dl>
+<div class="admonition- admonition">
+<p class="admonition-title">Distributor</p>
+<p>Xin Games様</p>
+<p><a class="reference external" href="https://booth.pm/ja/items/2138863">https://booth.pm/ja/items/2138863</a></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="pixelizetexture">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">10.2.2.7. </span>PixelizeTexture</a><a class="headerlink" href="#pixelizetexture" title="Permalink to this heading"></a></h3>
+<p>It is a shader that becomes a certain block-like texture. This is a custom shader made from scratch by ChatGPT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">pixel size<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The size of the texture to pixelate. The larger this is, the more mosaic-like it becomes.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="operation_initial.html" class="btn btn-neutral float-left" title="10.1. Basics of object manipulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="operation_vrm.html" class="btn btn-neutral float-right" title="10.3. VRoid/VRM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

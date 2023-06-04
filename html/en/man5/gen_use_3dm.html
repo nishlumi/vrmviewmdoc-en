@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.3. How to use 3D model &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Usable object" href="../man2/object_about.html" />
+    <link rel="prev" title="7.2. File manipulation" href="gen_use_file.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="general_use.html">7. General usage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gen_use_operation.html">7.1. App operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen_use_file.html">7.2. File manipulation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.3. How to use 3D model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">7.3.1. Open/manipulate 3D models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#general-use-3dposemot">7.3.2. Pose and animate a 3D model</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vrm">7.3.2.1. Various ways to run VRM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">7.3.2.2. Invert VRM pose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ik">7.3.2.3. Convenient use of IK markers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-2">7.3.3. Use with poses and motions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">7.3.4. Associating timelines with objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fps">7.3.5. Adjust animation FPS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="general_use.html"><span class="section-number">7. </span>General usage</a> &raquo;</li>
+      <li><span class="section-number">7.3. </span>How to use 3D model</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man5/gen_use_3dm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="d">
+<h1><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">7.3. </span>How to use 3D model</a><a class="headerlink" href="#d" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#d" id="id8">How to use 3D model</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id9">Open/manipulate 3D models</a></p></li>
+<li><p><a class="reference internal" href="#general-use-3dposemot" id="id10">Pose and animate a 3D model</a></p>
+<ul>
+<li><p><a class="reference internal" href="#vrm" id="id11">Various ways to run VRM</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id12">Invert VRM pose</a></p></li>
+<li><p><a class="reference internal" href="#ik" id="id13">Convenient use of IK markers</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-2" id="id14">Use with poses and motions</a></p></li>
+<li><p><a class="reference internal" href="#id7" id="id15">Associating timelines with objects</a></p></li>
+<li><p><a class="reference internal" href="#fps" id="id16">Adjust animation FPS</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="id1">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">7.3.1. </span>Open/manipulate 3D models</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>This is the basic usage of this application. Load and move general 3D models such as VRM, obj and FBX.</p>
+<p>See <a class="reference internal" href="../man2/operation_initial.html"><span class="doc">Basics of object manipulation</span></a> for basic functions. There you will find the following features:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>How to open an object</p></li>
+<li><p>How to use the history of opened objects</p></li>
+<li><p>How to select objects</p></li>
+<li><p>How to use (global) position, rotation and magnification</p></li>
+<li><p>etc…</p></li>
+</ul>
+</div></blockquote>
+<p>If you want to know about the object properties themselves, see <a class="reference internal" href="../man2/property.html"><span class="doc">Property list</span></a>.</p>
+<p>See <a class="reference internal" href="../man2/operation.html"><span class="doc">Manipulating Objects</span></a> if you want to know about object operations and supplementary information.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>When opening a 3D model file, it is recommended that you increase the <code class="docutils literal notranslate"><span class="pre">memory</span> <span class="pre">usage</span></code> setting in advance to the size you think is necessary.</p>
+<p>However, if the memory of the device you are using is low, the operation may become unstable if you secure too much with this application. It is up to you to decide how much memory you should reserve.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="general-use-3dposemot">
+<span id="id2"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">7.3.2. </span>Pose and animate a 3D model</a><a class="headerlink" href="#general-use-3dposemot" title="Permalink to this heading"></a></h2>
+<p>This is the main purpose of this application. You can easily create keyframe animations without using highly functional applications such as the Unity editor or Blender.</p>
+<dl class="simple">
+<dt>Basic explanation</dt><dd><p>See <a class="reference internal" href="../man4/about.html"><span class="doc">What is an animation project?</span></a> and <a class="reference internal" href="../man4/specification.html"><span class="doc">Animation project structure</span></a>.</p>
+</dd>
+<dt>Operation of VRM</dt><dd><p>See <a class="reference internal" href="../man2/operation_vrm.html"><span class="doc">VRoid/VRM</span></a> for more details. In addition, the pose is reflected immediately just by moving it without registering it in the key frame.</p>
+</dd>
+<dt>About registration of animation</dt><dd><p>See <a class="reference external" href="../man4/animation_register.html#index-2">Registering and updating keyframes</a>.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The bone movement system of this application is based on the <strong>IK method</strong>. Since it is not the <strong>FK method</strong> that moves only by rotating bones, the position of the limbs and waist may vary slightly depending on the height and build of the VRM.</p>
+<p>When reading a pose or motion file with a height difference, the height difference is automatically calculated and resolved, but it is not perfect. please note that.</p>
+<p>The FK method is planned to be supported in the future.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="vrm">
+<span id="index-0"></span><h3><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">7.3.2.1. </span>Various ways to run VRM</a><a class="headerlink" href="#vrm" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>This application provides the following methods to run VRM. Each has different characteristics and accuracy for posing.</p>
+<dl>
+<dt>IK marker</dt><dd><p>Basic operation method. By moving the IK marker, each part of the VRM moves and rotates toward that position and poses accordingly. High precision.</p>
+<p>See <a class="reference internal" href="../man2/operation_vrm.html#inputikasmarker"><span class="std std-ref">Working with VRM IK markers</span></a> for more information.</p>
+<a class="reference internal image-reference" href="../_images/operation_vrm_6.png"><img alt="../_images/operation_vrm_6.png" class="align-center" src="../_images/operation_vrm_6.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</dd>
+<dt>Pose recognition by MediaPipe AI</dt><dd><p>The Pose function of Google’s MediaPipe detects the pose from the object captured by the webcam and obtains a pose close to it. Low precision.</p>
+<p>See <a class="reference internal" href="../man3/posing_mediapipe.html"><span class="doc">Detect pauses with MediaPipe</span></a> for details.</p>
+<a class="reference internal image-reference" href="../_images/posing_c.png"><img alt="../_images/posing_c.png" class="align-center" src="../_images/posing_c.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The bone position/rotation information returned by MediaPipe is different from that of Unity and the IK of this application, so conversion is necessary. Therefore, the accuracy is considered to be low. It can be used effectively if you allow the flow of making a pose close to the model’s video / image, and then adjusting it manually.</p>
+<p>We will continue to adjust the accuracy in the future.</p>
+</dd>
+<dt>Specify directly in the spreadsheet</dt><dd><p>Enter the position and rotation of the IK markers in each cell in spreadsheet form, and pose accordingly. High precision.</p>
+<p>See <a class="reference internal" href="../man2/operation_vrm.html#inputikasnumber"><span class="std std-ref">Numerical manipulation of IK markers</span></a> for details.</p>
+<a class="reference internal image-reference" href="../_images/screen_ikmarker.png"><img alt="../_images/screen_ikmarker.png" class="align-center" src="../_images/screen_ikmarker.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Instead of moving and rotating the bones by moving the IK marker, you can directly enter the amount of movement and rotation with a decimal point in the spreadsheet. You can also copy and save to Excel or Google Sheets. Of course, you can also <strong>paste into the spreadsheet of this app</strong> in reverse.</p>
+<p>In addition, it can also be used for fine correction of poses.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="id4">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">7.3.2.2. </span>Invert VRM pose</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>Although it is a function only for the spreadsheet, you can invert the pose of the VRM.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Batch</span> <span class="pre">change</span> <span class="pre">IK</span> <span class="pre">position</span></code> in the <code class="docutils literal notranslate"><span class="pre">IK,</span> <span class="pre">whole</span> <span class="pre">body</span></code> panel of the VRM properties to display the batch change window for IK markers.</p></li>
+<li><p>Click <img alt="btnbonetranmirror" src="../_images/operation_vrm_n.png" /> on the top toolbar.</p></li>
+<li><p>Click <img alt="btnbonetranapply" src="../_images/operation_vrm_l.png" /> Apply Pose.</p></li>
+</ol>
+<p>The current pose will be reversed. Since the movement is just replacing the cells of the spreadsheet, it is also possible to change only a part while reversing if you manually enter it at that time.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="ik">
+<span id="index-1"></span><h3><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">7.3.2.3. </span>Convenient use of IK markers</a><a class="headerlink" href="#ik" title="Permalink to this heading"></a></h3>
+<p>IK markers don’t just move. You can use it conveniently as follows. See <a class="reference internal" href="../man2/operation_vrm.html#specialoperation-vrm"><span class="std std-ref">special operation</span></a> for details.</p>
+<dl>
+<dt>move multiple at the same time</dt><dd><p>Although it is only a VRM that has multiple IK markers at the same time, you can select multiple IK markers and move them.</p>
+<img alt="../_images/spcl_06.png" class="align-center" src="../_images/spcl_06.png" />
+<p>Hold down the <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">key</span></code> and click on one or more IK markers. Then, multiple IK markers turn red. If you move or rotate in that state, you can move it at the same time.</p>
+<p>However, since there is a collision detection, please adjust the visibility by zooming in the camera as needed.</p>
+</dd>
+<dt>Undo moving IK markers</dt><dd><p><code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">key</span></code> + <code class="docutils literal notranslate"><span class="pre">Z</span></code> can be used to undo the previous movement/rotation of the IK marker.</p>
+<p>You can redo the return with <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">key</span></code> + <code class="docutils literal notranslate"><span class="pre">Y</span></code> .</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Please note that it is not a Ctrl key like Ctrl + Z in normal apps.</p>
+</div>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="index-2">
+<span id="id5"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">7.3.3. </span>Use with poses and motions</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<p>Here, we will mainly summarize the explanations on how to handle the poses and motions themselves.</p>
+<p>What you can do with this app and output files to the outside correspond as follows.</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>action</p></th>
+<th class="head"><p>target</p></th>
+<th class="head"><p>output file</p></th>
+<th class="head"><p>reference page</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pose</p></td>
+<td><p>VRM</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.vvmpose</span></code></p></td>
+<td><p><a class="reference internal" href="../man3/posing.html"><span class="doc">Posing</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Motion</p></td>
+<td><p>All objects</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.vvmmot</span></code></p></td>
+<td><p><a class="reference internal" href="../man4/animation_loadsave.html#savemotionfile"><span class="std std-ref">Save to motion file</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Project</p></td>
+<td><p>All objects + current animation settings</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.vvmproj</span></code></p></td>
+<td><p><a class="reference internal" href="../man4/animation_loadsave.html#saveproject"><span class="std std-ref">Save animation project file</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Poses and motions</strong> do not depend on the actual object, so you can load it into a role that assigns another object and reproduce it. By distributing pose files and motion files, it is possible for other users to use them.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For VRMs, extreme height differences can lead to unacceptable deviations. When distributing it, it is a good idea to inform the height of the original VRM as reference information.</p>
+<p>It is not a method that directly specifies the rotation angle of the bone like MMD, but it is an IK method, so the error absorption of height and physique is not complete. please note that.</p>
+</div>
+<p><strong>Project</strong> is not suitable for distribution to other users because it tries to open the object files that were originally opened. However, by <a class="reference external" href="../man4/animation_proper.html#index-4">assigning a cast to a role</a> operation, the motion can be reproduced as much as possible on different objects.</p>
+<p>If you are thinking of distributing it, it is recommended that you check it in advance by deleting the history, opening the project file, and trying to assign a cast to a role.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id7">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">7.3.4. </span>Associating timelines with objects</a><a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+<p>For details on the relationship between timelines and objects, see <a class="reference internal" href="../man4/specification.html"><span class="doc">Animation project structure</span></a> as above.</p>
+<p>In this app, you can enjoy the same pose and motion with another object by replacing only the actual object later on the role (timeline) that has been pose and motion once.</p>
+<p><a class="reference internal" href="../man4/animation_proper.html#settingcast2role"><span class="std std-ref">Assign Cast to Role</span></a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="fps">
+<span id="index-3"></span><h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">7.3.5. </span>Adjust animation FPS</a><a class="headerlink" href="#fps" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>Coordination on a project-by-project basis</dt><dd><p>You can adjust the FPS for each animation project.</p>
+<p>See <a class="reference internal" href="../man4/animation_proper.html#setfpsframe"><span class="std std-ref">Set number of frames and FPS</span></a> for details. Also, if you do not want to change the FPS, but want to change only the reference value of the default duration when registering keyframes, see <a class="reference internal" href="../man4/animation_proper.html#setdefaultduration"><span class="std std-ref">Set default interval</span></a>.</p>
+</dd>
+<dt>Adjustment for each timeline and keyframe</dt><dd><div class="line-block">
+<div class="line">When following the FPS and duration determined by the project, the duration for each keyframe is basically registered with an appropriate distance between frames according to the purpose. Then the duration is automatically calculated and set.</div>
+<div class="line">According to the duration of the project, a huge number of frames may be required. It doesn’t matter if it’s labor-intensive.</div>
+</div>
+<img alt="../_images/register_7.png" class="align-center" src="../_images/register_7.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If you want to freely create motion with a small number of frames, it is a good idea to directly edit the duration in the keyframe settings.</p>
+<img alt="../_images/spcl_09.png" class="align-center" src="../_images/spcl_09.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>See <a class="reference internal" href="../man4/animation_register.html#modifyeachduration"><span class="std std-ref">Set keyframe intervals</span></a> for more information.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gen_use_file.html" class="btn btn-neutral float-left" title="7.2. File manipulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../man2/object_about.html" class="btn btn-neutral float-right" title="8. Usable object" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

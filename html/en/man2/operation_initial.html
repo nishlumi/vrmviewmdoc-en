@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.1. Basics of object manipulation &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="10.2. Texture" href="operation_texture.html" />
+    <link rel="prev" title="10. Manipulating Objects" href="operation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">9. Property list</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="operation.html">10. Manipulating Objects</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.1. Basics of object manipulation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-0">10.1.1. Open an Object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-1">10.1.2. simple shaped objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-2">10.1.3. Open from history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-3">10.1.4. Delete history</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-4">10.1.5. Object selection</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-5">10.1.6. Delete object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-6">10.1.7. Object rename</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-7">10.1.8. focus the camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-8">10.1.9. Delete both this object and role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-9">10.1.10. Move, rotate and scale objects</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#d">10.1.10.1. 3D object</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">10.1.10.2. 2D object</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="operation_texture.html">10.2. Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html">10.3. VRoid/VRM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_obj.html">10.4. OtherObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_light.html">10.5. Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_camera.html">10.6. Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_image.html">10.7. Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_effect.html">10.8. Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_text.html">10.9. Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_uimage.html">10.10. UImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_audio.html">10.11. Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_syseff.html">10.12. SystemEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_stage.html">10.13. Stage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="operation.html"><span class="section-number">10. </span>Manipulating Objects</a> &raquo;</li>
+      <li><span class="section-number">10.1. </span>Basics of object manipulation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man2/operation_initial.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">10.1. </span>Basics of object manipulation</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id13">Basics of object manipulation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-0" id="id14">Open an Object</a></p></li>
+<li><p><a class="reference internal" href="#index-1" id="id15">simple shaped objects</a></p></li>
+<li><p><a class="reference internal" href="#index-2" id="id16">Open from history</a></p></li>
+<li><p><a class="reference internal" href="#index-3" id="id17">Delete history</a></p></li>
+<li><p><a class="reference internal" href="#index-4" id="id18">Object selection</a></p></li>
+<li><p><a class="reference internal" href="#index-5" id="id19">Delete object</a></p></li>
+<li><p><a class="reference internal" href="#index-6" id="id20">Object rename</a></p></li>
+<li><p><a class="reference internal" href="#index-7" id="id21">focus the camera</a></p></li>
+<li><p><a class="reference internal" href="#index-8" id="id22">Delete both this object and role</a></p></li>
+<li><p><a class="reference internal" href="#index-9" id="id23">Move, rotate and scale objects</a></p>
+<ul>
+<li><p><a class="reference internal" href="#d" id="id24">3D object</a></p></li>
+<li><p><a class="reference internal" href="#id12" id="id25">2D object</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="index-0">
+<span id="id2"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">10.1.1. </span>Open an Object</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Please press each button from the home tab or 3D model tab of the ribbon bar.</p></li>
+</ol>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Home tab</p></td>
+<td><p>Model tab</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="ribbon_home" src="../_images/operation_initial_3.png" /></p></td>
+<td><p><img alt="ribbon_model" src="../_images/operation_initial_4.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>For VRMs</dt><dd><p>After loading, the terms of use confirmation screen (VRM information screen) will be displayed. If you don’t give permission there, it won’t really load.</p>
+</dd>
+<dt>For OtherObject</dt><dd><p>When opening general Fbx, obj, etc., it can be opened by specifying it as it is in the file dialog, but there may be multiple necessary files such as textures.</p>
+<p>In this application, due to the effect of the library used, it is possible to read, for example, a zip file as it is.</p>
+<p>Example: Combine .obj, .mtl, .png, etc. into one zip file</p>
+<p>By reading the zip file created in this way with this application, you can read it with the texture etc. attached normally.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The 3D model file must have the appropriate texture settings in advance.</p>
+</div>
+</dd>
+<dt>other than that</dt><dd><p>It will appear immediately after loading.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="line-block">
+<div class="line">You can also drag and drop the desired VRM file from Explorer or Filer to the WebGL screen to open it.</div>
+<div class="line">By setting “Save opened files in history”, history will be kept for each object once opened.</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-1">
+<span id="id3"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">10.1.2. </span>simple shaped objects</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<p>You can add a basic shape object that will be treated as OtherObject.</p>
+<ol class="arabic simple">
+<li><p>Click “Basic Shapes” from the 3D Model tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/operation_initial_5.png" class="align-center" src="../_images/operation_initial_5.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The following types of basic figures can be opened.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>球、カプセル、円柱、立方体、平面（3D）、四辺形（2D）、水面
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">special surface object</p>
+<p>A water surface object is a special object that keeps moving with animated waves.</p>
+<img alt="../_images/operation_initial_6.png" class="align-center" src="../_images/operation_initial_6.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>There are a lot of texture properties, but if you set them in detail, you can express not only water and sea surfaces but also other uses. Please make good use of it.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-2">
+<span id="id4"></span><h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">10.1.3. </span>Open from history</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<p>Once you open VRM/OtherObject and images (including UI images), the history is saved in the app. You can open it from the history in the app without having to follow the dialog or drag it the next time you launch it.</p>
+<ol class="arabic simple">
+<li><p>Click History on the Home tab of the ribbon bar and select the target object type.</p></li>
+</ol>
+<img alt="../_images/operation_vrm_2.png" class="align-center" src="../_images/operation_vrm_2.png" />
+<ol class="arabic simple" start="2">
+<li><p>The internal storage dialog opens, so select the target object and open it.</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>When opening from the history, you can narrow down the target file by entering it in the search box at the top of the list.</p>
+<blockquote>
+<div><img alt="../_images/operation_initial_7.png" class="align-center" src="../_images/operation_initial_7.png" />
+</div></blockquote>
+</div>
+</section>
+<section id="index-3">
+<span id="id5"></span><h2><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">10.1.4. </span>Delete history</a><a class="headerlink" href="#index-3" title="Permalink to this heading"></a></h2>
+<p>You can delete the accumulated history.</p>
+<p><strong>delete individually</strong></p>
+<ol class="arabic simple">
+<li><p>Check the objects you want to delete.</p></li>
+<li><p>Click <img alt="histdelbtn" src="../_images/loadsave_9.png" /> at the top of the Internal Storage dialog.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Remove All</strong></p>
+<ol class="arabic simple">
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Settings</span></code> on the Home tab of the ribbon bar.</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Clear</span></code> on the files tab.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-4">
+<span id="id6"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">10.1.5. </span>Object selection</a><a class="headerlink" href="#index-4" title="Permalink to this heading"></a></h2>
+<p>All 3D objects display IK markers when they are ready to be manipulated. To make it operational, select it in the object list. (Selecting Text and UImage does not display IK markers)</p>
+<img alt="../_images/operation_initial_1.png" class="align-center" src="../_images/operation_initial_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>When the corresponding object becomes operable, the IK marker will be displayed like this. (IK markers for other objects are hidden.)</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Even if you select an object attached to VRoid/VRM, the IK marker will not be displayed. Unequip it to make it operable again.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-5">
+<span id="id7"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">10.1.6. </span>Delete object</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
+<p>To delete an object, right-click in the object list and click Delete Object.</p>
+<img alt="../_images/operation_initial_2.png" class="align-center" src="../_images/operation_initial_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Animation project timelines (rolls) cannot be deleted this way. See <a class="reference internal" href="../man4/animation_proper.html"><span class="doc">Various animation settings</span></a> to delete both objects and timelines (roles).</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-6">
+<span id="id8"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">10.1.7. </span>Object rename</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
+<p>Objects can be renamed. This is different from the name of the timeline (role) described later, and is the name/title of the object itself.</p>
+<ol class="arabic simple">
+<li><p>Right-click the target in the object list and click Rename.</p></li>
+<li><p>Enter in the input dialog and press the OK button to confirm.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-7">
+<span id="id9"></span><h2><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">10.1.8. </span>focus the camera</a><a class="headerlink" href="#index-7" title="Permalink to this heading"></a></h2>
+<p>Adjust the position and rotation of the camera so that the target object fits in the main camera as much as possible.</p>
+<ol class="arabic simple">
+<li><p>Right-click the object in the object list and click “Focus Camera”.</p></li>
+</ol>
+</section>
+<section id="index-8">
+<span id="id10"></span><h2><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">10.1.9. </span>Delete both this object and role</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h2>
+<p>Unlike deleting an object, it deletes both the object itself and the role (timeline).</p>
+<p>Unless you have a very special reason, such as not wanting to delete the timeline (role) that registered the keyframe, we recommend deleting it with <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">both</span> <span class="pre">this</span> <span class="pre">object</span> <span class="pre">and</span> <span class="pre">role</span></code>.</p>
+<ol class="arabic simple">
+<li><p>Right-click the target in the object list and click “Delete both this object and the role”.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-9">
+<span id="id11"></span><h2><a class="toc-backref" href="#id23" role="doc-backlink"><span class="section-number">10.1.10. </span>Move, rotate and scale objects</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h2>
+<p>Common properties are available for all objects. Here you can move, rotate and scale.</p>
+<table class="docutils align-center">
+<tbody>
+<tr class="row-odd"><td><p>3D object</p></td>
+<td><p>2D object</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="prop3d" src="../_images/prop_common_1.png" /></p></td>
+<td><p><img alt="prop2d" src="../_images/prop_common_2.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="d">
+<span id="index-10"></span><h3><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">10.1.10.1. </span>3D object</a><a class="headerlink" href="#d" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>3D objects operate on the X, Y and Z axes respectively. The movement and rotation here will be the object itself. (VRM does not cover IK of each part of the body)</p>
+<p>As a similar operation method, there is also an operation handle displayed by clicking the IK marker.</p>
+<p>It also supports keyboard operation. See <a class="reference internal" href="../man5/special_operation.html"><span class="doc">Keyboard shortcut</span></a> for detailed operation instructions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only 3D objects can be operated with the keyboard. <code class="docutils literal notranslate"><span class="pre">Text</span></code> and <code class="docutils literal notranslate"><span class="pre">UImage</span></code> are <strong>not keyboard accessible</strong>.</p>
+</div>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><dl id="index-11">
+<dt>Consider 360 degree rotation</dt><dd><p>When <code class="docutils literal notranslate"><span class="pre">Consider</span> <span class="pre">360</span> <span class="pre">degree</span> <span class="pre">rotation</span></code> is turned on, it tries to rotate as much as possible when the rotation angle is reached. For example, if you want your Y-axis to be:</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>frame</p></th>
+<th class="head"><p>Y-axis rotation angle</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>359</p></td>
+</tr>
+</tbody>
+</table>
+<p>If you set this option to OFF and register a keyframe, you can only switch the angle immediately considering clockwise/counterclockwise rotation from 0 degrees. If it is ON, it will try to make one rotation, eg 10..30..50..185..200.. between frames 2-9.</p>
+<ul class="simple">
+<li><p>However, due to the internal rotation specifications of this application, it cannot be rotated from 0 to 360 degrees. Rotate to 359 degrees once, then register a keyframe on the next frame to rotate from 359 to 360 degrees. At that time, it is necessary to turn off <code class="docutils literal notranslate"><span class="pre">Consider</span> <span class="pre">360</span> <span class="pre">degree</span> <span class="pre">rotation</span></code> .</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This option is not saved as motion data. This is an option only when registering a keyframe. Toggling object selection will return this toggle to OFF.</p>
+</div>
+</dd>
+</dl>
+<dl id="index-12">
+<dt>fixed ratio</dt><dd><p>You can also specify the X, Y, and Z magnification, but you can also fix the ratio. If you turn on <code class="docutils literal notranslate"><span class="pre">Fix</span> <span class="pre">ratio</span></code>, there will be only one input field. If you enter in this state, you can change the size while maintaining the current ratio.</p>
+</dd>
+<dt>jumping/swaying</dt><dd><p>There are jump and shake functions as options related to the position and rotation of the object itself.</p>
+<p>Jumping works if the count is <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">or</span> <span class="pre">more</span></code>.</p>
+<p>Linear and random shakes only work when each is <code class="docutils literal notranslate"><span class="pre">On</span></code>.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="id12">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink"><span class="section-number">10.1.10.2. </span>2D object</a><a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>Unlike the Unity editor, 2D objects have limited input fields for clarity.</p>
+<p>Position is X, Y, rotation is Z axis only.</p>
+<dl class="simple">
+<dt>Size</dt><dd><p>Unlike 3D objects, it indicates the size of the area to be drawn.</p>
+</dd>
+<dt>Scale</dt><dd><p>It has the same size of meaning as a 3D object.</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="operation.html" class="btn btn-neutral float-left" title="10. Manipulating Objects" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="operation_texture.html" class="btn btn-neutral float-right" title="10.2. Texture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

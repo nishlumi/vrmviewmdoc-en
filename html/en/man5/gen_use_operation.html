@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.1. App operation &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.2. File manipulation" href="gen_use_file.html" />
+    <link rel="prev" title="7. General usage" href="general_use.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="general_use.html">7. General usage</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.1. App operation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-0">7.1.1. (Web application version) Use in a separate window from the browser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">7.1.2. Change screen resolution</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#index-1">7.1.2.1. Take advantage of navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-2">7.1.3. apply anti-aliasing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ik">7.1.4. Change the size and display of IK markers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-4">7.1.5. Operating the main camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-5">7.1.6. Objects and keyboard operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">7.1.7. Get more out of your mouse and touch interactions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gen_use_file.html">7.2. File manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen_use_3dm.html">7.3. How to use 3D model</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="general_use.html"><span class="section-number">7. </span>General usage</a> &raquo;</li>
+      <li><span class="section-number">7.1. </span>App operation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man5/gen_use_operation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">7.1. </span>App operation</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id9">App operation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-0" id="id10">(Web application version) Use in a separate window from the browser</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id11">Change screen resolution</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-1" id="id12">Take advantage of navigation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-2" id="id13">apply anti-aliasing</a></p></li>
+<li><p><a class="reference internal" href="#ik" id="id14">Change the size and display of IK markers</a></p></li>
+<li><p><a class="reference internal" href="#index-4" id="id15">Operating the main camera</a></p></li>
+<li><p><a class="reference internal" href="#index-5" id="id16">Objects and keyboard operations</a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id17">Get more out of your mouse and touch interactions</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="index-0">
+<span id="id2"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">7.1.1. </span>(Web application version) Use in a separate window from the browser</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h2>
+<p>The web app version can be used in a completely separate window from the browser itself, such as Chrome or Edge, using a technology called PWA.</p>
+<p>See <a class="reference internal" href="../man1/install.html"><span class="doc">How to install</span></a> for details.</p>
+<dl class="simple">
+<dt>merit</dt><dd><ul class="simple">
+<li><p>You can make the window size different from the browser body</p></li>
+<li><p>You can continue using this application even if you close the browser body</p></li>
+<li><p>Appearance becomes closer to the app of each OS</p></li>
+<li><p>Added to the Start Menu or Launcher Menu and can be opened from there</p></li>
+</ul>
+</dd>
+</dl>
+<p>Please install the web app version instead of using it as a tab.</p>
+</section>
+<section id="id3">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">7.1.2. </span>Change screen resolution</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<p>By default, the WebGL screen that manipulates the 3D model has a size suitable for the window size. With this application, you can freely change the size (≈ resolution) of the WebGL screen.</p>
+<img alt="../_images/general_scr01.png" class="align-center" src="../_images/general_scr01.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li><p>Enter the <code class="docutils literal notranslate"><span class="pre">Width</span></code> and <code class="docutils literal notranslate"><span class="pre">Height</span></code>.</p></li>
+<li><p>Press the Apply button.</p></li>
+</ol>
+<p>Scrollbars are displayed if they do not fit in the display area.</p>
+<p><strong>restore to original size</strong></p>
+<ol class="arabic simple">
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">Original</span> <span class="pre">Size</span></code> button.</p></li>
+</ol>
+<section id="index-1">
+<span id="id4"></span><h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">7.1.2.1. </span>Take advantage of navigation</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h3>
+<p>When the screen resolution increases, it is necessary to scroll the part that cannot be seen before operating. In that case, using the <code class="docutils literal notranslate"><span class="pre">navigation</span></code> implemented from Ver 2.0 makes it easier to operate.</p>
+<ol class="arabic simple">
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">Navigation</span></code> button in the Screens tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/general_scr02.png" class="align-center" src="../_images/general_scr02.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>A small navigation window will appear inside the main app window.</p></li>
+</ol>
+<img alt="../_images/screen_naviwin.png" class="align-center" src="../_images/screen_naviwin.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>A red frame is displayed as the currently displayed range on the navigation preview screen.</p></li>
+<li><p>If the resolution of the WebGL screen is larger than the display area, clicking or dragging the red frame anywhere will scroll the WebGL screen accordingly.</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can also <code class="docutils literal notranslate"><span class="pre">Resize''</span> <span class="pre">and</span> <span class="pre">``Reset</span> <span class="pre">Camera</span></code> from within the navigation window.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="index-2">
+<span id="id5"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">7.1.3. </span>apply anti-aliasing</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<p>With this application, you can apply anti-aliasing to the WebGL screen.</p>
+<ol class="arabic simple">
+<li><p>Open the Screens tab of the Ribbon bar.</p></li>
+<li><p>Check <code class="docutils literal notranslate"><span class="pre">Antialiasing</span></code> on the right.</p></li>
+</ol>
+<img alt="../_images/spcl_07.png" class="align-center" src="../_images/spcl_07.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>It is possible to play poses and motions while it is on, but the operation may become slow.</p></li>
+<li><p>Anti-aliasing is originally in the category of system effects (post-processing), but in consideration of the impact on operation, it will not be registered in animations.</p></li>
+<li><p>When anti-aliasing is enabled, unnecessary lines may intersect when capturing <code class="docutils literal notranslate"><span class="pre">sky</span> <span class="pre">night</span> <span class="pre">blue/sky</span> <span class="pre">night</span> <span class="pre">purple</span></code> in the sky setting of the Stage object. This is the WebGL specification. please note that.</p></li>
+</ul>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="ik">
+<span id="index-3"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">7.1.4. </span>Change the size and display of IK markers</a><a class="headerlink" href="#ik" title="Permalink to this heading"></a></h2>
+<p>To change the size of the IK marker, specify it from Options on the <code class="docutils literal notranslate"><span class="pre">Screen</span></code> tab of the ribbon bar.</p>
+<img alt="../_images/screen_ribbon_scr_02.png" class="align-center" src="../_images/screen_ribbon_scr_02.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="simple">
+<dt>resize</dt><dd><p>Specify by moving the IK marker size slider.</p>
+</dd>
+<dt>the display itself</dt><dd><p>Turn on/off the check for Show IK Markers.</p>
+</dd>
+</dl>
+</section>
+<section id="index-4">
+<span id="id6"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">7.1.5. </span>Operating the main camera</a><a class="headerlink" href="#index-4" title="Permalink to this heading"></a></h2>
+<p>In this app, the main camera always has a center point that serves as the axis of rotation. The display can be turned on and off by setting, but the display is turned on by default for clarity.</p>
+<p>Since keyboard operations are involved, please see <a class="reference internal" href="special_operation.html"><span class="doc">Keyboard shortcut</span></a> for detailed operation methods.</p>
+<img alt="center point" class="align-center" src="../_images/spcl_01.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Rectangle displayed in dim semitransparency is applicable.</p>
+<p>The main camera rotates based on this center point. If you bring the object you want to see closer to the center point, you can see the object in 360 degrees.</p>
+<p>However, if you continue to move the camera or move the object, the distance and position may not necessarily match, and the display may gradually shift. In that case, press the <code class="docutils literal notranslate"><span class="pre">I</span> <span class="pre">key</span></code> or <code class="docutils literal notranslate"><span class="pre">O</span> <span class="pre">key</span></code> on your keyboard.</p>
+<p>Then the center point will move closer or further away from the main camera.</p>
+<p><strong>Distance between center point and object</strong></p>
+<p>The distance between the center point and the currently selected object is displayed in the upper right.</p>
+<img alt="Distance between center point and object" class="align-center" src="../_images/spcl_02.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>This is just a guideline. If you press the I and O keys, there will be a <strong>border between decreasing and increasing values</strong>. That is the point where the center point and the currently selected object overlap. If you rotate the camera there, you can rotate around the object relatively cleanly.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The same operation can be performed with the buttons <img alt="sub2" src="../_images/screen_vpad_2.png" /> <img alt="sub3" src="../_images/screen_vpad_3.png" /> on the v-pad. <a class="reference internal" href="../man1/screen_vpad.html"><span class="doc">v-pad (control pad for main camera)</span></a></p>
+</div>
+<p><strong>If you move or rotate too much and the center point is blown away</strong></p>
+<p>If you move, rotate, or change the axis on the upper right of the WebGL screen, the center point may shift. In that case, press the <code class="docutils literal notranslate"><span class="pre">R</span> <span class="pre">key</span></code> when the keyboard is in camera mode. Then the main camera and center point will be reset to the initial position.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>he same is true for the <code class="docutils literal notranslate"><span class="pre">Reset</span> <span class="pre">Camera</span></code> button on the Screen tab of the ribbon bar.</p>
+<p>Press the <code class="docutils literal notranslate"><span class="pre">Q</span></code> key to reset the hard-to-adjust Z axis.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-5">
+<span id="id7"></span><h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">7.1.6. </span>Objects and keyboard operations</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
+<p>For a detailed explanation of keyboard operations, please see <a class="reference internal" href="special_operation.html"><span class="doc">Keyboard shortcut</span></a> .</p>
+<dl>
+<dt>Standard of operation</dt><dd><p>This app is based on <strong>global coordinates</strong> .</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can operate by switching global and local coordinates by keyboard operation.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">key</span></code></p></td>
+<td><p>global/local switching for IK markers</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">key</span></code></p></td>
+<td><p>global/local switching for keyboard movement/rotation</p></td>
+</tr>
+</tbody>
+</table>
+<p>However, what is displayed in the input field on the UI is the global coordinates.</p>
+</div>
+</dd>
+</dl>
+<dl>
+<dt>the state of the current operation</dt><dd><p>The operating criteria for the current object or screen are displayed in the upper right.</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head stub"></th>
+<th class="head"><p>operation mode</p></th>
+<th class="head"><p>coordinate switching</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>Value 1</p></th>
+<td><p>C - Camera</p></td>
+<td><p>G - Global</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>value 2</p></th>
+<td><p>O - Object</p></td>
+<td><p>L - Local</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>Screen display</p></th>
+<td><p><img alt="objmark_CO" src="../_images/spcl_04.png" /></p></td>
+<td><p><img alt="objmark_GL" src="../_images/spcl_03.png" /></p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>Operation key</p></th>
+<td><p>M key</p></td>
+<td><p>G key</p></td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>left alphabet</dt><dd><p>Indicates the operation mode with the keyboard. Pressing the <code class="docutils literal notranslate"><span class="pre">M</span> <span class="pre">key</span></code> will switch C - O.</p>
+<p><strong>C</strong> operates the main camera, and <strong>O</strong> operates the selected object.</p>
+</dd>
+<dt>right alphabet</dt><dd><p>Indicates the coordinates at which the object is manipulated. Pressing the <code class="docutils literal notranslate"><span class="pre">G</span> <span class="pre">key</span></code> will switch G - L.</p>
+<p><strong>G</strong> moves and rotates in global coordinates, and <strong>L</strong> moves and rotates in local coordinates.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Global/local switching of the <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">key</span></code> is not reflected. Please be careful of confusion.</p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Setting the manipulation mode to <code class="docutils literal notranslate"><span class="pre">O</span></code> object will allow you to move and rotate the object with both mouse and keyboard, which will be more efficient.</p>
+</div>
+</section>
+<section id="id8">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">7.1.7. </span>Get more out of your mouse and touch interactions</a><a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<p>This application moves the WebGL screen with a mouse or touch operation, but depending on the usage and environment, it may be necessary to use keyboard operations such as the Ctrl key and SPACE key. A window called v-pad allows all mouse operations in an environment where the keyboard cannot be used immediately.</p>
+<p>By using this window, you will be able to use the movement, rotation, zoom in and zoom out of the main camera in common without worrying about the mouse or touch environment.</p>
+<img alt="../_images/spcl_05.png" class="align-center" src="../_images/spcl_05.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>See <a class="reference internal" href="../man1/screen_vpad.html"><span class="doc">v-pad (control pad for main camera)</span></a> for how windows look and how to use them.</p>
+<dl class="simple">
+<dt>Various operation examples</dt><dd><ul class="simple">
+<li><p>Main camera, rotate with mouse + move main camera with WASD FV</p></li>
+<li><p>General operation of main camera with v-pad, fine adjustment with mouse</p></li>
+</ul>
+</dd>
+</dl>
+<p>Try to find the operation method that suits you.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="general_use.html" class="btn btn-neutral float-left" title="7. General usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gen_use_file.html" class="btn btn-neutral float-right" title="7.2. File manipulation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

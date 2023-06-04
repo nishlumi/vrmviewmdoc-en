@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.7. A few things about timeline display &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="13. Keyboard shortcut" href="../man5/special_operation.html" />
+    <link rel="prev" title="12.6. Loading and saving animations" href="animation_loadsave.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="animation.html">12. Animation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="about.html">12.1. What is an animation project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="specification.html">12.2. Animation project structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_proper.html">12.3. Various animation settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_register.html">12.4. Registering and setting keyframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_play.html">12.5. Play and stop animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_loadsave.html">12.6. Loading and saving animations</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">12.7. A few things about timeline display</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="animation.html"><span class="section-number">12. </span>Animation</a> &raquo;</li>
+      <li><span class="section-number">12.7. </span>A few things about timeline display</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man4/animation_tl.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="index-0"></span><span class="target" id="index-1"></span><span class="target" id="index-2"></span><span class="target" id="index-3"></span><section id="index-4">
+<span id="id1"></span><h1><span class="section-number">12.7. </span>A few things about timeline display<a class="headerlink" href="#index-4" title="Permalink to this heading"></a></h1>
+<p>We will explain the timeline toolbar.</p>
+<img alt="../_images/tl_1.png" class="align-center" src="../_images/tl_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/tl_2.png" class="align-center" src="../_images/tl_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="simple" id="index-5">
+<dt><img alt="tlprev" src="../_images/tl_3.png" /> <strong>Go back one timeline</strong></dt><dd><p>In the currently selected timeline, return to the closest registered keyframe before the current position. (Skip frames with nothing registered)</p>
+</dd>
+<dt><img alt="tlnext" src="../_images/tl_4.png" /> <strong>Move forward in timeline</strong></dt><dd><p>In the currently selected timeline, advance to the nearest registered keyframe after the current position. (Skip frames with nothing registered)</p>
+</dd>
+<dt><img alt="tlout" src="../_images/tl_5.png" /> <strong>Shrink timeline view</strong></dt><dd><p>Make the timeline display compact.</p>
+</dd>
+<dt><img alt="tlin" src="../_images/tl_6.png" /> <strong>Expand timeline view</strong></dt><dd><p>Resize the timeline display to normal size. This is the standard size.</p>
+</dd>
+</dl>
+<img alt="../_images/tl_7.png" class="align-center" src="../_images/tl_7.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt><img alt="tlplay" src="../_images/tl_8.png" /> <strong>play from beginning, play/pause, stop</strong></dt><dd><p>It has the same function as the button on the animation tab of the ribbon bar.</p>
+</dd>
+<dt><img alt="tlload" src="../_images/tl_9.png" /> <strong>load this frame</strong></dt><dd><div class="line-block">
+<div class="line">Immediately read the contents of the keyframes of all timelines (rolls) corresponding to the currently selected frame position, and restore poses and properties. Selecting a frame position normally restores it automatically, but this button manually calls it.</div>
+<div class="line">Mainly used when <code class="docutils literal notranslate"><span class="pre">Preview</span> <span class="pre">when</span> <span class="pre">selecting</span> <span class="pre">a</span> <span class="pre">frame</span></code> in the settings is off.</div>
+</div>
+</dd>
+<dt><img alt="tlinsf" src="../_images/tl_c.png" /> <strong>Insert an empty frame at the current position</strong></dt><dd><p>Inserts an empty frame into all timelines at the position of the currently selected frame number. This shifts all keyframes after this frame number to the right by one.</p>
+</dd>
+<dt><img alt="tldelf" src="../_images/tl_d.png" /> <strong>delete current frame position</strong></dt><dd><div class="line-block">
+<div class="line">Deletes the currently selected frame position of all timelines. Since this involves deleting a frame position, not just deleting a keyframe, all keyframes after this frame will be shifted one by one to the left.</div>
+<div class="line">Also, please note that if there is a keyframe at the current position, it will be deleted together.</div>
+</div>
+</dd>
+<dt><img alt="tlseek" src="../_images/tl_a.png" /> <strong>Seek Bar</strong></dt><dd><p>Move the frame position to any position on the timeline. The size of this seek bar does not change even if the number of frames increases or decreases.</p>
+<div class="line-block">
+<div class="line">If <code class="docutils literal notranslate"><span class="pre">Preview</span> <span class="pre">when</span> <span class="pre">selecting</span> <span class="pre">a</span> <span class="pre">frame</span></code> in the settings is on, you can preview the animation frame by frame by moving it slowly. (some properties are not previewed)</div>
+</div>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to the interlocking specifications of HTML and WebGL, the preview may not keep up if you move it too quickly.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="simple">
+<dt><img alt="tlvisi" src="../_images/tl_b.png" /> <strong>Show/hide timeline cast (object)</strong></dt><dd><p>You can hide the cast of the selected timeline. IK markers will still be visible when hidden. (If you select another cast, even the IK marker will not be displayed)</p>
+</dd>
+</dl>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="animation_loadsave.html" class="btn btn-neutral float-left" title="12.6. Loading and saving animations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../man5/special_operation.html" class="btn btn-neutral float-right" title="13. Keyboard shortcut" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

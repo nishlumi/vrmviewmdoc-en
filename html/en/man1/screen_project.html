@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6.5. Project setting screen &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.6. Screenshot" href="screen_scrshot.html" />
+    <link rel="prev" title="6.4. VRM information screen" href="screen_vrminfo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feature.html">5. Feature</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="screen.html">6. Screen configuration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="screen_main.html">6.1. Main screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_webgl.html">6.2. WebGL screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_appconfig.html">6.3. App settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_vrminfo.html">6.4. VRM information screen</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.5. Project setting screen</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">6.5.1. Project information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">6.5.2. Role management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">6.5.3. material</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">6.5.3.1. Add material</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="screen_scrshot.html">6.6. Screenshot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_pose.html">6.7. Pose list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_ikmarker.html">6.8. Repositioning of IK markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_gravity.html">6.9. gravity settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_mediapipe.html">6.10. pose tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_video.html">6.11. Video player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html">6.12. Menu structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_objlist.html">6.13. Object list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_prop.html">6.14. Property list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_timeline.html">6.15. Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_keyframereg.html">6.16. Keyframe registration window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_keyframe.html">6.17. Setting keyframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_internaldlg.html">6.18. Internal storage dialog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_vpad.html">6.19. v-pad (control pad for main camera)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_naviwin.html">6.20. Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="screen.html"><span class="section-number">6. </span>Screen configuration</a> &raquo;</li>
+      <li><span class="section-number">6.5. </span>Project setting screen</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man1/screen_project.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="index-0">
+<span id="id1"></span><h1><span class="section-number">6.5. </span>Project setting screen<a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<p>This screen is used to set the role name of each object in the animation and to assign each object to the loaded role. (Animation will be discussed later)</p>
+<section id="id2">
+<h2><span class="section-number">6.5.1. </span>Project information<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>This is a tab where you can make a note of the outline of the project file.</p>
+<img alt="../_images/screen_project1.png" class="align-center" src="../_images/screen_project1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Animation project name</p>
+</dd>
+<dt class="field-even">Description<span class="colon">:</span></dt>
+<dd class="field-even"><p>Detailed description of the animation project</p>
+</dd>
+<dt class="field-odd">URL<span class="colon">:</span></dt>
+<dd class="field-odd"><p>URL you want to specify</p>
+</dd>
+<dt class="field-even">license<span class="colon">:</span></dt>
+<dd class="field-even"><p>Animation project license terms (if needed)</p>
+</dd>
+<dt class="field-odd">FPS<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sets the animation FPS.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h2><span class="section-number">6.5.2. </span>Role management<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<p>This tab is used to select and manage roles (roles/timelines) within an animation project and casts (objects) assigned to them.</p>
+<img alt="../_images/screen_project2.png" class="align-center" src="../_images/screen_project2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Role<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Enter the role of the object (name for identification within the animation project)</p>
+</dd>
+<dt class="field-even">Kind<span class="colon">:</span></dt>
+<dd class="field-even"><p>role type</p>
+</dd>
+<dt class="field-odd">cast<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Select objects to assign to role</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h2><span class="section-number">6.5.3. </span>material<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<p>This tab manages materials such as textures in the app.</p>
+<img alt="../_images/screen_project3.png" class="align-center" src="../_images/screen_project3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Material type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Select from Texture etc.</p>
+</dd>
+<dt class="field-even">material location<span class="colon">:</span></dt>
+<dd class="field-even"><p>Switch between in-app or in-project</p>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">App</span></code> - in the app</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">Project</span></code> - in the current animation project</div>
+</div>
+</dd>
+<dt class="field-odd">Add<span class="colon">:</span></dt>
+<dd class="field-odd"><p>add material</p>
+</dd>
+<dt class="field-even">Remove<span class="colon">:</span></dt>
+<dd class="field-even"><p>Delete the material selected in the list</p>
+</dd>
+<dt class="field-odd">List<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Material preview, material name, material type, file name</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Rows with no images loaded in the list look like this:</p>
+<img alt="../_images/screen_project5.png" class="align-center" src="../_images/screen_project5.png" />
+<p>Press the <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Preview</span></code> button to load the image.</p>
+</div>
+<section id="id5">
+<h3><span class="section-number">6.5.3.1. </span>Add material<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>This is a dedicated pop-up window for adding materials.</p>
+<img alt="../_images/screen_project6.png" class="align-center" src="../_images/screen_project6.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">material label<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Specifies the name used to refer to the texture in the application</p>
+</dd>
+<dt class="field-even">material file button<span class="colon">:</span></dt>
+<dd class="field-even"><p>Select the image file etc. you want to use as a texture from the terminal</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="screen_vrminfo.html" class="btn btn-neutral float-left" title="6.4. VRM information screen" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="screen_scrshot.html" class="btn btn-neutral float-right" title="6.6. Screenshot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

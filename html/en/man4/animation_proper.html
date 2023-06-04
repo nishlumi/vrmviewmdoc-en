@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.3. Various animation settings &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12.4. Registering and setting keyframes" href="animation_register.html" />
+    <link rel="prev" title="12.2. Animation project structure" href="specification.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="animation.html">12. Animation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="about.html">12.1. What is an animation project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="specification.html">12.2. Animation project structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">12.3. Various animation settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fps">12.3.1. Set number of frames and FPS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setdefaultduration">12.3.2. Set default interval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#webgl">12.3.3. Set WebGL screen size</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#index-3">12.3.3.1. navigation window</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#settingcast2role">12.3.4. Assign Cast to Role</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">12.3.4.1. Assign Casts to Roles Later</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-5">12.3.5. Delete role</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-6">12.3.6. Delete empty timelines all at once</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-7">12.3.7. Change role title</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-8">12.3.8. Reload all roles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="animation_register.html">12.4. Registering and setting keyframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_play.html">12.5. Play and stop animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_loadsave.html">12.6. Loading and saving animations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_tl.html">12.7. A few things about timeline display</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="animation.html"><span class="section-number">12. </span>Animation</a> &raquo;</li>
+      <li><span class="section-number">12.3. </span>Various animation settings</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man4/animation_proper.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">12.3. </span>Various animation settings</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id11">Various animation settings</a></p>
+<ul>
+<li><p><a class="reference internal" href="#fps" id="id12">Set number of frames and FPS</a></p></li>
+<li><p><a class="reference internal" href="#setdefaultduration" id="id13">Set default interval</a></p></li>
+<li><p><a class="reference internal" href="#webgl" id="id14">Set WebGL screen size</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-3" id="id15">navigation window</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#settingcast2role" id="id16">Assign Cast to Role</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id5" id="id17">Assign Casts to Roles Later</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-5" id="id18">Delete role</a></p></li>
+<li><p><a class="reference internal" href="#index-6" id="id19">Delete empty timelines all at once</a></p></li>
+<li><p><a class="reference internal" href="#index-7" id="id20">Change role title</a></p></li>
+<li><p><a class="reference internal" href="#index-8" id="id21">Reload all roles</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="fps">
+<span id="setfpsframe"></span><span id="index-0"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">12.3.1. </span>Set number of frames and FPS</a><a class="headerlink" href="#fps" title="Permalink to this heading"></a></h2>
+<p>Determine the length of the animation first. By default it is 60 and FPS is also 60. Please set two places of the figure in the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar as you like.</p>
+<table class="docutils align-center">
+<tbody>
+<tr class="row-odd"><td><p><img alt="prop_left" src="../_images/proper_1left.png" /></p></td>
+<td><p><img alt="prop_right" src="../_images/proper_1right.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p>Project setting screen</p></td>
+<td><p>Ribbon bar</p></td>
+</tr>
+<tr class="row-odd"><td><p>FPS (frames per second)</p></td>
+<td><p>maximum number of frames</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">Frame</span></code> indicated by FPS and <code class="docutils literal notranslate"><span class="pre">Frame</span></code> in this application are not the same. <code class="docutils literal notranslate"><span class="pre">Frame</span></code> in this application is just an array for data management.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Changing FPS will recalculate <code class="docutils literal notranslate"><span class="pre">FPS</span> <span class="pre">/</span> <span class="pre">6000.0</span></code> and automatically update the duration of all keyframes. Any manually set intervals will also change, so make sure you really want to change the FPS.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="setdefaultduration">
+<span id="index-1"></span><span id="id2"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">12.3.2. </span>Set default interval</a><a class="headerlink" href="#setdefaultduration" title="Permalink to this heading"></a></h2>
+<p>In an animation project, the interval between reaching the content of the frame is determined in seconds. By default, the calculation result of <code class="docutils literal notranslate"><span class="pre">FPS</span> <span class="pre">/</span> <span class="pre">6000.0</span></code> is set.</p>
+<p>You can change this to any number of seconds.</p>
+<ol class="arabic simple">
+<li><p>Enter the <code class="docutils literal notranslate"><span class="pre">default</span> <span class="pre">spacing</span></code> for the ribbon bar. (0.0001 to 99.9999 seconds)</p></li>
+</ol>
+<img alt="../_images/proper_h.png" class="align-center" src="../_images/proper_h.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>By specifying it here, subsequent keyframe registrations will be registered based on the number of seconds after the change.</p>
+<p>If you register more than one frame apart, the frame interval will be the number of seconds adjusted based on the calculation result of <code class="docutils literal notranslate"><span class="pre">default</span> <span class="pre">interval</span> <span class="pre">*</span> <span class="pre">number</span> <span class="pre">of</span> <span class="pre">frames</span> <span class="pre">apart</span></code> .</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>If you want to set the interval for each keyframe, please refer to <a class="reference internal" href="animation_register.html"><span class="doc">Registering and setting keyframes</span></a> … “Setting the keyframe interval” below.</p>
+</div>
+</section>
+<section id="webgl">
+<span id="index-2"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">12.3.3. </span>Set WebGL screen size</a><a class="headerlink" href="#webgl" title="Permalink to this heading"></a></h2>
+<p>Set the screen size of WebGL as necessary. The default depends on the size of the window. Specify the screen size in the <code class="docutils literal notranslate"><span class="pre">Screen</span></code> tab of the ribbon bar.</p>
+<img alt="../_images/proper_2.png" class="align-center" src="../_images/proper_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">If you specify a screen size that exceeds the window size of the current app, a scroll bar will be displayed.</div>
+<div class="line">If you press the <code class="docutils literal notranslate"><span class="pre">Original</span> <span class="pre">size</span></code> button, the screen size will return to fit the window size.</div>
+</div>
+<p>Also, please note that if the ratio is different, the expected view from the main camera and Camera object will change when the screen size is changed.</p>
+<div class="admonition-webgl admonition">
+<p class="admonition-title">Relation between window size and WebGL screen size</p>
+<p>There are two meanings in this application: window size change and WebGL screen size change.</p>
+<dl class="field-list">
+<dt class="field-odd">Change window size<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This is a change to the app window itself. The width and height after subtracting the ribbon bar, left and right panels, and timeline panel will be the final size of the WebGL screen. If the WebGL screen size is the initial state of the app, the WebGL screen will automatically resize according to the window size.</p>
+</dd>
+<dt class="field-even">WebGL screen size change<span class="colon">:</span></dt>
+<dd class="field-even"><div class="line-block">
+<div class="line">The size can be changed regardless of the application window. Scrollbars will appear if the WebGL screen size is significantly larger. If you have changed the WebGL screen size manually even once, it will not change automatically even if you change the window size.</div>
+<div class="line">If you restore it to <code class="docutils literal notranslate"><span class="pre">original</span> <span class="pre">size</span></code>, it will be automatically resized again.</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="index-3">
+<span id="id3"></span><h3><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">12.3.3.1. </span>navigation window</a><a class="headerlink" href="#index-3" title="Permalink to this heading"></a></h3>
+<p>It is troublesome to scroll when the screen size changes. If you use this in such a case, you can expect to improve operability because you can scroll while grasping the whole.</p>
+<ol class="arabic simple">
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">Navigation</span></code> button in the Screens tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/general_scr02.png" class="align-center" src="../_images/general_scr02.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>A small navigation window will appear inside the main app window.</p></li>
+</ol>
+<img alt="../_images/screen_naviwin.png" class="align-center" src="../_images/screen_naviwin.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>A red frame is displayed as the currently displayed range on the navigation preview screen.</p></li>
+<li><p>If the resolution of the WebGL screen is larger than the display area, clicking or dragging the red frame anywhere will scroll the WebGL screen accordingly.</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can also <code class="docutils literal notranslate"><span class="pre">Resize</span></code> and <code class="docutils literal notranslate"><span class="pre">Reset</span> <span class="pre">Camera</span></code> from within the navigation window.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="settingcast2role">
+<span id="index-4"></span><span id="id4"></span><h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">12.3.4. </span>Assign Cast to Role</a><a class="headerlink" href="#settingcast2role" title="Permalink to this heading"></a></h2>
+<p>An animation project has a timeline for each role. Roles are usually assigned automatically when loading a cast (avatar object). Here’s how to assign a cast to a specific role.</p>
+<p>By assigning a cast to a role, the animation data on the role can be played with that cast.</p>
+<dl class="simple">
+<dt>Timing when casts (avatars/objects) and roles are linked</dt><dd><ul class="simple">
+<li><p>When loading a new VRoid/VRM or each object</p></li>
+<li><p>When changed later on the role setting screen</p></li>
+<li><p>When opening a saved project</p></li>
+</ul>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="id5">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">12.3.4.1. </span>Assign Casts to Roles Later</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>As a case, you want to replace an animation that has been registered once with a cast of the same type that is read later.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code> from the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/proper_3.png" class="align-center" src="../_images/proper_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Roles</span></code> tab.</p></li>
+</ol>
+<img alt="../_images/proper_4.png" class="align-center" src="../_images/proper_4.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li><p>Click the row of the role you want to assign the cast to.</p></li>
+</ol>
+<img alt="../_images/proper_5.png" class="align-center" src="../_images/proper_5.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>A pop-up dialog will open, select the desired cast and press the SET button.</p></li>
+</ol>
+<img alt="../_images/proper_6.png" class="align-center" src="../_images/proper_6.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Select <code class="docutils literal notranslate"><span class="pre">None</span></code> to make the role uncast.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Observe that the cast is automatically unassigned from its original role.</p></li>
+</ol>
+<img alt="../_images/proper_7.png" class="align-center" src="../_images/proper_7.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The display will also switch on the animation timeline.</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/proper_8.png" src="../_images/proper_8.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Top:</strong> Timeline for later assigned roles</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+<div class="legend">
+<p><strong>Bottom:</strong> Timeline of the original role</p>
+</div>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Cast unassigned roles and timelines remain intact and are not deleted.</p>
+</div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="index-5">
+<span id="id6"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">12.3.5. </span>Delete role</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Delete the role. Delete roles that are no longer needed in your animation project. This operation also removes the actual object that is the cast assigned to the role.</div>
+<div class="line">To delete only the cast (object), right-click the object list and delete it.</div>
+</div>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code> from the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/proper_3.png" class="align-center" src="../_images/proper_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Roles</span></code> tab.</p></li>
+<li><p>Check the radio button to the left of the role you want to remove, and click <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">Role</span></code> on the toolbar.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="../_images/proper_9.png" src="../_images/proper_9.png" />
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>A confirmation message will be displayed, so press the OK button.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>Deleting a role like this deletes both the role and the cast(object).</p></li>
+<li><p>cannot delete Stage.</p></li>
+</ul>
+</div>
+<p>The same thing can be done by right-clicking on the object list and selecting <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">both</span> <span class="pre">this</span> <span class="pre">object</span> <span class="pre">and</span> <span class="pre">role</span></code> .</p>
+<img alt="../_images/proper_a.png" class="align-center" src="../_images/proper_a.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-6">
+<span id="id7"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">12.3.6. </span>Delete empty timelines all at once</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
+<p>If you repeatedly assign casts (objects) to roles, there may be a relatively large number of timelines (roles) with no objects assigned or no keyframes registered.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code> on the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">Empty</span> <span class="pre">Timeline</span></code> on the toolbar.</p></li>
+</ol>
+<img alt="../_images/proper_e.png" class="align-center" src="../_images/proper_e.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>A confirmation message will be displayed, so press the OK button.</p></li>
+</ol>
+<img alt="../_images/proper_f.png" class="align-center" src="../_images/proper_f.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>A confirmation message will be displayed, so press the OK button.</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">1. キーフレームが一つも登録されていない</div>
+<div class="line">2. タイムライン（ロール）にオブジェクトが割り当てられていない</div>
+</div>
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>SystemEffect, BGM, SE, Stage cannot be separated from roles, so they are not included.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-7">
+<span id="id8"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">12.3.7. </span>Change role title</a><a class="headerlink" href="#index-7" title="Permalink to this heading"></a></h2>
+<p>You can enter a title for the role for clarity. It is usually set as an initial value as follows.</p>
+<dl class="field-list simple">
+<dt class="field-odd">VRM<span class="colon">:</span></dt>
+<dd class="field-odd"><p>VRM meta information title</p>
+</dd>
+<dt class="field-even">Non-VRM<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sequential number by type name + date and time</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line">Because of this specification, roles and casts are automatically assigned if the VRM title is the same as the role title.</div>
+<div class="line">When changed, the VRM will not be automatically assigned, but it can be managed with an easy-to-understand role name in the animation project.</div>
+</div>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code> from the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/proper_3.png" class="align-center" src="../_images/proper_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Roles</span></code> tab.</p></li>
+</ol>
+<img alt="../_images/proper_b.png" class="align-center" src="../_images/proper_b.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Find the row where you want to edit the role title and click on the role.</p></li>
+</ol>
+<img alt="../_images/proper_c.png" class="align-center" src="../_images/proper_c.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>A pop-up dialog will appear. Enter a new name and press the SET button.</p></li>
+</ol>
+<img alt="../_images/proper_d.png" class="align-center" src="../_images/proper_d.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Confirming the entry also changes the role title display on the timeline.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-8">
+<span id="id9"></span><h2><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">12.3.8. </span>Reload all roles</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h2>
+<p>HTML and Unity’s WebGL are not always perfectly linked. If there is a discrepancy between the role data and display on the HTML side and WebGL side, the display is updated by reloading.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code> on the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/proper_3.png" class="align-center" src="../_images/proper_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Roles</span></code> tab.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Refresh</span></code> on the toolbar.</p></li>
+</ol>
+<img alt="../_images/proper_g.png" class="align-center" src="../_images/proper_g.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="specification.html" class="btn btn-neutral float-left" title="12.2. Animation project structure" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="animation_register.html" class="btn btn-neutral float-right" title="12.4. Registering and setting keyframes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

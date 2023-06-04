@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12.6. Loading and saving animations &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12.7. A few things about timeline display" href="animation_tl.html" />
+    <link rel="prev" title="12.5. Play and stop animation" href="animation_play.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="animation.html">12. Animation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="about.html">12.1. What is an animation project?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="specification.html">12.2. Animation project structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_proper.html">12.3. Various animation settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_register.html">12.4. Registering and setting keyframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="animation_play.html">12.5. Play and stop animation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">12.6. Loading and saving animations</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#savemotionfile">12.6.1. Save to motion file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vvmmot">12.6.1.1. This application’s original format .vvmmot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unity">12.6.1.2. General format such as Unity</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#openmotionfile">12.6.2. load motion file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saveproject">12.6.3. Save animation project file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#openproject">12.6.4. Open animation project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-8">12.6.5. Create a new project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-9">12.6.6. Manage project files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">12.6.6.1. open from file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">12.6.6.2. Rename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">12.6.6.3. Delete from internal storage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-10">12.6.7. Back up your project files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="animation_tl.html">12.7. A few things about timeline display</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="animation.html"><span class="section-number">12. </span>Animation</a> &raquo;</li>
+      <li><span class="section-number">12.6. </span>Loading and saving animations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man4/animation_loadsave.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="index-0">
+<span id="id1"></span><h1><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">12.6. </span>Loading and saving animations</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#index-0" id="id12">Loading and saving animations</a></p>
+<ul>
+<li><p><a class="reference internal" href="#savemotionfile" id="id13">Save to motion file</a></p>
+<ul>
+<li><p><a class="reference internal" href="#vvmmot" id="id14">This application’s original format .vvmmot</a></p></li>
+<li><p><a class="reference internal" href="#unity" id="id15">General format such as Unity</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#openmotionfile" id="id16">load motion file</a></p></li>
+<li><p><a class="reference internal" href="#saveproject" id="id17">Save animation project file</a></p></li>
+<li><p><a class="reference internal" href="#openproject" id="id18">Open animation project</a></p></li>
+<li><p><a class="reference internal" href="#index-8" id="id19">Create a new project</a></p></li>
+<li><p><a class="reference internal" href="#index-9" id="id20">Manage project files</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id8" id="id21">open from file</a></p></li>
+<li><p><a class="reference internal" href="#id9" id="id22">Rename</a></p></li>
+<li><p><a class="reference internal" href="#id10" id="id23">Delete from internal storage</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-10" id="id24">Back up your project files</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="savemotionfile">
+<span id="index-1"></span><span id="id2"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">12.6.1. </span>Save to motion file</a><a class="headerlink" href="#savemotionfile" title="Permalink to this heading"></a></h2>
+<section id="vvmmot">
+<span id="index-2"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">12.6.1.1. </span>This application’s original format .vvmmot</a><a class="headerlink" href="#vvmmot" title="Permalink to this heading"></a></h3>
+<p>You can save motion data for only one roll to a file. You can print for all roles.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code> on the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Roles</span></code> tab.</p></li>
+<li><p>Select the row of the role you want to save.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Motion</span> <span class="pre">to</span> <span class="pre">File</span></code> on the toolbar.</p></li>
+</ol>
+<img alt="../_images/loadsave_1.png" class="align-center" src="../_images/loadsave_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Enter the file name and press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Save format<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>.vvmmot</strong></p>
+<ul class="simple">
+<li><p>Although it has its own extension, it is actually just a JSON format file. You can read it even if you change the extension to .json. Operation is not guaranteed if incorrect data is read.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition warning" id="index-3">
+<p class="admonition-title">Warning</p>
+<p><strong>Pay attention to the physique of the VRM that creates the motion</strong></p>
+<p>When creating motion data with VRM, if you replace it with a VRM with a different height or physique in the middle, there will be a gap in the ground and each part. Be sure to complete the motion creation with the same VRM.</p>
+<dl>
+<dt>Example:</dt><dd><ol class="arabic simple">
+<li><p>Create the motion halfway with a 160cm VRM and save it in a file</p></li>
+<li><p>Load the vvmmot file into a 155cm VRM on another day and create the continuation of the motion</p></li>
+<li><p>On another day, load the vvmmot file into a 140cm VRM and play the motion</p></li>
+</ol>
+<p>In this case, 3’s 140cm VRM causes the whole body to float and move unexpectedly during motion.</p>
+</dd>
+</dl>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>After loading the motion, if you want to save it as a motion file again, <strong>must</strong> register each keyframe once.</p>
+<p>Immediately after loading the motion, the current VRM’s height information and the height information of another VRM as reference information in the motion are mixed in the timeline (roll).</p>
+<div class="line-block">
+<div class="line">By registering the keyframe again, the motion will be registered as the current height and physique of the VRM.</div>
+<div class="line">(When registering, it is not necessary to move the pose etc. You can press the register button as soon as the frame number is selected and the object such as VRM reproduces the motion)</div>
+</div>
+<p>This has the same meaning as the above problem “Pay attention to the physique of the VRM that creates the motion”.</p>
+</div>
+</section>
+<section id="unity">
+<span id="index-4"></span><h3><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">12.6.1.2. </span>General format such as Unity</a><a class="headerlink" href="#unity" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code> on the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Roles</span></code> tab.</p></li>
+<li><p>Select the row of the role you want to save.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">as</span> <span class="pre">a</span> <span class="pre">generic</span> <span class="pre">motion</span> <span class="pre">file</span></code> on the toolbar.</p></li>
+<li><p>Click the desired format menu.</p></li>
+</ol>
+<img alt="../_images/loadsave_d.png" class="align-center" src="../_images/loadsave_d.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li><p>Enter the file name and press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Save format<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>.anim</strong></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>An .anim file is an AnimationClip file that can be read as-is in Unity.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As of <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.0.0</span></code> of this application, only motions of Humanoid’s Animator are supported. .bvh is still under test operation, so it is not guaranteed to work. please note that.</p>
+<p>The .anim file cannot be read again by this application.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="openmotionfile">
+<span id="index-5"></span><span id="id3"></span><h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">12.6.2. </span>load motion file</a><a class="headerlink" href="#openmotionfile" title="Permalink to this heading"></a></h2>
+<p>A motion file <code class="docutils literal notranslate"><span class="pre">.vvmmot</span></code> can be read and reflected in a specific role (timeline) in an animation project.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Settings</span></code> on the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Roles</span></code> tab.</p></li>
+<li><p>Select the row of the role you want to load.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Load</span> <span class="pre">Motion</span> <span class="pre">File</span></code> on the toolbar.</p></li>
+</ol>
+<img alt="../_images/loadsave_2.png" class="align-center" src="../_images/loadsave_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Select the target file and it will be loaded automatically.</p></li>
+</ol>
+<p><strong>Alternative method</strong></p>
+<ol class="arabic simple">
+<li><p>Select the cast assigned to the role you want to apply the motion to.</p></li>
+<li><p>Drag and drop the <code class="docutils literal notranslate"><span class="pre">.vvmmot</span></code> file from Explorer etc. to the WebGL screen.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Role types must be the same.</p></li>
+<li><p>Please note that if motion data already exists, it will be overwritten (handle new registration after deleting all).</p></li>
+<li><p>If the number of frames is more than the maximum number of frames in the current project, it will be cut to the maximum number of frames. It is recommended to expand the number of frames to some extent in advance.</p></li>
+<li><p>When dragging and dropping, only <code class="docutils literal notranslate"><span class="pre">.vvmmot</span></code> extension is valid. (Cannot be opened with <code class="docutils literal notranslate"><span class="pre">.json</span></code>)</p></li>
+<li><p>When dragging and dropping, the currently selected cast must be assigned to some role. (If you do it from the project settings screen, it will be applied directly to the role, so there is no problem even if the cast is not assigned.)</p></li>
+</ul>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The time (duration) of each frame that motion takes is independent for each timeline (and even for each frame), so loading it into an existing project will not affect other timelines.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="saveproject">
+<span id="index-6"></span><span id="id4"></span><h2><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">12.6.3. </span>Save animation project file</a><a class="headerlink" href="#saveproject" title="Permalink to this heading"></a></h2>
+<p>Once you have created an animation project, you can save it as a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Saved content<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Timeline (including all keyframes)</p></li>
+<li><p>Information on all roles</p></li>
+<li><p>Other settings on the animation project</p></li>
+<li><p>Materials in the project (including actual files)</p></li>
+</ul>
+</dd>
+</dl>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Save</span></code> from the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/loadsave_3.png" class="align-center" src="../_images/loadsave_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Save</span></code> or <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code>.</p></li>
+</ol>
+<img alt="../_images/loadsave_4.png" class="align-center" src="../_images/loadsave_4.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Each OS version has a <code class="docutils literal notranslate"><span class="pre">Terminal</span></code> menu that allows you to save directly to your PC.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>For <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">As</span></code>, enter a name in the input dialog.</p></li>
+</ol>
+<p>The animation project will be saved in the dedicated storage inside the app or on your PC.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>In the case of <strong>Save</strong>, a confirmation message will be displayed if the project already exists.</p></li>
+<li><p>After saving, a notification message will be displayed on the upper right.</p></li>
+</ul>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Save format<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>.vvmproj</strong></p>
+<p>Although it is a unique extension, it is actually just a JSON format file.</p>
+</dd>
+</dl>
+<p><img alt="projopen" src="../_images/loadsave_5.png" /> To download to a PC or terminal, click <code class="docutils literal notranslate"><span class="pre">Open</span></code> to display the internal storage dialog, then click this button on the toolbar.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="openproject">
+<span id="index-7"></span><span id="id5"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">12.6.4. </span>Open animation project</a><a class="headerlink" href="#openproject" title="Permalink to this heading"></a></h2>
+<p>You can read the saved project file.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span></code> from the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">From</span> <span class="pre">File</span></code> opens the OS file dialog, and <code class="docutils literal notranslate"><span class="pre">From</span> <span class="pre">Internal</span> <span class="pre">Storage</span></code> opens the internal storage dialog within the app.</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>You can filter projects using the search box at the top of the list.</p>
+<img alt="../_images/loadsave_e.png" class="align-center" src="../_images/loadsave_e.png" />
+</div>
+<ol class="arabic simple" start="3">
+<li><p>After selecting the target project, press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button.</p></li>
+</ol>
+<dl class="simple">
+<dt>What is restored</dt><dd><ul class="simple">
+<li><p>Timeline (including all keyframes)</p></li>
+<li><p>Information on all roles</p></li>
+<li><p>Other settings on the animation project</p></li>
+<li><p>Timeline (including all keyframes)</p></li>
+<li><p>Information on all roles</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition-os admonition">
+<p class="admonition-title">Differences between the web application version and each OS version</p>
+<p>The actual behavior when opening a project file differs between the web application version and each OS version. If there is a VRM or 3D model file used in the project, it will be loaded as follows.</p>
+<dl class="simple">
+<dt>Web app version</dt><dd><p>Reads files saved in the app (a special location prepared by the browser in the terminal) (not saved on the server of this app).</p>
+</dd>
+<dt>PC version</dt><dd><p>Only meta information such as file path and file type is stored in the app. Refer to the meta information and open and read the VRM and 3D model files in the actual terminal.</p>
+</dd>
+</dl>
+<p>In the project file, there is a property called <code class="docutils literal notranslate"><span class="pre">path</span></code> that indicates the file path of each cast, but it is not the actual file path. Even if you edit the file path directly there, the file targeted for that cast will not be loaded.</p>
+<p>This is due to the fact that HTML and javascript are used, and <strong>as a security measure, only files that have been opened once are allowed to be read automatically</strong>. please note that.</p>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">restore the actual object</p>
+<p>The casts (objects) assigned to each role are also automatically opened and restored as much as possible.</p>
+<div class="line-block">
+<div class="line">However, only objects that meet the following conditions.</div>
+<div class="line">Objects that do not match will not be loaded and no cast will be assigned to the corresponding role. Playing the animation does not move the role, so you need to operate ” <a class="reference internal" href="animation_proper.html#settingcast2role"><span class="std std-ref">Assign Cast to Role</span></a> “.</div>
+</div>
+<ul class="simple">
+<li><p>Basic shapes (OtherObject), Camera, Light, Effect, Text</p></li>
+<li><p>Object files (VRM, OtherObject, Image, UImage) stored in the app history</p></li>
+<li><p>Object files that are less than or equal to the size specified in the settings</p></li>
+</ul>
+<p>For VRM and other objects, the criteria for assigning roles are different. If they match each other, the assignment will be completed automatically and you will be able to operate it immediately on the app.</p>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Object type</p></th>
+<th class="head"><p>Criteria</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>VRM</p></td>
+<td><p>TItle of VRM</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherObject</p></td>
+<td><p>File name</p></td>
+</tr>
+<tr class="row-even"><td><p>Image</p></td>
+<td><p>File name</p></td>
+</tr>
+<tr class="row-odd"><td><p>UImage</p></td>
+<td><p>File name</p></td>
+</tr>
+<tr class="row-even"><td><p>Others</p></td>
+<td><p>automatically depending on type</p></td>
+</tr>
+</tbody>
+</table>
+<p>Audio is not included here.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The contents of previously opened projects are reset.</p>
+<p>Settings <code class="docutils literal notranslate"><span class="pre">Do</span> <span class="pre">not</span> <span class="pre">load</span> <span class="pre">files</span> <span class="pre">larger</span> <span class="pre">than</span> <span class="pre">this</span> <span class="pre">size</span> <span class="pre">automatically</span> <span class="pre">when</span> <span class="pre">the</span> <span class="pre">project</span> <span class="pre">is</span> <span class="pre">opened.</span></code> If is a valid size, each oversized object will skip loading when opening an animation project. In this case, open the corresponding object file later. Restoring rolls and casts is described above.</p>
+</div>
+</section>
+<section id="index-8">
+<span id="id6"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">12.6.5. </span>Create a new project</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h2>
+<p>Create a new project. It is not necessary when starting the application. Use this when you want to start over an already open project.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">New</span></code> from the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+</ol>
+<dl class="simple">
+<dt>What New Creation Does</dt><dd><ul class="simple">
+<li><p>Removed all animation projects (except SystemEffect, BGM, SE, Stage)</p></li>
+<li><p>Delete all loaded VRoid/VRM, each object</p></li>
+</ul>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-9">
+<span id="id7"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">12.6.6. </span>Manage project files</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h2>
+<p>You can manage saved project files in the internal storage dialog.</p>
+<ol class="arabic simple">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Open</span></code> from the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/loadsave_6.png" class="align-center" src="../_images/loadsave_6.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>The Internal Storage dialog will open.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="id8">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">12.6.6.1. </span>open from file</a><a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Click this button on the toolbar.</p></li>
+</ol>
+<img alt="../_images/loadsave_7.png" class="align-center" src="../_images/loadsave_7.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li><p>Select and open the file with the desired extension .vvmproj or .json.</p></li>
+</ol>
+<p>Operation is not guaranteed if incorrect data is read.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id9">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">12.6.6.2. </span>Rename</a><a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Click this button on the toolbar and enter a new name.</p></li>
+</ol>
+<img alt="../_images/loadsave_8.png" class="align-center" src="../_images/loadsave_8.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id10">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink"><span class="section-number">12.6.6.3. </span>Delete from internal storage</a><a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Click this button on the toolbar.</p></li>
+</ol>
+<img alt="../_images/loadsave_9.png" class="align-center" src="../_images/loadsave_9.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All materials linked to the project will also be deleted from within the app.</p>
+</div>
+</section>
+</section>
+<section id="index-10">
+<span id="id11"></span><h2><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">12.6.7. </span>Back up your project files</a><a class="headerlink" href="#index-10" title="Permalink to this heading"></a></h2>
+<p>You can periodically back up the currently open project.</p>
+<ol class="arabic simple">
+<li><p>Open the app settings.</p></li>
+<li><p>Check <code class="docutils literal notranslate"><span class="pre">Back</span> <span class="pre">up</span> <span class="pre">project</span></code> in the Application tab.</p></li>
+<li><p>In Backup Interval, specify how often you want backups to occur automatically, in minutes.</p></li>
+</ol>
+<img alt="../_images/loadsave_b.png" class="align-center" src="../_images/loadsave_b.png" />
+<ol class="arabic simple" start="4">
+<li><p>Open the internal storage dialog and it will be saved as <code class="docutils literal notranslate"><span class="pre">%BACKUP%</span></code>.</p></li>
+</ol>
+<img alt="../_images/loadsave_c.png" class="align-center" src="../_images/loadsave_c.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">What triggered the backup</p>
+<p>Backups are subject to action when you:</p>
+<ul class="simple">
+<li><p>Changed maximum number of frames</p></li>
+<li><p>Registered/deleted keyframes</p></li>
+<li><p>Pasted keyframes from the clipboard</p></li>
+<li><p>Cleared the contents of the timeline</p></li>
+<li><p>Removed roles and timelines</p></li>
+</ul>
+<p>Conversely, as long as you don’t register a keyframe, you can continue to do new operations without overwriting the old backup.</p>
+</div>
+<p>If an unexpected situation occurs and the app terminates or becomes uncontinuable, opening <code class="docutils literal notranslate"><span class="pre">%BACKUP%.vvmproj</span></code> will allow you to immediately resume from the previous state.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>After opening the backed up project file, change the file name when saving again. File names containing <code class="docutils literal notranslate"><span class="pre">%BACKUP%</span></code> cannot be saved.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="animation_play.html" class="btn btn-neutral float-left" title="12.5. Play and stop animation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="animation_tl.html" class="btn btn-neutral float-right" title="12.7. A few things about timeline display" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

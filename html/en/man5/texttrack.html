@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>16. Edit Subtitles &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="17. Setting" href="config.html" />
+    <link rel="prev" title="15. Video" href="videorec.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videorec.html">15. Video</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">16. Edit Subtitles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">16.1. show the panel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">16.2. Add a text track</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">16.3. Manage existing text tracks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">16.3.1. Change display mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">16.3.2. Load subtitle file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">16.3.3. Save as subtitle file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">16.4. Edit subtitles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">16.4.1. Add subtitles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">16.4.2. Select/edit subtitles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">16.4.3. Remove subtitles</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#css">16.5. Manage CSS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">16.5.1. Load CSS file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">16.5.2. Save CSS to file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">16.5.3. Add CSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">16.5.4. Edit CSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">16.5.5. Remove CSS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">16. </span>Edit Subtitles</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man5/texttrack.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">16. </span>Edit Subtitles</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<p id="index-0">A subtitle editing function has been implemented in the video player since ver 1.2.0.
+After recording, you can start editing the subtitles to match the video without using any other apps or tools.</p>
+<p>For subtitles and text tracks, please see the following page on MDN.</p>
+<p><a class="reference external" href="https://developer.mozilla.org/ja/docs/Web/API/WebVTT_API">https://developer.mozilla.org/ja/docs/Web/API/WebVTT_API</a></p>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id17">Edit Subtitles</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id18">show the panel</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id19">Add a text track</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id20">Manage existing text tracks</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id5" id="id21">Change display mode</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id22">Load subtitle file</a></p></li>
+<li><p><a class="reference internal" href="#id7" id="id23">Save as subtitle file</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id8" id="id24">Edit subtitles</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id9" id="id25">Add subtitles</a></p></li>
+<li><p><a class="reference internal" href="#id10" id="id26">Select/edit subtitles</a></p></li>
+<li><p><a class="reference internal" href="#id11" id="id27">Remove subtitles</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#css" id="id28">Manage CSS</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id12" id="id29">Load CSS file</a></p></li>
+<li><p><a class="reference internal" href="#id13" id="id30">Save CSS to file</a></p></li>
+<li><p><a class="reference internal" href="#id14" id="id31">Add CSS</a></p></li>
+<li><p><a class="reference internal" href="#id15" id="id32">Edit CSS</a></p></li>
+<li><p><a class="reference internal" href="#id16" id="id33">Remove CSS</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="id2">
+<h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">16.1. </span>show the panel</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>To edit subtitles, press the Edit Subtitles button in the top right.</p>
+<table class="docutils align-center">
+<tbody>
+<tr class="row-odd"><td><p><img alt="headerbtn" src="../_images/vtt_001.png" /></p></td>
+<td><p>…</p></td>
+<td><p><img alt="rightpanel" src="../_images/vtt_002.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id3">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">16.2. </span>Add a text track</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<p>The video player has one text track by default. This is the method if you want to add more.</p>
+<img alt="../_images/vtt_004.png" class="align-center" src="../_images/vtt_004.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li><p>Open the Text Track tab.</p></li>
+<li><p>Enter a <code class="docutils literal notranslate"><span class="pre">label</span></code> for the top of the panel.</p></li>
+<li><p>Enter the <code class="docutils literal notranslate"><span class="pre">Language</span></code> next to it. (For Japanese, <code class="docutils literal notranslate"><span class="pre">ja-JP</span></code> etc.)</p></li>
+<li><p>Select the track type.</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>See below for track types.</p>
+<p><a class="reference external" href="https://developer.mozilla.org/ja/docs/Web/HTML/Element/track#attr-kind">https://developer.mozilla.org/ja/docs/Web/HTML/Element/track#attr-kind</a></p>
+<p><code class="docutils literal notranslate"><span class="pre">subtitles</span></code> is fine for normal use.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id4">
+<h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">16.3. </span>Manage existing text tracks</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<p>Manage existing text tracks by selecting or deleting them.</p>
+<img alt="../_images/vtt_005.png" class="align-center" src="../_images/vtt_005.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple">
+<li><p>Select the track you want to operate from the <code class="docutils literal notranslate"><span class="pre">Text</span> <span class="pre">Tracks</span></code>.</p></li>
+</ol>
+<section id="id5">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">16.3.1. </span>Change display mode</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select the desired mode from the <code class="docutils literal notranslate"><span class="pre">Display</span> <span class="pre">Mode</span></code>.</p></li>
+</ol>
+<table class="docutils align-center">
+<thead>
+<tr class="row-odd"><th class="head"><p>Mode name</p></th>
+<th class="head"><p>effect</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>disabled</p></td>
+<td><p>disable the track completely.</p></td>
+</tr>
+<tr class="row-odd"><td><p>hidden</p></td>
+<td><p>hides the track.</p></td>
+</tr>
+<tr class="row-even"><td><p>showing</p></td>
+<td><p>showing the track.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>For a detailed explanation of the mode, please see the following site.</p>
+<p><a class="reference external" href="https://developer.mozilla.org/ja/docs/Web/API/TextTrack/mode">https://developer.mozilla.org/ja/docs/Web/API/TextTrack/mode</a></p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id6">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">16.3.2. </span>Load subtitle file</a><a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>Load the subtitle file on your device.</p>
+<ol class="arabic simple">
+<li><p>Click the Open button.</p></li>
+<li><p>Select the desired subtitle file and open it.</p></li>
+<li><p>The content of the subtitle file will be read into the selected track.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Corresponding file extension<span class="colon">:</span></dt>
+<dd class="field-odd"><p>.vtt, .srt</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Functions that cannot be prepared in this application can also be described in VTT and SRT files (style sheets, comments, etc.). The effect of those settings can be demonstrated even when playing on this application, but it is not reflected on the UI of the application.</p>
+<p>Especially if you want to add or edit a stylesheet, redefine it in the CSS tab.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id7">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink"><span class="section-number">16.3.3. </span>Save as subtitle file</a><a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<p>Save the selected text track as a subtitle file on your device.</p>
+<ol class="arabic simple">
+<li><p>Press the Save button.</p></li>
+<li><p>Give the file a name and save it.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note that if you re-save the subtitle file loaded from the device, the style sheet included in the original subtitle file will not be saved.</p>
+</div>
+</section>
+</section>
+<section id="id8">
+<h2><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">16.4. </span>Edit subtitles</a><a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<p>The upper toolbar has a display of the current seek position and delete/add/apply buttons.</p>
+<p>The operations that can be performed in the subtitle list are as follows.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Click</p></td>
+<td><p>Select</p></td>
+</tr>
+<tr class="row-even"><td><p>Double click</p></td>
+<td><p>Automatically seek to the start of the selected subtitle</p></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="../_images/vtt_003.png" class="align-left" src="../_images/vtt_003.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>What you can edit with subtitles</strong></p>
+<p>You can set the following properties for subtitles:</p>
+<dl>
+<dt>start position/end position</dt><dd><img alt="../_images/vtt_010.png" src="../_images/vtt_010.png" />
+<p>After moving with the video seek bar, the left icon determines the start position, and the right icon determines the end position.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Text<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Subtitle text. Note that you can use the following tags:</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Horizontal (position)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sets the X-coordinate position of the subtitle in the video as a percentage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Horizontal (Automatic)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Automatically adjust the position of the X coordinate.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Vertical (line)<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sets the Y-coordinate position of the subtitle in the video as a percentage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Vertical (Automatic)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Automatically adjust the position of the X coordinate.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">justify<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Adjust the position in the subtitle area.</p>
+<p>It is align of VTTCue.</p>
+<p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/align">https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/align</a></p>
+</dd>
+<dt class="field-even">Subtitle size<span class="colon">:</span></dt>
+<dd class="field-even"><p>Set the subtitle area. <strong>not font size</strong>. If this size is smaller than the character size, the subtitles may not fit.</p>
+</dd>
+<dt class="field-odd">Stylesheet class name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Specify the class name defined in the CSS tab. Subtitle fonts and colors change according to the stylesheet.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It corresponds to a class called VTTCue. For details, please see the page of the following site.</p>
+<p><a class="reference external" href="https://developer.mozilla.org/ja/docs/Web/API/VTTCue">https://developer.mozilla.org/ja/docs/Web/API/VTTCue</a></p>
+</div>
+<section id="id9">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink"><span class="section-number">16.4.1. </span>Add subtitles</a><a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Move the video seek bar.</p></li>
+<li><p>Press the start position icon.</p></li>
+<li><p>Move the seek bar to the desired end position.</p></li>
+<li><p>Press the icon to the end position.</p></li>
+<li><p>Enter the subtitle properties.</p></li>
+<li><p>Press this button. <img alt="cueaddbtn" src="../_images/vtt_007.png" /></p></li>
+</ol>
+</section>
+<section id="id10">
+<h3><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">16.4.2. </span>Select/edit subtitles</a><a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select the desired line on the list of subtitles.</p></li>
+<li><p>Set the start position, end position, and properties in the same way as when adding .</p></li>
+<li><p>Press this button. <img alt="cueeditbtn" src="../_images/vtt_008.png" /></p></li>
+</ol>
+</section>
+<section id="id11">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink"><span class="section-number">16.4.3. </span>Remove subtitles</a><a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select the desired line on the list of subtitles.</p></li>
+<li><p>Select the desired line on the list of subtitles.</p></li>
+</ol>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="css">
+<h2><a class="toc-backref" href="#id28" role="doc-backlink"><span class="section-number">16.5. </span>Manage CSS</a><a class="headerlink" href="#css" title="Permalink to this heading"></a></h2>
+<p>You can add or remove stylesheets that apply to subtitles.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Stylesheets included when reading .vtt or .srt files cannot be restored to this tab of this application due to HTML specifications.</p>
+<p>If you want to save it again, please redefine it in this tab.</p>
+</div>
+<img alt="../_images/vtt_011.png" class="align-center" src="../_images/vtt_011.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="id12">
+<h3><a class="toc-backref" href="#id29" role="doc-backlink"><span class="section-number">16.5.1. </span>Load CSS file</a><a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<p>You can load a .css file and use it as a subtitle stylesheet.</p>
+<ol class="arabic simple">
+<li><p>Click <img alt="upbtn1" src="../_images/vtt_012.png" /> at the left end of the CSS tab toolbar.</p></li>
+<li><p>Select the .css file and open it.</p></li>
+</ol>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Definitions with <code class="docutils literal notranslate"><span class="pre">::cue()</span></code> selectors in .css files are targeted (other selectors are ignored).</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id13">
+<h3><a class="toc-backref" href="#id30" role="doc-backlink"><span class="section-number">16.5.2. </span>Save CSS to file</a><a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<p>Save the CSS defined on this application as a .css file separately from the .vtt file.</p>
+<ol class="arabic simple">
+<li><p>Click <img alt="dwnbtn1" src="../_images/vtt_013.png" /> at the left end of the CSS tab toolbar.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The file name is fixed at <code class="docutils literal notranslate"><span class="pre">style_[date-based</span> <span class="pre">serial</span> <span class="pre">number].css</span></code>.</p></li>
+</ul>
+</div>
+</section>
+<section id="id14">
+<h3><a class="toc-backref" href="#id31" role="doc-backlink"><span class="section-number">16.5.3. </span>Add CSS</a><a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Fill in the <code class="docutils literal notranslate"><span class="pre">stylesheet</span> <span class="pre">class</span> <span class="pre">name</span></code> field.</p></li>
+</ol>
+<ul class="simple">
+<li><p>You don’t need to write <code class="docutils literal notranslate"><span class="pre">::cue()</span></code> here. It’s just a name.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Write the styles you want in the <code class="docutils literal notranslate"><span class="pre">CSS</span></code> input box.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Write like normal CSS.</p></li>
+</ul>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">font-size</span><span class="o">:</span><span class="w"> </span><span class="nt">12pt</span><span class="o">;</span>
+<span class="nt">background-color</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nt">rgba</span><span class="o">(</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="o">,</span><span class="nt">0</span><span class="p">.</span><span class="nc">5</span><span class="o">);</span>
+<span class="nt">fotn-weight</span><span class="o">:</span><span class="w"> </span><span class="nt">bold</span><span class="o">;</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Press this button <img alt="cueaddbtn" src="../_images/vtt_007.png" /> on the toolbar.</p></li>
+</ol>
+</section>
+<section id="id15">
+<h3><a class="toc-backref" href="#id32" role="doc-backlink"><span class="section-number">16.5.4. </span>Edit CSS</a><a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select the line of the class name you want to edit in the CSS list.</p></li>
+<li><p>Change the style in the <code class="docutils literal notranslate"><span class="pre">CSS</span></code> input box.</p></li>
+<li><p>Press this button. <img alt="cueeditbtn" src="../_images/vtt_008.png" /></p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The stylesheet class name cannot be changed.</p>
+</div>
+</section>
+<section id="id16">
+<h3><a class="toc-backref" href="#id33" role="doc-backlink"><span class="section-number">16.5.5. </span>Remove CSS</a><a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select the line of the class name you want to delete in the CSS list.</p></li>
+<li><p>Select the desired line on the list of subtitles.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="videorec.html" class="btn btn-neutral float-left" title="15. Video" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="config.html" class="btn btn-neutral float-right" title="17. Setting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

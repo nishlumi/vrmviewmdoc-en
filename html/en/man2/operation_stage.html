@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>10.13. Stage &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11. Posing" href="../man3/posing.html" />
+    <link rel="prev" title="10.12. SystemEffect" href="operation_syseff.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="property.html">9. Property list</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="operation.html">10. Manipulating Objects</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="operation_initial.html">10.1. Basics of object manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_texture.html">10.2. Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html">10.3. VRoid/VRM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_obj.html">10.4. OtherObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_light.html">10.5. Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_camera.html">10.6. Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_image.html">10.7. Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_effect.html">10.8. Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_text.html">10.9. Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_uimage.html">10.10. UImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_audio.html">10.11. Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_syseff.html">10.12. SystemEffect</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.13. Stage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">10.13.1. Stage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">10.13.1.1. water stage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#userstage">10.13.1.2. UserStage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-3">10.13.2. Lighting (directional light)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">10.13.2.1. Halo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-5">10.13.3. Wind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operation-sky">10.13.4. Sky</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="operation.html"><span class="section-number">10. </span>Manipulating Objects</a> &raquo;</li>
+      <li><span class="section-number">10.13. </span>Stage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man2/operation_stage.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="stage">
+<span id="index-0"></span><h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">10.13. </span>Stage</a><a class="headerlink" href="#stage" title="Permalink to this heading"></a></h1>
+<p>Stage handles the environment such as the floor, sky, and lighting.</p>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#stage" id="id7">Stage</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id8">Stage</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id9">water stage</a></p></li>
+<li><p><a class="reference internal" href="#userstage" id="id10">UserStage</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-3" id="id11">Lighting (directional light)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id4" id="id12">Halo</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-5" id="id13">Wind</a></p></li>
+<li><p><a class="reference internal" href="#operation-sky" id="id14">Sky</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="id1">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">10.13.1. </span>Stage</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>Select the stage from the combo box.</p>
+<img alt="../_images/operation_stage_1.png" class="align-center" src="../_images/operation_stage_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Example of changing the floor to “SeaNight” and the color of the sky</p>
+<img alt="../_images/operation_stage_2.png" class="align-center" src="../_images/operation_stage_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition hint" id="index-1">
+<p class="admonition-title">Hint</p>
+<p>Please use OtherObjects to represent buildings and trees.</p>
+<p>To create buildings, gardens, etc., we recommend an application called “SweetHome 3D”. Please search for details on how to use this software.</p>
+<p><a class="reference external" href="http://www.sweethome3d.com/">http://www.sweethome3d.com/</a></p>
+<p>The point of using this software is that you can export 3D models in Obj format.</p>
+<p>When reading a 3D model (obj format) made by SweetHome3D with this application, compress the generated files below into a single zip file and use it.</p>
+<ul class="simple">
+<li><p>obj file</p></li>
+<li><p>mtl file</p></li>
+<li><p>Other jpg / png files</p></li>
+</ul>
+<div class="line-block">
+<div class="line">In addition, the IK marker of this application is attached to the position equivalent to 0m in SweetHome3D.</div>
+<div class="line">Also, the scale is quite large, so we recommend changing it to 1-3%.</div>
+</div>
+</div>
+<section id="id2">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">10.13.1.1. </span>water stage</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>BasicSeaLevel, DaytimeWaterStage, and NighttimeWaterStage are stages that are on the surface of the sea or water. Each has a slightly different effect.</p>
+<p>DaytimeWaterStage and NighttimeWaterStage are different shaders and shapes from BasicSeaLevel and water surface objects.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>By using the <code class="docutils literal notranslate"><span class="pre">water</span> <span class="pre">surface</span></code> in the basic shape of OtherObject, you can create a partial water surface while using the ground stage.</p>
+</div>
+</div></blockquote>
+</section>
+<section id="userstage">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">10.13.1.2. </span>UserStage</a><a class="headerlink" href="#userstage" title="Permalink to this heading"></a></h3>
+<blockquote>
+<div><p>UserStage is a type of stage where you can express yourself by pasting your favorite textures.</p>
+<ol class="arabic simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">UserStage</span></code> from the combo box.</p></li>
+<li><p>The properties are displayed, so set them as you like.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Main texture<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Separately load the texture file in advance and select the material name.</p>
+</dd>
+<dt class="field-even">normal map texture<span class="colon">:</span></dt>
+<dd class="field-even"><p>Load the normal map file in advance as a separate texture file and select the material name.</p>
+</dd>
+<dt class="field-odd">Color<span class="colon">:</span></dt>
+<dd class="field-odd"><p>texture base color</p>
+</dd>
+<dt class="field-even">blend mode<span class="colon">:</span></dt>
+<dd class="field-even"><p>Shader Mode</p>
+</dd>
+<dt class="field-odd">metallic<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Metallic in shader</p>
+</dd>
+<dt class="field-even">Glossiness<span class="colon">:</span></dt>
+<dd class="field-even"><p>Glossiness in shader</p>
+</dd>
+<dt class="field-odd">Emitting color<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Emission Color in shader</p>
+</dd>
+</dl>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Unlike VRMs and OtherObjects, shaders themselves cannot be switched.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div></blockquote>
+<span class="target" id="index-2"></span></section>
+</section>
+<section id="index-3">
+<span id="id3"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">10.13.2. </span>Lighting (directional light)</a><a class="headerlink" href="#index-3" title="Permalink to this heading"></a></h2>
+<p>Lighting (Directional light) is represented by a figure like a red electric light on WebGL. You can specify the angle of light irradiation by rotating this with the operation handle. (Movement is not reflected. It is an effect only to make the operation handle easier to handle.)</p>
+<img alt="../_images/operation_stage_3.png" class="align-center" src="../_images/operation_stage_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Also used as sun position if sky is normal sky and <code class="docutils literal notranslate"><span class="pre">sky</span> <span class="pre">daytime</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Stage lights cannot be deleted like Light objects.</p>
+</div>
+<p id="index-4"><strong>Object Shadows</strong></p>
+<p>The darkness of shadows in this application can be set in the Stage properties. This setting is common to all objects.</p>
+<img alt="../_images/operation_stage_6.png" class="align-center" src="../_images/operation_stage_6.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Also, depending on how the Light object is used, the strength and density of shadows that appear when hitting other objects will change.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="id4">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">10.13.2.1. </span>Halo</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<div class="line-block">
+<div class="line">A light object can display a halo. However, due to Unity’s specifications, it is not possible to dynamically fine-tune halo components for individual lights.</div>
+<div class="line">In this application, you can control the halo for the whole with <code class="docutils literal notranslate"><span class="pre">lighting</span></code>, which is a system light.</div>
+</div>
+<p>Specifically, you can finely control the halo by following these steps:</p>
+<ol class="arabic simple">
+<li><p>Specify the base value of the halo in the Stage’s <code class="docutils literal notranslate"><span class="pre">Lighting</span></code>.</p></li>
+<li><p>Specify the color, strength and range of each light object.</p></li>
+<li><p>Each light object’s halo effect changes.</p></li>
+</ol>
+<img alt="../_images/operation_light_2.png" class="align-center" src="../_images/operation_light_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>As you can see, haze will be displayed around the light. You cannot clearly switch the halo ON/OFF of individual Light objects, but you can adjust it by specifying the halo’s basic value and the range on the Light object side.</p>
+</section>
+</section>
+<section id="index-5">
+<span id="id5"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">10.13.3. </span>Wind</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
+<p>By blowing the wind, you can make the bones included in the VRM naturally sway. The wind is calculated by multiplying the strength of the wind by the fluctuation of the wind.</p>
+<p>The fluctuation of the wind is actually random within the following range.</p>
+<div class="line-block">
+<div class="line">Minimum: Wind fluctuation * -1</div>
+<div class="line">Maximum: How the wind fluctuates</div>
+</div>
+<img alt="../_images/operation_stage_4.png" class="align-center" src="../_images/operation_stage_4.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Then, you can make it blow at random intervals within the range of the minimum and maximum values specified in “Wind Blowing Timing”. By specifying this appropriately, you can produce a natural wind.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The wind settings directly manipulate the gravity settings of the bones in the VRM. Do not use wind when setting gravity on the VRM side. Operations conflict.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Due to the specification change of SpringBone in VRM1.x, the behavior of this function has changed slightly. Please note that we will continue to make adjustments in the future.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="operation-sky">
+<span id="index-6"></span><span id="id6"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">10.13.4. </span>Sky</a><a class="headerlink" href="#operation-sky" title="Permalink to this heading"></a></h2>
+<p>The sky has two modes: normal sky and monochromatic. The default is solid color. When set to “Single color”, only the color of the sky can be set, but when set to “Normal sky”, detailed settings can be made.</p>
+<img alt="../_images/operation_stage_5.png" class="align-center" src="../_images/operation_stage_5.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>For sky daytime (daytime sky)</p></td>
+<td><p>For sky night blue/sky night purple (night sky)</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="skydaytime" src="../_images/prop_stage_2.png" /></p></td>
+<td><p><img alt="skynight" src="../_images/prop_stage_3.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Please refer to Unity’s official reference for each setting.</p></li>
+<li><p>For sky daytime, the sun is present. The position of the sun changes with the angle of rotation of the illumination.</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When anti-aliasing is enabled, two lines in <code class="docutils literal notranslate"><span class="pre">sky</span> <span class="pre">night</span></code> may be mixed when captured. This is the WebGL specification. please note that.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="operation_syseff.html" class="btn btn-neutral float-left" title="10.12. SystemEffect" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../man3/posing.html" class="btn btn-neutral float-right" title="11. Posing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

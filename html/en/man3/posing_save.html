@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.1. Save VRoid/VRM pose &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="11.2. Open VRoid/VRM poses" href="posing_open.html" />
+    <link rel="prev" title="11. Posing" href="posing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="posing.html">11. Posing</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.1. Save VRoid/VRM pose</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">11.1.1. save to disk</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="posing_open.html">11.2. Open VRoid/VRM poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="posing_mediapipe.html">11.3. Detect pauses with MediaPipe</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="posing.html"><span class="section-number">11. </span>Posing</a> &raquo;</li>
+      <li><span class="section-number">11.1. </span>Save VRoid/VRM pose</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man3/posing_save.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vroid-vrm">
+<h1><span class="section-number">11.1. </span>Save VRoid/VRM pose<a class="headerlink" href="#vroid-vrm" title="Permalink to this heading"></a></h1>
+<p>Only for VRoid/VRM, you can save the state of moving the IK markers of the whole body in the app. This is per single pose, not an animation.</p>
+<ol class="arabic simple">
+<li><p>Make the VRoid/VRM pose.</p></li>
+</ol>
+<img alt="../_images/posing_1.png" class="align-center" src="../_images/posing_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Click “Save Pose” on the “3D Model” tab.</p></li>
+</ol>
+<img alt="../_images/posing_2.png" class="align-center" src="../_images/posing_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Device</span></code> or <code class="docutils literal notranslate"><span class="pre">Internal</span> <span class="pre">Storage</span></code>.</p></li>
+<li><p>Enter the pose name.</p></li>
+</ol>
+<img alt="../_images/posing_3.png" class="align-center" src="../_images/posing_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The pose is saved immediately.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>** Save/Do not save thumbnails **</p>
+<p>Pose files support thumbnails. It doesn’t affect the actual behavior at all, but it makes it easier to see in the list. To avoid saving, uncheck <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">thumbnails</span> <span class="pre">when</span> <span class="pre">saving</span> <span class="pre">poses</span></code> in the settings screen.</p>
+<img alt="../_images/posing_n.png" class="align-center" src="../_images/posing_n.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>For security purposes, it will always be cut when saving to a terminal. The thumbnail information is also cut when the pose file is read from the terminal.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>There is no need to register keyframes when saving poses.</p>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">What is the saved pose data?</p>
+<p>In the case of internal storage, it is saved within the app (in the browser you are using). Since it is a place like a dedicated area for each application that is different from the folder on the local disk, it is not visible from other applications.</p>
+<p>In the case of a terminal, it will be saved in a folder on the PC as it is.</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">11.1.1. </span>save to disk<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>After saving to the internal storage, you can save it back to your device. In that case, please press the download button.</p>
+<img alt="../_images/posing_4.png" class="align-center" src="../_images/posing_4.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Save format<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>.vvmpose</strong></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The content is in JSON format. It is downloaded with a unique extension for easy identification.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="posing.html" class="btn btn-neutral float-left" title="11. Posing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="posing_open.html" class="btn btn-neutral float-right" title="11.2. Open VRoid/VRM poses" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

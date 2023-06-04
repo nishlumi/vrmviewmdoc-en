@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>11.3. Detect pauses with MediaPipe &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="12. Animation" href="../man4/animation.html" />
+    <link rel="prev" title="11.2. Open VRoid/VRM poses" href="posing_open.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="posing.html">11. Posing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="posing_save.html">11.1. Save VRoid/VRM pose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="posing_open.html">11.2. Open VRoid/VRM poses</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.3. Detect pauses with MediaPipe</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">11.3.1. save the pose</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">11.3.2. Always detect poses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">11.3.3. Switch video source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">11.3.4. Save pose with timer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">11.3.5. Other functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="posing.html"><span class="section-number">11. </span>Posing</a> &raquo;</li>
+      <li><span class="section-number">11.3. </span>Detect pauses with MediaPipe</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man3/posing_mediapipe.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="mediapipe">
+<span id="index-0"></span><h1><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">11.3. </span>Detect pauses with MediaPipe</a><a class="headerlink" href="#mediapipe" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#mediapipe" id="id9">Detect pauses with MediaPipe</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id10">save the pose</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id11">Always detect poses</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id12">Switch video source</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id13">Save pose with timer</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id14">Other functions</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>MediaPipe is an AI solution for live and streaming media published by Google that can be used free of charge. This application uses the Pose function.</p>
+<p>AI can automatically detect poses from images transferred by a webcam, etc., and apply them to VRoid/VRM.</p>
+<p><a class="reference external" href="https://google.github.io/mediapipe/">https://google.github.io/mediapipe/</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Because the IK positions of MediaPipe and this application do not match perfectly, pose detection is not 100%. Please note.</p>
+<p>This function cannot be used except for VRoid/VRM.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click MediaPipe on the 3D Models tab.</p></li>
+</ol>
+<img alt="../_images/posing_a.png" class="align-center" src="../_images/posing_a.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>A confirmation message will be displayed. If there is no problem, press the OK button to proceed.</p></li>
+</ol>
+<img alt="../_images/posing_b.png" class="align-center" src="../_images/posing_b.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Permission to use the camera is required for the first time, so please allow it before proceeding.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Depending on the specs of your PC, the rear camera image will be displayed while loading.</p></li>
+</ol>
+<img alt="../_images/posing_c.png" class="align-center" src="../_images/posing_c.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the app freezes in this state, please quit all of this app once and start it again.</p>
+</div>
+<aside class="sidebar">
+<p class="sidebar-title">When a pose is detected…</p>
+<p>An approximate pose is drawn with points and lines.</p>
+<p>Because it is always detected in real time, the pose changes slightly every second.</p>
+<p>This app does not have a function to save camera images as photos. The camera is used only for pose detection.</p>
+</aside>
+<img alt="../_images/posing_d.png" class="align-center" src="../_images/posing_d.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="id1">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">11.3.1. </span>save the pose</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>This is the normal procedure for obtaining a pose.</p>
+<ol class="arabic simple">
+<li><p>Click the blue button at the bottom right of the window.</p></li>
+</ol>
+<img alt="../_images/posing_e.png" class="align-center" src="../_images/posing_e.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>If you set the number of seconds for the timer to 1 or more, the timer will start after you press the button, and after that number of seconds the pose will be taken automatically.</p>
+<ol class="arabic simple" start="2">
+<li><p>Confirm that the pose has been reflected on the main screen of this app.</p></li>
+</ol>
+<img alt="../_images/posing_f.png" class="align-center" src="../_images/posing_f.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on the position, height, depth, etc. of the person or object being photographed, the pose actually reflected may differ from the assumption.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id2">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">11.3.2. </span>Always detect poses</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>This is a function added from ver 2.0. The pose recognized by the webcam is <strong>always reflected</strong> on the currently selected VRM.</p>
+<ol class="arabic simple">
+<li><p>Click the red button in the lower right corner of the window.</p></li>
+</ol>
+<img alt="../_images/posing_e.png" class="align-center" src="../_images/posing_e.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Press the red button again to stop reflecting the pose.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Continues to reflect the recognized pose at intervals of about 1 second. If the webcam is no longer recognized for some reason, the reflection of the pose will also stop. In that case, please end this application once and start it again.</p>
+</div>
+</section>
+<section id="id3">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">11.3.3. </span>Switch video source</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<p>You can switch if you have multiple webcams connected or if you want to detect poses from photos.</p>
+<ol class="arabic simple">
+<li><p>Select the desired one from the video source combo box in the tool window.</p></li>
+</ol>
+<dl class="field-list">
+<dt class="field-odd"><img alt="imgsource" src="../_images/posing_g.png" /><span class="colon">:</span></dt>
+<dd class="field-odd"><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Or click the browse button</div>
+</div>
+</dd>
+</dl>
+<ol class="arabic simple" start="2">
+<li><p>Confirm that the pose is detected from another camera/image.</p></li>
+</ol>
+<img alt="../_images/posing_h.png" class="align-center" src="../_images/posing_h.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">Due to the high performance of MediaPipe, it is possible to detect the human body and acquire poses not only from photographs but also from illustrations.</div>
+<div class="line">Try using various images.</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In the case of illustrations and photos, the depth may not be fully reproduced. In that case, please modify each IK by operating VRM directly after saving the pose.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id4">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">11.3.4. </span>Save pose with timer</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<p>With the timer function, the camera image can be automatically shot after the specified time and the pose can be detected.</p>
+<ol class="arabic simple">
+<li><p>Specify the number of seconds in “Save timer” in the tool window.</p></li>
+</ol>
+<figure class="align-center" id="id7">
+<img alt="../_images/posing_i.png" src="../_images/posing_i.png" />
+<figcaption>
+<p><span class="caption-text">Can be specified between 1 and 10 seconds</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="2">
+<li><p>Press the Save Pose button.</p></li>
+</ol>
+<figure class="align-center" id="id8">
+<img alt="../_images/posing_j.png" src="../_images/posing_j.png" />
+<figcaption>
+<p><span class="caption-text">A loading animation is displayed on the upper left, and after the specified number of seconds, a sound effect is emitted and the display disappears. (It turns red every second)</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>The pose will be saved according to the normal procedure, so please check and reflect it on the main screen.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id5">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">11.3.5. </span>Other functions</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<img alt="../_images/posing_k.png" class="align-center" src="../_images/posing_k.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Selfie Mode<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Invert the image.</p>
+</dd>
+<dt class="field-even">Video source<span class="colon">:</span></dt>
+<dd class="field-even"><p>Specify an image with the camera or browse button.</p>
+</dd>
+<dt class="field-odd">Min Detection Confidence<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Accuracy of detection</p>
+</dd>
+<dt class="field-even">Min Tracking Confidence<span class="colon">:</span></dt>
+<dd class="field-even"><p>Tracking accuracy</p>
+</dd>
+</dl>
+<p>Check the <a class="reference external" href="https://google.github.io/mediapipe/">MediaPipe</a> site for other options.</p>
+<p><strong>Close Menu</strong></p>
+<ol class="arabic simple">
+<li><p>Click <img alt="img_menubtn" src="../_images/posing_m.png" /> on the top right of the menu.</p></li>
+<li><p>The menu will disappear and you will see the detection preview in the background.</p></li>
+</ol>
+<img alt="../_images/posing_l.png" class="align-center" src="../_images/posing_l.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="posing_open.html" class="btn btn-neutral float-left" title="11.2. Open VRoid/VRM poses" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../man4/animation.html" class="btn btn-neutral float-right" title="12. Animation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

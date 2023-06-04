@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>17. Setting &mdash; VRMViewMeister 2.1.2 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="18. Others" href="other.html" />
+    <link rel="prev" title="16. Edit Subtitles" href="texttrack.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">17. Setting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#index-0">17.1. Configure the app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">17.2. App settings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-1">17.2.1. Application tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-2">17.2.2. File tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-3">17.2.3. Model tab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-4">17.2.4. Animation tab</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#index-5">17.3. Material management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id9">17.3.1. Add material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">17.3.2. Material update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">17.3.3. Delete material</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">18. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">17. </span>Setting</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man5/config.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">17. </span>Setting</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id13">Setting</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-0" id="id14">Configure the app</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id15">App settings</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-1" id="id16">Application tab</a></p></li>
+<li><p><a class="reference internal" href="#index-2" id="id17">File tab</a></p></li>
+<li><p><a class="reference internal" href="#index-3" id="id18">Model tab</a></p></li>
+<li><p><a class="reference internal" href="#index-4" id="id19">Animation tab</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-5" id="id20">Material management</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id9" id="id21">Add material</a></p></li>
+<li><p><a class="reference internal" href="#id10" id="id22">Material update</a></p></li>
+<li><p><a class="reference internal" href="#id11" id="id23">Delete material</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="index-0">
+<span id="id2"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">17.1. </span>Configure the app</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h2>
+<p>You can fine-tune the behavior of the app from the settings screen.</p>
+<ol class="arabic simple">
+<li><p>Click the Settings button on the Home tab of the Ribbon bar.</p></li>
+</ol>
+<img alt="../_images/config_1.png" class="align-center" src="../_images/config_1.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>The setting screen opens.</p></li>
+</ol>
+<img alt="../_images/config_2.png" class="align-center" src="../_images/config_2.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id3">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">17.2. </span>App settings</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<section id="index-1">
+<span id="id4"></span><h3><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">17.2.1. </span>Application tab</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h3>
+<p>This is a setting item in the application tab.</p>
+<dl>
+<dt>Memory usage (multiplier)</dt><dd><div class="line-block">
+<div class="line">Adjust the amount of memory used for the WebGL screen. It can be set between 256MB and 2048MB. You cannot exceed the memory of your device.</div>
+<div class="line">By increasing this, you will be able to read huge 3D objects.</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you increase it too much, it may adversely affect the operation of the entire terminal. Please adjust accordingly.</p>
+</div>
+</dd>
+</dl>
+<img alt="../_images/config_3.png" class="align-center" src="../_images/config_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>Mmouse wheel speed</dt><dd><p>Adjust the speed of zooming in and out on the WebGL screen. It can be adjusted between 1 and 5 times.</p>
+</dd>
+<dt>Camera movement speed during key operation</dt><dd><p>You can adjust the camera movement speed between 0.01 and 0.25 when operating with keyboard keys on the WebGL screen.</p>
+</dd>
+<dt>Camera rotation speed during key operation</dt><dd><p>You can adjust the camera rotation speed between 0.01 and 2.0 when you operate the keyboard keys on the WebGL screen.</p>
+</dd>
+<dt>Focus the camera’s center point when an object is selected</dt><dd><p>When a 3D object is selected, it is automatically moved to the center of the main camera within the screen. However, since it always faces the front and slightly overhead view, please turn it off if it is annoying.</p>
+</dd>
+<dt>Distance between camera and center point</dt><dd><p>Normally the camera rotates around the object instead of itself. In this app, the target is not always a specific object, but a <strong>space at a certain distance</strong>. Specify that constant distance and the distance of the main camera.</p>
+</dd>
+<dt>Display the center point of the main camera</dt><dd><p>Displays the center point of the main camera (it’s the dim square display). The size of the center point changes depending on the perspective, depending on the <code class="docutils literal notranslate"><span class="pre">distance</span> <span class="pre">between</span> <span class="pre">the</span> <span class="pre">camera</span> <span class="pre">and</span> <span class="pre">the</span> <span class="pre">center</span> <span class="pre">point</span></code> above. It does not affect the objects you manipulate or the animation project in any way.</p>
+</dd>
+<dt>Take screenshots with HTML</dt><dd><div class="line-block">
+<div class="line">By taking screenshots using the HTML/Javascript function, the quality will be slightly lower, but it will be stable, such as the images using multiple cameras will be reflected normally. There is no difference between the main camera and the camera object as long as you use them by switching completely. Please switch if necessary.</div>
+<div class="line">Turn this ON if you want to capture the screen as it is, including the viewport of the Camera object and the preview in the render texture.</div>
+</div>
+</dd>
+<dt>Use dark theme</dt><dd><p>Changes the appearance of the app to a dark theme.</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-2">
+<span id="id5"></span><h3><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">17.2.2. </span>File tab</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h3>
+<p>This is a setting item in the File tab.</p>
+<dl class="simple">
+<dt>Save opened files in history</dt><dd><p>The VRMs, OtherObjects, Images, and UImages that have been opened once are saved as history in the app.</p>
+</dd>
+<dt>Skip VRM confirmation screen when opened from history</dt><dd><p>For VRMs that have been opened once, we will allow them to load without displaying the confirmation screen for the terms of use. You can display it later by clicking the “Details” button.</p>
+</dd>
+<dt>Clear</dt><dd><p>Deletes all history of files once opened.</p>
+</dd>
+<dt>Do not load files larger than this size automatically when opening a project.</dt><dd><p>When opening an animation project, if it contains an object file that exceeds the MB size specified here, it will be skipped. The skipped objects must be manually read and assigned to roles.</p>
+</dd>
+<dt>Back up your project</dt><dd><p>The animation project currently being created is automatically backed up. As with normal saving, the positions and rotations of IK markers that are not registered in keyframes will not be saved, so please register them in keyframes frequently.</p>
+</dd>
+<dt>backup interval</dt><dd><p>Specify the backup interval. You can specify from 1 to 10 minutes.</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-3">
+<span id="id6"></span><h3><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">17.2.3. </span>Model tab</a><a class="headerlink" href="#index-3" title="Permalink to this heading"></a></h3>
+<p>This is a setting item in the model tab. These are mainly settings related to the movement of the object itself.</p>
+<dl>
+<dt>Save thumbnails when saving poses</dt><dd><p>When saving a pose, save a screenshot of that pose as well. There is no effect on the pose/pose file itself even if it is not saved.</p>
+</dd>
+<dt>Also apply global coordinates when opening poses</dt><dd><div class="line-block">
+<div class="line">When applying the pose file to the selected VRM, also apply the global coordinates held by the pose.</div>
+<div class="line">If this is enabled, the positions will be duplicated when applying poses to multiple VRMs. Please use it by switching on / off as necessary.</div>
+</div>
+</dd>
+<dt>Automatic ankle rotation</dt><dd><div class="line-block">
+<div class="line">Automatically rotate the leg when moving the lower leg of IK. Since it does not fit the human body perfectly, the rotation angle may not be able to follow depending on the range in which the Lower Leg is moved.</div>
+<div class="line">Automatically turns off when playing animation.</div>
+</div>
+</dd>
+</dl>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">Both are examples in which LowerLeg is only moved backward on the y-axis and z-axis</span><a class="headerlink" href="#id12" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p>if setting is on</p></td>
+<td><p>if setting is off</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="ashi_on" src="../_images/config_4.png" /></p></td>
+<td><p><img alt="ashi_off" src="../_images/config_5.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>In this way, the lower part from the ankle comes to accompany the natural rotation. However, this would involve unintentional rotation, so it would be necessary to manually unrotate the ankle after moving it.</p>
+</div>
+<dl>
+<dt>Apply natural running controls to VRM bodies</dt><dd><div class="line-block">
+<div class="line">Match the rotatable range of the VRM’s elbow (LowerArm), foot (LowerLeg), and ankle (Leg) to the range of motion of the human body.</div>
+<div class="line">When this is turned on, the VRM will certainly have a natural range of motion, but the position and rotation of other IKs that follow the target part in an attempt to escape that restriction may result in unexpected behavior.</div>
+<div class="line">It is recommended to turn it off if necessary.</div>
+<div class="line">Automatically turns off when playing animation.</div>
+</div>
+</dd>
+<dt>Linking bones</dt><dd><p>Automatically turns off when playing animation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Chest / LowerArm / Head<span class="colon">:</span></dt>
+<dd class="field-odd"><p>As the <code class="docutils literal notranslate"><span class="pre">Chest</span></code> moves, the left and right <code class="docutils literal notranslate"><span class="pre">LowerArms</span></code> and <code class="docutils literal notranslate"><span class="pre">Head</span></code> will also follow. However, it is only for the X-axis and Z-axis.</p>
+</dd>
+<dt class="field-even">Aim / Chest<span class="colon">:</span></dt>
+<dd class="field-even"><p>Make the <code class="docutils literal notranslate"><span class="pre">Chest</span></code> follow the movement of the <code class="docutils literal notranslate"><span class="pre">Aim</span></code>. However, it is only for the X-axis and Z-axis.</p>
+</dd>
+<dt class="field-odd">Pelvis / LowerLeg<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Move the left and right <code class="docutils literal notranslate"><span class="pre">LowerLegs</span></code> up and down and back and forth according to the movement of the <code class="docutils literal notranslate"><span class="pre">Pelvis</span></code>.</p>
+</dd>
+<dt class="field-even">Hand / LowerArm<span class="colon">:</span></dt>
+<dd class="field-even"><p>Move the left and right <code class="docutils literal notranslate"><span class="pre">LowerArms</span></code> according to the movement of the <code class="docutils literal notranslate"><span class="pre">Hand</span></code>. However, it is only for the X-axis and Z-axis.</p>
+</dd>
+<dt class="field-odd">Leg / LowerLeg<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Move the left and right <code class="docutils literal notranslate"><span class="pre">LowerLeg</span></code> according to the movement of the <code class="docutils literal notranslate"><span class="pre">Leg</span></code>. This may restrict movement around the knees, so turn it off if necessary.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-4">
+<span id="id7"></span><h3><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">17.2.4. </span>Animation tab</a><a class="headerlink" href="#index-4" title="Permalink to this heading"></a></h3>
+<p>This is a setting item in the animation tab. These are mainly settings related to animation.</p>
+<dl class="simple">
+<dt>Initial number of frames</dt><dd><p>Specify the default number of frames for the animation project in the range of 60 to 300. This is only an initial value and does not apply to the limit that will be extended later.</p>
+</dd>
+<dt>Return to first frame after playback ends</dt><dd><p>Play the animation and return the frame position to the first after it finishes.</p>
+</dd>
+<dt>Return timing (ms)</dt><dd><p>Adjust the timing to return the frame position to the first from 0 to 2 seconds. 0 immediately returns to the first frame without delay.</p>
+</dd>
+<dt>Preview when selecting a frame</dt><dd><p>After selecting the frame, restore the pose according to the registered keyframe for each object. If this is off, you will only be able to see the pose at the frame you are currently editing and when playing the animation.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Restore poses and properties at any time using “<a class="reference internal" href="../man4/animation_tl.html"><span class="doc">load this frame</span></a>” on the toolbar of the timeline.</p>
+</div>
+<dl class="simple">
+<dt>Preview only the currently selected role</dt><dd><p>When this is on, only the currently selected timeline (roll object) reproduces the pose at that keyframe. When off, all timelines are targeted.</p>
+</dd>
+<dt>Turn off the display of IK markers during playback</dt><dd><p>When this is on, the IK markers will automatically turn off when the animation starts playing. When playback ends, the IK marker display returns.</p>
+</dd>
+<dt>Restore the last keyframe when the position of the registration keyframe is exceeded during preview</dt><dd><p>To explain with a diagram, let’s say that keyframes are registered at positions <code class="docutils literal notranslate"><span class="pre">1</span></code> and <code class="docutils literal notranslate"><span class="pre">15</span></code>.If you select a frame number after <code class="docutils literal notranslate"><span class="pre">16</span></code> when this setting is on, the contents of the keyframe at position <code class="docutils literal notranslate"><span class="pre">15</span></code> will be restored.When turned off, the contents of the last selected keyframe will remain. (For example, if you select <code class="docutils literal notranslate"><span class="pre">7</span></code> and then suddenly select <code class="docutils literal notranslate"><span class="pre">19</span></code>, the contents of 7 remain as they are.)</p>
+</dd>
+</dl>
+<img alt="../_images/config_6.png" class="align-center" src="../_images/config_6.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="simple">
+<dt>Save audio when recording</dt><dd><p>BGM and SE will be recorded when recording. Please restart the app after changing this setting. The web application version will display a microphone use confirmation message depending on the browser.</p>
+</dd>
+</dl>
+<img alt="../_images/config_7.png" class="align-center" src="../_images/config_7.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>In the case of the web app version (and when using a separate PWA window), you can switch the microphone permission later from the microphone icon in the upper right. However, even if the setting in this application is valid, if you block it with the browser setting here, it will not work properly. Be sure to switch the settings together with the settings of this application.</p>
+<img alt="../_images/config_8.png" class="align-center" src="../_images/config_8.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>By pressing the management button, you can transition to the browser settings page and switch the microphone device to use.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>For the PC version, follow the sound settings of each OS.</p>
+</div>
+</section>
+</section>
+<section id="index-5">
+<span id="id8"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">17.3. </span>Material management</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
+<p>You can manage texture files, etc. so that they can be used throughout this application.</p>
+<ol class="arabic simple">
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">Animation</span></code> tab on the ribbon bar, then the <code class="docutils literal notranslate"><span class="pre">Settings</span></code> button.</p></li>
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">Materials</span></code> tab.</p></li>
+</ol>
+<img alt="../_images/screen_project3.png" class="align-center" src="../_images/screen_project3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="id9">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">17.3.1. </span>Add material</a><a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<img alt="../_images/screen_project6.png" class="align-center" src="../_images/screen_project6.png" />
+<ol class="arabic simple">
+<li><p>Select the desired material type from <code class="docutils literal notranslate"><span class="pre">Material</span> <span class="pre">Type</span></code>.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">App</span></code> or <code class="docutils literal notranslate"><span class="pre">Project</span></code> as the <code class="docutils literal notranslate"><span class="pre">location</span> <span class="pre">of</span> <span class="pre">resources</span></code>.</p></li>
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">Add</span></code> button.</p></li>
+<li><p>An Add Material pop-up window will appear.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">material</span> <span class="pre">file</span></code> to select a file from the terminal.</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">Material</span> <span class="pre">Label</span></code>, enter a name that you can easily manage.</p></li>
+<li><p>Press the OK button to add the material to the app.</p></li>
+</ol>
+<p>After adding, it will be displayed with a preview in the list.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="line-block">
+<div class="line">The material files in the app or animation project are saved in the dedicated storage of this app. It doesn’t matter if the location of those files changes on your PC.</div>
+<div class="line">For example, if there is a change in the image file itself, it will not be reflected, so it is necessary to delete the material once and add it again.</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">how to use the material after adding</p>
+<ul class="simple">
+<li><p>Can be used with OtherObject textures, Stage <code class="docutils literal notranslate"><span class="pre">UserStage</span></code> textures, etc. Specify the name of the material you want to use in each property.</p></li>
+<li><p>Selecting another material name will cancel the reference.</p></li>
+<li><p>You can set one texture to multiple objects, but since it is shared by all objects, if you delete the material, etc., the change will affect all the target objects.</p></li>
+<li><p>Each object is referenced by its material name, so it doesn’t matter what the actual textures or other files are. If you distribute the project file and let other users use it, please make sure that the texture files are used as intended.</p></li>
+</ul>
+</div>
+</section>
+<section id="id10">
+<h3><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">17.3.2. </span>Material update</a><a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<p>Once added, you can update the label name or reload the image.</p>
+<img alt="../_images/screen_project5.png" class="align-center" src="../_images/screen_project5.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="simple">
+<dt>Update label name</dt><dd><p>Click the material name cell in each row to display the input dialog. Enter the new name there.</p>
+</dd>
+<dt>Reload an image</dt><dd><p>Used for materials within a project. If the project loaded (imported) from the file contains materials, the file that becomes the substance of any material is not loaded. You need to specify the file again, such as the expected image, and load it.</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink"><span class="section-number">17.3.3. </span>Delete material</a><a class="headerlink" href="#id11" title="Permalink to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Select the material you want to delete from the list by checking it.</p></li>
+<li><p>Press the Delete button.</p></li>
+</ol>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<ul class="simple">
+<li><p>If even one of the materials is referenced somewhere, it cannot be deleted. Cancel the reference (select another material or cancel the selection with <code class="docutils literal notranslate"><span class="pre">--</span></code>) with that object and check that it is no longer referenced from anywhere and try again.</p></li>
+<li><p>The actual material files will also be deleted from the dedicated storage within the app.</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="texttrack.html" class="btn btn-neutral float-left" title="16. Edit Subtitles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="other.html" class="btn btn-neutral float-right" title="18. Others" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
