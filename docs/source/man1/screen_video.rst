@@ -1,35 +1,36 @@
-.. index:: ビデオプレイヤー（画面の構成）
+.. index:: video player (screen composition)
 
-####################################
-ビデオプレイヤー
-####################################
+#####################################
+video player
+#####################################
 
 .. image:: ../img/screen_videoplayer.png
     :align: center
 
-| 
+|
 
-| 　特別な再生アプリを使わないでも本アプリだけでビデオを再生できるよう、専用の簡易ビデオプレイヤーです。アプリとは別ウィンドウです。
-| 　また、字幕を編集したり読み込んで字幕付きで再生も可能です。
+It is a dedicated simple video player so that you can play videos only with this application without using a special playback application. It is a separate window from the app.
 
-
-**上部：**
-
-:アプリから開く:
-    本アプリの録画機能で録画したビデオを読み込みます。
-:ローカルから開く:
-    PC内にあるビデオ（mp4など一般的な形式、webm形式など）を読み込みます。
-:字幕の編集:
-    読み込んだ動画に合わせて字幕を付与する編集パネルを表示します。
+You can also edit the subtitles or load them and play them with subtitles.
 
 
-**下部：**
+**Top:**
 
-:再生: 動画の最初から再生します。または一時停止します。
-:停止: 停止して動画の最初にシークします。
+: Open from app:
+    Load the video recorded by the recording function of this application.
+: open from local:
+    Reads videos (common formats such as mp4, webm format, etc.) on your PC.
+: Edit Subtitles:
+    Displays the edit panel that adds subtitles according to the loaded video.
 
-**右側：**
 
-:テキストトラックタブ: 動画に字幕のトラックを追加したり管理できます。
-:テキストの編集タブ: 選択した字幕のトラックの中の字幕を編集できます。
-:CSSタブ: 字幕のトラックに付与するCSSを編集できます。
+**beneath:**
+
+:Play: Play from the beginning of the video. or pause.
+:Stop: Stop and seek to the beginning of the video.
+
+**Right side:**
+
+:Text Tracks tab: Add and manage subtitle tracks to your videos.
+:Edit Text tab: You can edit the subtitles in the selected subtitle track.
+:CSS tab: You can edit the CSS applied to the subtitle track.

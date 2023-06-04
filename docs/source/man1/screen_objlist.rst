@@ -1,63 +1,62 @@
-.. index:: オブジェクト一覧（画面の構成）
+.. index:: Object list (screen composition)
 
-####################################
-オブジェクト一覧
-####################################
+#####################################
+Object list
+#####################################
 
 .. image:: ../img/screen_objlist.png
-    :align: center
+     :align: center
 
-　WebGL画面の左にある一覧です。読み込んだ各オブジェクトがここにまとまって表示されます。
-
-
-**上部：**
-
-:矢印ボタン:
-    押すとオブジェクト一覧を折りたたんで細くすることができます。
-:コンボボックス:
-    オブジェクトの種類を選択します。下の一覧がその種類のオブジェクトのみ表示されます。
+This is the list on the left of the WebGL screen. Each loaded object is grouped here.
 
 
-**下部：**
+**Top:**
 
-:一覧:
-    オブジェクト一覧です。ここに表示されるのは次の種類です。
+:Arrow buttons:
+    Press to collapse the object list and make it thinner.
+:combo box:
+    Select an object type. The list below shows only objects of that type.
 
-``VRM``、 ``他3Dオブジェクト``、 ``カメラ``、 ``エフェクト``、 ``ライト``、 ``画像``、 ``テキスト``、 ``UI画像``、 ``ステージ``
+
+**beneath:**
+
+:list:
+    Object list. The following types are displayed here:
+
+``VRM``, ``other 3D object``, ``camera``, ``effect``, ``light``, ``image``, ``text``, ``UI image`` , ``stage``
 
 
-.. note::
-    * システムエフェクト、オーディオはここには表示されません。
-    * 選択したオブジェクトが割り当てられているロールのタイムラインも自動的に選択されます。
-    * 名称が長い場合、末尾は省略されます。その代わりマウスカーソルを当てるとフル名称がツールチップとして表示されます。
+..note::
+    * System effects and audio are not shown here.
+    * The timelines of roles to which the selected object is assigned are also automatically selected.
+    * Long names are truncated. Instead, the full name is displayed as a tooltip when hovered over with the mouse cursor.
 
 
 |
 
-**右クリックメニュー**
+**Right click menu**
 
 
-　オブジェクト一覧で右クリックするとそのオブジェクトに対する個別の操作を行えます。
+By right-clicking in the object list, you can perform individual operations on that object.
 
 .. image:: ../img/screen_contextmenu.png
-    :align: center
+     :align: center
 
-| 
+|
 
-:名前変更:
-    オブジェクトの表示名を変更します。
-:情報:
-    VRoid/VRMのみ情報画面を表示します。
-:カメラをフォーカスする:
-    このオブジェクトが画面の中心に映るようメインカメラを移動します。
-:ポーズを現在のフレームに登録する:
-    アニメーションプロジェクトで使用します。現在のポーズを現在のキーフレームに登録します。
-:全ボーンをリセット:
-    ポーズをリセットしてTポーズ（デフォルト）に戻します。
-:モーションファイルを読み込む:
-    プロジェクト設定の ``モーションファイルを読み込む`` と同じです。現在選択中のオブジェクトに対してモーションファイルを読み込んで適用します。
-:モデルを削除:
-    オブジェクトをアプリから削除します。
-:このモデルとロールを両方削除する:
-    オブジェクトとそれに紐づくロール（役割）をアプリから削除します。
-
+:rename:
+    Change the display name of an object.
+:information:
+    Displays the information screen only for VRoid/VRM.
+:focus the camera:
+    Move the main camera so that this object is centered on the screen.
+:Register the pose to the current frame:
+    Use in animation projects. Registers the current pose to the current keyframe.
+:Reset all bones:
+    Reset pose back to T pose (default).
+:Load motion file:
+    It is the same as ``Read motion file`` in the project settings. Load and apply a motion file to the currently selected object.
+:delete model:
+    Remove the object from the app.
+:Delete both this model and role:
+    Delete an object and its associated role from the app.

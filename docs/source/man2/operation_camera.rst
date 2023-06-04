@@ -1,12 +1,13 @@
 .. index:: Camera
 
-####################################
+#####################################
 Camera
-####################################
+#####################################
 
 
-　カメラオブジェクトはシステム上最初から見えている映像であるメインカメラとは別に、サブカメラとして追加できます。
-IKマーカーは他と判別しやすくするために実際のカメラ風です。
+The camera object can be added as a sub-camera separately from the main camera, which is the video that is visible from the beginning of the system.
+
+The IK markers look like real cameras to make them easier to distinguish.
 
 .. contents::
 
@@ -14,61 +15,61 @@ IKマーカーは他と判別しやすくするために実際のカメラ風で
     :align: left
 
 
-　カメラの表示の優先度を表す深度は次のようになっています。
+The depth, which represents the priority of camera display, is as follows.
 
 .. csv-table::
 
-    システムのメインカメラ,    10
-    カメラオブジェクト,       11～n
+    system main camera, 10
+    camera object, 11-n
 
 |
 |
 
-　カメラオブジェクトはシステムのメインカメラより必ず上に描画されるようになっています。カメラの追加数に制限はありません。（ビューポートやレンダーテクスチャを使わない限り一度に映すことのできるカメラは一つです）
+The camera object is always drawn above the system's main camera. There is no limit to the number of additional cameras. (Only one camera can be projected at a time unless a viewport or render texture is used.)
 
 
-　プレビューするとそのカメラの映像に切り替わります。あくまでプレビューとしての意味合いなのでメインカメラから見たIKマーカーはそのまま表示されます。
+When you preview it, it will switch to the image of that camera. Since it is only meant as a preview, the IK markers seen from the main camera are displayed as they are.
 
-　後述のアニメーションプロジェクトにてカメラオブジェクトからの映像に切り替えるには、すぐ上のコンボボックス「カメラの状態（登録用）」で目的のキーフレーム時に切り替えて登録してください。
+To switch to the video from the camera object in the animation project described later, switch and register at the desired keyframe in the combo box "Camera state (for registration)" immediately above.
 
 .. note::
-    ※キーフレームのプレビュー時（キーフレームを選択した時）にはその状態の動作が反映されるので確認できます。（その時にプレビューボタンを押して映像をオフにしても、キーフレームへの登録には変更ありません）
+    * When previewing a keyframe (when a keyframe is selected), the state of the action is reflected so you can check it. (Even if you turn off the video by pressing the preview button at that time, the registration to the keyframe will not change.)
 
 
-.. index:: レンダーテクスチャ
+.. index:: render texture
 
-レンダーテクスチャ
+Render texture
 --------------------
 
-| カメラオブジェクトの映像を別のオブジェクトを通じて映したい場合に使います。
-| レンダーテクスチャを ``ON`` にして有効にしたら、投影したいOtherObjectのプロパティで設定を継続してください。
-| ※プレビューも合わせて有効にしてください。
+| Use this when you want to project the image of the camera object through another object.
+| After enabling the render texture by ``ON``, continue setting the properties of the OtherObject you wish to project.
+| * Please enable the preview as well.
 
 
-1. Cameraオブジェクトにて、レンダーテクスチャX, Yに目的のサイズを入力します。
-2. すぐそばのチェックボックスをONにします。
-3. レンダーテクスチャの ``適用`` ボタンをクリックします。
-4. プレビューの再生ボタンをクリックします。
+1. In the Camera object, enter the desired size for Render Texture X, Y.
+2. Turn on the check box next to it.
+3. Click the ``Apply`` button for the Render Texture.
+4. Click the Play Preview button.
 
 .. note::
-    * 通常ですとプレビュー再生をするとWebGL画面が切り替わりますが、レンダーテクスチャをONにすると画面はそのままです。
+   * Normally, the WebGL screen will change when you preview playback, but if you turn on the render texture, the screen will remain the same.
 
 
-**OtherObject側**
+**OtherObject side**
 
-　OtherObjectではテクスチャの設定を開きます。
+OtherObject opens the texture settings.
 
 
 .. image:: ../img/operation_camera_2.png
     :align: left
 
-　メインのテクスチャで ``カメラから`` を選択し、対象のカメラオブジェクトを選択します。
+Select ``From camera`` in the main texture and select the target camera object.
 
 |
 |
 |
 
-※平面オブジェクト ``Quad`` と球オブジェクト ``Sphere`` に投影した例。同じカメラオブジェクトを指定すれば同時に複数のオブジェクトに投影することができます。
+* An example of projecting onto a plane object ``Quad`` and a spherical object ``Sphere``. If you specify the same camera object, you can project to multiple objects at the same time.
 
 .. image:: ../img/operation_camera_3.png
     :align: center
@@ -76,4 +77,4 @@ IKマーカーは他と判別しやすくするために実際のカメラ風で
 |
 
 .. caution::
-    レンダーテクスチャはマシンパワーを比較的使います。多用にはご注意ください。
+    Render textures use relatively machine power. Please be careful not to overuse.

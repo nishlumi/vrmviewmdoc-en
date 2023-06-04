@@ -1,56 +1,56 @@
-.. index:: プロパティ（共通）
+.. index:: property (common)
 
-####################################
-共通
-####################################
+#####################################
+Common
+#####################################
 
 .. contents::
 
-.. index:: 
-    プロパティ（3Dモデル）
-    360度回転（3Dモデル）
-    比率を固定（3Dモデル）
+.. index::
+    Properties (3D model)
+    360 degree rotation (3D model)
+    Fixed ratio (3D model)
 
-共通（3Dモデル）
+Common (3D model)
 --------------------
 
-　3Dモデルに共通して使用可能な変形のプロパティです。
+This is a transformation property that can be used in common for 3D models.
 
 .. image:: ../img/prop_common_1.png
     :align: center
 
 |
 
-:位置:
-    X座標、Y座標、Z座標をそれぞれ設定します。
-:回転:
-    X座標、Y座標、Z座標をそれぞれ設定します。 ``360度回転を考慮`` をONにするとその回転角度になる際に可能な限り一回転しようとします。
-:倍率:
-    全座標合わせた倍率を設定します。 ``比率を固定`` をONにするとX/Y/Z座標を固定して1つのみの入力で済ませることができます。
+:Position:
+    Set the X, Y, and Z coordinates respectively.
+:Rotate:
+    Set the X, Y, and Z coordinates respectively. When ``Consider 360 degree rotation`` is turned on, it tries to rotate as much as possible when the rotation angle is reached.
+:Scale:
+    Set the magnification for all coordinates. If you turn on ``Fix ratio``, you can fix the X/Y/Z coordinates and only need one input.
 
 .. note::
-    倍率は、Stageの場合はX/Z座標のみです。それ以外の3Dモデル・オブジェクトはX/Y/Z座標です。
+    Magnification is only X/Z coordinates for Stage. Other 3D model objects are X/Y/Z coordinates.
 
-.. index:: ジャンプ（共通プロパティ）
+.. index:: jump (common property)
 
-ジャンプ（共通）
+Jump (common)
 ^^^^^^^^^^^^^^^^^^
-:回数:
-    ジャンプする回数を指定します。
-:強さ:
-    強さ（現在のY軸にプラスされる分）を設定します。
+:number of times:
+    Specifies the number of times to jump.
+:strength:
+    Sets the strength (the amount added to the current Y-axis).
 
 .. warning::
-    アニメーションプロジェクトにて、キーフレームの間隔があまりに短いと一瞬すぎてジャンプしていないように見えることがあります。
+    In an animation project, if the keyframe interval is too short, it can appear to jump too quickly.
 
 |
 
-.. index:: 直線的な揺れ（共通プロパティ）
+.. index:: linear swing (common property)
 
-直線的な揺れ（共通）
+Linear sway (common)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-　3Dモデルに共通して使用可能な直線的な揺れのアニメーション効果の設定です。
+This is a setting for the linear shaking animation effect that can be used commonly for 3D models.
 
 
 .. image:: ../img/prop_common_3.png
@@ -59,24 +59,24 @@
 |
 
 :On:
-    有効にします。
+    Enable.
 :Position, Rotation, Scale:
-    揺れの種類です。
+    Type of shaking.
 :X, Y, Z:
-    揺れる方向を指定します。
-:振動量:
-    揺れる回数を指定します。
-:弾性:
-    揺れた際の跳ね返りの範囲の上限を指定します。
+    Specifies the swing direction.
+:Vibration amount:
+    Specifies the number of shakes.
+:Elasticity:
+    Specifies the upper limit of the bounce range when shaken.
 
 |
 
-.. index:: ランダムな揺れ（共通プロパティ）
+.. index:: random shaking (common property)
 
-ランダムな揺れ（共通）
+Random shaking (common)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-　3Dモデルに共通して使用可能なランダムな揺れのアニメーション効果の設定です。
+This is a random shaking animation effect setting that can be used commonly for 3D models.
 
 .. image:: ../img/prop_common_4.png
     :align: center
@@ -84,45 +84,43 @@
 |
 
 :On:
-    有効にします
+    enable
 :Position, Rotation, Scale:
-    揺れの種類です
-:強さ:
-    揺れる強さを指定します
-:振動量:
-    揺れる回数を指定します
-:ランダム性:
-    揺れのランダム具合を指定します
-:フェードアウト:
-    揺れが終わるときに弱まっていくようにします。（オフの場合はピタっと終わります）
+    type of shaking
+:strength:
+    Specifies the strength of shaking
+:Vibration amount:
+    specify the number of swings
+:Randomness:
+    Specifies the randomness of shaking
+:Fade out:
+    Allow it to taper off when the shaking ends. (If it is off, it will end quickly.)
 
 |
 
 .. warning::
-    | ジャンプ・直線的な揺れ・ランダムな揺れは後述のアニメーションにおいて、連続したフレームでは正常に動作しません。（利用しているライブラリの仕様のため）
-    | どうしても連続して使いたい場合、必ずそれらの動きをしない操作のフレームを間に挿入してください。
+    | Jumps, linear shakes, and random shakes do not work properly in consecutive frames in the animation described later. (due to the specifications of the library used)
+    | If you really want to use them continuously, be sure to insert a frame of those non-moving operations in between.
 
 |
 
-.. index:: プロパティ（2Dモデル）
+.. index:: property (2D model)
 
-共通（2Dモデル）
-------------------------
+Common (2D model)
+--------------------
 
-　2Dモデルに共通して使用可能な変形のプロパティです。
+This is a transformation property that can be used in common for 2D models.
 
 .. image:: ../img/prop_common_2.png
     :align: center
 
 |
 
-:位置:
-    X座標、Y座標をそれぞれ **パーセント値** で設定します。そのため、画面サイズが変わると位置が若干ずれる可能性があります。
-:回転:
-    Z座標のみの回転の角度を設定します。
-:サイズ:
-    直接の描画領域としてX座標、Y座標をそれぞれ設定します。
-:倍率:
-    X座標、Y座標の倍率をそれぞれ設定します。サイズとは異なり、こちらは拡大縮小が伴います。
-
-
+:Position:
+    Set the X and Y coordinates as **percentages**. Therefore, if the screen size changes, the position may shift slightly.
+:Rotate:
+    Sets the angle of rotation for the Z coordinate only.
+:Size:
+    Set the X and Y coordinates as the direct drawing area.
+:Scale:
+    Set the scale of X coordinate and Y coordinate respectively. Unlike size, this one scales.

@@ -1,26 +1,26 @@
-#########################################
-その他
-#########################################
+##########################################
+Others
+##########################################
 
 
-.. index:: 翻訳について
+.. index:: translation
 
-翻訳について
+About translation
 =========================================
 
-本アプリの翻訳状況は下記のGoogleスプレッドシートで管理しています。誰でも参照可能にしてあるので、もしこういう言語に翻訳したい！使いたい！という方がいらっしゃいましたらご自由にコピーしてください。
+The translation status of this application is managed in the following Google Spreadsheet. Anyone can refer to it, so if you want to translate it into such a language! I want to use it! Please feel free to copy it if you are interested.
 
-翻訳後のスプレッドシートを私にいただければその言語に対応させていただきます。
+If you can send me the translated spreadsheet, I can handle it in that language.
 
 
-Translation-VRMViewMeister
+Translation-VRM ViewMeister
     https://docs.google.com/spreadsheets/d/1Yl4F5xkIAL1UqMQq3dyFYHljWzbpUlJ4DxMIbxa_hiQ/edit?usp=sharing
 
 .. note::
-    本アプリはQuasarおよびVue-i18nの仕様に沿って多言語化しています。使用可能なロケール文字等については各サイトを参照してください。
+    This application is multilingualized according to Quasar and Vue-i18n specifications. Please refer to each site for available locale characters.
 
     App Internationalization - Quasar
         https://quasar.dev/options/app-internationalization
 
     Vue i18n
-        https://vue-i18n.intlify.dev/ja/
+        https://vue-i18n.intlify.dev/en/

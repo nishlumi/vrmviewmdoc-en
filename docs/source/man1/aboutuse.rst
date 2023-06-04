@@ -1,42 +1,48 @@
-###############
-利用の前提条件
-###############
+#######################
+Usage prerequisites
+#######################
 
 
-　本アプリは無料で利用できます。ウェブアプリにしばしばある **ユーザー登録は不要** です。私自身、無料・すぐ使える！などとと謳っておきながら利用のためにいちいちユーザー登録が必要だったりするウェブアプリが嫌いなため、本アプリではスマホアプリやPCソフトのように、アクセスしたら本当にすぐ利用できることを目指しました。（マーケティング等のためには必要なので仕方ないのでしょうが）
+You can use this app for free. Web apps often have the following statement:
 
-※ウェブアプリ版は動作するサーバ次第で動作遅延がありえます。また当然ですがインターネット接続が必要です。通信のない環境で安定して使いたい方は後述のPC版のご利用をお勧めします。
+* **No user registration required**.
+* Free and ready to use!
 
-※本アプリを公開・リンクしているウェブサイト「VRM鎮守府ポータル」はアクセス人数把握のため、Googleアナリティクスを利用しております。ご了承ください。
+There are many apps that appeal like this. However, you may need to register to use it. I'm not good with web apps like this. Web applications should be available as soon as they are accessed, just like old PC software. We developed this application with this in mind. (It can't be helped because it is necessary for marketing etc.)
 
-　本アプリ自体にはユーザー情報をサーバ上で管理したり外部サービスにアクセスしてデータをやり取りする機能を一切持っていません。そのため利用者を直接的に把握できないので、もしお使いいただける方は各SNSで使ってるアピールをしていただけると作者は非常に喜びます。
+* The web application version may have an operation delay depending on the server that operates. Of course, you also need an internet connection. If you want to use it stably in an environment without communication, we recommend using the PC version described later.
+
+* The website "VRM Naval Base Portal" that publishes and links to this application uses Google Analytics to understand the number of accesses. note that.
+
+This application itself does not have any functions to manage user information on the server or access external services to exchange data. For this reason, it is not possible to directly grasp the users, so if you can use it, I would be very happy if you could appeal that you are using it on each SNS.
 
 |
 
-制限事項
+Limitations
 ===================
 
-　後述の説明をよく読んだ上でご利用ください。ベースとなるUnityのビルドがWebGL方式のため、各OSネイティブなアプリよりもメモリやグラフィック性能 [1]_ に左右されます。あまりに長尺で3Dオブジェクトをふんだんに使ったアニメーション制作には耐えられません。
+Please read the explanation below carefully before using. Since the base Unity build is WebGL, it is more dependent on memory and graphics performance [1]_ than native apps on each OS. I can't stand animation production that is too long and uses a lot of 3D objects.
 
-* もっと高画質＆美麗写真を！
-* もっと長尺で汎用的なアニメーションを！
+* Higher quality & beautiful photos!
+* Longer and more versatile animations!
 
-これらの場合、各OSネイティブ版を公開されている他アプリ様を使っていただくのがオススメです。
-お詳しい方々はUnityエディタやBlender等を最終的に使っていただくのがベストでしょう。
+In these cases, it is recommended to use other apps that have released native versions of each OS.
+For those who are familiar with it, it would be best to end up using the Unity editor or Blender.
 
-.. [1] 特にシェーダー関連は大きく制限がかかります。ご了承ください。
+.. [1] Shaders are particularly restricted. note that.
 
 
-免責事項
+Disclaimer
 ==================
 
-　本ソフトウェアはフリーソフトです。どなたでもご自由にお使いいただくことができます。
+This software is free software. Anyone can use it freely.
 
-　利用者が本ソフトウェアを使用して生じたいかなる問題に対して、開発陣・開発を支援する者は一切の責任を負わないものとします。自己責任でご利用ください。
+The development team and those who support development shall not be held responsible for any problems that arise from the use of this software by users. Please use at your own risk.
 
-　また、本ソフトウェアで使用するVRM(VRoid)、3Dオブジェクトファイル、画像、音楽ファイルは利用者自身のものあるいは作成者から許可を得たファイルのみを使用してください。著作権には十分注意を払ってください。
+In addition, please use only the VRM (VRoid), 3D object files, images, and music files used in this software that are your own or have permission from the creator. Please pay attention to copyright.
 
-　本ソフトウェアから生成されたファイルは利用者自身の物です。加工や公開に開発陣の許可は必要ありません。
+　Files generated from this software belong to the user. You don't need the developer's permission to process or publish.
+
 
 
 .. raw:: latex

@@ -11,12 +11,12 @@ Welcome to VRMViewMeister's documentation!
 
 
 
-ウェブアプリでできる、VRoid(VRM)のポーズ・アニメーション！
+VROID (VRM) poses and animations! You can make it anywhere with this app.
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: 目次:
+   :caption: Indexes:
    :numbered:
 
    man1/initial
@@ -42,8 +42,8 @@ Welcome to VRMViewMeister's documentation!
    man5/config
    man5/other
 
-索引と検索
-==================
+Index and Search
+===================
 
 * :ref:`genindex`
 

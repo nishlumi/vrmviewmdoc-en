@@ -1,10 +1,10 @@
-####################################
+#####################################
 Text
-####################################
+#####################################
 
 
-　Textは3Dオブジェクトではなく、HTMLのような2Dです。主にUIとしてテキストを表示することができます。
-　3Dオブジェクトよりも優先して描画されます。
+Text is not a 3D object, but 2D like HTML. You can mainly display text as UI.
+It is drawn with priority over 3D objects.
 
 
 
@@ -13,7 +13,7 @@ Text
 
 |
 
-　位置を示すX,Y座標はUnityとは異なり、わかりやすさを重視してHTMLなどと同様に左上を(0, 0)として表します。また、Unityの仕様上2Dも実際は3Dオブジェクトのため回転も本来X座標、Y座標でできるのですが、本アプリではわかりやすさ重視のため、Z座標のみの回転としています。（X座標、Y座標は自動設定です）
+Unlike Unity, the X and Y coordinates that indicate the position are expressed with the upper left as (0, 0), similar to HTML, for clarity. Also, due to Unity's specifications, 2D objects are actually 3D objects, so they can be rotated using the X and Y coordinates. (X and Y coordinates are automatically set)
 
 
 
@@ -22,4 +22,4 @@ Text
 
 |
 
-　Textももちろんアニメーションプロジェクトに対応しています。
+Of course, Text also supports animation projects.

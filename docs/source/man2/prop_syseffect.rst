@@ -1,8 +1,8 @@
-.. index:: SystemEffect（プロパティ）
+.. index:: SystemEffect(property)
 
-####################################
-SystemEffect
-####################################
+#####################################
+System effects
+#####################################
 
 .. |syseff1| image:: ../img/screen_ribbon_syseff1.png
 .. |syseff2| image:: ../img/screen_ribbon_syseff2.png
@@ -14,124 +14,122 @@ SystemEffect
 
 |
 
-　SystemEffectのプロパティです。これはリボンバーのシステムエフェクトタブにあります。図の値がデフォルト値です。
+This is a SystemEffect property. You can find this in the system effects tab of the ribbon bar. The values in the diagram are the default values.
 
 
-.. index:: Bloom（SystemEffectのプロパティ）
+.. index:: Bloom (SystemEffect property)
 
 .. image:: ../img/prop_syseff_1.png
     :align: left
 
-Bloomのプロパティです。
+Bloom property.
 
-:強さ:
-    0～100の間で指定します。
+:strength:
+    Specify between 0 and 100.
 
 |
 |
 |
 
-.. index:: Chromatic Abberation（SystemEffectのプロパティ）
+.. index:: Chromatic Abberation (property of SystemEffect)
 
 .. image:: ../img/prop_syseff_2.png
     :align: left
 
 
-Chromatic Abberationのプロパティです。
+Chromatic Abberation property.
 
-:強さ:
-    0～1の間で0.1刻みで指定します。
+:strength:
+    Specify between 0 and 1 in increments of 0.1.
 
 |
 |
 |
 
-.. index:: Color grading（SystemEffectのプロパティ）
+.. index:: Color grading (SystemEffect property)
 
 .. image:: ../img/prop_syseff_3.png
     :align: left
 
 
-Color gradingのプロパティです。
+Color grading property.
 
-:色:
-    ベースの色を指定します。
-:温度:
-    -100～100の間で指定します。
-:色合い:
-    -100～100の間で指定します。
+:colour:
+    Specifies the base color.
+:temperature:
+    Specify between -100 and 100.
+:Tint:
+    Specify between -100 and 100.
 
 
 |
 |
 |
 
-.. index:: Depth Of Field（SystemEffectのプロパティ）
+.. index:: Depth Of Field (SystemEffect property)
 
 .. image:: ../img/prop_syseff_4.png
     :align: left
 
-Depth Of Fieldのプロパティです。
+Depth Of Field property.
 
-:被写体までの距離 (Focus Distance):
-    0.1～50の間で0.05刻みで指定します。Depth Of Fieldのフォーカスの直接的な距離となります。
-:絞り:
-    0.1～32の間で0.1刻みで指定します。
-:レンズの焦点距離 (Focal Length):
-    1～50の間で指定します。
+:Focus Distance:
+    Specify between 0.1 and 50 in increments of 0.05. This is the direct distance of focus for Depth Of Field.
+:Aperture:
+    Specify between 0.1 and 32 in increments of 0.1.
+:Focal Length of Lens:
+    Specify between 1 and 50.
 
 |
 |
 |
 
-.. index:: Grain（SystemEffectのプロパティ）
+.. index:: Grain (property of SystemEffect)
 
 .. image:: ../img/prop_syseff_5.png
     :align: left
 
-Grainのプロパティです。
+Grain property.
 
-:強さ:
-    0～1の間で0.1刻みで指定します。
-:サイズ:
-    0.3～3の間で0.1刻みで指定します。
+:strength:
+    Specify between 0 and 1 in increments of 0.1.
+:size:
+    Specify between 0.3 and 3 in increments of 0.1.
 
 |
 |
 |
 
-.. index:: Vignette（SystemEffectのプロパティ）
+.. index:: Vignette (SystemEffect property)
 
 .. image:: ../img/prop_syseff_6.png
     :align: left
 
-Vignetteのプロパティです。
+Vignette property.
 
-:強さ:
-    0～1の間で0.1刻みで指定します。
-:滑らかさ:
-    0.1～1の間で0.01刻みで指定します。Vignetteの効果のかかる縁にアンチエイリアスをかけるかくっきりさせるかを調整します。
-:丸み:
-    0～1の間で0.01刻みで指定します。Vignetteの効果を円形から四角形に調整します。
+:strength:
+    Specify between 0 and 1 in increments of 0.1.
+:Smoothness:
+    Specify between 0.1 and 1 in increments of 0.01. Adjusts whether to apply anti-aliasing to sharpen the edges where the Vignette effect is applied.
+:Roundness:
+    Specify between 0 and 1 in increments of 0.01. Adjusts the vignette effect from circular to square.
 :center X:
-    -3～5の間で0.01刻みで指定します。Vignetteの効果の中心位置のX座標を調整します。
+    Specify between -3 and 5 in increments of 0.01. Adjusts the X coordinate of the center position of the Vignette effect.
 :center Y:
-    -3～5の間で0.01刻みで指定します。Vignetteの効果の中心位置のY座標を調整します。
+    Specify between -3 and 5 in increments of 0.01. Adjusts the Y coordinate of the center position of the Vignette effect.
 
 |
 |
 |
 
-.. index:: Motion blur（SystemEffectのプロパティ）
+.. index:: Motion blur (SystemEffect property)
 
 .. image:: ../img/prop_syseff_7.png
     :align: left
 
-Motion blurのプロパティです。
+Motion blur properties.
 
-:シャッター角:
-    0～100の間で指定します。
-:サンプルカウント:
-    4～32の間で指定します。
-
-
+:Shutter angle:
+    Specify between 0 and 100.
+:sample count:
+    Specify between 4 and 32.

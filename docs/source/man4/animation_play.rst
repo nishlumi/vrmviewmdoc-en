@@ -1,21 +1,20 @@
+##########################################
+Play and stop animation
+##########################################
 
-#########################################
-アニメーションの再生と停止
-#########################################
+.. index:: play animation (animation project)
 
-.. index:: アニメーションを再生する（アニメーションプロジェクト）
-
-アニメーションの再生と停止
+Play and stop animation
 ===============================
 
-　アニメーションを再生したり一時停止する手順です。リボンバーのアニメーションタブのこれらのボタンを使います。
+"This is the procedure for playing and pausing the animation." Use these buttons on the Animation tab of the Ribbon bar.
 
 .. image:: img/play_1.png
     :align: center
 
 |
 
-1. 最初から再生する場合はこのボタンで行います。
+1. Use this button to play from the beginning.
 
 .. image:: img/play_2.png
     :align: center
@@ -24,17 +23,17 @@
 
 .. |normalplay| image:: img/play_3.png
 
-|normalplay| 途中から再生するはこちらのボタンを押します。
+|normalplay| Press this button to play from the middle.
 
-2. 一時停止する場合はこのボタンを押します。
+2. Press this button to pause.
 
 .. figure:: img/play_4.png
     :align: center
 
-    ※一時停止ボタンは再生状態により、途中から再生ボタンとアイコンが切り替わります。
+    Depending on the playback status of the pause button, the playback button and icon will switch from the middle.
 
 
-3. 停止する場合はこのボタンを押します。
+3. Press this button to stop.
 
 .. image:: img/play_5.png
     :align: center
@@ -45,30 +44,30 @@
 .. |tlbarplay| image:: img/play_7.png
 
 .. note::
-    タイムラインの上部のバーからも同じ操作を行えます。
-    |tlbarplay| 
+    The same operation can be performed from the bar at the top of the timeline.
+    |tlbarplay|
 
 
 |
 
 
-.. index:: アニメーションをループ再生する（アニメーションプロジェクト）
+.. index:: loop animation (animation project)
 
 
-アニメーションをループ再生する
+Loop animation
 ===================================
 
 
-　アニメーションを停止する手順です。リボンバーのアニメーションタブのこのボタンを使います。
+This is the procedure to stop the animation. Use this button on the Animation tab of the Ribbon bar.
 
-1. アニメーションをループ再生するにはこれにチェックを入れます。
+1. Check this to loop the animation.
 
 .. image:: img/play_6.png
     :align: center
 
 |
 
-2. その後、最初から再生ボタンあるいは途中から再生ボタンを押します。
+2. Then press the play button from the beginning or the play button from the middle.
 
 
-※再生中にチェックをオンオフ切り替えてもすぐには反映されません。停止して最初から再生することでそのループの設定が正しく反映されます。
+* Switching the check on/off during playback will not be reflected immediately. By stopping and playing from the beginning, the loop settings will be reflected correctly.

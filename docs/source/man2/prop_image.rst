@@ -1,8 +1,8 @@
-.. index:: Image（プロパティ）
+.. index::Image(property)
 
-####################################
+#####################################
 Image
-####################################
+#####################################
 
 
 
@@ -11,13 +11,13 @@ Image
 
 |
 
-　3Dオブジェクトとして読み込んだ画像や写真を設定します。
+Set images and photos loaded as 3D objects.
 
 
-:色:
-    画像（テクスチャ）のベースの色を変更します。
+:colour:
+    Change the base color of the image (texture).
 
 
-**テクスチャタブ**
+**Texture Tab**
 
-　OtherObjectと同様です。
+Similar to OtherObject.

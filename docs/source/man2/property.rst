@@ -1,9 +1,9 @@
 #################
-プロパティ一覧
+Property list
 #################
 
-| 　各オブジェクトの設定を扱うプロパティ一覧を紹介していきます。
-| 　WebGL画面の右にある一覧です。オブジェクト一覧で選択したオブジェクトを細かく設定できます。オブジェクトの種類により表示される項目が異なるため、ここではそれぞれを挙げて説明していきます。
+| Introduces a property list that handles the settings of each object.
+| This is the list on the right side of the WebGL screen. You can make detailed settings for the object selected in the object list. Since the displayed items differ depending on the type of object, each item will be listed and explained here.
 
 
 .. toctree::

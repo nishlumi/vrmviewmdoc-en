@@ -1,86 +1,86 @@
-#########################
-アプリの操作
-#########################
+##########################
+App operation
+##########################
 
 .. contents::
 
 
 .. index::
-    画面解像度を変更する
+    Change screen resolution
 
-（ウェブアプリ版）ブラウザとは別ウィンドウで使う
-==================================================
+(Web application version) Use in a separate window from the browser
+=========================================================================
 
-　ウェブアプリ版はPWAという技術によってChromeやEdgeなどのブラウザ本体とは完全に別のウィンドウで利用することができます。
+The web app version can be used in a completely separate window from the browser itself, such as Chrome or Edge, using a technology called PWA.
 
-　詳しくは :doc:`../man1/install` をご覧ください。
+See :doc:`../man1/install` for details.
 
-メリット
-    * ブラウザ本体とは異なるウィンドウサイズにできる
-    * ブラウザ本体を閉じても本アプリを利用し続けられる
-    * 見た目が各OSのアプリと近くなる
-    * スタートメニューやランチャーメニューに追加され、そこから開けるようになる
+merit
+    * You can make the window size different from the browser body
+    * You can continue using this application even if you close the browser body
+    * Appearance becomes closer to the app of each OS
+    * Added to the Start Menu or Launcher Menu and can be opened from there
 
-　ウェブアプリ版はタブのまま使うのではなく、ぜひインストールしてお使いください。
+Please install the web app version instead of using it as a tab.
 
 
-画面解像度を変更する
+Change screen resolution
 ============================
 
-　3Dモデルを操作するWebGL画面はデフォルトではウィンドウサイズに適したサイズとなっています。本アプリではWebGL画面のサイズ（≒解像度）を自由なサイズに変更することができます。
+By default, the WebGL screen that manipulates the 3D model has a size suitable for the window size. With this application, you can freely change the size (≈ resolution) of the WebGL screen.
 
 .. image:: ./img/general_scr01.png
     :align: center
 
 |
 
-1. ``幅`` と ``高さ`` を入力します。
-2. 適用ボタンを押します。
+1. Enter the ``Width`` and ``Height``.
+2. Press the Apply button.
 
-表示する領域に収まりきらない場合、スクロールバーが表示されます。
+Scrollbars are displayed if they do not fit in the display area.
 
-**元のサイズに戻す**
+**restore to original size**
 
-1.  ``元のサイズ`` ボタンを押します。
+1. Press the ``Original Size`` button.
 
-.. index:: ナビゲーション(一般的な使い方)
+.. index:: navigation (common usage)
 
-ナビゲーションを活用する
+Take advantage of navigation
 -------------------------------
 
-　画面解像度が上がると見えなくなった部分をスクロールしてから操作する必要があります。その場合、 Ver 2.0から実装した ``ナビゲーション`` を使うと操作しやすくなります。
+When the screen resolution increases, it is necessary to scroll the part that cannot be seen before operating. In that case, using the ``navigation`` implemented from Ver 2.0 makes it easier to operate.
 
-1. リボンバーの画面タブにある ``Navigation`` ボタンを押します。
- 
+1. Press the ``Navigation`` button in the Screens tab of the ribbon bar.
+
 .. image:: ./img/general_scr02.png
     :align: center
 
 |
 
-2. アプリのメインウィンドウ内にナビゲーションの小ウィンドウが表示されます。
+2. A small navigation window will appear inside the main app window.
 
 .. image:: ../img/screen_naviwin.png
     :align: center
 
 |
 
-3. ナビゲーションのプレビュー画面に現在表示中の範囲として赤い枠が表示されます。
-4. 表示領域よりWebGL画面の解像度が大きい場合、赤い枠を任意の場所でクリックしたりドラッグすると、WebGL画面がその通りにスクロールします。
+3. A red frame is displayed as the currently displayed range on the navigation preview screen.
+4. If the resolution of the WebGL screen is larger than the display area, clicking or dragging the red frame anywhere will scroll the WebGL screen accordingly.
 
 .. hint::
-    ナビゲーションのウィンドウ内からも ``元のサイズ`` や ``カメラのリセット`` を行うことができます。
+    You can also ``Resize'' and ``Reset Camera`` from within the navigation window.
 
 |
 
-.. index:: アンチエイリアスをかける
+.. index:: apply anti-aliasing
 
-アンチエイリアスをかける
+apply anti-aliasing
 ================================
 
-　本アプリではWebGL画面にアンチエイリアスをかけることができます。
+With this application, you can apply anti-aliasing to the WebGL screen.
 
-1. リボンバーの画面タブを開きます。
-2. 右にある ``アンチエイリアス`` にチェックを入れます。
+1. Open the Screens tab of the Ribbon bar.
+2. Check ``Antialiasing`` on the right.
 
 
 .. image:: ./img/spcl_07.png
@@ -89,167 +89,166 @@
 |
 
 .. warning::
-    * かけたままポーズやモーションを再生することもできますが、動作が重くなる可能性があります。
-    * アンチエイリアスは本来であればシステムエフェクト（ポストプロセッシング）の範疇ですが、動作への影響を考慮してアニメーションへの登録の対象外とさせていただきます。
-    * アンチエイリアスを有効にしていると、Stageオブジェクトの空の設定において、 ``sky night blue/sky night purple`` の2つはキャプチャ時に不要な線が交じることがあります。これはWebGLの仕様です。ご了承下さい。
+    * It is possible to play poses and motions while it is on, but the operation may become slow.
+    * Anti-aliasing is originally in the category of system effects (post-processing), but in consideration of the impact on operation, it will not be registered in animations.
+    * When anti-aliasing is enabled, unnecessary lines may intersect when capturing ``sky night blue/sky night purple`` in the sky setting of the Stage object. This is the WebGL specification. please note that.
 
 
 |
 
-.. index:: IKマーカーの表示を変更する
+.. index:: change the display of IK markers
 
-IKマーカーのサイズや表示を変更する
-======================================
+Change the size and display of IK markers
+================================================
 
-　IKマーカーのサイズを変更するには、リボンバーの ``画面`` タブ にあるOptionsから指定します。
+To change the size of the IK marker, specify it from Options on the ``Screen`` tab of the ribbon bar.
 
 .. image:: ../img/screen_ribbon_scr_02.png
     :align: center
 
 |
 
-サイズの変更
-    IKマーカーのサイズのスライダーを動かして指定します。
+resize
+    Specify by moving the IK marker size slider.
 
-表示自体
-    IKマーカーを表示するのチェックをオン・オフします。
+the display itself
+    Turn on/off the check for Show IK Markers.
 
 
 
-.. index:: 
-    メインカメラの操作
-    メインカメラのリセット
-    メインカメラのZ軸のリセット
+.. index::
+    Operating the main camera
+    Main camera reset
+    Main camera Z-axis reset
 
-メインカメラの操作
-=========================
+Operating the main camera
+===================================
 
-　本アプリではメインカメラには必ず回転軸となる中心点が存在します。設定により表示をオンオフ切り替えられますが、初期設定ではわかりやすさのため表示をオンにしています。
+In this app, the main camera always has a center point that serves as the axis of rotation. The display can be turned on and off by setting, but the display is turned on by default for clarity.
 
-　キーボード操作が関係しますので詳しい操作方法は :doc:`../man5/special_operation` をご覧ください。
+Since keyboard operations are involved, please see :doc:`../man5/special_operation` for detailed operation methods.
 
-.. image:: img/spcl_01.png
+.. image::img/spcl_01.png
     :align: center
-    :alt: 中心点
+    :alt: center point
 
 |
 
-　薄暗い半透明で表示される■が該当します。
+"■" displayed in dim semitransparency is applicable.
 
-　メインカメラはこの中心点を基準にして回転します。見たいオブジェクトを中心点に近づければ、そのオブジェクトを360度眺めることができます。
+The main camera rotates based on this center point. If you bring the object you want to see closer to the center point, you can see the object in 360 degrees.
 
-　ただ、カメラの移動やオブジェクトの移動をし続けていると必ずしも距離や位置が一致せずにだんだん表示がズレていくことがあります。そういうときはキーボードの ``Iキー`` または ``Oキー`` を押してください。
+However, if you continue to move the camera or move the object, the distance and position may not necessarily match, and the display may gradually shift. In that case, press the ``I key`` or ``O key`` on your keyboard.
 
-　すると中心点がメインカメラに向かって近づいたり離れたりします。
+Then the center point will move closer or further away from the main camera.
 
 
-**中心点とオブジェクトの距離**
+**Distance between center point and object**
 
-　中心点と現在選択中のオブジェクトの距離は右上に表示されます。
+The distance between the center point and the currently selected object is displayed in the upper right.
 
 .. |sub2| image:: ../img/screen_vpad_2.png
 .. |sub3| image:: ../img/screen_vpad_3.png
 
-.. image:: img/spcl_02.png
+.. image::img/spcl_02.png
     :align: center
-    :alt: 中心点とオブジェクトの距離
+    :alt: Distance between center point and object
 
 |
 
-　あくまで目安です。IとOキーを押していると **数値が減っていくのと増える境目** があります。そこが中心点と現在選択中のオブジェクトが重なっている点です。そこでカメラを回転すれば比較的きれいにオブジェクトの周囲を回転することができます。
+This is just a guideline. If you press the I and O keys, there will be a **border between decreasing and increasing values**. That is the point where the center point and the currently selected object overlap. If you rotate the camera there, you can rotate around the object relatively cleanly.
 
 .. hint::
-    v-padにあるボタン |sub2| |sub3| でも同じ操作を行えます。 :doc:`../man1/screen_vpad`
+    The same operation can be performed with the buttons |sub2| |sub3| on the v-pad. :doc:`../man1/screen_vpad`
 
-**移動・回転しすぎて中心点が吹っ飛んだら**
+**If you move or rotate too much and the center point is blown away**
 
-　移動や回転、WebGL画面の右上の軸の変更をすると中心点がずれることがあります。そういうときはキーボード操作がカメラモードのときに ``Rキー`` を押してください。するとメインカメラと中心点が初期位置にリセットされます。
+If you move, rotate, or change the axis on the upper right of the WebGL screen, the center point may shift. In that case, press the ``R key`` when the keyboard is in camera mode. Then the main camera and center point will be reset to the initial position.
 
 .. hint::
-    リボンバーの画面タブの ``カメラをリセット`` ボタンでも同様です。
+    The same is true for the ``Reset Camera`` button on the Screen tab of the ribbon bar.
 
-    調整しづらいZ軸をリセットするには ``Q`` キーを押してください。
+    Press the ``Q`` key to reset the hard-to-adjust Z axis.
 
 |
 
 
-.. index:: 
-    オブジェクトとキーボード操作
-    グローバル座標とローカル座標
+.. index::
+    Objects and keyboard operations
+    Global and local coordinates
 
-オブジェクトとキーボード操作
-===============================
+Objects and keyboard operations
+========================================
 
-　キーボード操作の詳しい説明は :doc:`../man5/special_operation` をご覧ください。
+For a detailed explanation of keyboard operations, please see :doc:`../man5/special_operation`.
 
-操作の基準
-    　本アプリでは **グローバル座標** を基準としています。
+Standard of operation
+    This app is based on **global coordinates**.
 
     .. note::
-        キーボード操作にてグローバル←→ローカル座標を切り替えて操作することができます。
+        You can operate by switching global ←→ local coordinates by keyboard operation.
 
         .. csv-table::
 
-                ``Xキー`` , IKマーカーに対するグローバル・ローカル切り替え
-                ``Gキー`` , キーボード操作で移動・回転することに対するグローバル・ローカル切り替え
-        
-        ただし、UI上の入力欄に表示されるのはグローバル座標です。
+            ``X key`` , global/local switching for IK markers
+            ``G key`` , global/local switching for keyboard movement/rotation
+    
+        However, what is displayed in the input field on the UI is the global coordinates.
 
 .. |objmark_CO| image:: ./img/spcl_04.png
 .. |objmark_GL| image:: ./img/spcl_03.png
 
-現在の操作の状態
-    現在のオブジェクトや画面に対する操作基準は右上に表示されます。
+the state of the current operation
+    The operating criteria for the current object or screen are displayed in the upper right.
 
     .. csv-table::
         :header-rows: 1
         :stub-columns: 1
         :align: center
 
-        ,操作モード,座標の切り替え
-        値1, C - カメラ,G - グローバル
-        値2, O - オブジェクト,L - ローカル
-        画面表示, |objmark_CO| , |objmark_GL|
-        操作キー, Mキー, Gキー
+        , operation mode, coordinate switching
+        Value 1, C - Camera, G - Global
+        value 2, O - Object, L - Local
+        Screen display, |objmark_CO| , |objmark_GL|
+        Operation key, M key, G key
 
-    左のアルファベット
-        キーボードでの操作モードを示します。 ``Mキー`` を押すことで C - Oが入れ替わります。
+    left alphabet
+        Indicates the operation mode with the keyboard. Pressing the ``M key`` will switch C - O.
 
-        **C** のときはメインカメラの操作、 **O** のときは選択中のオブジェクトの操作となります。
+        **C** operates the main camera, and **O** operates the selected object.
 
-    右のアルファベット
-        オブジェクトの操作の時の座標を示します。 ``Gキー`` を押すことで G - L が入れ替わります。
+    right alphabet
+        Indicates the coordinates at which the object is manipulated. Pressing the ``G key`` will switch G - L.
 
-        **G** のときはグローバル座標で移動や回転し、 **L** の時はローカル座標での移動・回転となります。
+        **G** moves and rotates in global coordinates, and **L** moves and rotates in local coordinates.
 
         .. warning::
-            ``Xキー`` のグローバル・ローカルの切り替えは反映されません。混同にご注意ください。
-    
+            Global/local switching of the ``X key`` is not reflected. Please be careful of confusion.
+
 
 .. hint::
-    操作モードを ``O`` オブジェクトにしておくと、マウスとキーボードの両方でオブジェクトを移動や回転させることができ、効率アップするでしょう。
+    Setting the manipulation mode to ``O`` object will allow you to move and rotate the object with both mouse and keyboard, which will be more efficient.
 
 
 
-マウスやタッチの操作をさらに活用する
-=======================================
+Get more out of your mouse and touch interactions
+===========================================================
 
-　本アプリはWebGL画面をマウスやタッチ操作で動かしますが、使い方や環境によってはCtrlキーやSPACEキーなど、キーボード操作を交える必要があります。キーボードをすぐに使えない環境などで全てマウス操作をできるのが、v-padというウィンドウです。
+This application moves the WebGL screen with a mouse or touch operation, but depending on the usage and environment, it may be necessary to use keyboard operations such as the Ctrl key and SPACE key. A window called v-pad allows all mouse operations in an environment where the keyboard cannot be used immediately.
 
-　このウィンドウを使うことにより、メインカメラの移動・回転・ズームインズームアウトをマウスやタッチの環境に悩むことなく共通して使うことができるようになります。
+By using this window, you will be able to use the movement, rotation, zoom in and zoom out of the main camera in common without worrying about the mouse or touch environment.
 
-.. image:: img/spcl_05.png
+.. image::img/spcl_05.png
     :align: center
 
 |
 
-ウィンドウの見た目と使い方は :doc:`../man1/screen_vpad` をご覧ください。
+See :doc:`../man1/screen_vpad` for how windows look and how to use them.
 
-いろんな操作例
-    * メインカメラ、回転はマウス＋メインカメラの移動は WASD FV で
-    * メインカメラの操作全般を v-pad で、細かい調整をマウスで
+Various operation examples
+    * Main camera, rotate with mouse + move main camera with WASD FV
+    * General operation of main camera with v-pad, fine adjustment with mouse
 
-自分に適した操作方法を見つけてみてください。
+Try to find the operation method that suits you.
 
 |
-

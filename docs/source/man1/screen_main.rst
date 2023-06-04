@@ -1,7 +1,7 @@
-.. index:: メイン画面（画面の構成）
+.. index:: Main screen (screen composition)
 
 ###############
-メイン画面
+Main screen
 ###############
 
 .. image:: ../img/screen_main.png
@@ -9,40 +9,40 @@
 
 |
 
-:A リボンバー（タブ）:
-    アプリの各機能を呼び出すメニュー。
-:B オブジェクト一覧:
-    読み込んだVRMやFBX、各オブジェクトの一覧。
+:A Ribbon bar (tab):
+    A menu that calls each function of the app.
+:B Object list:
+    A list of loaded VRMs, FBXs, and objects.
 :C WebGL:
-    VRMなどが実際に表示される画面。WebGLという形式。サイズの変更可能。
-:D プロパティ一覧:
-    選択したVRMや各オブジェクトの細かいプロパティ変更の一覧。
-:E タイムライン:
-    アニメーション用のタイムライン。登録したキーフレームがここに表示される。
+    The screen where VRM etc. is actually displayed. A format called WebGL. Resizable.
+:D List of properties:
+    A list of selected VRMs and detailed property changes for each object.
+:E Timeline:
+     animation timeline. Registered keyframes are displayed here.
 
 .. note::
-    * WebGL画面には、設定によりメインカメラの中心点が表示されます。
-    * B、Dはそれぞれの右端のボタンで最小化することができます。（その分CのWebGLが拡大縮小します）
+    * The WebGL screen displays the center point of the main camera depending on the settings.
+    * B and D can be minimized with the button on the right edge of each. (WebGL in C scales accordingly)
 
 
-アプリのウィンドウとサブウィンドウ
+App windows and subwindows
 ========================================
 
-　本アプリではこのメイン画面を示すウィンドウと、後述のいくつかのサブウィンドウで構成されています。
+This application consists of a window showing this main screen and several sub-windows described later.
 
 .. csv-table::
     :header-rows: 1
 
-    ウィンドウ名, ウィンドウの種類(ウェブアプリ版), ウィンドウの種類(各OS版)
-    メインウィンドウ, ブラウザタブまたは別ウィンドウ, 別ウィンドウ
-    スクリーンショット, 別ウィンドウ, 別ウィンドウ
-    ポーズ一覧, 別ウィンドウ, 別ウィンドウ
-    IKマーカーの一括変更, 別ウィンドウ, 別ウィンドウ
-    重力設定, アプリ内ウィンドウ, アプリ内ウィンドウ
-    ポーズトラッキング, 別ウィンドウ, 別ウィンドウ
-    ビデオプレイヤー, 別ウィンドウ, 別ウィンドウ
-    キーフレームの設定, 別ウィンドウ, 別ウィンドウ
-    内部ストレージダイアログ, アプリ内ウィンドウ, アプリ内ウィンドウ
-    ナビゲーション, アプリ内ウィンドウ, アプリ内ウィンドウ
+    Window name, Window type (web application version), Window type (each OS version)
+    main window, browser tab or separate window, separate window
+    screenshot, new window, new window
+    Pose list, another window, another window
+    Batch change of IK markers, another window, another window
+    gravity settings, in-app window, in-app window
+    pose tracking, separate window, separate window
+    video player, separate window, separate window
+    keyframe setting, separate window, separate window
+    internal storage dialog, in-app window, in-app window
+    navigation, in-app window, in-app window
 
-　別ウィンドウの場合、メインウィンドウ（またはタブ）を閉じるとその時開いているサブウィンドウらも全て閉じます。
+In the case of a separate window, closing the main window (or tab) will also close all sub-windows that are open at that time.

@@ -1,71 +1,71 @@
-########################
-3Dモデルの使い方
-########################
+#########################
+How to use 3D model
+#########################
 
 .. contents::
 
 
-3Dモデルを開く・操作する
+Open/manipulate 3D models
 ============================
 
-　本アプリの基本的な用途です。VRMやobjやFBXなどの一般的な3Dモデルを読み込み、動かしていきます。
+This is the basic usage of this application. Load and move general 3D models such as VRM, obj and FBX.
 
-　基本的な機能は :doc:`../man2/operation_initial` をご覧ください。そこでは次の機能を知ることができます。
+See :doc:`../man2/operation_initial` for basic functions. There you will find the following features:
 
-    * オブジェクトの開き方
-    * 一度開いたオブジェクトの履歴の使い方
-    * オブジェクトの選択の仕方
-    * (グローバル)位置や回転・倍率の使い方
+    * how to open an object
+    * How to use the history of opened objects
+    * How to select objects
+    * How to use (global) position, rotation and magnification
     * etc...
 
-　オブジェクトのプロパティ自体について知りたい場合は :doc:`../man2/property` をご覧ください。
+If you want to know about the object properties themselves, see :doc:`../man2/property`.
 
-　オブジェクトの操作や補足事項を知りたい場合は :doc:`../man2/operation` をご覧ください。
+See :doc:`../man2/operation` if you want to know about object operations and supplementary information.
 
 .. hint::
-    　3Dモデルファイルを開く際はあらかじめ設定の ``メモリの使用率`` で必要と思われるサイズに増やしておくことをオススメします。
+    When opening a 3D model file, it is recommended that you increase the ``memory usage`` setting in advance to the size you think is necessary.
 
-    ただし、ご利用中の端末のメモリが少ない場合は本アプリで多く確保しすぎると動作が不安定になる可能性があります。どのくらいメモリを確保すべきかはご自身で判断してください。
+    However, if the memory of the device you are using is low, the operation may become unstable if you secure too much with this application. It is up to you to decide how much memory you should reserve.
 
 |
 
 .. _general_use_3dposemot:
 
-3Dモデルにポーズ・アニメーションさせる
+Pose and animate a 3D model
 =========================================
 
-　本アプリのメインの用途です。UnityエディタやBlender等の高機能すぎるアプリを使わずに、手軽にキーフレーム方式のアニメーション作成を行うことができます。
+This is the main purpose of this application. You can easily create keyframe animations without using highly functional applications such as the Unity editor or Blender.
 
-基本的な説明
-     :doc:`../man4/about` や :doc:`../man4/specification` をご覧ください。
+basic explanation
+    See :doc:`../man4/about` and :doc:`../man4/specification`.
 
-VRMの操作について
-     :doc:`../man2/operation_vrm` にて詳しく説明しています。なお、ポーズについてはキーフレームに登録しなくても動かしただけですぐに反映されています。
+Operation of VRM
+    See :doc:`../man2/operation_vrm` for more details. In addition, the pose is reflected immediately just by moving it without registering it in the key frame.
 
-アニメーションの登録について
-     `キーフレームに登録する・更新する <../man4/animation_register.html#index-2>`_ をご覧ください。
+About registration of animation
+    See `Registering and updating keyframes <../man4/animation_register.html#index-2>`_.
 
 .. note::
-    　本アプリのボーンの可動システムは **IK方式** が基本です。ボーンの回転のみで動かす **FK方式** ではないため、手足や腰の位置がVRMの身長・体格によって若干の差が生じます。
+    The bone movement system of this application is based on the **IK method**. Since it is not the **FK method** that moves only by rotating bones, the position of the limbs and waist may vary slightly depending on the height and build of the VRM.
 
-    　身長差のあるポーズやモーションファイルを読み込んだ時はその身長差を自動的に計算して解決しておりますが完璧ではありません。ご了承下さい。
+    When reading a pose or motion file with a height difference, the height difference is automatically calculated and resolved, but it is not perfect. please note that.
 
-    　なお、FK方式は将来的に対応する予定です。
+    The FK method is planned to be supported in the future.
 
 |
 
 .. index::
-    VRMを動かす色んな方法
+    Various ways to run VRM
 
-VRMを動かす色んな方法
+Various ways to run VRM
 --------------------------------
 
-    　本アプリではVRMを動かすのに次の方法を用意しています。それぞれ特徴やポーズを取らせるための精度が異なります。
+    This application provides the following methods to run VRM. Each has different characteristics and accuracy for posing.
 
-    IKマーカー
-        基本の操作方法。IKマーカーを動かすことにより、その位置めがけてVRMの各部位が移動・回転してその通りにポーズを取ります。高精度。
+    IK marker
+        Basic operation method. By moving the IK marker, each part of the VRM moves and rotates toward that position and poses accordingly. High precision.
 
-        詳しくは :ref:`inputikasmarker` をご覧ください。
+        See :ref:`inputikasmarker` for more information.
 
         .. image:: ../img/operation_vrm_6.png
             :align: center
@@ -73,10 +73,10 @@ VRMを動かす色んな方法
 
         |
 
-    MediaPipeのAIによるポーズ認識
-        GoogleのMediaPipeのPose機能により、ウェブカメラで映した対象からポーズを検出し、それに近いポーズを取得します。低精度。
+    Pose recognition by MediaPipe AI
+        The Pose function of Google's MediaPipe detects the pose from the object captured by the webcam and obtains a pose close to it. Low precision.
 
-        詳しくは :doc:`../man3/posing_mediapipe` をご覧ください。
+        See :doc:`../man3/posing_mediapipe` for details.
 
         .. image:: ../man3/posing_c.png
             :align: center
@@ -84,14 +84,14 @@ VRMを動かす色んな方法
 
         |
 
-        　MediaPipeが返すボーンの位置・回転情報はUnityのものとも本アプリのIKのものとも異なるため、変換が必要になります。そのため低精度とさせていただきます。あくまでモデルの映像・画像に近いポーズを取らせ、後は手動で調整する・・・という流れを許容していただけるなら有効にご活用いただけます。
+        The bone position/rotation information returned by MediaPipe is different from that of Unity and the IK of this application, so conversion is necessary. Therefore, the accuracy is considered to be low. It can be used effectively if you allow the flow of making a pose close to the model's video / image, and then adjusting it manually.
 
-        ※精度については今後も調整を続けていきます。
+        * We will continue to adjust the accuracy in the future.
 
-    スプレッドシートで直接指定
-        IKマーカーの位置や回転をスプレッドシート形式で各セルに入力し、そのとおりにポーズを取ります。高精度。
+    Specify directly in the spreadsheet
+        Enter the position and rotation of the IK markers in each cell in spreadsheet form, and pose accordingly. High precision.
 
-        詳しくは :ref:`inputikasnumber` をご覧ください。
+        See :ref:`inputikasnumber` for details.
 
         .. image:: ../img/screen_ikmarker.png
             :align: center
@@ -99,96 +99,96 @@ VRMを動かす色んな方法
 
         |
 
-        　本来はIKマーカーを動かしてボーンを移動・回転させるのを、スプレッドシートで直接移動量・回転量を小数点付きで入力して指定できます。コピーしてExcelやGoogleスプレッドシートに保存することもできます。もちろん、その逆で **本アプリのスプレッドシートに貼り付ける** こともできます。
+        Instead of moving and rotating the bones by moving the IK marker, you can directly enter the amount of movement and rotation with a decimal point in the spreadsheet. You can also copy and save to Excel or Google Sheets. Of course, you can also **paste into the spreadsheet of this app** in reverse.
 
-        その他、ポーズの微修正にも活用できるでしょう。
+        In addition, it can also be used for fine correction of poses.
 
-VRMのポーズを反転する
+Invert VRM pose
 -----------------------------
 
-　スプレッドシートのみの機能ですが、VRMのポーズを反転することができます。
+Although it is a function only for the spreadsheet, you can invert the pose of the VRM.
 
 .. |btnbonetranapply| image:: ../img/operation_vrm_l.png
 .. |btnbonetranmirror| image:: ../img/operation_vrm_n.png
 
-1. VRMのプロパティの ``IK、全身`` パネルにある ``IK位置の一括変更`` をクリックし、IKマーカーの一括変更ウィンドウを表示します。
-2. 上部のツールバーにある |btnbonetranmirror| をクリックします。
-3. |btnbonetranapply| ポーズを適用をクリックします。
+1. Click ``Batch change IK position`` in the ``IK, whole body`` panel of the VRM properties to display the batch change window for IK markers.
+2. Click |btnbonetranmirror| on the top toolbar.
+3. Click |btnbonetranapply| Apply Pose.
 
-　すると現在のポーズが反転します。動きとしてはスプレッドシートのセルを入れ替えているだけなので、その際に手入力すれば反転しつつ一部だけ変えるということも可能です。
-
-
-|
-
-.. index:: 
-    IKマーカーの便利な使い方
-    IKマーカーを複数同時に動かす
-    IKマーカーの移動や回転を元に戻す
-
-IKマーカーの便利な使い方
-------------------------------
-
-　IKマーカーはただ動かすだけではありません。次のように便利に使うことができます。詳しくは :ref:`specialoperation_vrm` をご覧ください。
-
-複数同時に動かす
-    　同時にIKマーカーが複数存在するVRMだけですが、IKマーカーを複数選択して動かすことができます。
-
-    .. image:: img/spcl_06.png
-        :align: center
-
-    ``Ctrlキー`` を押しながらIKマーカーを一つ以上クリックしてください。すると、IKマーカーが複数赤くなります。その状態で移動したり回転すると、同時に動かすことができます。
-
-    ただし、当たり判定が存在するので適時カメラをズームインするなどしてみやすさを調整して操作してください。
-
-IKマーカーの移動を取り消す
-    　 ``Shiftキー`` + ``Z`` でIKマーカーの直前の移動・回転を元に戻すことが出来ます。
-
-    　 ``Shiftキー`` + ``Y`` でその戻しをやり直すことができます。
-
-    .. caution::
-        通常のアプリの Ctrl + Z のように Ctrlキーではないのでご注意ください。
+The current pose will be reversed. Since the movement is just replacing the cells of the spreadsheet, it is also possible to change only a part while reversing if you manually enter it at that time.
 
 
 |
 
 .. index::
-    ポーズやモーションを扱う
+    Convenient use of IK markers
+    Move multiple IK markers simultaneously
+    Undo IK marker movement or rotation
 
-ポーズやモーションを扱う
+Convenient use of IK markers
+------------------------------
+
+IK markers don't just move. You can use it conveniently as follows. See :ref:`specialoperation_vrm` for details.
+
+move multiple at the same time
+    Although it is only a VRM that has multiple IK markers at the same time, you can select multiple IK markers and move them.
+
+    .. image::img/spcl_06.png
+        :align: center
+
+    Hold down the ``Ctrl key`` and click on one or more IK markers. Then, multiple IK markers turn red. If you move or rotate in that state, you can move it at the same time.
+
+    However, since there is a collision detection, please adjust the visibility by zooming in the camera as needed.
+
+Undo moving IK markers
+    ``Shift key`` + ``Z`` can be used to undo the previous movement/rotation of the IK marker.
+
+    You can redo the return with ``Shift key`` + ``Y``.
+
+    .. caution::
+        Please note that it is not a Ctrl key like Ctrl + Z in normal apps.
+
+
+|
+
+.. index::
+    Work with poses and motions
+
+Work with poses and motions
 ============================
 
-　ここでは主にポーズやモーション自体の扱い方について説明をまとめていきます。
+Here, we will mainly summarize the explanations on how to handle the poses and motions themselves.
 
-本アプリでできることと、外部への出力ファイルは次のように対応しています。
+What you can do with this app and output files to the outside correspond as follows.
 
 .. csv-table::
     :header-rows: 1
     :align: center
 
-    動作, 対象, 出力ファイル, 参照ページ
-    ポーズ, VRM, ``.vvmpose`` , :doc:`../man3/posing`
-    モーション, すべてのオブジェクト, ``.vvmmot`` , :ref:`savemotionfile`
-    プロジェクト, すべてのオブジェクト＋現在のアニメーションの設定, ``.vvmproj`` , :ref:`saveproject` 
+    action, target, output file, reference page
+    Posing, VRM, ``.vvmpose`` , :doc:`../man3/posing`
+    motion, all objects, ``.vvmmot`` , :ref:`savemotionfile`
+    project, all objects + current animation settings, ``.vvmproj`` , :ref:`saveproject`
 
-　 **ポーズとモーション** は実際のオブジェクトに依存しないため、別のオブジェクトを割り当てているロールに読み込んでそれを再現することができます。ポーズファイル・モーションファイルを配布することで、他のユーザーにも使っていただくことが可能です。
+**Poses and motions** do not depend on the actual object, so you can load it into a role that assigns another object and reproduce it. By distributing pose files and motion files, it is possible for other users to use them.
 
 .. warning::
-    VRMの場合、身長差が極端にあると許容できないズレが生じることがあります。配布する際は参考情報として元のVRMの身長を知らせるとよいでしょう。
+    For VRMs, extreme height differences can lead to unacceptable deviations. When distributing it, it is a good idea to inform the height of the original VRM as reference information.
 
-    ※MMDのようにボーンの回転角度を直接指定する方式ではなく、IK方式のため身長・体格の誤差吸収が完全ではありません。ご了承下さい。
+    * It is not a method that directly specifies the rotation angle of the bone like MMD, but it is an IK method, so the error absorption of height and physique is not complete. please note that.
 
-　 **プロジェクト** はもともと開いていたオブジェクトファイルも開こうとする関係上、他ユーザーへの配布には適しません。とはいえ、 `ロールにキャストを割り当てる <../man4/animation_proper.html#index-4>`_  操作をすることにより、別のオブジェクトでもモーションを可能な限り再現させることができます。
+**Project** is not suitable for distribution to other users because it tries to open the object files that were originally opened. However, by `assigning a cast to a role <../man4/animation_proper.html#index-4>`_ operation, the motion can be reproduced as much as possible on different objects.
 
-　もし配布を考えている場合、一度履歴を削除してからプロジェクトファイルを開いて、ロールにキャストを割り当てる操作を試してみるなどして、事前に確認することをオススメします。
+If you are thinking of distributing it, it is recommended that you check it in advance by deleting the history, opening the project file, and trying to assign a cast to a role.
 
 |
 
-タイムラインとオブジェクトを紐づける
+Associating timelines with objects
 =====================================
 
-　タイムラインやオブジェクトの関係について詳しくは、上記と同じく :doc:`../man4/specification` を参照してください。
+For details on the relationship between timelines and objects, see :doc:`../man4/specification` as above.
 
-　本アプリでは一度ポーズやモーションをさせたロール（タイムライン）に対し、後から実際のオブジェクトだけ差し替えて別のオブジェクトで同じポーズやモーションをさせて楽しむことができます。
+In this app, you can enjoy the same pose and motion with another object by replacing only the actual object later on the role (timeline) that has been pose and motion once.
 
 :ref:`settingcast2role`
 
@@ -196,31 +196,31 @@ IKマーカーの移動を取り消す
 |
 
 .. index::
-    アニメーションのFPSを調整する
-    タイムラインごと・キーフレームごとの調整
+    Adjust animation FPS
+    Adjustment for each timeline and keyframe
 
-アニメーションのFPSを調整する
+Adjust animation FPS
 ==================================
 
-プロジェクト単位での調整
-    　アニメーションプロジェクトごとにFPSを調整することができます。
+Coordination on a project-by-project basis
+    You can adjust the FPS for each animation project.
 
-    　詳しくは :ref:`setfpsframe` をご覧ください。また、FPSを変更するのではなく、キーフレーム登録時にデフォルトでセットされる間隔(duration)の基準値だけを変更したい場合は :ref:`setdefaultduration` をご覧ください。
+    See :ref:`setfpsframe` for details. Also, if you do not want to change the FPS, but want to change only the reference value of the default duration when registering keyframes, see :ref:`setdefaultduration`.
 
-タイムラインごと・キーフレームごとの調整
-    | 　プロジェクトで決められたFPSと間隔(duration)に従う場合、キーフレームごとの間隔(duration)は基本的にはフレーム間を目的に沿って適切に離して登録します。すると自動的に間隔(duration)が計算されてセットされます。
-    | 　プロジェクトの間隔(duration)に従うと、膨大なフレームが必要になる可能性もあります。それが労力的に問題なければ構いません。
+Adjustment for each timeline and keyframe
+    | When following the FPS and duration determined by the project, the duration for each keyframe is basically registered with an appropriate distance between frames according to the purpose. Then the duration is automatically calculated and set.
+    | According to the duration of the project, a huge number of frames may be required. It doesn't matter if it's labor-intensive.
 
     .. image:: ../man4/img/register_7.png
         :align: center
 
     |
 
-    　少ないフレームで自在にモーションを作りたい場合、キーフレームの設定で間隔(duration)を直接編集するとよいでしょう。
-    
+    If you want to freely create motion with a small number of frames, it is a good idea to directly edit the duration in the keyframe settings.
+
     .. image:: ../man5/img/spcl_09.png
         :align: center
-    
+
     |
 
-    詳しくは :ref:`modifyeachduration` をご覧ください。
+    See :ref:`modifyeachduration` for more information.

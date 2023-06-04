@@ -1,8 +1,8 @@
-.. index:: Light（プロパティ）
+.. index::Light(property)
 
-####################################
+#####################################
 Light
-####################################
+#####################################
 
 
 
@@ -12,16 +12,16 @@ Light
 |
 
 
-:レンダーモード:
-  該当のライトオブジェクトを優先して表示するか否かです。「自動」が1つ以上あるとUnityの仕様上、光が干渉して正しく表示されないので、適切に「重要」を一つは使ってください。
-:強さ:
-  光の強さです。
-:範囲:
-  光が届く範囲を指定します。スポットライト時は距離となります。
-:色:
-  光の色です。
-:照射面の角度（スポットライト時）:
-  スポットライトのみ有効です。照射の角度を切り替えます。これは光が照らす範囲を示します。実際の効果は下図のとおりです。
+:render mode:
+    Whether to display the corresponding light object with priority. If there is more than one "Automatic", the light will interfere with Unity's specifications and it will not be displayed correctly, so please use one "Important" appropriately.
+:strength:
+    is the intensity of light.
+:range:
+    Specify the range where the light reaches. When using a spotlight, it will be the distance.
+:colour:
+    It's the color of the light.
+:Irradiation surface angle (for spotlight):
+    Only spotlight is valid. Switch the illumination angle. This indicates the extent to which the light shines. The actual effect is shown below.
 
 .. |sho16| image:: ../img/prop_light_2.png
 .. |sho56| image:: ../img/prop_light_3.png
@@ -29,17 +29,17 @@ Light
 .. list-table::
     :header-rows: 1
 
-    * - 照射面の角度＝16度
-      - 照射面の角度＝56度
+    * - Irradiation surface angle = 16 degrees
+      - Irradiation surface angle = 56 degrees
     * - |sho16|
       - |sho56|
 
 
-:フレアタイプ:
-    光のフレアの種類を ``なし`` ``50mmZoom`` ``FlareSmall`` ``Sun`` から選びます。
-:フレアカラー:
-    フレアの色を指定します。
-:フレアの明るさ:
-    フレアの明るさを指定します。
-:フレアフェードスピード:
-    フレアが出現・消滅するスピードを指定します。
+:flare type:
+    Select the type of light flare from ``None``, ``50mmZoom``, ``FlareSmall``, and ``Sun``.
+:flare color:
+    Specifies the flare color.
+:flare brightness:
+    Specifies the brightness of the flare.
+:flare fade speed:
+    Specifies the speed at which flares appear and disappear.

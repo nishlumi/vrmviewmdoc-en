@@ -1,73 +1,73 @@
-#####################################
-VRoid/VRMのポーズを保存する
-#####################################
+######################################
+Save VRoid/VRM pose
+######################################
 
 
-　VRoid/VRMのみ、全身のIKマーカーを動かした状態をアプリ内に保存しておくことができます。これはアニメーションではなく、単一のポーズごとです。
+Only for VRoid/VRM, you can save the state of moving the IK markers of the whole body in the app. This is per single pose, not an animation.
 
-1. VRoid/VRMにポーズを取らせます。
+1. Make the VRoid/VRM pose.
 
 .. image:: posing_1.png
     :align: center
 
 |
 
-2. 「3Dモデル」タブの「ポーズ保存」をクリックします。
+2. Click “Save Pose” on the “3D Model” tab.
 
 .. image:: posing_2.png
     :align: center
 
 |
 
-3. ``端末`` あるいは ``内部ストレージ`` を選びます。
+3. Select ``Device`` or ``Internal Storage``.
 
-4. ポーズ名を入力してください。
+4. Enter the pose name.
 
 .. image:: posing_3.png
     :align: center
 
 |
 
-即座にポーズが保存されます。
+The pose is saved immediately.
 
 |
 
-**サムネイルを保存する・しない**
+** Save/Do not save thumbnails **
 
-　ポーズファイルはサムネイルに対応しています。実際の動作にはまったく影響しませんが、一覧で見やすくなります。保存しないようにするには、設定画面で ``ポーズの保存時にサムネイルも保存する`` のチェックを外してください。
+Pose files support thumbnails. It doesn't affect the actual behavior at all, but it makes it easier to see in the list. To avoid saving, uncheck ``Save thumbnails when saving poses`` in the settings screen.
 
 .. image:: posing_n.png
     :align: center
 
 |
 
-※なおセキュリティ対策のため、端末に保存する場合は必ずカットされます。ポーズファイルを端末から読み込んだ場合もサムネイルの情報はカットされます。
+* For security purposes, it will always be cut when saving to a terminal. The thumbnail information is also cut when the pose file is read from the terminal.
 
 .. hint::
-    ポーズの保存時にはキーフレームの登録をしておく必要はありません。
+    There is no need to register keyframes when saving poses.
 
-.. admonition:: ※保存したポーズデータは？
-    
-    　内部ストレージの場合、アプリ内（使用中のブラウザの中）に保存されます。ローカルディスクのフォルダとは違うアプリごとの専用の領域のような場所なので、他のアプリからは見えないようになっています。
+.. admonition:: What is the saved pose data?
 
-    　端末の場合はそのままPCのフォルダに保存されます。
+    In the case of internal storage, it is saved within the app (in the browser you are using). Since it is a place like a dedicated area for each application that is different from the folder on the local disk, it is not visible from other applications.
+
+    In the case of a terminal, it will be saved in a folder on the PC as it is.
 
 
-ディスクに保存する
+save to disk
 =======================
 
-　内部ストレージに保存した後も端末に保存し直すことができます。そういう場合はダウンロードボタンを押してください。
+After saving to the internal storage, you can save it back to your device. In that case, please press the download button.
 
 .. image:: posing_4.png
     :align: center
 
 |
 
-:保存形式:
+:Save format:
     **.vvmpose**
 
 .. note::
-    中身はJSON形式です。識別しやすくするため独自の拡張子でダウンロードされます。
+    The content is in JSON format. It is downloaded with a unique extension for easy identification.
 
 
 

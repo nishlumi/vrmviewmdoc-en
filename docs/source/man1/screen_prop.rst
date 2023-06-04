@@ -1,19 +1,19 @@
-.. index:: プロパティ一覧（画面の構成）
+.. index:: property list (screen configuration)
 
-####################################
-プロパティ一覧
-####################################
+#####################################
+Property list
+#####################################
 
 .. image:: ../img/screen_prop.png
     :align: center
 
-　WebGL画面の右にある一覧です。読み込んだ各オブジェクトの設定項目が並びます。
+This is the list on the right side of the WebGL screen. Setting items for each loaded object are listed.
 
 |
 
-:矢印ボタン:
-    押すとプロパティ一覧を折りたたんで細くすることができます。
+:Arrow buttons:
+    When pressed, the property list can be collapsed and narrowed.
 
-**各アコーディオンパネル：**
+**Each accordion panel:**
 
-オブジェクトの種類により表示されるプロパティは異なります。
+Different properties are displayed depending on the object type.

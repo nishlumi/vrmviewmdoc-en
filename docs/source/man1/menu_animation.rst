@@ -1,74 +1,73 @@
-.. index:: アニメーションタブ（リボンバー）
+.. index:: animation tab (ribbon bar)
 
-####################################
-アニメーションタブ
-####################################
+#####################################
+Animation tab
+#####################################
 
 .. image:: ../img/screen_ribbon_animation.png
-    :align: center
+     :align: center
 
-| 
+|
 
-　アニメーションに関する機能のボタンがあります。
+There are buttons for functions related to animation.
 
 
-**Project 内**
+**In Project**
 
-:新規作成:
-    アニメーションプロジェクトを新規作成します。
-:開く:
-    既存のアニメーションプロジェクトファイルを開きます。
-:保存:
-    現在のアニメーションプロジェクトをファイルに保存します。
-:設定:
-    アニメーションプロジェクトの設定画面を開きます。
+:Create New:
+    Create a new animation project.
+:open:
+    Open an existing animation project file.
+:keep:
+    Save the current animation project to a file.
+:setting:
+    Open the animation project settings screen.
 
 .. note::
-    ※保存は名前をつけて保存、上書き保存ができます。
+    * You can save with a name and save or overwrite.
 
 
-**Play operation 内**
+**In the Play operation**
 
-:最初から再生:
-    １フレーム目からアニメーションを再生します。
-:途中から再生・一時停止:
-    アニメーションを再生、あるいは一時停止します。
-:停止:
-    アニメーションを完全に停止します。
-:ループ:
-    ループ再生をオン・オフ切り替えます。
-:デフォルトの間隔:
-    現在のアニメーションプロジェクトにおいて、1フレーム間の秒数を指定します。デフォルトでは ``FPS / 6000.0`` の計算結果がセットされます。
+:Play from beginning:
+    Play the animation from the first frame.
+:Play/pause from the middle:
+    Play or pause animation.
+:Stop:
+    Stop the animation completely.
+:loop:
+    Toggles loop playback on/off.
+:default interval:
+    Specifies the number of seconds between frames in the current animation project. By default, the calculation result of ``FPS / 6000.0`` is set.
     
 
 
-**Frame operation 内**
+**In Frame operation**
 
-:現在:
-    現在選択中のフレームNoです。変更するとその位置に移動し、ポーズを適用します。
-:最大:
-    フレームの最大数を変更します。減らすとその位置のキーは削除されるのでご注意ください。
-:適用:
-    変更した最大フレーム数を実際に適用します。
+:the current:
+    This is the currently selected frame number. If you change it, it will move to that position and apply the pose.
+:maximum:
+    Change the maximum number of frames. Note that if you decrease it, the key at that position will be deleted.
+:Application:
+    Actually apply the modified maximum number of frames.
 
 
-**Key operation 内**
+**In Key operation**
 
-:キーフレームを登録...:
-    **ver 2.1.0以降** 
-    キーフレームの登録ウィンドウを表示します。
-    表示されるウィンドウはリボンバーのタブ内ならどこで右クリックしても表示されます。
+:register keyframes...:
+    **ver 2.1.0 or later**
+    Displays the keyframe registration window.
+    The window that appears can be opened by right-clicking anywhere within a tab on the ribbon bar.
     
     
-:切り取り・コピー・貼付け:
-    現在のオブジェクトのキーフレームを各種操作します。
-:キーフレームを削除...:
-    現在の選択中のタイムラインのキーフレームを削除します。選択中の3Dオブジェクトではありませんので注意してください。
+:Cut/Copy/Paste:
+    Manipulate keyframes of the current object.
+:delete keyframe...:
+    Deletes keyframes on the currently selected timeline. Please note that it is not the selected 3D object.
 
-    :削除できる内容:
-        * キーフレーム自体
-        * プロパティのみ
+    :What can be deleted:
+        * the keyframe itself
+        * properties only
 
-    | 　プロパティだけを削除することで、そのキーフレームは移動や回転などの共通プロパティの内容だけになります。
-    | 　なお、プロパティのみ削除した場合はまだキーフレーム自体は削除されず残った状態です。タイムラインから完全に削除するには ``キーフレームを削除`` の方を選んでください。
-
+    | By deleting only the properties, the keyframe will be only the contents of common properties such as movement and rotation.
+    | If only the properties are deleted, the keyframes themselves remain undeleted. Choose ``Remove keyframe`` to completely remove it from the timeline.

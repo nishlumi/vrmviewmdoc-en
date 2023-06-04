@@ -1,8 +1,8 @@
-.. index:: Camera（プロパティ）
+.. index:: Camera (property)
 
-####################################
+#####################################
 Camera
-####################################
+#####################################
 
 
 
@@ -11,26 +11,26 @@ Camera
 
 |
 
-　メインカメラとは別のカメラオブジェクトの設定です。これをサブカメラと称します。
+Settings for a camera object that is separate from the main camera. This is called a sub camera.
 
 
-:カメラの状態（登録用）:
-  サブカメラを投影するか否かを選びます。
-:プレビュー:
-  サブカメラの映像を表示します。表示中はメインカメラの映像は下に隠れます。
-:視界:
-  カメラの視界を広げたり狭くします。Unityでは有効視野（FOV）です。
-:深度:
-  カメラの表示の優先度です。わかりやすく示すとCSSのz-indexの効果が近いイメージです。
-:ビューポート:
-  WebGL画面におけるカメラの映像の表示範囲を指定します。
-:レンダーテクスチャ:
-  OtherObjectと組み合わせて使います。カメラの映像を別オブジェクトに投影するために使います。
-  
+:Camera status (for registration):
+  Select whether to project the sub camera.
+:preview:
+  Displays the image of the sub camera. During display, the image of the main camera is hidden below.
+:Vision:
+  Widens or narrows the field of view of the camera. In Unity it is the field of view (FOV).
+:Depth:
+  Priority of camera display. To make it easier to understand, it is an image similar to the effect of CSS z-index.
+:Viewport:
+  Specify the display range of the camera image on the WebGL screen.
+:Render texture:
+  Used in combination with OtherObject. Used to project the camera image onto another object.
+
   :X, Y:
-    カメラから投影される映像のサイズ
+    The size of the image projected from the camera
   :ON/OFF:
-    レンダーテクスチャを有効にします。
+    Enable Render Textures.
 
 
 |
@@ -41,18 +41,17 @@ Camera
 .. |vp0055| image:: ../img/prop_camera_5.png
 
 .. list-table::
-    :header-rows: 1
+  :header-rows: 1
 
-    * - 視界＝30
-      - 視界＝60
-    * - |shikai30|
-      - |shikai60|
+  * - Visibility = 30
+    - Sight = 60
+  * - |shikai30|
+    - |shikai60|
 
 .. list-table::
-    :header-rows: 1
+  :header-rows: 1
 
-    * - ビューポート＝0, 0, 1, 1
-      - ビューポート＝0, 0, 0.5, 0.5
-    * - |vp0011|
-      - |vp0055|
-
+  * - Viewport = 0, 0, 1, 1
+    - Viewport = 0, 0, 0.5, 0.5
+  * - |vp0011|
+    - |vp0055|

@@ -1,162 +1,162 @@
-####################################
-オブジェクト操作の基本
-####################################
+#####################################
+Basics of object manipulation
+#####################################
 
 .. contents::
 
 
-.. index:: オブジェクトを開く
+.. index:: open object
 
-オブジェクトを開く
+open the object
 ====================
 
-1. リボンバーのホームタブあるいは3Dモデルタブから各ボタンを押してください。
+1. Press each button from the Home tab or 3D Model tab of the ribbon bar.
 
 
 .. |ribbon_home| image:: ../img/operation_initial_3.png
 .. |ribbon_model| image:: ../img/operation_initial_4.png
 
 ==============  ===================
-ホームタブ          3Dモデルタブ
+Home tab        3D model tab
 --------------  -------------------
 |ribbon_home|   |ribbon_model|
 ==============  ===================
 
-VRMの場合
-    　読み込み後、利用条件確認画面（VRM情報画面）が表示されます。そこで許可をしないと本当には読み込まれません。
+For VRMs
+    After loading, the terms of use confirmation screen (VRM information screen) will be displayed. If you don't give permission there, it won't really load.
 
-OtherObjectの場合
-    　一般的なFbxやobjなどを開く際、そのままをファイルダイアログで指定しても開くことができますが、テクスチャなど必要なファイルが複数存在することがあります。
+For OtherObject
+    When opening general Fbx, obj, etc., it can be opened by specifying it in the file dialog as it is, but there may be multiple necessary files such as textures.
 
-    　本アプリでは利用ライブラリの効果により、たとえばzipファイルのままでも読み込むことが可能です。
+    Due to the effect of the library used in this application, it is possible to read, for example, a zip file as is.
 
-    例：
-    .obj、.mtl、.png等をまとめて1つのzipファイルにする
+    example:
+    Combine .obj, .mtl, .png, etc. into one zip file
 
-    そうして作成したzipファイルを本アプリで読み込むことで正常にテクスチャ等がついた状態で読み込むことができます。
+    By reading the zip file created in this way with this application, you can read it with the texture etc. attached normally.
 
     .. warning::
-        3Dモデルファイルであらかじめ適切にテクスチャの設定がされている必要があります。
+        The 3D model file must have the appropriate texture settings in advance.
 
 
-それ以外
-    　読み込み後、すぐに表示されます。
+other than that
+    It will be displayed immediately after loading.
 
 
 .. note::
-    | ※エクスプローラーやファイラーから目的のVRMファイルをWebGL画面へとドラッグアンドドロップして開くこともできます。
-    | ※設定「開いたファイルを履歴に保存する」により、一度開いた各オブジェクトは履歴が残るようになります。
+    * You can also drag and drop the desired VRM file from Explorer or Filer to the WebGL screen to open it.
+    * By setting "Save opened files in history", history will be kept for each object once opened.
 
 |
 
-.. index:: 基本の図形
+.. index:: basic shapes
 
-シンプルな形のオブジェクト
+Simple shaped objects
 ==============================
 
-　OtherObject扱いになる、基本的な形のオブジェクトを追加することができます。
+You can add basic objects that will be treated as OtherObjects.
 
 
-1. リボンバーの3Dモデルタブから「基本の図形」をクリックします。
+1. Click "Basic Shapes" from the 3D Model tab of the ribbon bar.
 
 .. image:: ../img/operation_initial_5.png
     :align: center
 
 |
 
-※基本の図形は次の種類を開くことができます。
+* The following types of basic figures can be opened.
 
 ::
 
-    球、カプセル、円柱、立方体、平面（3D）、四辺形（2D）、水面
+    sphere, capsule, cylinder, cube, plane (3D), quadrilateral (2D), water surface
 
-.. admonition:: 特殊な水面オブジェクト
+.. admonition:: special water surface object
 
-    水面オブジェクトは常に波がアニメーションして動き続ける特殊なオブジェクトです。
+    A water surface object is a special object that keeps moving with animated waves.
 
     .. image:: ../img/operation_initial_6.png
         :align: center
 
     |
 
-    テクスチャのプロパティも非常に多いですが、その分細かく設定すれば水面・海面だけでなく他の用途でも表現できるでしょう。うまく活用してください。
+    There are a lot of texture properties, but if you set them in detail, you can express not only water and sea surfaces but also other uses. Please make good use of it.
 
 |
 
-.. index:: 
-    履歴から開く
-    履歴を絞り込む
+.. index::
+    Open from history
+    Filter history
 
-履歴から開く
+Open from history
 ======================
 
-　VRM・OtherObject、画像（UI画像含む）は一度開くとアプリ内に履歴が保存されます。次回起動時にはわざわざダイアログをたどったりドラッグしなくても、アプリ内で履歴から開くことができます。
+Once VRM/OtherObjects and images (including UI images) are opened, their history is saved in the app. You can open it from the history in the app without having to follow the dialog or drag it the next time you launch it.
 
-1. リボンバーの「ホーム」タブにあるHistoryをクリックし、対象のオブジェクトの種類を選びます。
+1. Click History on the Home tab of the ribbon bar and select the target object type.
 
 .. image:: ../img/operation_vrm_2.png
     :align: center
 
-2. 内部ストレージダイアログが開くので対象のオブジェクトを選び、開きます。
+2. The internal storage dialog will open. Select the target object and open it.
 
 .. hint::
-    履歴から開く際は一覧上部の検索ボックスに入力すると、対象のファイルを絞り込むことができます。
+    When opening from the history, you can narrow down the target file by entering it in the search box at the top of the list.
 
-     .. image:: ../img/operation_initial_7.png
+    .. image:: ../img/operation_initial_7.png
         :align: center
 
-.. index:: 履歴を削除する
+.. index:: delete history
 
-履歴を削除する
+Delete history
 =====================
 
-　貯まりすぎた履歴を削除できます。
+You can delete history that has accumulated too much.
 
 .. |histdelbtn| image:: ../man4/img/loadsave_9.png
 
-**個別に削除する**
+**delete individually**
 
-1. 削除したいオブジェクトにチェックを入れます。
-2. 内部ストレージダイアログの上部にある |histdelbtn| をクリックします。
-
-|
-
-**すべて削除する**
-
-1. リボンバーのホームタブにある ``設定`` を押します。
-2. ファイルタブにある ``Clear`` を押してください。
-
+1. Check the objects you want to delete.
+2. Click |histdelbtn| at the top of the Internal Storage dialog.
 
 |
 
+**Remove All**
 
-.. index:: オブジェクトの選択
+1. Press ``Settings`` on the Home tab of the ribbon bar.
+2. Press ``Clear`` on the File tab.
 
-オブジェクトの選択
+
+|
+
+
+.. index:: object selection
+
+Object selection
 ============================
 
-　全ての3Dオブジェクトは操作可能な状態になるとIKマーカーが表示されます。操作可能な状態にするには、オブジェクト一覧で選択してください。（TextとUImageは選択してもIKマーカーは表示されません）
+IK markers are displayed when all 3D objects become operable. To make it operational, select it in the object list. (Selecting Text and UImage does not display IK markers)
 
 
 .. image:: ../img/operation_initial_1.png
     :align: center
 
-| 
+|
 
-※該当のオブジェクトが操作可能になるとIKマーカーがこのように表示されます。（それ以外のオブジェクトのIKマーカーは非表示になります。
+* When the corresponding object becomes operable, the IK marker will be displayed like this. (IK markers for other objects are hidden.
 
 
 .. warning::
-    VRoid/VRMに装着中のオブジェクトは選択してもIKマーカーは表示されません。再び操作可能にするには装着を解除してください。
+    Even if you select an object attached to VRoid/VRM, the IK marker will not be displayed. Unequip it to make it operable again.
 
 |
 
-.. index:: オブジェクトの削除
+.. index:: delete object
 
-オブジェクトの削除
+Delete object
 ==========================
 
-オブジェクトを削除するには、オブジェクト一覧で右クリックして「オブジェクトを削除」をクリックします。
+To delete an object, right-click in the object list and click Delete Object.
 
 .. image:: ../img/operation_initial_2.png
     :align: center
@@ -164,55 +164,55 @@ OtherObjectの場合
 |
 
 .. note::
-    この方法ではアニメーションプロジェクトのタイムライン（ロール）を削除することはできません。オブジェクトとタイムライン（ロール）両方を削除する場合は :doc:`../man4/animation_proper` を参照してください。
+    Animation project timelines (rolls) cannot be deleted this way. See :doc:`../man4/animation_proper` to delete both objects and timelines (roles).
 
 
 |
 
-.. index:: オブジェクトの名前変更
+.. index:: object rename
 
-オブジェクトの名前変更
+Object rename
 =================================
 
-オブジェクトの名前を変更することができます。これは後述のタイムライン（ロール）の名称とは別で、オブジェクト自体の名前・タイトルのことです。
+Objects can be renamed. This is different from the name of the timeline (role) described later, and is the name/title of the object itself.
 
-1. オブジェクト一覧で対象を右クリックし、「名前変更」をクリックします。
-2. 入力ダイアログで入力し、OKボタンを押して決定します。
+1. Right-click the object in the object list and click Rename.
+2. Enter in the input dialog and press the OK button to confirm.
 
 |
 
-.. index:: カメラをフォーカスする
+.. index:: focus the camera
 
-カメラをフォーカスする
+Focus the camera
 ===============================
 
-対象のオブジェクトがなるべくメインカメラに収まるようカメラの位置・回転を調整します。
+Adjust the position and rotation of the camera so that the target object fits in the main camera as much as possible.
 
-1. オブジェクト一覧で対象を右クリックし、「カメラをフォーカスする」をクリックします。
+1. Right-click an object in the object list and click Focus Camera.
 
 
-.. index:: このオブジェクトとロールを両方削除する
+.. index:: delete both this object and the role
 
-このオブジェクトとロールを両方削除する
+Delete both this object and role
 ==============================================
 
-オブジェクトの削除とは異なり、オブジェクト自体とロール（タイムライン）の両方を削除します。
+Unlike deleting an object, it deletes both the object itself and the role (timeline).
 
-キーフレームを登録したタイムライン（ロール）を消したくないなど、よほど特別な理由がない限りは ``このオブジェクトとロールを両方削除する`` で削除することをオススメします。
+Unless you have a very special reason, such as not wanting to delete the timeline (role) that registered the keyframe, we recommend deleting it with ``Delete both this object and role``.
 
-1. オブジェクト一覧で対象を右クリックし、「このオブジェクトとロールを両方削除する」をクリックします。
+1. Right-click the object in the object list and click "Delete both this object and the role".
 
 |
 
 .. index::
-    オブジェクトの移動
-    オブジェクトの回転
-    オブジェクトの倍率
+    moving objects
+    object rotation
+    magnification of the object
 
-オブジェクトの移動と回転・倍率変更
+Move, rotate and scale objects
 ============================================
 
-全てのオブジェクトは共通プロパティが使用可能です。ここでは 移動・回転・倍率を行うことができます。
+Common properties are available for all objects. Here you can move, rotate and scale.
 
 .. |prop3d| image:: ../img/prop_common_1.png
 .. |prop2d| image:: ../img/prop_common_2.png
@@ -220,70 +220,70 @@ OtherObjectの場合
 .. csv-table::
     :align: center
 
-    3Dオブジェクト, 2Dオブジェクト
+    3D object, 2D object
     |prop3d|, |prop2d|
 
 |
 
 .. index::
-    移動・回転・倍率
-    キーボードによる操作
+     Move/Rotate/Magnify
+     Operation by keyboard
 
-3Dオブジェクト
+3D object
 ---------------------
 
-    3DオブジェクトはそれぞれX, Y, Z 軸で操作をします。ここでの移動・回転はオブジェクト自体となります。(VRMは体の各部位のIKは対象外です)
+    3D objects operate on the X, Y and Z axes respectively. The movement and rotation here will be the object itself. (VRM does not cover IK of each part of the body)
 
-    同様の操作方法として、IKマーカーをクリックして表示される操作ハンドルもあります。
+    As a similar operation method, there is also an operation handle displayed by clicking the IK marker.
 
-    キーボード操作にも対応しています。詳しい操作方法は :doc:`../man5/special_operation` をご覧ください。
+    It also supports keyboard operation. See :doc:`../man5/special_operation` for detailed operation instructions.
 
     .. warning::
-        キーボード操作できるオブジェクトの種類は3Dオブジェクトのみです。 ``Text`` と ``UImage`` はキーボード操作 **対象外** です。
+        Only 3D objects can be operated with the keyboard. ``Text`` and ``UImage`` are **not keyboard accessible**.
 
 |
 
-    .. index:: 360度回転（3Dオブジェクトの操作）
+    .. index:: 360 degree rotation (3D object manipulation)
 
-    360度回転を考慮
-        ``360度回転を考慮`` をONにするとその回転角度になる際に可能な限り一回転しようとします。たとえば、Y軸を次のようにするとします。
+    Consider 360 degree rotation
+        When ``Consider 360 degree rotation`` is turned on, it tries to rotate as much as possible when the rotation angle is reached. For example, if you want your Y-axis to be:
 
         .. csv-table::
             :header-rows: 1
             :align: center
 
-            frame, Y軸の回転角度
+            frame, Y-axis rotation angle
             1, 0
             10, 359
-        
-        　このオプションをOFFにしてキーフレーム登録した場合、0度から時計回り・反時計回りを考慮して角度を即座に切り替えるのみです。ONの場合、2～9フレームの間は例えば 10..30..50..185..200.. というように一回転しようと試みます。
+    
+        When registering a keyframe with this option OFF, the angle is only immediately switched from 0 degrees considering clockwise and counterclockwise rotation. If it is ON, it will try to make one rotation, eg 10..30..50..185..200.. between frames 2-9.
 
-        * ただし、本アプリの回転の内部仕様上、 0から360度は回転できません。一旦359度まで回転し、その後359から360度に回転するよう次のフレームでキーフレーム登録してください。その際、 ``360度回転を考慮`` をOFFにして登録する必要があります。
+        * However, due to the internal rotation specifications of this application, it cannot be rotated from 0 to 360 degrees. Rotate to 359 degrees once, then register a keyframe on the next frame to rotate from 359 to 360 degrees. At that time, it is necessary to turn off ``Consider 360 degree rotation``.
 
         .. warning::
-            このオプションはモーションデータとしては保持されません。あくまでもキーフレーム登録時のオプションです。オブジェクトの選択を切り替えたりするとこのトグルはOFFに戻ります。
+            This option is not saved as motion data. This is an option only when registering a keyframe. Toggling object selection will return this toggle to OFF.
 
-    .. index:: 比率を固定（3Dオブジェクトの操作）
-    
-    比率を固定
-        　倍率もX, Y, Zを指定しますが、比率を固定することもできます。 ``比率を固定`` をONにすると入力欄が1つになります。この状態で入力すると現在の比率を保ったまま大きさを変更することができます。
+    .. index:: fixed ratio (manipulation of 3D objects)
 
-    ジャンプ・揺れ
-        オブジェクト自体の位置・回転にかかわるオプションとして、ジャンプと揺れの機能があります。
+    fixed ratio
+        You can also specify X, Y, Z for the magnification, but you can also fix the ratio. If you turn on ``Fix ratio``, there will be only one input field. If you enter in this state, you can change the size while maintaining the current ratio.
 
-        ジャンプは回数が ``1以上`` の場合に機能します。
+    jumping/swaying
+        There are jump and shake functions as options related to the position and rotation of the object itself.
 
-        直線的な揺れとランダムな揺れはそれぞれが ``On`` の場合のみ機能します。
+        Jumping works if the count is ``1 or more``.
 
-2Dオブジェクト
+        Linear and random shakes only work when each is ``On``.
+
+2D object
 ----------------------
 
-    2Dオブジェクトは Unityエディタとは異なり、わかりやすさを考慮して入力欄を制限しています。
+    Unlike the Unity editor, 2D objects have limited input fields for clarity.
 
-    位置はX, Y、回転はZ軸のみです。
+    Position is X, Y, rotation is Z axis only.
 
-    サイズ
-        3Dオブジェクトと異なり、描画される領域の大きさを示します。
+    size
+        Unlike 3D objects, it indicates the size of the area to be drawn.
 
-    倍率
-        3Dオブジェクトと同様の意味の大きさです。
+    magnification
+        It has the same size of meaning as a 3D object.

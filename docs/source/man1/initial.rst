@@ -1,41 +1,41 @@
-##########
-はじめに
-##########
+##################
+Introduction
+##################
 
-　本アプリはMMDのように **VRoid(VRM)でアニメーションを手軽に作って遊べる** を目指したアプリです。本アプリを使えば、主に次のことを簡単に行えるようになります。
 
-* VRMに好きなポーズを撮らせてスクリーンショットを撮れる
-* MMDやUnityエディタ、Blender等を使わずにVRMを一から動かしてアニメーションを作成できる
+This app aims to be an MMD-like **VRoid (VRM) that allows you to easily create and play animations**. With this app, you can easily do the following things.
+
+* You can make VRM take any pose and take a screenshot
+* You can create animation by moving VRM from scratch without using MMD, Unity editor, Blender, etc.
  
-　本格的な3Dアニメーションアプリを目指したわけではないのでプロユースのような本格的な用途には向きません。そして本アプリで作ったアニメーションは（今のところ）本アプリでしか再生できません [1]_ が、Unityのエディタ上で直接作るより遥かに手軽にできるはずです。それからウェブアプリになっているため、ウェブブラウザでどこでも使えるのが特徴です。（技術的な面で制限がかかる機能もあります）
+We did not aim for a full-fledged 3D animation application, so it is not suitable for professional use. Animations created with this app can only be played with this app (for now) [1]_, but it should be much easier than creating them directly on the Unity editor. Also, since it is a web application, it can be used anywhere with a web browser. (Some features have technical limitations.)
 
-.. [1] ver 2.0より ``.anim`` 形式でのエクスポートに試験的に対応はじめました。
+.. [1] From ver 2.0, ``.anim`` format export is supported experimentally.
+
+What is VRoid (VRM)?
+========================
 
 
-VRoid(VRM)とは？
-=================
+VRoid (VRM) is a new, easy-to-use 3D model standardized for use in VR applications and 3D games.
+VRM has made a great contribution to the world as a 3D model standard and animation tool, and has more specifications than the famous MMD.
+It is widely available and easy to use for general purposes. And the development and operation are actively continued, and the support side is also perfect.
 
+It seems that the number of compatible apps is comparable to the MMD model, and now there are smartphone apps such as Android/iOS, PC and VR device applications, etc.
+We are expanding our activities in a variety of ways.
 
-　VRアプリケーションや3Dゲーム等で使われる、規格として統一された使いやすい新しい3Dモデル、それがVRoid(VRM）です。
-VRMは3Dモデル規格・アニメーションツール界隈として世間に大きく貢献した、かの有名なMMDよりも仕様が整った形で
-広く公開されており、汎用的に使いやすいのが特徴です。そして積極的に開発・運用が続けられていてサポート面でもバッチリです。
+It seems that it was originally created with the avatar of a VR app in mind, but it is also possible to animate it in 3D with the VRM alone.
+If it is a game creation environment called Unity, even at an individual level, you can move VRM limbs with Unity's animation function
+You can pose and animate.
 
-　対応アプリ数もMMDモデルに匹敵しているようで、今やAndroid/iOS等のスマートフォンアプリ、PCやVR機器のアプリケーションなど
-多彩に活躍の場を展開しています。
+However, it is quite difficult to introduce Unity, introduce a VRM loading library, and handle Unity's animation function.
+If you don't use assets such as VeryAnimation that make it easier to create animation (even if you do), the threshold will be high.
 
-　もともとVRアプリのアバターを想定して作られたそうですが、VRM単体で3Dアニメーションさせることも可能です。
-Unityというゲーム作成環境ならば個人レベルでも、Unityのアニメーション機能でもってVRMの手足を動かして
-ポージング・アニメーションさせることができます。
+Given the current situation, the biggest disadvantage of VRM is that there is still little software comparable to MMD as software.
+I personally think so. (Even if there is, it is troublesome to have to create motion with exaggerated tools such as Unity and other animation tools...)
 
-　ただ、Unity導入・VRM読み込みライブラリの導入そしてUnityのアニメーション機能の取り扱いはなかなかに困難です。
-アニメーションを制作しやすくするVeryAnimationなどのアセットを使わなければ（使ってもなお）敷居が高いでしょう。
-
-　そういう現状を踏まえるとVRMにはソフトウェアとしてのMMDに匹敵するソフトウェアがまだまだ少ないのが一番のデメリットと
-個人的には考えています。(あったとしてもUnityやその他アニメーションツールなど、大げさなツールでモーションを作らなければいけなかったりするのがまた面倒だったり・・・)
-
-　そこで本アプリでは、作者の私自身がUnityでVeryAnimationなどのアニメーション作成支援アセットを色々試して断念し、
-だったら自分が使いやすいVRM操作ライブラリ・アニメーション作成アプリを作って世間に貢献しようと思い立ったのがスタートでした。
+Therefore, in this application, I myself tried various animation creation support assets such as VeryAnimation in Unity and gave up,
+So I decided to contribute to the world by creating an easy-to-use VRM operation library and animation creation application.
 
 
 .. caution::
-   本マニュアルで表示しているVRMや写真のキャラクターおよびゲーム作品と本アプリ自体にはなんの関係もありません。当方が二次創作のもと自前で作成してサンプルのため使用しているだけです。ご了承ください。
+  There is no relationship between the VRM, the characters in the photos, and the game works displayed in this manual and this application itself. We are only using it as a sample by creating it on our own under the secondary creation. note that.

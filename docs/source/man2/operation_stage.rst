@@ -1,26 +1,26 @@
 .. index:: Stage
 
-####################################
+#####################################
 Stage
-####################################
+#####################################
 
 
-　Stageは床や空、照明などの環境を扱います。
+Stage handles environments such as the floor, sky, and lighting.
 
 
 .. contents::
 
-舞台
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Stage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-　舞台はコンボボックスから選択します。
+Select the stage from the combo box.
 
 .. image:: ../img/operation_stage_1.png
     :align: center
 
 |
 
-※床を「SeaNight」、空の色を変更した例
+* Example of changing the floor to "SeaNight" and the color of the sky
 
 .. image:: ../img/operation_stage_2.png
     :align: center
@@ -28,164 +28,162 @@ Stage
 |
 
 .. index::
-    SweetHome 3D
-    建物の3Dモデル
+    Sweet Home 3D
+    3D model of building
 
 .. hint::
-    ※建築物や木などはOtherObjectを使って表現してください。
+   * Please use OtherObjects to represent buildings and trees.
 
-    
-    建物や庭などを作るには、「SweetHome 3D」というアプリケーションがオススメです。このソフトの詳しい使い方は検索してください。
+  
+   To create buildings, gardens, etc., we recommend an application called "SweetHome 3D". Please search for details on how to use this software.
 
-    http://www.sweethome3d.com/
+   http://www.sweethome3d.com/
 
-    このソフトの活用のポイントは、Obj形式で3Dモデルをエクスポートできる点です。
+   The point of using this software is that you can export 3D models in Obj format.
 
-    SweetHome3D製の3Dモデル(obj形式)を本アプリで読み込む場合、生成された以下のファイルを一つのzipファイルに圧縮して使ってください。
+   When reading a 3D model (obj format) made by SweetHome3D with this application, compress the generated files below into a single zip file and use it.
 
-    * objファイル
-    * mtlファイル
-    * その他jpg、pngファイル
+   * obj file
+   * mtl file
+   * Other jpg, png files
 
-    | なお、本アプリのIKマーカーはSweetHome3Dでいうと0mの位置に相当する箇所に付きます。
-    | それから、スケールはかなり大きくなりますので、 1～3%に変更して使うことをお勧めします。
+   | In addition, the IK marker of this application is attached to the position equivalent to 0m position in SweetHome3D.
+   | Also, the scale is quite large, so I recommend changing it to 1-3%.
 
 
 
-水面の舞台
+Water stage
 ----------------------
 
-    　BasicSeaLevel、DaytimeWaterStage、NighttimeWaterStageの3種類は海面・水面となる舞台です。それぞれ演出効果が若干異なります。
+    BasicSeaLevel, DaytimeWaterStage, and NighttimeWaterStage are stages on the surface of the sea and water. Each has a slightly different effect.
 
-    　DaytimeWaterStage、NighttimeWaterStageの2種類はBasicSeaLevelや水面オブジェクトとは別のシェーダー・形状です。
+    The two types, DaytimeWaterStage and NighttimeWaterStage, are different shaders and shapes from BasicSeaLevel and water surface objects.
 
     ..
-        角が丸い平面となっており、他の舞台より若干地平線（水平線）が低めとなっています
+        It is a flat surface with rounded corners, and the horizon (horizontal line) is slightly lower than other stages.
 
     .. hint::
-        OtherObjectの基本の図形にある ``水面`` を使うと地面の舞台を使いながら、部分的に水面を演出することができます。
+        By using the ``water surface`` in the basic shape of OtherObject, you can create a partial water surface while using the ground stage.
 
 
 UserStage
 ----------------------
 
-    UserStageは自分で好きなテクスチャを貼り付けて表現できる舞台の種類です。
+    UserStage is a type of stage where you can express yourself by pasting your favorite textures.
 
-    1. コンボボックスから ``UserStage`` を選択します。
-    2. プロパティが表示されるので、好みで設定します。
-    
-    :メインのテクスチャ:
-        別途テクスチャファイルを事前に読み込んでおき、その素材名を選択します。
-    :法線マップテクスチャ:
-        法線マップのファイルを別途テクスチャファイルとして事前に読み込んでおき、その素材名を選択します
-    :色:
-        テクスチャのベースの色
-    :ブレンドモード:
-        シェーダのMode
-    :メタリック:
-        シェーダのMetallic
-    :光沢:
-        シェーダのGlossiness
-    :発光色:
-        シェーダのEmission Color
+    1. Select ``UserStage`` from the combo box.
+    2. Properties are displayed. Set them as you like.
 
-    .. caution::
-        VRMやOtherObjectと異なり、シェーダー自体を切り替えることはできません。
+    :Main texture:
+        Separately load the texture file in advance and select the material name.
+    :normal map texture:
+        Load the normal map file in advance as a separate texture file and select the material name.
+    :colour:
+        texture base color
+    :blending mode:
+        Shader Mode
+    :metallic:
+        Metallic in shader
+    :Glossy:
+        Shader Glossiness
+    :Luminous color:
+        Shader Emission Color
+
+    ..caution::
+        Unlike VRMs and OtherObjects, shaders themselves cannot be switched.
 
     |
 
-.. index:: 照明
-.. index:: ディレクショナルライト
+.. index:: lighting
+.. index:: directional lights
 
-照明（ディレクショナルライト）
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Lighting (directional light)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-　照明（Directional light）はWebGL上では赤い電灯のような図形で表します。これを操作ハンドルで回転することで光の照射の角度を指定できます。（移動は反映されません。あくまで操作ハンドルを扱いやすくするためだけの効果です）
+Lighting (Directional light) is represented by a figure like a red electric light on WebGL. You can specify the angle of light irradiation by rotating this with the operation handle. (Movement is not reflected. It is an effect only to make the operation handle easier to handle.)
 
 .. image:: ../img/operation_stage_3.png
-    :align: center
+     :align: center
 
 |
 
-　空が通常の空かつ ``sky daytime`` の場合、太陽の位置としても使われます。
+If the sky is normal sky and ``sky daytime``, it is also used as the sun position.
 
 
 .. note::
-    ※Stageの照明はLightオブジェクトのように削除はできません。
+    * Stage lights cannot be deleted like Light objects.
 
-.. index:: オブジェクトの影（オブジェクトの操作）
+.. index:: object shadow (object manipulation)
 
-**オブジェクトの影**
+**Object Shadows**
 
-　本アプリでの影の濃さはStageのプロパティで設定できます。この設定は全オブジェクトに共通です。
+You can set the darkness of shadows in this application in the Stage properties. This setting is common to all objects.
 
 .. image:: ../img/operation_stage_6.png
     :align: center
 
 |
 
-　また、Lightオブジェクトの使い方により、他のオブジェクトに当たって表示される影の強さ・濃さが変わってきます。
+Also, depending on how the Light object is used, the strength and density of the shadows displayed by hitting other objects will change.
 
 |
 
-ハロー
+Halo
 -------------
 
-| 　Lightオブジェクトにはハロー（円光）を表示させることができます。ただしUnityの仕様上、個別のライトに対してハローコンポーネントを動的に細かく制御することができません。
-| 　本アプリではシステム的なライトである ``照明`` にて、全体に対するハローを制御させることができます。
+| A halo can be displayed on the Light object. However, due to Unity's specifications, it is not possible to dynamically fine-tune halo components for individual lights.
+| In this application, you can control the halo for the whole with ``lighting``, which is a system light.
 
-具体的には次の手順を踏むことにより、ハローを細かく制御できます。
+Specifically, you can finely control the halo by following these steps:
 
-1. Stageの ``照明`` にて、ハローの基本値を指定します。
-2. 各Lightオブジェクトの色や強さ・範囲を指定します。
-3. 各Lightオブジェクトのハローの効果が変化します。
+1. Specify the base value of the halo in the Stage's ``Lighting``.
+2. Specify the color, strength and range of each light object.
+3. The halo effect of each Light object changes.
 
 .. image:: ../img/operation_light_2.png
     :align: center
 
 |
 
-　この通り、光の周りにモヤが表示されるようになります。明確に個々のLightオブジェクトのハローのON/OFFは切り替えられませんが、ハローの基本値とLightオブジェクト側の範囲の指定により調整はできます。
+As you can see, haze will be displayed around the light. You cannot clearly switch the halo ON/OFF of individual Light objects, but you can adjust it by specifying the halo's basic value and the range on the Light object side.
 
 
-.. index:: 風（オブジェクトの操作）
+.. index:: wind (manipulating objects)
 
-風
+Wind
 ^^^^^^^^^^^^^^^^
 
-　風を吹かせることでVRMに含まれるボーンが自然と揺れる演出をすることができます。風は「風の強さ」ｘ「風の揺らぎ具合」で計算しています。
+By blowing the wind, the bones included in the VRM can be made to sway naturally. The wind is calculated by multiplying the strength of the wind by the fluctuation of the wind.
 
 
-※風の揺らぎ具合は実際には次の範囲でランダムです。
+* The fluctuation of the wind is actually random within the following range.
 
-| 　最小：風の揺らぎ具合 * -1
-| 　最大：風の揺らぎ具合
+| Minimum: degree of wind fluctuation * -1
+| Maximum: How the wind fluctuates
 
 .. image:: ../img/operation_stage_4.png
     :align: center
 
 |
 
-　そして「風の吹くタイミング」で指定した最小値、最大値の範囲でランダムな間隔で吹かせることができます。ここを適切に指定することにより、自然な風を演出することができます。
+Then, you can make it blow at random intervals within the range of the minimum and maximum values specified in "Wind Blowing Timing". By specifying this appropriately, you can produce a natural wind.
 
 
 .. warning::
-    風の設定ではVRMのボーンの重力設定を直接操作しています。VRM側で重力設定をする場合、風は使わないでください。操作が競合してしまいます。
-
-.. warning::
-    VRM1.xのSpringBoneの仕様変更により、本機能も挙動が若干変わりました。今後とも引き続き調整しますのでご了承下さい。  
+    * The wind settings directly manipulate the gravity settings of the bones in the VRM. Do not use wind when setting gravity on the VRM side. Operations conflict.
+    * Due to the specification change of SpringBone in VRM1.x, the behavior of this function has changed slightly. Please note that we will continue to make adjustments in the future.
  
 |
 
-.. index:: 空（オブジェクトの操作）
+.. index:: empty (object operations)
 
 .. _operation_sky:
 
-空
-^^^^^^^^^^^^^^^^^^^
+Sky
+^^^^^^^^^^^^^^^^^^
 
 
-　空は通常の空と単色の２モードあります。デフォルトは単色です。「単色」のときは空の色しか設定できませんが、「通常の空」にすると設定を細かく行うことができます。
+The sky has two modes: normal sky and single color. The default is solid color. When set to "Single color", only the color of the sky can be set, but when set to "Normal sky", detailed settings can be made.
 
 
 .. image:: ../img/operation_stage_5.png
@@ -199,12 +197,12 @@ UserStage
 
 .. csv-table::
     
-    sky daytimeの場合（昼間の空）, sky night blue/sky night purpleの場合（夜の空）
-    |skydaytime|,   |skynight|
+    For sky daytime (daytime sky), for sky night blue/sky night purple (night sky)
+    |skydaytime|, |skynight|
 
 .. note::
-    * 各設定についてはUnityの公式リファレンスを参照してください。
-    * sky daytimeの場合、太陽が存在します。太陽の位置は照明の回転の角度により変化します。
+   * Please refer to Unity's official reference for each setting.
+   * For sky daytime, the sun is present. The position of the sun changes with the angle of rotation of the illumination.
 
 .. warning::
-    アンチエイリアスを有効にしていると、``sky night~`` の2つはキャプチャ時に不要な線が交じることがあります。これはWebGLの仕様です。ご了承下さい。
+    When anti-aliasing is enabled, two lines in ``sky night~`` may be mixed when captured. This is the WebGL specification. please note that.

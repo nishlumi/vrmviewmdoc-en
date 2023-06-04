@@ -1,58 +1,58 @@
 ###############
-特徴
+feature
 ###############
 
-.. index:: できること（特徴）
+.. index:: Available (features)
 
-できること
---------------
+Available
+------------------
 
-　本アプリで主にできることは次のとおりです。
-    * VRMファイルの読み込み（VRMの身長の情報表示にも対応）
-    * VRMのボーン操作（着実に簡単操作を体感していただくため、今のところIKによる操作のみ）
-    * FBX・Obj・STLなど3Dモデルファイルの読み込み・変形 [1]_
-    * jpg・png・gifなど2D画像の読み込み・変形
-    * カメラ・ライト・エフェクト・ポストプロセッシング（画面効果のこと）を使用可能（Unityの機能）
-    * オーディオ対応（MP3、wav） [2]_
-    * VRMと他のオブジェクトを連動して動かせる
-    * VRMのみ、ポーズをポーズファイルに保存・読み込み可能
-    * アニメーション作成可能（簡単なタイムライン・キーフレーム方式採用）
-    * アニメーションをプロジェクトファイルとして保存・読み込み可能
-    * WebGL部分の画面サイズを自由に変更可能
-    * 現在の画面をスクリーンショットとして保存可能
-    * 現在の画面を動画撮影・保存可能（もちろんアニメーションの保存も可能）
-    * 多言語対応（日本語、英語、エスペラント語、他は今後追加予定）
-    * GoogleのMediaPipeによりカメラ映像からポーズをAIで自動検出して再現可能 [3]_
-    * Web ビデオテキストトラックフォーマット (WebVTT)による字幕編集に対応（ver 1.2.0より）
+The main things you can do with this app are as follows.
+    * Read VRM files (also supports VRM height information display)
+    * VRM bone operation (Only IK operation for now, so that you can experience a steady and easy operation)
+    * Loading and transforming 3D model files such as FBX, Obj, and STL [1]_
+    * Read and transform 2D images such as jpg, png, and gif
+    * Camera, light, effects, post-processing (screen effects) available (Unity feature)
+    * Audio support (MP3, wav) [2]_
+    * Move VRM and other objects in tandem
+    * VRM only, poses can be saved/loaded in pose files
+    * Animation can be created (using a simple timeline and keyframe method)
+    * Ability to save and load animations as project files
+    * You can freely change the screen size of the WebGL part
+    * Save current screen as screenshot
+    * The current screen can be recorded and saved as a video (Of course, animation can also be saved)
+    * Supports multiple languages (Japanese, English, Esperanto, others to be added in the future)
+    * Google's MediaPipe can automatically detect and reproduce poses from camera images with AI [3]_
+    * Supports subtitle editing with Web Video Text Track Format (WebVTT) (from ver 1.2.0)
 
 
-.. [1] TriLib2で対応可能なフォーマットすべて（https://ricardoreis.net/trilib-2/）
+.. [1] All formats supported by TriLib2 (https://ricardoreis.net/trilib-2/)
 
-.. [2] UnityのWebGLで対応していないオーディオ効果もあります。
+.. [2] Some audio effects are not supported by WebGL in Unity.
 
-.. [3] 実験機能のため、完全な再現とはならない可能性もあります。
+.. [3] Because it is an experimental feature, it may not be a perfect reproduction.
 
 |
 
-.. index:: できないこと（特徴）
+.. index:: not available (feature)
 
-できないこと
---------------
+Not available
+--------------------------
 
-　本アプリで現在のバージョン（2.0.0）でできないことは次のとおりです。
-    * Unityの仕様上、各OSネイティブ、コンシューマ機並の描画（WebGL環境はそれらより描画性能がかなり落ちます）
-    * 3Dオブジェクトの不透明度（UnityのWebGLの仕様により表現できません。2Dオブジェクトはできます）
-    * VRMの各ボーンを直接回転させてのポージング（いわゆるFK。できることの2番目と同じ意味）
-    * UnityやMMD・MMMのアニメーションファイル・モーションファイルなどの読み込み（fbxに含まれるアニメーションデータは読み込み可能です）
-    * VRoidHubからVRoidを読み込むこと（VRoidSDKはC#だけのため、HTMLからはセキュリティ的に無理）
-    * VRMを編集・加工して保存すること（本アプリの目的ではないため非対応）
-    * その他ネット上のVRM、FBX、Objなどを直接読み込むこと（ウェブアプリのため制限があります）
-    * ogg（Ogg Vorbis）音声ファイルの読み込み（UnityのWebGLがそもそもoggのストリーミングに未対応）
+The following is what this app cannot do in the current version (2.0.0).
+   * Due to Unity's specifications, each OS's native rendering is comparable to that of consumer machines (WebGL environment has much lower rendering performance than those)
+   * Opacity of 3D objects (unable to express due to Unity's WebGL specification, 2D objects can)
+   * Posing by directly rotating each bone of the VRM (so-called FK. Same meaning as the second thing you can do)
+   * Read Unity, MMD/MMM animation files, motion files, etc. (animation data included in fbx can be read)
+   * Read VRoid from VRoidHub (VRoidSDK is only C#, so it is impossible from HTML for security reasons)
+   * Editing, processing and saving VRM (not supported because it is not the purpose of this application)
+   * Directly read VRM, FBX, Obj, etc. on the net (there are restrictions because it is a web application)
+   * Loading ogg (Ogg Vorbis) audio files (WebGL in Unity does not support ogg streaming in the first place)
 
 .. note::
-    ※今後、利用しているアセットやライブラリ等がバージョンアップしたら本アプリでも利用可能になるかもしれません。ご了承ください。
+   * In the future, if the assets and libraries used are upgraded, it may be possible to use this application as well. note that.
 
 
 .. raw:: latex
 
-   \cleardoublepage
+    \cleardoublepage

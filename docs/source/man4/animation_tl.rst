@@ -1,22 +1,22 @@
-.. index:: タイムラインを一つ前へ戻る
-.. index:: タイムラインを一つ先へ進める
-.. index:: タイムラインの表示を縮小する
-.. index:: タイムラインの表示を拡大する
-.. index:: フレームを読み込む
+.. index:: go back one timeline
+.. index:: move the timeline forward
+.. index:: Shrink timeline display
+.. index:: Enlarge the display of the timeline
+.. index:: load the frame
 
-#########################################
-タイムラインの表示に関するいくつか
-#########################################
+##########################################
+A few things about timeline display
+##########################################
 
-　タイムラインのツールバーについて説明していきます。
+We will explain the timeline toolbar.
 
 
-.. image:: img/tl_1.png
+.. image::img/tl_1.png
     :align: center
 
 |
 
-.. image:: img/tl_2.png
+.. image::img/tl_2.png
     :align: center
 
 |
@@ -32,53 +32,51 @@
 .. |tlinsf| image:: img/tl_c.png
 .. |tldelf| image:: img/tl_d.png
 
-.. index:: タイムラインのツールバー
+.. index:: timeline toolbar
 
-|tlprev| **タイムラインを一つ前へ戻る**
-    　現在選択中のタイムライン中で、現在の位置より前に一番近い登録済みキーフレームに戻します。（何も登録されていないフレームはスキップします）
+|tlprev| **Go back one timeline**
+    In the currently selected timeline, return to the closest registered keyframe before the current position. (Skip frames with nothing registered)
 
-|tlnext| **タイムラインを一つ先へ進める**
-    　現在選択中のタイムライン中で、現在の位置より後に一番近い登録済みキーフレームに進めます。（何も登録されていないフレームはスキップします）
+|tlnext| **Move forward in timeline**
+    In the currently selected timeline, advance to the nearest registered keyframe after the current position. (Skip frames with nothing registered)
 
-|tlout| **タイムラインの表示を縮小する**
-    　タイムラインの表示をコンパクトにします。
+|tlout| **Shrink timeline view**
+    Make the timeline display compact.
 
-|tlin| **タイムラインの表示を拡大する**
-    　タイムラインの表示を通常のサイズにします。これが標準サイズです。
+|tlin| **Expand timeline view**
+    Resize the timeline display to normal size. This is the standard size.
 
-.. image:: img/tl_7.png
+.. image::img/tl_7.png
     :align: center
 
 |
 
-|tlplay| **最初から再生、再生/一時停止、停止**
-    　リボンバーのアニメーションタブにあるボタンを同様の機能です。
+|tlplay| **play from beginning, play/pause, stop**
+    It has the same function as the button on the animation tab of the ribbon bar.
 
-|tlload| **このフレームを読み込む**
-    | 　現在選択中のフレーム位置に該当する全タイムライン（ロール）のキーフレームの内容を即座に読み込み、ポーズやプロパティを復元します。通常はフレーム位置を選択すると自動的に復元されますが、それを手動で呼び出すボタンです。
-    | ※設定の ``フレームを選択する時、プレビューする`` がオフの場合に主に使用します。
-
-
-|tlinsf| **現在位置に空のフレームを挿入**
-    　現在選択しているフレーム番号の位置のタイムラインすべてに空のフレームを挿入します。これによりこのフレーム番号以降のキーフレームはすべて1つずつ右にズレます。
-
-|tldelf| **現在のフレーム位置を削除**
-    | 　すべてのタイムラインの現在選択しているフレーム位置を削除します。これは単なるキーフレームの削除ではなくフレーム位置の削除を伴うため、このフレーム以降のキーフレームはすべて一つずつ左にズレます。
-    | 　また、現在位置にキーフレームが存在した場合はそのキーフレーム共々削除されますのでご注意ください。
+|tlload| **load this frame**
+    | Immediately read the contents of the keyframes of all timelines (rolls) corresponding to the currently selected frame position, and restore poses and properties. Selecting a frame position normally restores it automatically, but this button manually calls it.
+    | * Mainly used when ``Preview when selecting a frame`` in the settings is off.
 
 
-|tlseek| **シークバー**
-    　タイムラインのうちフレーム位置を好きな位置に移動します。フレーム数が増減してもこのシークバーのサイズは変わりません。
+|tlinsf| **Insert an empty frame at the current position**
+    Inserts an empty frame into all timelines at the position of the currently selected frame number. This shifts all keyframes after this frame number to the right by one.
 
-    | ※設定の ``フレームを選択する時、プレビューする`` がオンの場合、ゆっくり動かすとアニメーションをコマ送りしてプレビュー再生することができます。（一部のプロパティはプレビューされません）
+|tldelf| **delete current frame position**
+    | Deletes the currently selected frame position of all timelines. Since this involves deleting a frame position, not just deleting a keyframe, all keyframes after this frame will be shifted one by one to the left.
+    | Also, please note that if there is a keyframe at the current position, it will be deleted together.
 
-.. warning:: 
-    　HTMLとWebGLの連動の仕様上、あまり素早く動かすとプレビューが追いつかないことがあります。
+
+|tlseek| **Seek Bar**
+    Move the frame position to any position on the timeline. The size of this seek bar does not change even if the number of frames increases or decreases.
+
+    | * If ``Preview when selecting a frame`` in the settings is on, you can preview the animation frame by frame by moving it slowly. (some properties are not previewed)
+
+.. warning::
+    Due to the interlocking specifications of HTML and WebGL, the preview may not keep up if you move it too quickly.
 
 
 |
 
-|tlvisi| **タイムラインのキャスト（オブジェクト）の表示・非表示を切り替える**
-    　選択中のタイムラインのキャストを非表示にすることができます。非表示にしてもIKマーカーは引き続き表示されます。（別キャストを選択すればIKマーカーすら表示されません）
-    
-
+|tlvisi| **Show/hide timeline cast (object)**
+    You can hide the cast of the selected timeline. IK markers will still be visible when hidden. (If you select another cast, even the IK marker will not be displayed)

@@ -1,23 +1,23 @@
-#####################################
-字幕の編集
-#####################################
+######################################
+Edit Subtitles
+######################################
 
-.. index:: 字幕の編集
+.. index:: edit subtitles
 
-ver 1.2.0よりビデオプレイヤーに字幕編集機能を実装しました。
-他のアプリやツールを使わなくても、録画した後にそのまま動画に合わせた字幕の編集をし始めることができます。
+A subtitle editing function has been implemented in the video player since ver 1.2.0.
+After recording, you can start editing the subtitles to match the video without using any other apps or tools.
 
-字幕・テキストトラックについてはMDNの下記のページを御覧ください。
+For subtitles and text tracks, please see the following page on MDN.
 
-https://developer.mozilla.org/ja/docs/Web/API/WebVTT_API
+https://developer.mozilla.org/en/docs/Web/API/WebVTT_API
 
 .. contents::
 
 
-パネルを表示する
+show the panel
 =========================
 
-字幕を編集するには、右上にある字幕の編集ボタンを押します。
+To edit subtitles, press the Edit Subtitles button in the top right.
 
 .. |headerbtn| image:: img/vtt_001.png
 .. |rightpanel| image:: img/vtt_002.png
@@ -25,110 +25,110 @@ https://developer.mozilla.org/ja/docs/Web/API/WebVTT_API
 .. csv-table::
     :align: center
 
-    |headerbtn|, →, |rightpanel| 
+    |headerbtn|, ->, |rightpanel|
 
 
 |
 
-テキストトラックを追加する
+Add a text track
 ====================================
 
-ビデオプレイヤーではデフォルトで1つのテキストトラックを用意しています。さらに追加したい場合の方法です。
+The video player has one text track by default. This is the method if you want to add more.
 
-.. image:: img/vtt_004.png
+.. image::img/vtt_004.png
     :align: center
 
 |
 
-1. テキストトラックタブを開きます。
-2. パネルの上部の ``ラベル`` を入力します。
-3. その隣の ``言語`` を入力します。（日本語であれば ``ja-JP`` などと）
-4. トラックの種類を選びます。
+1. Open the Text Track tab.
+2. Enter a ``label`` for the top of the panel.
+3. Enter the ``Language`` next to it. (For Japanese, ``ja-JP`` etc.)
+4. Select the track type.
 
 .. hint::
-    トラックの種類については下記のサイトをご覧ください。
+    See below for track types.
 
     https://developer.mozilla.org/ja/docs/Web/HTML/Element/track#attr-kind
 
-    通常の用途では ``subtitles`` でかまいません。
+    ``subtitles`` is fine for normal use.
 
 |
 
-既存のテキストトラックを管理する
+Manage existing text tracks
 ======================================
 
-すでに存在するテキストトラックを選択したり削除など管理します。
+Manage existing text tracks by selecting or deleting them.
 
 .. image:: img/vtt_005.png
     :align: center
 
 |
 
-1. ``テキストトラック`` から操作したいトラックを選択します。
+1. Select the track you want to operate from the ``Text Tracks``.
 
-表示モードを変更する
+Change display mode
 --------------------------
 
-1. ``表示モード`` から目的のモードを選択します。
+1. Select the desired mode from the ``Display Mode``.
 
 .. csv-table::
     :header-rows: 1
     :align: center
 
-    モード名, 効果
-    disabled, トラックを完全に無効化します。
-    hidden, トラックを非表示にします。
-    showing, トラックを表示します。
+    mode name, effect
+    disabled, disable the track completely.
+    hidden, hides the track.
+    showing, showing the track.
 
 .. hint::
-    モードについて詳しい説明は下記サイトをご覧ください。
+    For a detailed explanation of the mode, please see the following site.
 
     https://developer.mozilla.org/ja/docs/Web/API/TextTrack/mode
 
 |
 
-字幕ファイルを読み込む
+load subtitle file
 ---------------------------
 
-端末上にある字幕ファイルを読み込みます。
+Load the subtitle file on your device.
 
-1. 開くボタンをクリックします。
-2. 目的の字幕ファイルを選択し、開きます。
-3. 選択中のトラックに字幕ファイルの中身が読み込まれます。
+1. Click the Open button.
+2. Select the desired subtitle file and open it.
+3. The content of the subtitle file will be read into the selected track.
 
-:対応するファイル拡張子: .vtt, .srt 
+:Corresponding file extension: .vtt, .srt
 
 .. note::
-    本アプリでは用意しきれない機能についてもVTTファイル・SRTファイルでは記述することができます（スタイルシートやコメントなど）。それら設定の効果は本アプリ上で再生した場合でも発揮できますが、アプリのUI上には反映されません。
-    
-    特にスタイルシートを追加・編集したい場合はCSSタブで改めて定義し直して下さい。
+    Functions that cannot be prepared in this application can also be described in VTT and SRT files (style sheets, comments, etc.). The effect of those settings can be demonstrated even when playing on this application, but it is not reflected on the UI of the application.
+
+    Especially if you want to add or edit a stylesheet, redefine it in the CSS tab.
 
 |
 
-字幕ファイルとして保存する
+Save as subtitle file
 ---------------------------------------
 
-選択中のテキストトラックを字幕ファイルとして端末上に保存します。
+Save the selected text track as a subtitle file on your device.
 
-1. 保存ボタンを押します。
-2. ファイル名をつけて保存します。
+1. Press the Save button.
+2. Give the file a name and save it.
 
 .. warning::
-    端末上から読み込んだ字幕ファイルを改めて保存し直す場合、元の字幕ファイルに含んでいるスタイルシートは保存されませんのでご注意ください。
+    Please note that if you re-save the subtitle file loaded from the device, the style sheet included in the original subtitle file will not be saved.
 
 
-字幕を編集する
+edit subtitles
 ==============================
 
-　選択したテキストトラック中に字幕のを追加したり削除できます。
+.. noteYou can add or remove subtitles in the selected text track.
 
-　上部ツールバーは現在のシーク位置の表示、削除・追加・適用ボタンがあります。
-字幕の一覧で出来る操作は次の通りです。
+The upper toolbar has a display of the current seek position and delete/add/apply buttons.
+The operations that can be performed in the subtitle list are as follows.
 
 .. csv-table::
-    
-    クリック, 選択
-    ダブルクリック, 選択した字幕の開始位置まで自動的にシーク
+
+    click select
+    Double-click, automatically seek to the start of the selected subtitle
 
 |
 
@@ -140,176 +140,175 @@ https://developer.mozilla.org/ja/docs/Web/API/WebVTT_API
 |
 
 
-**字幕で編集できること**
+**What you can edit with subtitles**
 
-字幕の次のプロパティを設定できます。
+You can set the following properties for subtitles:
 
-開始位置・終了位置
-    .. image:: img/vtt_010.png
+start position/end position
+    .. image::img/vtt_010.png
 
-    動画のシークバーで動かした後、左のアイコンで開始位置、右のアイコンで終了位置を決定します。
+    After moving with the video seek bar, the left icon determines the start position, and the right icon determines the end position.
 
-:テキスト:
-    字幕の文章です。なお、次のタグを使用できます。
+:text:
+    Subtitle text. Note that you can use the following tags:
 
 ..
     .. csv-table::
         :header-rows: 1
 
-        タグ, 機能
-        <b></b>, 太字
-        <i></i>, イタリック
-        <u></u>, 下線
-        <ruby></ruby>, ルビ
-        <c.クラス名></c>, CSSクラス名を指定してスタイルを適用します。なお、これは本アプリでは下記説明の ``スタイルシートクラス名`` を指定すると自動的に付与されるため、あえて指定する必要はありません。
+        tag, function
+        <b></b>, bold
+        <i></i>, italic
+        <u></u>, underline
+        <ruby></ruby>, Ruby
+        <c.class name></c>, Apply style by specifying CSS class name. In this application, this is automatically assigned when the ``style sheet class name`` described below is specified, so there is no need to specify it.
 
-:横(position):
-    動画における字幕のX座標の位置をパーセンテージで設定します。
+:Horizontal (position):
+    Sets the X-coordinate position of the subtitle in the video as a percentage.
 
-    :横(自動):
-        X座標の位置を自動で調整するようにします。
+    :Horizontal (Automatic):
+        Automatically adjust the position of the X coordinate.
 
-:縦(line):
-    動画における字幕のY座標の位置をパーセンテージで設定します。
+:Vertical (line):
+    Sets the Y-coordinate position of the subtitle in the video as a percentage.
 
-    :縦(自動):
-        X座標の位置を自動で調整するようにします。
+    :Vertical (Automatic):
+        Automatically adjust the position of the X coordinate.
 
 |
 
-:行揃え:
-    字幕の領域における位置を調整します。
+:justify:
+    Adjust the position in the subtitle area.
 
-    VTTCueのalignです。
+    It is align of VTTCue.
 
     https://developer.mozilla.org/en-US/docs/Web/API/VTTCue/align
 
-:字幕のサイズ:
-    字幕の領域を設定します。 **文字の大きさではありません** 。文字の大きさよりのこのサイズが小さいと字幕が入り切らないことがあります。
+:Subtitle size:
+    Set the subtitle area. **not font size**. If this size is smaller than the character size, the subtitles may not fit.
 
-:スタイルシートクラス名:
-    CSSタブで定義したクラス名を指定します。そのスタイルシートどおりに字幕のフォントや色が変わります。
+:stylesheet class name:
+    Specify the class name defined in the CSS tab. Subtitle fonts and colors change according to the stylesheet.
 
 .. note::
-    VTTCueというクラスにあたります。詳しくは下記サイトのページをご覧ください。
+    It corresponds to a class called VTTCue. For details, please see the page of the following site.
 
-    https://developer.mozilla.org/ja/docs/Web/API/VTTCue
+    https://developer.mozilla.org/en/docs/Web/API/VTTCue
 
 
-字幕を追加する
+add subtitles
 ---------------------------
 
 .. |cueaddbtn| image:: img/vtt_007.png
 
-1. 動画のシークバーを動かします。
-2. 開始位置のアイコンを押します。
-3. 終了位置にしたいところまでシークバーを動かします。
-4. 終了位置にのアイコンを押します。
-5. 字幕の各プロパティを入力します。
-6. このボタンを押します。 |cueaddbtn| 
+1. Move the video seek bar.
+2. Press the start position icon.
+3. Move the seek bar to the desired end position.
+4. Press the icon to the end position.
+5. Enter the subtitle properties.
+6. Press this button. |cueaddbtn|
 
 
-字幕を選択する・編集する
+Select/edit subtitles
 -------------------------------
 
 .. |cueeditbtn| image:: img/vtt_008.png
 
-1. 字幕の一覧上で目的の行を選択します。
-2.  **追加** 時と同じく開始位置・終了位置・各プロパティを設定します。
-3.  このボタンを押します。 |cueeditbtn|
+1. Select the desired line on the list of subtitles.
+2. Set the start position, end position, and properties in the same way as when adding .
+3. Press this button. |cueeditbtn|
 
 
-字幕を削除する
+remove subtitles
 ----------------------------------
 
 .. |cuedelbtn| image:: img/vtt_009.png
 
-1. 字幕の一覧上で目的の行を選択します。
-2.  このボタンを押します。 |cuedelbtn|
+1. Select the desired line on the list of subtitles.
+2. Press this button. |cuedelbtn|
 
 |
 
-CSSを管理する
+manage CSS
 =========================
 
-字幕に適用するスタイルシートを追加したり削除できます。
+You can add or remove stylesheets that apply to subtitles.
 
 .. warning::
-    .vttや.srtファイルを読み込んだ際に含まれているスタイルシートは、HTMLの仕様のため本アプリのこのタブに復元することはできません。
+    Stylesheets included when reading .vtt or .srt files cannot be restored to this tab of this application due to HTML specifications.
 
-    改めて保存する場合、ご面倒ですがこのタブにて改めて定義し直してください。
+    If you want to save it again, please redefine it in this tab.
 
 .. image:: img/vtt_011.png
     :align: center
 
 |
 
-CSSファイルを読み込む
+Load CSS file
 ----------------------
 
-.cssファイルを読み込んで字幕のスタイルシートとして使うことができます。
+You can load a .css file and use it as a subtitle stylesheet.
 
 .. |upbtn1| image:: img/vtt_012.png
 
-1. CSSタブのツールバーの左端にある |upbtn1| をクリックします。
-2. .cssファイルを選択して開きます。
+1. Click |upbtn1| at the left end of the CSS tab toolbar.
+2. Select the .css file and open it.
 
 .. caution::
-    .cssファイル中に ``::cue()`` のセレクタがある定義が対象です（それ以外のセレクタは無視されます）。
+    Definitions with ``::cue()`` selectors in .css files are targeted (other selectors are ignored).
 
 |
 
-CSSをファイルに保存する
+Save CSS to file
 -----------------------
 
-本アプリ上で定義したCSSを .vttファイルとは別に .cssファイルで保存します。
+Save the CSS defined on this application as a .css file separately from the .vtt file.
 
 .. |dwnbtn1| image:: img/vtt_013.png
 
-1. CSSタブのツールバーの左端にある |dwnbtn1| をクリックします。
+1. Click |dwnbtn1| at the left end of the CSS tab toolbar.
 
 .. note::
-    * ファイル名は ``style_[日付をベースとした連番].css`` で固定です。
+    * The file name is fixed at ``style_[date-based serial number].css``.
 
 
-CSSを追加する
+add CSS
 -----------------
 
 
-1. ``スタイルシートクラス名`` の入力欄に入力します。
+1. Fill in the ``stylesheet class name`` field.
 
-* ここでは ``::cue()`` の記述は不要です。あくまで名称だけです。
+* You don't need to write ``::cue()`` here. It's just a name.
 
-2. ``CSS`` の入力ボックスに必要なスタイルを記述していきます。
+2. Write the styles you want in the ``CSS`` input box.
 
-* 通常のCSSのように記述していきます。
+* Write like normal CSS.
 
-.. code:: css
+..code::css
 
     font-size: 12pt;
     background-color : rgba(0,0,0,0.5);
     fotn-weight: bold;
 
 
-3. ツールバーのこのボタン |cueaddbtn| を押します。
+3. Press this button |cueaddbtn| on the toolbar.
 
 
-CSSを編集する
+Edit CSS
 --------------------
 
 
-1. CSSの一覧で編集したいクラス名の行を選択します。
-2. ``CSS`` の入力ボックスでスタイルを変更します。
-3. このボタンを押します。 |cueeditbtn| 
+1. Select the line of the class name you want to edit in the CSS list.
+2. Change the style in the ``CSS`` input box.
+3. Press this button. |cueeditbtn|
 
 .. warning::
-    スタイルシートクラス名は変更することはできません。
+    The stylesheet class name cannot be changed.
 
 
 
-CSSを削除する
+Remove CSS
 ----------------
 
-1. CSSの一覧で削除したいクラス名の行を選択します。
-2. このボタンを押します。 |cuedelbtn| 
-
+1. Select the line of the class name you want to delete in the CSS list.
+2. Press this button. |cuedelbtn|

@@ -1,8 +1,8 @@
-.. index:: 内部ストレージダイアログ（画面の構成）
+.. index:: Internal storage dialog (screen configuration)
 
-####################################
-内部ストレージダイアログ
-####################################
+#####################################
+Internal storage dialog
+#####################################
 
 .. image:: ../img/screen_storagedlg.png
     :align: center
@@ -10,31 +10,31 @@
 |
 
 
-　アプリ内部に保存したアニメーションプロジェクトや一度開いたことのあるファイルを開くための画面です。
+This is the screen for opening animation projects saved inside the app or files that have been opened once.
 
 |
 
-**ツールバー：**
+**Toolbar:**
 
-:再読み込み:
-    一覧を再読み込みします。
-:削除:
-    選択したファイルを（アプリ内部から）削除します。
-:ファイルの種類名:
-    現在表示しているファイルの種類名です。
+:Reload:
+    Reload the list.
+:delete:
+    Delete the selected file (from within the app).
+:File type name:
+    The name of the currently displayed file type.
 
 .. note::
-    ※以下はアニメーションプロジェクトのみです。
+    * The following are animation projects only.
     
-    :名前を変更:
-        選択したプロジェクトファイルの名前を変更します。
-    :ダウンロード:
-        選択したアニメーションプロジェクトをダウンロードして保存します。
-    :ファイルから開く:
-        アニメーションプロジェクトファイルを端末から開きます。
+    :rename:
+        Rename the selected project file.
+    :download:
+        Download and save the selected animation project.
+    :Open from file:
+        Open the animation project file from your terminal.
 
-:検索ボックス:
-    各ファイルをインクリメンタルサーチする入力欄です。
+:search box:
+    Input field for incremental search of each file.
 
-:一覧:
-    ファイル名、サイズ、作成日付、更新日付を表示する一覧です。
+:list:
+    A list that displays the file name, size, creation date, and update date.

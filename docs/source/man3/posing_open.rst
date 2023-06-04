@@ -1,18 +1,18 @@
-####################################
-VRoid/VRMのポーズを再現する
-####################################
+#####################################
+Open VRoid/VRM poses
+#####################################
 
 
-　保存したポーズをどのVRoid/VRMにでも即座に反映させることができます。
+The saved pose can be instantly reflected in any VRoid/VRM.
 
-1. 「3Dモデル」タブの「ポーズ一覧」をクリックします。
+1. Click “Pose list” on the “3D model” tab.
 
 .. image:: posing_5.png
     :align: center
 
 |
 
-2. ポーズ一覧のウィンドウが表示されるので目的のポーズを選び、「ポーズを適用」をクリックします。
+2. A window with a list of poses will be displayed. Select the desired pose and click ``Apply Pose`` .
 
 .. image:: posing_6.png
     :align: center
@@ -20,20 +20,20 @@ VRoid/VRMのポーズを再現する
 |
 
 .. note::
-    ※保存時のモデルのキャラクターをサンプルアバターとして表記しています。また、参考情報として身長も表記しています。
+    * The model character at the time of saving is written as a sample avatar. In addition, the height is also indicated as reference information.
 
 
-3. ポーズが反映されたのを確認します。
+3. Confirm that the pose has been reflected.
 
 .. image:: posing_7.png
     :align: center
 
 |
 
-　身長や体格が異なる他のキャラクターにも同じポーズを反映できます。（ただし、元のキャラクターから極端に差がある場合はずれることがあります）
+The same pose can be applied to other characters with different heights and builds. (However, if there is an extreme difference from the original character, it may deviate.)
 
 
-　ポーズの保存時は実際にはVRoid/VRM自体の位置データも保存しています。その位置データも復元するには「アプリの設定」の「Model」タブの「ポーズのオープン時にグローバル座標をも適用する」にチェックを入れてください。
+When saving a pose, the position data of the VRoid/VRM itself is also saved. To restore that position data, please check "Also apply global coordinates when opening a pose" in the "Model" tab of "App Settings".
 
 .. image:: posing_8.png
     :align: center
@@ -41,20 +41,20 @@ VRoid/VRMのポーズを再現する
 |
 
 .. warning::
-    * 違うキャラクターであっても全く同じ位置に復元されます。複数キャラクターを読み込んでいる場合には位置が重複するので必要に応じてオプションをオフにしてください。
-    * 極端に体勢が崩れるポーズの場合は **1回の適用では反映しきれない** ことがあります（特にLowerLeg）。その場合はもう一度適用することでポーズが完全に再現されるようになります。
+    * Even if it is a different character, it will be restored to the exact same position. If you load multiple characters, the positions will be duplicated, so please turn off the option if necessary.
+    * In the case of poses that are extremely unbalanced, **it may not be reflected in a single application** (especially LowerLeg). In that case, apply it again and the pose will be perfectly reproduced.
 
 .. hint::
-    　ポーズを再現するもう一つの手順として、 PC内に保存した .vvmposeファイルをWebGL画面にドラッグアンドドロップする方法も可能です。
+    Another way to reproduce the pose is to drag and drop the .vvmpose file saved on your PC onto the WebGL screen.
 
-    　こちらの方法の場合、ポーズ一覧に登録していなくてもかまいません。 対象は **VRMに限りますが** エクスプローラー等からドラッグしてくるだけでいつでもすぐにポーズを再現できます。
+    "In the case of this method, it is not necessary to register in the pose list." The target is limited to **VRM**, but you can immediately reproduce the pose by simply dragging it from Explorer etc.
 
 |
 
-ポーズを検索する
+Search pose
 =======================================
 
-　本アプリの他の一覧部分と同様に、インクリメンタルサーチができます。
+Incremental search is possible in the same way as other lists in this application.
 
 .. image:: posing_o.png
     :align: center
@@ -63,25 +63,24 @@ VRoid/VRMのポーズを再現する
 
 
 
-ディスクからポーズファイルを読み込む
+load pose file from disk
 =======================================
 
 
-　PCのディスクに保存したポーズファイルをアプリに読み込ませることができます。ポーズ一覧のアップロードボタンを押してください。
+You can load the pose file saved on your PC's disk into the app. Please push the upload button of the pose list.
 
 .. image:: posing_9.png
     :align: center
 
 |
 
-| 　対象のファイルは **.vvmpose** または **.json** です。
-| 　本アプリ独自拡張子の「**.vvmpose**」はあくまで判別のしやすさのためだけのものですが、 .jsonのままだと他と混同するおそれがあるので間違えないように気をつけてください。
+| The target file is **.vvmpose** or **.json**.
+| The extension "**.vvmpose**" unique to this application is only for ease of identification. Please attach.
 
-　読み込み終わると一覧に表示されるようになります。（サムネイルはなくても問題ありません）
+When it finishes loading, it will be displayed in the list. (It doesn't matter if there is no thumbnail)
 
-   
+
 
 .. warning::
-    | ※データ中に必要な項目がないと読み込み時にエラーとなります。
-    | ※正しくないデータを読み込んだ場合の動作は保証致しません。
-
+    | * If the data does not contain the necessary items, an error will occur when reading.
+    | * Operation is not guaranteed if incorrect data is read.

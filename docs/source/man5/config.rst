@@ -1,294 +1,294 @@
-#########################################
-設定
-#########################################
+##########################################
+Setting
+##########################################
 
 .. contents::
 
-.. index:: アプリを設定する（設定）
+.. index:: configure the app (settings)
 
-アプリを設定する
+Set up your app
 =========================================
 
-　設定画面からアプリの挙動を細かく設定できます。
+You can fine-tune the behavior of the app from the settings screen.
 
-1. リボンバーのホームタブにある設定ボタンをクリックします。
+1. Click the Settings button on the Home tab of the Ribbon bar.
 
-.. image:: img/config_1.png
+.. image::img/config_1.png
     :align: center
 
 |
 
-2. 設定画面が開きます。
+2. The setting screen opens.
 
-.. image:: img/config_2.png
+.. image::img/config_2.png
     :align: center
 
 |
 
-アプリの設定
+App settings
 ===========================
 
 
-.. index:: アプリケーションタブ（設定）
+.. index:: Application Tab (Settings)
 
-アプリケーションタブ
+Application tab
 ----------------------------
 
-　アプリケーションタブ内の設定項目です。
+This is a setting item in the application tab.
 
-メモリの使用率（倍率）
-    | 　WebGL画面に費やすメモリ量を調整します。256MB～2048MBの間で設定できます。使用端末のメモリを超えることはできません。
-    | 　これを大きくすることで巨大な3Dオブジェクトを読み込めるようになります。
+Memory usage (multiplier)
+    | Adjust the amount of memory used for the WebGL screen. It can be set between 256MB and 2048MB. You cannot exceed the memory of your device.
+    | By increasing this, you will be able to read huge 3D objects.
 
     .. warning::
-        増やしすぎると逆に端末全体の動作に影響する可能性があります。ほどほどに調整してください。
+        If you increase it too much, it may adversely affect the operation of the entire terminal. Please adjust accordingly.
 
-.. image:: img/config_3.png
+.. image::img/config_3.png
     :align: center
 
 |
 
 
-マウスホイールの速度
-    　WebGL画面でズームイン・ズームアウトする速度を調整します。1～5倍の間で調整できます。
+mouse wheel speed
+    Adjust the speed of zooming in and out on the WebGL screen. It can be adjusted between 1 and 5 times.
 
-キー操作時のカメラの移動速度
-    　WebGL画面でキーボードのキーによる操作をした場合のカメラの移動の速度を0.01～0.25の間で調整できます。
+Camera movement speed during key operation
+    You can adjust the camera movement speed between 0.01 and 0.25 when operating with keyboard keys on the WebGL screen.
 
-キー操作時のカメラの回転速度
-    　WebGL画面でキーボードのキーによる操作をした場合のカメラの回転の速度を0.01～2.0の間で調整できます。
+Camera rotation speed during key operation
+    You can adjust the camera rotation speed between 0.01 and 2.0 when you operate the keyboard keys on the WebGL screen.
 
-オブジェクトを選択した時にカメラの中心点をフォーカスする
-    　3Dオブジェクトを選択したときに、そのオブジェクトをメインカメラの中心に画面内におさめるよう自動的に移動させます。ただし常に正面かつ若干俯瞰して向くためそれが煩わしい場合はオフにしてください。
+Focus the camera's center point when an object is selected
+    When a 3D object is selected, it is automatically moved to the center of the main camera within the screen. However, since it always faces the front and slightly overhead view, please turn it off if it is annoying.
 
-カメラと中心点の間の距離
-    通常、カメラは自身ではなくオブジェクトの周りを回転移動します。本アプリでは対象は常に特定のオブジェクトではなく、 **一定の距離の空間** が基準です。その一定の距離とメインカメラの距離を指定します。
+Distance between camera and center point
+    Normally the camera rotates around the object instead of itself. In this app, the target is not always a specific object, but a **space at a certain distance**. Specify that constant distance and the distance of the main camera.
 
-メインカメラの中心点を表示する
-    メインカメラの中心点の表示をします（薄暗い四角形の表示がそれです）。上記 ``カメラと中心点の間の距離`` の設定により遠近の具合で中心点のサイズは変化します。操作するオブジェクトやアニメーションプロジェクトには一切影響しません。
+Display the center point of the main camera
+    Displays the center point of the main camera (it's the dim square display). The size of the center point changes depending on the perspective, depending on the ``distance between the camera and the center point`` above. It does not affect the objects you manipulate or the animation project in any way.
 
-スクリーンショットをHTMLの機能で撮影する
-    | 　スクリーンショットをHTML/Javascript側の機能で撮影することで、若干質は下がりますがカメラを複数使う映像が正常に反映されるなど安定します。メインカメラおよびCameraオブジェクトを完全に切り替えて使う分にはどちらを使っても差はありません。必要に応じて切り替えてください。
-    | 　Cameraオブジェクトのビューポートやレンダーテクスチャ中のプレビューを含めて画面そのままを撮りたい場合はONにしてください。
+Take screenshots with HTML
+    | By taking screenshots using the HTML/Javascript function, the quality will be slightly lower, but it will be stable, such as the images using multiple cameras will be reflected normally. There is no difference between the main camera and the camera object as long as you use them by switching completely. Please switch if necessary.
+    | Turn this ON if you want to capture the screen as it is, including the viewport of the Camera object and the preview in the render texture.
 
-ダークテーマを使用する
-    　アプリの見た目をダークテーマに変更します。
+use dark theme
+    Changes the appearance of the app to a dark theme.
 
 |
 
-.. index:: ファイルタブ（設定）
+.. index:: Files Tab (Settings)
 
-ファイルタブ
+File tab
 ----------------------------
 
-　ファイルタブ内の設定項目です。
+This is a setting item in the File tab.
 
-開いたファイルを履歴に保存する
-    　一度開いたVRM、OtherObject、Image、UImageを、アプリ内に履歴として保存します。
+Save opened files in history
+    The VRMs, OtherObjects, Images, and UImages that have been opened once are saved as history in the app.
 
-履歴から開いた場合、VRMの確認画面を省略する
-    　一度開いたVRMについては、利用条件の確認画面を表示することなく読み込ませるようにします。あとから「詳細情報」ボタンで表示することはできます。
+Skip VRM confirmation screen when opened from history
+    For VRMs that have been opened once, we will allow them to load without displaying the confirmation screen for the terms of use. You can display it later by clicking the "Details" button.
 
 Clear
-    一度開いたファイルの履歴をすべて削除します。
+    Deletes all history of files once opened.
 
-プロジェクトを開いた時、このサイズを超えるファイルを自動的に読み込まない。
-    　アニメーションプロジェクトを開く時、ここで指定したMBのサイズを超えるオブジェクトファイルが含まれている場合はそれを読み飛ばします。
-    　読み飛ばされたオブジェクトは別途手動で読み込んでロールに割り当てる必要があります。
+Do not load files larger than this size automatically when opening a project.
+    When opening an animation project, if it contains an object file that exceeds the MB size specified here, it will be skipped.
+    The skipped objects must be manually read and assigned to roles.
 
-プロジェクトをバックアップする
-    　現在作成中のアニメーションプロジェクトを自動的にバックアップします。通常の保存と同じく、キーフレームに登録していないIKマーカーの位置・回転は保存されないので、こまめにキーフレームに登録しておいてください。
+Back up your project
+    The animation project currently being created is automatically backed up. As with normal saving, the positions and rotations of IK markers that are not registered in keyframes will not be saved, so please register them in keyframes frequently.
 
-バックアップの間隔
-    　バックアップする間隔を指定します。1～10分の間で指定できます。
+backup interval
+    Specify the backup interval. You can specify from 1 to 10 minutes.
 
 |
 
 
-.. index:: モデルタブ（設定）
+.. index:: model tab (settings)
 
-モデルタブ
+Model tab
 -------------------
 
-　モデルタブ内の設定項目です。主にオブジェクト自体の動きに関する設定です。
+This is a setting item in the model tab. These are mainly settings related to the movement of the object itself.
 
 
-ポーズの保存時にサムネイルも保存する
-    　ポーズを保存する際にそのポーズのスクリーンショットを合わせて保存します。保存しなくてもポーズ・ポーズファイル自体に影響はありません。
+Save thumbnails when saving poses
+    When saving a pose, save a screenshot of that pose as well. There is no effect on the pose/pose file itself even if it is not saved.
 
-ポーズのオープン時にグローバル座標をも適用する
-    | 　選択したVRMにポーズファイルを適用する際に、ポーズが保持しているグローバル座標をも適用します。
-    | 　これを有効にすると、複数のVRMにポーズを適用したときに位置が重複してしまうことになります。必要に応じてオン・オフを切り替えて使用してください。
+Also apply global coordinates when opening poses
+    | When applying the pose file to the selected VRM, also apply the global coordinates held by the pose.
+    | If this is enabled, the positions will be duplicated when applying poses to multiple VRMs. Please use it by switching on / off as necessary.
 
-足首の回転を自動で行う
-    | 　IKのLowerLegを動かしたときに、Legを自動的に回転させます。人体に完全にフィットしているわけではないためLowerLegの動かした範囲によっては回転角度は追随しきれない場合があります。
-    | 　アニメーションの再生時は自動的にオフになります。
+Automatic ankle rotation
+    | Automatically rotate the leg when moving the lower leg of IK. Since it does not fit the human body perfectly, the rotation angle may not be able to follow depending on the range in which the Lower Leg is moved.
+    | Automatically turns off when playing animation.
 
 .. |ashi_on| image:: img/config_4.png
 .. |ashi_off| image:: img/config_5.png
 
 
-.. csv-table:: ※どちらもLowerLegをy軸・z軸に後方へ移動のみさせた例
+.. csv-table:: Both are examples in which LowerLeg is only moved backward on the y-axis and z-axis
 
 
-    設定がオンの場合,   設定がオフの場合
+    if setting is on, if setting is off
     |ashi_on|, |ashi_off|
 
 .. caution::
-    このように足首から下部分が自然な回転を伴うようになります。しかし意図しない回転が伴うことになるため、足首を動かした後に手動で回転を戻す必要があります。
+    In this way, the lower part from the ankle comes to accompany the natural rotation. However, this would involve unintentional rotation, so it would be necessary to manually unrotate the ankle after moving it.
 
-VRMの体に自然な稼働制御を適用する
-    | 　VRMのひじ（LowerArm）、足（LowerLeg）、足首（Leg）の回転可能範囲を人体の可動域に合わせます。
-    | 　これをオンにするとVRMは確かに自然な可動域にはなりますが、その制限を逃れようとして対象部位に追随する他のIKの位置・回転が予期せぬ動作になることがあります。
-    | 　必要に応じてオフにすることをおすすめします。
-    | 　アニメーションの再生時は自動的にオフになります。
+Apply natural running controls to VRM bodies
+    | Match the rotatable range of the VRM's elbow (LowerArm), foot (LowerLeg), and ankle (Leg) to the range of motion of the human body.
+    | When this is turned on, the VRM will certainly have a natural range of motion, but the position and rotation of other IKs that follow the target part in an attempt to escape that restriction may result in unexpected behavior.
+    | It is recommended to turn it off if necessary.
+    | Automatically turns off when playing animation.
 
-ボーンの連動
-    　いずれの場合もアニメーションの再生時は自動的にオフになります。
+Linking bones
+    In either case, it will automatically turn off when playing the animation.
 
-    :Chest & LowerArm & Head:
-        ``Chest`` の動きに合わせて左右の ``LowerArm`` そして ``Head`` も追随させます。ただしX軸・Z軸のみです。
+    :Chest & Lower Arm & Head:
+        As the ``Chest`` moves, the left and right ``LowerArms`` and ``Head`` will also follow. However, it is only for the X-axis and Z-axis.
     :Aim & Chest:
-        ``Aim`` の動きに合わせて ``Chest`` も追随させます。ただしX軸・Z軸のみです。
-    :Pelvis & LowerLeg:
-        ``Pelvis`` の動きに合わせて左右の ``LowerLeg`` を上下前後に動かします。
-    :Hand & LowerArm:
-        ``Hand`` の動きに合わせて左右の ``LowerArm`` を追随して動かします。ただしX軸・Z軸のみです。
-    :Leg & LowerLeg:
-        ``Leg`` の動きに合わせて左右の ``LowerLeg`` を追随して動かします。これによりひざ付近の動きが制限がかかる場合がありますので必要に応じてオフにしてください。
+        Make the ``Chest`` follow the movement of the ``Aim``. However, it is only for the X-axis and Z-axis.
+    :Pelvis & Lower Leg:
+        Move the left and right ``LowerLegs`` up and down and back and forth according to the movement of the ``Pelvis``.
+    :Hand & Lower Arm:
+        Move the left and right ``LowerArms`` according to the movement of the ``Hand``. However, it is only for the X-axis and Z-axis.
+    :Leg & Lower Leg:
+        Move the left and right ``LowerLeg`` according to the movement of the ``Leg``. This may restrict movement around the knees, so turn it off if necessary.
 
 |
 
-.. index:: アニメーションタブ（設定）
+.. index:: Animation Tab (Settings)
 
-アニメーションタブ
-------------------------
+Animation tab
+--------------------
 
-　アニメーションタブ内の設定項目です。主にアニメーションに関する設定です。
+This is a setting item in the animation tab. These are mainly settings related to animation.
 
 
-フレーム数の初期値
-    　アニメーションプロジェクトのデフォルトのフレーム数を 60～300 の範囲で指定します。これはあくまでも初期値であり、後から拡張する制限には当たりません。
-    
-再生終了後、最初のフレームに戻す
-    　アニメーションを再生しそれが終了した後にフレーム位置を1番目に戻します。
+Initial number of frames
+    Specify the default number of frames for the animation project in the range of 60 to 300. This is only an initial value and does not apply to the limit that will be extended later.
 
-戻すタイミング(ミリ秒)
-    　フレーム位置を1番目に戻すタイミングを0～2秒の間で調整します。0は遅延なく即座に1フレーム目に戻します。
+Return to first frame after playback ends
+    Play the animation and return the frame position to the first after it finishes.
 
-フレームを選択する時、プレビューする
-    　フレームを選択したら各オブジェクトが登録されたキーフレーム通りにポーズを復元するようにします。これがオフの場合、現在編集中のフレームおよびアニメーションの再生時にしかポーズを確認できなくなります。
+Return timing (ms)
+    Adjust the timing to return the frame position to the first from 0 to 2 seconds. 0 immediately returns to the first frame without delay.
+
+Preview when selecting a frame
+    After selecting the frame, restore the pose according to the registered keyframe for each object. If this is off, you will only be able to see the pose at the frame you are currently editing and when playing the animation.
 
 .. note::
-    ※タイムラインのツールバーにある「:doc:`このフレームを読み込む <../man4/animation_tl>` 」を使用して随時ポーズやプロパティを復元してください。
+    * Restore poses and properties at any time using ":doc:`load this frame <../man4/animation_tl>`" on the toolbar of the timeline.
 
-現在選択中のロールのみプレビューする
-    　これがオンの場合、現在選択中のタイムライン（ロール・オブジェクト）のみそのキーフレーム時のポーズを再現します。オフの場合はすべてのタイムラインを対象にします。
+Preview only the currently selected role
+    When this is on, only the currently selected timeline (roll object) reproduces the pose at that keyframe. When off, all timelines are targeted.
 
-再生中はIKマーカーの表示をオフにする
-    　これがオンの場合、アニメーションの再生開始時にIKマーカーが自動的にオフになります。再生が終了するとIKマーカーの表示が戻ります。
+Turn off the display of IK markers during playback
+    When this is on, the IK markers will automatically turn off when the animation starts playing. When playback ends, the IK marker display returns.
 
-プレビュー時に登録キーフレームの位置を超えたら最後のキーフレームを復元する
-    　図を交えて説明すると、 ``1`` と ``15`` の位置にキーフレームが登録されていたとします。
-    　この設定がオンのときに ``16`` 以降のフレーム番号を選択すると、 ``15`` の位置のキーフレームの内容を復元します。
-    　オフの場合は最後に選択したキーフレームの内容のままとなります。（例えば ``7`` を選択していて急に ``19`` を選択した場合は7の内容のままということです）
+Restore the last keyframe when the position of the registration keyframe is exceeded during preview
+    To explain with a diagram, let's say that keyframes are registered at positions ``1`` and ``15``.
+    If you select a frame number after ``16`` when this setting is on, the contents of the keyframe at position ``15`` will be restored.
+    When turned off, the contents of the last selected keyframe will remain. (For example, if you select ``7`` and then suddenly select ``19``, the contents of 7 remain as they are.)
 
 .. image:: img/config_6.png
     :align: center
 
 |
 
-録画時に音声も保存する
-    　録画時にBGMやSEが録音されるようにします。この設定を切り替えたときはアプリを再起動させてください。ウェブアプリ版はブラウザによってマイクの使用確認メッセージが表示されます。
+Save audio when recording
+    BGM and SE will be recorded when recording. Please restart the app after changing this setting. The web application version will display a microphone use confirmation message depending on the browser.
 
 .. image:: img/config_7.png
     :align: center
 
 |
 
-　ウェブアプリ版の場合（なおかつPWAによる別ウィンドウ化した場合）、右上のマイクのアイコンから、マイクの許可を後から切り替えることができます。ただし、本アプリでの設定が有効なのにブラウザのここの設定でブロックをしてしまうと正常に動かなくなります。必ず本アプリの設定と2つ合わせて設定を切り替えてください。
+In the case of the web app version (and when using a separate PWA window), you can switch the microphone permission later from the microphone icon in the upper right. However, even if the setting in this application is valid, if you block it with the browser setting here, it will not work properly. Be sure to switch the settings together with the settings of this application.
 
 .. image:: img/config_8.png
     :align: center
 
 |
 
-　なお、 管理ボタンを押すとブラウザの設定ページに遷移し、使用するマイクのデバイスを切り替えたりできます。
+By pressing the management button, you can transition to the browser settings page and switch the microphone device to use.
 
 .. hint::
-    PC版の場合は各OSのサウンドの設定に従ってください。
+    For the PC version, follow the sound settings of each OS.
 
 
-.. index:: 
-    素材
-    テクスチャ（素材）
-    素材の追加
-    素材の更新
-    素材の削除
+.. index::
+    material
+    texture (material)
+    Add material
+    material update
+    Delete material
 
-素材の管理
+Material management
 ========================
 
-本アプリ全体で使用できるよう、テクスチャファイルなどを管理できます。
+You can manage texture files, etc. so that they can be used throughout this application.
 
 
-1. リボンバーの ``アニメーション`` タブ → ``設定`` ボタンを押します。
-2. ``素材`` タブを開きます。
+1. Click the ``Animation`` tab on the ribbon bar, then the ``Settings`` button.
+2. Open the ``Materials`` tab.
 
 .. image:: ../img/screen_project3.png
     :align: center
 
 |
 
-素材の追加
+Add material
 ----------------------
 
 .. image:: ../img/screen_project6.png
     :align: center
-    
-1. ``素材の種類`` から目的の素材の種類を選びます。
-2. ``素材の場所`` で追加先の場所を ``App`` または ``Project`` から選びます。
-3. ``追加`` ボタンを押します。
-4. 素材の追加のポップアップウィンドウが表示されます。
-5. ``素材ファイル`` をクリックして端末からファイルを選びます。
-6. ``素材のラベル`` で自分が管理しやすい名称を入力します。
-7. OKボタンを押して素材をアプリに追加します。
 
-※追加後、一覧にプレビュー付きで表示されるようになります。
+1. Select the desired material type from ``Material Type``.
+2. Select ``App`` or ``Project`` as the ``location of resources``.
+3. Press the ``Add`` button.
+4. An Add Material pop-up window will appear.
+5. Click ``material file`` to select a file from the terminal.
+6. In ``Material Label``, enter a name that you can easily manage.
+7. Press the OK button to add the material to the app.
+
+* After adding, it will be displayed with a preview in the list.
 
 .. note::
-    | 　アプリ内またはアニメーションプロジェクト内の素材ファイルは本アプリの専用ストレージに保存されます。PC上でそれらのファイルの場所が変わっても影響ありません。
-    | 　例えば画像ファイル自体に変更がある場合、それは反映されませんので素材を一旦削除し、再度追加する必要があります。
+    | The material files in the app or animation project are saved in the dedicated storage of this app. It doesn't matter if the location of those files changes on your PC.
+    | For example, if there is a change in the image file itself, it will not be reflected, so it is necessary to delete the material once and add it again.
 
-.. admonition:: 追加後の素材の使い道
+.. admonition:: how to use the material after adding
 
-    * OtherObjectのテクスチャ、Stageの ``UserStage`` のテクスチャなどで使用することができます。それぞれのプロパティにおいて、使いたい素材名を指定してください。
-    * 別の素材名を選ぶと参照が解除されます。
-    * 一つのテクスチャを複数のオブジェクトにセットすることもできますが、全体で共有しているため素材を削除などすると対象のすべてのオブジェクトに変更が影響します。
-    * 各オブジェクトでは素材名で参照されるため、実際のテクスチャなどのファイルが何であるかは考慮されません。プロジェクトファイルを配布して別のユーザーに使ってもらうなどの場合、テクスチャファイルを想定通りに使ってもらえるよう注意してもらってください。
+    * Can be used with OtherObject textures, Stage ``UserStage`` textures, etc. Specify the name of the material you want to use in each property.
+    * Selecting another material name will cancel the reference.
+    * You can set one texture to multiple objects, but since it is shared by all objects, if you delete the material, etc., the change will affect all the target objects.
+    * Each object is referenced by its material name, so it doesn't matter what the actual textures or other files are. If you distribute the project file and let other users use it, please make sure that the texture files are used as intended.
 
-素材の更新
+Material update
 ----------------------
 
-一度追加した素材はラベル名の更新、または画像の再読み込みが行なえます。
+Once added, you can update the label name or reload the image.
 
 .. image:: ../img/screen_project5.png
     :align: center
 
 |
 
-ラベル名の更新
-    各行の素材名のセルをクリックすると入力ダイアログが表示されます。そこに新しい名称を入力します。
+Update label name
+    Click the material name cell in each row to display the input dialog. Enter the new name there.
 
-画像の再読み込み
-    プロジェクト内の素材の場合に使います。ファイルから読み込んだ（インポートした）プロジェクトが素材を保有している場合、どの素材も実体となるファイルは読み込まれていません。想定される画像などのファイルを再度指定して読み込む必要があります。
+Image reload
+    Used for materials within a project. If the project loaded (imported) from the file contains materials, the file that becomes the substance of any material is not loaded. You need to specify the file again, such as the expected image, and load it.
 
-素材の削除
+Delete material
 ----------------------
 
-1. 一覧から削除したい素材にチェックを入れて選択します。
-2. 削除ボタンを押します。
-   
+1. Select the material you want to delete from the list by checking it.
+2. Press the Delete button.
+
 .. caution::
-    * どこかでその素材を一つでも参照している場合は削除できません。そのオブジェクトで参照を解除（別の素材を選択・あるいは ``--`` で選択を取り消す）してどこからも参照がされなくなったのを確認してから再度お試しください。
-    * 実際の素材ファイルがアプリ内の専用ストレージからも削除されます。
+    * If even one of the materials is referenced somewhere, it cannot be deleted. Cancel the reference (select another material or cancel the selection with ``--``) with that object and check that it is no longer referenced from anywhere and try again.
+    * The actual material files will also be deleted from the dedicated storage within the app.

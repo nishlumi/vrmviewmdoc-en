@@ -1,33 +1,33 @@
-.. index:: MediaPipe（ポージング）
+.. index:: MediaPipe (Posing)
 
-#####################################
-MediaPipeでポーズを検出する
-#####################################
+######################################
+Detect pauses with MediaPipe
+######################################
 
 .. contents::
 
 
 
-　MediaPipeとはGoogleが公開している、ライブメディアとストリーミングメディア向けのAIソリューションで無償で利用できます。本アプリではPoseの機能を利用しています。
+MediaPipe is an AI solution for live and streaming media published by Google that can be used free of charge. This application uses the Pose function.
 
-　ウェブカメラ等で移した映像からAIが自動的にポーズを検出し、それをVRoid/VRMに適用することができます。
+AI can automatically detect poses from images transferred by a webcam, etc., and apply them to VRoid/VRM.
 
 https://google.github.io/mediapipe/
 
 .. warning::
-    ※なお、MediaPipeと本アプリのIKの位置は完全には一致しないため、そしてポーズの検出は100％ではありません。あらかじめご了承ください。
+    * Because the IK positions of MediaPipe and this application do not match perfectly, pose detection is not 100%. Please note.
 
-    ※VRoid/VRM以外はこの機能を使えません。
+    * This function cannot be used except for VRoid/VRM.
 
 
-1. 「3Dモデル」タブの「MediaPipe」をクリックします。
+1. Click MediaPipe on the 3D Models tab.
 
 .. image:: posing_a.png
     :align: center
 
 |
 
-2. 確認メッセージが表示されるので問題なければOKボタンを押して進みます。
+2. A confirmation message will be displayed. If there is no problem, press the OK button to proceed.
 
 .. image:: posing_b.png
     :align: center
@@ -35,10 +35,10 @@ https://google.github.io/mediapipe/
 |
 
 .. note::
-    ※初回はカメラの利用許可が求められるので、許可をして進めてください。
+    * Permission to use the camera is required for the first time, so please allow it before proceeding.
 
 
-3. PCのスペックにもよりますが読み込み中の後カメラ映像が映し出されます。
+3. Depending on the specs of your PC, the rear camera image will be displayed while loading.
 
 .. image:: posing_c.png
     :align: center
@@ -46,16 +46,16 @@ https://google.github.io/mediapipe/
 |
 
 .. note::
-    ※この状態でアプリがフリーズする場合、一度本アプリをすべて終了し改めて起動しなおしてください。
+    * If the app freezes in this state, please quit all of this app once and start it again.
 
 .. sidebar::
-    ポーズが検出されると・・・
+    When a pose is detected...
 
-    　点と線でおおよそのポーズが描画されます。
+    An approximate pose is drawn with points and lines.
 
-    　常にリアルタイムで検出し続けるため、ポーズが毎秒若干変化します。
+    Because it is always detected in real time, the pose changes slightly every second.
 
-    ※本アプリではカメラ映像を写真に保存する機能はありません。あくまでもポーズ検出のためだけにカメラを利用します。
+    * This app does not have a function to save camera images as photos. The camera is used only for pose detection.
 
 .. image:: posing_d.png
     :align: center
@@ -63,22 +63,22 @@ https://google.github.io/mediapipe/
 |
 
 
-ポーズを保存する
+save the pose
 ====================
 
-　ポーズを取得する通常の手順です。
+This is the normal procedure for obtaining a pose.
 
-1. ウィンドウ右下の青いボタンをクリックします。
+1. Click the blue button at the bottom right of the window.
 
 .. image:: posing_e.png
     :align: center
 
 |
 
-※タイマーの秒数を1以上にすると、ボタンを押した後にタイマーが作動してその秒数後に自動的にポーズの撮影がされます。
+* If you set the number of seconds for the timer to 1 or more, the timer will start after you press the button, and after that number of seconds the pose will be taken automatically.
 
 
-2. 本アプリのメイン画面側でポーズが反映されたことを確認します。
+2. Confirm that the pose has been reflected on the main screen of this app.
 
 .. image:: posing_f.png
     :align: center
@@ -86,16 +86,16 @@ https://google.github.io/mediapipe/
 |
 
 .. note::
-    ※撮影した人物・物体の位置・高さ・奥行きなどにより実際に反映されるポーズが想定とは異なる可能性があります。
+    * Depending on the position, height, depth, etc. of the person or object being photographed, the pose actually reflected may differ from the assumption.
 
 |
 
-ポーズを常時検出する
+Always detect poses
 ======================
 
-　ver 2.0より追加した機能です。ウェブカメラで映して認識したポーズを現在選択中のVRMに **常に反映** します。
+This is a function added from ver 2.0. The pose recognized by the webcam is **always reflected** on the currently selected VRM.
 
-1. ウィンドウ右下の赤いボタンをクリックします。
+1. Click the red button in the lower right corner of the window.
 
 
 .. image:: posing_e.png
@@ -103,74 +103,74 @@ https://google.github.io/mediapipe/
 
 |
 
-2. 再び赤いボタンを押すとポーズの反映は停止します。
+2. Press the red button again to stop reflecting the pose.
 
 .. note::
-    認識したポーズを約1秒間隔で反映し続けます。何らかの事情でウェブカメラが認識されなくなった場合、ポーズの反映も止まります。その場合は本アプリ自体を一度終わらせて再び起動させてください。
+    Continues to reflect the recognized pose at intervals of about 1 second. If the webcam is no longer recognized for some reason, the reflection of the pose will also stop. In that case, please end this application once and start it again.
 
 
 
-映像ソースを切り替える
+Switch video source
 ==========================
 
-　ウェブカメラを複数台接続している場合や写真からポーズを検出したい場合に切り替えることができます。
+You can switch if you have multiple webcams connected or if you want to detect poses from photos.
 
 
-1. ツールウィンドウ中の映像ソースのコンボボックスから目的のものを選択します。
+1. Select the desired one from the video source combo box in the tool window.
 
 .. |imgsource| image:: posing_g.png
 
 :|imgsource|:
     |
-    | ※あるいは参照ボタンをクリックします
+    | * Or click the browse button
 
-2. 別カメラ・画像からポーズが検出されるのを確認します。
+2. Confirm that the pose is detected from another camera/image.
 
 .. image:: posing_h.png
     :align: center
 
 |
 
-| 　MediaPipeの高い性能により、写真だけでなくイラストからも人体を検出してポーズを取得できます。
-| 　色々な画像で試してみてください。
+| Due to the high performance of MediaPipe, it is possible to detect the human body and acquire poses not only from photographs but also from illustrations.
+| Try using various images.
 
 
 .. note::
-    ※イラストや写真の場合、奥行きが再現しきれない場合があります。その場合はポーズ保存後にVRMを直接操作して各IKを修正してください。
+    * In the case of illustrations and photos, the depth may not be fully reproduced. In that case, please modify each IK by operating VRM directly after saving the pose.
 
 
 |
 
-タイマーでポーズを保存する
+Save pose with timer
 ===============================
 
-　タイマー機能により、カメラ映像を指定の時間後に自動的に撮影してそのポーズを検出させることができます。
+With the timer function, the camera image can be automatically shot after the specified time and the pose can be detected.
 
 
-1. ツールウィンドウ中の「タイマー保存」に秒数を指定します。
+1. Specify the number of seconds in "Save timer" in the tool window.
 
 .. figure:: posing_i.png
     :align: center
 
-    ※1～10秒の間で指定可能
+    Can be specified between 1 and 10 seconds
 
-2. ポーズ保存ボタンを押します。
+2. Press the Save Pose button.
 
 .. figure:: posing_j.png
     :align: center
 
-    ※左上に読み込みアニメーションが表示され、指定の秒数後に効果音を発して非表示になります。（1秒ごとに赤くなります）
+    A loading animation is displayed on the upper left, and after the specified number of seconds, a sound effect is emitted and the display disappears. (It turns red every second)
 
 |
 
 
-3, 通常の手順通りポーズが保存されるのでメインの画面で確認・反映してください。
+3. The pose will be saved according to the normal procedure, so please check and reflect it on the main screen.
 
 
 |
 
 
-その他機能
+Other functions
 ===============================
 
 .. image:: posing_k.png
@@ -179,26 +179,25 @@ https://google.github.io/mediapipe/
 |
 
 :Selfie Mode:
-    映像を反転します。
-:映像ソース:
-    カメラあるいは参照ボタンで画像を指定します。
+    Invert the image.
+:Video source:
+    Specify an image with the camera or browse button.
 :Min Detection Confidence:
-    検出の精度
+    Accuracy of detection
 :Min Tracking Confidence:
-    トラッキングの精度
+    Tracking accuracy
 
-※他のオプションは `MediaPipe <https://google.github.io/mediapipe/>`_ のサイトで確認してください。
+* Check the `MediaPipe <https://google.github.io/mediapipe/>`_ site for other options.
 
 
-**メニューを閉じる**
+**Close Menu**
 
 .. |img_menubtn| image:: posing_m.png
 
-1. メニュー右上の |img_menubtn| をクリックします。
-2. メニューが非表示になり、背景にある検出プレビューが表示されます。
+1. Click |img_menubtn| on the top right of the menu.
+2. The menu will disappear and you will see the detection preview in the background.
 
 .. image:: posing_l.png
     :align: center
 
 |
-

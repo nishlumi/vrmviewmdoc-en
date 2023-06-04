@@ -1,34 +1,34 @@
-.. index:: IKマーカーの位置変更（画面の構成）
+.. index:: Change the position of the IK marker (screen composition)
 
-####################################
-IKマーカーの位置変更
-####################################
+#####################################
+Repositioning of IK markers
+#####################################
 
 .. image:: ../img/screen_ikmarker.png
     :align: center
 
-　VRoid/VRMの場合に使う機能です。本アプリで用いるモデルの体パーツの位置と回転を直接指定できます。別ウィンドウが開きます。アプリとは別ウィンドウです。
+This function is used for VRoid/VRM. You can directly specify the position and rotation of the body parts of the model used in this application. A new window will open. It is a separate window from the app.
 
 
-**上部：**
+**Top:**
 
-:ポーズを適用:
-    下部のスプレッドシートで指定した値でポーズを適用。
-:再読み込み:
-    現在のポーズの情報を再読み込みする。
-:ポーズを反転する:
-    現在のポーズの値を左右逆転する
+:apply pose:
+    Apply a pose with the values specified in the spreadsheet below.
+:Reload:
+    Reload the current pose information.
+:Reverse pose:
+    Flip the values of the current pose left to right
 
 
-**下部：**
+**beneath:**
 
-スプレッドシート:
-    体の部位ごとのPosition（位置）・Rotation（回転）を数値で指定する。
+:Spreadsheet:
+    Specify the Position and Rotation values for each part of the body.
 
 
 .. note::
-    * このウィンドウを表示している最中もVRoid/VRMを直接移動・回転できますが、仕様によりすぐにこのウィンドウのスプレッドシートには反映されません。再読み込みボタンを押すことで位置・回転の情報がすぐに取得できます。
-    * オブジェクトの選択を変えた時、タイムラインのキーフレームの選択を変更した時には自動的に再読み込みされます。
-    * VRM以外を選択した場合はスプレッドシートは使用できなくなります。
+    * You can move and rotate the VRoid/VRM directly while this window is displayed, but due to the specifications, it will not be immediately reflected in the spreadsheet of this window. By pressing the reload button, you can get the position and rotation information immediately.
 
+    * Automatically reloads when you change the object selection, or when you change the timeline keyframe selection.
 
+    * If you select other than VRM, the spreadsheet will not be available.

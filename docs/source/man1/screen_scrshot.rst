@@ -1,20 +1,20 @@
-.. index:: スクリーンショット（画面の構成）
+.. index:: Screenshot (screen configuration)
 
-####################################
-スクリーンショット
-####################################
+#####################################
+screenshot
+#####################################
 
 .. image:: ../img/screen_scrshot.jpg
     :align: center
 
 |
 
-　スクリーンショット一覧は現在保存してあるスクリーンショットを確認・ダウンロード・削除を行うウィンドウです。アプリとは別ウィンドウです。
+The screenshot list is a window for checking, downloading, and deleting currently saved screenshots. It is a separate window from the app.
 
-:A ツールバー:
-    削除ボタン、再読み込みボタン、ダウンロードボタン
-:B スクリーンショット:
-    実際のスクリーンショット。ブラウザの場合は右クリックして保存も可能。
-:C 日付一覧:
-    * スクリーンショットを撮影した日付のカレンダー
-    * スクリーンショットを撮った日付の一覧。クリックすると画像を表示。
+:A Toolbar:
+    Delete button, reload button, download button
+:B screenshot:
+    Actual screenshot. In the case of a browser, you can also right-click and save.
+:C Date list:
+    * Calendar of the date the screenshot was taken
+    * A list of dates the screenshots were taken. Click to view image.

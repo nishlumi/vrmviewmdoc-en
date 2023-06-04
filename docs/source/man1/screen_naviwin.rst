@@ -1,27 +1,26 @@
-.. index:: ナビゲーション画面（画面の構成）
+.. index:: Navigation screen (screen structure)
 
-####################################
-ナビゲーション画面
-####################################
+#####################################
+Navigation screen
+#####################################
 
 .. image:: ../img/screen_naviwin.png
-    :align: center
+     :align: center
 
 |
 
-　ナビゲーション画面はWebGL画面全体のプレビューを表示します。本ウィンドウはドラッグ可能です。
+The navigation screen displays a preview of the entire WebGL screen. This window is draggable.
 
 |
 
-**上部：**
+**Top:**
 
-　WebGL画面のプレビューです。赤い枠が現在スクロールして表示している領域です。これもドラッグ可能です。
+This is a preview of the WebGL screen. The red frame is the area currently being scrolled and displayed. It is also draggable.
 
-**下部：**
+**beneath:**
 
-元のサイズ:
-    リボンバーの画面タブにある同名のボタンと同じ機能です。現在のウィンドウにフィットしたサイズに戻します。
+:Original size:
+    It has the same function as the button of the same name on the Screen tab of the ribbon bar. Resize to fit the current window.
 
-カメラをリセット:
-    リボンバーの画面タブにある同名のボタンと同じ機能です。メインカメラを初期位置・回転に戻します。
-
+:Reset camera:
+    It has the same function as the button of the same name on the Screen tab of the ribbon bar. Returns the main camera to its initial position and rotation.

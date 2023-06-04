@@ -1,39 +1,38 @@
-.. index:: ポーズ一覧（画面の構成）
+.. index:: List of poses (screen composition)
 
-####################################
-ポーズ一覧
-####################################
+#####################################
+Pose list
+#####################################
 
 .. image:: ../img/screen_pose.png
-    :align: center
+     :align: center
 
 |
 
-　ポーズ一覧はVRoid/VRMの単一のポーズを保存しておくことができます。別ウィンドウが開きます。アプリとは別ウィンドウです。
+The pose list can save a single VRoid/VRM pose. A new window will open. It is a separate window from the app.
 
 |
 
-**上部：**
+**Top:**
 
-:再読み込み:
-    ポーズ一覧を再読み込みする。
-:ポーズを適用:
-    現在選択中のポーズを現在選択中のVRoid/VRMに反映する。
-:ポーズを削除:
-    現在選択中のポーズを削除する。
-:ファイルとしてダウンロード:
-    現在選択中のポーズをファイルにダウンロードする。
-:ファイルから開く:
-    端末からポーズファイルを開く。
+:Reload:
+    Reload the pose list.
+:apply pose:
+    Reflect the currently selected pose to the currently selected VRoid/VRM.
+:delete pose:
+    Delete the currently selected pose.
+:Download as file:
+    Download the currently selected pose to a file.
+:Open from file:
+    Open the pose file from your terminal.
 
 
-**下部：**
+**beneath:**
 
-ポーズ一覧:
-    保存したポーズをサムネイル付きで表示します。サムネイルの横にはポーズ名と保存時のアバター（VRM）名を合わせて表示。
+:Pose list:
+    Display saved poses with thumbnails. The pose name and avatar (VRM) name at the time of saving are displayed together next to the thumbnail.
 
 |
 
 .. hint::
-    ウィンドウのサイズに応じて2列・3列と多段表示になります。
-
+    Depending on the size of the window, it will be displayed in 2 columns or 3 columns.

@@ -1,64 +1,63 @@
-.. index:: 画面タブ（リボンバー）
+.. index:: screen tabs (ribbon bar)
 
-####################################
-画面タブ
-####################################
+#####################################
+Screen tab
+#####################################
 
 .. image:: ../img/screen_ribbon_scr.png
     :align: center
 
-| 
+|
 
-　画面に関する機能のボタンがあります。
+There are buttons for screen-related functions.
 
 
-**Screen size内**
+**within screen size**
 
-:画面サイズ:
-    WebGL画面の幅と高さを自由に指定します。
-:適用:
-    入力したサイズを反映します。
-:元のサイズ:
-    現在のアプリのサイズに合わせてWebGL画面のサイズを戻します。
-:カメラをリセット:
-    メインカメラの位置をデフォルトに戻します。（ショートカット：Rキー）
+:Screen size:
+    Specify the width and height of the WebGL screen freely.
+:Application:
+    Reflects the size you entered.
+:original size:
+    Resize the WebGL screen back to match the current app size.
+:reset camera:
+    Restore the default position of the main camera. (Shortcut: R key)
 :Navigation:
-    ナビゲーションの小ウィンドウを表示します。
+    Displays a small navigation window.
 
-**Screenshot 内**
+**In Screenshot**
 
-:キャプチャ:
-    現在のWebGLの画面をスクリーンショットを撮って保存します。
-:一覧:
-    撮ったスクリーンショットを表示・管理するウィンドウを表示します。
-:背景を透過:
-    スクリーンショット時、WebGL画面の背景部分を透過にします。
+:capture:
+    Take a screenshot of the current WebGL screen and save it.
+:list:
+    Displays a window for displaying and managing screenshots taken.
+:Transparent background:
+    Makes the background part of the WebGL screen transparent when taking screenshots.
 
 
-**Record movie 内**
+**In Record movie**
 
-:録画:
-    WebGL画面を録画開始します。停止するまで操作・アニメーションした内容がすべて記録されます。
-:停止:
-    録画を停止します。
-:ビデオをダウンロード:
-    録画した内容をダウンロードします。形式はwebm形式です。
-:音声を有効・ミュート:
-    録画する映像の音声をミュートまたは再び有効化します。
+:Recording:
+    Start recording the WebGL screen. All operations and animations are recorded until you stop.
+:Stop:
+    Stop recording.
+:Download Video:
+    Download the recorded content. The format is webm format.
+:Enable/mute audio:
+    Mute or re-enable audio for recorded video.
 :Video player:
-    内蔵のビデオプレイヤーを別ウィンドウで開きます。
+    Opens the built-in video player in a separate window.
 
 
-**Options 内**
+**in Options**
 
-:360度回転:
-    現在選択中のオブジェクトを中心に360度カメラを回転させます。
-:回転速度:
-    回転の速度を調整します。
-:アンチエイリアス:
-    WebGL画面にアンチエイリアスを適用します。
-:IKマーカーを表示する:
-    各オブジェクトを操作する際のIKマーカーの表示を切り替えます。
-:IKマーカーのサイズ:
-    IKマーカーの大きさを変更します。（0.01～0.2）
-
+:360 degree rotation:
+    Rotate the camera 360 degrees around the currently selected object.
+:Rotational speed:
+    Adjust the speed of rotation.
+:antialiasing:
+    Applies anti-aliasing to WebGL screens.
+:Show IK markers:
+    Toggles the display of IK markers when manipulating each object.
+:IK marker size:
+    Change the size of the IK marker. (0.01 to 0.2)

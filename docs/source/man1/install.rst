@@ -1,29 +1,28 @@
-############
-導入方法
-############
+##################
+How to install
+##################
 
-違い
+difference
 ===============
 
-ウェブアプリ版とPC版の違いは次のとおりです。
+The differences between the web app version and the PC version are as follows.
 
 .. csv-table::
     
-    項目,ウェブアプリ版,PC版
-    インストール,任意(PWAの仕様にしたがって),各OSの方法に従って
-    インターネット接続,必須,不要
-    動作速度,普通,若干速い
-    異常時の動作,エラー時に動作継続,OSによってはエラー時アプリごと落ちる可能性あり
-    メモリ使用率, 高, 低～中
-    キー操作,ブラウザによって干渉あり,干渉なし
-    ファイルの操作,ブラウザに大きく依存,各OS別に対応・安定
-    描画性能,WebGLなので低い,WebGLなので低い
-    アップデート,自動,再インストールが必要
+    Item, Web application version, PC version
+    Installation, optional (according to PWA specifications), according to the method of each OS
+    Internet connection, required, not required
+    Operating speed, normal, slightly faster
+    Operation in abnormal conditions, operation continues in the event of errors, depending on the OS there is a possibility that the entire application will crash in the event of an error.
+    Memory usage, high, low to medium
+    Key operation, browser interference, no interference
+    File operation, heavily dependent on browser, support and stability for each OS
+    Drawing performance, WebGL is low, WebGL is low
+    update,automatic,need to reinstall
 
 
-
-ウェブアプリ版
-======================
+Web application version
+=============================
 
 URL
 -----
@@ -33,18 +32,18 @@ https://vrmviewmeister.azurewebsites.net
 
 |
 
-.. index:: インストール方法（ウェブアプリ）
+.. index:: How to install (web app)
 
-インストール
+install
 --------------------------------
 
-　アクセスするとブラウザのURLバーの右端にこのようなアイコンが表示されます。左端のアイコンをクリックしてインストールを進めてください。
+When you access it, an icon like this will be displayed at the right end of your browser's URL bar. Click the leftmost icon to proceed with the installation.
 
 
 .. image:: ../img/install01.png
 
 
-　Edgeの場合は「・・・」→「アプリ」からもインストールを行えます。
+For Edge, you can also install from "..." -> "Apps".
 
 .. image:: ../img/install02.png
 
@@ -52,100 +51,103 @@ https://vrmviewmeister.azurewebsites.net
 .. |logo| image:: ../img/install03.png
 
 
-|logo|　インストールが完了するとWindowsやmacOS、Linuxのメニュー一覧にこのように専用のアイコン付きで表示されるようになります。
+|logo| When the installation is complete, it will be displayed with a dedicated icon like this in the menu list of Windows, macOS, and Linux.
 
 |
 
 .. note::
-    ※ブラウザでウェブサイトを開くだけなのにインストールとは？
+    * What is installation even if you just open the website in the browser?
 
-    | 　ブラウザで開くだけなのにインストール？と思われる方もいらっしゃるかと思います。本アプリはPWA（Progressive Wab App）という、ウェブサイトをPCのネイティブアプリのようにブラウザから分離して使うことのできる技術を採用しています。
-    | 　インストールすることで本アプリもChromeやEdgeから完全に切り離され、ブラウザを起動していなくても使うことができます。
-    | 　本アプリはUnityの機能を使っているため環境によっては重くなります。インストールしておくことで、普通にウェブサイト閲覧に使いたいChromeやEdgeなどまで重くなることを防ぐことができます。ぜひインストールしてご利用ください。
+    | Installed just by opening it in a browser? I think there are some people who think that. This application uses a technology called PWA (Progressive Wab App), which allows you to use the website separately from the browser like a native PC application.
+    | By installing this app, you can completely separate it from Chrome or Edge and use it even if the browser is not running.
+    | Because this application uses Unity functions, it may be heavy depending on the environment. By installing it, you can prevent Chrome, Edge, etc. that you normally use for browsing websites from becoming heavy. Please install it and use it.
 
 .. warning::
-    ウェブアプリ版は再読み込みしても使用したメモリを完全には開放しません。本アプリを完全に閉じることでメモリを開放します。長時間の利用にはご注意ください。
+    The web app version does not completely release the used memory even if it is reloaded. Free the memory by closing this application completely. Please be careful when using it for a long time.
 
-アプリのアップデート
+app update
 ---------------------------------------
 
-ウェブアプリ版は更新は自動で行われます。更新があると次のようなメッセージが画面右上に表示されます。
+The web app version updates automatically. When there is an update, the following message will be displayed on the upper right of the screen.
 
 .. image:: ../img/install06.png
 
-この後、再読み込みするとアプリが最新の状態に更新されます。
+After this, a reload will refresh the app.
 
 
 |
 
-.. index:: アンインストール（ウェブアプリ）
+.. index:: uninstall (web app)
 
-アンインストール
+Uninstall
 -------------------------------------
 
-　アンインストールすることで本アプリをブラウザから削除することができます。合わせて本アプリが使用していたデータも削除できます。
-　ここではChromeとEdgeを例に説明いたします。
+You can remove this application from your browser by uninstalling it. You can also delete the data used by this application.
 
-Chromeの場合
+Here, we will use Chrome and Edge as examples.
+
+For Chrome
 ^^^^^^^^^^^^^^^^^^
 
 .. |uninst01| image:: ../img/uninstall01.png
 
-|uninst01| 　ブックマークバーにある「アプリ」をクリックします。
+|uninst01| Click "Apps" in the bookmark bar.
 
 .. image:: ../img/uninstall02.png
     :scale: 60
     :align: left
 
-　本アプリを探し、右クリックして「Chromeから削除」をクリックします。
+Search for this app, right-click it, and click "Remove from Chrome".
 
-　下図のメッセージが表示されるので、必要に応じてチェックボックスにチェックを入れて「削除」ボタンを押してください。
+The message below will be displayed, so please check the checkbox if necessary and press the "Delete" button.
 
 .. image:: ../img/uninstall03.png
     :scale: 70%
 
 
-Edgeの場合
+For Edge
 ^^^^^^^^^^^^^^^
 
 .. |uninst04| image:: ../img/uninstall04.png
 
-|uninst04| 「・・・」→「アプリ」から「アプリの管理」をクリックします。
+|uninst04| Click "..." -> "Apps" and then "Manage apps".
 
-本アプリを探し、右端の「×」ボタンをクリックします。
+Find this app and click the "x" button on the far right.
 
 .. image:: ../img/uninstall05.png
 
-Chromeと同様にメッセージが表示されるので必要に応じてチェックボックスにチェックを入れて「削除」ボタンを押してください。
+A message will be displayed in the same way as Chrome, so check the checkbox if necessary and press the "Delete" button.
 
 |
 
 .. index:: 
-    PC版（各OS版）
+    PC version (each OS version)
 
-PC版（各OS版）
+PC version (each OS version)
 ========================================
 
 
-インストール
+install
 --------------------------------
 
-　PC版（各OS版）は普通のPCアプリのため、各OSのインストール・アップデート方法に従って使います。
+Since the PC version (each OS version) is a normal PC application, use it according to the installation and update method of each OS.
 
 Windows
 ^^^^^^^^^^^^^^^
 
-Windowsの手順です。
+Windows procedure.
 
-1. 7zファイルをダウンロードしたら、適当な場所で解凍してください。
+This is the procedure for Windows.
+
+1. After downloading the 7z file, unzip it in a suitable location.
 
 .. image:: ../img/install04.png
 
-2. 中にある ``vrmviewmeister.exe`` をダブルクリックして起動してください。
+2. Double-click ``vrmviewmeister.exe`` inside to start it.
 
 .. image:: ../img/install05.png
 
-このように起動します。
+Start like this.
 
 .. image:: ../img/install_win.png
 
@@ -180,9 +182,9 @@ macOS
         ※後はFinder上で dist/ 内の vrmviewmeisterを実行します。
 
 
-1. ダウンロードした ``vrmviewmeister-[バージョン番号].dmg`` をダブルクリックします。
-2. 中にある ``vrmviewmeister`` をアプリケーションフォルダにドラッグしてください。
-3. 検索またはメニュー等から起動してください。
+1. Double-click the downloaded ``vrmviewmeister-[version number].dmg``.
+2. Drag the ``vrmviewmeister`` inside to your Applications folder.
+3. Please start from search or menu.
 
 .. image:: ../img/install_mac.jpg
 
@@ -192,31 +194,31 @@ macOS
 Linux
 ^^^^^^^^^^^
 
-LinuxはAppImage形式に対応したディストリビューションでご利用ください。
+For Linux, please use a distribution that supports the AppImage format.
 
-1. ダウンロードした ``vrmviewmeister-[バージョン番号].AppImage`` をダブルクリックして起動してください。
+1. Double-click the downloaded ``vrmviewmeister-[version number].AppImage`` to start it.
 
 .. image:: ../img/install_linux.jpg
 
 .. warning::
-    仮想環境のLinuxではUnityや各ライブラリの仕様により、VRMやFBXなどを端末から読み込むことができません。必ず実機でご確認ください。
+    Due to the specifications of Unity and each library, VRM, FBX, etc. cannot be read from the terminal in Linux in a virtual environment. Please be sure to check with the actual machine.
 
 |
 
 
-.. index:: アンインストール（PC版）
+.. index:: Uninstall (PC version)
 
-アンインストール
+Uninstall
 ------------------------------------------
 
-レジストリは使用していません。アンインストール時はフォルダごと削除してください。
+I am not using the registry. Please delete the entire folder when uninstalling.
 
-また、個人データは下記のフォルダにありますので合わせて削除してください。
+In addition, personal data is stored in the following folders, so please delete them together.
 
 .. code-block:: shell
 
     Windows:
-    C:\Users\[ユーザー名]\AppData\Roaming\vrmviewmeister
+    C:\Users\[username]\AppData\Roaming\vrmviewmeister
 
     macOS:
     ~/Library/Application Support/vrmviewmeister
@@ -226,18 +228,18 @@ LinuxはAppImage形式に対応したディストリビューションでご利�
 
 
 .. index:: 
-    言語の切り替え
+    Switch language
     Change language
     Locale
 
-言語の切り替え
+Switch language
 =========================
 
-言語の切り替えはリボンバーの ``ホーム`` タブから行えます。
+You can switch languages from the ``Home`` tab of the ribbon bar.
 
 .. image:: ../img/screen_lang.png
 
-切り替えたい言語を選びます。一部UIを除いて即座に言語が切り替わります。
+Select the language you want to switch to. The language is switched immediately except for some UI.
 
 
 .. raw:: latex

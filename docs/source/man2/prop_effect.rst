@@ -1,13 +1,13 @@
-.. index:: Effect（プロパティ）
+.. index:: Effect (property)
 
-####################################
+#####################################
 Effect
-####################################
+#####################################
 
 .. contents::
 
 
-メインのプロパティ
+Main property
 ---------------------
 
 .. image:: ../img/prop_effect_1.png
@@ -15,37 +15,37 @@ Effect
 
 |
 
-　アニメーションする特殊な画面効果、エフェクトに関する設定です。
+This is a special screen effect that animates, and settings related to effects.
 
 
-:ジャンル:
-    エフェクトのジャンルを選びます。（下記を参照）
-:エフェクト:
-    選択したジャンルのエフェクトを選びます。
-:プレビュー:
-    エフェクトのプレビューを再生・一時停止、停止します。プレビューのためアニメーションプロジェクトには反映されません。
-:ループ:
-    エフェクトをずっと再生します。
-:エフェクトの状態（登録用）:
-    エフェクトの再生状態をアニメーションプロジェクトに登録します。
+:Genre:
+    Select the effect genre. (see below)
+:Effect:
+    Select an effect for the selected genre.
+:Preview:
+    Play/pause/stop the effect preview. Because it is a preview, it is not reflected in the animation project.
+:Loop:
+    Play the effect forever.
+:Effect status (for registration):
+    Register the playback status of the effect in the animation project.
 
 
 
 .. csv-table::
 
-    Explosion, 爆発系のエフェクト
-    Smoke,     煙・モヤ系のエフェクト
-    Water,     水に関するエフェクト
-    Action,    その他エフェクト
+    Explosion, explosive effects
+    Smoke, smoke and haze effects
+    Water, effects related to water
+    Action, other effects
 
 
 |
 
 
-.. index:: VRMとの衝突プロパティ（プロパティ）
+.. index:: collision property with VRM (property)
 
-VRMとの衝突プロパティ
---------------------------
+Collision properties with VRM
+--------------------------------------
 
 
 .. image:: ../img/prop_effect_2.png
@@ -53,17 +53,16 @@ VRMとの衝突プロパティ
 
 |
 
-　衝突機能を利用するエフェクトのプロパティです。
+This is the property of the effect that uses the collision function.
 
 
-:衝突機能の使用:
-    このエフェクトオブジェクトの衝突を有効にします。
-:衝突範囲の大きさ:
-    衝突の範囲を数値で指定します。画面上の球体のプレビューの大きさも変わります。
-:対象のVRM:
-    衝突の対象とするVRMを選択するコンボボックスです。
-:決定ボタン:
-    選んだVRMを決定します。
-:VRM一覧:
-    このエフェクトオブジェクトの衝突の対象にしているVRMの一覧です。右端の削除ボタンで対象から外すことができます。
-
+:Using Collision Features:
+    Enables collisions for this effect object.
+:Collision area size:
+    Specifies the extent of collision as a number. The size of the sphere preview on the screen also changes.
+:Target VRM:
+    A combo box that selects the VRM that is the target of the collision.
+:Enter button:
+    Decide on your chosen VRM.
+:VRM list:
+    A list of VRMs that this effect object collides with. You can remove it from the target with the delete button on the right end.

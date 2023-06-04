@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+		
+			"activityBar.background": "#dee6b3",
+			"titleBar.activeBackground": "#c4d179",
+			"titleBar.activeForeground": "#756161"
+		},
+		"esbonio.sphinx.confDir": "${workspaceFolder}\\docs\\source",
+		"editor.wordWrap": "on"
+	}
+}

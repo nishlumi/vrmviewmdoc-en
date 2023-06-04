@@ -1,66 +1,65 @@
-.. index:: モデルタブ（リボンバー）
+.. index:: model tab (ribbon bar)
 
-####################################
-モデルタブ
-####################################
+#####################################
+Model tab
+#####################################
 
 .. image:: ../img/screen_ribbon_model.png
     :align: center
 
-| 
+|
 
-　3Dモデルに関する機能のボタンがあります。
+There are buttons for functions related to 3D models.
 
 
-**Add内（上の行4つ、下の行3つ）**
+**In Add (4 rows above, 3 rows below)**
 
-:テキスト:
-    WebGL画面にテキストを追加します。
-:カメラ:
-    WebGL画面にカメラを追加します。これはサブカメラとなります。
-:スポットライト:
-    WebGL画面にスポットライトを追加します。
-:基本の図形:
-    球体や平面、四角形などまっさらなオブジェクトを追加します。
-:UI画像:
-    WebGL画面に画像を2Dとして追加します。これは3Dオブジェクトではありません。
-:エフェクト:
-    WebGL画面にエフェクトを追加します。
-:ポイントライト:
-    WebGL画面に一定範囲の空間を照らすライトを追加します。
+:text:
+    Add text to the WebGL screen.
+:camera:
+    Add a camera to your WebGL screen. This will be the sub camera.
+:Spotlight:
+    Add a spotlight to your WebGL screen.
+:Basic shape:
+    Add blank objects such as spheres, planes, and rectangles.
+:UI image:
+    Add image as 2D to WebGL screen. This is not a 3D object.
+:effect:
+    Add effects to your WebGL screen.
+:Point light:
+    Adds a light that illuminates a certain area of space on the WebGL screen.
 
-**Load 内**
+**In Load**
 
 :VRM:
-    VRoid(VRM)を読み込んで読み込みます。
-:オブジェクト:
-    FBXやOBJなどを開いて読み込みます。
+    Load the VRoid (VRM) and load it.
+:object:
+    Open and load FBX, OBJ, etc.
 :Image:
-    画像を3Dオブジェクトとして読み込みます。読み込んだ後はFBXやObjと同様に操作できます。
-:詳細情報:
-    選択したVRMの情報を表示します。VRM以外では機能しません。
+    Load the image as a 3D object. After loading, it can be operated in the same way as FBX or Obj.
+:Detailed information:
+    Displays information for the selected VRM. Doesn't work outside VRM.
 
 
-**Pose 内**
+**In Pose**
 
-:ポーズ保存:
-    VRMのみ、現在選択中のVRMの現在のポーズをポーズファイルに保存します。
-:ポーズ一覧:
-    保存したポーズのサムネイル付き一覧を表示します。
+:Save pose:
+    For VRM only, saves the current pose of the currently selected VRM to a pose file.
+:Pose list:
+    Displays a list of saved poses with thumbnails.
 
-**Reset operation 内**
+**In the Reset operation**
 
-:位置をリセット:
-    選択した3Dオブジェクトの位置を初期位置にリセットします。
-:回転をリセット:
-    選択した3Dオブジェクトの回転を初期角度にリセットします。
-:モデルを削除:
-    選択した3Dオブジェクトをアプリから削除します。
-:全ボーンをリセット:
-    選択したVRMの全身のボーンとIKの位置・回転をすべてリセットします。（Tポーズに戻ります）
+:reset position:
+    Resets the position of the selected 3D object to its initial position.
+:reset rotation:
+    Resets the rotation of the selected 3D object to its initial angle.
+:delete model:
+    Delete the selected 3D object from the app.
+:Reset all bones:
+    Resets all bones and IK positions and rotations of the whole body of the selected VRM. (return to T pose)
 
-**その他**
+**others**
 
 :MediaPipe:
-    AIによるポーズトラッキング機能を使用します。
-
+    Use the pose tracking function by AI.
