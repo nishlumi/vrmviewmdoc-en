@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12.3. Various animation settings &mdash; VRMViewMeister 2.1.2 documentation</title>
+  <title>12.3. Various animation settings &mdash; VRMViewMeister 2.1.6 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -173,7 +173,9 @@
 <p>In an animation project, the interval between reaching the content of the frame is determined in seconds. By default, the calculation result of <code class="docutils literal notranslate"><span class="pre">FPS</span> <span class="pre">/</span> <span class="pre">6000.0</span></code> is set.</p>
 <p>You can change this to any number of seconds.</p>
 <ol class="arabic simple">
-<li><p>Enter the <code class="docutils literal notranslate"><span class="pre">default</span> <span class="pre">spacing</span></code> for the ribbon bar. (0.0001 to 99.9999 seconds)</p></li>
+<li><p>Open the project settings screen.</p></li>
+<li><p>Enter the <code class="docutils literal notranslate"><span class="pre">default</span> <span class="pre">duration</span></code> on the Project information tab. (0.0001 to 99.9999 seconds)</p></li>
+<li><p>If you want to recalculate all the currently registered keyframe intervals, press the <code class="docutils literal notranslate"><span class="pre">Recalculate</span></code> button.</p></li>
 </ol>
 <img alt="../_images/proper_h.png" class="align-center" src="../_images/proper_h.png" />
 <div class="line-block">
@@ -184,6 +186,10 @@
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>If you want to set the interval for each keyframe, please refer to <a class="reference internal" href="animation_register.html"><span class="doc">Registering and setting keyframes</span></a> … “Setting the keyframe interval” below.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Pressing the <code class="docutils literal notranslate"><span class="pre">Recalculate</span></code> button will automatically update the duration of all keyframes. All manually set intervals will also be changed, so do not press if you want to target only the keyframes after the change.</p>
 </div>
 </section>
 <section id="webgl">

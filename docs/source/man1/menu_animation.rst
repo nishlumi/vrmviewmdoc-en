@@ -37,10 +37,12 @@ There are buttons for functions related to animation.
     Stop the animation completely.
 :loop:
     Toggles loop playback on/off.
-:default interval:
-    Specifies the number of seconds between frames in the current animation project. By default, the calculation result of ``FPS / 6000.0`` is set.
-    
 
+..
+    :default interval:
+        Specifies the number of seconds between frames in the current animation project. By default, the calculation result of ``FPS / 6000.0`` is set.
+    
+* Moved ``default interval`` to Project setting.
 
 **In Frame operation**
 

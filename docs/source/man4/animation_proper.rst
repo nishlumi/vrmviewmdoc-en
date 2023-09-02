@@ -46,7 +46,9 @@ In an animation project, the interval between reaching the content of the frame 
 
 You can change this to any number of seconds.
 
-1. Enter the ``default spacing`` for the ribbon bar. (0.0001 to 99.9999 seconds)
+1. Open the project settings screen.
+2. Enter the ``default duration`` on the Project information tab. (0.0001 to 99.9999 seconds)
+3. If you want to recalculate all the currently registered keyframe intervals, press the ``Recalculate`` button.
 
 .. image::img/proper_h.png
     :align: center
@@ -59,6 +61,9 @@ If you register more than one frame apart, the frame interval will be the number
 
 .. hint::
     If you want to set the interval for each keyframe, please refer to :doc:`animation_register` ... "Setting the keyframe interval" below.
+
+.. warning::
+    Pressing the ``Recalculate`` button will automatically update the duration of all keyframes. All manually set intervals will also be changed, so do not press if you want to target only the keyframes after the change.
 
 
 .. index::
