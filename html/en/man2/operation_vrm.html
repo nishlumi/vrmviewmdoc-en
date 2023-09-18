@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10.3. VRoid/VRM &mdash; VRMViewMeister 2.1.6 documentation</title>
+  <title>10.3. VRoid/VRM &mdash; VRMViewMeister 2.2.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -184,7 +184,7 @@
 <section id="vrmik">
 <span id="inputikasmarker"></span><span id="index-1"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">10.3.2. </span>Working with VRM IK markers</a><a class="headerlink" href="#vrmik" title="Permalink to this heading"></a></h2>
 <p>The imported VRoid/VRM has a translucent figure called an IK marker as shown in the figure. Each is linked to the movement of the following parts. Also, the type of IK marker operation is determined for each part.</p>
-<img alt="../_images/operation_vrm_6.png" class="align-center" src="../_images/operation_vrm_6.png" />
+<img alt="../_images/operation_vrm_6.jpg" class="align-center" src="../_images/operation_vrm_6.jpg" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -213,12 +213,12 @@
 <td><p>move</p></td>
 <td><p>4</p></td>
 <td><p>Upper Body Orientation (Aim)</p></td>
-<td><p>move</p></td>
+<td><p>rotation</p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p>5</p></td>
 <td><p>Left and right inclination of the upper body and shoulders (Chest)</p></td>
-<td><p>move</p></td>
+<td><p>rotation</p></td>
 <td><p>6</p></td>
 <td><p>Waist direction/tilt/movement (Pelvis)</p></td>
 <td><p>Move/Rotate</p></td>
@@ -274,6 +274,16 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>IKシステムの変更(ver 2.2.0)</p>
+<p>Ver 2.2.0 では今後の汎用性のため、IKシステムをFinalIKからUnity本来のIKに変更しました。それによる影響は次の通りです。</p>
+<ul class="simple">
+<li><p>Aimは移動ではなく回転でVRMの該当部位を操作するようになった</p></li>
+<li><p>Chestも移動ではなく回転でVRMの該当部位を操作するようになった</p></li>
+</ul>
+<p>今までのポーズ・モーションファイルでこれらのIKマーカーを大きく操作していた場合はポーズ・モーションの変更が必要です。ご了承ください。</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
