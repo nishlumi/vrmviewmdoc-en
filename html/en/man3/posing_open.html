@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11.2. Open VRoid/VRM poses &mdash; VRMViewMeister 2.2.0 documentation</title>
+  <title>11.2. Open pose/motion &mdash; VRMViewMeister 2.3.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="11.3. Detect pauses with MediaPipe" href="posing_mediapipe.html" />
-    <link rel="prev" title="11.1. Save VRoid/VRM pose" href="posing_save.html" /> 
+    <link rel="prev" title="11.1. Save pose/motion" href="posing_save.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,11 +53,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="posing.html">11. Posing</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="posing_save.html">11.1. Save VRoid/VRM pose</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">11.2. Open VRoid/VRM poses</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">11.2.1. Search pose</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">11.2.2. Load pose file from disk</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="posing.html">11. Pose and Motion</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="posing_save.html">11.1. Save pose/motion</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.2. Open pose/motion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">11.2.1. Open pose/motion</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#index-0">11.2.1.1. Pose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#openmotionfile">11.2.1.2. open motion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">11.2.1.3. Alternative ways to import poses and motions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">11.2.2. Other functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#index-2">11.2.2.1. Change the pose loading location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">11.2.2.2. Search poses/motions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">11.2.2.3. Load pose/motion files from disk</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="posing_mediapipe.html">11.3. Detect pauses with MediaPipe</a></li>
@@ -68,8 +78,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
 </ul>
 
         </div>
@@ -86,8 +97,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="posing.html"><span class="section-number">11. </span>Posing</a> &raquo;</li>
-      <li><span class="section-number">11.2. </span>Open VRoid/VRM poses</li>
+          <li><a href="posing.html"><span class="section-number">11. </span>Pose and Motion</a> &raquo;</li>
+      <li><span class="section-number">11.2. </span>Open pose/motion</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man3/posing_open.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -97,8 +108,35 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="vroid-vrm">
-<h1><span class="section-number">11.2. </span>Open VRoid/VRM poses<a class="headerlink" href="#vroid-vrm" title="Permalink to this heading"></a></h1>
+  <section id="id1">
+<h1><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">11.2. </span>Open pose/motion</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id11">Open pose/motion</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id12">Open pose/motion</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-0" id="id13">Pose</a></p></li>
+<li><p><a class="reference internal" href="#openmotionfile" id="id14">open motion</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id15">Alternative ways to import poses and motions</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id6" id="id16">Other functions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-2" id="id17">Change the pose loading location</a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id18">Search poses/motions</a></p></li>
+<li><p><a class="reference internal" href="#id9" id="id19">Load pose/motion files from disk</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="id2">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">11.2.1. </span>Open pose/motion</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="index-0">
+<span id="id3"></span><h3><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">11.2.1.1. </span>Pose</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h3>
 <p>The saved pose can be instantly reflected in any VRoid/VRM.</p>
 <ol class="arabic simple">
 <li><p>Click “Pose list” on the “3D model” tab.</p></li>
@@ -108,7 +146,11 @@
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>A window with a list of poses will be displayed. Select the desired pose and click <code class="docutils literal notranslate"><span class="pre">Apply</span> <span class="pre">Pose</span></code> .</p></li>
+<li><p>A pose list window will be displayed, so click the “Pose” tab on the far right.</p></li>
+</ol>
+<img alt="../_images/posing_6a.png" class="align-center" src="../_images/posing_6a.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select the desired pose and click “Apply”.</p></li>
 </ol>
 <img alt="../_images/posing_6.png" class="align-center" src="../_images/posing_6.png" />
 <div class="line-block">
@@ -134,38 +176,136 @@
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <ul class="simple">
-<li><p>Even if it is a different character, it will be restored to the exact same position. If you load multiple characters, the positions will be duplicated, so please turn off the option if necessary.</p></li>
+<li><p>Even if it is a different VRM, it will be restored to the exact same location. If you are loading multiple VRMs, the positions will overlap, so please turn off the option as necessary.</p></li>
 <li><p>In the case of poses that are extremely unbalanced, <strong>it may not be reflected in a single application</strong> (especially LowerLeg). In that case, apply it again and the pose will be perfectly reproduced.</p></li>
 </ul>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>Another way to reproduce the pose is to drag and drop the .vvmpose file saved on your PC onto the WebGL screen.</p>
-<p>In the case of this method, it does not matter if it is not registered in the pose list. The target is limited to <strong>VRM</strong>, but you can immediately reproduce the pose by simply dragging it from Explorer etc.</p>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="id1">
-<h2><span class="section-number">11.2.1. </span>Search pose<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+</section>
+<section id="openmotionfile">
+<span id="index-1"></span><span id="id4"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">11.2.1.2. </span>open motion</a><a class="headerlink" href="#openmotionfile" title="Permalink to this heading"></a></h3>
+<p>From ver 2.3.0, the function to open motion has been integrated into this window. Added support for internal storage, Google Drive, and application sample storage.</p>
+<p>Motion can be applied not only to VRM but also to other objects.</p>
+<ol class="arabic simple">
+<li><p>Select the timeline to which you want to apply the motion.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please select the timeline, not the object list. By doing so, you can apply motion correctly to SystemEffect and each audio.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Click “Pose list” on the “3D model” tab.</p></li>
+</ol>
+<img alt="../_images/posing_5.png" class="align-center" src="../_images/posing_5.png" />
+<ol class="arabic simple" start="3">
+<li><p>A pose list window will be displayed, so click the “Motion” tab on the far right.</p></li>
+</ol>
+<img alt="../_images/posing_6b.png" class="align-center" src="../_images/posing_6b.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select the desired motion and click “Apply”.</p></li>
+</ol>
+<img alt="../_images/posing_6c.png" class="align-center" src="../_images/posing_6c.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Motion also supports drag and drop.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">type</span></code> is different from the selected timeline object (cast) type, motion cannot be applied.</p>
+</div>
+</section>
+<section id="id5">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">11.2.1.3. </span>Alternative ways to import poses and motions</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>Another way to load poses and motions is to drag and drop a <code class="docutils literal notranslate"><span class="pre">.vvmpose</span></code> or <code class="docutils literal notranslate"><span class="pre">.vvmmot</span></code> file saved on your PC onto the WebGL screen.</p>
+<p>If you use this method, you do not need to register it in the pose list. In the case of a pose file <strong>VRM only</strong> You can immediately reproduce the pose at any time by simply dragging it from Explorer, etc.</p>
+<p><strong>For motion</strong></p>
+<ol class="arabic simple">
+<li><p>Select the timeline (roll) to which you want to apply the motion.</p></li>
+<li><p>Drag and drop the <code class="docutils literal notranslate"><span class="pre">.vvmmot</span></code> file from Explorer etc. onto the WebGL screen.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The timeline (role) types must be the same.</p></li>
+<li><p>Please note that if motion data already exists, it will be overwritten (delete all before registering new data).</p></li>
+<li><p>If the number of frames is greater than the maximum number of frames in the current project, it will be cut to that maximum number of frames. We recommend expanding the number of frames to some extent in advance.</p></li>
+<li><p>When dragging and dropping, only the <code class="docutils literal notranslate"><span class="pre">.vvmmot</span></code> extension is valid. (Cannot be opened with <code class="docutils literal notranslate"><span class="pre">.json</span></code>)</p></li>
+<li><p>When dragging and dropping, the currently selected cast must be assigned to some timeline (role). (If you do this from the project settings screen, it will be applied directly to the role, so there is no problem even if no cast is assigned.)</p></li>
+</ul>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The duration of each frame of motion is independent for each timeline (and even for each frame), so importing it into an existing project will not affect other timelines.</p>
+</div>
+</section>
+</section>
+<section id="id6">
+<h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">11.2.2. </span>Other functions</a><a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<section id="index-2">
+<span id="id7"></span><h3><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">11.2.2.1. </span>Change the pose loading location</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h3>
+<p>Supported from ver 2.3.0. You can freely switch between the locations where poses are saved.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Internal Storage</p></td>
+<td><p>Load from internal storage. This is the default state.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Google Drive</p></td>
+<td><p>Load from Google Drive. Separate Google Drive settings are required.</p></td>
+</tr>
+<tr class="row-even"><td><p>Application</p></td>
+<td><p>Load the sample of this application.</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple">
+<li><p>Click the combo box in the center of the toolbar to make your selection.</p></li>
+<li><p>For Google Drive and Application, saved poses will be displayed after loading occurs for a while. Internal Storage is displayed immediately.</p></li>
+</ol>
+</section>
+<section id="id8">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">11.2.2.2. </span>Search poses/motions</a><a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
 <p>Incremental search is possible in the same way as other lists in this application.</p>
 <img alt="../_images/posing_o.png" class="align-center" src="../_images/posing_o.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="id2">
-<h2><span class="section-number">11.2.2. </span>Load pose file from disk<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
-<p>You can load the pose file saved on your PC’s disk into the app. Please push the upload button of the pose list.</p>
+<section id="id9">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">11.2.2.3. </span>Load pose/motion files from disk</a><a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+<p>You can load poses and motion files saved on your PC’s disk into the app. Please press the upload button for the pose list.</p>
+<p>読み込み場所が <code class="docutils literal notranslate"><span class="pre">Internal</span> <span class="pre">Storage</span></code> の場合のみ使用可能です。</p>
 <img alt="../_images/posing_9.png" class="align-center" src="../_images/posing_9.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="line-block">
-<div class="line">The target file is <strong>.vvmpose</strong> or <strong>.json</strong>.</div>
-<div class="line">The extension “<strong>.vvmpose</strong>” unique to this application is only for ease of identification. Please attach.</div>
-</div>
-<p>When it finishes loading, it will be displayed in the list. (It doesn’t matter if there is no thumbnail)</p>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">対象のファイル</span><a class="headerlink" href="#id10" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>種類</p></th>
+<th class="head"><p>拡張子</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pose</p></td>
+<td><p><strong>.vvmpose</strong> または <strong>.json</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>モーション</p></td>
+<td><p><strong>.vvmmot</strong> または <strong>.json</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>　本アプリ独自拡張子の <strong>.vvmpose</strong> や <strong>.vvmmot</strong> はあくまで判別のしやすさのためだけのものですが、 .jsonのままだと他と混同するおそれがあるので間違えないように気をつけてください。</p>
+<p>　読み込み終わると一覧に表示されるようになります。（ポーズの場合、サムネイルはなくても問題ありません）</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <div class="line-block">
@@ -175,12 +315,13 @@
 </div>
 </section>
 </section>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="posing_save.html" class="btn btn-neutral float-left" title="11.1. Save VRoid/VRM pose" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="posing_save.html" class="btn btn-neutral float-left" title="11.1. Save pose/motion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="posing_mediapipe.html" class="btn btn-neutral float-right" title="11.3. Detect pauses with MediaPipe" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

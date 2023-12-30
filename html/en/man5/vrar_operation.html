@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>17.2. How to operate on VR/AR &mdash; VRMViewMeister 2.3.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="18. Setting" href="config.html" />
+    <link rel="prev" title="17.1. Basics of VR/AR" href="vrar_basic.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="vrar.html">17. VR and AR</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vrar_basic.html">17.1. Basics of VR/AR</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">17.2. How to operate on VR/AR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-0">17.2.1. Basic operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-1">17.2.2. virtual controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">17.2.3. Summary of operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-2">17.2.4. Convenient operation functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">18. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">19. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="vrar.html"><span class="section-number">17. </span>VR and AR</a> &raquo;</li>
+      <li><span class="section-number">17.2. </span>How to operate on VR/AR</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man5/vrar_operation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vr-ar">
+<h1><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">17.2. </span>How to operate on VR/AR</a><a class="headerlink" href="#vr-ar" title="Permalink to this heading"></a></h1>
+<p>In addition to controllers for VR devices, Meta Quest 3 fully supports hand tracking.</p>
+<p>However, what you can do by default with controllers and hand tracking is different.</p>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#vr-ar" id="id9">How to operate on VR/AR</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-0" id="id10">Basic operations</a></p></li>
+<li><p><a class="reference internal" href="#index-1" id="id11">virtual controller</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id12">Summary of operations</a></p></li>
+<li><p><a class="reference internal" href="#index-2" id="id13">Convenient operation functions</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="index-0">
+<span id="id1"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">17.2.1. </span>Basic operations</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>grab:</dt><dd><p>Grab an object and move it. You can move and rotate it like a real thing.</p>
+<dl class="field-list">
+<dt class="field-odd">When controlling a VR device<span class="colon">:</span></dt>
+<dd class="field-odd"><p>trigger and grip</p>
+</dd>
+<dt class="field-even">During hand tracking<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pinch the object you want to manipulate with your thumb and index finger</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>In the case of Meta Quest 3’s hand tracking, if you turn your palm towards yourself, a systematic operation may be activated. Try to do this with your palm facing the object as much as possible.</p>
+</div>
+</dd>
+</dl>
+<p>Here’s what you can grab and move:</p>
+<ul class="simple">
+<li><p>IK markers for each part of VRM</p></li>
+<li><p>OtherObject (3D model of) <strong>itself</strong></p></li>
+<li><p>IK markers for OtherObject, Camera, Light, Effect, Image</p></li>
+<li><p>IK marker for Directional Light</p></li>
+</ul>
+</dd>
+<dt>Main camera movement:</dt><dd><p>Move the main camera, which is the viewpoint of the VR/AR space. The height and position of the viewpoint may differ slightly from the main camera on the normal screen.</p>
+<dl class="field-list">
+<dt class="field-odd">When controlling a VR device<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">Moving forward, backward, left and right<span class="colon">:</span></dt>
+<dd class="field-odd"><p>left stick</p>
+</dd>
+<dt class="field-even">Move up and down<span class="colon">:</span></dt>
+<dd class="field-even"><p>Move the right stick forward/backward</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">During hand tracking<span class="colon">:</span></dt>
+<dd class="field-even"><p>right hand virtual controller</p>
+<p>Set the operation target to <code class="docutils literal notranslate"><span class="pre">main</span> <span class="pre">camera</span></code> and the operation mode to <code class="docutils literal notranslate"><span class="pre">move</span></code> .</p>
+</dd>
+</dl>
+</dd>
+<dt>Main camera rotation:</dt><dd><p>Rotate the main camera, which is the viewpoint of the VR/AR space.</p>
+<dl class="field-list">
+<dt class="field-odd">When controlling a VR device<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">turn left<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Move the right stick to the left</p>
+</dd>
+<dt class="field-even">turn right<span class="colon">:</span></dt>
+<dd class="field-even"><p>Move the right stick to the right</p>
+</dd>
+</dl>
+<p>When using a VR device controller, rotations other than those listed above are not possible as it may cause confusion.</p>
+</dd>
+<dt class="field-even">During hand tracking<span class="colon">:</span></dt>
+<dd class="field-even"><p>right hand virtual controller</p>
+<p>Set the operation target to <code class="docutils literal notranslate"><span class="pre">main</span> <span class="pre">camera</span></code> and the operation mode to <code class="docutils literal notranslate"><span class="pre">rotation</span></code> .</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>You cannot grab the entire VRM and move it. To move the entire VRM, you need to operate it using the virtual controller described below.</p></li>
+<li><p>All IK markers are displayed simultaneously in VR/AR space.</p></li>
+<li><p>Due to VR/AR specifications, IK markers are not displayed transparently and are hidden behind objects.</p></li>
+</ul>
+</div>
+</section>
+<section id="index-1">
+<span id="id2"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">17.2.2. </span>virtual controller</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<p>Since there are many things that cannot be done with just basic operations, we have prepared a virtual controller that can perform specific functions in VR/AR space.</p>
+<p>These are displayed diagonally below the virtual hand. It can be used both when using a VR device controller and when tracking hands.</p>
+<table class="docutils align-default" id="id5">
+<caption><span class="caption-text">virtual hand</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p>When using a VR device controller</p></td>
+<td><p>During hand tracking</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="vrarctrl_on" src="../_images/vrar_ctrl01.jpg" /></p></td>
+<td><p><img alt="vrarctrl_off" src="../_images/vrar_ctrl02.jpg" /></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Virtual Controller</strong></p>
+<p>By default it is hidden to avoid distractions. <strong>Touch the yellow Cube with the fingertips of your virtual hand</strong> and a virtual controller will appear.</p>
+<p>All buttons are hit-detected by your fingertip, and if you overlap your fingertip with the button, the button will sink.</p>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">virtual controller</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Left hand</p></th>
+<th class="head"><p>Right hand</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="leftctrl" src="../_images/vrar_ctrl03.jpg" /></p></td>
+<td><p><img alt="rightctrl" src="../_images/vrar_ctrl04.jpg" /></p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">left hand virtual controller</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p>string displayed at the top</p></td>
+<td><p>This is the name of the 3D object currently selected in VR/AR space. This is different from selecting objects on the normal screen.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="leftctrl01" src="../_images/vrar_ctrlleft_01.png" /></p></td>
+<td><p>Select the previous 3D object. If there is a 2D object in the middle, it will be skipped.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="leftctrl02" src="../_images/vrar_ctrlleft_02.png" /></p></td>
+<td><p>Select the next 3D object. If there is a 2D object in the middle, it will be skipped.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="leftctrl03" src="../_images/vrar_ctrlleft_03.png" /></p></td>
+<td><p>Switch the display of IK markers. You can grab and operate it even when the display is off.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Numbers displayed to the left of the center row</p></td>
+<td><p>The currently selected keyframe number.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="leftctrl04" src="../_images/vrar_ctrlleft_04.png" /></p></td>
+<td><p>Return to the previous keyframe. This is almost the same as keyframe operations in the timeline panel.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="leftctrl05" src="../_images/vrar_ctrlleft_05.png" /></p></td>
+<td><p>Return to next keyframe. This is almost the same as keyframe operations in the timeline panel.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="leftctrl06" src="../_images/vrar_ctrlleft_06.png" /></p></td>
+<td><p>Registers the pose of the currently selected 3D object to the currently selected keyframe. <strong>Selected</strong> here is only valid in VR/AR space. This is different from the selection on the normal screen.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="leftctrl07" src="../_images/vrar_ctrlleft_07.png" /></p></td>
+<td><p>Play the animation.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="leftctrl08" src="../_images/vrar_ctrlleft_08.png" /></p></td>
+<td><p>Stop the animation.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">right hand virtual controller</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><p><img alt="rightctrl01" src="../_images/vrar_ctrlright_01.png" /></p></td>
+<td><p>Move and rotate around the X axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="rightctrl02" src="../_images/vrar_ctrlright_02.png" /></p></td>
+<td><p>Move and rotate around the Y axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="rightctrl03" src="../_images/vrar_ctrlright_03.png" /></p></td>
+<td><p>Move and rotate around the Z axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="rightctrl04" src="../_images/vrar_ctrlright_04.png" /></p></td>
+<td><p>Set the operation target to <code class="docutils literal notranslate"><span class="pre">main</span> <span class="pre">camera</span></code> .</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="rightctrl05" src="../_images/vrar_ctrlright_05.png" /></p></td>
+<td><p>Sets the operation target to the <code class="docutils literal notranslate"><span class="pre">currently</span> <span class="pre">selected</span> <span class="pre">3D</span> <span class="pre">object</span></code>. You need to switch to this to run the entire VRM.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="rightctrl06" src="../_images/vrar_ctrlright_06.png" /></p></td>
+<td><p>Set the operation mode to <code class="docutils literal notranslate"><span class="pre">Move</span></code> .</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="rightctrl07" src="../_images/vrar_ctrlright_07.png" /></p></td>
+<td><p>Set the operation mode to <code class="docutils literal notranslate"><span class="pre">rotate</span></code> .</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For operations other than those listed above, return to the normal screen.</p>
+</div>
+</section>
+<section id="id3">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">17.2.3. </span>Summary of operations</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"><p>Meta Quest 3</p></th>
+<th class="head"></th>
+<th class="head"><p>PICO4</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>functions</p></th>
+<th class="head"><p>Controller</p></th>
+<th class="head"><p>hand tracking</p></th>
+<th class="head"><p>Controller</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>grab</p></td>
+<td><p>trigger or grip</p></td>
+<td><p>index finger + thumb</p></td>
+<td><p>trigger or grip</p></td>
+</tr>
+<tr class="row-even"><td><p>Move main camera</p></td>
+<td><p>Left stick + right stick front and back</p></td>
+<td><p>right hand virtual controller</p></td>
+<td><p>Left stick + right stick front and back</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rotate main camera</p></td>
+<td><p>right stick left and right</p></td>
+<td><p>right hand virtual controller</p></td>
+<td><p>right stick left and right</p></td>
+</tr>
+<tr class="row-even"><td><p>Moving/rotating VRM</p></td>
+<td><p>virtual controller</p></td>
+<td><p>virtual controller</p></td>
+<td><p>virtual controller</p></td>
+</tr>
+<tr class="row-odd"><td><p>IK markers for each part of VRM</p></td>
+<td><p>grab</p></td>
+<td><p>grab</p></td>
+<td><p>grab</p></td>
+</tr>
+<tr class="row-even"><td><p>Moving/rotating other than VRM</p></td>
+<td><p>grab</p></td>
+<td><p>grab</p></td>
+<td><p>grab</p></td>
+</tr>
+</tbody>
+</table>
+<p>If there is a misalignment between the main camera of this app and the camera (viewpoint) of the VR device, please operate each VR device to return the viewpoint to the center.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In the PICO4 browser app, controllers B and Y seem to have the function assigned to the browser’s <code class="docutils literal notranslate"><span class="pre">back</span></code> button. Therefore, if you press it by mistake, carefully read the confirmation message before proceeding.</p>
+</div>
+</section>
+<section id="index-2">
+<span id="id4"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">17.2.4. </span>Convenient operation functions</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<p>In VR equipment, the controller is equivalent to the mouse. However, unlike a mouse, it is not suitable for detailed work. This app provides a function called <code class="docutils literal notranslate"><span class="pre">V-pad</span></code> so that you can operate it to some extent even in environments where you cannot use a mouse.</p>
+<p>You can also use it on VR devices to operate the regular screen.</p>
+<img alt="../_images/screen_vpad.png" class="align-center" src="../_images/screen_vpad.png" />
+<p>This V-pad allows you to move and rotate the main camera by swiping inside each square. The operating feel of VR devices varies slightly depending on the product.</p>
+<dl class="simple">
+<dt>Meta Quest 3</dt><dd><ul class="simple">
+<li><p>You can operate by holding down the trigger and moving the controller inside the square inside the V-pad.</p></li>
+<li><p>You can rotate the main camera by holding the triggers on both controllers and focusing on the WebGL screen.</p></li>
+</ul>
+</dd>
+<dt>PICO4</dt><dd><ul class="simple">
+<li><p>You can operate by holding down the trigger and moving the controller inside the square inside the V-pad.</p></li>
+<li><p>You can operate it by simply moving the stick within the squares on the V-pad. This is the <code class="docutils literal notranslate"><span class="pre">most</span> <span class="pre">recommended</span></code> method of operation.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="vrar_basic.html" class="btn btn-neutral float-left" title="17.1. Basics of VR/AR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="config.html" class="btn btn-neutral float-right" title="18. Setting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7.4. Support for cloud storage &mdash; VRMViewMeister 2.3.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8. Usable object" href="../man2/object_about.html" />
+    <link rel="prev" title="7.3. How to use 3D model" href="gen_use_3dm.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="general_use.html">7. General usage</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gen_use_operation.html">7.1. App operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen_use_file.html">7.2. File manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gen_use_3dm.html">7.3. How to use 3D model</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.4. Support for cloud storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">7.4.1. Supported files and features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">7.4.2. Basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-1">7.4.3. Preparing the script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-2">7.4.4. Update script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">7.4.5. How to use</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vrar.html">17. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">18. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">19. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="general_use.html"><span class="section-number">7. </span>General usage</a> &raquo;</li>
+      <li><span class="section-number">7.4. </span>Support for cloud storage</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man5/gen_use_cloud.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">7.4. </span>Support for cloud storage</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<span id="index-0"></span><p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id7">Support for cloud storage</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id8">Supported files and features</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id9">Basics</a></p></li>
+<li><p><a class="reference internal" href="#index-1" id="id10">Preparing the script</a></p></li>
+<li><p><a class="reference internal" href="#index-2" id="id11">Update script</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id12">How to use</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<p>From ver 2.3.0, it supports Google Drive. Since it is implemented as an extension, it is not necessary to use it.</p>
+<p>See also <a class="reference internal" href="config.html#config-fileloader"><span class="std std-ref">File loader tab</span></a> .</p>
+<section id="id2">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">7.4.1. </span>Supported files and features</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>files</p></td>
+<td><p>Open from Google Drive</p></td>
+<td><p>Save to Google Drive</p></td>
+</tr>
+<tr class="row-even"><td><p>Pose file</p></td>
+<td><p>Support</p></td>
+<td><p>Support</p></td>
+</tr>
+<tr class="row-odd"><td><p>Motion file</p></td>
+<td><p>Support</p></td>
+<td><p>Support</p></td>
+</tr>
+<tr class="row-even"><td><p>Project file</p></td>
+<td><p>Support</p></td>
+<td><p>Support</p></td>
+</tr>
+<tr class="row-odd"><td><p>VRM</p></td>
+<td><p>Support</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-even"><td><p>3D model</p></td>
+<td><p>Support</p></td>
+<td><p>None</p></td>
+</tr>
+<tr class="row-odd"><td><p>Image</p></td>
+<td><p>Support</p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+<p>If you enter the URL in the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Loader</span></code> tab on the settings screen and check it to enable it, Google Drive items will be displayed in the submenu of buttons such as VRM, OtherObject, and Image on the ribbon bar.</p>
+<p>In the pose/motion list, you will be able to select Google Drive in the load location combo box.</p>
+</section>
+<section id="id3">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">7.4.2. </span>Basics</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>Connection method</dt><dd><p>Please convert GoogleAppsScript into a web application and set the URL of the published web application to this application.</p>
+<p>This app does not log in to your Google account. It does not ask for permission. This application does not determine whether it is caused by Google AppsScript.</p>
+<p>It’s all about whether the input and output match.</p>
+</dd>
+<dt>merit</dt><dd><ul class="simple">
+<li><p>The risk of the app side leaking API keys and OAuth2.0 information can be avoided.</p></li>
+<li><p>Users can avoid the anxiety and risk of logging in to Google on unnecessary PC/device browsers.</p></li>
+<li><p>Users can disconnect the app from Google Drive at any time (no need to log in again when setting up again)</p></li>
+<li><p>API limits are not for the entire app, but for each user, so you can keep the limits to yourself.</p></li>
+</ul>
+</dd>
+<dt>Demerit</dt><dd><ul class="simple">
+<li><p>The user needs to make some preparations, such as creating GoogleAppsScript and publishing it as a web application.</p></li>
+<li><p>Since it is treated as a Google Drive script, it is more limited and slower than the regular Google API.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Especially with VR devices, logging into Google from a browser can be a hassle (especially if you have two-factor authentication). With the connection method introduced in this app, there is no need to log in to Google again, and you can use it anywhere as long as you remember the web app URL and APIKEY yourself.</p>
+<p>This will also help you keep your Google login history clean.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-1">
+<span id="id4"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">7.4.3. </span>Preparing the script</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<p>The script is located in the developer’s Google Drive folder below. <strong>(You must be logged in to Google)</strong></p>
+<dl>
+<dt>Script project (GoogleAppsScript)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">share/extensions/vrmviewmeister-gdrive-extension<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://drive.google.com/drive/folders/1QkWCH0GfKHIQLgbT5Ir-U-mBEKAE3AJy?usp=drive_link">https://drive.google.com/drive/folders/1QkWCH0GfKHIQLgbT5Ir-U-mBEKAE3AJy?usp=drive_link</a></p>
+</dd>
+</dl>
+<p>The easiest way is to copy this to your own drive. After copying, it doesn’t matter which folder you move it to.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please do not run the script in the above sample project directly. It will ask the user for permission to access Google.</p>
+<p>Be sure to use the script project you copied to your Google Drive.</p>
+</div>
+<p>Please refer to the link below for installation instructions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Installation instructions by Google Slides - Google Slides<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.google.com/presentation/d/e/2PACX-1vQP2RstLGn82dh_FOqBfbPPBGvx9o-YQXc-3ol8Gk4_IseKrzsgs0hgAt0h4uYX2kA71ENrnI-XXbBf/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p">https://docs.google.com/presentation/d/e/2PACX-1vQP2RstLGn82dh_FOqBfbPPBGvx9o-YQXc-3ol8Gk4_IseKrzsgs0hgAt0h4uYX2kA71ENrnI-XXbBf/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p</a></p>
+</dd>
+<dt class="field-even">How to Install - Github<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://github.com/nishlumi/vrmviewmeister-gdrive-extension/blob/main/install.rst">https://github.com/nishlumi/vrmviewmeister-gdrive-extension/blob/main/install.rst</a></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="simple">
+<dt>Github</dt><dd><p>The source is also published in the repository below, so please refer to it to see what we are doing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">vrmviewmeister-gdrive-extension - Github<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nishlumi/vrmviewmeister-gdrive-extension/">https://github.com/nishlumi/vrmviewmeister-gdrive-extension/</a></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl>
+<dt>what to do</dt><dd><ol class="arabic simple">
+<li><p>Create a web app with GoogleAppsScript</p></li>
+<li><p>Run the script project’s test function and allow Google access to your drive before using it in this app.</p></li>
+<li><p>Decide your own APIKEY</p></li>
+<li><p>Deploy and copy the web app URL</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Generally, for web services that use Google APIs, the operation in step 2 corresponds to the operation that requires the service to log in to Google.</p>
+<p>In this app, you do it yourself in the script project in advance, so there is no need to log in to Google to use this app.</p>
+</div>
+</dd>
+</dl>
+</section>
+<section id="index-2">
+<span id="id5"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">7.4.4. </span>Update script</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<p>The above script project may be updated in the future. In that case, please follow the steps on the next page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">How to Install - Github<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nishlumi/vrmviewmeister-gdrive-extension/blob/main/install.rst">https://github.com/nishlumi/vrmviewmeister-gdrive-extension/blob/main/install.rst</a></p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>what to do</dt><dd><ol class="arabic simple">
+<li><p>Paste the entire updated script into your script project</p></li>
+<li><p>Deploy again and issue a new web app URL</p></li>
+<li><p>Set the reissued URL in VRMViewMeister</p></li>
+<li><p>Archive and stop the URLs of old web apps deployed in the past. (Optional)</p></li>
+</ol>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">7.4.5. </span>How to use</a><a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>Ribbon bar</dt><dd><dl>
+<dt>Home tab:</dt><dd><p>The following functions are available in the VRM, Object, and Project Open menus</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">directly</span> <span class="pre">from</span> <span class="pre">Google</span> <span class="pre">Drive</span></code></dt><dd><p>Open by directly specifying the Google Drive file ID.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The file must be publicly available or shared with your Google users.</p>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">from</span> <span class="pre">Google</span> <span class="pre">Drive</span></code></dt><dd><p>Extract each file type from Google Drive and display a list. The Internal Storage dialog opens.</p>
+</dd>
+</dl>
+<p>You can save to Google Drive using the project save menu.</p>
+</dd>
+<dt>3D model tab:</dt><dd><p>You can use the above functions with VRM, objects, and images.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">directly</span> <span class="pre">from</span> <span class="pre">Google</span> <span class="pre">Drive</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">from</span> <span class="pre">Google</span> <span class="pre">Drive</span></code></p></li>
+</ul>
+<p>You can save to Google Drive using the Pose/Motion save menu.</p>
+</dd>
+<dt>Animation tab:</dt><dd><p>The following functions are available in the project’s Open menu:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Select</span> <span class="pre">from</span> <span class="pre">Google</span> <span class="pre">Drive</span></code></p>
+<p>You can save to Google Drive using the project save menu.</p>
+</dd>
+</dl>
+</dd>
+<dt>Pose/motion list</dt><dd><dl class="simple">
+<dt>Load location:</dt><dd><p>You will be able to select <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Drive</span></code> .</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gen_use_3dm.html" class="btn btn-neutral float-left" title="7.3. How to use 3D model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../man2/object_about.html" class="btn btn-neutral float-right" title="8. Usable object" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.12.3. Model tab &mdash; VRMViewMeister 2.2.0 documentation</title>
+  <title>6.12.3. Model tab &mdash; VRMViewMeister 2.3.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -55,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="screen_vrminfo.html">6.4. VRM information screen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_project.html">6.5. Project setting screen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_scrshot.html">6.6. Screenshot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_pose.html">6.7. Pose list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_pose.html">6.7. Pose/Motion list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_ikmarker.html">6.8. Repositioning of IK markers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_gravity.html">6.9. gravity settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_mediapipe.html">6.10. pose tracking</a></li>
@@ -83,14 +83,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
 </ul>
 
         </div>
@@ -151,6 +152,7 @@
 </dd>
 </dl>
 <p><strong>In Load</strong></p>
+<p>　それぞれ、 <code class="docutils literal notranslate"><span class="pre">ファイルから</span></code> , <code class="docutils literal notranslate"><span class="pre">Googleドライブから直接指定</span></code> , <code class="docutils literal notranslate"><span class="pre">Googleドライブから選択</span></code> のメニューを使用可能です。</p>
 <dl class="field-list simple">
 <dt class="field-odd">VRM<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Load the VRoid (VRM) and load it.</p>
@@ -165,13 +167,16 @@
 <dd class="field-even"><p>Displays information for the selected VRM. Doesn’t work outside VRM.</p>
 </dd>
 </dl>
-<p><strong>In Pose</strong></p>
-<dl class="field-list simple">
-<dt class="field-odd">save pose<span class="colon">:</span></dt>
-<dd class="field-odd"><p>For VRM only, saves the current pose of the currently selected VRM to a pose file.</p>
+<p><strong>In the Reset operation</strong></p>
+<dl class="field-list">
+<dt class="field-odd">Save<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Displays the pose save and motion save menu.</p>
+<p>You can save it to <code class="docutils literal notranslate"><span class="pre">device</span></code>, <code class="docutils literal notranslate"><span class="pre">internal</span> <span class="pre">storage</span></code>, or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Drive</span></code>.</p>
+<p>ポーズはVRMのみです。現在選択中のVRMの現在のポーズをポーズファイルに保存します。</p>
+<p>Motion saves the motion of the currently selected timeline.</p>
 </dd>
-<dt class="field-even">Pose list<span class="colon">:</span></dt>
-<dd class="field-even"><p>Displays a list of saved poses with thumbnails.</p>
+<dt class="field-even">List<span class="colon">:</span></dt>
+<dd class="field-even"><p>保存したポーズ・モーションの一覧を表示します。</p>
 </dd>
 </dl>
 <p><strong>In the Reset operation</strong></p>

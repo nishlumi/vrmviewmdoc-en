@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to VRMViewMeister’s documentation! &mdash; VRMViewMeister 2.2.0 documentation</title>
+  <title>Welcome to VRMViewMeister’s documentation! &mdash; VRMViewMeister 2.3.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -52,14 +52,15 @@
 <li class="toctree-l1"><a class="reference internal" href="man2/object_about.html">8. Usable object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="man2/property.html">9. Property list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="man2/operation.html">10. Manipulating Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="man4/animation.html">12. Animation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="man5/special_operation.html">13. Keyboard shortcut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="man5/photograph.html">14. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="man5/videorec.html">15. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="man5/config.html">17. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="man5/other.html">18. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man5/vrar.html">17. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man5/config.html">18. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man5/other.html">19. Others</a></li>
 </ul>
 
         </div>
@@ -122,7 +123,7 @@
 <li class="toctree-l2"><a class="reference internal" href="man1/screen_vrminfo.html">6.4. VRM information screen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man1/screen_project.html">6.5. Project setting screen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man1/screen_scrshot.html">6.6. Screenshot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="man1/screen_pose.html">6.7. Pose list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="man1/screen_pose.html">6.7. Pose/Motion list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man1/screen_ikmarker.html">6.8. Repositioning of IK markers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man1/screen_gravity.html">6.9. gravity settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man1/screen_mediapipe.html">6.10. pose tracking</a></li>
@@ -142,6 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="man5/gen_use_operation.html">7.1. App operation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man5/gen_use_file.html">7.2. File manipulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man5/gen_use_3dm.html">7.3. How to use 3D model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="man5/gen_use_cloud.html">7.4. Support for cloud storage</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="man2/object_about.html">8. Usable object</a></li>
@@ -176,9 +178,9 @@
 <li class="toctree-l2"><a class="reference internal" href="man2/operation_stage.html">10.13. Stage</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="man3/posing.html">11. Posing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="man3/posing_save.html">11.1. Save VRoid/VRM pose</a></li>
-<li class="toctree-l2"><a class="reference internal" href="man3/posing_open.html">11.2. Open VRoid/VRM poses</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man3/posing.html">11. Pose and Motion</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="man3/posing_save.html">11.1. Save pose/motion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="man3/posing_open.html">11.2. Open pose/motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man3/posing_mediapipe.html">11.3. Detect pauses with MediaPipe</a></li>
 </ul>
 </li>
@@ -201,6 +203,7 @@
 <li class="toctree-l2"><a class="reference internal" href="man5/photograph.html#index-1">14.2. look</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man5/photograph.html#index-2">14.3. Search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="man5/photograph.html#index-3">14.4. Save</a></li>
+<li class="toctree-l2"><a class="reference internal" href="man5/photograph.html#id6">14.5. Share</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="man5/videorec.html">15. Video</a><ul>
@@ -216,14 +219,19 @@
 <li class="toctree-l2"><a class="reference internal" href="man5/texttrack.html#css">16.5. Manage CSS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="man5/config.html">17. Setting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="man5/config.html#index-0">17.1. Configure the app</a></li>
-<li class="toctree-l2"><a class="reference internal" href="man5/config.html#id3">17.2. App settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="man5/config.html#index-5">17.3. Material management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man5/vrar.html">17. VR and AR</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="man5/vrar_basic.html">17.1. Basics of VR/AR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="man5/vrar_operation.html">17.2. How to operate on VR/AR</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="man5/other.html">18. Others</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="man5/other.html#index-0">18.1. About translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man5/config.html">18. Setting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="man5/config.html#index-0">18.1. Configure the app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="man5/config.html#id3">18.2. App settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="man5/config.html#index-6">18.3. Material management</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="man5/other.html">19. Others</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="man5/other.html#index-0">19.1. About translation</a></li>
 </ul>
 </li>
 </ul>

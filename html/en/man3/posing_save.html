@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11.1. Save VRoid/VRM pose &mdash; VRMViewMeister 2.2.0 documentation</title>
+  <title>11.1. Save pose/motion &mdash; VRMViewMeister 2.3.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="11.2. Open VRoid/VRM poses" href="posing_open.html" />
-    <link rel="prev" title="11. Posing" href="posing.html" /> 
+    <link rel="next" title="11.2. Open pose/motion" href="posing_open.html" />
+    <link rel="prev" title="11. Pose and Motion" href="posing.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,12 +53,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="posing.html">11. Posing</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">11.1. Save VRoid/VRM pose</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">11.1.1. save to disk</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="posing.html">11. Pose and Motion</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">11.1. Save pose/motion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">11.1.1. Save pose/motion</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">11.1.1.1. save pose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#savemotionfile">11.1.1.2. save motion</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="posing_open.html">11.2. Open VRoid/VRM poses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">11.1.2. Other functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">11.1.2.1. save to disk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unity">11.1.2.2. Save the motion in a general format such as Unity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="posing_open.html">11.2. Open pose/motion</a></li>
 <li class="toctree-l2"><a class="reference internal" href="posing_mediapipe.html">11.3. Detect pauses with MediaPipe</a></li>
 </ul>
 </li>
@@ -67,8 +76,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
 </ul>
 
         </div>
@@ -85,8 +95,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="posing.html"><span class="section-number">11. </span>Posing</a> &raquo;</li>
-      <li><span class="section-number">11.1. </span>Save VRoid/VRM pose</li>
+          <li><a href="posing.html"><span class="section-number">11. </span>Pose and Motion</a> &raquo;</li>
+      <li><span class="section-number">11.1. </span>Save pose/motion</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man3/posing_save.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -96,9 +106,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="vroid-vrm">
-<h1><span class="section-number">11.1. </span>Save VRoid/VRM pose<a class="headerlink" href="#vroid-vrm" title="Permalink to this heading"></a></h1>
-<p>Only for VRoid/VRM, you can save the state of moving the IK markers of the whole body in the app. This is per single pose, not an animation.</p>
+  <section id="id1">
+<h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">11.1. </span>Save pose/motion</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id7">Save pose/motion</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id8">Save pose/motion</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id3" id="id9">save pose</a></p></li>
+<li><p><a class="reference internal" href="#savemotionfile" id="id10">save motion</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id5" id="id11">Other functions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id6" id="id12">save to disk</a></p></li>
+<li><p><a class="reference internal" href="#unity" id="id13">Save the motion in a general format such as Unity</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="id2">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">11.1.1. </span>Save pose/motion</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">11.1.1.1. </span>save pose</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>For VRoid/VRM only, the pose can save the state in which the IK markers of the whole body are moved. This is per single pose, not animation.</p>
 <ol class="arabic simple">
 <li><p>Make the VRoid/VRM pose.</p></li>
 </ol>
@@ -107,21 +142,21 @@
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Click “Save Pose” on the “3D Model” tab.</p></li>
+<li><p>Click “Save” from <strong>Pose/Motion</strong> on the “3D Model” tab.</p></li>
 </ol>
 <img alt="../_images/posing_2.png" class="align-center" src="../_images/posing_2.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="3">
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">Device</span></code> or <code class="docutils literal notranslate"><span class="pre">Internal</span> <span class="pre">Storage</span></code>.</p></li>
+<ol class="arabic simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Local</span> <span class="pre">disk</span></code>, <code class="docutils literal notranslate"><span class="pre">Internal</span> <span class="pre">Storage</span></code>, or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Drive</span></code>.</p></li>
 <li><p>Enter the pose name.</p></li>
 </ol>
 <img alt="../_images/posing_3.png" class="align-center" src="../_images/posing_3.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>The pose is saved immediately.</p>
+<p>The pose will be saved.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -131,26 +166,97 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>For security purposes, it will always be cut when saving to a terminal. The thumbnail information is also cut when the pose file is read from the terminal.</p>
+<p>There doesn’t seem to be any problem, so the thumbnail will be included in the data even if you save it to your device.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>There is no need to register keyframes when saving poses.</p>
+<dl>
+<dt>What data was saved?</dt><dd><p>In the case of internal storage, it is saved within the app (in the browser you are using). Since it is a place like a dedicated area for each application that is different from the folder on the local disk, it is not visible from other applications.</p>
+<p>If you are using a device, the file will be saved in a folder on your PC.</p>
+<p>In the case of Google Drive, it will be saved within Google Drive.</p>
+</dd>
+</dl>
 </div>
-<div class="admonition- admonition">
-<p class="admonition-title">What is the saved pose data?</p>
-<p>In the case of internal storage, it is saved within the app (in the browser you are using). Since it is a place like a dedicated area for each application that is different from the folder on the local disk, it is not visible from other applications.</p>
-<p>In the case of a terminal, it will be saved in a folder on the PC as it is.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>In the case of Google Drive, the user must separately obtain a Google account and set up Google AppsScript in advance.</p>
 </div>
-<section id="id1">
-<h2><span class="section-number">11.1.1. </span>save to disk<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
-<p>After saving to the internal storage, you can save it back to your device. In that case, please press the download button.</p>
+</section>
+<section id="savemotionfile">
+<span id="index-0"></span><span id="id4"></span><h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">11.1.1.2. </span>save motion</a><a class="headerlink" href="#savemotionfile" title="Permalink to this heading"></a></h3>
+<p>For motion, all timeline (roll) types can be saved.</p>
+<ol class="arabic simple">
+<li><p>Select the timeline (roll) in which you want to save the motion from the timeline list.</p></li>
+<li><p>After this, the procedure is almost the same as the pose. In the menu after pressing the “Save” button, select from the menu under “Save Motion”.</p></li>
+</ol>
+<p>There are no thumbnails for motion.</p>
+<div class="admonition warning" id="index-1">
+<p class="admonition-title">Warning</p>
+<p><strong>Pay attention to the physique of the VRM that creates the motion</strong></p>
+<p>When creating motion data with a VRM, if you replace it with a VRM of a different height or physique in the middle, there will be a difference in ground contact and each part. Be sure to complete the motion creation using the same VRM.</p>
+<dl>
+<dt>Example:</dt><dd><ol class="arabic simple">
+<li><p>Create a motion halfway with a 160cm VRM and save it as a file.</p></li>
+<li><p>Load the vvmmot file into a 155cm VRM on another day and create a continuation of the motion.</p></li>
+<li><p>On another day, load the vvmmot file into a 140cm VRM and play the motion.</p></li>
+</ol>
+<p>In this case, the 140cm VRM of 3 causes the whole body to rise and fall during the motion, causing unexpected movements.</p>
+</dd>
+</dl>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>After loading a motion, if you want to save it as a motion file again, be sure to register each keyframe once.</p>
+<p>Immediately after loading a motion, the timeline (roll) contains a mixture of height information from the current VRM and height information from another VRM as reference information in the motion.</p>
+<div class="line-block">
+<div class="line">By registering the key frame again, the motion will be registered as the current height and physique of the VRM.</div>
+<div class="line">(When registering, there is no need to move the pose etc. You can press the register button as soon as you select a frame number and the object such as VRM reproduces that motion.)</div>
+</div>
+<p>This has the same meaning as the problem of “Be careful of the physique of the VRM that creates the motion” above.</p>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="id5">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">11.1.2. </span>Other functions</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<section id="id6">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">11.1.2.1. </span>save to disk</a><a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>Even after saving to internal storage or Google Drive, you can save it back to your device.</p>
+<ol class="arabic simple">
+<li><p>Click “Pose List” on the “3D Model” tab.</p></li>
+</ol>
+<img alt="../_images/posing_5.png" class="align-center" src="../_images/posing_5.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Select Pose or Motion on the right side of the toolbar.</p></li>
+<li><p>Select the pose or motion you want to download.</p></li>
+<li><p>Click the Download button on the toolbar.</p></li>
+</ol>
 <img alt="../_images/posing_4.png" class="align-center" src="../_images/posing_4.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Save format<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>.vvmpose</strong></p>
+<dd class="field-odd"><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Kind</p></th>
+<th class="head"><p>Extension</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pose</p></td>
+<td><p><strong>.vvmpose</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p>Motion</p></td>
+<td><p><strong>.vvmmot</strong></p></td>
+</tr>
+</tbody>
+</table>
 </dd>
 </dl>
 <div class="admonition note">
@@ -161,14 +267,52 @@
 <div class="line"><br /></div>
 </div>
 </section>
+<section id="unity">
+<span id="index-2"></span><h3><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">11.1.2.2. </span>Save the motion in a general format such as Unity</a><a class="headerlink" href="#unity" title="Permalink to this heading"></a></h3>
+<p>Although only VRM is available, it is also possible to save in a general-purpose animation format.</p>
+<ol class="arabic simple">
+<li><p>Click “Pose List” on the “3D Model” tab.</p></li>
+</ol>
+<img alt="../_images/posing_5.png" class="align-center" src="../_images/posing_5.png" />
+<ol class="arabic simple" start="2">
+<li><p>A pose list window will be displayed, so click the “Motion” tab on the far right.</p></li>
+</ol>
+<img alt="../_images/posing_6b.png" class="align-center" src="../_images/posing_6b.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Export</span> <span class="pre">as</span> <span class="pre">generic</span> <span class="pre">motion</span> <span class="pre">file</span></code> on the toolbar.</p></li>
+<li><p>Click the menu for the format you want.</p></li>
+</ol>
+<img alt="../_images/posing_p.png" class="align-center" src="../_images/posing_p.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Enter the file name and press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Save format<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>.anim</strong></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>.anim files are AnimationClip files that can be read directly by Unity.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As of this application <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.3.0</span></code>, it only supports Humanoid Animator motion. Since .bvh is in experimental operation, operation cannot be guaranteed yet. please note that.</p>
+<p>The .anim file cannot be load again by this application.</p>
+</div>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="posing.html" class="btn btn-neutral float-left" title="11. Posing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="posing_open.html" class="btn btn-neutral float-right" title="11.2. Open VRoid/VRM poses" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="posing.html" class="btn btn-neutral float-left" title="11. Pose and Motion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="posing_open.html" class="btn btn-neutral float-right" title="11.2. Open pose/motion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

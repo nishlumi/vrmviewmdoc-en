@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>17.1. Basics of VR/AR &mdash; VRMViewMeister 2.3.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="17.2. How to operate on VR/AR" href="vrar_operation.html" />
+    <link rel="prev" title="17. VR and AR" href="vrar.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">13. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photograph.html">14. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videorec.html">15. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texttrack.html">16. Edit Subtitles</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="vrar.html">17. VR and AR</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">17.1. Basics of VR/AR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#index-0">17.1.1. Confirmed environments/functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-1">17.1.2. Limitations</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">17.1.2.1. About the function to open a separate window</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#index-2">17.1.3. How to enter VR/AR space</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">17.1.4. photograph</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="vrar_operation.html">17.2. How to operate on VR/AR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">18. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">19. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="vrar.html"><span class="section-number">17. </span>VR and AR</a> &raquo;</li>
+      <li><span class="section-number">17.1. </span>Basics of VR/AR</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man5/vrar_basic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vr-ar">
+<h1><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">17.1. </span>Basics of VR/AR</a><a class="headerlink" href="#vr-ar" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#vr-ar" id="id6">Basics of VR/AR</a></p>
+<ul>
+<li><p><a class="reference internal" href="#index-0" id="id7">Confirmed environments/functions</a></p></li>
+<li><p><a class="reference internal" href="#index-1" id="id8">Limitations</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id3" id="id9">About the function to open a separate window</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#index-2" id="id10">How to enter VR/AR space</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id11">photograph</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="index-0">
+<span id="id1"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">17.1.1. </span>Confirmed environments/functions</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h2>
+<p>VR/AR in this app is used by switching from the normal app screen. Since it is not always in VR/AR state, you can also use the normal screen on VR devices.</p>
+<ul class="simple">
+<li><p>Meta Quest browser (VR/AR)</p></li>
+<li><p>PICO browser (VR/AR)</p></li>
+<li><p>Browser (including PWA) on a PC connected via Quest Link (VR)</p></li>
+</ul>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<ul class="simple">
+<li><p>For Quest Link connection, we recommend a wired connection rather than Air Link. Even with Air Link, you can expect much faster operation than the browser of a VR device, but flickering will occur when you actually move the motion.</p></li>
+<li><p>If you reduce the page magnification of your browser to <strong>about 80%</strong>, it will be easier to use on the normal screen. (Since the resolution is high when using Oculus Link, page magnification is not particularly necessary.)</p></li>
+</ul>
+</div>
+</section>
+<section id="index-1">
+<span id="id2"></span><h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">17.1.2. </span>Limitations</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Both VR/AR cannot be used on each OS version (Electron version) on a PC connected via Quest Link.</p></li>
+<li><p>Since this application is built with WebGL, it is highly dependent on the performance of each device that can use the browser. Each OS has more limitations than native apps. Also, switching between the normal screen and the VR/AR screen requires some effort, so we recommend that you <strong>save frequently</strong> in either project, motion, or pose file format.</p></li>
+<li><p>Camera objects cannot be played in VR/AR space. If you use it in combination with OtherObject’s render texture function, you can view images from another camera even in VR/AR space.</p></li>
+<li><p>SystemEffect is not reflected in VR/AR space.</p></li>
+</ul>
+<section id="id3">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">17.1.2.1. </span>About the function to open a separate window</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Functions that open another window, such as the keyframe setting window and pose/motion window, are replaced with tabs.</p>
+<dl>
+<dt>Meta Quest3</dt><dd><p>Since you can separate tabs by dragging them to another window, you will be able to use this app on two or more screens.</p>
+</dd>
+<dt>PICO4</dt><dd><p>The PICO4 browser can install web applications using the PWA method. However, we have confirmed that if you use the function to open a separate window while converting it into a web application on PICO4, the web application screen itself will be replaced with that window.</p>
+<p>Apparently this is a PICO specification.</p>
+<p>We recommend using PICO4 in a browser.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="index-2">
+<span id="id4"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">17.1.3. </span>How to enter VR/AR space</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the <code class="docutils literal notranslate"><span class="pre">VR</span></code> or <code class="docutils literal notranslate"><span class="pre">AR</span></code> button on the Home tab of the ribbon bar.</p></li>
+</ol>
+<img alt="../_images/vrar01.png" class="align-center" src="../_images/vrar01.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>If the environment is unavailable, you will not be able to press the respective buttons.</p>
+</div>
+</section>
+<section id="id5">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">17.1.4. </span>photograph</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<p>VR devices come with screenshot and recording functions as standard, so we recommend using them.</p>
+<p>You can also use the screenshot and recording functions of this app.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="vrar.html" class="btn btn-neutral float-left" title="17. VR and AR" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="vrar_operation.html" class="btn btn-neutral float-right" title="17.2. How to operate on VR/AR" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

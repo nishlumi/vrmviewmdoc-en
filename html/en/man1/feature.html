@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5. Feature &mdash; VRMViewMeister 2.2.0 documentation</title>
+  <title>5. Feature &mdash; VRMViewMeister 2.3.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -57,14 +57,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
 </ul>
 
         </div>
@@ -99,10 +100,10 @@
 <dt>The main things you can do with this app are:</dt><dd><ul class="simple">
 <li><p>To load VRM files (also supports VRM height information display)</p></li>
 <li><p>VRM bone operation (For now, only IK operation is possible in order to experience a steady and easy operation)</p></li>
-<li><p>Loading and transforming 3D model files such as FBX, Obj, and STL <a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
+<li><p>Loading and transforming 3D model files such as FBX, Obj, and STL <a class="footnote-reference brackets" href="#id7" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
 <li><p>Loading and transforming 2D images such as jpg, png, and gif</p></li>
 <li><p>Camera, light, effects, post-processing (screen effects) available (Unity feature)</p></li>
-<li><p>Audio support (MP3, wav) <a class="footnote-reference brackets" href="#id7" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
+<li><p>Audio support (MP3, wav) <a class="footnote-reference brackets" href="#id8" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></li>
 <li><p>VRM and other objects can be linked and moved</p></li>
 <li><p>Only VRM poses can be saved/loaded to files</p></li>
 <li><p>Animation can be created (using a simple timeline and keyframe method)</p></li>
@@ -111,21 +112,24 @@
 <li><p>Save current screen as screenshot</p></li>
 <li><p>You can shoot and save the current screen as a video (of course, you can also save the animation)</p></li>
 <li><p>Supports multiple languages (Japanese, English, Esperanto, others to be added in the future)</p></li>
-<li><p>Google’s MediaPipe can automatically detect and reproduce poses from camera images with AI <a class="footnote-reference brackets" href="#id8" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></li>
+<li><p>Google’s MediaPipe can automatically detect and reproduce poses from camera images with AI <a class="footnote-reference brackets" href="#id9" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></li>
 <li><p>Web video text track format (WebVTT) subtitle editing supported (from ver 1.2.0)</p></li>
+<li><p>Use in VR/AR space with VR devices (from ver 2.3.0) <a class="footnote-reference brackets" href="#id9" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></li>
+<li><p>Support for loading and saving Google Drive (from ver 2.3.0)</p></li>
 </ul>
 </dd>
 </dl>
-<aside class="footnote brackets" id="id6" role="note">
+<aside class="footnote brackets" id="id7" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
 <p>All formats supported by TriLib2 (<a class="reference external" href="https://ricardoreis.net/trilib-2/">https://ricardoreis.net/trilib-2/</a>)</p>
 </aside>
-<aside class="footnote brackets" id="id7" role="note">
+<aside class="footnote brackets" id="id8" role="note">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">2</a><span class="fn-bracket">]</span></span>
 <p>Some audio effects are not supported by WebGL in Unity.</p>
 </aside>
-<aside class="footnote brackets" id="id8" role="note">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">3</a><span class="fn-bracket">]</span></span>
+<aside class="footnote brackets" id="id9" role="note">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
 <p>Because it is an experimental feature, it may not be a perfect reproduction.</p>
 </aside>
 <div class="line-block">
@@ -133,7 +137,7 @@
 </div>
 </section>
 <section id="index-1">
-<span id="id9"></span><h2><span class="section-number">5.2. </span>Not available features<a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<span id="id10"></span><h2><span class="section-number">5.2. </span>Not available features<a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
 <dl class="simple">
 <dt>What this app can’t do in the current version (2.0.0) is as follows.</dt><dd><ul class="simple">
 <li><p>Due to Unity’s specifications, each OS’s native drawing is comparable to that of consumer machines (WebGL environment’s drawing performance is considerably lower than those)</p></li>

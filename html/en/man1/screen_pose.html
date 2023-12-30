@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.7. Pose list &mdash; VRMViewMeister 2.2.0 documentation</title>
+  <title>6.7. Pose/Motion list &mdash; VRMViewMeister 2.3.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -55,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="screen_vrminfo.html">6.4. VRM information screen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_project.html">6.5. Project setting screen</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_scrshot.html">6.6. Screenshot</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.7. Pose list</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.7. Pose/Motion list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_ikmarker.html">6.8. Repositioning of IK markers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_gravity.html">6.9. gravity settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_mediapipe.html">6.10. pose tracking</a></li>
@@ -75,14 +75,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Posing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">17. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">18. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
 </ul>
 
         </div>
@@ -100,7 +101,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="screen.html"><span class="section-number">6. </span>Screen configuration</a> &raquo;</li>
-      <li><span class="section-number">6.7. </span>Pose list</li>
+      <li><span class="section-number">6.7. </span>Pose/Motion list</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man1/screen_pose.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -111,17 +112,27 @@
            <div itemprop="articleBody">
              
   <section id="index-0">
-<span id="id1"></span><h1><span class="section-number">6.7. </span>Pose list<a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
-<img alt="../_images/screen_pose.png" class="align-center" src="../_images/screen_pose.png" />
+<span id="id1"></span><h1><span class="section-number">6.7. </span>Pose/Motion list<a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img alt="posewin1" src="../_images/screen_pose.png" /></p></td>
+<td><p><img alt="posewin2" src="../_images/screen_pose2.png" /></p></td>
+</tr>
+</tbody>
+</table>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>The pose list can save a single pose of VRoid/VRM. A new window will open. It is a separate window from the app.</p>
+<p>From ver 2.3.0, the pose list also supports motion management. A new window will open. It is a separate window from the app.</p>
+<ul class="simple">
+<li><p>You can save a single pose for VRoid/VRM.</p></li>
+<li><p>Motion can load all object (cast) types.</p></li>
+</ul>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <p><strong>Top:</strong></p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Reload<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Reload the pose list.</p>
 </dd>
@@ -137,10 +148,39 @@
 <dt class="field-odd">open from file<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Open the pose file from your terminal.</p>
 </dd>
+<dt class="field-even">Load location<span class="colon">:</span></dt>
+<dd class="field-even"><p>Select from Internal Storage, Google Drive, or Application.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Kind</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Internal Storage</p></td>
+<td><p>Internal Storage</p></td>
+</tr>
+<tr class="row-odd"><td><p>Google Drive</p></td>
+<td><p>Google Drive</p></td>
+</tr>
+<tr class="row-even"><td><p>Application</p></td>
+<td><p>Application (i.e. preset sample)</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt class="field-odd">Pose<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Switch list to pose</p>
+</dd>
+<dt class="field-even">Motion<span class="colon">:</span></dt>
+<dd class="field-even"><p>Switch list to motion</p>
+</dd>
 </dl>
 <p><strong>Bottom:</strong></p>
-<dl class="simple">
-<dt>Pose list</dt><dd><p>Display saved poses with thumbnails. The pose name and avatar (VRM) name at the time of saving are displayed together next to the thumbnail.</p>
+<dl>
+<dt>Pose list</dt><dd><p>Displays saved poses and motions.</p>
+<p>The poses come with thumbnails. The pose name and the avatar (VRM) name at the time of saving are displayed next to the thumbnail.</p>
+<p>Motion displays the corresponding object type, format version, number of keyframes, start frame, and end frame.</p>
 </dd>
 </dl>
 <div class="line-block">
