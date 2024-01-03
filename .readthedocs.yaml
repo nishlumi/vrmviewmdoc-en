@@ -16,6 +16,7 @@ build:
     # golang: "1.17"
   jobs:
     post_build:
+    - rm -r $READTHEDOCS_OUTPUT/html
     - cp -r html/en $READTHEDOCS_OUTPUT/html
 
 # Build documentation in the docs/ directory with Sphinx
