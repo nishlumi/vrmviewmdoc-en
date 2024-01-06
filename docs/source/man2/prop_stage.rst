@@ -1,67 +1,67 @@
-.. index:: Stage (property)
+.. index:: Stage（プロパティ）
 
-#####################################
+####################################
 Stage
-#####################################
+####################################
 
 .. contents::
 
 
-Main property
---------------------
+メインのプロパティ
+------------------------
 
 .. image:: ../img/prop_stage_1.png
     :align: center
 
 |
 
-This is the main property of the Stage.
+　Stageのメインのプロパティです。
 
 
-Type of stage Color: Change the texture of the floor.
+| 舞台の種類色・・床のテクスチャを切り替えます。
 
 .. csv-table::
 
-    Default, the default floor represented by the grid.
-    BasicSeaLevel, A general-purpose water level that can be finely adjusted. The water surface is animated. Reflects opacity.
-    DayTimeWaterStage, the water surface. It represents the water surface during the day and the water surface is animated.
-    NighttimeWaterStage, the water surface. It represents the water surface at night and the water surface is animated.
-    DryGround, ground like dry ground.
-    Desert, desert sand.
-    Fields 1 to 4, other ground like general terrain.
-    User, A floor that can be customized by the user, such as specifying a texture.
+    Default,    グリッドで表されるデフォルトの床です。
+    BasicSeaLevel, 細かく調整可能な汎用的な水面です。水面はアニメーションします。不透明度が反映されます。
+    DayTimeWaterStage, 水面です。日中の水面を表しており水面はアニメーションします。
+    NighttimeWaterStage,   水面です。夜の水面を表しており水面はアニメーションします。
+    DryGround,  乾燥地帯のような地面です。
+    Desert,     砂漠の砂地です。
+    Field1～4,  その他一般的な地形のような地面です。
+    User,       テクスチャを指定できるなど、ユーザーがカスタマイズできる床です。
 
-User stage only
-    :Main texture:
-        texture file
-    :Normal map texture:
-        normal map file
-    :colour:
-        texture base color
-    :blending mode:
-        Shader Mode
-    :metallic:
-        Metallic in shader
-    :Glossy:
-        Shader Glossiness
-    :Luminous color:
-        Shader Emission Color
+以下はUser stageのみ
+    :メインのテクスチャ:
+        テクスチャファイル
+    :法線マップテクスチャ:
+        法線マップのファイル
+    :色:
+        テクスチャのベースの色
+    :ブレンドモード:
+        シェーダのMode
+    :メタリック:
+        シェーダのMetallic
+    :光沢:
+        シェーダのGlossiness
+    :発光色:
+        シェーダのEmission Color
 
-About BasicSeaLevel, DayTimeWaterStage, and NighttimeWaterStage
-    There are a wide variety of configuration options. See the Unity documentation for details.
+BasicSeaLevel、DayTimeWaterStage、NighttimeWaterStageについて
+    設定オプションが多岐にわたるものがあります。詳しくはUnityのドキュメントを御覧ください。
 
-    `<https://docs.unity3d.com/en/2019.1/Manual/HOWTO-Water.html>`_
+    `<https://docs.unity3d.com/ja/2019.1/Manual/HOWTO-Water.html>`_
 
 |
 
-.. index::
-    Sky (Stage property)
-    Sun
+.. index:: 
+    空（Stageのプロパティ）
+    太陽
 
-Sky property
+空のプロパティ
 -------------------
 
-Sky settings. Single color, with sun, night can be set in detail.
+　空に関する設定です。単色、太陽付き、夜間を細かく設定できます。
 
 
 .. |skydaytime| image:: ../img/prop_stage_2.png
@@ -69,88 +69,88 @@ Sky settings. Single color, with sun, night can be set in detail.
 
 .. csv-table::
 
-    "for sky daytime", "for sky night blue, sky night purple"
+    "sky daytimeの場合", "sky night blue, sky night purpleの場合"
     |skydaytime|, |skynight|
 
-:Sky mode:
-    Specify either ``Solid Color`` or ``Normal Empty``. ``Normal Sky`` will show the sun.
-:Sky color:
-    Change sky color.
-:Sky shader:
-    Choose from ``sky daitime``, ``sky night blue``, or ``sky night purple`` for ``normal sky`` . Also, the setting changes depending on the selection.
+:空のモード:
+    ``単色`` 、 ``通常の空`` のどちらかを指定します。 ``通常の空`` にすると太陽が表示されるようになります。
+:空の色:
+    空の色を変更します。
+:空のシェーダ:
+    ``通常の空`` の場合に ``sky daitime``, ``sky night blue``, ``sky night purple`` のいずれかから選びます。また、選択によって設定が切り替わります。
 
-See the Unity documentation for details.
+詳しくはUnityのドキュメントをご覧ください。
 
 `<https://docs.unity3d.com/ja/2019.4/Manual/shader-skybox-procedural.html>`_
 
 .. hint::
-    Once you have a ``normal sky`` and the sun is visible, you can move the sun by rotating the lights.
+    ``通常の空`` にして太陽が表示されたら、照明の回転をすることにより太陽を動かすことができます。
 
 |
 
-.. index::
-    Lighting (Stage property)
-    Object shadow (Stage property)
-    Halo
-    flare
+.. index:: 
+    照明（Stageのプロパティ）
+    オブジェクトの影（Stageのプロパティ）
+    ハロー
+    フレア
 
-Lighting properties
+照明のプロパティ
 -------------------
 
-This is the lighting (Directional light) setting. Unlike Light, it is a system light, so it is treated as a property of Stage.
+　照明（Directional light）の設定です。Lightとは異なりシステム的なライトということで、Stageのプロパティ扱いです。
 
 .. image:: ../img/prop_stage_4.png
     :align: center
 
-:rotate:
-    Specifies the angle at which light is emitted. It is easier to do this rotation with the operation handle.
-:strength:
-    Sets the intensity of light.
-:Shadow strength:
-    Sets the darkness of object shadows.
+:回転:
+    光が照射される角度を指定します。この回転は操作ハンドルで行ったほうが楽です。
+:強さ:
+    光の強さを設定します。
+:影の強さ:
+    オブジェクトの影の濃さを設定します。
 
     .. hint::
-        You can change where the shadows go by lighting and rotating the Light object.
+        照明やLightオブジェクトの回転で影の向かう先を変化させることができます。
 
-:colour:
-    Sets the color of the light.
-:Halo:
-    Adjusts the base value of the halo effect.
+:色:
+    光の色さを設定します。
+:ハロー:
+    円光の効果の基本値を調整します。
 
     .. warning::
-        Halos have no effect on Stage lighting.
+        Stageの照明にはハローは効果がありません。
 
     .. note::
-        This halo setting affects all light objects.
-        The actual halo effect can be changed according to the color, strength, and range of the Light object.
+        このハローの設定は、すべてのLightオブジェクトに影響します。
+        実際のハローの効果については、Lightオブジェクト側の色や強さ・範囲によって合わせて変化させることができます。
 
-:flare type:
-    Select the type of light flare from ``None``, ``50mmZoom``, ``FlareSmall``, and ``Sun``.
-:flare color:
-    Specifies the flare color.
-:flare brightness:
-    Specifies the brightness of the flare.
-:flare fade speed:
-    Specifies the speed at which flares appear and disappear.
+:フレアタイプ:
+    光のフレアの種類を ``なし`` ``50mmZoom`` ``FlareSmall`` ``Sun`` から選びます。
+:フレアカラー:
+    フレアの色を指定します。
+:フレアの明るさ:
+    フレアの明るさを指定します。
+:フレアフェードスピード:
+    フレアが出現・消滅するスピードを指定します。
 
 |
 
-.. index:: Wind (Stage property)
+.. index:: 風（Stageのプロパティ）
 
-Wind properties
+風のプロパティ
 --------------------
 
-This is the wind (WindZone) setting.
+　風（WindZone）の設定です。
 
 .. image:: ../img/prop_stage_5.png
     :align: center
 
 
-:wind direction:
-    The direction of the wind. Specify horizontal (X/Z direction) and vertical (Y direction) from 0 to 360 degrees.
-:Wind strength:
-    Specifies the strength of the wind applied to VRM, etc. 0 is off.
-:How the wind fluctuates:
-    A secondary strength that is randomly applied to the strength of the wind.
-:When the wind blows:
-    Makes the wind blow at intervals of seconds specified in this range.
+:風の向き:
+    風の向きです。水平（X・Z方向）、垂直（Y方向）を0～360度指定します。
+:風の強さ:
+    VRMなどにかかる風の強さを指定します。0の場合はオフとなります。
+:風の揺らぎ具合:
+    風の強さにランダムにかかる副次的な強さです。
+:風の吹くタイミング:
+    風をこの範囲で指定した秒の範囲の間隔で吹かせます。

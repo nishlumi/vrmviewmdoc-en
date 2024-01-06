@@ -1,29 +1,29 @@
 .. index:: Effect
 
-#####################################
+####################################
 Effect
-#####################################
+####################################
 
 
-Effect allows you to add animated screen effects as objects and set effects that affect other objects.
+　Effectはアニメーションする画面効果をオブジェクトとして追加したり、他のオブジェクトに対して影響を与える効果を設定することができます。
 
 .. contents::
 
-.. index:: Effect preview
+.. index:: Effectのプレビュー
 
 .. image:: ../img/operation_effect_1.png
     :align: center
 
 |
 
-The IK marker is capsule-shaped to distinguish it from others. Displays special effects relative to the position of the IK marker. There is no limit to the number that can be displayed at the same time (but the operation may be slow). Also, effects with sound effects will sound at the same time.
+　IKマーカーは他と区別するためにカプセル状になっています。IKマーカーの位置を基準として特殊効果を表示します。同時に表示させる数に制限はありません（ただし動作は重くなる可能性があります）。また、効果音があるエフェクトは同時に音が鳴ります。
 
-In the animation project, the states such as "play" and "stop" of the effect animation are registered in keyframes.
+　アニメーションプロジェクトではエフェクトのアニメーションの「再生」「停止」などの状態をキーフレームに登録します。
 
 
-1. Select a genre.
-2. Select an effect name within the genre.
-3. Press preview play to see the effect.
+1. ジャンルを選択します。
+2. ジャンルに含まれるエフェクト名を選択します。
+3. プレビュー再生を押してエフェクトを確認してください。
 
 
 .. |preview| image:: ../img/operation_effect_2.png
@@ -31,38 +31,38 @@ In the animation project, the states such as "play" and "stop" of the effect ani
 
 .. csv-table::
 
-    For preview playback, animation registration
+    プレビュー再生, アニメーション登録用
     |preview|, |anireg|
-    It will play instantly. This operation is not registered in the keyframe. , After selecting "Play" or "Stop", register the keyframe.
+    即座に再生されます。こちらの操作はキーフレームには登録されません。, 「再生」や「停止」を選択後にキーフレームに登録します。
 
 
 .. caution::
-    You cannot play it again until the effect has finished playing.
+    エフェクトの再生が終わっていないうちは再び再生を行うことはできません。
 
 |
 
-.. index:: Collision property with VRM
+.. index:: VRMとの衝突プロパティ
 
-Collision properties with VRM
-----------------------------------
+VRMとの衝突プロパティ
+------------------------
 
-It is an effect that can be moved by colliding with parts with bones such as VRM hair.
+　VRMの髪などボーンがある部位に対して衝突させて反動で動かすことのできる効果です。
 
 .. image:: ../img/operation_effect_4.png
     :align: center
 
 |
 
-If you check the Use Collision function, the range of collision will be drawn as a translucent sphere. This is for preview purposes.
+　衝突機能を使用にチェックを入れると衝突の範囲が半透明な球体で描写されます。これはプレビューの意味合いです。
 
-You can change the range by changing the size of the collision range. The preview sphere changes accordingly.
+　衝突範囲の大きさで範囲を変更できます。それに合わせてプレビューの球体も変化します。
 
 .. |norange| image:: ../img/operation_effect_5.png
 .. |isrange| image:: ../img/operation_effect_6.png
 
-========= ============
-|norange| |isrange|
-========= ============
+========== ============
+|norange|   |isrange|
+========== ============
 
 .. |collidertarget| image:: ../img/operation_effect_7.png
 .. |colliderdecide| image:: ../img/operation_effect_8.png
@@ -70,33 +70,34 @@ You can change the range by changing the size of the collision range. The previe
 
 :|collidertarget|:
     |
-    | Select the VRM you want to collide with.
+    | 衝突させたいVRMを選びます。
 
 :|colliderdecide|:
     |
-    | Register with the selected VRM. Multiple VRMs can be registered to one Effect.
+    | 選んだVRMに登録します。一つのEffectに複数のVRMを登録可能です。
 
 :|colliderdelete|:
     |
-    | If you want to delete the setting, delete it with the rightmost button of the target VRM.
+    | 設定を削除したい場合は対象のVRMの右端のボタンで削除します。
 
 
 .. index::
-    Functional changes according to VRM 1.0 specification (collision property with VRM - Effect)
+    VRM 1.0の仕様による機能の変更(VRMとの衝突プロパティ - Effect)
 
-.. admonition:: Functional changes according to VRM 1.0 specification
+.. admonition:: VRM 1.0の仕様による機能の変更
 
-    In VRM 1.0, the specifications around SpringBone such as hair and chest have changed significantly.
+    VRM 1.0では髪の毛や胸などのSpringBone周りの仕様が大幅に変更になりました。
 
-    In UniVRM 0.x, it seems that collision with colliders was always effective without doing anything, and in this application, when this Effect object collided with VRM, SpringBone moved with appropriate collision intensity.
+    UniVRM 0.xでは何もしなくても常時コライダーとの衝突が有効だったようで、本アプリにおいてもこのEffectオブジェクトをVRMに衝突させたら適切な衝突の激しさでSpringBoneが動きました。
 
-    However, in VRM 1.0, special settings are required to move SpringBone by body parts other than those set from the beginning. As a result, SpringBone's behavior isn't quite the same as it was in his 0.x days.
+    しかしVRM 1.0では、最初から設定されている身体の部位以外によってSpringBoneを動かすには、特殊な設定が必要になりました。その結果、SpringBoneの動きは 0.x の頃とまったく同じではなくなります。
 
 .. caution::
-    **Enabling the VRM Collision property should be the bare minimum** .
+    **VRMとの衝突プロパティを有効にするのは必要最低限にしてください**
 
-    If you enable this property, set the target VRM, and then move the bones of the body, you can see that the movement of the SpringBone, such as the hair and chest, is **very slow** or * compared to when this property is off. *Minimum movement**.
+    本プロパティを有効にし、対象のVRMを設定してから身体のボーンを動かすとわかりますが、本プロパティがオフのときよりも髪の毛や胸などのSpringBoneの動きが **非常に緩やか** または **動きが極小** になります。
+    
+    本来なら機敏に揺れなければいけないのが不自然な動きになるため、Effectオブジェクトの本プロパティによって明示的に特定のVRMのSpringBoneを動かしたい以外では、 **オフにしておくことをオススメ** します。
 
-    Normally, it would be unnatural to have to shake quickly, so unless you want to explicitly move the SpringBone of a specific VRM with this property of the Effect object, **recommend to turn it off**. increase.
+    VRM 1.0の仕様が変わった際にはまた機能を調整する予定です。
 
-    We plan to adjust the function again when the specification of VRM 1.0 changes.

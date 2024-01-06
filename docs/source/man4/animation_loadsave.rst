@@ -1,402 +1,404 @@
-.. index:: Loading and saving animations (animation projects)
+.. index:: アニメーションの読み込みと保存（アニメーションプロジェクト）
 
-##########################################
-Loading and saving animations
-##########################################
+#########################################
+アニメーションの読み込みと保存
+#########################################
 
 .. contents::
 
 
 
+..
+    .. index:: モーションの保存（アニメーションプロジェクト）
 
-.. index:: save motion (animation project)
+    .. _savemotionfile:
 
-.. _savemotionfile:
+    モーションファイルに保存する
+    =====================================
 
-Save to motion file
-=====================================
+    .. index:: モーションを.vvmmot形式で保存
 
-.. index:: save motion in .vvmmot format
+    本アプリ独自形式 .vvmmot
+    ------------------------------------
 
-This application's original format .vvmmot
-----------------------------------------------------
+    　一ロールだけのモーションデータをファイルに保存することができます。すべてのロールに対して出力することができます。
 
-You can save motion data for only one roll to a file. You can print for all roles.
+    1. リボンバーの ``アニメーション`` タブの ``設定`` をクリックします。
 
-1. Click ``Settings`` on the ``Animation`` tab of the ribbon bar.
+    2. ``役割の管理`` タブを開きます。
 
-2. Open the ``Manage Roles`` tab.
+    3. 保存したいロールの行を選択します。
 
-3. Select the row of the role you want to save.
+    4. ツールバーの ``モーションをファイルに保存する`` をクリックします。
 
-4. Click ``Save Motion to File`` on the toolbar.
+    .. image:: img/loadsave_1.png
+        :align: center
 
-.. image::img/loadsave_1.png
-    :align: center
+    |
+
+    5. ファイル名を入力し、 ``OK`` ボタンを押します。
+
+    :保存形式:
+        **.vvmmot**
+        
+        * 独自の拡張子ですが実際はただのJSON形式のファイルです。.jsonに拡張子を変更しても読み込むことはできます。正しくないデータを読み込んだ場合の動作は保証致しません。
+
+    .. index:: モーションファイルの読み書きの注意点
+
+    .. warning::
+        **モーションを作るVRMの体格に注意**
+
+        VRMでモーションデータを作る際、途中で身長や体格の異なるVRMに差し替えて作ると接地や各部位にズレが生じてしまいます。必ず同じVRMのままモーションの作成を完成させてください。
+
+        例：
+            1. 160cmのVRMでモーションを途中まで作り、一旦ファイルに保存する
+            2. 別の日に155cmのVRMにvvmmotファイルを読み込み、モーションの続きを作成する
+            3. また別の日に140cmのVRMにvvmmotファイルを読み込み、モーションを再生する
+        
+            この場合、3の140cmのVRMはモーション中に全身が浮き沈みしたり予期せぬ動きを起こします。
+
+    .. caution::
+        モーションを読み込んだ後、再びモーションファイルとして保存する場合は **必ず** 各キーフレームを一度は登録してください。
+
+        モーションを読み込んだ直後は、タイムライン（ロール）の中には今現在のVRMの身長情報と、モーションの中にある参考情報としての別VRMの身長情報が混ざった状態です。
+
+        | 改めてキーフレームに登録することで、今現在のVRMの身長・体格としてモーションが登録されていきます。
+        | （登録する際、ポーズなどを動かす必要はありません。フレーム番号を選択してVRMなどオブジェクトがそのモーションを再現したらすぐに 登録ボタンを押して構いません）
+
+        これは、上記の「モーションを作るVRMの体格に注意」の問題と同じ意味となります。
+
+
+    .. index:: モーションを.anim形式で保存
+
+    Unityなど汎用形式
+    -----------------------------------
+
+    1. リボンバーの ``アニメーション`` タブの ``設定`` をクリックします。
+
+    2. ``役割の管理`` タブを開きます。
+
+    3. 保存したいロールの行を選択します。
+
+    4. ツールバーの ``汎用的なモーションファイルでエクスポートする`` をクリックします。
+
+    5. 目的の形式のメニューをクリックします。
+
+    .. image:: img/loadsave_d.png
+        :align: center
+
+    |
+
+    1. ファイル名を入力し、 ``OK`` ボタンを押します。
+
+    :保存形式:
+        **.anim** 
+
+    .. note::
+        .animファイルは Unityでそのまま読み込み可能な AnimationClipファイルです。
+
+    .. warning::
+        本アプリ ``ver 2.0.0`` 時点では HumanoidのAnimatorのモーションのみに対応しています。.bvhは試験運用中のため動作保証はまだできません。ご了承下さい。
+
+        .animファイルを本アプリで再び読み込むことはできません。
+
+    | 
+
+    .. index:: モーションの読み込み（アニメーションプロジェクト）
+
+    .. _openmotionfile:
+
+    モーションファイルを読み込む
+    =================================
+
+    　モーションファイル ``.vvmmot`` を読み込み、アニメーションプロジェクト中の特定のロール（タイムライン）に反映させることができます。
+
+    1. リボンバーの ``アニメーション`` タブの ``設定`` をクリックします。
+
+    2. ``役割の管理`` タブを開きます。
+
+    3. 読み込ませたいロールの行を選択します。
+
+    4. ツールバーの ``モーションファイルを読み込み`` をクリックします。
+
+    .. image:: img/loadsave_2.png
+        :align: center
+
+    |
+
+    5. 対象のファイルを選択すると自動的に読み込まれます。
+
+    **別方法**
+
+    1. モーションを適用したいロールに割り当てられているキャストを選択します。
+    2. エクスプローラ等から ``.vvmmot`` ファイルをWebGL画面にドラッグアンドドロップします。
+
+    .. note::
+        * ロールの種類が同じである必要があります。
+        * すでにモーションデータが存在する場合は上書きされますのでご注意ください（全部削除してから新規登録の扱い）。
+        * 現在のプロジェクトの最大フレーム数より多い場合、その最大フレーム数までにカットされます。事前にある程度フレーム数を拡張しておくことをオススメします。
+        * ドラッグアンドドロップする場合、 ``.vvmmot`` の拡張子のみ有効です。（ ``.json`` では開けません）
+        * ドラッグアンドドロップする場合、現在選択中のキャストが何らかのロールに割り当てられている必要があります。（プロジェクトの設定画面から行う場合はロールに直接適用されるため、キャストが割り当てられていなくても問題ありません）
+
+    .. hint::
+        　モーションにかかる各フレームの時間(duration)はタイムラインごとに（さらにはフレームごとに）独立しているため、既存のプロジェクトに読み込ませても他のタイムラインに影響はありません。
 
 |
 
-5. Enter the file name and press the ``OK`` button.
-
-:Save format:
-    **.vvmmot**
-
-    * Although it has its own extension, it is actually just a JSON format file. You can read it even if you change the extension to .json. Operation is not guaranteed if incorrect data is read.
-
-.. index:: Notes on reading and writing motion files
-
-.. warning::
-    **Pay attention to the physique of the VRM that creates the motion**
-
-    When creating motion data with VRM, if you replace it with a VRM with a different height or physique in the middle, there will be a gap in the ground and each part. Be sure to complete the motion creation with the same VRM.
-
-    example:
-        1. Create the motion halfway with a 160cm VRM and save it in a file
-        2. Load the vvmmot file into a 155cm VRM on another day and create the continuation of the motion
-        3. On another day, load the vvmmot file into a 140cm VRM and play the motion
-
-        In this case, 3's 140cm VRM causes the whole body to float and move unexpectedly during motion.
-
-.. caution::
-    After loading the motion, if you want to save it as a motion file again, **must** register each keyframe once.
-
-    Immediately after loading the motion, the current VRM's height information and the height information of another VRM as reference information in the motion are mixed in the timeline (roll).
-
-    | By registering the keyframe again, the motion will be registered as the current height and physique of the VRM.
-    | (When registering, it is not necessary to move the pose etc. You can press the register button as soon as the frame number is selected and the object such as VRM reproduces the motion)
-
-    This has the same meaning as the above problem "Pay attention to the physique of the VRM that creates the motion".
-
-
-.. index:: save motion in .anim format
-
-General format such as Unity
------------------------------------
-
-1. Click ``Settings`` on the ``Animation`` tab of the ribbon bar.
-
-2. Open the ``Manage Roles`` tab.
-
-3. Select the row of the role you want to save.
-
-4. Click ``Export as a generic motion file`` on the toolbar.
-
-5. Click the desired format menu.
-
-.. image::img/loadsave_d.png
-    :align: center
-
-|
-
-1. Enter a file name and press the ``OK`` button.
-
-:Save format:
-    **.anim**
-
-.. note::
-    An .anim file is an AnimationClip file that can be read as-is in Unity.
-
-.. warning::
-    As of ``ver 2.0.0`` of this application, only motions of Humanoid's Animator are supported. .bvh is still under test operation, so it is not guaranteed to work. please note that.
-
-    The .anim file cannot be read again by this application.
-
-| 
-
-.. index:: load motion (animation project)
-
-.. _openmotionfile:
-
-load motion file
-=================================
-
-A motion file ``.vvmmot`` can be read and reflected in a specific role (timeline) in an animation project.
-
-1. Click ``Settings`` on the ``Animation`` tab of the ribbon bar.
-
-2. Open the ``Manage Roles`` tab.
-
-3. Select the row of the role you want to load.
-
-4. Click ``Load Motion File`` on the toolbar.
-
-.. image::img/loadsave_2.png
-    :align: center
-
-|
-
-5. Select the target file and it will be loaded automatically.
-
-**Alternative method**
-
-1. Select the cast assigned to the role you want to apply the motion to.
-2. Drag and drop the ``.vvmmot`` file from Explorer etc. to the WebGL screen.
-
-.. note::
-    * Role types must be the same.
-    * Please note that if motion data already exists, it will be overwritten (handle new registration after deleting all).
-    * If the number of frames is more than the maximum number of frames in the current project, it will be cut to the maximum number of frames. It is recommended to expand the number of frames to some extent in advance.
-    * When dragging and dropping, only ``.vvmmot`` extension is valid. (Cannot be opened with ``.json``)
-    * When dragging and dropping, the currently selected cast must be assigned to some role. (If you do it from the project settings screen, it will be applied directly to the role, so there is no problem even if the cast is not assigned.)
-
-.. hint::
-    The time (duration) of each frame that motion takes is independent for each timeline (and even for each frame), so loading it into an existing project will not affect other timelines.
-
-|
-
-.. index:: Save Animation Project (Animation Project)
+.. index:: アニメーションプロジェクトの保存（アニメーションプロジェクト）
 
 .. _saveproject:
 
-Save animation project file
+アニメーションプロジェクトファイルを保存する
 ===================================================
 
-Once you have created an animation project, you can save it as a file.
+　一通りアニメーションプロジェクトを作成したらファイルとして保存することができます。
 
 
-:Saved content:
-    * Timeline (including all keyframes)
-    * Information on all roles
-    * Other settings on the animation project
-    * Materials in the project (including actual files)
+:保存される内容:
+    * タイムライン（すべてのキーフレーム含む）
+    * 全ロールの情報
+    * その他アニメーションプロジェクト上の設定
+    * プロジェクト内の素材（実際のファイル含む）
 
-1. Click ``Save`` from the ``Animation`` tab of the ribbon bar.
+1. リボンバーの ``アニメーション`` タブから ``保存`` をクリックします。
 
-.. image::img/loadsave_3.png
+.. image:: img/loadsave_3.png
     :align: center
 
 |
 
-2. Click ``Save`` or ``Save As``.
+2.  ``保存`` あるいは ``名前を付けて保存`` をクリックします。
 
-.. image::img/loadsave_4.png
+.. image:: img/loadsave_4.png
     :align: center
 
 .. note::
-    Each OS version has a ``Terminal`` menu that allows you to save directly to your PC.
+    各OS版の場合、 ``端末`` のメニューがあり、PCに直接保存することができます。
 
-3. For ``Save As``, enter a name in the input dialog.
+3.  ``名前をつけて保存`` の場合、入力ダイアログ上で名前を入力します。
 
-The animation project will be saved in the dedicated storage inside the app or on your PC.
+アニメーションプロジェクトがアプリ内部の専用ストレージまたはPCに保存されます。
 
 .. note::
-    * In the case of **Save**, a confirmation message will be displayed if the project already exists.
-    * After saving, a notification message will be displayed on the upper right.
+    * **保存** の場合、すでにプロジェクトが存在すると確認メッセージが表示されます。
+    * 保存後は右上に通知メッセージが表示されます。
 
 
 |
 
 
-:Save format:
+:保存形式: 
     **.vvmproj**
 
-    * Although it is a unique extension, it is actually just a JSON format file.
+    ※独自の拡張子ですが実際はただのJSON形式のファイルです。
 
 
 .. |projopen| image:: img/loadsave_5.png
 
 
-|projopen| To download to a PC or terminal, click ``Open`` to display the internal storage dialog, then click this button on the toolbar.
+|projopen| PCや端末にダウンロードする場合は ``開く`` で内部ストレージダイアログを表示した後、ツールバーのこのボタンをクリックしてください。
+
 
 
 |
 
-.. index::
-    Open Animation Project (Animation Project)
-    Restoring the actual object
-    Behavior after opening an object
+.. index:: 
+    アニメーションプロジェクトを開く（アニメーションプロジェクト）
+    実際のオブジェクトの復元
+    オブジェクトを開いた後の挙動
 
 .. _openproject:
 
-Open animation project
+アニメーションプロジェクトを開く
 =================================
 
-You can read the saved project file.
+　保存したプロジェクトファイルを読み込むことが出来ます。
 
-1. Click ``Open`` from the ``Animation`` tab of the ribbon bar.
+1. リボンバーの ``アニメーション`` タブから ``開く`` をクリックします。
 
-2. ``From File`` opens the OS file dialog, and ``From Internal Storage`` opens the internal storage dialog within the app.
+2. ``ファイルから`` の場合はOSのファイルダイアログが、``内部ストレージから`` はアプリ内で内部ストレージダイアログが開きます。
 
 .. hint::
-    You can filter projects using the search box at the top of the list.
+    一覧上部の検索ボックスでプロジェクトを絞り込むことができます。
 
-    .. image::img/loadsave_e.png
+    .. image:: img/loadsave_e.png
         :align: center
 
-3. After selecting the target project, press the ``OK`` button.
+3. 対象のプロジェクトを選んだら ``OK`` ボタンを押します。
 
 
-What is restored
-    * Timeline (including all keyframes)
-    * Information on all roles
-    * Other settings on the animation project
-    * Materials in the project (including actual material files)
-    * Cast entity (actual object file)
+復元される内容
+    * タイムライン（すべてのキーフレーム含む）
+    * 全ロールの情報
+    * その他アニメーションプロジェクト上の設定
+    * プロジェクト内の素材（実際の素材ファイル含む）
+    * キャストの実体（実際のオブジェクトファイル）
 
-.. admonition:: Differences between the web application version and each OS version
+.. admonition:: ウェブアプリ版と各OS版の違い
 
-    The actual behavior when opening a project file differs between the web application version and each OS version. If there is a VRM or 3D model file used in the project, it will be loaded as follows.
+    プロジェクトファイルを開く際の実際の挙動がウェブアプリ版と各OS版では異なります。プロジェクトで使用したVRMや3Dモデルファイルがある場合、次のように読み込まれます。
 
-    Web application version
-        Reads files saved in the app (a special location prepared by the browser in the terminal) (not saved on the server of this app).
+    ウェブアプリ版
+        アプリ内（ブラウザが端末内に用意した特別な場所）に保存されたファイルを読み込みます（本アプリのサーバには保存されません）。
 
-    Each OS version
-        Only meta information such as file path and file type is stored in the app. Refer to the meta information and open and read the VRM and 3D model files in the actual terminal.
+    各OS版
+        アプリ内にはファイルパスやファイル種類などのメタ情報のみ保存されます。そのメタ情報を参照して実際の端末内にあるVRMや3Dモデルファイルを開き読み込みます。
 
-    In the project file, there is a property called ``path`` that indicates the file path of each cast, but it is not the actual file path. Even if you edit the file path directly there, the file targeted for that cast will not be loaded.
+    　プロジェクトファイル内には各キャストのファイルパスを示す ``path`` というプロパティがありますが、そこは実際のファイルパスではありません。そこにファイルパスを直接編集してもそのキャストの対象のファイルは読み込まれません。
 
-    This is due to the fact that HTML and javascript are used, and as a security measure, only files that have been opened once are allowed to be read automatically**. please note that.
+    　これはHTMLやjavascriptを使う関係上、 **セキュリティ対策として、一度開いたことのあるファイルしか自動的に読み込ませない** という制限をかけているためです。ご了承下さい。
 
-.. admonition:: restore the actual object
+.. admonition:: 実際のオブジェクトの復元
 
-    The casts (objects) assigned to each role are also automatically opened and restored as much as possible.
+    　各ロールに割り当てられていたキャスト（オブジェクト）も可能な限り自動的に開いて復元されます。
+    
+    | 　ただし次の条件に合致するオブジェクトのみです。
+    | 　合致しないオブジェクトは読み込まれず、該当のロールにはどのキャストも割り当てられません。アニメーションを再生してもそのロールは動かないので、「 :ref:`settingcast2role` 」の操作をする必要があります。
+    
+    * 基本の図形(OtherObject), Camera, Light, Effect, Text
+    * アプリの履歴に保存されているオブジェクトファイル（VRM, OtherObject, Image, UImage）
+    * 設定で指定されたサイズ以下のオブジェクトファイル
+ 
 
-    | However, only objects that meet the following conditions.
-    | Objects that do not match will not be loaded and no cast will be assigned to the corresponding role. Playing the animation does not move the role, so you need to operate " :ref:`settingcast2role` ".
-
-    * Basic shapes (OtherObject), Camera, Light, Effect, Text
-    * Object files (VRM, OtherObject, Image, UImage) stored in the app history
-    * Object files that are less than or equal to the size specified in the settings
-
-
-    For VRM and other objects, the criteria for assigning roles are different. If they match each other, the assignment will be completed automatically and you will be able to operate it immediately on the app.
+    　VRMとそれ以外のオブジェクトについては、ロールに割り当てる基準となる項目が異なります。それぞれ合致した場合は自動的に割り当てが完了し、アプリ上ですぐに操作可能になります。
 
     .. csv-table::
         :header-rows: 1
         :align: center
 
-        Kind, Criteria
-        VRM, title of VRM
-        OtherObject, filename
-        Image, filename
-        UImage, filename
-        Other than above, automatically depending on type
+        種類, 基準
+        VRM, VRMのタイトル
+        OtherObject, ファイル名
+        Image, ファイル名
+        UImage, ファイル名
+        上記以外, 種類に応じて自動的に
 
-    * Audio is not included here.
+    ※ここではAudioは含みません。 
 
 .. caution::
-    The contents of previously opened projects are reset.
+    これまでに開いていたプロジェクトの内容はリセットされます。
 
-    Settings ``Do not load files larger than this size automatically when the project is opened.`` If is a valid size, each oversized object will skip loading when opening an animation project. In this case, open the corresponding object file later. Restoring rolls and casts is described above.
+    設定 ``プロジェクトを開いた時、このサイズを超えるファイルを自動的に読み込まない。`` を有効なサイズにしている場合、アニメーションプロジェクトを開く際にサイズを超えた各オブジェクトは読み込みをスキップします。この場合、後から該当するオブジェクトのファイルを開いてください。ロールとキャストの復元については上記の通りです。
 
 
 
-.. index:: Create a new project (animation project)
+.. index:: プロジェクトを新規作成する（アニメーションプロジェクト）
 
-Create a new project
+プロジェクトを新規作成する
 ===============================
 
 
-Create a new project. It is not necessary when starting the application. Use this when you want to start over an already open project.
+　プロジェクトを新規作成します。アプリ起動時は必要ありません。すでに開いているプロジェクトを一からやり直したい場合などに利用します。
 
-1. Click ``New`` from the ``Animation`` tab of the ribbon bar.
+1. リボンバーの ``アニメーション`` タブから ``新規作成`` をクリックします。
 
 
-What New Creation Does
-    * Removed all animation projects (except SystemEffect, BGM, SE, Stage)
-    * Delete all loaded VRoid/VRM, each object
+新規作成で行われること
+    * アニメーションプロジェクトをすべて削除（SystemEffect、BGM、SE、Stageを除く）
+    * 読み込み済みのすべてのVRoid/VRM、各オブジェクトの削除
 
 
 |
 
-.. index:: Manage project files (animation projects)
+.. index:: プロジェクトファイルを管理する（アニメーションプロジェクト）
 
-Manage project files
+プロジェクトファイルを管理する
 ====================================
 
-You can manage saved project files in the internal storage dialog.
+　保存したプロジェクトファイルを内部ストレージダイアログで管理できます。
 
-1. Click ``Open`` from the ``Animation`` tab of the ribbon bar.
+1. リボンバーの ``アニメーション`` タブから ``開く`` をクリックします。
 
-.. image::img/loadsave_6.png
+.. image:: img/loadsave_6.png
     :align: center
 
 |
 
 
-2. The Internal Storage dialog will open.
+2. 内部ストレージダイアログが開かれます。
 
 |
 
-open from file
+ファイルから開く
 ---------------------
 
-1. Click this button on the toolbar.
+1. ツールバー上のこのボタンをクリックします。
 
-.. image::img/loadsave_7.png
+.. image:: img/loadsave_7.png
     :align: center
 
 |
 
 
-1. Select and open the file with the desired extension .vvmproj or .json.
+1. 対象の拡張子 .vvmproj または .json のファイルを選択して開きます。
 
-* Operation is not guaranteed if incorrect data is read.
+※正しくないデータを読み込んだ場合の動作は保証致しません。
 
 |
 
-rename
+名前を変更する
 ----------------
 
-1. Click this button on the toolbar and enter a new name.
+1. ツールバー上のこのボタンをクリックし、新しい名前を入力します。
 
-.. image::img/loadsave_8.png
+.. image:: img/loadsave_8.png
     :align: center
 
 |
 
-Delete from internal storage
+内部ストレージから削除する
 -----------------------------
 
-1. Click this button on the toolbar.
+1. ツールバー上のこのボタンをクリックします。
 
-.. image::img/loadsave_9.png
+.. image:: img/loadsave_9.png
     :align: center
 
 |
 
 .. note::
-    All materials linked to the project will also be deleted from within the app.
+    プロジェクトに紐づいた素材も全てアプリ内から削除されます。
 
 
-.. index::
-    Backing up project files (animation projects)
-    backup
-    Restore backup
+.. index:: 
+    プロジェクトファイルをバックアップする（アニメーションプロジェクト）
+    バックアップ
+    バックアップの復元
 
-Back up your project files
+プロジェクトファイルをバックアップする
 =========================================
 
-You can periodically back up the currently open project.
+　現在開いているプロジェクトを、定期的にバックアップすることができます。
 
-1. Open the app settings.
-2. Check ``Back up project`` in the Application tab.
-3. In Backup Interval, specify how often you want backups to occur automatically, in minutes.
+1. アプリの設定を開きます。
+2. アプリケーションタブにある ``プロジェクトをバックアップする`` にチェックを入れます。
+3. バックアップの間隔に、どのくらいの頻度でバックアップを自動的にするか目的の分を指定します。
 
-.. image::img/loadsave_b.png
+.. image:: img/loadsave_b.png
     :align: center
 
-4. Open the internal storage dialog and it will be saved as ``%BACKUP%``.
+4. 内部ストレージダイアログを開くと、 ``%BACKUP%`` の名称で保存されています。
 
-.. image::img/loadsave_c.png
+.. image:: img/loadsave_c.png
     :align: center
 
 |
 
-.. admonition:: What triggered the backup
+.. admonition:: バックアップの作動するきっかけ
 
-    Backups are subject to action when you:
+    バックアップは次の操作をすると動作の対象となり、指定の間隔で作動します。
 
-    * changed maximum number of frames
-    * Registered/deleted keyframes
-    * Pasted keyframes from the clipboard
-    * Cleared the contents of the timeline
-    * Removed roles and timelines
+    * フレームの最大数を変更した
+    * キーフレームを登録・削除した
+    * キーフレームをクリップボードから貼り付けた
+    * タイムラインの内容をクリアした
+    * ロールおよびタイムラインを削除した
 
-    Conversely, as long as you don't register a keyframe, you can continue to do new operations without overwriting the old backup.
+    逆をいえば、キーフレームに登録さえしなければ古いバックアップを上書きせずに新しい操作を行い続けることができます。
 
 
-If an unexpected situation occurs and the app terminates or becomes uncontinuable, opening ``%BACKUP%.vvmproj`` will allow you to immediately resume from the previous state.
+　予期せぬ事態が起きてアプリが終了したり継続不可能になった場合、 ``%BACKUP%.vvmproj`` を開けば以前の状態からすぐ再開できるようになります。
 
 .. warning::
-    After opening the backed up project file, change the file name when saving again. File names containing ``%BACKUP%`` cannot be saved.
+    バックアップされたプロジェクトファイルを開いた後、改めて保存する際はファイル名を変更してください。 ``%BACKUP%`` が入ったファイル名では保存できません。
+

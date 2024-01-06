@@ -1,72 +1,73 @@
-##########################################
-Keyboard shortcut
-##########################################
+#########################################
+キーボードショートカット
+#########################################
 
 
 .. contents::
 
-.. index:: keyboard navigation
+.. index:: キーボードでの操作
 
-Operation with the keyboard
-====================================
+キーボードでの操作
+======================
 
-The keyboard operation in this application is summarized.
+本アプリでのキーボード操作をまとめます。
 
 
-**Main camera operation**
+**メインカメラの操作**
 
 .. csv-table::
 
-    key, operation
-    W, zoom in (forward)
-    S, zoom out (backward)
-    A, move left
-    D, move right
-    Shift + W, Rotate Up
-    Shift + S, rotate down
-    Shift + A, rotate left
-    Shift + D, rotate right
-    F, move up
-    V, move down
-    Q, undo the rotation by the Z axis of the camera
-    M, Switch Camera and Current object
-    R, reset camera and center point
-    I, Separate the distance between the camera and the center point
-    O, Close the distance between the camera and the center point
-    Move the mouse while holding down Ctrl and left mouse click to rotate
-    SPACE, move the mouse while holding it down with the left click of the mouse
+    キー,  操作
+    W,ズームイン（前進）
+    S,ズームアウト（後退）
+    A,左移動
+    D,右移動
+    Shift + W,上へ回転
+    Shift + S,下へ回転
+    Shift + A,左へ回転
+    Shift + D,右へ回転
+    F,上に移動
+    V,下に移動
+    Q,カメラのZ軸による回転を元に戻す
+    M,カメラ←→現在オブジェクト操作の切り替え
+    R,カメラと中心点のリセット
+    I,カメラと中心点の距離を離す
+    O,カメラと中心点の距離を近づける
+    Ctrl,マウスの左クリックと一緒に押したままマウスを動かして回転
+    SPACE,マウスの左クリックと一緒に押したままマウスを動かして移動
 
 .. note::
-    * You can change the speed of the camera during keyboard operation (WASD only) in the setting ``Movement speed of the camera during key operation``.
+    ※キーボード操作時（WASDのみ）のカメラのスピードは設定 ``キー操作時のカメラの移動速度`` で変更することができます。
 
-**Manipulating Current Objects**
-
-.. csv-table::
-
-    key, operation
-    W, Forward
-    S, retreat
-    A, move left
-    D, move right
-    F, move up
-    V, move down
-    Shift + W, rotate forward
-    Shift + S, rotate backward
-    Shift + A, turn left
-    Shift + D, turn right
-    Shift + F, rotate left
-    Shift + V, rotate right
-    Return the rotation of Q and IK to 0
-    G, global/local switching (**For movement/rotation by key operation**)
-    M, Switch Camera and Current object
-
-**Working with object IK markers**
+**現在オブジェクトの操作**
 
 .. csv-table::
 
-    key, operation
-    Ctrl + click IK markers to select multiple
-    Switch between X, global and local coordinates (**for IK markers**)
-    Restore the T, IK markers to their initial state (both movement and rotation)
-    Shift + Z, undo movement/rotation of IK
-    Redo Shift + Y, IK movement/rotation
+    キー,  操作
+    W,前進
+    S,後退
+    A,左移動
+    D,右移動
+    F,上に移動
+    V,下に移動
+    Shift + W,前方へ回転
+    Shift + S,後方へ回転
+    Shift + A,左を向く
+    Shift + D,右を向く
+    Shift + F,左方へ回転
+    Shift + V,右方へ回転
+    Q,IKの回転を0に戻す
+    G,グローバル・ローカル切り替え（ **キー操作による移動・回転に対して** ）
+    M,カメラ←→現在オブジェクト操作の切り替え
+
+**オブジェクトのIKマーカーの操作**
+
+.. csv-table::
+
+    キー,   操作
+    Ctrl,押しながらIKマーカーをクリックして複数選択
+    X,グローバル座標・ローカル座標の切り替え（ **IKマーカーに対して** ）
+    T,IKマーカーを初期状態に戻す（移動・回転両方）
+    Shift + Z,IKの移動・回転をもとに戻す
+    Shift + Y,IKの移動・回転をやり直す
+

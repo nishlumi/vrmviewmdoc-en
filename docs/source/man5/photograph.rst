@@ -1,63 +1,64 @@
-##########################################
-Screenshot
-##########################################
+#########################################
+スクリーンショット
+#########################################
 
 .. contents::
 
-.. index:: take a screenshot (shoot)
+.. index:: スクリーンショットを撮る（撮影）
 
-picture
+撮る
 =========================================
 
 
-You can take a screenshot of the current WebGL screen state and save it.
+　現在のWebGL画面の状態をスクリーンショットとして撮影し、保存することができます。
 
-1. Open the Home or Display tab of the Ribbon bar.
+1. リボンバーのホームタブあるいは画面タブを開きます。
 
-2. Click “Capture” on each tab.
+2. それぞれのタブにある「キャプチャ」をクリックします。
 
 .. |homecap| image:: img/photograph_1.png
 .. |screencap| image:: img/photograph_2.png
 
-============= ============
-Home tab      Screen tab
-------------- ------------
-|homecap|     |screencap|
-============= ============
+.. csv-table::
+    :header-rows: 1
 
-3. To view the screenshots you have taken, click "List".
+    ホームタブ   ,   画面タブ
+    |homecap|   ,   |screencap|
 
-* Screenshots will be displayed in a separate window.
+3. 撮影したスクリーンショットを閲覧する場合は「一覧」をクリックします。
+
+※別ウィンドウでスクリーンショット一覧が表示されます。
 
 
 .. note::
-    * Only the "capture" button, which is thought to be used frequently, is placed on the home tab.
-    * You can shoot with the sky and ground transparent by checking "**Make transparent**" in the background options.
-    * IK markers are automatically cut without changing settings.
+    | ※ホームタブにはよく使うと思われる「キャプチャ」ボタンのみ置かれています。
+    | ※背景オプションで「**透明にする**」にチェックを入れると空と地面を透明にして撮影することができます。
+    | ※IKマーカーは設定変更しなくても自動的にカットされます。
 
 
 |
 
-.. index:: View screenshot (taken)
+.. index:: スクリーンショットを見る（撮影）
 
-look
+見る
 =========================================
 
-The screenshots you take are saved in the app. All can be viewed in a separate window and saved as needed.
+　撮影したスクリーンショットはアプリ内に保存されます。別ウィンドウですべて閲覧したり必要に応じて保存することができます。
 
 
-1. Click “List” on the screen tab of the ribbon bar to open it.
+1. リボンバーの画面タブにある「一覧」をクリックして開きます。
 
 .. image:: img/photograph_3.png
     :align: center
 
 |
 
-:What you can do:
-    * display in chronological order
-    * Update to the latest state (because shooting on the main screen is not immediately reflected in another window)
-    * delete
-    * save to local disk
+:できること:
+    * 時系列で表示
+    * 最新の状態に更新（メイン画面で撮影しても別ウィンドウにはすぐに反映されないため）
+    * 削除
+    * ローカルディスクに保存
+    * 共有（ver 2.3.0より）
 
 .. image:: img/photograph_d.png
     :align: center
@@ -66,39 +67,51 @@ The screenshots you take are saved in the app. All can be viewed in a separate w
 
 
 .. hint::
-    If there is more than one Camera object, previewing with one of them will make that image the target of the screenshot. When you stop previewing everything, it will return to the image from the main camera.
+    Cameraオブジェクトが1つ以上存在する場合、いずれかでプレビューをするとその映像がスクリーンショットの対象になります。すべてをプレビュー停止すると、メインカメラからの映像に戻ります。
 
-    Since the preview in the viewport and render texture is also reflected, please turn on "Take screenshots with HTML function" in the settings as necessary. Then, the screen shot will be taken as it is (including the camera object viewport and render texture) on the WebGL screen.
+    ビューポートやレンダーテクスチャ中のプレビューも反映されてしまうため、必要に応じて設定の「スクリーンショットをHTMLの機能で撮影する」をONにしてください。そうするとWebGL画面に写った(Cameraオブジェクトのビューポートやレンダーテクスチャ含め)そのままがスクリーンショットになります。
 
 |
 
-.. index:: search for screenshots
+.. index:: スクリーンショットの検索
 
 
-seek
+探す
 ============================
 
-The screenshots taken are managed in date order, and it is possible to search for specific dates from the calendar.
+　撮影したスクリーンショットは日付順に管理されており、カレンダーから特定の日付だけを探すことが可能です。
 
 .. image:: img/photograph_e.png
     :align: center
 
 |
 
-Dates with screenshots are darkened and clickable.
+スクリーンショットがある日付は日にちの色が濃くなっていてクリックできるようになっています。
 
-1. Click the darkened date.
-2. The displayed contents of the screenshot list are updated, and the screenshots for the selected date are displayed.
+1. 色が濃くなっている日にちをクリックします。
+2. スクリーンショット一覧の表示内容が更新され、選択した日にちのスクリーンショットが並びます。
 
-.. index:: save screenshot
+.. index:: スクリーンショットの保存（撮影）
 
-save
+保存する
 ======================================
 
 .. |dwnbtn| image:: img/vtt_013.png
 
-1. Select the screenshot you want to save.
-2. Press this button |dwnbtn| on the toolbar.
-
+1. 保存したいスクリーンショットを選択します。
+2. ツールバー上のこのボタン |dwnbtn| を押します。
+   
 .. note::
-    * When using from a browser, you can also copy the image to the clipboard and use other functions by right-clicking.
+    ※ブラウザからの利用の場合、右クリックでも画像をクリップボードにコピーしたりその他機能を利用可能です。
+
+共有する
+=========================================
+
+ver 2.3.0より、画像の共有に対応しました。ブラウザから利用する場合のみ使用できます。
+
+.. |shrbtn| image:: img/photograph_f.png
+
+1. 共有したいスクリーンショットを選択します。
+2. ツールバー上の |shrbtn| 共有ボタンを押します。
+3. 各OSごとに共有機能のウィンドウが表示されるので、送りたい先のアプリを選択します。
+

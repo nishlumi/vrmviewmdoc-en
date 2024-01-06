@@ -1,19 +1,19 @@
-##########################################
-Various animation settings
-##########################################
+#########################################
+アニメーションの各種設定
+#########################################
 
 .. contents::
 
 
-.. index:: set number of frames and FPS (animation project)
+.. index:: フレーム数とFPSを設定する（アニメーションプロジェクト）
 
 
 .. _setfpsframe:
 
-Set number of frames and FPS
+フレーム数とFPSを設定する
 -------------------------------
 
-"Determine the length of the animation first." By default it is 60 and FPS is also 60. Please set two places of the figure in the ``Animation`` tab of the ribbon bar as you like.
+　アニメーションの長さを最初に決めます。デフォルトでは60となっており、FPSも60になっています。リボンバーの ``アニメーション`` タブにある図の2箇所を好みで設定してください。
 
 .. |prop_right| image:: img/proper_1right.png
 .. |prop_left| image:: img/proper_1left.png
@@ -23,232 +23,232 @@ Set number of frames and FPS
     :align: center
 
     |prop_left| , |prop_right|
-    project settings screen, ribbon bar
-    FPS (frames per second), maximum number of frames
+    プロジェクトの設定画面, リボンバー
+    FPS（1秒間あたりのフレーム数）, 最大のフレーム数
 
 |
 
-* ``Frame`` indicated by FPS and ``Frame`` in this application are not the same. ``Frame`` in this application is just an array for data management.
+※FPSで示される ``フレーム`` と本アプリでの ``フレーム`` は同意味ではありません。本アプリでの ``フレーム`` はあくまでもデータの管理上の配列の意味にすぎません。
 
 .. warning::
-    Changing FPS will recalculate ``FPS / 6000.0`` and automatically update the duration of all keyframes. Any manually set intervals will also change, so make sure you really want to change the FPS.
+    FPSを変更すると、 ``FPS / 6000.0`` を再計算して自動的に全キーフレームのduration(間隔)を更新します。手動で設定した間隔も全て変更されるので、FPSの変更を本当にするべきなのか確認してください。
 
 |
 
-.. index:: set the default interval
+.. index:: デフォルトの間隔を設定する
 
 .. _setdefaultduration:
 
-Set default interval
+デフォルトの間隔を設定する
 ---------------------------------
 
-In an animation project, the interval between reaching the content of the frame is determined in seconds. By default, the calculation result of ``FPS / 6000.0`` is set.
+　アニメーションプロジェクトでは、そのフレームの内容に到達する間隔が秒数で決まっています。デフォルトでは ``FPS / 6000.0`` の計算結果が設定されています。
 
-You can change this to any number of seconds.
+　これを任意の秒数に変更することができます。
 
-1. Open the project settings screen.
-2. Enter the ``default duration`` on the Project information tab. (0.0001 to 99.9999 seconds)
-3. If you want to recalculate all the currently registered keyframe intervals, press the ``Recalculate`` button.
+1. プロジェクトの設定を開きます。
+2. プロジェクト情報タブの ``デフォルトの間隔`` を入力します。（0.0001～99.9999 秒）
+3. 現在登録済みのキーフレームの間隔も全て再計算する場合、 ``再計算`` ボタンを押してください。
 
-.. image::img/proper_h.png
+.. image:: img/proper_h.png
     :align: center
 
 |
 
-By specifying it here, subsequent keyframe registrations will be registered based on the number of seconds after the change.
+　ここで指定することにより、これ以後のキーフレームの登録では変更後の秒数が基準となって登録されます。
 
-If you register more than one frame apart, the frame interval will be the number of seconds adjusted based on the calculation result of ``default interval * number of frames apart``.
+　フレームを1つ以上離して登録すると、そのフレームの間隔は ``デフォルトの間隔 * 離したフレーム数`` の計算結果をベースとして調整された秒数となります。
 
 .. hint::
-    If you want to set the interval for each keyframe, please refer to :doc:`animation_register` ... "Setting the keyframe interval" below.
+    キーフレーム個別で間隔を設定したい場合は後述の :doc:`animation_register` →「キーフレームの間隔を設定する」を参照してください。
 
 .. warning::
-    Pressing the ``Recalculate`` button will automatically update the duration of all keyframes. All manually set intervals will also be changed, so do not press if you want to target only the keyframes after the change.
+    ``再計算`` ボタンを押すと自動的に全キーフレームのduration(間隔)を更新します。手動で設定した間隔も全て変更されるので、変更以降のキーフレームのみ対象にする場合は押さないでください。
 
 
-.. index::
-    Set WebGL screen size (animation project)
-    window size
-    WebGL screen size
+.. index:: 
+    WebGL画面サイズを設定する（アニメーションプロジェクト）
+    ウィンドウサイズ
+    WebGL画面サイズ
 
-Set WebGL screen size
+WebGL画面サイズを設定する
 ---------------------------
 
 
-　Set the screen size of WebGL as necessary. The default depends on the size of the window. Specify the screen size in the ``Screen`` tab of the ribbon bar.
+　必要に応じてWebGLの画面サイズを設定します。デフォルトはウィンドウの大きさに依存しています。リボンバーの ``画面`` タブにて画面サイズを指定してください。
 
-.. image::img/proper_2.png
+.. image:: img/proper_2.png
     :align: center
 
 |
 
-| If you specify a screen size that exceeds the window size of the current app, a scroll bar will be displayed.
-| If you press the ``Original size`` button, the screen size will return to fit the window size.
+| 　現在のアプリのウィンドウサイズを超える画面サイズを指定した場合はスクロールバーが表示されます。
+| 　 ``元のサイズ`` ボタンを押すとウィンドウサイズにフィットした画面サイズに戻ります。 
 
-Also, please note that if the ratio is different, the expected view from the main camera and Camera object will change when the screen size is changed.
-
-
-.. admonition:: Relation between window size and WebGL screen size
-
-    There are two meanings in this application: window size change and WebGL screen size change.
-
-    :change window size:
-        "This is a change to the app window itself." The width and height after subtracting the ribbon bar, left and right panels, and timeline panel will be the final size of the WebGL screen. If the WebGL screen size is the initial state of the app, the WebGL screen will automatically resize according to the window size.
+　また、比率が違うと画面サイズを変えた時にメインカメラやCameraオブジェクトからの想定していた見え方が変わってきますのでご注意ください。
 
 
-    :WebGL screen size change:
-        | The size can be changed regardless of the application window. Scrollbars will appear if the WebGL screen size is significantly larger. If you have changed the WebGL screen size manually even once, it will not change automatically even if you change the window size.
-        | If you restore it to ``original size``, it will be automatically resized again.
+.. admonition:: ウィンドウのサイズとWebGLの画面サイズの関係について
+
+    本アプリではウィンドウサイズの変更とWebGLの画面サイズの変更の2種類の意味が存在します。
+
+    :ウィンドウサイズの変更:
+        　アプリのウィンドウ自体の変更です。リボンバーや左右のパネル・タイムラインパネルを差し引いた幅・高さがWebGL画面の最終的なサイズとなります。WebGL画面サイズがアプリの初期状態の場合、WebGL画面はウィンドウサイズに応じて自動的にリサイズされます。
+    
+    
+    :WebGLの画面サイズの変更:
+        | 　アプリのウィンドウと関係なくサイズを変更することができます。WebGL画面のサイズが大幅に大きい場合はスクロールバーが表示されます。一度でも手動でWebGL画面サイズを変更している場合はウィンドウサイズを変更しても自動的に変わることはありません。
+        | ``元のサイズ`` で元に戻せばまた自動的にリサイズされるようになります。
 
 |
 
-.. index:: Navigation (animation settings)
+.. index:: ナビゲーション(アニメーションの各種設定)
 
-navigation window
+ナビゲーションウィンドウ
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It is troublesome to scroll when the screen size changes. If you use this in such a case, you can expect to improve operability because you can scroll while grasping the whole.
+　画面サイズが変わった時にスクロールするのは手間になります。そのような時にこれを使うと全体を把握しつつスクロールできるようになるため操作性の向上が見込めます。
 
-1. Press the ``Navigation`` button in the Screens tab of the ribbon bar.
-
+1. リボンバーの画面タブにある ``Navigation`` ボタンを押します。
+ 
 .. image:: ../man5/img/general_scr02.png
     :align: center
 
 |
 
-2. A small navigation window will appear inside the main app window.
+2. アプリのメインウィンドウ内にナビゲーションの小ウィンドウが表示されます。
 
 .. image:: ../img/screen_naviwin.png
     :align: center
 
 |
 
-3. A red frame is displayed as the currently displayed range on the navigation preview screen.
-4. If the resolution of the WebGL screen is larger than the display area, clicking or dragging the red frame anywhere will scroll the WebGL screen accordingly.
+3. ナビゲーションのプレビュー画面に現在表示中の範囲として赤い枠が表示されます。
+4. 表示領域よりWebGL画面の解像度が大きい場合、赤い枠を任意の場所でクリックしたりドラッグすると、WebGL画面がその通りにスクロールします。
 
 .. hint::
-    You can also ``Resize`` and ``Reset Camera`` from within the navigation window.
+    ナビゲーションのウィンドウ内からも ``元のサイズ`` や ``カメラのリセット`` を行うことができます。
 
 |
 
 
-.. index:: assign cast to role (animation project)
+.. index:: ロールにキャストを割り当てる（アニメーションプロジェクト）
 
 .. _settingcast2role:
 
-Assign Cast to Role
+ロールにキャストを割り当てる
 --------------------------------
 
 
-An animation project has a timeline for each role. Roles are usually assigned automatically when loading a cast (avatar object). Here's how to assign a cast to a specific role.
+　アニメーションプロジェクトはロールごとにタイムラインが存在します。ロールは通常、キャスト（アバター・オブジェクト）を読み込んだときに自動的に割り当てられます。ここではキャストを特定のロールに割り当てる方法を説明します。
 
-By assigning a cast to a role, the animation data on the role can be played with that cast.
+　キャストがロールに割り当られることにより、ロール上にあるアニメーションデータをそのキャストで再生できるようになります。
 
 
-Timing when casts (avatars/objects) and roles are linked
-    * When loading a new VRoid/VRM or each object
-    * When changed later on the role setting screen
-    * When opening a saved project
+キャスト（アバター・オブジェクト）とロールが紐づくタイミング
+    * VRoid/VRMや各オブジェクトなどを新規に読み込んだとき
+    * 役割の設定画面で後から変更したとき
+    * 保存したプロジェクトを開いたとき
 
 
 
 |
 
-Assign Casts to Roles Later
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+後からキャストをロールに割り当てる
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    As a case, you want to replace an animation that has been registered once with a cast of the same type that is read later.
+    　ケースとしては、一度登録したアニメーションを後から読み込んだ同種類のキャストに置き換えたい、などです。
 
 
-    1. Click ``Settings`` from the ``Animation`` tab of the ribbon bar.
+    1. リボンバーの ``アニメーション`` タブから ``設定`` をクリックします。
 
-    .. image::img/proper_3.png
+    .. image:: img/proper_3.png
         :align: center
 
 
     |
 
-    2. Open the ``Manage Roles`` tab.
+    2.  ``役割の管理`` タブを開きます。
 
-    .. image::img/proper_4.png
+    .. image:: img/proper_4.png
         :align: center
 
     |
 
-    1. Click the row of the role you want to assign the cast to.
+    1. キャストを割り当てたい役割（ロール）の列をクリックします。
 
-    .. image::img/proper_5.png
-        :align: center
-
-
-    |
-
-    4. A pop-up dialog will open, select the desired cast and press the SET button.
-
-    .. image::img/proper_6.png
+    .. image:: img/proper_5.png
         :align: center
 
 
     |
 
-    ..note::
-        Select ``None`` to make the role uncast.
+    4. ポップアップダイアログが開くので、目的のキャストを選択してSETボタンを押します。
+
+    .. image:: img/proper_6.png
+        :align: center
 
 
-    5. Observe that the cast is automatically unassigned from its original role.
+    |
 
-    .. image::img/proper_7.png
+    .. note::
+        ``None`` を選択するとロールをキャストなしの状態にすることができます。
+
+
+    5. 元々の役割からキャストが自動的に割当解除されるのを確認します。
+
+    .. image:: img/proper_7.png
         :align: center
 
     |
 
-    * The display will also switch on the animation timeline.
+    ※アニメーションのタイムライン上も表示が切り替わります。
 
     .. figure:: img/proper_8.png
         :align: center
 
-        **Top:** Timeline for later assigned roles
+        **上:** 後から割り当てたロールのタイムライン
 
-        **Bottom:** Timeline of the original role
+        **下:** 元々のロールのタイムライン
 
     |
 
-    Cast unassigned roles and timelines remain intact and are not deleted.
+    キャストの割当が解除されたロールとタイムラインは削除されずにそのまま残ります。
 
 
 |
 
-.. index:: delete role (animation project)
+.. index:: ロールの削除（アニメーションプロジェクト）
 
-Delete role
+ロールを削除する
 --------------------
 
-| Delete the role. Delete roles that are no longer needed in your animation project. This operation also removes the actual object that is the cast assigned to the role.
-| To delete only the cast (object), right-click the object list and delete it.
+| 　ロールを削除します。アニメーションプロジェクトにおいて不要になったロールを削除します。この操作により、ロールに割り当てられているキャストである実際のオブジェクトも合わせて削除されます。
+| 　キャスト（オブジェクト）だけを削除する場合はオブジェクト一覧を右クリックして削除してください。
 
-1. Click ``Settings`` from the ``Animation`` tab of the ribbon bar.
+1. リボンバーの ``アニメーション`` タブから ``設定`` をクリックします。
 
-.. image::img/proper_3.png
+.. image:: img/proper_3.png
     :align: center
 
 |
 
-2. Open the ``Manage Roles`` tab.
-3. Check the radio button to the left of the role you want to remove, and click ``Remove Role`` on the toolbar.
+2. ``役割の管理`` タブを開きます。
+3. 削除したい役割の左端のラジオボタンにチェックを入れ、ツールバーの ``役割を削除`` をクリックします。
 
-.. figure::img/proper_9.png
+.. figure:: img/proper_9.png
     :align: center
 
 |
 
-4. A confirmation message will be displayed, so press the OK button.
+4. 確認メッセージが表示されるのでよければOKボタンを押します。
 
 .. warning::
-    * Deleting a role like this deletes both the role and the cast(object).
-    * Stages cannot be deleted.
+    * このようにロールを削除すると、ロールとキャスト（オブジェクト）の両方を削除します。
+    * Stageは削除できません。
 
 
-* The same thing can be done by right-clicking on the object list and selecting ``Delete both this object and role``.
+※オブジェクト一覧で右クリックし、 ``このオブジェクトとロールを両方削除する`` でも同じことを行えます。
 
 .. image:: img/proper_a.png
     :align: center
@@ -256,109 +256,112 @@ Delete role
 
 |
 
-.. index:: delete all timelines (animation project)
+.. index:: タイムラインをまとめて削除する（アニメーションプロジェクト）
 
-Delete empty timelines all at once
+空のタイムラインをまとめて削除する
 ----------------------------------------
 
-If you repeatedly assign casts (objects) to roles, there may be a relatively large number of timelines (roles) with no objects assigned or no keyframes registered.
+　ロールにキャスト（オブジェクト）を割り当るのを繰り返していると、オブジェクトが割り当てられていない・何もキーフレームが登録されていないタイムライン（ロール）が比較的多く残ることがあります。
 
-1. Click ``Settings`` on the ``Animation`` tab of the ribbon bar.
+1. リボンバーの ``アニメーション`` タブの ``設定`` をクリックします。
 
-2. Click ``Delete Empty Timeline`` on the toolbar.
+2. ツールバーの ``空のタイムラインを削除`` をクリックします。
 
 .. image:: img/proper_e.png
     :align: center
 
 |
 
-3. A confirmation message will be displayed, so press the OK button.
+3. 確認メッセージが表示されるのでよければOKボタンを押します。
 
 .. image:: img/proper_f.png
     :align: center
 
 |
 
-Timelines that meet the following conditions are deleted here.
+ここで削除されるのは次の条件に合致するタイムラインです。
 
-    1. No keyframes are registered
-    2. Object is not assigned to timeline (role)
+    | 1. キーフレームが一つも登録されていない
+    | 2. タイムライン（ロール）にオブジェクトが割り当てられていない
 
 .. warning::
-    * SystemEffect, BGM, SE, Stage cannot be separated from roles, so they are not included.
+    ※SystemEffect、BGM、SE、Stageはロールとオブジェクトを分離することはできないため、対象になりません。
+
 
 |
 
-.. index:: change role title (animation project)
+.. index:: ロールのタイトルを変更する（アニメーションプロジェクト）
 
-Change role title
+ロールのタイトルを変更する
 ------------------------------------
 
 
-You can enter a title for the role for clarity. It is usually set as an initial value as follows.
+　ロールにはわかりやすさのためタイトルを入力できます。通常は次のように初期値として設定されます。
 
 
 :VRM:
-    VRM meta information title
+    VRMのメタ情報のタイトル
 
-:Non-VRM:
-    Sequential number by type name + date and time
+:VRM以外:
+    種類名＋日時による連番
 
-| Because of this specification, roles and casts are automatically assigned if the VRM title is the same as the role title.
-| When changed, the VRM will not be automatically assigned, but it can be managed with an easy-to-understand role name in the animation project.
+| 　この仕様のため、VRMのタイトルがロールのタイトルと同じVRMの場合は自動的にロールとキャストが割り当てられます。
+| 　変更するとVRMは自動的に割り当てられなくなりますが、アニメーションプロジェクトにおいてわかりやすいロール名で管理することができます。
 
 
-1. Click ``Settings`` from the ``Animation`` tab of the ribbon bar.
+1. リボンバーの ``アニメーション`` タブから ``設定`` をクリックします。
 
 .. image:: img/proper_3.png
     :align: center
 
 |
 
-2. Open the ``Manage Roles`` tab.
+2. ``役割の管理`` タブを開きます。
 
 .. image:: img/proper_b.png
     :align: center
 
 |
 
-3. Find the row where you want to edit the role title and click on the role.
+3. 役割のタイトルを編集したい行を探し役割の箇所をクリックします。
 
 .. image:: img/proper_c.png
     :align: center
 
 |
 
-4. A pop-up dialog will appear. Enter a new name and press the SET button.
+4. ポップアップダイアログが表示されるので新しい名前を入力しSETボタンを押します。
 
 .. image:: img/proper_d.png
     :align: center
 
 |
 
-Confirming the entry also changes the role title display on the timeline.
+入力を確定するとタイムライン上のロールのタイトルの表示も変わります。
 
 
 |
 
-.. index:: reload role (animation project)
+.. index:: ロールを再読込する（アニメーションプロジェクト）
 
-reload all roles
+すべてのロールを再読込する
 ------------------------------------
 
-HTML and Unity's WebGL are not always perfectly linked. If there is a discrepancy between the role data and display on the HTML side and WebGL side, the display is updated by reloading.
+　HTMLとUnityのWebGLは常に完全に連動しているわけではありません。HTML側とWebGL側のロールのデータと表示にずれがあった場合に再読込することで表示を最新化します。
 
-1. Click ``Settings`` on the ``Animation`` tab of the ribbon bar.
+1. リボンバーの ``アニメーション`` タブの ``設定`` をクリックします。
 
 .. image:: img/proper_3.png
     :align: center
 
 |
 
-2. Open the ``Manage Roles`` tab.
-3. Click ``Refresh`` on the toolbar.
+2. ``役割の管理`` タブを開きます。
+3. ツールバーの ``最新の状態に更新`` をクリックします。
 
 .. image:: img/proper_g.png
     :align: center
 
 |
+
+

@@ -1,11 +1,11 @@
-.. index::Image
+.. index:: Image
 
-#####################################
+####################################
 Image
-#####################################
+####################################
 
 
-Images are basically treated the same as OtherObjects. Photos and illustrations are displayed on the plane as shown.
+　ImageはOtherObjectと基本的に同じ扱いです。図のように平面に写真やイラストが表示されます。
 
 
 
@@ -14,6 +14,6 @@ Images are basically treated the same as OtherObjects. Photos and illustrations 
 
 |
 
-You can freely scale and rotate it, so it can be used for backgrounds.
+　拡大縮小や回転も自由に行えるため、背景などで活用できます。
 
-You can also use texture properties as well as OtherObject.
+また、OtherObjectと同様にテクスチャのプロパティも使用可能です。

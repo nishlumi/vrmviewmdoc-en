@@ -1,65 +1,71 @@
-.. index:: operating environment
+.. index:: 動作環境
 
-########################
-Operating environment
-########################
+#######################
+動作環境
+#######################
 
 
 :OS:
-  Windows, macOS, Linux, ChromeOS [1]_
-:Compatible browsers:
-  | Edge, Chrome, Opera, Vivaldi, Firefox [2]_
-:Traffic:
-  | First boot: about 20-25MB
-  | Stage changes/effect usage: about 30MB (only when used for the first time)
-  | Immediately after the update・・・1KB to 25MB
-  | Normal from the second time onwards: about 1 to 10 KB
-  | * Web application version only
+  Windows, macOS, Linux, ChromeOS [1]_  , Android(VR機器含む)
+:対応ブラウザ:
+  | Edge, Chrome, Opera, Vivaldi, Firefox [2]_ , VR機器のブラウザ
+:通信量:
+  | 初回起動・・・約20～25MB
+  | Stage変更・Effect使用・・・約30MB（初使用時のみ）
+  | アップデート直後・・・1KB～25MB
+  | 2回目以降の通常・・・約1～10KB程度
+  | ※ウェブアプリ版のみ
 
-:memory:
-  | 4GB or more of PC memory is recommended.
-  | * The usage can be adjusted within the app within the range of 256MB to 4GB.
-  | * Developed on a development PC with 8GB memory
+:メモリ:
+  PCのメモリは4GB以上を推奨。
+  
+  * アプリ内で使用量を 256MB～4GB の範囲で調整が可能です
+  * 開発PCは8GBで開発しております 
 
-:storage:
-   A lot is enough [3]_
+:ストレージ:
+  あればあるほどよい [3]_
 
-:Graphic Performance:
-  | Check on the next PC
-  | * PC with GTX 1060 to RTX3060 Ti
-  | * Last Intel CPU model MacBook Air to M1 MacBook Air
-  | * ASUS UX21A Notebook PC
+:グラフィック性能:
+  次のPCにて確認
 
-:External access:
-  | Google, jsdelivr, unpkg
-  | * Purpose of style sheet and javascript library
-  | * External access is not provided to areas other than the above.
-  | * It does not have any function to send user data to the outside.
+  * GTX 1060 ～ RTX3060 Ti 搭載PC
+  * 最後のIntel CPUモデルのMacBook Air ～ M1 MacBook Air
+  * SUS UX21A notebook PC
+  * Meta Quest 3, PICO4
+  
+:外部へのアクセス:
+  Google、jsdelivr、unpkg
 
-: Access to terminal (PC):
-  | <Open>
-  | * 3D object files such as VRM, image files, music files
-  | * Movie files
-  | * .vvmpose file, .vvmmot file, .vvmproj file
-  |
-  | <Save>
-  | Screenshot
-  | * Movie files
-  | * .vvmpose file, .vvmmot file, .vvmproj file
+  * スタイルシート・javascriptライブラリ目的
+  * 上記以外への外部へのアクセスは行っていません。
+  * ユーザーデータを外部へ送信する機能は一切持っていません。
+
+:端末(PC)へのアクセス:
+  | ＜開く＞
+  | ・VRMなど3Dオブジェクトファイル、画像ファイル、音楽ファイル
+  | ・動画ファイル
+  | ・.vvmposeファイル、.vvmmotファイル、.vvmprojファイル
+  | 
+  | ＜保存する＞
+  | ・スクリーンショット
+  | ・動画ファイル
+  | ・.vvmposeファイル、.vvmmotファイル、.vvmprojファイル
 
 
-.. [1] You can't use the PC version on ChromeOS.
-.. [2] Firefox cannot do independent windowing of PWAs.
-.. [3] Some files such as pose files and project files are saved in the app's internal storage, but they are all saved in the PC. It is not saved externally.
+.. [1] ChromeOSではPC版を使うことはできません。
+.. [2] FirefoxはPWAの独立したウィンドウ化を行なえません。
+.. [3] ポーズファイルやプロジェクトファイルなど一部のファイルはアプリ内部のストレージに保存されますが、PC内部にすべて保存されています。外部には保存されません。
 
 .. note::
-  * Android and iOS are not supported according to Unity's WebGL specifications. (Actually, you can use it if you access it, but it is difficult to operate)
-  * Communication volume is just a guideline. In principle, communication is only performed when loading or updating the application because it is PWA compatible.
-  * Unity itself and additional libraries are not required for use.
-  * Since it supports PWA (Progressive Wab App), it can be installed and used independently from the browser.
-  * Windows, macOS, and Linux also have PC versions that run independently.
-  * Browsers and extensions with mouse gestures may cause erroneous operations, so it is necessary to turn them off in advance or perform the key operation described later.
-  * Please do not reload recklessly after the first time. When an update is ready, we will notify you on the app.
+    * Android, iOSはUnityのWebGLの仕様に従い、サポート外とさせていただきます。(実際はアクセスすれば利用できますが操作が困難です)
+    * 通信量はあくまでも目安です。PWA対応のため通信はアプリの読み込み・アップデート時にしか原則として行わないようにしています。
+    * 利用にあたりUnity本体や追加のライブラリ等は不要です。
+    * PWA（Progressive Wab App）対応のため、インストールしてブラウザから独立して利用可能です。
+    * Windows, macOS、Linuxは単独で動作するPC版も用意します。
+    * マウスジェスチャーのあるブラウザ・拡張機能は誤操作の可能性があるので事前にオフにするか後述のキー操作をする必要があります。
+    * 初回以後、むやみにリロードはしないでください。アップデートは用意できましたらアプリ上で通知いたします。
+
+
 
 .. raw:: latex
 

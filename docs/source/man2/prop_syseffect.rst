@@ -1,8 +1,8 @@
-.. index:: SystemEffect(property)
+.. index:: SystemEffect（プロパティ）
 
-#####################################
-System effects
-#####################################
+####################################
+SystemEffect
+####################################
 
 .. |syseff1| image:: ../img/screen_ribbon_syseff1.png
 .. |syseff2| image:: ../img/screen_ribbon_syseff2.png
@@ -14,122 +14,124 @@ System effects
 
 |
 
-This is a SystemEffect property. You can find this in the system effects tab of the ribbon bar. The values in the diagram are the default values.
+　SystemEffectのプロパティです。これはリボンバーのシステムエフェクトタブにあります。図の値がデフォルト値です。
 
 
-.. index:: Bloom (SystemEffect property)
+.. index:: Bloom（SystemEffectのプロパティ）
 
 .. image:: ../img/prop_syseff_1.png
     :align: left
 
-Bloom property.
+Bloomのプロパティです。
 
-:strength:
-    Specify between 0 and 100.
+:強さ:
+    0～100の間で指定します。
 
 |
 |
 |
 
-.. index:: Chromatic Abberation (property of SystemEffect)
+.. index:: Chromatic Abberation（SystemEffectのプロパティ）
 
 .. image:: ../img/prop_syseff_2.png
     :align: left
 
 
-Chromatic Abberation property.
+Chromatic Abberationのプロパティです。
 
-:strength:
-    Specify between 0 and 1 in increments of 0.1.
+:強さ:
+    0～1の間で0.1刻みで指定します。
 
 |
 |
 |
 
-.. index:: Color grading (SystemEffect property)
+.. index:: Color grading（SystemEffectのプロパティ）
 
 .. image:: ../img/prop_syseff_3.png
     :align: left
 
 
-Color grading property.
+Color gradingのプロパティです。
 
-:colour:
-    Specifies the base color.
-:temperature:
-    Specify between -100 and 100.
-:Tint:
-    Specify between -100 and 100.
+:色:
+    ベースの色を指定します。
+:温度:
+    -100～100の間で指定します。
+:色合い:
+    -100～100の間で指定します。
 
 
 |
 |
 |
 
-.. index:: Depth Of Field (SystemEffect property)
+.. index:: Depth Of Field（SystemEffectのプロパティ）
 
 .. image:: ../img/prop_syseff_4.png
     :align: left
 
-Depth Of Field property.
+Depth Of Fieldのプロパティです。
 
-:Focus Distance:
-    Specify between 0.1 and 50 in increments of 0.05. This is the direct distance of focus for Depth Of Field.
-:Aperture:
-    Specify between 0.1 and 32 in increments of 0.1.
-:Focal Length of Lens:
-    Specify between 1 and 50.
+:被写体までの距離 (Focus Distance):
+    0.1～50の間で0.05刻みで指定します。Depth Of Fieldのフォーカスの直接的な距離となります。
+:絞り:
+    0.1～32の間で0.1刻みで指定します。
+:レンズの焦点距離 (Focal Length):
+    1～50の間で指定します。
 
 |
 |
 |
 
-.. index:: Grain (property of SystemEffect)
+.. index:: Grain（SystemEffectのプロパティ）
 
 .. image:: ../img/prop_syseff_5.png
     :align: left
 
-Grain property.
+Grainのプロパティです。
 
-:strength:
-    Specify between 0 and 1 in increments of 0.1.
-:size:
-    Specify between 0.3 and 3 in increments of 0.1.
+:強さ:
+    0～1の間で0.1刻みで指定します。
+:サイズ:
+    0.3～3の間で0.1刻みで指定します。
 
 |
 |
 |
 
-.. index:: Vignette (SystemEffect property)
+.. index:: Vignette（SystemEffectのプロパティ）
 
 .. image:: ../img/prop_syseff_6.png
     :align: left
 
-Vignette property.
+Vignetteのプロパティです。
 
-:strength:
-    Specify between 0 and 1 in increments of 0.1.
-:Smoothness:
-    Specify between 0.1 and 1 in increments of 0.01. Adjusts whether to apply anti-aliasing to sharpen the edges where the Vignette effect is applied.
-:Roundness:
-    Specify between 0 and 1 in increments of 0.01. Adjusts the vignette effect from circular to square.
+:強さ:
+    0～1の間で0.1刻みで指定します。
+:滑らかさ:
+    0.1～1の間で0.01刻みで指定します。Vignetteの効果のかかる縁にアンチエイリアスをかけるかくっきりさせるかを調整します。
+:丸み:
+    0～1の間で0.01刻みで指定します。Vignetteの効果を円形から四角形に調整します。
 :center X:
-    Specify between -3 and 5 in increments of 0.01. Adjusts the X coordinate of the center position of the Vignette effect.
+    -3～5の間で0.01刻みで指定します。Vignetteの効果の中心位置のX座標を調整します。
 :center Y:
-    Specify between -3 and 5 in increments of 0.01. Adjusts the Y coordinate of the center position of the Vignette effect.
+    -3～5の間で0.01刻みで指定します。Vignetteの効果の中心位置のY座標を調整します。
 
 |
 |
 |
 
-.. index:: Motion blur (SystemEffect property)
+.. index:: Motion blur（SystemEffectのプロパティ）
 
 .. image:: ../img/prop_syseff_7.png
     :align: left
 
-Motion blur properties.
+Motion blurのプロパティです。
 
-:Shutter angle:
-    Specify between 0 and 100.
-:sample count:
-    Specify between 4 and 32.
+:シャッター角:
+    0～100の間で指定します。
+:サンプルカウント:
+    4～32の間で指定します。
+
+

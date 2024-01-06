@@ -1,12 +1,12 @@
-.. index:: OtherObject (manipulating objects)
-.. index:: object (manipulating objects)
+.. index:: OtherObject（オブジェクトの操作）
+.. index:: オブジェクト（オブジェクトの操作）
 
-#####################################
+####################################
 OtherObject
-#####################################
+####################################
 
 
-OtherObject basically handles general 3D models other than VRoid/VRM. There is only one IK marker per object except for VRoid/VRM, including OtherObject.
+　OtherObjectは基本的にはVRoid/VRM以外の一般的な3Dモデルを扱います。OtherObjectを始め、VRoid/VRM以外はIKマーカーは1つのオブジェクトにつき1個のみです。
 
 .. contents::
 
@@ -14,24 +14,24 @@ OtherObject basically handles general 3D models other than VRoid/VRM. There is o
 .. image:: ../img/operation_oobj_1.png
     :align: center
 
-The display size follows the actual size of the 3D object, so it may differ greatly from VRoid/VRM and other objects. In that case, please change it in the "Magnification" property of the "Common" tab.
+　表示サイズはその3Dオブジェクトの実際のサイズに沿うので、VRoid/VRMや他のオブジェクトと大きく違う可能性があります。その場合は「共通」タブの「倍率」プロパティで変更してください。
 
-The IK marker is attached to the **object origin**. If the actual object and the origin are misaligned when outputting with Blender, etc., the IK marker and the actual object will also be misaligned in this application. If the misalignment is not what you intended, correct it appropriately on the output source app side.
+　IKマーカーはその **オブジェクトの原点** に付きます。Blenderなどで出力時に実際のオブジェクトと原点がズレていると本アプリ上でもIKマーカーと実際のオブジェクトがズレます。意図したズレでない場合は出力元のアプリ側で適切に修正してください。
 
 
 .. note::
-    * 3D objects with animation data such as FBX can be played with this application.
-    * However, there may be restrictions on animation playback and selection depending on the specifications of the library used.
+    | ※FBXなど、アニメーションデータを持つ3Dオブジェクトは本アプリでも再生可能です。
+    | ※ただし、利用ライブラリの仕様によりアニメーションの再生や選択に制限がかかる場合があります。
 
 
 |
 
-.. index:: Play animation (OtherObject)
+.. index:: アニメーション再生（OtherObject）
 
-play animation
+アニメーション再生
 ---------------------
 
-Animation of 3D objects can be played back even in animation projects using this application.
+　3Dオブジェクトのアニメーションは本アプリによるアニメーションプロジェクトの中でも再生をコントロールできます。
 
 
     
@@ -40,38 +40,39 @@ Animation of 3D objects can be played back even in animation projects using this
 
 .. csv-table::
 
-    For preview playback, animation registration
+    プレビュー再生, アニメーション登録用
     |preview|, |anireg|
-    It will play instantly. This operation is not registered in the keyframe. , After selecting "Play" or "Stop", register the keyframe.
+    即座に再生されます。こちらの操作はキーフレームには登録されません。, 「再生」や「停止」を選択後にキーフレームに登録します。
 
-1. Select the animation name to play.
-2. Adjust the playback mode, animation speed, etc. as necessary.
-3. Play to check.
-4. If you like, select the playback state in the animation state (for registration) and register the keyframe.
+1. 再生するアニメーション名を選択します。
+2. 必要に応じて再生モード・アニメーション速度などを調整します。 
+3. 再生して確認します。
+4. よければアニメーションの状態（登録用）で再生状態を選び、キーフレームの登録をします。
 
 .. note::
-  * The animation data of the 3D object is not expanded or displayed in the keyframe, and only the states of play, pause, stop, and seek are registered in the keyframe.
+    ※キーフレームに3Dオブジェクトのアニメーションデータが展開・表示されるわけではなく、あくまで再生・一時停止・停止・シークという状態がキーフレームに登録されるのみです。
 
 .. hint::
-    You can freely play the animation of the object even if you register only the seek position by changing the playback position in the key frame instead of playing or stopping.
+    再生や停止ではなく、再生位置変更でシーク位置を変えることだけをキーフレームに登録していっても、そのオブジェクトのアニメーション再生を自由に行なえます。
 
     .. code::
 
-        Example) FBX with a certain animation is made OtherObject
+        例）あるアニメーションを持つFBXをOtherObjectにした
 
-        1st frame: animation state (for registration) = change playback position, seek position = at 0.855
+        1フレーム目: アニメーションの状態（登録用） = 再生位置変更、シーク位置 = 0.855時点
 
-        2nd frame: Animation state (for registration) = change playback position, seek position = 0.124 point, duration is 1 second.
+        2フレーム目: アニメーションの状態（登録用） = 再生位置変更、シーク位置 = 0.124時点、間隔(duration)は1秒。
 
-        → This FBX animates like reverse playback.
+        → このFBXは逆再生のようにアニメーションする。
 
 |
 
-.. index:: Texture (OtherObject)
+.. index:: テクスチャ（OtherObject）
 
-Texture
+テクスチャ
 ----------------
 
-If the 3D object has multiple textures, you can select the texture and change the settings in detail. It's exactly the same as the VRM setting.
+　3Dオブジェクトがテクスチャを複数保持している場合、テクスチャを選んで細かく設定変更することができます。VRMのほうの設定と全く同じです。
 
-Please see :doc:`operation_texture` for details.
+　詳しくは :doc:`operation_texture` を御覧ください。
+

@@ -1,40 +1,39 @@
-.. index:: keyframe registration window (screen configuration)
 
-#####################################
-Keyframe registration window
-#####################################
+.. index:: キーフレームの登録ウィンドウ（画面の構成）
+
+####################################
+キーフレームの登録ウィンドウ
+####################################
 
 .. |keyframe1| image:: ../img/screen_ribbon_animation_keyframe1.png
 .. |keyframe2| image:: ../img/screen_ribbon_animation_keyframe2.png
 
-It is displayed by right-clicking anywhere on the ribbon bar (control-click or two-point tap for macOS) or pressing the ``Register keyframe`` button on the animation tab. Here you can select properties and bones that you want to register in keyframes.
+　リボンバーの任意の位置で右クリック（macOSの場合はControlキー押しながらクリックまたは2点タップ）するか、アニメーションタブの ``キーフレームを登録`` ボタンを押すと表示されます。ここでキーフレームに登録したいプロパティやボーンを選択できます。
 
-When you press the ``Register keyframe`` button in this, it will actually be registered.
+　この中の ``キーフレームを登録`` ボタンを押すと実際に登録されます。
 
 .. csv-table::
     :header-rows: 1
 
-    VRM, non-VRM
+    VRM, VRM以外
     |keyframe1|, |keyframe2|
 
-:Register Keyframe: 
-    Registers the state of the currently selected object to the current keyframe. If you register again at the same keyframe position, it will be overwritten.
+:キーフレームを登録: 現在選択中のオブジェクトの状態を現在のキーフレームに登録します。同じキーフレーム位置でもう一度登録すると上書きします。
 
-: top right toolbar:
-    For use in future versions. I don't use it yet.
+:右上のツールバー: 
+    将来のバージョンで使用します。 まだ使いません。
 
-    Deselect all bones from the left, select all bones, select IKParent, select upper body, select lower body
-
+    左から全ボーンを選択解除、全ボーンを選択、IKParentを選択、上半身を選択、下半身を選択
 
 
-:Contents to be registered: 
-    Select the content to be registered in the keyframe from Move, Non-Move, or Property.
 
-:Bone to register:
-    You can check the bones (IK markers) registered in the keyframe. This number differs between VRM and non-VRM.
+:登録する内容: キーフレームに登録する内容を移動・移動以外・プロパティから選びます。
+
+:登録するボーン: 
+    キーフレームに登録するボーン(IKマーカー)を確認できます。これはVRMとそれ以外で数が異なります。
     
 ..
-     * You cannot press Select Upper Body or Select Lower Body except for VRM.
-     Since VRM exists for each part of the body, it registers only the movement of the RightHand, for example. You will be able to
+    ※VRM以外は 上半身を選択、下半身を選択 を押すことはできません。
+    VRMは身体の各部位が存在するため、例えばRightHandの移動だけを登録する。といったことができるようになります。
 
-     Since there is only one IK marker other than VRM, it is meaningless to uncheck it and register anything other than movement/movement.
+    VRM以外は一つしかIKマーカーが存在しないため、チェックを外して移動・移動以外を登録しても意味がありません。

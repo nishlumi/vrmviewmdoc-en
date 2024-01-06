@@ -1,10 +1,10 @@
-#####################################
+####################################
 UImage
-#####################################
+####################################
 
 
-Similar to Text, UImage also displays images as UI rather than 3D objects.
-It is drawn with priority over 3D objects.
+　UImageもText同様3Dオブジェクトではなく、UIとして画像を表示します。
+　3Dオブジェクトよりも優先して描画されます。
 
 
 
@@ -14,10 +14,10 @@ It is drawn with priority over 3D objects.
 |
 
 .. note::
-    UImage is drawn below Text.
+    UImageはTextよりも下に描画されます。
 
 
-Also, when you drag and drop an image, a confirmation message will be displayed as to whether to load it as an Image or a UImage. Click on the desired type to proceed with loading.
+　また、画像はドラッグアンドドロップするとImageとUImageどちらとして読み込むか確認メッセージが表示されます。目的の種類の方をクリックして読み込みを進めてください。
 
 
 .. image:: ../img/operation_uimage_2.png

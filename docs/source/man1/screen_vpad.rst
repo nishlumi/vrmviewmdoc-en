@@ -1,45 +1,45 @@
-.. index:: v-pad (screen configuration)
-.. index:: Control pad of the main camera (screen structure)
+.. index:: v-pad（画面の構成）
+.. index:: メインカメラの操作パッド（画面の構成）
 
-#####################################
-v-pad (control pad for main camera)
-#####################################
+####################################
+v-pad（メインカメラの操作パッド）
+####################################
 
 .. image:: ../img/screen_vpad.png
-     :align: center
+    :align: center
 
 
-A virtual mouse pad that allows you to operate the image of the main camera instead of the mouse. If you swipe (drag with the mouse) up, down, left, or right in the square panel, the WebGL screen will move accordingly. The amount of rotation and movement is determined by the length of operation.
+| 　マウスの代わりにメインカメラの映像を操作できる仮想マウスパッドです。四角のパネル内を上下左右にスワイプ（マウスでドラッグ）するとそのとおりにWebGL画面が動きます。操作の長さにより回転量・移動量は決まります。
+| 　キーボードを使わずに片手で操作したい！タブレットPCでも使いたい！などという場合にもご活用いただけます。
 
-I want to operate with one hand without using the keyboard! I want to use it on my tablet PC! You can also use it in such cases.
-
-:rotate:
-    Equivalent to moving the mouse up, down, left, or right while right-clicking.
-:Forward:
-    Equivalent to moving the mouse wheel.
-:move:
-    Equivalent to moving the mouse up, down, left, or right while clicking the middle mouse button.
+:回転:
+    マウスの右クリックしながら上下左右動かすことに相当。
+:前進:
+    マウスのホイールを動かすことに相当。
+:移動:
+    マウスの中クリックしながら上下左右動かすことに相当。
 
 
 .. |sub1| image:: ../img/screen_vpad_1.png
 .. |sub2| image:: ../img/screen_vpad_2.png
 .. |sub3| image:: ../img/screen_vpad_3.png
 
-:|sub1| Reset camera Z axis:
-    Equivalent to the keyboard ``Q`` key. Initialize the Z-axis rotation of the main camera.
+:|sub1| カメラのZ軸をリセット:
+    キーボード操作の ``Q`` キーと同じです。メインカメラのZ軸の回転を初期化します。
 
-Reset camera:
-    Restores the default position of the main camera. (Shortcut: R key)
-    
-    * This is the same as the button on the screen tab of the ribbon bar.
+カメラをリセット:
+    | メインカメラの位置をデフォルトに戻します。（ショートカット：Rキー）
+    | ※リボンバーの画面タブにあるボタンと同じです。
 
-:|sub2| Reduce the distance between the camera and the center point:
-    Equivalent to the ``I`` key on a keyboard. Bring the main camera closer to the center point. When it reaches 0 distance, it will move away.
+:|sub2| カメラと中心点の距離を近づける:
+    キーボード操作の ``I`` キーと同じです。 メインカメラと中心点を近づけます。0距離になったら遠ざかります。
 
-:|sub3| Increase the distance between the camera and the center point:
-    Equivalent to the keyboard ``O`` key. Move the main camera away from the center point. It approaches when it reaches 0 distance.
+:|sub3| カメラと中心点の距離を離す:
+    キーボード操作の ``O`` キーと同じです。メインカメラと中心点を遠ざけます。0距離になったら近づきます。
 
 
 .. note::
-   * Advance panel can only be swiped up and down (drag).
-   * You can increase the screen size of the WebGL screen, but this may make it difficult to operate the mouse. In such a case, using this v-pad is convenient because you can finely adjust the display.
+    * 前進のパネルは上下のスワイプ（ドラッグ）のみ可能です。
+    * WebGL画面は画面サイズをアップすることができますが、その分マウス操作がしづらくなる恐れがあります。そういう場合にこのv-padを使うと細かく表示を調整できるため便利です。
+
+

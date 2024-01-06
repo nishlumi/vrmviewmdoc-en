@@ -1,48 +1,48 @@
-#####################################
+####################################
 VRoid/VRM
-#####################################
+####################################
 
 
-The main feature of this app is that you can load a VRoid/VRM and create poses or create animations that will be described later. We will explain a series of operations from loading VRM files to actual operations.
+　VRoid/VRMを読み込んでポーズを取らせたり後述のアニメーションを作成して楽しめるのが本アプリのメインの特徴です。VRMファイルの読み込みから実際の操作まで、一連の操作を説明していきます。
 
 .. caution::
-    This app can also read VRM 1.0 models correctly.
+    本アプリではVRM1.0製のモデルも正常に読み込むことができます。
 
-    However, we have not been able to confirm the use cases of functions such as constraints that were newly implemented in VRM1. We will check the operation and support it in future updates.
+    ただし、コンストレイントなどVRM1.0で新規実装になった機能などはまだ使用例が世に広まっていないため、確認できていません。今後のアップデートで動作確認・対応を進めます。
 
 .. contents::
 
 
-.. index:: Check VRM Terms of Use
+.. index:: VRMの利用条件を確認する
 
-Check VRM Terms of Use
+VRMの利用条件を確認する
 --------------------------------
 
 
-As the loading progresses, the VRoid/VRM usage conditions confirmation screen will be displayed. If you read a VRM file made by a creator other than yourself, check the terms of use carefully and if you agree, press the "OK" button to complete the reading.
+　読み込みが進むとVRoid/VRMの利用条件確認画面が表示されます。自分以外の製作者のVRMファイルを読み込んだ場合、利用条件をよく確認し承諾できれば「OK」ボタンを押して読み込みを完了させてください。
 
 .. image:: ../img/operation_vrm_5.png
     :align: center
 
-After this, the desired VRoid/VRM will be displayed on the WebGL screen.
+　この後WebGL画面に目的のVRoid/VRMが表示されます。
 
-.. note::
-    * If you open VRM from history, you can skip this confirmation screen depending on the option.
-    * VRoidStudio 1.x and 0.x models have different joint shapes and initial poses. This app absorbs the difference as much as possible, but the initial display of IK in 11 and 13 on the next page will be slightly off in the model immediately after output from VRoidStudio 1.x (there is no problem if you start moving).
-    * VRM 0.x and VRM 1.x models have different joint shapes, so the initial pose is slightly different. There is no problem if you start moving this as well.
+.. note:: 
+    * VRMを履歴から開いた場合、オプションによってはこの確認画面を省略することができます。
+    * VRoidStudio 1.xのモデルと0.xのモデルは関節の形状や初期ポーズなどが異なります。本アプリではその差異をなるべく吸収していますが、VRoidStudio 1.xから出力した直後のモデルは次ページの11, 13のIKの初期表示が若干ずれます（動かし始めれば問題ありません）。
+    * VRM 0.xのモデルとVRM1.xのモデルも関節の形状などが異なるため、初期ポーズが若干ずれます。こちらも動かし始めれば問題ありません。
 
 |
 
-.. index:: IK marker operation (VRM operation)
+.. index:: IKマーカーの操作（VRMの操作）
 
 .. _inputikasmarker:
 
-Working with VRM IK markers
--------------------------------
+VRMのIKマーカーの操作
+--------------------------
 
-The imported VRoid/VRM has a translucent figure called an IK marker as shown in the figure. Each is linked to the movement of the following parts. Also, the type of IK marker operation is determined for each part.
+　読み込んだVRoid/VRMには図のようにIKマーカーと称する半透明の図形がついています。それぞれ次の部位の動きに連動しています。また、部位ごとにIKマーカーの操作の種類や形が決まっています。
 
-.. image:: ../img/operation_vrm_6.png
+.. image:: ../img/operation_vrm_6.jpg
     :align: center
 
 |
@@ -50,81 +50,94 @@ The imported VRoid/VRM has a translucent figure called an IK marker as shown in 
 .. csv-table::
     :header-rows: 1
 
-    No, part, corresponding operation,         No, part, corresponding operation
-    1, Line of sight (EyeViewHandle), Movement, 2, Tilt the head to the left and right / stick out the chin (Head), Rotation
-    3, Head orientation (LookAt), Movement,     4, Upper body orientation (Aim), Movement
-    5, Upper body/shoulder left/right tilt (Chest), Movement, 6, Waist direction/tilt/Movement (Pelvis), movement/rotation
-    7, left shoulder (LeftShoulder), rotation,  8, left elbow (LeftLowerArm), movement
-    9, Left Hand, Move/Rotate , , ,
-    10, RightShoulder, Rotation,        11, RightLowerArm, Movement,
-    12, Right Hand, Move/Rotate, , ,
-    13, left foot direction (LeftLowerLeg) ≠ knee, movement, 14, left ankle (LeftLeg), movement/rotation
-    15, right foot direction (RightLowerLeg) ≠ knee, movement, 16, right ankle (RightLeg), movement/rotation
+    No, 部位, 対応操作,                           No, 部位, 対応操作
+    1,  視線（EyeViewHandle）,移動,               2,   頭の左右の傾き・顎突き出し（Head）,回転
+    3,  頭の向き（LookAt）,移動,                  4,   上半身の向き（Aim）,回転 
+    5,  上半身・肩の左右の傾き（Chest）,回転,      6,  腰の向き・傾き・移動（Pelvis）,移動・回転
+    7,  左肩（LeftShoulder）,回転,                8, 左ひじ（LeftLowerArm）,移動
+    9,  左手（LeftHand）,移動・回転 ,              ,  , 
+    10, 右肩（RightShoulder）, 回転,              11,  右ひじ（RightLowerArm）,移動,
+    12,  右手（RightHand）,移動・回転,              ,  ,
+    13, 左足の方向（LeftLowerLeg）≠ひざ,移動,        14, 左足首（LeftLeg）,移動・回転
+    15, 右足の方向（RightLowerLeg）≠ひざ,移動,      16, 右足首（RightLeg）,移動・回転
+
+.. warning:: 
+    IKシステムの変更(ver 2.2.0)
+
+    Ver 2.2.0 では今後の汎用性のため、IKシステムをFinalIKからUnity本来のIKに変更しました。それによる影響は次の通りです。
+    
+    * Aimは移動ではなく **回転で** VRMの該当部位を操作するようになった
+    * Chestも移動ではなく **回転で** VRMの該当部位を操作するようになった
+
+    今までのポーズ・モーションファイルでこれらのIKマーカーを大きく操作していた場合はポーズ・モーションの変更が必要です。ご了承ください。
 
 .. note::
-     * Even if you perform an unsupported operation, that part will not move.
-     * This is the only part that can be manipulated so that you can freely edit the pose without being complicated and troublesome as much as possible. Therefore, it does not support FK (Forward Kinematics), which requires a huge number of operations.
-     * There may be a strict way of saying this in the world, but in this app, each bone (part) above is described as an IK marker (part).
-     * 13 and 15 are not the same as knees. Think of it as the overall direction of your foot.
+    * 対応していない操作をしてもその部位に動きはありません。
+    * 可能な限り複雑でなく・面倒くさくなく・それでいて自在にポーズの編集をしていただくため、操作可能な部位はこれだけとなっています。そのため、操作が膨大になる FK (Forward Kinematics) には対応していません。
+    * 世間的には厳密な言い方があるかもしれませんが、本アプリでは上記の各ボーン（部位）のこと＝IKマーカー（パーツ）として表記して説明していきます。
+    * 13と15はひざと同じ意味ではありません。足の全体的な向きと捉えてください。
+    * VR/AR対応のため、ver 2.3.0より1,2,5,6のIKマーカーの形を変更しました。
+
 
 |
 
-Operation of each IK marker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+各IKマーカーの操作
+^^^^^^^^^^^^^^^^^^^^
 
-When you click each selected IK marker, it will look like the picture. This is the operating handle.
+　選択した各IKマーカーをクリックすると図のようになります。これが操作ハンドルです。
 
 .. image:: ../img/operation_vrm_7.png
     :align: center
 
 |
 
-X, Y, Z axis movement
-    With green = Y, blue = Z, and red = X axis, dragging will move the IK marker in that direction. The corresponding part of the body also moves by the amount of movement.
+X,Y,Z軸移動
+    　緑＝Y、青＝Z、赤＝X軸として、ドラッグするとその方向にIKマーカーを移動します。その移動量だけ体の該当部位も移動します。
 
-center plane
-    The square box in the middle with the same color can be moved freely on the axis indicated by the surface and the other axis by dragging inside it.
+中心の平面
+    　真ん中の同じ色で四角のボックスは、その中をドラッグするとその面が示す軸ともう片方の軸のみで自由に移動させることができます。
 
-.. index:: Special operation of IK marker (VRM operation)
+
+.. index:: IKマーカーの特殊な操作（VRMの操作）
 
 .. _specialoperation_vrm:
 
-special operation
-^^^^^^^^^^^^^^^^^^^^^^^^^
+特殊な操作
+^^^^^^^^^^^^^^^
 
-You can use special functions by pressing the following keys with the IK marker selected.
+　IKマーカーを選択した状態で次のキーを押すと特別な機能が使えます。
 
-Ctrl-click IK marker
-    You can select multiple IK markers. You can move multiple body parts at the same time by moving or rotating with multiple selected.
-    In addition, since the operation handle also has a collision detection, please select only the IK marker by zooming the camera.
+Ctrlキーを押しながらIKマーカーをクリック
+    　IKマーカーを複数選択することができます。複数選択した状態で移動や回転を行うと複数の体の部位を同時に動かすことができます。
+    　なお、操作ハンドルも当たり判定があるので、カメラをズームするなどしてIKマーカーだけを選択してください。
 
-Press X key
-    Switch between global coordinates and local coordinates. Default is local coordinates.
+Xキーを押下
+    グローバル座標・ローカル座標を切り替えます。デフォルトはローカル座標です。
 
 
-press G key
-    Move IK markers only.
+Gキーを押下
+    IKマーカーを移動のみにします。
 
-Press R key
-    Set the IK marker to rotation only.
+Rキーを押下
+    IKマーカーを回転のみにします。
 
-Press the T key
-    Returns the IK markers to their initial state. (Both movement and rotation)
+Tキーを押下
+    IKマーカーを初期状態に戻します。（移動・回転両方）
 
-Press Shift + Z
-    Undo movement/rotation by IK marker.
+Shift + Zキーを押下
+    IKマーカーによる移動・回転を元に戻します。
 
-Press Shift + Y
-    Redo movement and rotation with IK markers.
+Shift + Yキーを押下
+    IKマーカーによる移動・回転をやり直します。
 
 |
 
-.. index:: Move/Rotate (VRM operation)
+.. index:: 移動・回転（VRMの操作）
 
-Movement/rotation of VRoid/VRM itself
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+VRoid/VRM自体の移動・回転
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To move/rotate the selected VRoid/VRM itself, turn on "Movement mode" in the "IK, whole body" tab of the property on the right.
+　選択したVRoid/VRM自体を移動・回転するには、右のプロパティの「IK、全身」タブにある「移動モード」をONにします。
 
 
 .. image:: ../img/operation_vrm_8.png
@@ -132,39 +145,39 @@ To move/rotate the selected VRoid/VRM itself, turn on "Movement mode" in the "IK
 
 |
 
-Then, when you click near the feet of the VRoid/VRM, all IK markers will be selected. Although it is not displayed, this is actually the entire IK marker.
+　すると、VRoid/VRMの足元付近をクリックするとIKマーカー全部が選択状態になります。表示されませんが実際にはここが全体のIKマーカーとなっています。
 
 .. warning::
-    Since the ankle and the overall IK marker tend to interfere, please switch to OFF when not moving.
+    ※足首と全体のIKマーカーが干渉しやすいため、移動しない場合は適時OFFに切り替えてください。
 
 |
 
 .. image:: ../img/operation_vrm_9.png
     :align: center
 
-If you move or rotate up, down, left, or right in this state, the VRoid/VRM itself will move accordingly. This can also be set numerically from the "Common" tab of the properties.
+　この状態で上下左右に移動・回転するとVRoid/VRM自体がそのとおりに動きます。これはプロパティの「共通」タブから数値で設定もできます。
 
 
 .. image:: ../img/prop_common_1.png
     :align: center
 
-You can also adjust the overall size of the VRoid/VRM from the common tab, but the ideal size of the VRoid/VRM is the size at the time it is loaded. We recommend that you do not change this ratio too drastically. (Because it does not follow the size of the IK marker itself, the position of the IK marker and the body part will be misaligned.)
+　共通タブからはVRoid/VRMの全体の大きさも調整できますが、VRoid/VRMは読み込んだ時点のサイズが理想のサイズです。この倍率はあまり極端に変更しないことをオススメします。（IKマーカー自体のサイズまでは追随しないためIKマーカーと体の部位の位置がズレます）
 
 |
 
-.. index:: Return to T pose (VRM operation)
+.. index:: Tポーズに戻す（VRMの操作）
 
-Return all bones to T pose
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+全ボーンをTポーズに戻す
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you mess with the IK markers too much and can't return to the desired pose, you can return to the T pose (default pose) by pressing **Reset all bones** on the **3D model** tab of the ribbon bar.
+　IKマーカーをいじりすぎて求めるポーズに戻せなくなった場合、リボンバーの **3Dモデル** タブの **全ボーンをリセット** を押すとTポーズ（デフォルトのポーズ）に戻すことが出来ます。
 
 .. image:: ../img/operation_vrm_a.png
     :align: center
 
 |
 
-Also, the overall position and rotation can be returned with **Reset Position** and **Reset Rotation**.
+　また、全体の位置や回転も **位置をリセット**、**回転をリセット** で戻すことが出来ます。
 
 
 .. image:: ../img/operation_vrm_b.png
@@ -172,14 +185,14 @@ Also, the overall position and rotation can be returned with **Reset Position** 
 
 |
 
-.. index:: Manipulate IK markers numerically
+.. index:: IKマーカーを数値で操作する
 
 .. _inputikasnumber:
 
-Numerical manipulation of IK markers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IKマーカーを数値で操作する
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In addition to operating the IK marker with a mouse or touch, you can also operate it by entering actual numbers. Select the desired VRoid/VRM, and press the "**IK position batch change**" button on the "**IK, whole body**" tab of the properties on the right.
+　IKマーカーをマウスやタッチで操作するほか、実際の数値で入力して操作することもできます。目的のVRoid/VRMを選択し、右のプロパティの「**IK、全身**」タブにある「**IK位置の一括変更**」のボタンを押します。
 
 
 .. image:: ../img/operation_vrm_c.png
@@ -191,170 +204,170 @@ In addition to operating the IK marker with a mouse or touch, you can also opera
 .. |btnbonetranrel| image:: ../img/operation_vrm_m.png
 .. |btnbonetranmirror| image:: ../img/operation_vrm_n.png
 
-| A dedicated dialog will be displayed. Here you can directly specify the position and rotation of each IK marker in a spreadsheet format. Finally, press the |btnbonetranapply| **Apply Pose** button when you have finished changing the desired parts.
-| Then the current pose of the target VRoid/VRM will be changed accordingly.
+| 　専用のダイアログが表示されます。ここでスプレッドシート形式で各IKマーカーの位置や回転を直接指定することができます。目的の箇所を変更し終わったら最後に |btnbonetranapply|  **ポーズを適用** ボタンを押します。
+| 　すると対象のVRoid/VRMの現在のポーズがそのとおりに変更されます。
 
 .. image:: ../img/screen_ikmarker.png
     :align: center
 
 |
 
-The function of each button is as follows.
+各ボタンの機能は次のとおりです。
 
-|btnbonetranrel| Refresh
-    Reflects the pose information of the currently selected VRM in the spreadsheet. Basically, if you select it, it will be automatically reflected, but the information may remain old depending on the operating state of the application. Use it in that case.
+|btnbonetranrel| 最新の状態に更新
+    現在選択中のVRMのポーズ情報をスプレッドシートに反映します。基本的に選択すれば自動的に反映されますが、アプリの動作状態により情報が古いままになることがあります。その場合に使います。
 
-|btnbonetranmirror| Reverse pose
-    Swap the left and right of the current pose information. In this state, pressing **Apply Pose** will result in the current pose being reversed.
+|btnbonetranmirror| ポーズを反転する
+    現在のポーズ情報の左右を入れ替えます。この状態で **ポーズを適用** を押せば現在のポーズが反転する結果となります。
 
 .. note::
-   * Buttons in toolbar are disabled while non-VRM is selected.
-   * Numbers here are current VRM specific numbers. Since height and body differences are not reflected, it is necessary to calculate manually when using it with other VRMs.
+    * VRM以外を選択している間はツールバー内のボタンは無効化します。
+    * ここでの数値は現在のVRM固有の数値です。身長・体格差は反映されないため他のVRMで使い回す場合は手動で算出する必要があります。
 
 |
 
-.. index:: Adjust the movable range limit (VRM operation)
+.. index:: 可動範囲の制限を調整する（VRMの操作）
 
-Adjust the range of motion limits
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+可動範囲の制限を調整する
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-| In this application, some control of the range of motion is applied to the VRM as standard. With them, VRM can reproduce natural human body movements without difficulty.
-| However, it sometimes conflicts with the IK of this application, and due to that, there are specifications that poses and animations cannot be reproduced. If you want to pose completely freely even if it is a little unnatural as a human body, you can remove the restrictions of these IK markers.
+| 　本アプリではVRMは標準でいくつかの可動範囲の制御が適用されます。それらによりVRMが無理なく自然な人体の動きを再現できます。
+| 　しかしながら本アプリのIKと競合することもあり、それが原因でポーズやアニメーションが再現しきれない仕様も備わってしまっています。人体として多少不自然でもいいから完全に自由にポージングさせたい場合、これらIKマーカーの制限を外すことができます。
 
-Direction of the foot (LowerLeg), rotation angle of the ankle (Leg) on the X axis, rotation angle of the elbow (LowerArm) on the Y axis
-   * Elbow, below the knee, ankle rotation range is limited along the actual human body.
-   * It can be turned on/off by "Model tab" → "Apply natural movement control to VRM's body" on the setting screen.
+足の方向（LowerLeg）、足首（Leg）のX軸の回転角度・ひじ（LowerArm）のY軸の回転角度
+    * ひじ、膝から下、足首の回転の範囲が実際の人体に沿って制限がかかります。
+    * 設定画面の「Modelタブ」→「VRMの体に自然な可動制御を適用する」でオン・オフが切り替わります。
 
-X-axis rotation of the ankle (Leg) after moving the direction of the foot (LowerLeg)
-   * When the foot (LowerLeg) is moved back and forth, the rotation angle of the ankle (Leg) is rotated according to the LowerLeg.
-   * You can switch on/off by "Model tab" → "Auto rotate ankle" on the setting screen.
+足の方向（LowerLeg）を動かした後の足首（Leg）のX軸の回転
+    * 足（LowerLeg）を前後に動かしたときに足首（Leg）の回転角度をLowerLegに合わせて回転させます。
+    * 設定画面の「Modelタブ」→「足首の回転を自動で行う」でオン・オフが切り替わります。
 
 |
 
-Interlocking IK markers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IKマーカー同士の連動
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| In this app, IK markers are used to move VRM bones, and moving the IK marker of a specific part moves other parts in conjunction.
-| Basically, this is only for when operating IK markers.
-
-
-Interlocking the following three patterns
-    Around the shoulder (Chest) and arms (LowerArm) / Head (Head)
-        When moving the Chest, move the X and Z axes of the LowerArm and Head as much as possible.
-    Aim and near the shoulder (Chest)
-        Move the X and Z axes near the shoulder (chest) as much as possible when moving the aim.
-    Hips (Pelvis) and Legs (LowerLeg)
-        When you move your hips up and down, your legs (Lower Leg) move slightly back and forth according to the movement.
-    Interlocking ankle (Leg) and foot direction (LowerLeg)
-        Slightly move the foot (LowerLeg) back and forth when the ankle is moved
-    Interlocking Hand and Lower Arm
-        When moving the hand, the arm (elbow) also moves
+| 　本アプリではVRMのボーンを動かすのにIKマーカーを使いますが、特定の部位のIKマーカーを動かすと別の部位が連動して動くようになっています。
+| 　基本的にはIKマーカーを操作する時だけの話です。
 
 
+次の3パターンの連動
+    肩付近（Chest）と腕（LowerArm）・頭（Head）
+        Chestを動かした時に腕（LowerArm）・頭（Head）のX軸・Z軸を可能な限り連動して移動させます。
+    Aimと肩付近（Chest）
+        Aimを動かした時に肩付近（Chest）のX軸・Z軸を可能な限り連動して移動させます。
+    腰（Pelvis）と足（LowerLeg）
+        腰を上下したときに足（LowerLeg）がその動きに合わせて前後に若干移動
+    足首（Leg）と足の方向（LowerLeg）の連動
+        足首を移動させたときに足（LowerLeg）を前後に若干移動
+    手（Hand）と腕（LowerArm）の連動 
+        手を移動させたときに腕（肘）も追随して移動
 
-.. hint::
-    It can be turned on/off by selecting "Model tab" → "Bone linkage" on the setting screen.
+
+
+.. hint::    
+    設定画面の「Modelタブ」→「ボーンの連動」でオン・オフが切り替わります。
 
 
 .. warning::
-    The interlocking problem that existed in ver 1.x has been resolved in ver 2.0.2.
+    ver 1.x の時に存在した連動の問題は ver 2.0.2で解決済みです。
+    
+    アニメーション再生中は自動的にオフになり、キーフレームに登録された位置・回転が反映されます。
 
-    It turns off automatically during animation playback, and the position and rotation registered in the keyframe are reflected.
-
-    If you turn it off, it will not be linked and you will be free, but the joint will bend in a direction that should not be bent.
+    オフにすると連動しなくなって自由になりますが、関節が曲がってはいけない方向に曲がるなどします（アニメーション中では適切にキーフレームに登録していただければ問題ありません）。
 
 |
 
-.. index:: Switch IK marker to another object (VRM operation)
+.. index:: IKマーカーを別オブジェクトに切り替える（VRMの操作）
 
-Switch IK markers to different objects
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IKマーカーを別オブジェクトに切り替える
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-| The VRM has IK markers set according to the parts mentioned above, and moving them changes the pose. A different object can be assigned to that IK marker that marks the movement of each part of the body.
-| I will explain what happens when you do this.
+| 　VRMは前述の部位に従ってIKマーカーが設定されており、それを動かすとポーズが変わります。体の各部位の動きの目印となるそのIKマーカーに、別のオブジェクトを割り当てることができます。
+| 　これをするとどうなるのかを説明します。
 
 .. image:: ../img/operation_vrm_d.png
     :align: center
 
-|
+| 
 
-Select the part of the IK marker and select the object to assign to that part. Selectable objects are:
+　IKマーカーの部位を選択し、その部位に割り当てるオブジェクトを選択します。選択可能なオブジェクトは次のとおりです。
 
-| **Self** ・・・Return to the original IK marker.
-| **Main Camera**・・・The main camera of the app
-| **each VRM, OtherObject, Light, Camera, Image, Effect**... other 3D objects
+| **Self** ・・・元のIKマーカーに戻します。
+| **Main Camera**・・・アプリのメインカメラ
+| **各VRM、OtherObject、Light、Camera、Image、Effect**・・・他の3Dオブジェクト
 
 .. note::
-    | * Head, LeftShoulder, and RightShoulder cannot be selected for the part.
-    | * It cannot be assigned to yourself, 2D objects, SystemEffect, Audio, or Stage.
+    | ※部位にHead、LeftShoulder、RightShoulderは選択できません。
+    | ※なお、自分自身や2Dオブジェクト、SystemEffectやAudio、Stageには割り当てられません。
 
 .. caution::
-    Each VRM's IK automatically reverts to default if you delete the object you're assigning it to.
+    割り当てているオブジェクトを削除した場合、各VRMのIKは自動的にデフォルトに戻ります。
 
-|
+| 
 
-**Using VRM A and VRM B and an effect object**
+**VRM AとVRM B、そしてエフェクトオブジェクトを使った場合**
 
 .. image:: ../img/operation_vrm_e.png
     :align: center
 
 |
 
-If you move the effect object in this state, characters A and B will turn around and match their gaze in that direction.
+　この状態でエフェクトオブジェクトを動かすと、キャラAとBがその方向に振り向き視線を合わせるようになります。
 
-"It is also possible to reflect this setting and state in the animation." The contents to be registered in the animation project are as follows.
+　この設定と状態をアニメーションに反映することも可能です。アニメーションプロジェクトに登録するのは次の内容となります。
 
 .. csv-table::
     :header-rows: 1
     :align: center
 
-    object, operation to register
-    Allocation of VRM and IK markers
-    assigned objects, such as actual translations and rotations
+    オブジェクト, 登録する操作
+    VRM, IKマーカーの割り当て
+    割り当てられたオブジェクト, 実際の移動や回転など
 
 |
 
 
 ..
-    Head IK movement amount
+    頭のIKの可動量
     ----------------------
 
-    The head IK is actually separate from the whole body IK, and when the whole body moves, only the head may move unexpectedly. You can control the amount of that movement with this setting.
+    　頭（Head）のIKは全身のIKとは実際には別個になっており、全身を動かしたときに頭だけ予期せぬ動きをすることがあります。この設定でその可動の量を制御できます。
 
     .. image:: ../img/operation_vrm_k.png
         :align: center
 
     |
 
-    | Set to ``0`` to keep the head stationary (no left or right tilt). LookAt and EyeViewHandle move, so basic head movements are still possible.
-    | ``1`` or more will adjust the degree of follow-up of the slope.
+    | ``0`` で頭（Head）を動かなくします（左右への傾きがされなくなります）。LookAtとEyeViewHandleは動くため基本的な頭の動きは引き続き行なえます。
+    | ``1`` 以上ではその傾きの追随の具合を調整することになります。
 
     |
 
-.. index:: Hand pose operation (VRM operation)
+.. index:: 手のポーズの操作（VRMの操作）
 
-Manipulating hand poses
-----------------------------
+手のポーズの操作
+--------------------
 
-To operate the palms, open the "Arms/Hands" tab from the properties on the right and select the pose you like for the left and right hands.
+　手のひらを操作するには右のプロパティから「腕・手」タブを開き、左右の手を好きなポーズを選んでください。
 
 .. image:: ../img/prop_vrm_2.png
     :align: center
 
-You can adjust the degree of pose with the slider. More hand poses will be added in future updates.
+　スライダーでポーズの度合いを調整出来ます。手のポーズは今後のアップデートで増やす予定です。
 
-As of Ver 1.0.0:
-   * generally
-   * open
-   * Goo
-   * pointing
-   * V sign
-   * Thumbs Up
-   * grasp
-
-From Ver 1.0.4, the following has been supported.
-   * manual operation
+Ver 1.0.0 時点：
+    * 通常
+    * 開く
+    * グー
+    * 指差し
+    * Vサイン
+    * サムズアップ
+    * 握る
+  
+Ver 1.0.4から次に対応しました。
+    * 手動操作
 
 .. image:: ../img/prop_vrm_8.png
     :align: center
@@ -365,32 +378,34 @@ From Ver 1.0.4, the following has been supported.
 .. |imgfinger2| image:: ../img/prop_vrm_9b.png
 .. |imgfinger3| image:: ../img/prop_vrm_9c.png
 
-|imgfinger1| **thumb to pinky joints**
-    Each slider rotates a knuckle. The top is the 1st joint to the 2nd joint, and the bottom is the 3rd joint.
+|imgfinger1| **親指～小指の関節**
+    それぞれのスライダーで指の関節を回転します。上は第1関節～第2関節、下は第3関節です。
 
-|imgfinger2| **Operation of the finger itself (between fingers, rotation of finger axis)**
-    | The red slider adjusts the spread between the fingers with the slider.
-    | The green slider rotates around the finger axis. (It's not possible as a real human, but it's a rotation operation that is often necessary with 3D models.)
+|imgfinger2| **指自体の操作（指と指の間、指の軸回転）**
+    | 赤のスライダーは、指の間の開き具合をスライダーで調整します。
+    | 緑のスライダーは、指の軸を中心として回転します。（実際の人間としてはできませんが、3Dモデルではしばしば必要な回転操作です）
 
-|imgfinger3| **Base of thumb**
-    You can adjust the rotation of the base of the thumb with a circular slider. The left represents the perspective distance between the thumb and the palm, and the right mainly represents left-right rotation.
-
-|
+|imgfinger3| **親指の付け根**
+    親指の付け根の回転を円形のスライダーで調整できます。左は親指と手のひらの遠近の距離を、右は主に左右の回転を表します。
 
 |
 
-.. index:: Blendshapes (manipulating VRM)
+
+
+|
+
+.. index:: ブレンドシェイプ（VRMの操作）
 
 .. _blendshape_vrm:
 
-blend shape
+ブレンドシェイプ
 ---------------------
 
 
-To put it simply, you can switch between VRoid/VRM facial expressions, etc. Open the "Blendshape" tab of the property on the right, and adjust the value of your favorite blendshape with the slider.
+　わかりやすく言うとVRoid/VRMの表情等を切り替えることができます。右のプロパティの「ブレンドシェイプ」タブを開き、好きなブレンドシェイプをスライダーで値を入力して調整してください。
 
 ..
-    There are two types of blendshapes: ``general'' and ``dedicated``. For those who are familiar with Unity and Blender, SkinnedMeshRenderer is ``general'' and VRMBlendShapeProxy is ``dedicated`` in this application (VRM 1.x is called Vrm10RuntimeExpression (also simply Expression)) increase).
+    　ブレンドシェイプには ``汎用`` と ``専用`` の2種類があります。UnityやBlenderに詳しい方向けの説明ですと、SkinnedMeshRendererが ``汎用`` 、VRMBlendShapeProxyが ``専用`` と本アプリでは分類分けしています（VRM 1.xでは Vrm10RuntimeExpression(単にExpressionとも) といいます）。
 
 
 .. image:: ../img/prop_vrm_4.png
@@ -398,77 +413,84 @@ To put it simply, you can switch between VRoid/VRM facial expressions, etc. Open
 
 |
 
-* Blend shapes are determined for each VRM file, and the number that can be manipulated varies depending on the character.
-* Move the slider next to each shape key between 0 and 100.
+* ブレンドシェイプはVRMファイルごとに決まっており、キャラクターによって操作できる数に増減があります。
+* 各シェイプキーの横のスライダーを0～100までの間で動かしてください。
 
+.. note::
+    ver 2.3.0より、チェックボックスをONにした場合のみキーフレームに登録されるように変更しました。スライダーを動かすと自動的にチェックボックスにチェックが入るようになっています。
 
-Search
-    You can incrementally search by blendshape name. If blank, all blendshapes will be displayed.
+    もし登録を望まないシェイプの場合はチェックを外せばそのシェイプの値は保存されません。
 
-.. index:: Notes on blendshapes
+    これにより、モーションやプロジェクトに保存されるブレンドシェイプも本当に変更したものだけになり、ファイルサイズの削減を実現しました。
 
-Dedicated and common blendshapes
-    :Exclusive: Each VRM has its own shape. Even if the shape here is made into a motion or pose file described later and applied to another VRM, it may not be reproduced.
+Search（検索ボックス）
+    ブレンドシェイプ名でインクリメンタルサーチできます。空欄の場合はすべてのブレンドシェイプが表示されます。
 
-    :Common: Shape common to all VRM1.0 models and migration models from VRM0.x. The shapes here can be reproduced in other VRMs by putting them in a motion or pose file.
+.. index:: ブレンドシェイプの注意点
 
-    The name has been changed due to VRM1.x support.
+専用のブレンドシェイプと共通のブレンドシェイプ
+    :専用: 各VRM独自のシェイプです。こちらにあるシェイプを後述のモーションやポーズファイルにして別のVRMに適用しても、再現されない可能性があります。
 
-    Due to the specifications of VRM 1.0, the behavior of SkinnedMeshRenderer's blend shapes has been affected, and some ``general-purpose`` shapes that used SkinnedMeshRenderer in this application no longer work. This application maintains compatibility and can be used, but since it may cause confusion, we have changed the name as follows.
+    :共通: VRM1.0モデル、VRM0.xからのマイグレーションモデルにかぎらずすべてに共通のシェイプです。こちらにあるシェイプはモーションやポーズファイルに入れれば他のVRMでも再現されます。
+
+    　VRM1.x対応により、名称を変更しました。
+
+    　VRM 1.0の仕様により、SkinnedMeshRendererのブレンドシェイプの挙動に影響があり、本アプリでもSkinnedMeshRendererを利用していた ``汎用`` の一部のシェイプが機能しなくなりました。本アプリでは互換性を維持して使用可能になっていますが、混乱を招きかねないため、次のように名称を変更しました。
 
     .. csv-table::
         :align: center
 
-        This app version, SkinnedMeshRenderer shape, Expression shape
-        Ver 2.0, Dedicated, Common
-        Ver 1.x, general purpose, dedicated
+        本アプリのバージョン, SkinnedMeshRendererのシェイプ, Expressionのシェイプ
+        Ver 2.0, 専用, 共通
+        Ver 1.x, 汎用, 専用
 
     .. caution::
-        Note that ``private`` is **reversed**.
-
+        ``専用`` が **これまでとは逆になって** いますのでご注意ください。
+    
     .. note::
-        * The original Expression only has the bare minimum of common shapes for all VRMs.
-        * There is a possibility that the number of Expressions is small in other applications, but that is the standard state. This application emphasizes compatibility, so we have made it possible to use all blendshapes as Expressions with our own improvements.
+        * もともとのExpressionはすべてのVRMで共通のシェイプが最低限備わっているだけです。
+        * 他所様のアプリではExpressionとしての数は少ない可能性がありますが、本来はそちらが標準の状態です。本アプリは互換性重視のため、 **独自の改良ですべてのブレンドシェイプをExpressionとして使える** ようにしてあります。
+
 
     
 
 
-Automatic blink
+自動まばたき
 ^^^^^^^^^^^^^^^^^^
 
-"Automatic blinking" keeps the VRM blinking at the specified timing.
+　自動まばたきは指定のタイミングでVRMにまばたきをさせ続けます。
 
 .. image:: ../img/prop_vrm_3.png
     :align: center
 
 |
 
-Since it continues to move independently of the animation keyframes, there is no need to incorporate the opening and closing of the eyes into the keyframes from scratch.
+　アニメーションのキーフレームとは別に動き続けるため、ブレンドシェイプで目の開閉を一からキーフレームに組み込む必要がありません。
 
-Blink interval, number of seconds the eyelids open, number of seconds closed, number of seconds closed
-    By specifying each of them, you can feel the expression even with the movement of the eyes.
+まばたきの間隔・まぶたを開ける秒数・閉じる秒数・閉じている秒数
+    それぞれを指定することで目の動きだけでも表情を感じさせることができます。
 
-It is on by default. If you don't need it, uncheck "Enable automatic blink" to turn it off.
+　デフォルトではオンです。不要な場合は「自動まばたきを有効」のチェックを外してオフにしてください。
 
 .. caution::
-    Competes with the eye blendshape. We recommend that you use one or the other.
+    目のブレンドシェイプと競合します。使う際はどちらか一方にすることをオススメします。
 
 
 |
 
-.. index:: Object attachment (VRM operation)
+.. index:: オブジェクトの装着（VRMの操作）
 
-Wearing an object
+オブジェクトの装着
 ----------------------
 
-You can link different objects such as FBX, Obj, Light, etc. to specific body parts of VRoid/VRM and link their movements. Open the "Attach Objects" tab in the properties on the right.
+　VRoid/VRMの特定の体の部位にFBXやObj・Lightなど別のオブジェクトを紐付け、動きを連動させることができます。右のプロパティの「オブジェクトの装着」タブを開いてください。
 
 .. image:: ../img/operation_vrm_f.png
     :align: center
 
 |
 
-1. Add another object in advance.
+1. あらかじめ別のオブジェクトを追加しておきます。
 
 .. image:: ../img/operation_vrm_g.png
     :align: center
@@ -476,113 +498,114 @@ You can link different objects such as FBX, Obj, Light, etc. to specific body pa
 |
 
 .. note::
-   * Adjust the position and rotation according to the part of the body you want to tie.
+    ※位置や回転は紐付けたい体の部位に合わせて調整しておきます。
 
-2. Select VRoid/VRM, select the target body part, and click the Add button.
+2. VRoid/VRMを選択し、対象の体の部位を選択し、追加ボタンをクリックします。
 
 .. image:: ../img/operation_vrm_h.png
     :align: center
 
 
-3. Select the object you want to link and press the "OK" button.
+3. 紐付けたいオブジェクトを選択し、「OK」ボタンを押します。
 
 .. image:: ../img/operation_vrm_i.png
     :align: center
 
 |
 
-The objects that can be worn are as follows.
+　装着可能なオブジェクトは次のとおりです。
 
 .. csv-table::
     :header-rows: 1
     :align: center
 
-    Object type
-    3D objects such as FBX and Obj
+    オブジェクトの種類
+    FBX・Objなど3Dオブジェクト
     Image
     Light
-    camera
+    Camera
     Effect
 
 
-4. The information of the attached object will be displayed.
+4. 装着したオブジェクトの情報が表示されるようになります。
 
 .. image:: ../img/operation_vrm_j.png
     :align: center
 
-| After that, the attached object will move in conjunction with the part of the body.
-| You can remove it with the delete button on the right.
+| 　以後、体の部位に合わせて装着したオブジェクトも連動して動くようになります。
+| 　右端の削除ボタンで装着を解除できます。
 
 .. caution::
-    | * Handling of attached objects
-    | For objects equipped with VRM, it will no longer be possible to register deformation operations such as position and rotation in keyframes during animation. Even if you select it from the list, the IK marker will not be displayed.
-    | Make sure to set various properties before installation.
+    | ※装着されたオブジェクトの扱い
+    | 　VRMが装着したオブジェクトは、アニメーションにおいては位置や回転などの変形操作をキーフレームに登録することはできなくなります。一覧で選択してもIKマーカーは表示されません。
+    | 　各種プロパティは装着前に設定しておくようにしてください。
 
 
-.. admonition:: About wearing objects in animation projects
+.. admonition:: アニメーションプロジェクトでのオブジェクトの装着について
     
-    | Because the attachment of this object has a complicated mechanism, please be careful when using and preparing for animation. Attaching and removing an object must be **separate from the start/end of the desired motion**.
-    | It is a good idea to register in the keyframes in the following order.
+    | 　このオブジェクトの装着は仕組みが入り組んでいるため、アニメーションにおいては使用と準備には注意してください。オブジェクトの装着と解除は **目的とするモーションの開始・終了とは別にする** 必要があります。
+    | 　次の順序でキーフレームに登録するとよいでしょう。
 
-    example:
-        Equip a 3D sword object on the VRM's right hand
-
+    例:
+        VRMの右手に剣の3Dオブジェクトを装着する
+    
     .. csv-table::
         :header-rows: 1
 
-        Frames, VRMs, and other objects
-        1, move right hand into position, move sword into position
-        2, **attach a sword object** to the right hand, none
-        ～, ,None
-        9, finish moving right hand, none
-        10, **Release the sword attached to the right hand** , Register the current position and rotation in the keyframe
+        フレーム, VRM, その他オブジェクト
+        1, 右手を所定の位置に動かす, 剣を所定の位置に動かす
+        2, 右手に対して剣のオブジェクトを **装着する** , なし
+        ～, ,なし
+        9, 右手を動かし終える, なし
+        10, 右手に装着した剣を **解除する** , このときの位置・回転のままキーフレームに登録
 
-    * Other object properties cannot be changed between 2 and 10 frames.
-    * The point in the animation is that the wearing state is the same at the start and end. For example, if the 1st frame is without attachments and the 10th frame is with attachments, if you operate the frame or press the play button again, the position of the object may gradually shift.
+    * 2～10フレームの間はその他オブジェクトのプロパティを変更することはできません。
+    * アニメーションにおけるポイントは、開始時点と終了時点で装着の状態が同じ状態になっていることです。例えば1フレーム目で装着なし、10フレーム目で装着ありのまま、フレーム操作をしたり再び再生ボタンを押すと、オブジェクトの位置が次第にズレていくことがあります。
 
 |
 
-gravity settings
+重力の設定
 --------------------
 
-Bones possessed by VRoid/VRM are equipped with gravity settings as standard. Bones usually move automatically by Unity's standard collision detection function during game and motion production.
+| 　VRoid/VRMが持つボーンには重力の設定が標準で備わっています。ボーンは通常はゲームやモーションなどの演出時にUnity標準の衝突判定の機能によって自動的に動きます。
 
-Even with this app, hair flutters when the VRoid/VRM moves, but you can make fine adjustments manually.
+　本アプリでもVRoid/VRMが動いた時に髪の毛がなびいたりしますが、それを手動で細かく調整することができます。
 
-Although this is an effect only for this app, for example, you can correct the phenomenon in which the skirt rolls up too much with this gravity setting.
+　本アプリのみの効果となりますが、例えばスカートがめくれすぎる現象をこの重力の設定によって修正することができます。
 
 
 
 .. warning::
-    Conflicts with the stage wind effects and settings described below. Do not use this feature when using wind.
+    後述のStageの風の効果と設定が競合します。風を使用する場合はこの機能を使わないでください。
 
 .. image:: ../img/screen_gravity.png
     :align: center
 
 |
 
-The information on the gravity settings of the bones of the VRM being operated is listed on the spreadsheet. The bones displayed here are:
+　操作中のVRMが持つボーンの重力設定の情報がスプレッドシート上に羅列されます。ここで表示されるボーンは次のものです。
 
-* Bones that the VRM itself has (already held during creation in VRoidStudio)
-* Bones held by 3D models retrofitted to VRM with tools such as the Unity editor and my work VRMOneEditor
+* VRM自体が持つ（VRoidStudioでの作成中にすでに保持している）ボーン
+* Unityエディタや拙作VRMOneEditorなどのツールでVRMに後付けした3Dモデルが保持しているボーン
 
-Also, since it should have gone through conversion with UniVRM once, it relies on the ``VRMSpringBone`` component for bone information.
+　なお、一度UniVRMにて変換を経ているはずなので、ボーンの情報としては ``VRMSpringBone`` コンポーネントに依存しています。
 
-Please check in advance on VRoidStudio or Unity what bones are actually located. The cells that can be changed are:
+　何がどのボーンに実際に位置するのかはVRoidStudioやUnity上であらかじめ確認しておいてください。変更可能なセルは次のセルです。
 
 .. csv-table::
 
-    **Power**, the direct strength of gravity on that bone (0 to 1)
-    **Direction X / Y / Z**, Directional strength of gravity applied to the bone (-1 to 1)
+    **Power**, そのボーンにかかる重力の直接的な強さ(0 ～ 1)
+    **Direction X / Y / Z**, そのボーンにかかる重力の方向の強さ(-1 ～ 1)
 
 .. note::
-   * -1 in each Direction is the negative direction. For example, the Y axis will be downward. (1 means up)
-   * How the bones flutter due to gravity is reflected in ``Power * Direction``.
-   * Press the load button on the toolbar to reload the latest information.
+    * 各Directionの -1 は負の向きです。例えばY軸なら下に向かうようになります。(1 だと上に向かいます)
+    * 重力によるボーンのなびき具合は　``Power * Direction`` で反映されます。
+    * 最新の情報を読み直すにはツールバーの読み込みボタンを押してください。
 
-Texture
+
+テクスチャ
 ----------------
 
-You can change the settings of the textures held by the VRM in detail. The setting and usage of OtherObject are exactly the same.
+　VRMが保持しているテクスチャを細かく設定変更することができます。なお、OtherObjectのほうの設定と使用方法は全く同じです。
 
-Please see :doc:`operation_texture` for details.
+　詳しくは :doc:`operation_texture` を御覧ください。

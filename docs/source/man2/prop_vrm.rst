@@ -1,21 +1,21 @@
-.. index:: VRoid/VRM (property)
+.. index:: VRoid/VRM（プロパティ）
 
-#####################################
+####################################
 VRoid/VRM
-#####################################
+####################################
 
-This is a property that can be used with VRoid/VRM.
+　VRoid/VRMで使用可能なプロパティです。
 
 .. contents::
 
 
-.. index:: IK (VRM property)
-.. index:: Movement mode (VRM property)
-.. index:: Batch change of IK position (VRM property)
-.. index:: Gravity setting (VRM property)
-.. index:: IK marker assignment (VRM property)
+.. index:: IK（VRMのプロパティ)
+.. index:: 移動モード（VRMのプロパティ)
+.. index:: IK位置の一括変更（VRMのプロパティ)
+.. index:: 重力の設定（VRMのプロパティ)
+.. index:: IKマーカーの割り当て（VRMのプロパティ)
 
-IK, whole body
+IK、全身
 --------------------
 
 .. image:: ../img/prop_vrm_1.png
@@ -23,184 +23,182 @@ IK, whole body
 
 |
 
-Properties related to IK (mechanism for manipulating each part of the VRoid/VRM body).
+　IK（VRoid/VRMの体の各パーツを操作する仕組みのこと）に関するプロパティです。
 
 
-:Movement mode:
-    Switch to the mode that moves and rotates the entire VRoid/VRM at once. You can also move and rotate each IK part while this is enabled.
-:Batch change of IK position:
-    Displays a window that allows you to specify the position and rotation of IK parts in a spreadsheet format.
-:Gravity settings:
-    Set the gravity for the bones that VRM has as standard.
-:IK marker assignment:
-    Switch the VRM's IK markers to another object.
+:移動モード:
+    VRoid/VRM全体を一括で移動・回転させるモードに切り替えます。これが有効中でも各IKパーツの移動や回転も可能です。
+:IK位置の一括変更:
+    スプレッドシート形式でIKパーツの位置や回転を指定できるウィンドウを表示します。
+:重力の設定:
+    VRMが標準で持つボーンに対して重力の設定を行います。
+:IKマーカーの割り当て:
+    VRMが持つIKマーカーを別のオブジェクトに切り替えます。
 
-Assigning IK markers
-    IK marker sites:
-        Select the part of the IK marker to be switched.
-    Assigned roles:
-        Select which objects to assign as IK markers for the selected part.
+IKマーカーの割り当て
+    IKマーカーの部位:
+        切り替え対象のIKのマーカーの部位を選択します。
+    割り当て中のロール:
+        選択した部位に対しどのオブジェクトをIKマーカーとして割り当てるか選択します。
     Reset:
-        Reverts the IK markers back to their original markers.
+        IKマーカーを元のマーカーに戻します。
 
 |
 
-.. index:: hand pose (VRM property)
+.. index:: 手のポーズ（VRMのプロパティ)
 
-Arm, Hand
+腕、手
 ----------------
 
 .. image:: ../img/prop_vrm_2.png
     :align: center
 
-|
+| 
 
-**Right hand left hand:**
+**右手・左手：**
 
-:combo box:
-    Switch between manual operation, open, normal, goo, pointing, V sign, thumbs up, and grasp.
-:slider:
-    Specifies the degree of change of the pose specified in the combo box.
+:コンボボックス:
+    手動操作・開く・通常・グー・指差し・Vサイン・サムズアップ・握るのいずれかに切り替えます。
+:スライダー:
+    コンボボックスで指定したポーズの変化の度合いを指定します。
 
-manual operation
-^^^^^^^^^^^^^^^^^^^^^^^
+手動操作
+^^^^^^^^^^^^^^^^
 
-Introduced from ver 1.0.4. You can edit the pose of the palm in detail by rotating each finger of the hand.
+　ver 1.0.4より導入しました。手の指を一本ずつ回転操作して細かく手のひらのポーズを編集できます。
 
 .. image:: ../img/prop_vrm_8.png
     :align: center
 
 |
 
-When ``manual operation`` is selected, the UI will be displayed. The finger UI mimics a real palm and fingers.
+　``手動動作`` を選択するとUIが表示されます。指のUIは実際の手のひらと指に似せています。
 
 
 
 
-.. index:: blendshape (VRM property)
+.. index:: ブレンドシェイプ（VRMのプロパティ）
 
-Blend shape
+ブレンドシェイプ
 ----------------------------
 
-This is an item for finely adjusting the facial expressions of the VRoid/VRM.
+　VRoid/VRMの表情等を細かく調整する項目です。
 
 .. image:: ../img/prop_vrm_4.png
     :align: center
 
 |
 
-VRoid/VRM has two types of blendshapes. The Unity meaning and how to capture it in this application are classified as follows.
+　VRoid/VRMはブレンドシェイプを2種類保有しています。Unity的な意味と本アプリでの捉え方は次のとおりに分類しています。
 
-======================= ============== ============== ================
-Unity                   VRM version    This app(1.x)  This app(2.x)
------------------------ -------------- -------------- ----------------
-SkinnedMeshRenderer     0.x/1.x        Generic         Dedicated
-VRMBlendShapeProxy      0.x            Dedicated       Deprecated
-VRM10RuntimeExpression  1.x            Dedicated       Common
-======================= ============== ============== ================
+.. csv-table::
+    :header-rows: 1
+
+    Unity ,                  VRM version,   本アプリ(1.x) ,  本アプリ(2.x)
+    SkinnedMeshRenderer ,    0.x/1.x    ,    汎用         ,   専用
+    VRMBlendShapeProxy  ,    0.x        ,    専用         ,   廃止
+    VRM10RuntimeExpression , 1.x        ,    専用         ,   共通
 
 
-The naming convention for the SkinnedMeshRenderer's blendshapes is roughly determined as follows. Please note that the actual number varies depending on the character.
+　SkinnedMeshRendererのブレンドシェイプについて、その命名規則が次のように大体決まっています。キャラクターによりその実際の数は異なるのでご注意ください。
 
-===============  ==================================
-Key               Description
----------------  ----------------------------------
-~Fcl_All_~       Move all facial parts
-~Fcl_BRW_~       Move eyebrows
-~Fcl_EYE_~       Move your eyes
-~Fcl_MTH_~       Move mouth
-~Fcl_HA_~        Move teeth
-~Other~          Move parts that do not apply to the above
-===============  ==================================
+.. csv-table::
+    :header-rows: 1
 
+    キー          ,     説明
+    ～Fcl_All_～  ,    顔のパーツすべて動かす
+    ～Fcl_BRW_～  ,    眉毛を動かす
+    ～Fcl_EYE_～  ,    目を動かす
+    ～Fcl_MTH_～  ,    口を動かす
+    ～Fcl_HA_～   ,    歯を動かす
+    ～上記以外～   ,    上記に当てはまらない部位を動かす
 
 
 .. note::
-    * For VRM made by VRoidStudio.
-    * For the sake of clarity, this application hides the prefixes of the original blendshapes all at once. note that.
-    * In addition, I think that it is easy to find blendshapes in other apps if you use the above as a mark.
+    * VRoidStudio製のVRMの場合です。
+    * 本アプリではわかりやすさのため、本来のブレンドシェイプの接頭辞を一括して非表示にしてあります。ご了承ください。
+    * なお、他のアプリでも上記を目印にすればブレンドシェイプを探しやすいと思います。
 
 .. warning::
-    Due to VRM 1.x specifications, Expression and BlendShape behave differently. See :ref:`blendshape_vrm` for details.
+    VRM 1.xの仕様によりExpressionとBlendShapeでは動作が変わります。詳しくは :ref:`blendshape_vrm` をご覧ください。
+    
+    素のVRM1.xですと、主に次のBlendShapeが動かない傾向にあります。
 
-    With plain VRM1.x, the following BlendShapes tend not to work.
-
-    * Emotions (Fcl_All, etc., eyebrows, eyes, and mouth all move)
-    * mouth
+    * 喜怒哀楽（Fcl_Allなど、眉・目・口がすべて動くタイプ）
+    * 口（あいうえお）
     * etc
 
-    * Since this application cannot determine which blend shape of which VRM is stuck, the function has been moved to the new method "Expression". (with original repairs)
+    ※本アプリではどのVRMのどのブレンドシェイプが動かなくなるのか判別しきれないため、新しい方式の「Expression」に機能を移行しました。（独自改修あり）
 
 |
 
-.. index:: Auto blink (VRM property)
+.. index:: 自動まばたき（VRMのプロパティ）
 
-automatic blink
-^^^^^^^^^^^^^^^^^^^^^
+自動まばたき
+^^^^^^^^^^^^^^^
 
-Make the VRoid/VRM facial expressions blink automatically.
+　VRoid/VRMの表情について、まばたきを自動的にさせます。
 
 .. image:: ../img/prop_vrm_3.png
     :align: center
     
+| 
+
+:自動まばたきを有効:
+    自動まばたきをオンオフ切り替えます。デフォルトはオンです。
+:まばたきの間隔:
+    この秒数の間隔でまばたきをします。
+:まぶたを開ける秒数:
+    この秒数をかけてまぶたを開けます。
+:まぶたを閉じる秒数:
+    この秒数をかけてまぶたを開けます。
+:まぶたを閉じている時間:
+    この秒数分まぶたを閉じています。
+
+
 |
 
-:Enable Auto Blink:
-    Toggles automatic blinking on and off. Default is on.
-:Blink interval:
-    Blink at intervals of this number of seconds.
-:Seconds to open eyelids:
-    Take this number of seconds to open your eyelids.
-:Seconds to close the eyelids:
-    Take this number of seconds to open your eyelids.
-:Time when eyelids are closed:
-    I'm closing my eyelids for this few seconds.
+.. index:: オブジェクトの装着（VRMのプロパティ)
 
-
-|
-
-.. index:: Object attachment (VRM property)
-
-wearing an object
+オブジェクトの装着
 --------------------
 
-This is a list of functions that link different objects with the movement of each part of the VRoid/VRM.
+　VRoid/VRMの各部位の動きに別のオブジェクトを連動させる機能の一覧です。
 
 
 .. image:: ../img/prop_vrm_5.png
     :align: center
     
-|
+| 
 
-You can attach objects to the following parts of your body. There is no limit to how many you can wear.
+　オブジェクトを体の次の部位に装着させることができます。装着する数に制限はありません。
 
-:combo box:
-    Select the parts you want to equip.
-:Equipment button:
-    Shows the attach object dialog.
-:Current equipment column:
-    Unequip it with the delete button on the far right.
+:コンボボックス:
+    装備させたい部位を選択します。
+:装備ボタン:
+    オブジェクトの装着ダイアログを表示します。
+:現在の装備欄:
+    右端の削除ボタンで装備を解除します。
 
-::
 
-    Buttocks, left thigh, right thigh, left lower leg, right lower leg, left leg, right leg,
-    spine, chest, neck, head,
-    Left shoulder, right shoulder, left upper arm, right upper arm
-    left forearm, right forearm, left hand, right hand, upper chest
+    * お尻、左ふともも、右ふともも、左下脚、右下脚、左足、右足
+    * 脊柱、胸、首、頭
+    * 左肩、右肩、左上腕、右上腕
+    * 左前腕、右前腕、左手、右手、胸上部
 
 
 
 .. image:: ../img/prop_vrm_6.png
-     :align: left
+    :align: left
 
 :ID:
-    ID of the object.
+    オブジェクトのIDです。
 
 :Type:
-    The type of object.
+    オブジェクトの種類です。
 
 :Name:
-    is the name of the object.
+    オブジェクトの名称です。
 
 |
 |
@@ -211,12 +209,12 @@ You can attach objects to the following parts of your body. There is no limit to
 |
 
 
-Select the object you want to equip and press the "OK" button to equip it.
+　装備させたいオブジェクトを選び、「OK」ボタンを押すと装備できます。
 
 
-|
+| 
 
-Texture
+テクスチャ
 ----------------------
 
 .. image:: ../img/prop_obj_1.png
@@ -224,33 +222,33 @@ Texture
 
 |
 
-This is a property related to textures owned by VRM. If there are multiple textures or materials, you can select them from the combo box. The number of textures that can be detected depends on the actual VRM.
+　VRMが保有しているテクスチャに関するプロパティです。テクスチャやマテリアルが複数存在した場合はコンボボックスから選ぶことができます。検出できるテクスチャの数は実際のVRMによって異なります。
 
-:Material name:
-    The name of the material held by the currently selected texture.
-:shader:
-    Switch the shader to Unity's Standard, VRM's VRM/MToon, or StandardAsset's Water (FX/Water4).
+:マテリアル名:
+    現在選択中のテクスチャが保持しているマテリアルの名称です。
+:シェーダー:
+    Unity標準のStandard、VRM標準のVRM/MToon、StandardAssetのWater（FX/Water4）のいずれかにシェーダーを切り替えます。
 
-You can change the settings of the following shaders. For details, please refer to Unity Help.
+以下のシェーダーの設定を変更できます。詳しくはUnityのヘルプ等でご確認ください。
 
 :Standard:
-    Color, Blend Mode, Metallic, Glossy, Emission Color, Texture
+    色、ブレンドモード、メタリック、光沢、発光色（Emission Color）、テクスチャ
 :VRM/MToon:
-    Colors, Blending Modes, Culling Modes
-    Metallic, Glossy, Emission Color, Shade Color
-    Shading Toony, Rim Color, Rim fresnel power
-    SrcBlend, DstBlend, Texture
+    色、ブレンドモード、カリングモード
+    メタリック、光沢、発光色（Emission Color）、シェードの色（Shade Color）
+    Shading Toony、 Rim Color、Rim fresnel power
+    SrcBlend、DstBlend、テクスチャ
 :Water:
-    Fresnel scale, reflection color, specular color, wave amplitude, wave frequency, wave steepness, wave velocity, wave direction AB, wave direction CD
+    フレネルスケール、反射色、鏡面色、波の振れ幅、波の周波数、波の急勾配、波の速度、波方向AB、波方向CD
 :Sketch:
-    Outline width, Stroke density, Add brightness, Multi brightness, Shadow brightness
+    Outline width、Stroke density、Add brightness、Mult brightness、Shadow brightness
 :PostSketch:
-    Outline width, Stroke density, Add brightness, Multiple brightness
+    Outline width、Stroke density、Add brightness、Mult brightness
 :Comic:
-    enableTexTransparent, Line width, Color, Tone threshold
+    enableTexTransparent、Line width、色、Tone threshold
 
 .. hint::
-    It is the same as setting the texture of OtherObject described later.
+    後述のOtherObjectのテクスチャの設定と同一です。
 
 .. caution::
-    Some shaders are not suitable for VRM. Please use with caution as it may change differently than expected.
+    VRMには適さないシェーダーもあります。想定と異なる変化する可能性があるので注意して使用してください。

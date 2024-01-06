@@ -1,8 +1,8 @@
-.. index:: timeline (screen configuration)
+.. index:: タイムライン（画面の構成）
 
-#####################################
-Timeline
-#####################################
+####################################
+タイムライン
+####################################
 
 .. image:: ../img/screen_timeline.png
     :align: center
@@ -10,35 +10,33 @@ Timeline
 |
 
 
-This is the function at the bottom of the WebGL screen. Used in animation.
+　WebGL画面の下にある機能です。アニメーションで使われます。
 
 
-:A Toolbar:
-    From the left: Move back/advance the current position of the frame, reduce/enlarge the display, play from the beginning, play/pause, stop, load the frame, display the keyframe setting window, empty frame at the current position insert, delete current frame position
+:A ツールバー:
+    左から・・・フレームの現在位置を戻す・進める、表示を縮小・表示を拡大、最初から再生、再生/一時停止、停止、フレームを読み込む、キーフレーム設定ウィンドウ表示、現在の位置に空のフレームを挿入、現在のフレーム位置を削除
 
-:B Seek bar:
-    Move the current position of the frame to any location.
+:B シークバー:
+    フレームの現在位置を任意の場所に移動します。
 
-:C object role name:
-    Displayed to identify the timeline.
+:C オブジェクト・ロール名:
+    タイムラインを識別するために表示されます。
 
-    Show/Hide button ... Hide the object from the WebGL screen.
+    | 表示・非表示ボタン・・・オブジェクトをWebGL画面から隠します。
 
-:D timeline:
-    Displays keyframes for each object. You can switch the frame to operate by pressing the number at the top. The registered keyframes are filled in red. **When registering a child key, the number in the red cell part of the key frame is counted accordingly.**
+:D  タイムライン:
+    各オブジェクトごとにキーフレームを表示します。上部の番号を押すことで操作するフレームを切り替えできます。登録したキーフレームの箇所には赤く塗りつぶされます。 **子キーを登録するとキーフレームの赤いセル部分の数値がその分カウントされます。**
 
-    Double-click to open the keyframe settings window.
-
-    If you place the mouse cursor over a registered keyframe, you can check the current settings in a popup.
+    ダブルクリックするとキーフレームの設定のウィンドウが開きます。
+    
+    登録済みのキーフレームにマウスカーソルを当てると現在の設定がポップアップで確認できます。
 
     .. image:: ../img/screen_timeline02.png
         :align: center
+    
+    |
 
-|
 
+:E  パネル拡大・縮小ボタン:
+    タイムラインのパネルを拡大、縮小（ツールバーのみ）を切り替えます。
 
-:E child-key stroke bar:
-    From left: child key registration, child key selection box, child key deletion
-
-:F Panel enlargement/reduction button:
-    Toggles between expanding and contracting the timeline panel (toolbar only).

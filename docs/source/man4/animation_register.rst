@@ -1,69 +1,69 @@
-.. index:: registering and setting keyframes (animation project)
+.. index:: キーフレームの登録と設定（アニメーションプロジェクト）
 
-##########################################
-Registering and setting keyframes
-##########################################
+#########################################
+キーフレームの登録と設定
+#########################################
 
 .. contents::
 
-.. index::
-    Select Frames (Animation Project)
-    Restoring keyframes
+.. index:: 
+    フレームを選択する（アニメーションプロジェクト）
+    キーフレームの復元
 
-choose a frame
+フレームを選択する
 ===============================
 
-This is the frame selection operation, which is the basic operation. There are two types of selection.
+　基本の操作であるフレームの選択操作です。選択には２つの種類があります。
 
-:Select frame number:
-    Choosing a frame position
-:Select line in timeline:
-    Select timeline (role)
+:フレーム番号を選択:
+    フレーム位置の選択
+:タイムラインの行を選択:
+    タイムライン（ロール）の選択
 
 
-Choosing a frame position
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+フレーム位置の選択
+^^^^^^^^^^^^^^^^^^^^^^
 
-1. Click on the frame number at the top of the timeline to select it.
+1. タイムラインの上部のフレームの番号をクリックして選択します。
 
-.. image::img/register_1.png
+.. image:: img/register_1.png
     :align: center
 
 |
 
-2. If a keyframe has already been registered at that position, the settings will be restored to the UI and the object will be restored to that state.
+2. 該当位置にキーフレームが登録済みの場合、UIに設定が復元され、オブジェクトがその状態に復元されます。
 
 
-* If the keyframe is not registered, it will not be selected even if you click the keyframe part.
+※キーフレームが未登録の場合、キーフレーム部分をクリックしても選択されません。
 
 
 
-Select timeline (role)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+タイムライン（ロール）の選択
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Click on the role name on the left of the timeline to select it.
+1. タイムラインの左のロール名をクリックして選択します。
 
-.. image::img/register_c.png
+.. image:: img/register_c.png
     :align: center
 
 |
 
-You can also select the timeline by selecting the object list.
+オブジェクト一覧を選択してもタイムラインを選択することができます。
 
-.. image::img/register_d.png
+.. image:: img/register_d.png
     :align: center
 
 |
 
-* However, only when the corresponding object is associated with a role
+※ただし該当のオブジェクトがロールに紐付いている場合のみ
 
-2. The settings for that object are restored to the UI.
+2. そのオブジェクトの設定がUIに復元されます。
 
 
-If a keyframe has been registered
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+キーフレームが登録済みの場合
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Clicking a point with a registered keyframe selects both the frame position and the timeline (roll).
+1. 登録済みのキーフレームがある箇所をクリックするとフレーム位置とタイムライン（ロール）の両方を選択します。
 
 .. image:: img/register_6.png
     :align: center
@@ -73,93 +73,93 @@ If a keyframe has been registered
 
 .. _reg_anim:
 
-.. index::
-    Registering and updating keyframes
-    Keyframe registration window (animation)
+.. index:: 
+    キーフレームの登録・更新
+    キーフレームの登録ウィンドウ（アニメーション）
 
-Registering/updating to a keyframe
+キーフレームに登録する・更新する
 =====================================
 
-We will register keyframes on the timeline. The contents that can be registered in key frames are as follows.
+　タイムラインにキーフレームを登録していきます。キーフレームに登録できる内容は次のとおりです。
 
-:Contents that can be registered:
-    * All operations of VRoid/VRM implemented in this application
-    * All other object actions
-    * Manipulate system effects and audio
-    * FBX animation, effect animation
+:登録できる内容:
+    * 本アプリで実装しているVRoid/VRMの全ての動作
+    * それ以外のオブジェクトの全動作
+    * システムエフェクトやオーディオの操作
+    * FBXのアニメーション、エフェクトのアニメーション
 
 .. note::
-    * Material management such as texture files is not included in animation. Please load each file corresponding to the material name used in each object in advance.
-    * Animations of commonly used 3D objects such as FBX can be played individually in the animation project of this application.
-    * From ``ver 2.1.0``, you can also register system effects and audio from the buttons in the keyframe registration window. (The registration button in each tab of the ribbon bar has been abolished.)
+    * テクスチャファイルなどの素材の管理はアニメーションに含まれません。各オブジェクトで使われる素材名に該当する各ファイルを事前に読み込んでおいてください。
+    * 一般的に用いられるFBXなどの3Dオブジェクトのアニメーションは、本アプリのアニメーションプロジェクトの中で個別に再生することはできます。
+    * ``ver 2.1.0`` よりシステムエフェクトとオーディオの登録もキーフレームの登録ウィンドウ内のボタンから行えるようになりました。（リボンバーのそれぞれのタブ内にあった登録ボタンは廃止しました）
 
 
 
-.. admonition:: Is it possible to register keyframes for each bone (IK marker)?
+.. admonition:: ボーン(IKマーカー)単位でのキーフレーム登録はできない？
 
-    * It is not possible to register only specific bones like MMD. All IK parts must be registered for each frame. (In other words, save the current pose/state as a whole)
+    ※MMDのように特定のボーンだけの登録、ということはできません。必ず全IKパーツを各フレームごとに登録することになります。（つまり、現在のポーズ・状態をまるごと保存する）
 
-    From ``ver 2.1.0``, it is now possible to check the bones to be registered (called IK markers in this application) on the UI. In the future, we plan to make it possible to register keyframes for each bone in the same way as MMD/MMM.
+    ``ver 2.1.0`` より、これから登録しようとしているボーン(本アプリではIKマーカーと呼称)をUI上で確認できるようにしました。将来的にはMMD/MMMと同様にボーン単位でのキーフレームの登録を出来るようにする予定です。
 
 
-1. Click the keyframe number on the VRoid/VRM timeline to pose.
+1. ポーズを取らせるVRoid/VRMのタイムラインのキーフレームの番号をクリックして選択します。
 
-.. image::img/register_1.png
+.. image:: img/register_1.png
     :align: center
 
 |
 
 .. warning::
-    Please note that if the keyframe has already been registered, that pose will be read and the current pose will be overwritten.
+    ※すでにキーフレームに登録がある場合はそのポーズが読み込まれて現在のポーズが上書きされるのでご注意ください。
 
-2. Pose the VRoid/VRM and each object.
+2. VRoid/VRMや各オブジェクトにポーズを取らせます。
 
-.. image::img/register_2.png
+.. image:: img/register_2.png
     :align: center
 
 |
 
 
-3. Click ``Register Keyframe`` in the ``Animation`` tab of the ribbon bar.
+3. リボンバーの ``アニメーション`` タブにある ``キーフレーム登録`` をクリックします。
 
-.. image::img/register_3.png
+.. image:: img/register_3.png
     :align: center
 
 |
 
-1. The ``keyframe registration window`` will appear.
+1. ``キーフレームの登録ウィンドウ`` が表示されます。
 
 .. |keyframe1| image:: ../img/screen_ribbon_animation_keyframe1.png
 .. |keyframe2| image:: ../img/screen_ribbon_animation_keyframe2.png
 
 
-In the keyframe registration window, you can see what you are about to register and the bones.
+キーフレームの登録ウィンドウでは、これから登録しようとしている内容とボーンを確認できます。
 
 .. csv-table::
     :header-rows: 1
 
-    VRM, non-VRM
+    VRM, VRM以外
     |keyframe1|, |keyframe2|
-    All IK markers including IKParent, IKParent only
+    IKParentを含めた全てのIKマーカー, IKParentのみ
 
 .. hint::
-    You can display it by right-clicking anywhere in the ribbon bar (Control-click or double-tap on macOS).
+    リボンバーの中ならどこで右クリック（macOSの場合はControlキーを押しながらクリックまたは2点タップ）することで表示可能です。
 
 
-.. index:: Contents to be registered in the keyframe
+.. index:: キーフレームに登録する内容
 
-Decide what to register
-    In ``What to register``, you can choose the following contents.
+登録する内容を決める
+    ``登録する内容`` では次の内容を選ぶことができます。
 
     .. csv-table::
+        
+        共通(移動), IKマーカーの移動のみを登録します。プロパティ一覧の ``共通`` タブの ``位置`` のことです。
+        共通(移動以外),IKマーカーの回転・倍率・ジャンプ・揺れを登録します。プロパティ一覧の ``共通`` タブの同名の項目です。
+        プロパティ, 現在選択中のオブジェクトの各プロパティを登録します。プロパティ一覧の共通以外のタブのことです。
     
-        Common (move), only register the movement of the IK marker. The ``position`` of the ``common`` tab in the property list.
-        Register common (other than movement), IK marker rotation, magnification, jump, and shake. It is the item with the same name on the ``Common`` tab of the property list.
-        Property, Register each property of the currently selected object. A non-common tab in the property list.
-
-    * Up to ``ver 2.0.3``, all three types were forcibly registered.
-    * In ``ver 2.1.0`` or later, for example, if you change the blend shape in the first frame and want to continue to reflect that blend shape, you can uncheck the property and register it in the second frame and later. , you can leave it all the way to a keyframe that changes the property again. You can only need to modify the blendshape on frame 1 and then change again.
-    * There is no point in turning on or off the check for system effects and audio.
+    * ``ver 2.0.3`` までは強制的に3種類全てが登録されました。
+    * ``ver 2.1.0`` 以降では、例えば1フレーム目でブレンドシェイプを変更したらその後ずっとそのブレンドシェイプを反映し続けたいという場合に、2フレーム目以降ではプロパティのチェックを外して登録することで、再びプロパティを変更するキーフレームまでずっとそのままにすることができます。ブレンドシェイプを修正するには1フレーム目と再び変更するフレームだけで済むようにできます。
+    * システムエフェクトとオーディオではチェックをオンオフしても意味はありません。
 
 .. |vvmico_ikparent| image:: img/vvmico_bn_ikparent.png
 .. |vvmico_head| image:: img/vvmico_bn_head.png
@@ -180,41 +180,41 @@ Decide what to register
 .. |vvmico_leftft| image:: img/vvmico_bn_leftleg.png
 .. |vvmico_prop| image:: img/vvmico_prop.png
 
-Check the IK marker to be registered
-    In ``Bones to register``, you can check the IK markers that are actually registered. Note that the number of IK markers that can be checked differs between VRM and other objects.
-
-    :VRM:
+登録するIKマーカーを確認する
+    ``登録するボーン`` では実際に登録されるIKマーカーを確認できます。なおVRMとそれ以外のオブジェクトで確認できるIKマーカーの数が異なります。
+    
+    :VRM: 
         .. csv-table::
 
-            |vvmico_prop| property, |vvmico_ikparent| IKParent, |vvmico_head| Head, |vvmico_eye| EyeViewHandle, |vvmico_lookat| LookAt
+            |vvmico_prop| プロパティ, |vvmico_ikparent| IKParent, |vvmico_head| Head, |vvmico_eye| EyeViewHandle, |vvmico_lookat| LookAt
             |vvmico_chest| Chest, |vvmico_aim| Aim, |vvmico_pelvis| Pelvis, |vvmico_leftsho| LeftShoulder, |vvmico_rightsho| RightShoulder
             |vvmico_leftla| LeftLowerArm, |vvmico_lefthand| LeftHand, |vvmico_rightla| RightLowerArm, |vvmico_righthand| RightHand,
-            |vvmico_leftll| LeftLowerLeg, |vvmico_leftft| LeftLeg, |vvmico_rightll| RightLowerLeg, |vvmico_rightft| RightLeg,
-    
-    :Non-VRM:
+            |vvmico_leftll| LeftLowerLeg, |vvmico_leftft| LeftLeg, |vvmico_rightll| RightLowerLeg, |vvmico_rightft| RightLeg, 
+        
+    :VRM以外: 
         .. csv-table::
 
-            |vvmico_ikparent| IKParent, |vvmico_prop| properties
+            |vvmico_ikparent| IKParent, |vvmico_prop| プロパティ
 
-    In addition, it is also expressed so that the parts can be identified with icons. This icon is also used in the keyframe content popup on the timeline.
+    なお、アイコンで部位がわかるようにも表現しています。このアイコンはタイムライン上でのキーフレーム内容のポップアップでも使用されます。
 
     .. image:: ../img/screen_timeline02.png
         :align: center
 
-.. |allregister| image:: img/register_4.png
-.. |contextregister| image:: img/register_5.png
+.. |allregist| image:: img/register_4.png
+.. |contextregist| image:: img/register_5.png
 
 |
 
 ..
-    Register all objects at once
-        |allregist| 　If you want to register the current poses and states of all objects, click ``Register all objects``.
+    すべてのオブジェクトを一括で登録する
+        |allregist| 　すべてのオブジェクトの現在のポーズ・状態を登録したい場合は ``全オブジェクトを登録`` をクリックしてください。
 
-Right click to register
-    |contextregister| Right-clicking on the object list and clicking ``Register Pose in Current Frame`` has the same function.
+右クリックから登録する
+    |contextregist| 　オブジェクト一覧上で右クリックし、 ``ポーズを現在のフレームに登録する`` をクリックしても同じ機能です。
 
 
-6. Confirm that the target keyframe in the timeline is filled.
+6. タイムライン中の対象のキーフレームが塗りつぶされることを確認します。
 
 .. image:: img/register_6.png
     :align: center
@@ -222,61 +222,61 @@ Right click to register
 |
 
     .. note::
-        * Numbers are displayed for keyframes with common properties such as movement and rotation.
-        * The number increases when a child key described later is registered.
-        * Numbers are not displayed for keyframes that do not have common properties registered.
+        * 移動や回転などの共通プロパティが登録されたキーフレームは数字が表示されます。
+        * 後述の子キーが登録されるとその数字が増えます。
+        * 共通プロパティの登録がないキーフレームには数字は表示されません。
 
-7. Select another keyframe, give it another pose and register again.
+7. 別のキーフレームを選択し、別のポーズを取らせてまた登録します。
 
 .. image:: img/register_7.png
     :align: center
 
 |
 
-Repeat for the length of the animation you want to create.
+これを作りたいアニメーションの長さ分繰り返していきます。
 
-.. index:: compensation between keyframes
+.. index:: キーフレーム間の補正
 
-.. admonition:: What about the compensation between keyframes?
+.. admonition:: キーフレーム間の補正は？
 
-    Due to the effects of the library used by this application, the animation between registered keyframes is automatically corrected. (Some motions cannot be fully corrected)
+    　本アプリで使用中のライブラリの効果により、登録済みキーフレーム間のアニメーションの補正は自動的に行われます。（一部補正しきれないモーションもあります）
 
-    When you click on a frame number that has nothing registered, if it is between the registered keyframes, the pose in the middle of the animation will be reproduced. This will change depending on the easing and spacing described later.
+    　なにも登録されていないフレーム番号をクリックした際、登録したキーフレーム間だった場合はアニメーションの途中のポーズが再現されます。これは後述のイージングや間隔により変化します。
 
 
-.. index::
-    Delete keyframe
-    Delete keyframe properties only
+.. index:: 
+    キーフレームを削除する
+    キーフレームのプロパティだけを削除する
 
-Delete keyframe
+キーフレームを削除する
 ==========================
 
-The registered keyframes on the timeline are deleted.
+　タイムライン中の登録済みキーフレームを削除します。
 
-1. Click to select the object you want to delete and the keyframe number.
+1. 削除したいオブジェクト、そしてキーフレームの番号をクリックして選択します。
 
 .. image:: img/register_8.png
     :align: center
 
 |
 
-2. Click ``Remove Keyframe`` in the ``Animation`` tab of the ribbon bar.
+2. リボンバーの ``アニメーション`` タブにある ``キーフレームを削除`` をクリックします。
 
 .. image:: img/register_91.png
     :align: center
 
 |
 
-3. Select and click the deletion method.
+3. 削除する方法を選んでクリックします。
 
     .. csv-table::
         :align: center
 
-        Delete keyframe, deletes the keyframe itself as usual.
-        Delete only properties, deletes each property of ``non-common`` objects from the contents registered in the keyframe. Keyframes are not deleted.
+        キーフレームを削除, 通常通りキーフレーム自体を削除します。
+        プロパティだけを削除, キーフレームの登録内容のうち、``共通以外`` のオブジェクトの各プロパティを削除します。キーフレームは削除されません。
 
 
-4. A confirmation message will be displayed. If there is no problem, press the OK button.
+4. 確認メッセージが表示されるので問題なければOKボタンを押します。
 
 .. image:: img/register_a.png
     :align: center
@@ -285,28 +285,28 @@ The registered keyframes on the timeline are deleted.
 
 
 
-.. index::
-    Change keyframe position
-    Target multiple keyframes
+.. index:: 
+    キーフレーム位置を変更
+    複数のキーフレームを対象にする
 
-Change the registered keyframe position
+登録したキーフレーム位置を変更する
 ===========================================
 
-　You can move the frame position of the registered keyframe.
+　登録済みキーフレームのフレーム位置を移動させることができます。
 
-1. Register a keyframe.
+1. キーフレームを登録します。
 
-2. Double-click the registered keyframe part.
+2. 登録したキーフレーム部分をダブルクリックします。
 
 .. figure:: img/register_6.png
     :align: center
-
-    Make sure that the frame number is correctly selected for the keyframe at this time.
+    
+    　このときのキーフレームは、フレーム番号が正しく選択されていることを確認してください。
 
 |
 
 
-3. Enter the new position value in the input box of the destination frame and press the button with the move icon.
+3. 移動先フレームの入力ボックスに新しい位置の数値を入力し、移動のアイコンのボタンを押します。
 
 .. image:: img/register_b.png
     :align: center
@@ -314,56 +314,56 @@ Change the registered keyframe position
 |
 
 .. note::
-    * If you change it, the display of keyframes on the timeline will also change immediately.
-    * If a keyframe has already been registered at the frame position of the change destination, the button cannot be pressed.
+    * 変更するとタイムライン上のキーフレームの表示も即座に切り替わります。
+    * 変更先のフレーム位置にすでにキーフレームが登録されていた場合はボタンを押すことは出来ません。
 
 .. hint::
-    By specifying the start frame and end frame in a specific range, you can move multiple keyframes at once.
+    開始フレームと終了フレームを特定の範囲で指定すると、一度に複数のキーフレームを動かすことができます。
 
-    example
-        | Positions where keyframes exist = 10, 13, 14
-        | Current start frame = 10
-        | Current end frame = 15
-        | Destination frame = 20
+    例
+        | キーフレームが存在する位置＝10, 13, 14
+        | 現在の開始フレーム＝10
+        | 現在の終了フレーム＝15
+        | 移動先フレーム＝20
 
-        | After moving = 20, 23, 24
+        | 移動後＝20, 23, 24
 
 
 |
 
-.. index:: modifiable properties
+.. index:: 変更可能なプロパティ
 
 
-Modifiable properties
+変更可能なプロパティ
 ==============================
 
-The properties that can be changed in the keyframe settings dialog are as follows. Any property can be changed many times at once by targeting multiple keyframes. I think there are many ways to use it.
+　キーフレームの設定ダイアログで変更可能なプロパティは次のとおりです。いずれのプロパティもキーフレームを複数対象にすることで一度に多くの変更を行うことができます。活用しどころが多いと思います。
 
-If you hover the mouse cursor over the registered key position, a popup will appear and you can check the interval and easing at that position.
+　なお、登録済みのキーの位置にマウスカーソルを当てると、ポップアップ表示されてその位置の間隔とイージングを確認することができます。
 
 .. image:: ../img/screen_timeline02.png
     :align: center
 
 |
 
-.. index:: set easing
+.. index:: イージングを設定する
 
-Set easing
+イージングを設定する
 ^^^^^^^^^^^^^^^^^^^^^^
 
-It can be set after registering the keyframe. If you're familiar with animation, you may already know this, but it's a factor that affects how things move, such as how long it takes to change to a certain keyframe, and how fast it moves. Changing this will change the animation from a monotonous impression to a lively one.
+　キーフレームを登録した後に設定可能です。アニメーションに慣れていればすでにご存知かもしれませんが、これはあるキーフレームに変化する際の時間のかかり方やスピードなどの動き方に関わる要素です。これを変更することでアニメーションが単調な印象なものから活き活きとしたものになります。
 
-1. Register the keyframe.
+1. キーフレームを登録します。
 
-2. Double-click the registered keyframe part to open the keyframe window.
+2. 登録したキーフレーム部分をダブルクリックしてキーフレームウィンドウを開きます。
 
 .. figure:: img/register_6.png
     :align: center
+    
+    　このときのキーフレームは、フレーム番号が正しく選択されていることを確認してください。
 
-    Make sure that the frame number is correctly selected for the keyframe at this time.
 
-
-3. Select the type of easing you like from the easing combo box.
+3. イージングのコンボボックスから好きなイージングの種類を選びます。
 
 .. image:: img/register_e.png
     :align: center
@@ -371,246 +371,252 @@ It can be set after registering the keyframe. If you're familiar with animation,
 |
 
 .. hint::
-    By specifying the start frame and end frame, you can change the easing settings for multiple keyframes at once.
+    開始フレーム・終了フレームを指定すると、一度に複数のキーフレームのイージングを設定変更できます。
 
     .. image:: img/register_h.png
         :align: center
 
 
-* For easing, refer to the following site.
+※イージングについては下記のサイトが参考になります。
 
-`Easing Function Cheat Sheet <https://easings.net/en>`_
+`イージング関数チートシート <https://easings.net/ja>`_
 
+.. note::
+    VRMViewMeister ver 2.2.0より、連続して同じイージングを指定した範囲はそのイージングに沿ってアニメーションするようになりました。
 
 |
 
-.. index:: set keyframe interval
+.. index:: キーフレームの間隔を設定
 
 .. _modifyeachduration:
 
-Set keyframe intervals
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+キーフレームの間隔を設定する
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-　It can be set after registering the keyframe. Sets the time to reach the corresponding keyframe. Basically it is calculated automatically, but you can also specify it manually.
+　キーフレームを登録した後に設定可能です。該当のキーフレームに至るまでの時間を設定します。基本的に自動で計算されますが、手動で指定することもできます。
 
 ::
 
-    Default duration: [FPS / 6000] seconds
+    デフォルトの間隔(duration)・・・ [FPS / 6000] 秒
 
-1. Register a keyframe.
+1. キーフレームを登録します。
 
-2. Double-click the registered keyframe to open the keyframe window.
+2. 登録したキーフレーム部分をダブルクリックしてキーフレームウィンドウを開きます。
 
 .. figure:: img/register_6.png
     :align: center
+    
+    　このときのキーフレームは、フレーム番号が正しく選択されていることを確認してください。
 
-    Make sure that the frame number is correctly selected for the keyframe at this time.
 
+3. 間隔(duration) の欄を秒数で指定します。
 
-3. Specify the number of seconds in the Duration field.
-
-.. image::img/register_f.png
+.. image:: img/register_f.png
     :align: center
 
 |
 
-With this, you can create motion at any time for each timeline (roll) without registering keyframes according to the actual frame numbers.
+　これにより、実際のフレーム番号に従ってキーフレームを登録していかなくても **タイムライン（ロール）ごとに自由なタイミングで** モーションを作ることができます。
 
 .. caution::
-    However, if you do not properly manage the duration yourself, it may be difficult to determine the motion timing for each timeline and cause confusion. please note.
+    　ただし自分で間隔(duration)をきちんと管理しないと各タイムラインごとのモーションのタイミングを図りづらくなり混乱するおそれがあります。ご注意ください。
 
 .. hint::
-    By specifying the start frame and end frame, you can change the settings for multiple keyframe intervals at once.
+    開始フレーム・終了フレームを指定すると、一度に複数のキーフレームの間隔を設定変更できます。
 
     .. image:: img/register_h.png
         :align: center
 
 |
 
-.. index:: copy interval from other avatar's timeline
+.. index:: 他のアバターのタイムラインから間隔をコピーする
 
-Copy intervals from another avatar's timeline
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-You can easily obtain the total interval from a specific range of keyframes on other timelines.
+他のアバターのタイムラインから間隔をコピーする
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-.. image:: img/register_g.png
+　他のタイムラインの特定の範囲のキーフレームから、間隔を合計したものを簡単に取得することができます。
+
+
+ .. image:: img/register_g.png
     :align: center
 
-1. Select the timeline (role name) you want to copy.
-2. Enter the ``start`` and ``end`` frame numbers.
-3. When you press the copy button, the total value of the interval in the specified range will be reflected in the duration input box.
-4. If you really want to apply it, use the ** key to erase fractions in the duration input box. The changes will be confirmed**.
+1. コピーしたいタイムライン（のロール名）を選択します。
+2. ``開始`` と ``終了`` のフレーム番号を入力します。
+3. コピーボタンを押すと、指定の範囲の間隔の合計値が間隔(duration)の入力ボックスに反映されます。
+4. 本当に適用してもよい場合は間隔(duration)の入力ボックスで端数を消すなどの **キー操作をします。すると変更が確定** します。
 
-..note::
-    When you press the copy button, the total value of the interval is set in the input box.
-
-    If you want to **cancel** the input, please do not press **keys in the input box and switch the selection of the timeline**. Doing so cancels the changes and allows you to move on to another timeline or avatar editing.
+.. note::
+    　コピーボタンを押すと間隔の合計値が入力ボックスにセットされます。
+    
+    　その入力を **キャンセルしたい** 場合は入力ボックスで **キー操作をせず、タイムラインの選択を切り替えるなどして** ください。そうすることで変更がキャンセルされ、別のタイムラインやアバターの編集に移ることができます。
 
 |
 
-.. index:: change position and rotation
+.. index:: 位置や回転を変更する
 
-Change position or rotation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+位置や回転を変更する
+^^^^^^^^^^^^^^^^^^^^^^
 
-It can be set after registering the keyframe. If the selected avatar is VRM, OtherObject, Camera, Light, or Effect, you can adjust the position and rotation of the object itself.
+　キーフレームを登録した後に設定可能です。選択中のアバターがVRM、OtherObject、カメラ、ライト、エフェクトの場合にそのオブジェクト自体の位置や回転を調整する事ができます。
 
-1. Fill in the input fields for the X, Y and Z axes of position or rotation.
-2. By default, changes are applied to target keyframes with relative position and relative angle.
+1. 位置または回転のX, Y, Z軸の入力欄に入力します。
+2. 初期設定では相対位置・相対の角度で対象となるキーフレームに変更を適用します。
 
 .. image:: img/register_k.png
     :align: center
 
-:Position: Moves the object plus or minus from its current position. If 0, do not change.
-:Rotate: Rotate the object plus or minus from the current angle. Possible values are in the range -180 to +180 degrees. If 0, do not change.
+:位置: オブジェクトを現在の位置からプラス・マイナスして移動させます。0の場合は変更しません。
+:回転: オブジェクトを現在の角度からプラス・マイナスして回転させます。指定可能な値は-180～+180度の範囲です。0の場合は変更しません。
 
 .. note::
-    If you check ``absolute specification``, you can specify absolute.
-    However, it can easily overwrite the position and rotation in existing keyframes, so be careful when targeting multiple keyframes.
+    ``絶対指定`` にチェックを入れると絶対指定ができます。
+    しかし既存のキーフレーム内の位置・回転を容易に上書きできてしまうため、複数のキーフレームを対象とする際は注意して使って下さい。
 
 .. hint::
-    By specifying the start frame and end frame, you can change the position and rotation of objects in multiple keyframes at once.
+    開始フレーム・終了フレームを指定すると、一度に複数のキーフレーム内のオブジェクトの位置・回転を変更できます。
 
     .. image:: img/register_h.png
         :align: center
 
 |
 
-.. index:: insert an empty frame at the current position
+.. index:: 現在位置に空のフレームを挿入する
 
-Insert an empty frame at the current position
+現在位置に空のフレームを挿入する
 ===============================================
 
-Inserts an empty frame at the currently selected frame number and shifts all frames to the right by one.
+　現在選択中のフレーム番号に空のフレームを挿入し、右のすべてのフレームを1つずつずらします。
 
 .. image:: img/register_i.png
     :align: center
 
-1. Press the button for this icon.
-2. Then, all frames to the right, including the currently selected frame position, will shift to the right by one, and the maximum number of frames will increase by one.
+1. このアイコンのボタンを押します。
+2. すると現在選択中のフレーム位置含めて右すべてのフレームが1つ右にずれ、最大フレーム数が1つ増えます。
 
 
-.. index:: remove current frame position
+.. index:: 現在のフレーム位置を削除
 
-Delete current frame position
+現在のフレーム位置を削除
 ===============================================
 
-Deletes the currently selected frame position.
+　現在選択中のフレーム位置を削除します。
 
 .. image:: img/register_j.png
     :align: center
 
-1. Press the button for this icon.
-2. The currently selected frame position is deleted, all right frames are shifted left by one, and the maximum number of frames is reduced by one.
+1. このアイコンのボタンを押します。
+2. 現在選択中のフレーム位置が削除され、右すべてのフレームが1つ左にずれ、最大フレーム数が1つ減ります。
 
 .. warning::
-    If keyframes have been registered on each timeline at the target frame position, those keyframes will also be deleted.
+    対象のフレーム位置の各タイムラインにキーフレームが登録済みの場合、それらのキーフレームも削除されます。
+
 
 |
 
 .. index::
-    cut keyframe
-    Copy keyframe
-    paste keyframe
+    キーフレームを切り取る
+    キーフレームをコピーする
+    キーフレームを貼り付ける
 
-Cut/copy/paste keyframes
+キーフレームを切り取り・コピー・貼り付けする
 ================================================
 
-You can copy, cut, paste, and move registered keyframes.
+　登録済みのキーフレームはコピーしたり切り取って貼り付けて移動などを行えます。
 
 .. image:: img/register_m.png
     :align: center
 
-1. Press these buttons on the ``Animation`` tab of the ribbon bar.
+1. リボンバーの ``アニメーション`` タブのこれらのボタンを押します。
 
-**Copy and Paste**
+**コピーして貼り付ける**
 
-1. Press the Copy button.
-2. Select any frame number and press the Paste button.
+1. コピーボタンを押します。
+2. 任意のフレーム番号を選択し、貼り付けボタンを押します。
 
 |
 
-**Cut and Paste**
+**切り取って貼り付ける**
 
-1. Press the cut button.
-2. Select any frame number and press the Paste button.
+1. 切り取りボタンを押します。
+2. 任意のフレーム番号を選択し、貼り付けボタンを押します。
 
 
 .. note::
-    In either case, if pasted to a frame that already has a keyframe registered, the contents will be overwritten.
+    いずれの場合も、すでにキーフレームが登録済みのフレームに貼り付けた場合は内容が上書きされます。
 
 .. caution::
-    The destination timeline (role) must be the same.
+    貼り付け先のタイムライン（ロール）は同じである必要があります。
 
-    * Even if the object type is the same, it cannot be pasted if the roles are different.
+    ※オブジェクトの種類が同じであってもロールが異なると貼り付けはできません。
 
 
-Child key function
+子キー機能
 ====================
 
-Added from ``ver 2.1.0``. Child key is a function to register multiple motion keyframes to one keyframe. This makes the movement of objects such as VRMs smoother even with fewer keyframes.
+　``ver 2.2.0`` で廃止しました。全てのモーションはイージングを連続して設定することで滑らかにモーションするようになりました。本来の目的を達成できたので子キー機能は廃止しました。
 
-Child keys can be operated from the timeline panel toolbar.
+..
+    　``ver 2.1.0`` から追加しました。子キーとは、一つのキーフレームに複数のモーションのキーフレームを登録する機能です。これにより少ないキーフレームでもVRMなどのオブジェクトの動きがさらになめらかになります。
 
-.. image:: img/register_n.png
-    :align: center
+    　子キーはタイムラインパネルのツールバーから操作できます。
 
-|
-
-
-.. caution::
-    Only movement of IK markers is memorized for child keys. There is only one rotation etc. per IK marker per keyframe.
-
-    **Key Flow**
-
-    .. image:: img/register_n0.png
+    .. image:: img/register_n.png
         :align: center
-        :alt: flowchart
 
-|
+    |
 
-.. |childkey1| image:: img/register_n1.png
-.. |childkey2| image:: img/register_n2.png
-.. |childkey3| image:: img/register_n3.png
 
-Register child key
-^^^^^^^^^^^^^^^^^^^^^^
+    .. caution::
+        子キーはIKマーカーの移動のみ記憶されます。回転などは1キーフレームの1つのIKマーカーにつき1つのみです。
 
-1. Pose the selected object as normal.
-2. Set the value of the input box |childkey2| in the Timeline panel toolbar to **-1**.
-3. Press |childkey1| to register a child key.
+        **キーの流れ**
 
-.. caution::
-    Registered child keys can be modified, but they cannot be replaced later like normal keyframes. If you want to replace the child keys, you need to delete them once and register them.
+        .. image:: img/register_n0.png
+            :align: center
+            :alt: flowchart
 
-|
+    |
 
-modify child key
-^^^^^^^^^^^^^^^^^^^^^^
+    .. |childkey1| image:: img/register_n1.png
+    .. |childkey2| image:: img/register_n2.png
+    .. |childkey3| image:: img/register_n3.png
 
-You can edit a child key that has been registered once.
+    子キーを登録する
+    ^^^^^^^^^^^^^^^^^^^^^^
 
-1. Select the target object and target keyframe.
-2. Select the index of the child key you want to modify from the input box |childkey2| on the timeline panel toolbar.
-3. Press |childkey1| after correcting the pose.
+    1. 選択中のオブジェクトに通常通りにポーズを取らせます。
+    2. タイムラインパネルのツールバーの入力ボックス |childkey2| の値を **-1** にします。
+    3. 子キーの登録には |childkey1| を押します。
 
-.. caution::
-    The input box for the child key looks like this:
+    .. caution::
+        登録した子キーは修正はできますが通常のキーフレームのように後で入れ替えることはできません。子キー同士を入れ替えたい場合は一旦削除して登録する必要があります。
 
-    :-1: Select/restore the entire child key of the keyframe. Select this if you want to add a child key.
-    :0～n: Select/restore the pose of the specified child key. Select these when modifying or deleting.
+    |
 
-delete child key
-^^^^^^^^^^^^^^^^^^^^^^^^
+    子キーを修正する
+    ^^^^^^^^^^^^^^^^^^^^^^
 
-Deletes the specified child key. The keyframes themselves are not yet deleted.
+    　一度登録した子キーを編集できます。
 
-1. Select the target object and target keyframe.
-2. Select the index of the child key you want to delete from the input box |childkey2| on the timeline panel toolbar.
-3. Press |childkey3| after correcting the pose.
+    1. 対象のオブジェクト・対象のキーフレームを選択します。
+    2. タイムラインパネルのツールバーの入力ボックス |childkey2| から修正したい子キーのインデックスを選択します。
+    3. ポーズを修正したら |childkey1| を押します。
 
-.. caution::
-    You cannot delete even if you select **-1** in the input box.
+    .. caution::
+        子キーの入力ボックスは次のようになっています。
+
+        :-1: キーフレームの子キー全体を選択・復元する。子キー追加の場合はこれを選ぶ。
+        :0～n: 指定した子キーのポーズを選択・復元する。修正や削除時にはこれらを選ぶ。
+
+    子キーを削除する
+    ^^^^^^^^^^^^^^^^^^^^^^^
+
+    　指定した子キーを削除します。キーフレーム自体はまだ削除されません。
+
+    1. 対象のオブジェクト・対象のキーフレームを選択します。
+    2. タイムラインパネルのツールバーの入力ボックス |childkey2| から削除したい子キーのインデックスを選択します。
+    3. ポーズを修正したら |childkey3| を押します。
+
+    .. caution::
+        入力ボックスで **-1** を選んでも削除はできません。

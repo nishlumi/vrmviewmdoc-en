@@ -1,8 +1,8 @@
-.. index:: System Effects tab (ribbon bar)
+.. index:: システムエフェクトタブ（リボンバー）
 
-#####################################
-System effect tab
-#####################################
+####################################
+システムエフェクトタブ
+####################################
 
 .. |syseff1| image:: ../img/screen_ribbon_syseff1.png
 .. |syseff2| image:: ../img/screen_ribbon_syseff2.png
@@ -12,25 +12,24 @@ System effect tab
     |syseff1|
     |syseff2|
 
-|
+| 
 
-There are buttons for functions related to system effects (screen effects).
+　システムエフェクト（画面の効果）に関する機能のボタンがあります。
 
-A system effect is Post-processing in Unity terms. Not all of Unity's Post-processing can be used.
+　システムエフェクトとは、Unityの用語でいうところのPost-processingです。UnityのPost-processingのすべてが使えるわけではありません。
 
-:page number:
-    3 to 4 of each effect are displayed per page.
+:ページ番号:
+    各エフェクトが1ページに付き3～4個表示されます。
 
 :On:
-    Enables/disables each effect. The available effects are:
+    各エフェクトを有効・無効切り替えます。使用可能なエフェクトは次のとおりです。
 
 ::
     
-    Bloom, Chromatic Abberation, Color grading, Depth of field, Grain, Vignette, Motion blur
+    Bloom、Chromatic Abberation、Color grading、Depth of field、Grain、Vignette、Motion blur
 
 .. hint::
-    Starting with ``ver 2.1.0`` , you can also use the keyframe registration window displayed by right-clicking on other objects.
+    ``ver 2.1.0`` より他のオブジェクトと同様に右クリックして表示されるキーフレームの登録ウィンドウから行えるようにもなりました。
+    **ただし、システムエフェクトタブを開いている間はシステムエフェクトしか登録できません。**
 
-    However, **only system effects can be registered** while the system effects tab is open. 
-
-    Basically, it is easier to understand and more convenient to use the ``Register keyframe`` button in the tab, but please use it properly.
+    基本的にはタブ内にある ``キーフレーム登録`` ボタンからするほうがわかりやすく便利ですが、うまく使い分けてください。

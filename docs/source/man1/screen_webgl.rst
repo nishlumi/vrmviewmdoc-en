@@ -1,42 +1,46 @@
-.. index:: WebGL screen (screen composition)
+.. index:: WebGL画面（画面の構成）
 
 ###############
-WebGL screen
+WebGL画面
 ###############
 
 .. image:: ../img/screen_webgl.png
     :align: center
 
 
-:top right:
+:右上:
     
-    ======= =======
-    Top     Change the orientation of the main camera display on the X, Y, and Z axes
-    Middle  | Mode of current keyboard interaction (C - Camera, O - Object)
-            | Global/local basis when working with objects (G - global, L - local)
-    Bottom  Distance between the center point in front of the camera and the selected object
-    ======= =======
+    .. list-table::
 
-:whole:
-    A screen on which VRMs and other objects are displayed. This is the image of the main camera.
+        * - 上
+          - メインカメラの表示をX軸・Y軸・Z軸の向きの変更
+        * - 中
+          - | 現在のキーボード操作のモード（C - カメラ、O - オブジェクト）
+            | オブジェクトの操作時のグローバル・ローカル基準（G - グローバル、L - ローカル）
+        * - 下
+          - カメラ前の中心点と選択中のオブジェクトとの距離
 
-.. index:: How to operate (screen structure)
-
-**Method of operation**
-
-
-:rotate:
-    Move up/down/left/right while right-clicking the mouse or holding down the Ctrl key
-:Advance:
-    Move the mouse wheel. Forward or backward.
-:move:
-    Move up, down, left, or right while holding down the middle mouse button or the SPACE key
+:全体:
+    VRMやその他オブジェクトが表示される画面。これがメインカメラの映像。
 
 
-Browsers with mouse gestures may conflict with operations and may not work properly. Please turn off the mouse gesture function, use the keyboard operation, or use the v-pad described later. Each OS version is not affected.
+.. index:: 操作方法（画面の構成）
+
+**※操作方法**
+
+
+:回転:
+    マウスの右クリックあるいはCtrlキーを押しながら上下左右に移動
+:前進:
+    マウスのホイールを動かす。前進あるいは後退となる。
+:移動:
+    マウスの中クリックあるいはSPACEキーを押しながら上下左右に移動
+
+
+　マウスジェスチャーのあるブラウザですと操作が競合して正常に動作しない恐れがあります。マウスジェスチャー機能をオフにしていただくか、キーボード操作、あるいは後述のv-padをご利用ください。各OS版は影響ありません。
 
 .. hint::
-     See :doc:`../man5/special_operation` for detailed keyboard operation.
+    　キーボードによる詳しい操作方法は :doc:`../man5/special_operation` をご覧ください。
 
 |
 

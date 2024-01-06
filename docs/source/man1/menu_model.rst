@@ -1,65 +1,75 @@
-.. index:: model tab (ribbon bar)
+.. index:: モデルタブ（リボンバー）
 
-#####################################
-Model tab
-#####################################
+####################################
+モデルタブ
+####################################
 
 .. image:: ../img/screen_ribbon_model.png
     :align: center
 
-|
+| 
 
-There are buttons for functions related to 3D models.
+　3Dモデルに関する機能のボタンがあります。
 
 
-**In Add (4 rows above, 3 rows below)**
+**Add内（上の行4つ、下の行3つ）**
 
-:text:
-    Add text to the WebGL screen.
-:camera:
-    Add a camera to your WebGL screen. This will be the sub camera.
-:Spotlight:
-    Add a spotlight to your WebGL screen.
-:Basic shape:
-    Add blank objects such as spheres, planes, and rectangles.
-:UI image:
-    Add image as 2D to WebGL screen. This is not a 3D object.
-:effect:
-    Add effects to your WebGL screen.
-:Point light:
-    Adds a light that illuminates a certain area of space on the WebGL screen.
+:テキスト:
+    WebGL画面にテキストを追加します。
+:カメラ:
+    WebGL画面にカメラを追加します。これはサブカメラとなります。
+:スポットライト:
+    WebGL画面にスポットライトを追加します。
+:基本の図形:
+    球体や平面、四角形などまっさらなオブジェクトを追加します。
+:UI画像:
+    WebGL画面に画像を2Dとして追加します。これは3Dオブジェクトではありません。
+:エフェクト:
+    WebGL画面にエフェクトを追加します。
+:ポイントライト:
+    WebGL画面に一定範囲の空間を照らすライトを追加します。
 
-**In Load**
+**Load 内**
+
+　それぞれ、 ``ファイルから`` , ``Googleドライブから直接指定`` , ``Googleドライブから選択`` のメニューを使用可能です。
 
 :VRM:
-    Load the VRoid (VRM) and load it.
-:object:
-    Open and load FBX, OBJ, etc.
+    VRoid(VRM)を読み込んで読み込みます。
+:オブジェクト:
+    FBXやOBJなどを開いて読み込みます。
 :Image:
-    Load the image as a 3D object. After loading, it can be operated in the same way as FBX or Obj.
-:Detailed information:
-    Displays information for the selected VRM. Doesn't work outside VRM.
+    画像を3Dオブジェクトとして読み込みます。読み込んだ後はFBXやObjと同様に操作できます。
+:詳細情報:
+    選択したVRMの情報を表示します。VRM以外では機能しません。
 
 
-**In Pose**
+**Pose/Motion 内**
 
-:Save pose:
-    For VRM only, saves the current pose of the currently selected VRM to a pose file.
-:Pose list:
-    Displays a list of saved poses with thumbnails.
+:保存:
+    ポーズ保存とモーション保存のメニューを表示します。
 
-**In the Reset operation**
+    ``端末`` , ``内部ストレージ`` , ``Google Drive`` いずれかに保存できます。
+    
+    ポーズはVRMのみです。現在選択中のVRMの現在のポーズをポーズファイルに保存します。
 
-:reset position:
-    Resets the position of the selected 3D object to its initial position.
-:reset rotation:
-    Resets the rotation of the selected 3D object to its initial angle.
-:delete model:
-    Delete the selected 3D object from the app.
-:Reset all bones:
-    Resets all bones and IK positions and rotations of the whole body of the selected VRM. (return to T pose)
+    モーションは現在選択中のタイムラインのモーションを保存します。
 
-**others**
+:一覧:
+    保存したポーズ・モーションの一覧を表示します。
+
+**Reset operation 内**
+
+:位置をリセット:
+    選択した3Dオブジェクトの位置を初期位置にリセットします。
+:回転をリセット:
+    選択した3Dオブジェクトの回転を初期角度にリセットします。
+:モデルを削除:
+    選択した3Dオブジェクトをアプリから削除します。
+:全ボーンをリセット:
+    選択したVRMの全身のボーンとIKの位置・回転をすべてリセットします。（Tポーズに戻ります）
+
+**その他**
 
 :MediaPipe:
-    Use the pose tracking function by AI.
+    AIによるポーズトラッキング機能を使用します。
+

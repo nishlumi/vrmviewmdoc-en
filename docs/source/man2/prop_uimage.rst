@@ -1,8 +1,8 @@
-.. index:: UImage (property)
+.. index:: UImage（プロパティ）
 
-#####################################
+####################################
 UImage
-#####################################
+####################################
 
 
 
@@ -11,9 +11,11 @@ UImage
 
 |
 
-Set the 2D image to be displayed on the WebGL screen.
+　WebGL画面に表示する2Dの画像を設定します。
 
 
 
-:colour:
-    Change the base color of the image. (white is the base color)
+:色:
+    画像のベースの色を変更します。（白が基本色です）
+
+

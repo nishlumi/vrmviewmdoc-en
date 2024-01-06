@@ -1,13 +1,13 @@
 .. index:: Light
-.. index:: spotlight
-.. index:: point lights
+.. index:: スポットライト
+.. index:: ポイントライト
 
-#####################################
+####################################
 Light
-#####################################
+####################################
 
 
-As the name suggests, Light handles lighting in 3D space. In this application, spotlights and point lights can be operated as 3D objects among Unity lights. Directional lights are treated as main lights and are not included in this category.
+　Lightはその名の通り、3D空間におけるライティングを扱います。本アプリではUnityのライトのうち、スポットライト・ポイントライトを3Dオブジェクトとして操作できます。ディレクショナルライトはメインのライトとして扱うためこの分類では扱いません。
 
 
 
@@ -16,17 +16,17 @@ As the name suggests, Light handles lighting in 3D space. In this application, s
 
 |
 
-Spotlight
-    It is a type that illuminates a specific area. As indicated by the aforementioned properties, the range scales the distance the light reaches, and the illuminated surface angle scales the surface illuminated by the light.
+スポットライト
+    特定の箇所に光を当てるタイプです。先述のプロパティで示すと、範囲で光が届く距離を、照射面の角度で光で照らされる面を拡大縮小します。
 
-Point light
-    A type that illuminates a specific area with light. Scaling the distance and area covered by the light in the range, as indicated by the properties mentioned above.
+ポイントライト
+    特定の領域を光で照らすタイプです。先述のプロパティで示すと、範囲で光が届く距離と面積を拡大縮小します。
 
 .. hint::
-    Basically, frequently used functions can be used as they are in the Unity editor. All the animation functions described later also support registration using the keyframe method.
+    　基本的によく使う機能はUnityエディタそのまま使用することができます。後述のアニメーション機能においてもすべてキーフレーム方式での登録に対応しています。
 
 
 .. caution::
-    * Due to Unity specifications, it may not be displayed correctly if there are multiple lights. In that case, please switch one or more render modes to "**Important**".
+    ※Unityの仕様上、複数のライトが存在すると正しく表示されない場合があります。その場合はレンダーモードを1つ以上は「**重要**」に切り替えて使ってください。
 
-    * Please note that setting too many numbers to "Important" may affect the operating speed. The limit depends on the performance of your device's CPU, graphics card, etc.
+    ※あまり多くの数を「重要」にすると動作速度に影響が出る場合がありますのでご注意ください。制限はご利用端末のCPUやグラフィックカードなどの性能に依存します。

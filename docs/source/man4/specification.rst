@@ -1,21 +1,21 @@
-.. index:: Animation project configuration
+.. index:: アニメーションプロジェクトの構成
 
-######################################
-Animation project structure
-######################################
-
-
-We will explain the structure of the animation project. Roughly speaking, it goes like this:
+#####################################
+アニメーションプロジェクトの構成
+#####################################
 
 
-.. index:: timeline (animation project configuration)
+　アニメーションプロジェクトの構成について説明します。大まかに言うと次のようになっています。
 
-Timeline
-    .. image::img/specifi_1.png
+
+.. index:: タイムライン（アニメーションプロジェクトの構成）
+
+タイムライン
+    .. image:: img/specifi_1.png
         :align: left
 
-    | The timeline is the basic unit of animation. One timeline corresponds to one role and one cast.
-    | The following roles are responsible for all of the actual functions.
+    | 　タイムラインはアニメーションの基本単位です。1つのタイムラインに1つのロール、1つのキャストが対応しています。
+    | 　実際の機能としては次のロールがすべて受け持っています。
 
 |
 |
@@ -24,66 +24,66 @@ Timeline
 |
 |
 
-.. index:: Roles (animation project structure)
+.. index:: ロール・役割（アニメーションプロジェクトの構成）
 
-Role
-    .. image::img/specifi_2.png
+ロール・役割
+    .. image:: img/specifi_2.png
         :align: left
 
-    | A role is a collection of roles and character actions that determine how each object moves on the timeline.
-    | Within the role there are casts to be assigned and keyframe data.
-    | A role can be replaced with another object as long as it is of the same object type.
+    | 　ロールとは、各オブジェクトがタイムラインにおいてどう動くかの役割・キャラクターの動作のまとまりです。
+    | 　ロールの中には割り当てるキャスト、そしてキーフレームのデータが存在します。
+    | 　ロールは同じオブジェクトの種類であれば、別のオブジェクトに差し替えることができます。
 
-    In effect, **Timeline = Roll**. When we say timeline in this manual, we mean role, and vice versa.
+    　実質的には、 **タイムライン＝ロール** です。本説明書でタイムラインというときはロールを指し、その逆としても使われます。
 
 |
 |
 |
 |
 
-.. index:: cast object (animation project configuration)
+.. index:: キャスト・オブジェクト（アニメーションプロジェクトの構成）
 
-Cast / object / avatar
+キャスト・オブジェクト・アバター
     .. image:: img/specifi_3.png
         :align: left
 
-    | A cast is an object assigned to a role. This is the substance of the actual VRoid/VRM, FBX, Light, Audio, and other objects.
-    | In this application, they are simply referred to as objects or avatars.
+    | 　キャストとはロールに割り当てるオブジェクトのことです。ここが実際のVRoid/VRM、FBX、Light、Audioなどのオブジェクトの実体となっています。
+    | 　本アプリでは単にオブジェクトとか、アバターなどとも言い換えています。
 
 |
 |
 |
 
-.. index:: keyframes (animation project configuration)
+.. index:: キーフレーム（アニメーションプロジェクトの構成）
 
-Key frame
-    .. image::img/specifi_4.png
+キーフレーム
+    .. image:: img/specifi_4.png
         :align: left
 
-    A keyframe is the actual movement data of the roll, the motion. This data is only held by the role, and in principle it does not depend on each object.
+    　キーフレームはロールの実際の動きのデータ、モーションです。このデータはあくまでロールが保持しており、原則として各オブジェクトには依存しない形になっています。
 
 |
 |
 |
 
 
-.. admonition:: timeline role cast relationship
+.. admonition:: タイムライン・ロール・キャストの関係
 
-    | The timeline is ultimately the same as the role. Then cast means the same as the actual object.
-    | A role is tied to a cast (object) on a 1:1 basis. A roll can be without a cast, but a cast cannot move without a roll.
+    | 　タイムラインは最終的にはロールと同じ意味です。それからキャストは実際のオブジェクトと同じ意味です。
+    | 　ロールはキャスト（オブジェクト）と１：１で紐付いています。ロールはキャストなしの状態がありえますが、キャストはロールなしには動くことはできません。
 
-    It's loosely tied, not strict. Therefore, the role can later be associated with another cast (object).
+    　厳密ではなくゆるい紐付きです。そのため、ロールには後から別のキャスト（オブジェクト）を紐付けることができます。
 
-    For example, it would be as follows. (colors and icons correspond to the example above)
+    　例で言うと次のようになります。(色とアイコンは上記の例に対応しています)
 
 
 .. figure:: img/specifi_5.png
     :align: center
 
-    **Roll** ...  anime and drama characters
+    **ロール** ・・・アニメやドラマの人物
 
-    **Cast** ... Voice actor, actor himself
+    **キャスト**・・・声優、俳優本人
 
 
-| The actual animation data is held by the role. So it doesn't matter what the actual cast (object) is to play that motion.
-| Because of the above mechanism, you can play your favorite animation with your favorite object.
+| 　実際のアニメーションデータはロールが持っています。そのためそのモーションを再生するのに実際のキャスト（オブジェクト）が何であるかは問いません。
+| 　上記の仕組みのために、好きなアニメーションを好きなオブジェクトで再生することができるようになっています。

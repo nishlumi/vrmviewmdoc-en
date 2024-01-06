@@ -1,51 +1,51 @@
-.. index:: OtherObject (property)
+.. index:: OtherObject（プロパティ）
 
-#####################################
+####################################
 OtherObject
-#####################################
+####################################
 
 .. contents::
 
 
 
-.. index:: texture (property of OtherObject)
+.. index:: テクスチャ（OtherObjectのプロパティ）
 
-Texture
+テクスチャ
 --------------------
 
 .. image:: ../img/prop_obj_1.png
-     :align: center
+    :align: center
 
 |
 
-Among the settings related to OtherObject, this is a property related to texture. If the object has multiple textures, you can select from the combo box. The number of textures that can be detected depends on FBX, OBJ, etc.
+　OtherObjectに関する設定のうち、テクスチャに関するプロパティです。オブジェクトにテクスチャが複数存在した場合はコンボボックスから選ぶことができます。検出できるテクスチャの数はFBXやOBJなどによって異なります。
 
 
-:Material name:
-    The name of the material held by the currently selected texture.
-:shader:
-    Switch the shader to Unity's Standard, VRM's VRM/MToon, or StandardAsset's Water (FX/Water4).
+:マテリアル名:
+  現在選択中のテクスチャが保持しているマテリアルの名称です。
+:シェーダー:
+  Unity標準のStandard、VRM標準のVRM/MToon、StandardAssetのWater（FX/Water4）のいずれかにシェーダーを切り替えます。
 
-You can change the settings of the following shaders. For details, please refer to Unity Help.
+以下のシェーダーの設定を変更できます。詳しくはUnityのヘルプ等でご確認ください。
 
 :Standard:
-    Color, Blend Mode, Metallic, Glossy, Emission Color, Texture
+  色、ブレンドモード、メタリック、光沢、発光色（Emission Color）、テクスチャ
 :VRM/MToon:
-    Colors, Blending Modes, Culling Modes
-    Metallic, Glossy, Emission Color, Shade Color
-    Shading Toony, Rim Color, Rim fresnel power
-    SrcBlend, DstBlend, Texture
+  色、ブレンドモード、カリングモード
+  メタリック、光沢、発光色（Emission Color）、シェードの色（Shade Color）
+  Shading Toony、 Rim Color、Rim fresnel power
+  SrcBlend、DstBlend、テクスチャ
 :Water:
-    Fresnel scale, reflection color, specular color, wave amplitude, wave frequency, wave steepness, wave velocity, wave direction AB, wave direction CD
+  フレネルスケール、反射色、鏡面色、波の振れ幅、波の周波数、波の急勾配、波の速度、波方向AB、波方向CD
 
 .. hint::
-    The VRM texture properties, contents, and setting methods are exactly the same.
+  VRMのほうのテクスチャのプロパティと内容・設定方法いずれも全く同じです。
 
 |
 
-.. index:: animation (property of OtherObject)
+.. index:: アニメーション（OtherObjectのプロパティ）
 
-animation
+アニメーション
 --------------------
 
 .. image:: ../img/prop_obj_2.png
@@ -53,42 +53,43 @@ animation
 
 |
 
-In the case of FBX with animation set, it can be registered for preview playback and animation projects.
+　アニメーションが設定されたFBXの場合、プレビュー再生やアニメーションプロジェクト用に登録できます。
 
 
-:animation name:
-    If multiple animations are set, select them here.
-:Preview play/stop:
-    If animation is set, it will play/stop. Playback here is just a preview.
-:Playback mode:
-    Select the animation play mode from ``Default``, ``Loop``, and ``PingPong``.
-    
-    :Default:
-        Normal playback. It is played only once.
-    :Loop:
-        let it loop.
-    :PingPong:
-        Loop, but rewind the content of the animation like a toy yo-yo.
-:Seek position:
-    Switch animation playback position. It will be reflected in your animation project.
-:Animation speed:
-    Adjust the playback speed of the animation.
-:Animation state (for registration):
-    Register the playback state in the animation project. Select one of the following from the combo box:
+:アニメーション名:
+  アニメーションが複数セットされている場合、ここで選びます。
+:プレビュー再生・停止:
+  アニメーションが設定されている場合、再生・停止します。ここでの再生はあくまでプレビューです。
+:再生モード:
+  アニメーションの再生モードを ``Default`` ``Loop`` ``PingPong`` のいずれかから選びます。
+  
+  :Default:
+    通常の再生です。一度しか再生されません。
+  :Loop:
+    ループさせます。
+  :PingPong:
+    ループさせますが、おもちゃのヨーヨーのようにアニメーションの内容を巻き戻っていきます。
+:シーク位置:
+  アニメーションの再生位置を切り替えます。アニメーションプロジェクトに反映されます。
+:アニメーション速度:
+  アニメーションの再生速度を調整します。
+:アニメーションの状態（登録用）:
+  アニメーションプロジェクトに再生状態を登録します。コンボボックスから次のいずれかを選びます。
 
 
 .. list-table::
     :header-rows: 1
 
-    * - setting
-      - explanation
-    * - reproduction
-      - Play or pause object animation. (When it reaches the corresponding frame, one of the operations is always performed)
-    * - playing
-      - Marks the object's animation as playing and continues playing. (i.e. don't change anything)
-    * - Stop
-      - Stop animating an object. (When the corresponding frame is reached, the stop operation is always performed.)
+    * - 設定
+      - 説明
+    * - 再生
+      - オブジェクトのアニメーションを再生または一時停止します。（該当のフレームになった場合、必ずいずれかの操作が行われます）
+    * - 再生中
+      - オブジェクトのアニメーションを再生中とし、再生状態を継続します。（つまり何も変更しません）
+    * - 停止
+      - オブジェクトのアニメーションを停止します。（該当のフレームになった場合、必ず停止操作が行われます）
 
 
 .. note::
-    The same term is used for other properties. If so, the same effect there.
+  ※他のプロパティでも同じ用語で使われます。その場合はそこでも同じ効果です。
+

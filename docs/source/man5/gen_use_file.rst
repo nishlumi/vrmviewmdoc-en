@@ -1,89 +1,90 @@
-##########################
-Working with files
-##########################
+#########################
+ファイルの操作
+#########################
 
 .. contents::
 
 
 
-Handling of files that can be read and written by this application
-=========================================================================
+本アプリで読み書きできるファイルの扱い
+=========================================
 
-I will explain the precautions for files that can be created and read by this application.
+　本アプリで作成され、また読み込むことができるファイルの注意点を説明します。
 
 .. hint::
-    These files are freely distributable.
+    これらのファイルは自由に配布可能です。
 
-    It can be read by dragging and dropping it on the WebGL screen.
+    WebGL画面にドラッグアンドドロップして読み込み可能です。
 
-project file
+プロジェクトファイル
 ----------------------
 
-    See :ref:`saveproject` and :ref:`openproject` for other explanations.
+    他の説明は :ref:`saveproject` や :ref:`openproject` をご覧ください。
 
-    :Extension: ``.vvmproj``
+    :拡張子: ``.vvmproj``
 
-    Available storage and timing
+    使用可能なストレージとタイミング
         .. csv-table::
             :header-rows: 1
 
-            App environment, timing, internal storage, device storage
-            web app, first time, read/write, reading
-            web app, second time onwards, read/write, write (as download only)
-            Each OS version, First time, Read/Write, Read/Write
-            Each OS version, 2nd time onwards, Read/Write, Read/Write
-    
+            アプリ環境, タイミング,  内部ストレージ, 端末のストレージ
+            ウェブアプリ, 初回,  読み込み/書き込み, 読み込み
+            ウェブアプリ, 2回目以降, 読み込み/書き込み, 書き込み（ダウンロードとしてのみ）
+            各OS版, 初回, 読み込み/書き込み, 読み込み/書き込み
+            各OS版, 2回目以降, 読み込み/書き込み, 読み込み/書き込み
+        
 
-    Data related to project files
-        Cast (object such as VRM)
-            If there is a name, shape, and other special information of the object assigned to the timeline (role), it will be retained.
+    プロジェクトファイルに関連するデータ
+        キャスト（VRMなどオブジェクト）
+            タイムライン（ロール）に割り当てているオブジェクトの名称や形状・その他特別な情報があればそれらを保持します。
 
-            The actual information of the object when opening the project file is:
+            プロジェクトファイルを開く際のオブジェクトの実際の情報は次の通りです。
 
-            :Web application version: The file object itself is stored in the application
-            :Each OS version: Only the file path, size and type are saved in the app
-    
-        motion data
-            | The timeline (role) is the target. Retains the size and shape of the object at the time it was registered in the keyframe as reference information.
-            | See :ref:`settingcast2role` for how to assign timelines (roles) and casts.
-    
-        Information about the project itself
-            Although it is not particularly used, it is possible to retain the project name and description.
+            :ウェブアプリ版: ファイルオブジェクト自体アプリ内に保存
+            :各OS版: ファイルパスやサイズ・種類のみアプリ内に保存
+        
+        モーションデータ
+            | タイムライン（ロール）が対象です。キーフレームに登録した当時のオブジェクトの大きさ・形状を参考情報として保持します。
+            | タイムライン（ロール）とキャストの割当方法は :ref:`settingcast2role` をご覧ください。
+        
+        プロジェクト自体の情報
+            特に使いませんがプロジェクト名や説明文を保持可能です。
 
-motion file
+モーションファイル
 -------------------
 
-    See :ref:`savemotionfile` and :ref:`openmotionfile` for a detailed explanation.
+    詳しい説明は :ref:`savemotionfile` や :ref:`openmotionfile` をご覧ください。
 
-    :extension: ``.vvmmot``
+    :拡張子: ``.vvmmot``
 
-    Motion data for a single timeline (roll). Retains the size and shape of the object at the time it was registered in the keyframe as reference information.
+    　単一のタイムライン（ロール）のモーションデータ。キーフレームに登録した当時のオブジェクトの大きさ・形状を参考情報として保持します。
 
-    If the object type matches, it does not depend on the actual cast (object). For VRM, the height difference is automatically calculated and reproduced.
+    　オブジェクト種類が一致していれば実際のキャスト（オブジェクト）には依存しません。VRMの場合、身長差は自動的に計算して再現されます。
 
 
-pose file
+ポーズファイル
 ----------------
 
-    See :doc:`../man3/posing_save` and :doc:`../man3/posing_open` for a detailed explanation.
+    詳しい説明は :doc:`../man3/posing_save` や :doc:`../man3/posing_open` をご覧ください。
 
-    :extension: ``.vvmpose``
+    :拡張子: ``.vvmpose``
 
-    Only VRM can be used. Pose data when acquiring the timeline (roll) of the unit. It can be acquired and saved without the need to register it in a keyframe. The size and shape of the object at the time of acquisition are retained as reference information.
+    　VRMのみ使用可能。単位のタイムライン（ロール）の取得時のポーズデータ。キーフレームに登録している必要なく取得し保存可能です。取得当時のオブジェクトの大きさ・形状を参考情報として保持します。
 
-    It does not depend on the actual cast (object). The height difference is automatically calculated and reproduced.
+    　実際のキャスト（オブジェクト）には依存しません。身長差は自動的に計算して再現されます。
 
 
-object file
+オブジェクトファイル
 =============================
 
-The object files that can be read by this application are his VRM, various 3D models, images, music and audio files.
+　本アプリで読み込めるオブジェクトファイルは VRM を始め、各種3Dモデル、画像、音楽・音声ファイルです。
 
-are as follows: It also supports drag and drop on the WebGL screen.
+次のとおりです。WebGL画面にドラッグアンドドロップにも対応しています。
 
 * Vroid/VRM(.vrm)
-* Other 3D objects (.obj, .fbx, .zip, .gltf ,.glb, .ply, .stl, .3mf)
-* Image (.png, .jpg, .gif)
+* その他3Dオブジェクト(.obj, .fbx, .zip, .gltf ,.glb, .ply, .stl, .3mf)
+* 画像(.png, .jpg, .gif)
 
 .. caution::
-    Music and audio files do not support drag and drop.
+    音楽・音声ファイルはドラッグアンドドロップに対応していません。
+

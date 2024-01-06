@@ -1,7 +1,7 @@
-.. index:: App settings (screen configuration)
+.. index:: アプリの設定（画面の構成）
 
 ###############
-App settings
+アプリの設定
 ###############
 
 .. image:: ../img/screen_appconfig.png
@@ -9,7 +9,7 @@ App settings
 
 |
 
-This is the overall settings screen for the app. It is divided into several tabs and various settings can be changed.
+アプリの全体的な設定画面です。いくつかのタブに分かれて各種設定を変更可能です。
 
 .. note::
-    * You can switch the dark theme of the UI here.
+    ※UIのダークテーマはここで切り替えることができます。

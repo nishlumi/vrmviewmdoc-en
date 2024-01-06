@@ -1,60 +1,69 @@
-.. index:: home tab (ribbon bar)
+.. index:: ホームタブ（リボンバー）
 
-#####################################
-Home tab
-#####################################
+####################################
+ホームタブ
+####################################
 
 
     
 .. image:: ../img/screen_ribbon_home.png
-     :align: center
+    :align: center
 
-|
+| 
 
-Home has buttons for frequently used functions.
+　ホームにはよく使う機能のボタンを集めてあります。
 
 
 Application
-     :About this app:
-        Displays the logo of this application.
-     :clear cache:
-        Deletes file open history and temporary files all at once.
+    :このアプリについて:
+        本アプリのロゴを表示します。
+    :キャッシュクリア:
+        ファイルの開いた履歴や一時ファイルを一括で削除します。
 
         .. image:: ../img/screen_ribbon_home_clearcache.png
 
-        |
-
-        ================================= ==================
-        Organize WebGL operations         Check the operations and clear unnecessary caches when WebGL stops working when you operate the HTML UI.
-        Clearing the cache of the app     Delete all the data that is only temporarily stored in the app.
-        Delete app settings               Deletes all the settings shown in the app settings and restores the default state.
-        ================================= ==================
+        | 
         
-     :language choice:
-        Switch the UI language of this application. Some UI will be reflected after the next startup.
+        .. list-table::
 
-:Detailed information:
-    Displays information for the selected VRM.
+            * - WebGLの動作を整理する
+              - HTMLのUIを操作したときにWebGL内が動かなくなったときに動作をチェックして不要なキャッシュをクリアします。 
+            * - アプリのキャッシュをクリアする
+              - アプリ内で一時的に保持するだけのデータをまとめて削除します。 
+            * - アプリの設定を削除する
+              - アプリの設定で示される設定内容をすべて削除してデフォルトの状態に戻します。 
+        
+    :言語選択:
+        本アプリのUI言語を切り替えます。一部UIは次回起動後に反映されます。
+
+:詳細情報:
+    選択したVRMの情報を表示します。
 
 Load
     :VRM:
-        Open and load VRM.
-    :object:
-        Open and load FBX, OBJ, etc.
+        VRMを開いて読み込みます。
+    :オブジェクト:
+        FBXやOBJなどを開いて読み込みます。
 
 Project
-    :open:
-        Open an existing animation project file.
-    :keep:
-        Save the current animation project to a file. Equivalent to **Save** in this tab.
+    :開く:
+        既存のアニメーションプロジェクトファイルを開きます。
+    :保存:
+        現在のアニメーションプロジェクトをファイルに保存します。このタブでは **上書き保存** と同等です。
 
-:history:
-    Displays a dialog to open each object (VRM, OtherObject, Image) once opened.
+:履歴:
+    一度開いたことの各オブジェクト（VRM、OtherObject、画像）を開くダイアログを表示します。
 
-:capture:
-    Take a screenshot of the current WebGL screen and save it.
+:キャプチャ:
+    現在のWebGLの画面をスクリーンショットを撮って保存します。
 
-:setting:
-    Display the setting screen of this application.
+:設定:
+    本アプリの設定画面を表示します。
 :v-pad:
-    Displays the operation pad of the main camera.
+    メインカメラの操作パッドを表示します。
+
+:VR:
+    VR機器でVR空間への表示に切り替えます。
+
+:AR:
+    VR機器でAR空間への表示に切り替えます。

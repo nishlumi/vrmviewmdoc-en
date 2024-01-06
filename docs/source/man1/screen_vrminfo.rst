@@ -1,27 +1,29 @@
-.. index:: VRM information screen (screen configuration)
-.. index:: VRM usage conditions confirmation screen
+.. index:: VRM情報画面（画面の構成）
+.. index:: VRMの利用条件確認画面
 
-#####################################
-VRM information screen
-#####################################
+####################################
+VRM情報画面
+####################################
 
 .. image:: ../img/screen_vrminfo.png
     :align: center
 
 |
 
-This is a screen that displays various information such as the terms of use of the VRM to be read. When loading for the first time, the "Conditions of Use Confirmation Screen" will appear, and you can officially load the VRM by pressing the OK button. (Press the Cancel button to abort reading)
+　読み込むVRMの利用条件などの各種情報を表示する画面です。初回読み込み時は「利用条件確認画面」となり、OKボタンを押すことでVRMを正式に読み込むことができます。（Cancelボタンを押すと読み込みを中断）
 
 
-| * Height is for calculation purposes only and is not a precise value.
-| * Permission and non-permission of terms of use are expressed with pictograms.
+| ※身長はあくまで計算上のもので厳密な値ではありません。
+| ※利用条件の許可・不許可は絵文字で表現しています。
 
 .. |sub1| image:: ../img/screen_vrminfo_1.png
 .. |sub2| image:: ../img/screen_vrminfo_2.png
 
-|sub1| allow
+|sub1| 許可する
 
-|sub2| not allowed
+|sub2| 許可しない
 
 .. note::
-    * This screen can be displayed at any time for confirmation, even if it is not the first time loading.
+    ※この画面は初回読み込み以外でもいつでも確認のため表示できます。
+
+

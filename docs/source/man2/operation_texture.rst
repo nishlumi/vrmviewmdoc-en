@@ -1,43 +1,55 @@
-.. index:: OtherObject (manipulating objects)
-.. index:: object (manipulating objects)
+.. index:: OtherObject（オブジェクトの操作）
+.. index:: オブジェクト（オブジェクトの操作）
 
-#####################################
-Texture
-#####################################
+####################################
+テクスチャ
+####################################
 
-Texture settings are common to VRM and OtherObject.
+テクスチャの設定はVRMとOtherObjectに共通して存在します。
 
 .. contents::
 
 
-Please see each site for detailed explanations.
+詳しい説明は各サイトを御覧ください。
 
 .. csv-table::
 
-     Standard Asset Water, https://docs.unity3d.com/en/2019.1/Manual/HOWTO-Water.html
-     MToon reference, https://virtualcast.jp/wiki/unity/shader/mtoonreference
-     Drawing style shader, https://usagi-meteor.booth.pm/items/4453497
-     Comic Shader, https://booth.pm/ja/items/2138884
-     Ice Shader, https://booth.pm/en/items/2138863
+    Standard assetのWater, https://docs.unity3d.com/ja/2019.1/Manual/HOWTO-Water.html
+    MToonリファレンス, https://virtualcast.jp/wiki/unity/shader/mtoonreference
+    デッサン風シェーダー, https://usagi-meteor.booth.pm/items/4453497
+    コミックシェーダー, https://booth.pm/ja/items/2138884
+    氷シェーダー, https://booth.pm/ja/items/2138863
 
 
-Working with textures
+テクスチャの操作
 =========================
+　VRMやOtherObjectが保持しているテクスチャを細かく設定変更することができます。なお、両者の設定と使用方法は全く同じです。
 
-You can finely change the settings of the textures held by VRM and OtherObject. Both settings and usage are exactly the same.
+.. |texmenu1| image:: ../img/prop_obj_1a.png
+.. |texmenu2| image:: ../img/prop_obj_1b.png
 
-.. image:: ../img/prop_obj_1.png
-    :align: center
+.. csv-table::
+
+    |texmenu1|, |texmenu2|
+
 
 |
 
-1. If there are multiple materials, select the target material from the upper combo box.
+1. マテリアルが複数存在する場合は上部のコンボボックスから対象のマテリアルを選択します。
 
-* The contents of the texture settings are switched.
+※テクスチャの設定の内容が切り替わります。
 
-2. Change various settings as you like.
+2. 各種設定を好みで変更します。
+3. ``変更`` にチェックを入れます。
 
-Apply to all parts
+.. note::
+    ver 2.3.0より、チェックボックスをONにしたマテリアルのみキーフレームに登録されるように変更しました。
+
+    もし登録を望まない場合はチェックを外せばそのマテリアルの値は保存されません。
+
+    これにより、モーションやプロジェクトに保存されるテクスチャの設定も本当に変更したものだけになり、ファイルサイズの削減を実現しました。
+
+すべての部位に適用する
 -------------------------
 
 .. image:: ../img/prop_obj_3.png
@@ -45,176 +57,177 @@ Apply to all parts
 
 |
 
-Basically, it will be set for each material, but if there are many materials or you want to change the appearance of the model all at once, check this option and change the texture setting This will allow you to change them all at the same time.
+　基本的には一つのマテリアルごとに設定していくことになりますが、マテリアルの数が多かったり、モデルの見た目を一括して変えたい場合、このオプションにチェックを入れてからテクスチャの設定を変更することで、全て同時に変更できるようになります。
 
-You cannot select the material while it is checked.
+　なお、チェックを入れている間はマテリアルを選ぶことはできません。
 
 
-Texture details
+テクスチャの詳細
 =============================
 
-:shader:
-    ``Standard``, ``VRM/MToon``, ``VRM10/MToon1``, ``Water``, ``Sketch``, ``PostSketch``, ``Comic``, ``Ice``, Select either
+:シェーダー:
+    ``Standard`` ,  ``VRM/MToon`` , ``VRM10/MToon10`` , ``Water``, ``Sketch``, ``PostSketch``, ``Comic``, ``Ice`` のいずれかを選択します。
 
 .. caution::
-   * Texture changes are not actually changed, only while using this app.
-   * The opacity of each color property may not be properly reflected in WebGL. note that.
-   * If there are multiple textures (meshes) that use the same material, only the settings of the last texture will be reflected in the final animation project. (e.g. if there are 3 textures using material A, the 3rd setting will be applied last)
-   * VRM 0.x models also comply with VRM 1.x specifications when loaded with this app. Therefore, basically use ``VRM10/MToon10`` shaders.
+   * テクスチャの変更はこのアプリの使用中のみで実際には変更されません。
+   * 各色のプロパティの不透明度はWebGLの場合適切に反映されないことがあります。ご了承ください。
+   * 同じマテリアルを使用しているテクスチャ（メッシュ）が複数ある場合、アニメーションプロジェクトにおいてはその最後のテクスチャの設定のみが最終的に反映されます。（例: Aというマテリアルを使用しているテクスチャが3つ存在する場合、3番目の設定が最後に適用される）
+   * VRM 0.xモデルも本アプリで読み込むとVRM 1.xの仕様に従っています。そのため、基本的にシェーダーは ``VRM10/MToon10`` を使用してください。
 
 
 Standard
 --------------------
 
-Unity standard texture.
+Unity標準のテクスチャです。
 
-:colour:
-    Change the base color of the texture.
-:blending mode:
-    Choose from ``Opaque``, ``Cutout``, ``Fade``, or ``Transparent``.
+:色:
+    テクスチャのベースの色を変更します。
+:ブレンドモード:
+    ``Opaque``、 ``Cutout``、 ``Fade``、 ``Transparent`` のいずれかを選択します。
 
-:culling mode:
-    Select ``Off``, ``Front``, or ``Back``.
-:metallic:
-    Makes the surface look like metal.
-:Glossy:
-    Adds shine to the surface.
-:Luminous color:
-    Emission Color.
-:Texture type:
-    Select ``From File`` or ``From Camera``. In either case, you can unreference it by choosing ``--``.
+:カリングモード:
+    ``Off``、 ``Front``、 ``Back`` のいずれかを選択します。
+:メタリック:
+    金属のような表面にします。
+:光沢:
+    表面に輝きを追加します。
+:発光色:
+    Emission Colorです。
+:テクスチャの種類:
+    ``ファイルから``、あるいは ``カメラから`` を選択します。いずれの場合も ``--`` を選ぶと参照を解除できます。
 
-    From file [1]_
-        Select and load the material name given to the separately loaded texture file. Select ``--`` to return to the original texture.
-    From camera [2]_
-        Select a camera object that exists in your project. It is necessary to set the render texture separately on the camera object side.
+    ファイルから [1]_
+        別途読み込み済みのテクスチャファイルに付けた素材名を選択して読み込みます。元のテクスチャに戻す場合は ``--`` を選択してください。        
+    カメラから [2]_
+        プロジェクトに存在するカメラオブジェクトを選択します。別途カメラオブジェクト側でレンダーテクスチャの設定をしておく必要があります。
 
 .. hint::
-    .. [1] Load the necessary texture files in advance from the ``Animation`` tab on the ribbon bar → ``Settings`` button → ``Material`` tab.
-    .. [2] Set the render texture in the Camera object in advance.
+    .. [1] リボンバーの ``アニメーション`` タブ → ``設定`` ボタン → ``素材`` タブ　にて必要なテクスチャファイルを事前に読み込んでください。
+    .. [2] Cameraオブジェクトで事前にレンダーテクスチャを設定しておいてください。
 
 
 VRM10/MToon10
 --------------------
 
-VRM 1.0 standard shader. It is slightly different from that of VRM 0.x.
+VRM 1.0標準のシェーダーです。VRM 0.xのものとは若干異なります。
 
-:colour:
-    Change the base color of the texture.
-:blending mode:
-    Choose from ``Opaque``, ``Cutout``, ``Fade``, or ``Transparent``.
+:色:
+    テクスチャのベースの色を変更します。
+:ブレンドモード:
+    ``Opaque``、 ``Cutout``、 ``Fade``、 ``Transparent`` のいずれかを選択します。
 
-:culling mode:
-    Select ``Off``, ``Front``, or ``Back``.
-:cut off:
-    0.5 is the base value. Anything lower than that will gradually reveal missing textures. 1.0 is completely transparent.
-:Luminous color:
-    _EmissionColor.
-:Shade Color:
-    _ShadeColor.
-:Shadow border smoothness:
-    Shading Toony.
-:Shadowed area:
-    It's Shade Shift.
-:Shadow acceptance:
-    Receive Shadow.
-:Shading grade:
-    Shading Grade.
-:Degree of reflection of ambient light:
-    Light Color Attenuation.
-:Rim light color:
-    Rim color.
-:Rim light border strength:
-    Rim Fresnel Power.
-:SrcBlend to DstBlend:
-    Applies complex changes in color and transparency. For details, please search the explanation site of VRM/MToon.
+:カリングモード:
+    ``Off``、 ``Front``、 ``Back`` のいずれかを選択します。
+:カットオフ:
+    0.5が基本値です。それより低いと欠けたテクスチャが次第に表示されていきます。1.0だと完全に透明になります。
+:発光色:
+    _EmissionColorです。
+:シェードの色:
+    _ShadeColor です。
+:影の境界線のなめらかさ:
+    Shading Toonyです。
+:影のかかる領域:
+    Shade Shiftです。
+:影の受け具合:
+    Receive Shadowです。
+:シェーディンググレード:
+    Shading Gradeです。
+:環境光の反映の度合い:
+    Light Color Attenuationです。
+:リムライトの色:
+    Rim colorです。
+:リムライトの境界線の強さ:
+    Rim Fresnel Powerです。
+:SrcBlend～DstBlend:
+    色と透過を複合的に変化させて適用します。詳しくはVRM/MToonの解説サイトを検索してください。
 
-:Texture type:
-    Same as Standard.
+:テクスチャの種類:
+    Standardと同様です。
 
 
 Water
 ----------------
 
-A shader that represents the water surface.
+水面を表現するシェーダーです。
 
-:Fresnel scale:
-    Fresnel Scale.
-:Reflective color:
-    The color of the water surface when illuminated by light.
-:mirror color:
-    The color of the reflection on the water surface.
-:wave amplitude, wave frequency, wave steepness, wave velocity, wave direction AB, wave direction CD:
-    Changes the frequency and magnitude of waves.
+:フレネルスケール:
+    Fresnel Scaleです。
+:反射色:
+    光に照らされた際の水面の色です。
+:鏡面色:
+    水面の反射したものの色です。
+:波の揺れ幅、波の周波数、波の急勾配、波の速度、波方向AB、波方向CD:
+    波の頻度や大きさなどを変化させます。
 
 
-Sketch, PostSketch
+Sketch、PostSketch
 -------------------------
 
-This is a shader that creates a sketch-like depiction.
+スケッチ風の描写になるシェーダーです。
 
-:outline width:
-    Draw lines around textured objects.
-:Stroke density:
-:extra brightness:
-:Multi Brightness:
-:shadow brightness:
-    Sketch only.
+:アウトライン幅:
+    テクスチャのオブジェクトの周囲に線を付けます。
+:ストローク密度:
+:追加の明るさ:
+:マルチブライトネス:
+:影の明るさ:
+    Sketchのみです。
 
-.. admonition:: Where to buy/distribute
+.. admonition:: 配布・購入先
 
-    rabbit meteor shower
+    うさぎ流星群様
 
     https://usagi-meteor.booth.pm/items/4453497
 
-Comics
+Comic
 --------------
 
-It is a shader that creates a cartoon-like depiction.
+漫画風の描写になるシェーダーです。
 
-:texture transparency:
-     The effect is similar to the VRM10/MToon10 cutoff. Make missing textures transparent.
-:line width:
-     Draw lines around textured objects.
-:colour:
-     Change the color of lines and shadows.
-:Tone Threshold:
-     Change the tone range.
+:テクスチャの透明度:
+    VRM10/MToon10のカットオフと似た効果です。欠けたテクスチャを透明にします。
+:線幅:
+    テクスチャのオブジェクトの周囲に線を付けます。
+:色:
+    線や影の色を変えます。
+:トーンのしきい値:
+    トーンの範囲を変えます。
 
-.. admonition:: distribution
+.. admonition:: 配布先
 
-    Dear Xin Games
+    Xin Games様
 
     https://booth.pm/ja/items/2138884
 
 Ice
 ------------
 
-This is a shader that renders like ice.
+氷のような描写になるシェーダーです。
 
-:colour:
-    Change the color of the ice surface.
-:Transparency:
-    If the transparency is a positive value, the color becomes clear as ice. As it approaches 0, it becomes transparent. More negatives start to invert colors instead of being transparent.
-:Basic transparency:
-    Multiply the transparency by the transparency.
-:Roughness of ice:
-    Rough the ice into jagged edges.
-:distortion:
-    Changes the twist of the shape of the reflection on the ice.
+:色:
+    氷の表面の色を変えます。
+:透明度:
+    透明度がプラスの値だと氷として色がはっきりします。0に近づくと透明になります。マイナスが多くなると透明ではなく色が反転し始めます。
+:基本の透明度:
+    透明度にさらに透明度をかけ合わせます。
+:氷の粗さ:
+    氷をギザギザに荒くします。
+:ねじれ:
+    氷に反射したものの形のねじれ具合を変えます。
 
-.. admonition:: distribution
+.. admonition:: 配布先
 
-    Dear Xin Games
-
+    Xin Games様
+    
     https://booth.pm/ja/items/2138863
 
 |
 
-Pixelize Texture
+PixelizeTexture
 ---------------------
 
-It is a shader that becomes a certain block-like texture. This is a custom shader made from scratch by ChatGPT.
+某ブロック風のテクスチャになるシェーダーです。これはChatGPTによって一から作った独自のシェーダーです。
 
-:pixel size:
-    The size of the texture to pixelate. The larger this is, the more mosaic-like it becomes.
+:ピクセルサイズ:
+    ピクセル化するテクスチャのサイズです。これを大きくすればするほどモザイク的になります。
+

@@ -1,51 +1,49 @@
-.. index:: 
-    Pose tracking screen (screen configuration)
-    MediaPipe (screen composition)
+.. index:: ポーズトラッキング画面（画面の構成）
+.. index:: MediaPipe（画面の構成）
 
-#####################################
-Pose tracking screen
-#####################################
+####################################
+ポーズトラッキング画面
+####################################
 
 .. image:: ../man3/posing_c.png
-     :align: center
+    :align: center
 
 |
 
-This is a real-time pose acquisition screen using Google's MediaPipe library. This window is a separate window from the app.
+　GoogleのMediaPipeというライブラリによるポーズのリアルタイム取得画面です。このウィンドウはアプリとは別ウィンドウです。
 
 
-**Upper Right:**
+**右上：**
 
-Menu of each function for pose detection.
+ポーズ検出のための各機能のメニューです。
 
-:Selfie Mode:
-    The image is reversed.
-:combo box:
-    Select a camera.
-    
-    Click the **icon next to the box** to open the image file.
-:Smooth Landmarks:
-    Adjust the precision of the overall preview on the top right.
-:Min Detection Confidence:
-    Increases accuracy of pose detection.
-:Min Tracking Confidence:
-    Increase tracking accuracy.
-:Effect:
-    (see MediaPipe site)
+:Selfie Mode(セルフィーモード):
+    映像が反転します。
+:コンボボックス:
+    | カメラを選択します。
+    | ボックスの **横のアイコン** をクリックすると画像ファイルを開くことができます。
+:Smooth Landmarks(プレビューのスムーズ化):
+    右上の全体のプレビューの精度を調整します。
+:Min Detection Confidence(ポーズ検出の正確さ):
+    ポーズの検出の精度を高めます。
+:Min Tracking Confidence(トラッキングの正確さ):
+    トラッキングの精度を高めます。
+:Effect(エフェクト):
+    （MediaPipeのサイトを参照してください）
 
-**Upper right (background):**
+**右上（背景）：**
 
-Hiding the menu allows you to see a preview of the tracking results in the background.
+メニューを隠すと背景にトラッキング結果のプレビューを見ることができます。
 
-:full preview:
-    This is a preview of the tracking results. You can check any direction by dragging. You can lock the rotation of the preview with the || button on the bottom left.
+:全体のプレビュー:
+    トラッキング結果のプレビューです。ドラッグして任意の方向を確認できます。左下の || ボタンでプレビューの回転を固定することができます。
 
-**bottom right:**
+**右下：**
 
-:timer:
-    After this specified number of seconds, the picture will be taken automatically.
-:Save pose:
-    The detected pose at the moment this button is pressed is saved in data. If the number of seconds in the timer is non-zero, the timer fires.
+:タイマー:
+    この指定秒数後に自動的に撮影します。
+:ポーズ保存:
+    このボタンを押した瞬間の検出ポーズをデータに保存します。タイマーの秒数が0以外の場合はタイマーが起動します。
 
 .. note::
-    The menu panel can be hidden with the = button.
+    メニューパネルは ＝ボタンで非表示に出来ます。

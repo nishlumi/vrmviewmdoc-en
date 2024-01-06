@@ -1,38 +1,38 @@
-##########################################
-Video
-##########################################
+#########################################
+ビデオ
+#########################################
 
-With this application, you can shoot not only still images by screenshots, but also movies of the WebGL screen.
+　本アプリではスクリーンショットによる静止画だけでなくWebGL画面を動画撮影することができます。
 
-Of course, it can be used not only for each OS version but also for the web application version.
+各OS版だけでなくウェブアプリ版でももちろん利用できます。
 
 
 .. contents::
 
 
-.. index:: Record (shoot)
+.. index:: 録画する（撮影）
 
-record
+録画する
 =======================
 
 
 .. warning::
-    Although the standard functions of the browser are used, the following browsers are recommended for stable operation.
+    ブラウザの標準機能を利用していますが、安定した動作のためには下記ブラウザを推奨します。
 
     * Chrome
-    * Edge (Chromium version)
+    * Edge（Chromiumバージョン）
 
-    * There are no restrictions for the PC version.
+    ※PC版の場合は特に制限はありません。
 
-1. Click the record button under ``Record`` in the Screen tab of the ribbon bar.
+1. リボンバーの画面タブにある ``Record`` 内の録画ボタンをクリックします。
 
-.. image::img/photograph_4.png
+.. image:: img/photograph_4.png
     :align: center
 
 |
 
 
-2. Play the action or animation you want to include in your video.
+2. 動画に含めたい操作あるいはアニメーションを再生します。
 
 .. image:: img/photograph_5.png
     :align: center
@@ -40,46 +40,46 @@ record
 |
 
 .. note::
-    All actions on the WebGL screen are recorded. (Because settings such as IK marker on/off are recorded as they are, please turn them off in advance.)
+    WebGL画面に対するすべての操作が録画されます。（IKマーカーのオン・オフなど設定もそのまま録画されるため、事前にオフにしてください）
 
-3. Click the Stop button.
+3. 停止ボタンをクリックします。
 
 .. image:: img/photograph_6.png
     :align: center
 
 |
 
-* If you start and stop recording even once, you will be able to press the download button.
+※一度でも録画開始～停止をするとダウンロードボタンが押せるようになります。
 
 .. image:: img/photograph_7.png
     :align: center
 
 .. hint::
-    mute video audio
+    ビデオの音声をミュートする
 
     .. image:: img/photograph_c.png
         :align: center
 
-    When recording with this app, you can also record audio. In the future, we plan to support narration by voice synthesis. In general, it can also be used for the purpose of recording sound effects, etc. However, there may be times when you don't want to add sound unnecessarily because you don't have a microphone or you're not feeling well.
+    　本アプリでは録画する際、音声も記録することができます。将来的には音声合成によるナレーション等にも対応させる予定です。一般的には効果音などを収録させる目的でも使用することができます。ただしマイクが備わっていない、不調などの理由で音声を不必要に入れたくないこともあるでしょう。
 
-    In such a case, you can switch between activating and muting the audio by pressing this button.
+    　そんな時、このボタンを押すことで音声を有効・ミュートを切り替えることができます。
 
 |
 
 
-.. index:: Watch video (shoot)
+.. index:: ビデオを見る（撮影）
 
-look
+見る
 ==================
 
-This application has a built-in video player, so you can immediately check the video recorded by the application.
+　本アプリはビデオプレイヤーを内蔵しており、アプリで録画した映像をすぐに確認することができます。
 
 .. image:: img/photograph_8.png
     :align: center
 
 |
 
-1. Click the "Video player" button on the screen tab of the ribbon bar.
+1,リボンバーの画面タブにある「Video player」ボタンをクリックします。
 
 .. image:: img/photograph_9.png
     :align: center
@@ -90,10 +90,10 @@ This application has a built-in video player, so you can immediately check the v
 .. |localvideo| image:: img/photograph_b.png
 
 
-|appvideo| Loads videos recorded with the app. The content will be rewritten each time you record, so save it if you want to see it forever.
+|appvideo| アプリで録画したビデオを読み込みます。録画するたびに内容は書き換わるので永久に見たい場合は保存してください。
 
-|localvideo| Loads a video file on the device. Supported formats follow the specifications of the video element of each browser. Only ``.webm`` and ``.mp4`` can be opened as apps.
+|localvideo| 端末にある動画ファイルを読み込みます。対応形式は各ブラウザのvideo要素の仕様に従います。アプリとしては ``.webm`` と ``.mp4`` のみ開くことが可能です。
 
 
 .. hint::
-    You can also use the :doc:`./texttrack` feature described later.
+    なお、後述の :doc:`./texttrack` 機能も利用できます。

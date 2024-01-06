@@ -1,20 +1,20 @@
-.. index:: Audio (property)
+.. index:: Audio（プロパティ）
 
-#####################################
+####################################
 Audio
-#####################################
+####################################
 
 .. image:: ../img/screen_ribbon_audio.png
 
 |
 
-Audio properties. You can find this in the Audio tab of the Ribbon bar.
+　Audioのプロパティです。これはリボンバーのオーディオタブにあります。
 
 
 .. image:: ../img/prop_audio_1.png
     :align: left
 
-Switches the type of audio to operate.
+操作するオーディオの種類を切り替えます。
 
 
 |
@@ -26,8 +26,8 @@ Switches the type of audio to operate.
     :align: left
 
 
-Load the audio file you want to use.
-Removes imported audio.
+使用したいオーディオファイルを読み込みます。
+読み込んだオーディオを削除します。
 
 
 
@@ -40,7 +40,7 @@ Removes imported audio.
     :align: left
 
 
-Targets the loaded audio for manipulation.
+読み込んだオーディオを操作する対象にします。
 
 
 
@@ -53,7 +53,7 @@ Targets the loaded audio for manipulation.
 .. image:: ../img/prop_audio_4.png
     :align: left
 
-Select the audio state for keyframe registration.
+キーフレーム登録用にオーディオの状態を選択します。
 
 
 
@@ -65,10 +65,10 @@ Select the audio state for keyframe registration.
 .. image:: ../img/prop_audio_5.png
     :align: left
 
-Play/pause/seek for preview.
+プレビュー用に再生・停止・シークします。
 
 .. warning::
-    SE cannot seek.
+    SEの場合はシークできません。
 
 
 |
@@ -79,7 +79,7 @@ Play/pause/seek for preview.
 .. image:: ../img/prop_audio_6.png
     :align: left
 
-Toggles loop playback.
+ループ再生を切り替えます。
 
 
 |
@@ -90,7 +90,7 @@ Toggles loop playback.
 .. image:: ../img/prop_audio_7.png
     :align: left
 
-Change the volume.
+音量を変更します。
 
 
 |
@@ -101,4 +101,6 @@ Change the volume.
 .. image:: ../img/prop_audio_8.png
     :align: left
 
-Change the pitch of audio.
+オーディオのピッチを変更します。
+
+

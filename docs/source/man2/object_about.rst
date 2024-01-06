@@ -1,44 +1,45 @@
-.. index:: object (object that can be handled)
+.. index:: オブジェクト（扱えるオブジェクト）
 
-##################################
-Objects that can be handled
-##################################
+########################
+扱えるオブジェクト
+########################
 
 
-From here, we will explain in detail the properties of each object and how to actually operate VRM and other objects on the WebGL screen.
-
-The objects that can be handled by this application are defined as follows.
+| 　ここからは各オブジェクトのプロパティやWebGL画面で実際にVRMや他のオブジェクトを操作する方法について詳しく説明していきます。
+| 　本アプリで扱えるオブジェクトは次のように定義しています。
 
 
 .. list-table::
-  :header-rows: 1
+    :header-rows: 1
 
-  * - kinds
-    - explanation
-  * - VRMs
-    - This is the main 3D model object in this application.
-  * - OtherObject
-    - Other 3D objects such as FBX, Obj, STX. [1]_
-  * - Light
-    - It is a light object by Unity standard function.
-  * - Camera
-    - Camera object by Unity standard function.
-  * - Effect
-    - Effect object by Unity standard function.
-  * - Image
-    - Load 2D images such as jpg and png as 3D objects. The handling is equivalent to OtherObject.
-  * - Text
-    - Not a 3D object. It is a text object that is displayed on the WebGL screen mainly for dialog display and user interface purposes.
-  * - UImage
-    - Similar to Text, it is a 2D image used primarily for user interface purposes.
-  * - SystemEffect
-    - Screen effect.
-  * - Audio
-    - An audio object used as BGM or SE.
-  * - Stage
-    - Handle terrain and stages such as the ground, sky, and wind.
+    * - 種類
+      - 説明
+    * - VRM
+      - 本アプリでメインの3Dモデルオブジェクトです。
+    * - OtherObject
+      - FBX、Obj、STXなどのその他の3Dオブジェクトです。 [1]_
+    * - Light
+      - Unity標準機能によるライトオブジェクトです。
+    * - Camera
+      - Unity標準機能によるカメラオブジェクトです。
+    * - Effect
+      - Unity標準機能によるエフェクトオブジェクトです。
+    * - Image
+      - jpgやpngなどの2D画像を3Dオブジェクトとして読み込みます。扱いはOtherObjectと同等です。
+    * - Text
+      - 3Dオブジェクトではありません。WebGL画面に主にセリフ表示やユーザーインターフェース目的で表示するテキストオブジェクトです。
+    * - UImage(UI画像)
+      - Textと同様で、主にユーザーインターフェース目的で使用する2D画像です。
+    * - SystemEffect
+      - 画面効果です。
+    * - Audio
+      - BGMやSEとして使うオーディオオブジェクトです。
+    * - Stage
+      - 地面や空、風などの地形・舞台を扱います。
 
-.. [1] All formats supported by TriLib2 (https://ricardoreis.net/trilib-2/)
+.. [1] TriLib2で対応可能なフォーマットすべて（https://ricardoreis.net/trilib-2/）
 
 .. note::
-    Text and UImage cannot be treated as 3D objects, but they can be moved and rotated.
+    ※TextとUImageは3Dオブジェクトとして扱うことはできませんが、移動・回転は可能です。
+
+

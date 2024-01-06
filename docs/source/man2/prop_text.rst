@@ -1,8 +1,8 @@
-.. index:: Text (property)
+.. index:: Text（プロパティ）
 
-#####################################
+####################################
 Text
-#####################################
+####################################
 
 
 
@@ -11,17 +11,18 @@ Text
 
 |
 
-Set the 2D text to be displayed on the WebGL screen.
+　WebGL画面に表示する2Dのテキストを設定します。
 
 
 
-:text:
-    Enter the string to display.
-:Anchor position:
-    Specifies the reference corner for movement and character string drawing.
-:font size:
-    Specifies the font size of the string.
-:colour:
-    Change the color of the string.
-:Decoration:
-    Specifies the character string decoration (bold, italic, or both).
+:テキスト:
+    表示する文字列を入力します。
+:アンカー位置:
+    移動や文字列描画の際の基準となる角を指定します。
+:フォントサイズ:
+    文字列のフォントサイズを指定します。
+:色:
+    文字列の色を変更します。
+:装飾:
+    文字列の装飾（太字・イタリック体・両方）を指定します。
+

@@ -1,24 +1,25 @@
-##########################
-General usage
-##########################
+#########################
+一般的な使い方
+#########################
 
-We will explain how to use and utilize this app in general. A detailed explanation of each will be provided with a link to the page.
+　本アプリの一般的な使い方・活用方法をまとめて説明していきます。それぞれの詳細な説明はページへのリンクも交えてご案内します。
 
 
-In addition, a reverse lookup manual is also posted on Google Docs. This page will be updated from time to time, so please refer to it.
+また、Googleドキュメントにて逆引きのマニュアルも掲載しています。こちらは随時更新しますので、ぜひ参考にしてみてください。
 
-VRMViewMeister function reverse lookup manual
+VRMViewMeister機能逆引きマニュアル
     https://docs.google.com/document/d/1uYCyd3d_aeP4wTTQUXTsRqGKMl0LuJ_JZ5tfoInY4r4/edit?usp=sharing
 
 
 .. toctree::
    :maxdepth: 3
-   :caption: Contents:
+   :caption: 目次:
 
 
    gen_use_operation
    gen_use_file
    gen_use_3dm
+   gen_use_cloud
 
 
  

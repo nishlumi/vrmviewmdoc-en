@@ -1,11 +1,11 @@
-.. index:: SystemEffect (object manipulation)
+.. index:: SystemEffect（オブジェクトの操作）
 
-#####################################
-System effects
-#####################################
+####################################
+SystemEffect
+####################################
 
 
-SystemEffect is Post-processing in Unity's terminology. In order to make it easier for the public to understand, this application uses the name "system" + "effect" = "system effect".
+　SystemEffectはUnityの用語でいうPost-processingです。世間的なわかりやすさを重視して「システム」＋「エフェクト」＝「システムエフェクト」という名称で本アプリでは扱います。
 
 
 
@@ -19,44 +19,44 @@ SystemEffect is Post-processing in Unity's terminology. In order to make it easi
 
 |
 
-SystemEffect can use the following Post-processing effects: Only some options, not all options.
+　SystemEffectではPost-processingの次の効果を使用できます。すべてのオプションではなく一部のオプションのみです。
 
 ::
 
-    Bloom, Chromatic Abberation, Color grading, Depth of field, Grain, Vignette, Motion blur
+    Bloom、Chromatic Abberation、Color grading、Depth of field、Grain、Vignette、Motion blur
 
 .. warning::
-    * If you use many effects, the operation may become slow.
+    ※効果を多用すると動作が重くなる可能性があります。
 
 |
 
 .. |antialias| image:: ../img/operation_syseff_1.png
 
-.. index:: screen transitions
+.. index:: 画面のトランジション
 
-**Screen Transitions**
+**画面のトランジション**
 
-Please use a combination of these system effects to create screen switching effects such as blacking out the screen.
+画面を暗転などして画面を切り替える演出はこれらのシステムエフェクトを組み合わせて表現してください。
 
 |
 
-.. index:: antialiasing
+.. index:: アンチエイリアス
 
-**About Antialiasing**
+**アンチエイリアスについて**
 
 :|antialias|:
-    Please set anti-aliasing in "Anti-aliasing" on the "Screen" tab of the ribbon bar, not in SystemEffect. (Cannot be registered to keyframes of animation projects)
+    　アンチエイリアスはSystemEffectではなく、リボンバーの「画面」タブの「アンチエイリアス」で設定してください。（アニメーションプロジェクトのキーフレームには登録できません）
 
 
-**How to register for the animation project**
+**アニメーションプロジェクトへの登録方法**
 
-To register a system effect to an animation project, click the ``Register Keyframe`` button in the tab, or right-click [1]_ in the ``System Effects`` tab and click the ``Register Keyframe`` button. Click
+　システムエフェクトをアニメーションプロジェクトに登録するには、タブ内の ``キーフレーム登録`` ボタンか、 ``システムエフェクト`` タブ内で右クリック [1]_ して ``キーフレーム登録`` ボタンをクリックします。
 
 .. image:: ../img/screen_ribbon_animation_keyframe2.png
     :align: center
 
 |
 
-* "Register keyframe" displayed when right-clicking in this tab is for system effects only. Even if you have selected any 3D object, it will **only target system effects**, so be careful not to make a mistake.
+※このタブ内で右クリックした場合に表示される「キーフレーム登録」はシステムエフェクト専用です。3Dオブジェクトをなにか選択していたとしても、 **必ずシステムエフェクトだけを対象** にしますので、お間違えないようご注意ください。
 
-.. [1] Control key + click or double tap for macOS
+.. [1] macOSの場合はControlキー + クリックまたは2点タップ

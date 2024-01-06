@@ -1,30 +1,37 @@
-.. index:: What is an animation project?
+.. index:: アニメーションプロジェクトとは
 
-######################################
-What is an animation project?
-######################################
+#####################################
+アニメーションプロジェクトとは
+#####################################
 
 
-| You can freely animate objects that can be read with this application. The method of making animations is similar to MMD, MMM (MikuMikuMoving), and general animation creation software, so I think you'll get used to it in no time if you use it for a while.
-| This application's original animation will be used for explanation under the name of "animation project".
+| 　本アプリで読み込めるオブジェクトを自由にアニメーションさせることができます。アニメーションの作り方はMMD、MMM（MikuMikuMoving）や一般的なアニメーション作成ソフトと似せてあるので、少し使っていただければすぐ慣れると思います。
+| 　本アプリ独自のアニメーションを「アニメーションプロジェクト」という名で説明に使っていきます。
 
-.. figure::img/animation_1.png
+.. figure:: img/animation_1.png
     :align: center
 
 |
 
 .. note::
-    * Please note that the animations in this application are unique implementations and are not compatible with the animation format used in MMD or Unity Editor. (We are also considering implementing a function to export to common formats in the future)
-    * Animation data included in FBX can be played.
-    * If you record later, you can save it in a generally playable format.
+    * 本アプリのアニメーションは独自の実装のため、MMDやUnity Editorで使われるアニメーションの形式とは一切互換性はありませんのでご注意ください。（将来的には一般的な形式にエクスポートする機能の実装も考えています）
+    * FBXに含まれるアニメーションデータを再生することはできます。
+    * 後述の録画をすると一般的に再生可能な形式で保存することができます。
 
-File format for animation used in this application
-    It has its own format. There are three:
+本アプリで使われるアニメーションに関するファイル形式
+    独自の形式となっています。次の3つです。
 
     .. csv-table::
         :header-rows: 1
 
-        extension, overview
-        .vvmproj, animation project (file that holds all information related to animation in this application).
-        .vvmmot, motion data (animation information for each timeline (roll) in this application). In addition to VRM and OtherObject, animation information for cameras, 2D objects, and system effects can also be stored.
-        .vvmpose, Pose data (information for only one frame in animation), VRM only.
+        拡張子, 概要
+        .vvmproj, アニメーションプロジェクト（本アプリでのアニメーションにかかわる全情報を保持するファイル）。
+        .vvmmot, モーションデータ（本アプリで各タイムライン（ロール）１つあたりのアニメーション情報）。VRMやOtherObjectだけでなくカメラや2Dオブジェクト、システムエフェクトのアニメーション情報も保持可能。
+        .vvmpose, ポーズデータ（アニメーションでいうと１フレームのみの情報）、VRM専用。
+    
+    .. warning::
+        ver 2.2.0でIKシステムの変更を行いました。
+
+        今までのポーズ・モーションファイルではAimとChestのポーズ・モーションの変更が必要です。
+
+        IKについて詳しくは :ref:`inputikasmarker` を御覧ください。

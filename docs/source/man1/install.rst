@@ -1,28 +1,31 @@
-##################
-How to install
-##################
+############
+導入方法
+############
 
-difference
+.. contents::
+
+違い
 ===============
 
-The differences between the web app version and the PC version are as follows.
+ウェブアプリ版とPC版の違いは次のとおりです。
 
 .. csv-table::
     
-    Item, Web application version, PC version
-    Installation, optional (according to PWA specifications), according to the method of each OS
-    Internet connection, required, not required
-    Operating speed, normal, slightly faster
-    Operation in abnormal conditions, operation continues in the event of errors, depending on the OS there is a possibility that the entire application will crash in the event of an error.
-    Memory usage, high, low to medium
-    Key operation, browser interference, no interference
-    File operation, heavily dependent on browser, support and stability for each OS
-    Drawing performance, WebGL is low, WebGL is low
-    update,automatic,need to reinstall
+    項目,ウェブアプリ版,PC版
+    インストール,任意(PWAの仕様にしたがって),各OSの方法に従って
+    インターネット接続,必須,不要
+    動作速度,普通,若干速い
+    異常時の動作,エラー時に動作継続,OSによってはエラー時アプリごと落ちる可能性あり
+    メモリ使用率, 高, 低～中
+    キー操作,ブラウザによって干渉あり,干渉なし
+    ファイルの操作,ブラウザに大きく依存,各OS別に対応・安定
+    描画性能,WebGLなので低い,WebGLなので低い
+    アップデート,自動,再インストールが必要
 
 
-Web application version
-=============================
+
+ウェブアプリ版
+======================
 
 URL
 -----
@@ -32,18 +35,18 @@ https://vrmviewmeister.azurewebsites.net
 
 |
 
-.. index:: How to install (web app)
+.. index:: インストール方法（ウェブアプリ）
 
-install
+インストール
 --------------------------------
 
-When you access it, an icon like this will be displayed at the right end of your browser's URL bar. Click the leftmost icon to proceed with the installation.
+　アクセスするとブラウザのURLバーの右端にこのようなアイコンが表示されます。左端のアイコンをクリックしてインストールを進めてください。
 
 
 .. image:: ../img/install01.png
 
 
-For Edge, you can also install from "..." -> "Apps".
+　Edgeの場合は「・・・」→「アプリ」からもインストールを行えます。
 
 .. image:: ../img/install02.png
 
@@ -51,103 +54,111 @@ For Edge, you can also install from "..." -> "Apps".
 .. |logo| image:: ../img/install03.png
 
 
-|logo| When the installation is complete, it will be displayed with a dedicated icon like this in the menu list of Windows, macOS, and Linux.
+|logo|　インストールが完了するとWindowsやmacOS、Linuxのメニュー一覧にこのように専用のアイコン付きで表示されるようになります。
+
+VR機器の場合
+^^^^^^^^^^^^^^^^^^
+
+ver 2.3.0よりMeta Quest3やPICO4などVR機器に対応しました。それらの機器からもブラウザアプリでアクセスすることができます。
+
+:PICO4の場合:
+    PICO4の場合、PCのブラウザのようにPWAによるウェブアプリとしてインストールを行うことができます。
+
+    ただし外部ウィンドウなど一部操作がVR機器だと正しく動作しないため、できればブラウザアプリからの利用を推奨します。
+
 
 |
 
 .. note::
-    * What is installation even if you just open the website in the browser?
+    ※ブラウザでウェブサイトを開くだけなのにインストールとは？
 
-    | Installed just by opening it in a browser? I think there are some people who think that. This application uses a technology called PWA (Progressive Wab App), which allows you to use the website separately from the browser like a native PC application.
-    | By installing this app, you can completely separate it from Chrome or Edge and use it even if the browser is not running.
-    | Because this application uses Unity functions, it may be heavy depending on the environment. By installing it, you can prevent Chrome, Edge, etc. that you normally use for browsing websites from becoming heavy. Please install it and use it.
+    | 　ブラウザで開くだけなのにインストール？と思われる方もいらっしゃるかと思います。本アプリはPWA（Progressive Wab App）という、ウェブサイトをPCのネイティブアプリのようにブラウザから分離して使うことのできる技術を採用しています。
+    | 　インストールすることで本アプリもChromeやEdgeから完全に切り離され、ブラウザを起動していなくても使うことができます。
+    | 　本アプリはUnityの機能を使っているため環境によっては重くなります。インストールしておくことで、普通にウェブサイト閲覧に使いたいChromeやEdgeなどまで重くなることを防ぐことができます。ぜひインストールしてご利用ください。
 
 .. warning::
-    The web app version does not completely release the used memory even if it is reloaded. Free the memory by closing this application completely. Please be careful when using it for a long time.
+    ウェブアプリ版は再読み込みしても使用したメモリを完全には開放しません。本アプリを完全に閉じることでメモリを開放します。長時間の利用にはご注意ください。
 
-app update
+アプリのアップデート
 ---------------------------------------
 
-The web app version updates automatically. When there is an update, the following message will be displayed on the upper right of the screen.
+ウェブアプリ版は更新は自動で行われます。更新があると次のようなメッセージが画面右上に表示されます。
 
 .. image:: ../img/install06.png
 
-After this, a reload will refresh the app.
+この後、再読み込みするとアプリが最新の状態に更新されます。
 
 
 |
 
-.. index:: uninstall (web app)
+.. index:: アンインストール（ウェブアプリ）
 
-Uninstall
+アンインストール
 -------------------------------------
 
-You can remove this application from your browser by uninstalling it. You can also delete the data used by this application.
+　アンインストールすることで本アプリをブラウザから削除することができます。合わせて本アプリが使用していたデータも削除できます。
+　ここではChromeとEdgeを例に説明いたします。
 
-Here, we will use Chrome and Edge as examples.
-
-For Chrome
+Chromeの場合
 ^^^^^^^^^^^^^^^^^^
 
 .. |uninst01| image:: ../img/uninstall01.png
 
-|uninst01| Click "Apps" in the bookmark bar.
+|uninst01| 　ブックマークバーにある「アプリ」をクリックします。
 
 .. image:: ../img/uninstall02.png
     :scale: 60
     :align: left
 
-Search for this app, right-click it, and click "Remove from Chrome".
+　本アプリを探し、右クリックして「Chromeから削除」をクリックします。
 
-The message below will be displayed, so please check the checkbox if necessary and press the "Delete" button.
+　下図のメッセージが表示されるので、必要に応じてチェックボックスにチェックを入れて「削除」ボタンを押してください。
 
 .. image:: ../img/uninstall03.png
     :scale: 70%
 
 
-For Edge
+Edgeの場合
 ^^^^^^^^^^^^^^^
 
 .. |uninst04| image:: ../img/uninstall04.png
 
-|uninst04| Click "..." -> "Apps" and then "Manage apps".
+|uninst04| 「・・・」→「アプリ」から「アプリの管理」をクリックします。
 
-Find this app and click the "x" button on the far right.
+本アプリを探し、右端の「×」ボタンをクリックします。
 
 .. image:: ../img/uninstall05.png
 
-A message will be displayed in the same way as Chrome, so check the checkbox if necessary and press the "Delete" button.
+Chromeと同様にメッセージが表示されるので必要に応じてチェックボックスにチェックを入れて「削除」ボタンを押してください。
 
 |
 
 .. index:: 
-    PC version (each OS version)
+    PC版（各OS版）
 
-PC version (each OS version)
+PC版（各OS版）
 ========================================
 
 
-install
+インストール
 --------------------------------
 
-Since the PC version (each OS version) is a normal PC application, use it according to the installation and update method of each OS.
+　PC版（各OS版）は普通のPCアプリのため、各OSのインストール・アップデート方法に従って使います。
 
 Windows
 ^^^^^^^^^^^^^^^
 
-Windows procedure.
+Windowsの手順です。
 
-This is the procedure for Windows.
-
-1. After downloading the 7z file, unzip it in a suitable location.
+1. 7zファイルをダウンロードしたら、適当な場所で解凍してください。
 
 .. image:: ../img/install04.png
 
-2. Double-click ``vrmviewmeister.exe`` inside to start it.
+2. 中にある ``vrmviewmeister.exe`` をダブルクリックして起動してください。
 
 .. image:: ../img/install05.png
 
-Start like this.
+このように起動します。
 
 .. image:: ../img/install_win.png
 
@@ -182,9 +193,9 @@ macOS
         ※後はFinder上で dist/ 内の vrmviewmeisterを実行します。
 
 
-1. Double-click the downloaded ``vrmviewmeister-[version number].dmg``.
-2. Drag the ``vrmviewmeister`` inside to your Applications folder.
-3. Please start from search or menu.
+1. ダウンロードした ``vrmviewmeister-[バージョン番号].dmg`` をダブルクリックします。
+2. 中にある ``vrmviewmeister`` をアプリケーションフォルダにドラッグしてください。
+3. 検索またはメニュー等から起動してください。
 
 .. image:: ../img/install_mac.jpg
 
@@ -194,31 +205,31 @@ macOS
 Linux
 ^^^^^^^^^^^
 
-For Linux, please use a distribution that supports the AppImage format.
+LinuxはAppImage形式に対応したディストリビューションでご利用ください。
 
-1. Double-click the downloaded ``vrmviewmeister-[version number].AppImage`` to start it.
+1. ダウンロードした ``vrmviewmeister-[バージョン番号].AppImage`` をダブルクリックして起動してください。
 
 .. image:: ../img/install_linux.jpg
 
 .. warning::
-    Due to the specifications of Unity and each library, VRM, FBX, etc. cannot be read from the terminal in Linux in a virtual environment. Please be sure to check with the actual machine.
+    仮想環境のLinuxではUnityや各ライブラリの仕様により、VRMやFBXなどを端末から読み込むことができません。必ず実機でご確認ください。
 
 |
 
 
-.. index:: Uninstall (PC version)
+.. index:: アンインストール（PC版）
 
-Uninstall
+アンインストール
 ------------------------------------------
 
-I am not using the registry. Please delete the entire folder when uninstalling.
+レジストリは使用していません。アンインストール時はフォルダごと削除してください。
 
-In addition, personal data is stored in the following folders, so please delete them together.
+また、個人データは下記のフォルダにありますので合わせて削除してください。
 
 .. code-block:: shell
 
     Windows:
-    C:\Users\[username]\AppData\Roaming\vrmviewmeister
+    C:\Users\[ユーザー名]\AppData\Roaming\vrmviewmeister
 
     macOS:
     ~/Library/Application Support/vrmviewmeister
@@ -228,18 +239,18 @@ In addition, personal data is stored in the following folders, so please delete 
 
 
 .. index:: 
-    Switch language
+    言語の切り替え
     Change language
     Locale
 
-Switch language
+言語の切り替え
 =========================
 
-You can switch languages from the ``Home`` tab of the ribbon bar.
+言語の切り替えはリボンバーの ``ホーム`` タブから行えます。
 
 .. image:: ../img/screen_lang.png
 
-Select the language you want to switch to. The language is switched immediately except for some UI.
+切り替えたい言語を選びます。一部UIを除いて即座に言語が切り替わります。
 
 
 .. raw:: latex

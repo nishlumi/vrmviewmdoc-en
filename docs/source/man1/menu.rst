@@ -1,11 +1,11 @@
-.. index:: Menu configuration
-.. index:: ribbon bar
+.. index:: メニューの構成
+.. index:: リボンバー
 
-##################
-Menu structure
-##################
+###############
+メニューの構成
+###############
 
-We will introduce the functions in the ribbon bar (tab).
+　リボンバー（タブ）にある機能を紹介していきます。
 
 .. toctree::
     :maxdepth: 2

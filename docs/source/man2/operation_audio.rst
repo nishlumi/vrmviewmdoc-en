@@ -1,11 +1,11 @@
 .. index:: Audio
 
-#####################################
+####################################
 Audio
-#####################################
+####################################
 
 
-Audio is not a 3D object, but as its name suggests, audio. It is played with the Unity standard function, but "ogg" cannot be used due to WebGL restrictions.
+　Audioは3Dオブジェクトではなく、その名の通りオーディオです。Unity標準機能で再生されますが、WebGLの制限で「ogg」は使用不可となっています。
 
 
 
@@ -14,35 +14,35 @@ Audio is not a 3D object, but as its name suggests, audio. It is played with the
 
 |
 
-For Audio, change the settings in the Audio tab on the top ribbon bar, not in the property list.
+　Audioはプロパティ一覧ではなく、上部のリボンバーのオーディオタブで設定を変更します。
 
-1. Load an audio file by pressing the following button:
+1. 次のボタンを押してオーディオファイルを読み込みます。
 
 .. image:: ../img/operation_audio_1.png
     :align: center
 
 |
 
-2. Select the audio name you want to play in the combo box directly below.
+2. 直下のコンボボックスで再生したいオーディオ名を選択します。
 
 .. image:: ../img/operation_audio_2.png
     :align: center
 
 |
 
-3. Configure for preview playback or animation projects.
+3. プレビュー再生あるいはアニメーションプロジェクト用に設定します。
 
 .. |norange| image:: ../img/operation_audio_3.png
 .. |isrange| image:: ../img/operation_audio_4.png
 
 .. csv-table::
 
-    For preview playback, animation registration
-    |norange|, |isrange|
-    It will play instantly. This operation is not registered in the keyframe. , After selecting "Play" or "Stop", register the keyframe.
+    プレビュー再生, アニメーション登録用
+    |norange|,  |isrange|
+    即座に再生されます。こちらの操作はキーフレームには登録されません。, 「再生」や「停止」を選択後にキーフレームに登録します。
 
 
-4. To register the audio to the animation project, use the ``Register Keyframe`` button in the tab, or right-click in this tab and select the ``Register Keyframe`` button.
+4. オーディオをアニメーションプロジェクトに登録するにはタブ内の ``キーフレーム登録`` ボタンか、このタブ内で右クリックし、「キーフレーム登録」ボタンを使用します。
 
 .. image:: ../img/screen_ribbon_animation_keyframe2.png
     :align: center
@@ -50,9 +50,9 @@ For Audio, change the settings in the Audio tab on the top ribbon bar, not in th
 |
 
 .. note::
-  * "Register keyframe" displayed when right-clicking in this tab is for audio only. No matter what object you select, it will always target audio only, so be careful.
+    ※このタブ内で右クリックした場合に表示される「キーフレーム登録」はオーディオ専用です。どのオブジェクトを選択していても、必ずオーディオだけを対象にしますので、お間違えないようご注意ください。
 
 .. warning::
-    * Because the rights of audio files are considered to be particularly strict, please be sure to protect the rights when using music files of third parties.
+    ※オーディオファイルは権利関係が特に厳しいと思われますので、第三者の音楽ファイルを使用する場合は必ず権利関係を守って使用してください。
 
-    The audio loaded in this app will be deleted from the browser when the app is reloaded. Since it is only handled locally and there is no sharing function, only files that the user owns can be used.
+    　本アプリでは読み込んだオーディオはアプリを再読み込みするとブラウザ上からは削除されます。ローカルでしか扱われず共有機能もないので使用者自身が所持しているファイルしか使えないようになっています。

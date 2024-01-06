@@ -1,38 +1,42 @@
-.. index:: Project settings (screen configuration)
+.. index:: プロジェクトの設定（画面の構成）
 
-##########################
-Project setting screen
-##########################
+#######################
+プロジェクトの設定画面
+#######################
 
-This is the screen for setting the role name of each object in the animation and assigning each object to the read role. (Animation will be discussed later)
+　アニメーションにて、各オブジェクトの役割名を設定したり、読み込んだ役割に各オブジェクトを割り当てる画面です。（アニメーションについては後述）
 
 
-Project information
+プロジェクト情報
 =======================
 
-This is a tab where you can make a note of the outline of the project file.
+プロジェクトファイルの概要などをメモしておくタブです。
 
 .. image:: ../img/screen_project1.png
-     :align: center
+    :align: center
 
 |
 
-:name:
-    Animation project name
-:explanation:
-    Detailed description of the animation project
+:名前:
+    アニメーションプロジェクトの名称
+:説明:
+    アニメーションプロジェクトの詳細説明
 :URL:
-    URL you want to specify
-:license:
-    Animation project license terms (if needed)
+    明記したいURL
+:ライセンス:
+    アニメーションプロジェクトのライセンス条項（必要であれば）
 :FPS:
-    Sets the animation FPS.
+    アニメーションのFPSを設定します。 
+:デフォルトの間隔:
+    現在のアニメーションプロジェクトにおいて、1フレーム間の秒数を指定します。デフォルトでは ``FPS / 6000.0`` の計算結果がセットされます。
+:再計算:
+    デフォルトの間隔を設定した後に押すことで全てのキーフレームの間隔を再計算します。
 
 
-Role management
+役割の管理
 ==================
 
-This tab is used to select and manage roles (roles/timelines) within an animation project and casts (objects) assigned to them.
+アニメーションプロジェクト内のロール（役割・タイムライン）とそれに割り当てるキャスト（オブジェクト）を選択して管理するタブです。
 
 .. image:: ../img/screen_project2.png
     :align: center
@@ -40,63 +44,63 @@ This tab is used to select and manage roles (roles/timelines) within an animatio
 |
 
 
-:role:
-    Enter the role of the object (name for identification within the animation project)
-:kinds:
-    role type
-:cast:
-    Select objects to assign to role
+:役割:
+    オブジェクトの役割（アニメーションプロジェクト内における識別のための名称）を入力
+:種類:
+    役割の種類
+:キャスト:
+    役割に割り当てるオブジェクトを選択
 
 
 
-material
+素材
 ===============
 
-This tab manages materials such as textures in the app.
+アプリ中のテクスチャなどの素材を管理するタブです。
 
 .. image:: ../img/screen_project3.png
     :align: center
 
 |
 
-:Material type:
-    Select from Texture etc.
-:Material location:
-    Switch between in-app or in-project
+:素材の種類:
+    Textureなどから選択
+:素材の場所:
+    アプリ内またはプロジェクト内かどうかを切り替える
 
-     | ``App`` - in the app
-     | ``Project`` - in the current animation project
+    | ``App`` - アプリ内
+    | ``Project`` - 現在のアニメーションプロジェクト内
 
-:addition:
-     add material
+:追加:
+    素材の追加をする
 
-:delete:
-    Delete the material selected in the list
+:削除:
+   一覧で選択した素材を削除する
 
-:list:
-     Material preview, material name, material type, file name
+:一覧:
+    素材のプレビュー、素材名、素材の種類、ファイル名
 
 .. note::
-     Rows with no images loaded in the list look like this:
+    一覧で画像が読み込まれていない行は次のようになります。
 
-     .. image:: ../img/screen_project5.png
+    .. image::  ../img/screen_project5.png
         :align: center
     
-     Press the ``No Preview`` button to load the image.
+    ``No Preview`` ボタンを押すと画像を読み込みます。
 
 
-Add material
+素材の追加
 ---------------
 
-This is a dedicated pop-up window for adding materials.
+素材の追加をする専用のポップアップウィンドウです。
 
 .. image:: ../img/screen_project6.png
     :align: center
 
 |
 
-:Material label:
-    Specifies the name used to refer to the texture in the application
+:素材のラベル:
+    アプリ中でテクスチャを参照するために使用する名称を指定
 
-:Material file button:
-    Select the image file etc. you want to use as a texture from the terminal
+:素材ファイルボタン:
+    端末からテクスチャにしたい画像ファイルなどを選択

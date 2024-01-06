@@ -1,7 +1,7 @@
-.. index:: Manipulating Objects
+.. index:: オブジェクトの操作
 
 #####################
-Manipulating Objects
+オブジェクトの操作
 #####################
 
 .. toctree::

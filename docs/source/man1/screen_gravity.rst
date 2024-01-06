@@ -1,23 +1,24 @@
-.. index:: gravity settings
+.. index:: 重力設定
 
-#####################################
-gravity settings
-#####################################
+####################################
+重力設定
+####################################
 
 .. image:: ../img/screen_gravity.png
     :align: center
 
-This function is used for VRoid/VRM. You can manually adjust the gravity applied to the bones of the model used in this application. This window is draggable.
+　VRoid/VRMの場合に使う機能です。本アプリで用いるモデルのボーンにかかる重力を手動で調整できます。本ウィンドウはドラッグ可能です。
 
-**Top:**
+**上部：**
 
-:apply gravity settings:
-    Apply gravity with the values specified in the spreadsheet below.
-:Reload:
-    Reload the current gravity information.
+:重力設定を適用:
+    下部のスプレッドシートで指定した値で重力を適用。
+:再読み込み:
+    現在の重力の情報を再読み込みする。
 
 
-**beneath:**
+**下部：**
 
-:Spreadsheet:
-    Enter the strength of gravity (Power) and direction (Direction X, Y, Z) for each existing bone, including the decimal point.
+:スプレッドシート:
+    存在するボーンごとの重力の強さ（Power）、方向（Direction X, Y, Z）を小数点含めて入力。
+
