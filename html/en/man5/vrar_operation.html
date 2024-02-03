@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>17.2. How to operate on VR/AR &mdash; VRMViewMeister 2.3.0 documentation</title>
+  <title>17.2. How to operate on VR/AR &mdash; VRMViewMeister 2.4.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -181,7 +181,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p>You cannot grab the entire VRM and move it. To move the entire VRM, you need to operate it using the virtual controller described below.</p></li>
+<li><p>To grab and move the entire VRM, turn on <code class="docutils literal notranslate"><span class="pre">Move</span> <span class="pre">Mode</span></code> from the <code class="docutils literal notranslate"><span class="pre">IK,</span> <span class="pre">Whole</span> <span class="pre">Body</span></code> property. You can then grab and move it like any other IK marker. It can also be operated using the virtual controller described later.</p></li>
 <li><p>All IK markers are displayed simultaneously in VR/AR space.</p></li>
 <li><p>Due to VR/AR specifications, IK markers are not displayed transparently and are hidden behind objects.</p></li>
 </ul>
@@ -269,13 +269,19 @@
 <td><p>Set the operation target to <code class="docutils literal notranslate"><span class="pre">main</span> <span class="pre">camera</span></code> .</p></td>
 </tr>
 <tr class="row-odd"><td><p><img alt="rightctrl05" src="../_images/vrar_ctrlright_05.png" /></p></td>
-<td><p>Sets the operation target to the <code class="docutils literal notranslate"><span class="pre">currently</span> <span class="pre">selected</span> <span class="pre">3D</span> <span class="pre">object</span></code>. You need to switch to this to run the entire VRM.</p></td>
+<td><p>Sets the operation target to the <code class="docutils literal notranslate"><span class="pre">currently</span> <span class="pre">selected</span> <span class="pre">3D</span> <span class="pre">object</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><img alt="rightctrl06" src="../_images/vrar_ctrlright_06.png" /></p></td>
 <td><p>Set the operation mode to <code class="docutils literal notranslate"><span class="pre">Move</span></code> .</p></td>
 </tr>
 <tr class="row-odd"><td><p><img alt="rightctrl07" src="../_images/vrar_ctrlright_07.png" /></p></td>
 <td><p>Set the operation mode to <code class="docutils literal notranslate"><span class="pre">rotate</span></code> .</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="rightctrl08" src="../_images/vrar_ctrlright_08.png" /></p></td>
+<td><p>Resets the position of the currently selected object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="rightctrl09" src="../_images/vrar_ctrlright_09.png" /></p></td>
+<td><p>Resets the rotation of the currently selected object.</p></td>
 </tr>
 </tbody>
 </table>
@@ -356,6 +362,10 @@
 </ul>
 </dd>
 </dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>The reaction rate may be too fast. In that case, please adjust the movement speed and rotation speed of the V-pad from <code class="docutils literal notranslate"><span class="pre">Application</span></code> in the settings.</p>
+</div>
 </section>
 </section>
 

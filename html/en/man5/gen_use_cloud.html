@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7.4. Support for cloud storage &mdash; VRMViewMeister 2.3.0 documentation</title>
+  <title>7.4. Support for cloud storage &mdash; VRMViewMeister 2.4.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -58,7 +58,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#id3">7.4.2. Basics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#index-1">7.4.3. Preparing the script</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#index-2">7.4.4. Update script</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">7.4.5. How to use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">7.4.5. How to use</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">7.4.5.1. User folder</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -103,17 +106,21 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">7.4. </span>Support for cloud storage</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<h1><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">7.4. </span>Support for cloud storage</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
 <nav class="contents" id="contents">
 <span id="index-0"></span><p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#id1" id="id7">Support for cloud storage</a></p>
+<li><p><a class="reference internal" href="#id1" id="id8">Support for cloud storage</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id2" id="id8">Supported files and features</a></p></li>
-<li><p><a class="reference internal" href="#id3" id="id9">Basics</a></p></li>
-<li><p><a class="reference internal" href="#index-1" id="id10">Preparing the script</a></p></li>
-<li><p><a class="reference internal" href="#index-2" id="id11">Update script</a></p></li>
-<li><p><a class="reference internal" href="#id6" id="id12">How to use</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id9">Supported files and features</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id10">Basics</a></p></li>
+<li><p><a class="reference internal" href="#index-1" id="id11">Preparing the script</a></p></li>
+<li><p><a class="reference internal" href="#index-2" id="id12">Update script</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id13">How to use</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id7" id="id14">User folder</a></p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -121,7 +128,7 @@
 <p>From ver 2.3.0, it supports Google Drive. Since it is implemented as an extension, it is not necessary to use it.</p>
 <p>See also <a class="reference internal" href="config.html#config-fileloader"><span class="std std-ref">File loader tab</span></a> .</p>
 <section id="id2">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">7.4.1. </span>Supported files and features</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">7.4.1. </span>Supported files and features</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <table class="docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p>files</p></td>
@@ -158,7 +165,7 @@
 <p>In the pose/motion list, you will be able to select Google Drive in the load location combo box.</p>
 </section>
 <section id="id3">
-<h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">7.4.2. </span>Basics</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">7.4.2. </span>Basics</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <dl>
 <dt>Connection method</dt><dd><p>Please convert GoogleAppsScript into a web application and set the URL of the published web application to this application.</p>
 <p>This app does not log in to your Google account. It does not ask for permission. This application does not determine whether it is caused by Google AppsScript.</p>
@@ -184,7 +191,7 @@
 </div>
 </section>
 <section id="index-1">
-<span id="id4"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">7.4.3. </span>Preparing the script</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<span id="id4"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">7.4.3. </span>Preparing the script</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
 <p>The script is located in the developer’s Google Drive folder below. <strong>(You must be logged in to Google)</strong></p>
 <dl>
 <dt>Script project (GoogleAppsScript)</dt><dd><dl class="field-list simple">
@@ -195,16 +202,14 @@
 <p>The easiest way is to copy this to your own drive. After copying, it doesn’t matter which folder you move it to.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Please do not run the script in the above sample project directly. It will ask the user for permission to access Google.</p>
+<p>Please do not run the script in the above sample project directly. The developer’s user privileges remain, but the user is asked for permission to access Google.</p>
 <p>Be sure to use the script project you copied to your Google Drive.</p>
 </div>
 <p>Please refer to the link below for installation instructions.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Installation instructions by Google Slides - Google Slides<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.google.com/presentation/d/e/2PACX-1vQP2RstLGn82dh_FOqBfbPPBGvx9o-YQXc-3ol8Gk4_IseKrzsgs0hgAt0h4uYX2kA71ENrnI-XXbBf/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p">https://docs.google.com/presentation/d/e/2PACX-1vQP2RstLGn82dh_FOqBfbPPBGvx9o-YQXc-3ol8Gk4_IseKrzsgs0hgAt0h4uYX2kA71ENrnI-XXbBf/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p</a></p>
+<dl class="simple">
+<dt>How to install using Google Slides - Google Slides:</dt><dd><p><a class="reference external" href="https://docs.google.com/presentation/d/e/2PACX-1vQP2RstLGn82dh_FOqBfbPPBGvx9o-YQXc-3ol8Gk4_IseKrzsgs0hgAt0h4uYX2kA71ENrnI-XXbBf/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p">https://docs.google.com/presentation/d/e/2PACX-1vQP2RstLGn82dh_FOqBfbPPBGvx9o-YQXc-3ol8Gk4_IseKrzsgs0hgAt0h4uYX2kA71ENrnI-XXbBf/pub?start=false&amp;loop=false&amp;delayms=3000&amp;slide=id.p</a></p>
 </dd>
-<dt class="field-even">How to Install - Github<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://github.com/nishlumi/vrmviewmeister-gdrive-extension/blob/main/install.rst">https://github.com/nishlumi/vrmviewmeister-gdrive-extension/blob/main/install.rst</a></p>
+<dt>Installation method - Github:</dt><dd><p><a class="reference external" href="https://github.com/nishlumi/vrmviewmeister-gdrive-extension/blob/main/install.rst">https://github.com/nishlumi/vrmviewmeister-gdrive-extension/blob/main/install.rst</a></p>
 </dd>
 </dl>
 </dd>
@@ -212,11 +217,10 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<dl class="simple">
+<dl>
 <dt>Github</dt><dd><p>The source is also published in the repository below, so please refer to it to see what we are doing.</p>
-<dl class="field-list simple">
-<dt class="field-odd">vrmviewmeister-gdrive-extension - Github<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nishlumi/vrmviewmeister-gdrive-extension/">https://github.com/nishlumi/vrmviewmeister-gdrive-extension/</a></p>
+<dl class="simple">
+<dt>vrmviewmeister-gdrive-extension - Github:</dt><dd><p><a class="reference external" href="https://github.com/nishlumi/vrmviewmeister-gdrive-extension/">https://github.com/nishlumi/vrmviewmeister-gdrive-extension/</a></p>
 </dd>
 </dl>
 </dd>
@@ -233,14 +237,14 @@
 </ol>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>Generally, for web services that use Google APIs, the operation in step 2 corresponds to the operation that requires the service to log in to Google.</p>
+<p>Generally, for web services that use Google APIs, <code class="docutils literal notranslate"><span class="pre">operation</span> <span class="pre">2</span></code> corresponds to the operation that requires the service to log in to Google.</p>
 <p>In this app, you do it yourself in the script project in advance, so there is no need to log in to Google to use this app.</p>
 </div>
 </dd>
 </dl>
 </section>
 <section id="index-2">
-<span id="id5"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">7.4.4. </span>Update script</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<span id="id5"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">7.4.4. </span>Update script</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
 <p>The above script project may be updated in the future. In that case, please follow the steps on the next page.</p>
 <dl class="field-list simple">
 <dt class="field-odd">How to Install - Github<span class="colon">:</span></dt>
@@ -258,7 +262,7 @@
 </dl>
 </section>
 <section id="id6">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">7.4.5. </span>How to use</a><a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">7.4.5. </span>How to use</a><a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
 <dl>
 <dt>Ribbon bar</dt><dd><dl>
 <dt>Home tab:</dt><dd><p>The following functions are available in the VRM, Object, and Project Open menus</p>
@@ -293,6 +297,19 @@
 </dl>
 </dd>
 </dl>
+<section id="id7">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">7.4.5.1. </span>User folder</a><a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<p>On the file loader tab of the settings screen, there is an input field called <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Folder</span> <span class="pre">ID</span></code>.</p>
+<img alt="../_images/gen_use_cloud_01.png" class="align-center" src="../_images/gen_use_cloud_01.png" />
+<p>This is a setting that limits the folders in which each file is placed. By default, it will try to find each file in all folders in the user’s Google Drive. Therefore, <strong>script execution may take longer</strong>.</p>
+<p>By specifying the ID or name of a folder in Google Drive here, files will be searched only from that folder. It also takes less time to run and does not affect script execution limits. We recommend that you specify it.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>By default only folder IDs are accepted.</p>
+<p>If you turn on the <code class="docutils literal notranslate"><span class="pre">Name</span> <span class="pre">specification</span></code> toggle switch, you can limit Google Drive to only that file type by folder name.</p>
+<p>If the folder ID is long and you find it troublesome to copy or input, we recommend that you specify a name.</p>
+</div>
+</section>
 </section>
 </section>
 

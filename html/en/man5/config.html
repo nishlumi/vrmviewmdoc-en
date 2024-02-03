@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>18. Setting &mdash; VRMViewMeister 2.3.0 documentation</title>
+  <title>18. Setting &mdash; VRMViewMeister 2.4.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -200,6 +200,13 @@
 </dd>
 </dl>
 </dd>
+<dt>VR/AR</dt><dd><dl class="simple">
+<dt>Rotational speed</dt><dd><p>Adjust the speed when operating the rotation of the main camera and selected object in VR/AR space. 0.01 to 0.1 in 0.01 units.</p>
+</dd>
+<dt>Moving Speed</dt><dd><p>Adjust the speed when moving the main camera and selected object in VR/AR space. The unit is 0.01 from 0.1 to 2.</p>
+</dd>
+</dl>
+</dd>
 </dl>
 <div class="line-block">
 <div class="line"><br /></div>
@@ -367,6 +374,12 @@
 <dt>User folder ID</dt><dd><div class="line-block">
 <div class="line">This field is for entering the folder ID where Project, Motion, Pose, VRM, OtherObject, and Image will be loaded. If you specify these, only that folder will be read.</div>
 <div class="line">If it is not specified, it will search and read from all locations on the drive, which may take some time.</div>
+</div>
+</dd>
+<dt>By name</dt><dd><p>The contents entered in the user folder field will be used as the folder name. If the folder ID is long and difficult to type, turn on this toggle switch to enter the folder name.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Be sure to give the folder a unique name on Google Drive. If multiple names with the same name are found, the first folder will be searched.</p>
 </div>
 </dd>
 </dl>

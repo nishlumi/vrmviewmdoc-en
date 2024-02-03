@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>17.1. Basics of VR/AR &mdash; VRMViewMeister 2.3.0 documentation</title>
+  <title>17.1. Basics of VR/AR &mdash; VRMViewMeister 2.4.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -68,6 +68,8 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#index-2">17.1.3. How to enter VR/AR space</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id5">17.1.4. photograph</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#real-object">17.1.5. Arrange objects according to reality</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">17.1.6. Try using physical effects</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="vrar_operation.html">17.2. How to operate on VR/AR</a></li>
@@ -103,26 +105,28 @@
            <div itemprop="articleBody">
              
   <section id="vr-ar">
-<h1><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">17.1. </span>Basics of VR/AR</a><a class="headerlink" href="#vr-ar" title="Permalink to this heading"></a></h1>
+<h1><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">17.1. </span>Basics of VR/AR</a><a class="headerlink" href="#vr-ar" title="Permalink to this heading"></a></h1>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#vr-ar" id="id6">Basics of VR/AR</a></p>
+<li><p><a class="reference internal" href="#vr-ar" id="id8">Basics of VR/AR</a></p>
 <ul>
-<li><p><a class="reference internal" href="#index-0" id="id7">Confirmed environments/functions</a></p></li>
-<li><p><a class="reference internal" href="#index-1" id="id8">Limitations</a></p>
+<li><p><a class="reference internal" href="#index-0" id="id9">Confirmed environments/functions</a></p></li>
+<li><p><a class="reference internal" href="#index-1" id="id10">Limitations</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id3" id="id9">About the function to open a separate window</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id11">About the function to open a separate window</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#index-2" id="id10">How to enter VR/AR space</a></p></li>
-<li><p><a class="reference internal" href="#id5" id="id11">photograph</a></p></li>
+<li><p><a class="reference internal" href="#index-2" id="id12">How to enter VR/AR space</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id13">photograph</a></p></li>
+<li><p><a class="reference internal" href="#real-object" id="id14">Arrange objects according to reality</a></p></li>
+<li><p><a class="reference internal" href="#id7" id="id15">Try using physical effects</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 <section id="index-0">
-<span id="id1"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">17.1.1. </span>Confirmed environments/functions</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h2>
+<span id="id1"></span><h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">17.1.1. </span>Confirmed environments/functions</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h2>
 <p>VR/AR in this app is used by switching from the normal app screen. Since it is not always in VR/AR state, you can also use the normal screen on VR devices.</p>
 <ul class="simple">
 <li><p>Meta Quest browser (VR/AR)</p></li>
@@ -138,7 +142,7 @@
 </div>
 </section>
 <section id="index-1">
-<span id="id2"></span><h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">17.1.2. </span>Limitations</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">17.1.2. </span>Limitations</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Both VR/AR cannot be used on each OS version (Electron version) on a PC connected via Quest Link.</p></li>
 <li><p>Since this application is built with WebGL, it is highly dependent on the performance of each device that can use the browser. Each OS has more limitations than native apps. Also, switching between the normal screen and the VR/AR screen requires some effort, so we recommend that you <strong>save frequently</strong> in either project, motion, or pose file format.</p></li>
@@ -146,7 +150,7 @@
 <li><p>SystemEffect is not reflected in VR/AR space.</p></li>
 </ul>
 <section id="id3">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">17.1.2.1. </span>About the function to open a separate window</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">17.1.2.1. </span>About the function to open a separate window</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
 <p>Functions that open another window, such as the keyframe setting window and pose/motion window, are replaced with tabs.</p>
 <dl>
 <dt>Meta Quest3</dt><dd><p>Since you can separate tabs by dragging them to another window, you will be able to use this app on two or more screens.</p>
@@ -159,7 +163,7 @@
 </section>
 </section>
 <section id="index-2">
-<span id="id4"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">17.1.3. </span>How to enter VR/AR space</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<span id="id4"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">17.1.3. </span>How to enter VR/AR space</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Click the <code class="docutils literal notranslate"><span class="pre">VR</span></code> or <code class="docutils literal notranslate"><span class="pre">AR</span></code> button on the Home tab of the ribbon bar.</p></li>
 </ol>
@@ -173,9 +177,35 @@
 </div>
 </section>
 <section id="id5">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">17.1.4. </span>photograph</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">17.1.4. </span>photograph</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
 <p>VR devices come with screenshot and recording functions as standard, so we recommend using them.</p>
 <p>You can also use the screenshot and recording functions of this app.</p>
+</section>
+<section id="real-object">
+<span id="index-3"></span><span id="id6"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">17.1.5. </span>Arrange objects according to reality</a><a class="headerlink" href="#real-object" title="Permalink to this heading"></a></h2>
+<p>There may be times when you want to make a 3D model invisible or create depth by matching it to a real wall or object. With this app, you can easily realize it with any VR device.</p>
+<p>You can easily add effects that make it seem as if you are aware of reality, which is found in standard settings such as MetaQuest3.</p>
+<p>In such cases, use <code class="docutils literal notranslate"><span class="pre">basic</span> <span class="pre">shapes</span></code> and the <a class="reference internal" href="../man2/operation_texture.html#shader-cutout"><span class="std std-ref">Cutout</span></a> shader.</p>
+<ol class="arabic simple">
+<li><p>Place the basic shape as OtherObject.</p></li>
+<li><p>Size and rotate as needed.</p></li>
+<li><p>Set the shader to <code class="docutils literal notranslate"><span class="pre">Cutout</span></code> in the texture properties.</p></li>
+<li><p>Check whether you can hide behind real walls and objects in the AR space as expected.</p></li>
+</ol>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<ul class="simple">
+<li><p>The key is to choose a basic shape that matches the actual wall or object and place it well.</p></li>
+<li><p>Even if you try to move OtherObject after making it a Cutout shader, it will be difficult to move it because it is transparent.</p></li>
+</ul>
+</div>
+</section>
+<section id="id7">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">17.1.6. </span>Try using physical effects</a><a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+<p>From ver 2.4.0, objects such as OtherObject and Effect have a <code class="docutils literal notranslate"><span class="pre">physical</span> <span class="pre">effect</span></code> property. By using this, you will be able to experience not only poses and motions but also new play in VR/AR space.</p>
+<p>Creating a new VR/AR app with Unity requires a lot of preparation, but with this app, you can use objects freely by simply changing these settings from the properties.</p>
+<img alt="../_images/prop_common_5.png" class="align-center" src="../_images/prop_common_5.png" />
+<p>See <a class="reference internal" href="../man2/prop_common.html#rigid-property"><span class="std std-ref">Physical effects (common)</span></a> for each property.</p>
 </section>
 </section>
 

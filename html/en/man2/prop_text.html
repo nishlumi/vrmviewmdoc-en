@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>9.8. Text &mdash; VRMViewMeister 2.3.0 documentation</title>
+  <title>9.8. Text / Text3D &mdash; VRMViewMeister 2.4.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -59,7 +59,7 @@
 <li class="toctree-l2"><a class="reference internal" href="prop_camera.html">9.5. Camera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_effect.html">9.6. Effect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_image.html">9.7. Image</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">9.8. Text</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9.8. Text / Text3D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_uimage.html">9.9. UImage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_stage.html">9.10. Stage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_syseffect.html">9.11. SystemEffect</a></li>
@@ -93,7 +93,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="property.html"><span class="section-number">9. </span>Property list</a> &raquo;</li>
-      <li><span class="section-number">9.8. </span>Text</li>
+      <li><span class="section-number">9.8. </span>Text / Text3D</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man2/prop_text.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -103,14 +103,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="text">
-<span id="index-0"></span><h1><span class="section-number">9.8. </span>Text<a class="headerlink" href="#text" title="Permalink to this heading"></a></h1>
-<img alt="../_images/prop_text_1.png" class="align-center" src="../_images/prop_text_1.png" />
+  <section id="text-text3d">
+<span id="index-0"></span><h1><span class="section-number">9.8. </span>Text / Text3D<a class="headerlink" href="#text-text3d" title="Permalink to this heading"></a></h1>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img alt="text1" src="../_images/prop_text_1.png" /></p></td>
+<td><p><img alt="text2" src="../_images/prop_text_2.png" /></p></td>
+</tr>
+</tbody>
+</table>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Set the 2D text to be displayed on the WebGL screen.</p>
-<dl class="field-list simple">
+<p>From ver 2.4.0, text as 3D is also supported. 3D/2D text to be displayed on the WebGL screen is set.</p>
+<p>The property contents are the same in both cases.</p>
+<dl class="field-list">
 <dt class="field-odd">Text<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Enter the string to display.</p>
 </dd>
@@ -120,11 +127,63 @@
 <dt class="field-odd">Font size<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Specifies the font size of the string.</p>
 </dd>
-<dt class="field-even">Color<span class="colon">:</span></dt>
-<dd class="field-even"><p>Change the color of the string.</p>
+<dt class="field-even">Decoration<span class="colon">:</span></dt>
+<dd class="field-even"><p>Specifies string decoration.</p>
+<dl>
+<dt>Check box on the left</dt><dd><p>Bold, italic, underline, strikeout</p>
 </dd>
-<dt class="field-odd">Decoration<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Specifies the character string decoration (bold, italic, or both).</p>
+<dt>Right radio box</dt><dd><p>Nothing, Capitalization, Lowercase</p>
+<p>※こちらはいずれか1つしか選択できません。</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Text overflow<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sets the behavior when characters overflow from the text area. Select one of the following</p>
+<ul class="simple">
+<li><p>Overflow</p></li>
+<li><p>Ellipsis</p></li>
+<li><p>Masking</p></li>
+<li><p>Truncate</p></li>
+<li><p>Scroll rectangle</p></li>
+<li><p>Page</p></li>
+<li><p>Linked</p></li>
+</ul>
+</dd>
+<dt class="field-even">Color<span class="colon">:</span></dt>
+<dd class="field-even"><p>Change the color of the string. Toggle between <code class="docutils literal notranslate"><span class="pre">single</span> <span class="pre">color</span></code> or <code class="docutils literal notranslate"><span class="pre">gradient</span></code>.</p>
+<dl>
+<dt>Color</dt><dd><p>All text will be in this color.</p>
+</dd>
+<dt>gradient</dt><dd><p>Set the entire text, corner by corner.</p>
+<img alt="../_images/prop_text_3.png" src="../_images/prop_text_3.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>TopLeft</p></td>
+<td><p>Top left</p></td>
+<td><p>TopRight</p></td>
+<td><p>Top right</p></td>
+</tr>
+<tr class="row-even"><td><p>BottomLeft</p></td>
+<td><p>Bottom left</p></td>
+<td><p>BottomRight</p></td>
+<td><p>Bottom right</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Text area<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sets the range within which the text will be drawn. This is also used as the hit detection for the <code class="docutils literal notranslate"><span class="pre">collision</span> <span class="pre">detection</span></code> physics effect.</p>
+</dd>
+<dt class="field-even">Outline<span class="colon">:</span></dt>
+<dd class="field-even"><p>Move the slider to set the outline width.</p>
+</dd>
+<dt class="field-odd">Outline (Color)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sets the outline color.</p>
 </dd>
 </dl>
 </section>

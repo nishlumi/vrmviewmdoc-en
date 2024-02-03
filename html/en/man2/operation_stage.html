@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10.13. Stage &mdash; VRMViewMeister 2.3.0 documentation</title>
+  <title>10.14. Stage &mdash; VRMViewMeister 2.4.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="11. Pose and Motion" href="../man3/posing.html" />
-    <link rel="prev" title="10.12. SystemEffect" href="operation_syseff.html" /> 
+    <link rel="prev" title="10.13. SystemEffect" href="operation_syseff.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -62,21 +62,22 @@
 <li class="toctree-l2"><a class="reference internal" href="operation_image.html">10.7. Image</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operation_effect.html">10.8. Effect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operation_text.html">10.9. Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_uimage.html">10.10. UImage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_audio.html">10.11. Audio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_syseff.html">10.12. SystemEffect</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">10.13. Stage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">10.13.1. Stage</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id2">10.13.1.1. water stage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#userstage">10.13.1.2. UserStage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_text3d.html">10.10. Text3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_uimage.html">10.11. UImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_audio.html">10.12. Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_syseff.html">10.13. SystemEffect</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">10.14. Stage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">10.14.1. Stage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">10.14.1.1. water stage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#userstage">10.14.1.2. UserStage</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#index-3">10.13.2. Lighting (directional light)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id4">10.13.2.1. Halo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-3">10.14.2. Lighting (directional light)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">10.14.2.1. Halo</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#index-5">10.13.3. Wind</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#operation-sky">10.13.4. Sky</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-5">10.14.3. Wind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operation-sky">10.14.4. Sky</a></li>
 </ul>
 </li>
 </ul>
@@ -107,7 +108,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="operation.html"><span class="section-number">10. </span>Manipulating Objects</a> &raquo;</li>
-      <li><span class="section-number">10.13. </span>Stage</li>
+      <li><span class="section-number">10.14. </span>Stage</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man2/operation_stage.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -118,7 +119,7 @@
            <div itemprop="articleBody">
              
   <section id="stage">
-<span id="index-0"></span><h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">10.13. </span>Stage</a><a class="headerlink" href="#stage" title="Permalink to this heading"></a></h1>
+<span id="index-0"></span><h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">10.14. </span>Stage</a><a class="headerlink" href="#stage" title="Permalink to this heading"></a></h1>
 <p>Stage handles the environment such as the floor, sky, and lighting.</p>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
@@ -143,7 +144,7 @@
 </ul>
 </nav>
 <section id="id1">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">10.13.1. </span>Stage</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">10.14.1. </span>Stage</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <p>Select the stage from the combo box.</p>
 <img alt="../_images/operation_stage_1.png" class="align-center" src="../_images/operation_stage_1.png" />
 <div class="line-block">
@@ -172,7 +173,7 @@
 </div>
 </div>
 <section id="id2">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">10.13.1.1. </span>water stage</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">10.14.1.1. </span>water stage</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><p>BasicSeaLevel, DaytimeWaterStage, and NighttimeWaterStage are stages that are on the surface of the sea or water. Each has a slightly different effect.</p>
 <p>DaytimeWaterStage and NighttimeWaterStage are different shaders and shapes from BasicSeaLevel and water surface objects.</p>
@@ -183,7 +184,7 @@
 </div></blockquote>
 </section>
 <section id="userstage">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">10.13.1.2. </span>UserStage</a><a class="headerlink" href="#userstage" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">10.14.1.2. </span>UserStage</a><a class="headerlink" href="#userstage" title="Permalink to this heading"></a></h3>
 <blockquote>
 <div><p>UserStage is a type of stage where you can express yourself by pasting your favorite textures.</p>
 <ol class="arabic simple">
@@ -224,7 +225,7 @@
 <span class="target" id="index-2"></span></section>
 </section>
 <section id="index-3">
-<span id="id3"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">10.13.2. </span>Lighting (directional light)</a><a class="headerlink" href="#index-3" title="Permalink to this heading"></a></h2>
+<span id="id3"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">10.14.2. </span>Lighting (directional light)</a><a class="headerlink" href="#index-3" title="Permalink to this heading"></a></h2>
 <p>Lighting (Directional light) is represented by a figure like a red electric light on WebGL. You can specify the angle of light irradiation by rotating this with the operation handle. (Movement is not reflected. It is an effect only to make the operation handle easier to handle.)</p>
 <img alt="../_images/operation_stage_3.png" class="align-center" src="../_images/operation_stage_3.png" />
 <div class="line-block">
@@ -246,7 +247,7 @@
 <div class="line"><br /></div>
 </div>
 <section id="id4">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">10.13.2.1. </span>Halo</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">10.14.2.1. </span>Halo</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
 <div class="line-block">
 <div class="line">A light object can display a halo. However, due to Unity’s specifications, it is not possible to dynamically fine-tune halo components for individual lights.</div>
 <div class="line">In this application, you can control the halo for the whole with <code class="docutils literal notranslate"><span class="pre">lighting</span></code>, which is a system light.</div>
@@ -265,7 +266,7 @@
 </section>
 </section>
 <section id="index-5">
-<span id="id5"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">10.13.3. </span>Wind</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
+<span id="id5"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">10.14.3. </span>Wind</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
 <p>By blowing the wind, you can make the bones included in the VRM naturally sway. The wind is calculated by multiplying the strength of the wind by the fluctuation of the wind.</p>
 <p>The fluctuation of the wind is actually random within the following range.</p>
 <div class="line-block">
@@ -290,7 +291,7 @@
 </div>
 </section>
 <section id="operation-sky">
-<span id="index-6"></span><span id="id6"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">10.13.4. </span>Sky</a><a class="headerlink" href="#operation-sky" title="Permalink to this heading"></a></h2>
+<span id="index-6"></span><span id="id6"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">10.14.4. </span>Sky</a><a class="headerlink" href="#operation-sky" title="Permalink to this heading"></a></h2>
 <p>The sky has two modes: normal sky and monochromatic. The default is solid color. When set to “Single color”, only the color of the sky can be set, but when set to “Normal sky”, detailed settings can be made.</p>
 <img alt="../_images/operation_stage_5.png" class="align-center" src="../_images/operation_stage_5.png" />
 <div class="line-block">
@@ -324,7 +325,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="operation_syseff.html" class="btn btn-neutral float-left" title="10.12. SystemEffect" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="operation_syseff.html" class="btn btn-neutral float-left" title="10.13. SystemEffect" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../man3/posing.html" class="btn btn-neutral float-right" title="11. Pose and Motion" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>9.1. Common &mdash; VRMViewMeister 2.3.0 documentation</title>
+  <title>9.1. Common &mdash; VRMViewMeister 2.4.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -59,7 +59,8 @@
 <li class="toctree-l4"><a class="reference internal" href="#index-4">9.1.1.3. Random shaking (common)</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#index-5">9.1.2. Common (2D model)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rigid-property">9.1.2. Physical effects (common)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-6">9.1.3. Common (2D model)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="prop_vrm.html">9.2. VRoid/VRM</a></li>
@@ -68,7 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="prop_camera.html">9.5. Camera</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_effect.html">9.6. Effect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_image.html">9.7. Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="prop_text.html">9.8. Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prop_text.html">9.8. Text / Text3D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_uimage.html">9.9. UImage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_stage.html">9.10. Stage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="prop_syseffect.html">9.11. SystemEffect</a></li>
@@ -113,26 +114,27 @@
            <div itemprop="articleBody">
              
   <section id="index-0">
-<span id="id1"></span><h1><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">9.1. </span>Common</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">9.1. </span>Common</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#index-0" id="id6">Common</a></p>
+<li><p><a class="reference internal" href="#index-0" id="id7">Common</a></p>
 <ul>
-<li><p><a class="reference internal" href="#d" id="id7">Common (3D model)</a></p>
+<li><p><a class="reference internal" href="#d" id="id8">Common (3D model)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#index-2" id="id8">Jump (common)</a></p></li>
-<li><p><a class="reference internal" href="#index-3" id="id9">Linear sway (common)</a></p></li>
-<li><p><a class="reference internal" href="#index-4" id="id10">Random shaking (common)</a></p></li>
+<li><p><a class="reference internal" href="#index-2" id="id9">Jump (common)</a></p></li>
+<li><p><a class="reference internal" href="#index-3" id="id10">Linear sway (common)</a></p></li>
+<li><p><a class="reference internal" href="#index-4" id="id11">Random shaking (common)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#index-5" id="id11">Common (2D model)</a></p></li>
+<li><p><a class="reference internal" href="#rigid-property" id="id12">Physical effects (common)</a></p></li>
+<li><p><a class="reference internal" href="#index-6" id="id13">Common (2D model)</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 <section id="d">
-<span id="index-1"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">9.1.1. </span>Common (3D model)</a><a class="headerlink" href="#d" title="Permalink to this heading"></a></h2>
+<span id="index-1"></span><h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">9.1.1. </span>Common (3D model)</a><a class="headerlink" href="#d" title="Permalink to this heading"></a></h2>
 <p>This is a transformation property that can be used in common for 3D models.</p>
 <img alt="../_images/prop_common_1.png" class="align-center" src="../_images/prop_common_1.png" />
 <div class="line-block">
@@ -154,7 +156,7 @@
 <p>Scale is only X/Z coordinates for Stage. Other 3D model objects are X/Y/Z coordinates.</p>
 </div>
 <section id="index-2">
-<span id="id2"></span><h3><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">9.1.1.1. </span>Jump (common)</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h3>
+<span id="id2"></span><h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">9.1.1.1. </span>Jump (common)</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h3>
 <dl class="field-list simple">
 <dt class="field-odd">number of times<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Specifies the number of times to jump.</p>
@@ -172,7 +174,7 @@
 </div>
 </section>
 <section id="index-3">
-<span id="id3"></span><h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">9.1.1.2. </span>Linear sway (common)</a><a class="headerlink" href="#index-3" title="Permalink to this heading"></a></h3>
+<span id="id3"></span><h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">9.1.1.2. </span>Linear sway (common)</a><a class="headerlink" href="#index-3" title="Permalink to this heading"></a></h3>
 <p>This is a setting for the linear shaking animation effect that can be used commonly for 3D models.</p>
 <img alt="../_images/prop_common_3.png" class="align-center" src="../_images/prop_common_3.png" />
 <div class="line-block">
@@ -200,7 +202,7 @@
 </div>
 </section>
 <section id="index-4">
-<span id="id4"></span><h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">9.1.1.3. </span>Random shaking (common)</a><a class="headerlink" href="#index-4" title="Permalink to this heading"></a></h3>
+<span id="id4"></span><h3><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">9.1.1.3. </span>Random shaking (common)</a><a class="headerlink" href="#index-4" title="Permalink to this heading"></a></h3>
 <p>This is a random shaking animation effect setting that can be used commonly for 3D models.</p>
 <img alt="../_images/prop_common_4.png" class="align-center" src="../_images/prop_common_4.png" />
 <div class="line-block">
@@ -241,8 +243,76 @@
 </div>
 </section>
 </section>
-<section id="index-5">
-<span id="id5"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">9.1.2. </span>Common (2D model)</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
+<section id="rigid-property">
+<span id="index-5"></span><span id="id5"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">9.1.2. </span>Physical effects (common)</a><a class="headerlink" href="#rigid-property" title="Permalink to this heading"></a></h2>
+<p>Introduced from ver 2.4.0, it adds collision and gravity physics effects to 3D objects. ** Especially effective in VR/AR space. **</p>
+<dl class="field-list simple">
+<dt class="field-odd">Target object type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>OtherObject, Camera, Light, Effect, Text3D</p>
+</dd>
+</dl>
+<img alt="../_images/prop_common_5.png" class="align-center" src="../_images/prop_common_5.png" />
+<dl class="field-list simple">
+<dt class="field-odd">Use Collision<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Allows objects to react when they come into contact with other objects.</p>
+</dd>
+<dt class="field-even">Use Gravity<span class="colon">:</span></dt>
+<dd class="field-even"><p>The object is given gravity; the IK markers do not move, but the object itself moves along with gravity.</p>
+</dd>
+<dt class="field-odd">Drag<span class="colon">:</span></dt>
+<dd class="field-odd"><p>It is the force that causes an object to slow down when it moves. The higher the value, the sooner the object will stop.</p>
+</dd>
+<dt class="field-even">Angular drag<span class="colon">:</span></dt>
+<dd class="field-even"><p>It is the force that causes the object to slow down when it rotates. The higher the value, the sooner the object will stop.</p>
+</dd>
+</dl>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<ul class="simple">
+<li><p>Due to the complex geometry of VRM, this property is not available. However, drag and rotational drag can be set for each IK marker respectively.</p></li>
+</ul>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">Effect on translation/rotation</p>
+<p>Physical effects have different effects on normal screens and VR/AR screens.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Object</p></td>
+<td><p>Physical effect range</p></td>
+</tr>
+<tr class="row-even"><td><p>VRM</p></td>
+<td><p>IK markers for each part of the body</p></td>
+</tr>
+<tr class="row-odd"><td><p>OtherObject</p></td>
+<td><p>objects, IK markers</p></td>
+</tr>
+<tr class="row-even"><td><p>Camera</p></td>
+<td><p>IK marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>Light</p></td>
+<td><p>IK marker</p></td>
+</tr>
+<tr class="row-even"><td><p>Effect</p></td>
+<td><p>IK marker</p></td>
+</tr>
+<tr class="row-odd"><td><p>Text3D</p></td>
+<td><p>Object (text), IK marker</p></td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt>OtherObject and Text3D</dt><dd><p>On the normal screen, the object body will shift and move after moving the IK marker. However, if you move the IK marker again, it will try to return to the IK marker position.</p>
+<p>In VR/AR space, you can grab and move these objects themselves. Due to the shape of OtherObject, it will be difficult to touch the IK marker.</p>
+<p>Because of Text3D’s shape, you can directly grab both the object itself and the IK markers, so it’s a good idea to think of interesting ways to use it.</p>
+</dd>
+</dl>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="index-6">
+<span id="id6"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">9.1.3. </span>Common (2D model)</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
 <p>This is a transformation property that can be used in common for 2D models.</p>
 <img alt="../_images/prop_common_2.png" class="align-center" src="../_images/prop_common_2.png" />
 <div class="line-block">
