@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.15. Timeline &mdash; VRMViewMeister 2.4.0 documentation</title>
+  <title>6.15. Timeline &mdash; VRMViewMeister 2.5.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -118,21 +118,30 @@
 <div class="line"><br /></div>
 </div>
 <p>It is a function under the WebGL screen. Used in animation.</p>
-<dl class="field-list">
-<dt class="field-odd">A Toolbar<span class="colon">:</span></dt>
-<dd class="field-odd"><p>From the left: Move back/advance the current position of the frame, reduce/enlarge the display, play from the beginning, play/pause, stop, load the frame, display the keyframe setting window, empty frame at the current position insert, delete current frame position</p>
+<dl>
+<dt>A Toolbar:</dt><dd><p>From left to right, they are arranged as follows:</p>
+<ol class="arabic simple">
+<li><p>Move the current position of the frame to any location</p></li>
+<li><p>Skip timeline to next</p></li>
+<li><p>Zoom out timeline</p></li>
+<li><p>Zoom in timeline</p></li>
+<li><p>Play at first</p></li>
+<li><p>Play/Pause</p></li>
+<li><p>Stop</p></li>
+<li><p>Load this frame</p></li>
+<li><p>Open the current keyframe property</p></li>
+<li><p>Insert a blank frame to the current</p></li>
+<li><p>Delete current frame index</p></li>
+</ol>
 </dd>
-<dt class="field-even">B Seek bar<span class="colon">:</span></dt>
-<dd class="field-even"><p>Move the current position of the frame to any location.</p>
+<dt>B Seek bar:</dt><dd><p>Move the current position of the frame to any location.</p>
 </dd>
-<dt class="field-odd">C object/role name<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Displayed to identify the timeline.</p>
+<dt>C object/role name:</dt><dd><p>Displayed to identify the timeline.</p>
 <div class="line-block">
-<div class="line">Show/Hide button・・・Hide the object from the WebGL screen.</div>
+<div class="line">Show/Hide button … Hide the object from the WebGL screen.</div>
 </div>
 </dd>
-<dt class="field-even">D  Timeline<span class="colon">:</span></dt>
-<dd class="field-even"><p>Displays keyframes for each object. You can switch the frame to operate by pressing the number at the top. The registered keyframes are filled in red. ** Register a child key ** and the number in the red cell part of the key frame is counted accordingly.</p>
+<dt>D  Timeline:</dt><dd><p>Displays keyframes for each object. You can switch the frame to operate by pressing the number at the top. The registered keyframes are filled in red. ** Register a child key ** and the number in the red cell part of the key frame is counted accordingly.</p>
 <p>Double-click to open the keyframe settings window.</p>
 <p>If you place the mouse cursor over a registered keyframe, you can check the current settings in a popup.</p>
 <img alt="../_images/screen_timeline02.png" class="align-center" src="../_images/screen_timeline02.png" />
@@ -140,6 +149,8 @@
 <div class="line"><br /></div>
 </div>
 </dd>
+</dl>
+<dl class="field-list simple">
 <dt class="field-odd">E Panel enlarge/reduce button<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Toggles between expanding and contracting the timeline panel (toolbar only).</p>
 </dd>

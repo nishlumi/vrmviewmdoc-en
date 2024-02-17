@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12.2. Animation project structure &mdash; VRMViewMeister 2.4.0 documentation</title>
+  <title>12.2. Animation project structure &mdash; VRMViewMeister 2.5.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -56,7 +56,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="animation.html">12. Animation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="about.html">12.1. What is an animation project?</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">12.2. Animation project structure</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">12.2. Animation project structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">12.2.1. Each element</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">12.2.2. timeline role cast relationship</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="animation_proper.html">12.3. Various animation settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="animation_register.html">12.4. Registering and setting keyframes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="animation_play.html">12.5. Play and stop animation</a></li>
@@ -99,11 +103,81 @@
            <div itemprop="articleBody">
              
   <section id="index-0">
-<span id="id1"></span><h1><span class="section-number">12.2. </span>Animation project structure<a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">12.2. </span>Animation project structure</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#index-0" id="id4">Animation project structure</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id5">Each element</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id6">timeline role cast relationship</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
 <p>We will explain the structure of the animation project. Roughly speaking, it goes like this:</p>
+<div class="mermaid">
+            flowchart LR
+    subgraph File
+        VRM[(VRM)]
+        3dobj[(3D models)]
+    end
+    subgraph Project
+        direction LR
+        subgraph Timeline
+            subgraph role[Role]
+                direction LR
+                cast((Cast))
+
+                subgraph keyframe
+                    direction TB
+                    keys1{&quot; &quot;}
+                    keys2{&quot; &quot;}
+                    keys3{&quot; &quot;}
+                end
+            end
+        end
+        subgraph tl2[&quot;Timeline 2&quot;]
+            cast2((Cast))
+        end
+        subgraph tl3[&quot;Timeline 3&quot;]
+        end
+    end
+
+    style Project fill:#AAAAFA
+    style role fill:#00FF00
+    style cast fill:#FF9090
+    style cast2 fill:#FF9090
+    style keyframe fill:#FFFF25
+    style keys1 fill:#FFFF00
+    style keys2 fill:#FFFF00
+    style keys3 fill:#FFFF00
+
+    tl2 ~~~ tl3
+    VRM ==&gt; cast
+    3dobj ==&gt; cast2
+        </div><section id="id2">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">12.2.1. </span>Each element</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <dl id="index-1">
-<dt>Timeline</dt><dd><img alt="../_images/specifi_1.png" class="align-left" src="../_images/specifi_1.png" />
-<div class="line-block">
+<dt>Timeline</dt><dd><div align="left" class="mermaid align-left">
+            flowchart LR
+subgraph tl1[Timeline 1]
+    avatar1((Role))
+end
+subgraph tl2[Timeline 2]
+    avatar2((Role))
+end
+subgraph tl3[Timeline 3]
+    avatar3((Role))
+end
+
+style avatar1 fill:#00FF00
+style avatar2 fill:#00FF00
+style avatar3 fill:#00FF00
+
+tl1 ~~~ tl2 ~~~ tl3
+        </div>
+        <div class="line-block">
 <div class="line">The timeline is the basic unit of animation. One timeline corresponds to one role and one cast.</div>
 <div class="line">The following roles are responsible for all of the actual functions.</div>
 </div>
@@ -118,8 +192,28 @@
 <div class="line"><br /></div>
 </div>
 <dl id="index-2">
-<dt>Role</dt><dd><img alt="../_images/specifi_2.png" class="align-left" src="../_images/specifi_2.png" />
-<div class="line-block">
+<dt>Role</dt><dd><div align="left" class="mermaid align-left">
+            flowchart LR
+subgraph role[Role]
+    direction LR
+    cast((Cast))
+
+    subgraph keyframe
+        direction TB
+        keys1{&quot; &quot;}
+        keys2{&quot; &quot;}
+        keys3{&quot; &quot;}
+    end
+end
+
+style role fill:#00FF00
+style cast fill:#FF9090
+style keyframe fill:#FFFF25
+style keys1 fill:#FFFF00
+style keys2 fill:#FFFF00
+style keys3 fill:#FFFF00
+        </div>
+        <div class="line-block">
 <div class="line">A role is a collection of roles and character actions that determine how each object moves on the timeline.</div>
 <div class="line">Within the role there are casts to be assigned and keyframe data.</div>
 <div class="line">A role can be replaced with another object as long as it is of the same object type.</div>
@@ -134,8 +228,16 @@
 <div class="line"><br /></div>
 </div>
 <dl id="index-3">
-<dt>Cast / object / avatar</dt><dd><img alt="../_images/specifi_3.png" class="align-left" src="../_images/specifi_3.png" />
-<div class="line-block">
+<dt>Cast / object / avatar</dt><dd><div align="left" class="mermaid align-left">
+            flowchart LR
+
+    cast((Cast))
+
+
+
+style cast fill:#FF9090
+        </div>
+        <div class="line-block">
 <div class="line">A cast is an object assigned to a role. This is the substance of the actual VRoid/VRM, FBX, Light, Audio, and other objects.</div>
 <div class="line">In this application, they are simply referred to as OBJECT or AVATAR.</div>
 </div>
@@ -147,8 +249,21 @@
 <div class="line"><br /></div>
 </div>
 <dl id="index-4">
-<dt>Key frame</dt><dd><img alt="../_images/specifi_4.png" class="align-left" src="../_images/specifi_4.png" />
-<p>A keyframe is the actual movement data of the roll, the motion. This data is only held by the role, and in principle it does not depend on each object.</p>
+<dt>Key frame</dt><dd><div align="left" class="mermaid align-left">
+            flowchart LR
+subgraph keyframe
+    direction TB
+    keys1{&quot; &quot;}
+    keys2{&quot; &quot;}
+    keys3{&quot; &quot;}
+end
+
+style keyframe fill:#FFFF25
+style keys1 fill:#FFFF00
+style keys2 fill:#FFFF00
+style keys3 fill:#FFFF00
+        </div>
+        <p>A keyframe is the actual movement data of the roll, the motion. This data is only held by the role, and in principle it does not depend on each object.</p>
 </dd>
 </dl>
 <div class="line-block">
@@ -156,28 +271,56 @@
 <div class="line"><br /></div>
 <div class="line"><br /></div>
 </div>
-<div class="admonition- admonition">
-<p class="admonition-title">timeline role cast relationship</p>
+</section>
+<section id="id3">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">12.2.2. </span>timeline role cast relationship</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
 <div class="line-block">
 <div class="line">The timeline is ultimately the same as the role. Then cast means the same as the actual object.</div>
-<div class="line">A role is tied to a cast (object) on a 1:1 basis. A roll can be without a cast, but a cast cannot move without a roll.</div>
+<div class="line">Roles are linked 1:1 with casts (objects). A role can be in an uncast state, but the role will not be animated at all.</div>
 </div>
-<p>It’s loosely tied, not strict. Therefore, the role can later be associated with another cast (object).</p>
+<p>You can later assign another cast (object) to the role.</p>
 <p>For example, it would be as follows. (colors and icons correspond to the example above)</p>
-</div>
-<figure class="align-center" id="id2">
-<img alt="../_images/specifi_5.png" src="../_images/specifi_5.png" />
-<figcaption>
-<p><span class="caption-text"><strong>Roll</strong> …  anime and drama characters</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
-<div class="legend">
-<p><strong>Cast</strong> … Voice actor, actor himself</p>
-</div>
-</figcaption>
-</figure>
+<div class="mermaid">
+            flowchart LR
+subgraph File
+    VRM1[(VRM 1)]
+    VRM2[(VRM 2)]
+end
+subgraph Timeline
+    subgraph role[Role]
+        direction LR
+        cast((Cast))
+
+        subgraph keyframe
+            direction TB
+            keys1{&quot; &quot;}
+            keys2{&quot; &quot;}
+            keys3{&quot; &quot;}
+        end
+    end
+end
+
+style role fill:#00FF00
+style cast fill:#FF9090
+style keyframe fill:#FFFF25
+style keys1 fill:#FFFF00
+style keys2 fill:#FFFF00
+style keys3 fill:#FFFF00
+
+VRM1 &amp; VRM2 ==&gt; cast
+        </div><dl class="field-list simple">
+<dt class="field-odd">Role<span class="colon">:</span></dt>
+<dd class="field-odd"><p>anime and drama characters</p>
+</dd>
+<dt class="field-even">cast<span class="colon">:</span></dt>
+<dd class="field-even"><p>voice actor, actor himself</p>
+</dd>
+</dl>
 <div class="line-block">
 <div class="line">The actual animation data is held by the role. So it doesn’t matter what the actual cast (object) is to play that motion.</div>
 <div class="line">Because of the above mechanism, you can play your favorite animation with your favorite object.</div>
 </div>
+</section>
 </section>
 
 

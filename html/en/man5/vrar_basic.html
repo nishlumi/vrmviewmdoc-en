@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>17.1. Basics of VR/AR &mdash; VRMViewMeister 2.4.0 documentation</title>
+  <title>17.1. Basics of VR/AR &mdash; VRMViewMeister 2.5.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -171,6 +171,13 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<ul class="simple">
+<li><p>To set the initial position in VR/AR space, set the <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">camera</span> <span class="pre">position</span></code> for VR/AR in the <code class="docutils literal notranslate"><span class="pre">Model</span></code> tab of the application settings.</p></li>
+<li><p>If you check <code class="docutils literal notranslate"><span class="pre">Remember</span> <span class="pre">last</span> <span class="pre">camera</span> <span class="pre">position</span></code> in the same tab, it will resume from the previous position the next time you re-enter.</p></li>
+</ul>
+</div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>If the environment is unavailable, you will not be able to press the respective buttons.</p>
@@ -186,17 +193,27 @@
 <p>There may be times when you want to make a 3D model invisible or create depth by matching it to a real wall or object. With this app, you can easily realize it with any VR device.</p>
 <p>You can easily add effects that make it seem as if you are aware of reality, which is found in standard settings such as MetaQuest3.</p>
 <p>In such cases, use <code class="docutils literal notranslate"><span class="pre">basic</span> <span class="pre">shapes</span></code> and the <a class="reference internal" href="../man2/operation_texture.html#shader-cutout"><span class="std std-ref">Cutout</span></a> shader.</p>
-<ol class="arabic simple">
+<dl class="simple">
+<dt>Way 1</dt><dd><ol class="arabic simple">
 <li><p>Place the basic shape as OtherObject.</p></li>
 <li><p>Size and rotate as needed.</p></li>
 <li><p>Set the shader to <code class="docutils literal notranslate"><span class="pre">Cutout</span></code> in the texture properties.</p></li>
 <li><p>Check whether you can hide behind real walls and objects in the AR space as expected.</p></li>
 </ol>
+</dd>
+<dt>Way 2</dt><dd><ol class="arabic simple">
+<li><p>Place the basic shape as OtherObject.</p></li>
+<li><p>Size and rotate as needed.</p></li>
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">Transparent</span></code> button on the left-hand virtual controller.</p></li>
+</ol>
+</dd>
+</dl>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <ul class="simple">
 <li><p>The key is to choose a basic shape that matches the actual wall or object and place it well.</p></li>
 <li><p>Even if you try to move OtherObject after making it a Cutout shader, it will be difficult to move it because it is transparent.</p></li>
+<li><p>Way 2 is limited to <strong>OtherObject</strong>, but you can always make it transparent and place it in VR/AR space.</p></li>
 </ul>
 </div>
 </section>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11.1. Save pose/motion &mdash; VRMViewMeister 2.4.0 documentation</title>
+  <title>11.1. Save pose/motion &mdash; VRMViewMeister 2.5.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -60,9 +60,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#savemotionfile">11.1.1.2. save motion</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">11.1.2. Other functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">11.1.2. Save in various formats</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#index-2">11.1.2.1. save to disk</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#unity">11.1.2.2. Save the motion in a general format such as Unity</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vrmanimation">11.1.2.3. Export in VRMAnimation format</a></li>
 </ul>
 </li>
 </ul>
@@ -119,10 +120,11 @@
 <li><p><a class="reference internal" href="#savemotionfile" id="id10">save motion</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#id5" id="id11">Other functions</a></p>
+<li><p><a class="reference internal" href="#id5" id="id11">Save in various formats</a></p>
 <ul>
 <li><p><a class="reference internal" href="#index-2" id="id12">save to disk</a></p></li>
 <li><p><a class="reference internal" href="#unity" id="id13">Save the motion in a general format such as Unity</a></p></li>
+<li><p><a class="reference internal" href="#vrmanimation" id="id14">Export in VRMAnimation format</a></p></li>
 </ul>
 </li>
 </ul>
@@ -256,7 +258,7 @@
 </section>
 </section>
 <section id="id5">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">11.1.2. </span>Other functions</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">11.1.2. </span>Save in various formats</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
 <section id="index-2">
 <span id="id6"></span><h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">11.1.2.1. </span>save to disk</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h3>
 <p>Even after saving to internal storage or Google Drive, you can save it back to your device.</p>
@@ -321,7 +323,6 @@
 <dt class="field-odd">Save format<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>.anim</strong></p></li>
-<li><p><strong>.vrma</strong></p></li>
 </ul>
 </dd>
 </dl>
@@ -329,7 +330,6 @@
 <p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>.anim files are AnimationClip files that can be read directly by Unity.</p></li>
-<li><p>.vrma file is a newly defined motion format exclusively for VRM in UniVRM.</p></li>
 </ul>
 </div>
 <div class="admonition warning">
@@ -337,8 +337,38 @@
 <ul class="simple">
 <li><p>When loading an existing project or motion, <strong>be sure to select the registered keyframes one by one</strong> to actually move the VRM. Otherwise, data in a generic format will not be saved.</p></li>
 <li><p>As of <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.4.0</span></code> of this application, .bvh cannot be selected because it is difficult to implement.</p></li>
-<li><p>.anim and .vrma are in experimental operation and cannot be guaranteed to work. The rotation of certain bones may be broken. note that.</p></li>
-<li><p>.anim files and .vrma files cannot be reloaded by this app.</p></li>
+<li><p>.anim is currently in experimental operation, so we cannot guarantee its operation. The rotation of certain bones may be broken. note that.</p></li>
+<li><p>.anim files cannot be reloaded by this app.</p></li>
+</ul>
+</div>
+</section>
+<section id="vrmanimation">
+<span id="vrma-export"></span><span id="index-4"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">11.1.2.3. </span>Export in VRMAnimation format</a><a class="headerlink" href="#vrmanimation" title="Permalink to this heading"></a></h3>
+<p>.vrma file is a newly defined motion format exclusively for VRM in UniVRM.</p>
+<p>See below for details.</p>
+<p><a class="reference external" href="https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_vrm_animation-1.0/README.ja.md">VRMC_vrm_animation - GitHub</a></p>
+<ol class="arabic simple">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">.vrma</span></code> from the general formats in the motion menu.</p></li>
+<li><p>Enter the file name and press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button.</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Save format<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>.vrma</strong></p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>From ver 2.5.0, it is now possible to read and play .vrma files. Playing and using the animation of OtherObject is the same.</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>When loading an existing project or motion, <strong>be sure to select the registered keyframes one by one</strong> to actually move the VRM. Otherwise, data in a generic format will not be saved.</p></li>
+<li><p>Like .anim, .vrma is in experimental operation and cannot be guaranteed to work. The rotation of certain bones may be broken. note that.</p></li>
 </ul>
 </div>
 </section>

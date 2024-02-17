@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>17.2. How to operate on VR/AR &mdash; VRMViewMeister 2.4.0 documentation</title>
+  <title>17.2. How to operate on VR/AR &mdash; VRMViewMeister 2.5.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -65,7 +65,11 @@
 <li class="toctree-l3"><a class="reference internal" href="#index-0">17.2.1. Basic operations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#index-1">17.2.2. virtual controller</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">17.2.3. Summary of operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#index-2">17.2.4. Convenient operation functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">17.2.4. Convenient operation functions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#v-pad">17.2.4.1. V-pad</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transform">17.2.4.2. Object transformation</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -111,7 +115,12 @@
 <li><p><a class="reference internal" href="#index-0" id="id10">Basic operations</a></p></li>
 <li><p><a class="reference internal" href="#index-1" id="id11">virtual controller</a></p></li>
 <li><p><a class="reference internal" href="#id3" id="id12">Summary of operations</a></p></li>
-<li><p><a class="reference internal" href="#index-2" id="id13">Convenient operation functions</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id13">Convenient operation functions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#v-pad" id="id14">V-pad</a></p></li>
+<li><p><a class="reference internal" href="#transform" id="id15">Object transformation</a></p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -191,7 +200,7 @@
 <span id="id2"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">17.2.2. </span>virtual controller</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
 <p>Since there are many things that cannot be done with just basic operations, we have prepared a virtual controller that can perform specific functions in VR/AR space.</p>
 <p>These are displayed diagonally below the virtual hand. It can be used both when using a VR device controller and when tracking hands.</p>
-<table class="docutils align-default" id="id5">
+<span id="index-2"></span><table class="docutils align-default" id="id5">
 <caption><span class="caption-text">virtual hand</span><a class="headerlink" href="#id5" title="Permalink to this table"></a></caption>
 <tbody>
 <tr class="row-odd"><td><p>When using a VR device controller</p></td>
@@ -203,9 +212,17 @@
 </tbody>
 </table>
 <p><strong>Virtual Controller</strong></p>
-<p>By default it is hidden to avoid distractions. <strong>Touch the yellow Cube with the fingertips of your virtual hand</strong> and a virtual controller will appear.</p>
-<p>All buttons are hit-detected by your fingertip, and if you overlap your fingertip with the button, the button will sink.</p>
-<table class="docutils align-default" id="id6">
+<blockquote>
+<div><p>By default it is hidden to avoid distractions.</p>
+<p>During hand tracking, all fingertips are used as collision detection, and if you overlap your fingertips with the button, the button will sink. For VR device controllers, only the index finger is used when triggering.</p>
+<dl class="simple">
+<dt>yellow cube</dt><dd><p>When you touch it with the fingertips of your virtual hand, a virtual controller will appear.</p>
+</dd>
+<dt>blue cube</dt><dd><p>Touch it with the fingertip of your virtual hand to play or pause the animation.</p>
+</dd>
+</dl>
+</div></blockquote>
+<span id="index-3"></span><table class="docutils align-default" id="id6">
 <caption><span class="caption-text">virtual controller</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Left hand</p></th>
@@ -218,11 +235,11 @@
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id7">
+<span id="index-4"></span><table class="docutils align-default" id="id7">
 <caption><span class="caption-text">left hand virtual controller</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
 <tbody>
 <tr class="row-odd"><td><p>string displayed at the top</p></td>
-<td><p>This is the name of the 3D object currently selected in VR/AR space. This is different from selecting objects on the normal screen.</p></td>
+<td><p>Touch it with the fingertip of your virtual hand to play or pause the animation.</p></td>
 </tr>
 <tr class="row-even"><td><p><img alt="leftctrl01" src="../_images/vrar_ctrlleft_01.png" /></p></td>
 <td><p>Select the previous 3D object. If there is a 2D object in the middle, it will be skipped.</p></td>
@@ -251,19 +268,25 @@
 <tr class="row-even"><td><p><img alt="leftctrl08" src="../_images/vrar_ctrlleft_08.png" /></p></td>
 <td><p>Stop the animation.</p></td>
 </tr>
+<tr class="row-odd"><td><p><img alt="leftctrl09" src="../_images/vrar_ctrlleft_09.jpg" /></p></td>
+<td><p>Exit the VR/AR screen.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="leftctrl10" src="../_images/vrar_ctrlleft_10.jpg" /></p></td>
+<td><p>(OtherObject only) Set the shader of all materials of the object to Cutout to make them transparent. See below for details. Texture <a class="reference internal" href="../man2/operation_texture.html#shader-cutout"><span class="std std-ref">Cutout</span></a></p></td>
+</tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id8">
+<span id="index-5"></span><table class="docutils align-default" id="id8">
 <caption><span class="caption-text">right hand virtual controller</span><a class="headerlink" href="#id8" title="Permalink to this table"></a></caption>
 <tbody>
 <tr class="row-odd"><td><p><img alt="rightctrl01" src="../_images/vrar_ctrlright_01.png" /></p></td>
-<td><p>Move and rotate around the X axis.</p></td>
+<td><p>Operate based on the X axis.</p></td>
 </tr>
 <tr class="row-even"><td><p><img alt="rightctrl02" src="../_images/vrar_ctrlright_02.png" /></p></td>
-<td><p>Move and rotate around the Y axis.</p></td>
+<td><p>Operate based on the Y axis.</p></td>
 </tr>
 <tr class="row-odd"><td><p><img alt="rightctrl03" src="../_images/vrar_ctrlright_03.png" /></p></td>
-<td><p>Move and rotate around the Z axis.</p></td>
+<td><p>Operate based on the Z axis.</p></td>
 </tr>
 <tr class="row-even"><td><p><img alt="rightctrl04" src="../_images/vrar_ctrlright_04.png" /></p></td>
 <td><p>Set the operation target to <code class="docutils literal notranslate"><span class="pre">main</span> <span class="pre">camera</span></code> .</p></td>
@@ -277,11 +300,17 @@
 <tr class="row-odd"><td><p><img alt="rightctrl07" src="../_images/vrar_ctrlright_07.png" /></p></td>
 <td><p>Set the operation mode to <code class="docutils literal notranslate"><span class="pre">rotate</span></code> .</p></td>
 </tr>
-<tr class="row-even"><td><p><img alt="rightctrl08" src="../_images/vrar_ctrlright_08.png" /></p></td>
+<tr class="row-even"><td><p><img alt="rightctrl10" src="../_images/vrar_ctrlright_10.png" /></p></td>
+<td><p>Set the operation mode to <code class="docutils literal notranslate"><span class="pre">size</span></code> .</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="rightctrl08" src="../_images/vrar_ctrlright_08.png" /></p></td>
 <td><p>Resets the position of the currently selected object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><img alt="rightctrl09" src="../_images/vrar_ctrlright_09.png" /></p></td>
+<tr class="row-even"><td><p><img alt="rightctrl09" src="../_images/vrar_ctrlright_09.png" /></p></td>
 <td><p>Resets the rotation of the currently selected object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="rightctrl11" src="../_images/vrar_ctrlright_11.png" /></p></td>
+<td><p>Resets the size of the currently selected object.</p></td>
 </tr>
 </tbody>
 </table>
@@ -344,8 +373,10 @@
 <p>In the PICO4 browser app, controllers B and Y seem to have the function assigned to the browser’s <code class="docutils literal notranslate"><span class="pre">back</span></code> button. Therefore, if you press it by mistake, carefully read the confirmation message before proceeding.</p>
 </div>
 </section>
-<section id="index-2">
-<span id="id4"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">17.2.4. </span>Convenient operation functions</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<section id="id4">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">17.2.4. </span>Convenient operation functions</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<section id="v-pad">
+<span id="vpad-for-vrar"></span><span id="index-6"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">17.2.4.1. </span>V-pad</a><a class="headerlink" href="#v-pad" title="Permalink to this heading"></a></h3>
 <p>In VR equipment, the controller is equivalent to the mouse. However, unlike a mouse, it is not suitable for detailed work. This app provides a function called <code class="docutils literal notranslate"><span class="pre">V-pad</span></code> so that you can operate it to some extent even in environments where you cannot use a mouse.</p>
 <p>You can also use it on VR devices to operate the regular screen.</p>
 <img alt="../_images/screen_vpad.png" class="align-center" src="../_images/screen_vpad.png" />
@@ -366,6 +397,56 @@
 <p class="admonition-title">Hint</p>
 <p>The reaction rate may be too fast. In that case, please adjust the movement speed and rotation speed of the V-pad from <code class="docutils literal notranslate"><span class="pre">Application</span></code> in the settings.</p>
 </div>
+</section>
+<section id="transform">
+<span id="index-7"></span><h3><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">17.2.4.2. </span>Object transformation</a><a class="headerlink" href="#transform" title="Permalink to this heading"></a></h3>
+<p>Use the virtual controller on your right hand to move, rotate, and resize the selected object.</p>
+<p>You can move and rotate by grabbing directly with the VR device’s controller or hand tracking, but if you want to make fine adjustments, it’s better to use a virtual controller.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>For any of the operations below, please adjust the VR/AR movement speed and rotation speed in the <code class="docutils literal notranslate"><span class="pre">Applications</span></code> tab of the settings.</p>
+</div>
+<dl>
+<dt>Positioning mode</dt><dd><ol class="arabic simple">
+<li><p>Press <img alt="rightctrl06" src="../_images/vrar_ctrlright_06.png" /> to switch to move mode.</p></li>
+<li><p>Press one of the following to move along that axis.</p></li>
+</ol>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img alt="rightctrl01" src="../_images/vrar_ctrlright_01.png" /></p></td>
+<td><p><img alt="rightctrl02" src="../_images/vrar_ctrlright_02.png" /></p></td>
+<td><p><img alt="rightctrl03" src="../_images/vrar_ctrlright_03.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>Rotation mode</dt><dd><ol class="arabic simple">
+<li><p>Press <img alt="rightctrl07" src="../_images/vrar_ctrlright_07.png" /> to switch to rotation mode.</p></li>
+<li><p>Press the button shown above to rotate.</p></li>
+</ol>
+</dd>
+<dt>resize mode</dt><dd><ol class="arabic simple">
+<li><p>Press <img alt="rightctrl10" src="../_images/vrar_ctrlright_10.png" /> to switch to resize mode.</p></li>
+<li><p>Press the button shown above to change the size.</p></li>
+</ol>
+</dd>
+<dt>Reset changes</dt><dd><p>Please press one of the buttons below.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img alt="rightctrl08" src="../_images/vrar_ctrlright_08.png" /></p></td>
+<td><p>Resets the position of the currently selected object.</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="rightctrl09" src="../_images/vrar_ctrlright_09.png" /></p></td>
+<td><p>Resets the rotation of the currently selected object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="rightctrl11" src="../_images/vrar_ctrlright_11.png" /></p></td>
+<td><p>Resets the size of the currently selected object.</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</section>
 </section>
 </section>
 

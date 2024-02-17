@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10.2. Texture &mdash; VRMViewMeister 2.4.0 documentation</title>
+  <title>10.2. Texture &mdash; VRMViewMeister 2.5.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -222,6 +222,7 @@
 <li><p>The opacity of each color property may not be properly reflected in WebGL. note that.</p></li>
 <li><p>If you have multiple textures (meshes) that use the same material, only the settings of the last texture will be reflected in the final animation project. (e.g. if there are 3 textures using material A, the 3rd setting will be applied last)</p></li>
 <li><p>VRM 0.x models also follow the VRM 1.x specifications when loaded with this app. Therefore, basically use <code class="docutils literal notranslate"><span class="pre">VRM10/MToon10</span></code> shaders.</p></li>
+<li><p>Standard, VRM/MToon, VRM10/MToon10以外のシェーダーはUnityのバージョンやレンダリングの仕様により、変更する可能性があります。</p></li>
 </ul>
 </div>
 <section id="standard">
@@ -475,6 +476,10 @@
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>This shader is also effective in VR/AR.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you press the <strong>Transparency</strong> button on the left hand virtual controller of VR/AR, the shader of all materials will be automatically switched to Cutout.</p>
 </div>
 </section>
 </section>
