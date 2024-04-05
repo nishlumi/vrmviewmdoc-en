@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.15. Timeline &mdash; VRMViewMeister 2.5.1 documentation</title>
+  <title>6.15. Timeline &mdash; VRMViewMeister 2.6.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -63,7 +63,10 @@
 <li class="toctree-l2"><a class="reference internal" href="menu.html">6.12. Menu structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_objlist.html">6.13. Object list</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_prop.html">6.14. Property list</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.15. Timeline</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.15. Timeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">6.15.1. Panel</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="screen_keyframereg.html">6.16. Keyframe registration window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_keyframe.html">6.17. Setting keyframes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_internaldlg.html">6.18. Internal storage dialog</a></li>
@@ -77,13 +80,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">18. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">19. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">20. Others</a></li>
 </ul>
 
         </div>
@@ -118,21 +122,27 @@
 <div class="line"><br /></div>
 </div>
 <p>It is a function under the WebGL screen. Used in animation.</p>
+<section id="id2">
+<h2><span class="section-number">6.15.1. </span>Panel<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <dl>
 <dt>A Toolbar:</dt><dd><p>From left to right, they are arranged as follows:</p>
 <ol class="arabic simple">
-<li><p>Move the current position of the frame to any location</p></li>
-<li><p>Skip timeline to next</p></li>
 <li><p>Zoom out timeline</p></li>
 <li><p>Zoom in timeline</p></li>
 <li><p>Play at first</p></li>
 <li><p>Play/Pause</p></li>
 <li><p>Stop</p></li>
-<li><p>Load this frame</p></li>
+<li><p>Load this frame <a class="footnote-reference brackets" href="#id4" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></li>
 <li><p>Open the current keyframe property</p></li>
+<li><p>Register keyframe</p></li>
+<li><p>Delete keyframe</p></li>
 <li><p>Insert a blank frame to the current</p></li>
 <li><p>Delete current frame index</p></li>
 </ol>
+<aside class="footnote brackets" id="id4" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p>This will only be displayed if “Preview when selecting a frame” in the app settings is off.</p>
+</aside>
 </dd>
 <dt>B Seek bar:</dt><dd><p>Move the current position of the frame to any location.</p>
 </dd>
@@ -155,6 +165,7 @@
 <dd class="field-odd"><p>Toggles between expanding and contracting the timeline panel (toolbar only).</p>
 </dd>
 </dl>
+</section>
 </section>
 
 

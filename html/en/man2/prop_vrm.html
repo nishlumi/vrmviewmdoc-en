@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>9.2. VRoid/VRM &mdash; VRMViewMeister 2.5.1 documentation</title>
+  <title>9.2. VRoid/VRM &mdash; VRMViewMeister 2.6.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -65,7 +65,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#index-10">9.2.4. wearing an object</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">9.2.5. Texture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-11">9.2.5. Animation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">9.2.6. Texture</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="prop_obj.html">9.3. OtherObject</a></li>
@@ -83,13 +84,14 @@
 <li class="toctree-l1"><a class="reference internal" href="operation.html">10. Manipulating Objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">18. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">19. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">20. Others</a></li>
 </ul>
 
         </div>
@@ -118,33 +120,34 @@
            <div itemprop="articleBody">
              
   <section id="vroid-vrm">
-<span id="index-0"></span><h1><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">9.2. </span>VRoid/VRM</a><a class="headerlink" href="#vroid-vrm" title="Permalink to this heading"></a></h1>
+<span id="index-0"></span><h1><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">9.2. </span>VRoid/VRM</a><a class="headerlink" href="#vroid-vrm" title="Permalink to this heading"></a></h1>
 <p>This is a property that can be used with VRoid/VRM.</p>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#vroid-vrm" id="id8">VRoid/VRM</a></p>
+<li><p><a class="reference internal" href="#vroid-vrm" id="id9">VRoid/VRM</a></p>
 <ul>
-<li><p><a class="reference internal" href="#ik" id="id9">IK、Body</a></p></li>
-<li><p><a class="reference internal" href="#index-6" id="id10">Arm, Hand</a></p>
+<li><p><a class="reference internal" href="#ik" id="id10">IK、Body</a></p></li>
+<li><p><a class="reference internal" href="#index-6" id="id11">Arm, Hand</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id2" id="id11">Manual operation</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id12">Manual operation</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#index-7" id="id12">BlendShape</a></p>
+<li><p><a class="reference internal" href="#index-7" id="id13">BlendShape</a></p>
 <ul>
-<li><p><a class="reference internal" href="#index-8" id="id13">Automatic blink</a></p></li>
-<li><p><a class="reference internal" href="#index-9" id="id14">Lip sync</a></p></li>
+<li><p><a class="reference internal" href="#index-8" id="id14">Automatic blink</a></p></li>
+<li><p><a class="reference internal" href="#index-9" id="id15">Lip sync</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#index-10" id="id15">wearing an object</a></p></li>
-<li><p><a class="reference internal" href="#id7" id="id16">Texture</a></p></li>
+<li><p><a class="reference internal" href="#index-10" id="id16">wearing an object</a></p></li>
+<li><p><a class="reference internal" href="#index-11" id="id17">Animation</a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id18">Texture</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 <span class="target" id="index-1"></span><span class="target" id="index-2"></span><span class="target" id="index-3"></span><span class="target" id="index-4"></span><section id="ik">
-<span id="index-5"></span><h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">9.2.1. </span>IK、Body</a><a class="headerlink" href="#ik" title="Permalink to this heading"></a></h2>
+<span id="index-5"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">9.2.1. </span>IK、Body</a><a class="headerlink" href="#ik" title="Permalink to this heading"></a></h2>
 <img alt="../_images/prop_vrm_1.png" class="align-center" src="../_images/prop_vrm_1.png" />
 <div class="line-block">
 <div class="line"><br /></div>
@@ -185,7 +188,7 @@
 </div>
 </section>
 <section id="index-6">
-<span id="id1"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">9.2.2. </span>Arm, Hand</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
+<span id="id1"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">9.2.2. </span>Arm, Hand</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
 <img alt="../_images/prop_vrm_2.png" class="align-center" src="../_images/prop_vrm_2.png" />
 <div class="line-block">
 <div class="line"><br /></div>
@@ -200,7 +203,7 @@
 </dd>
 </dl>
 <section id="id2">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">9.2.2.1. </span>Manual operation</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">9.2.2.1. </span>Manual operation</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <p>Introduced from ver 1.0.4. You can edit the pose of the palm in detail by rotating each finger of the hand.</p>
 <img alt="../_images/prop_vrm_8.png" class="align-center" src="../_images/prop_vrm_8.png" />
 <div class="line-block">
@@ -210,7 +213,7 @@
 </section>
 </section>
 <section id="index-7">
-<span id="id3"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">9.2.3. </span>BlendShape</a><a class="headerlink" href="#index-7" title="Permalink to this heading"></a></h2>
+<span id="id3"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">9.2.3. </span>BlendShape</a><a class="headerlink" href="#index-7" title="Permalink to this heading"></a></h2>
 <p>This is an item for finely adjusting the facial expressions of the VRoid/VRM.</p>
 <img alt="../_images/prop_vrm_4.png" class="align-center" src="../_images/prop_vrm_4.png" />
 <div class="line-block">
@@ -294,7 +297,7 @@
 <div class="line"><br /></div>
 </div>
 <section id="index-8">
-<span id="id4"></span><h3><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">9.2.3.1. </span>Automatic blink</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h3>
+<span id="id4"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">9.2.3.1. </span>Automatic blink</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h3>
 <p>Make the VRoid/VRM facial expressions blink automatically.</p>
 <img alt="../_images/prop_vrm_3.png" class="align-center" src="../_images/prop_vrm_3.png" />
 <div class="line-block">
@@ -319,7 +322,7 @@
 </dl>
 </section>
 <section id="index-9">
-<span id="id5"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">9.2.3.2. </span>Lip sync</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h3>
+<span id="id5"></span><h3><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">9.2.3.2. </span>Lip sync</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h3>
 <p>VRoid/VRM keeps moving its mouth as if it is talking.</p>
 <img alt="../_images/prop_vrm_a.png" class="align-center" src="../_images/prop_vrm_a.png" />
 <dl class="field-list simple">
@@ -342,7 +345,7 @@
 </section>
 </section>
 <section id="index-10">
-<span id="id6"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">9.2.4. </span>wearing an object</a><a class="headerlink" href="#index-10" title="Permalink to this heading"></a></h2>
+<span id="id6"></span><h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">9.2.4. </span>wearing an object</a><a class="headerlink" href="#index-10" title="Permalink to this heading"></a></h2>
 <p>This is a list of functions that link different objects with the movement of each part of the VRoid/VRM.</p>
 <img alt="../_images/prop_vrm_5.png" class="align-center" src="../_images/prop_vrm_5.png" />
 <div class="line-block">
@@ -392,8 +395,53 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="id7">
-<h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">9.2.5. </span>Texture</a><a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
+<section id="index-11">
+<span id="id7"></span><h2><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">9.2.5. </span>Animation</a><a class="headerlink" href="#index-11" title="Permalink to this heading"></a></h2>
+<img alt="../_images/operation_vrm_o.png" class="align-center" src="../_images/operation_vrm_o.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>VRMAnimations that are open throughout the app can be specified for individual VRMs. The behavior is equivalent to the animation of OtherObject.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Motion file name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This is a combo box that selects the currently open VRMAnimation file name. The first “—” cancels the selection.</p>
+</dd>
+<dt class="field-even">Animation clip name<span class="colon">:</span></dt>
+<dd class="field-even"><p>VRMAnimation can have multiple animation clips per file. This is a combo box for selecting the name of the clip contained within.</p>
+</dd>
+<dt class="field-odd">Preview play/stop<span class="colon">:</span></dt>
+<dd class="field-odd"><p>If animation is set, it will play/stop. The playback here is just a preview.</p>
+</dd>
+<dt class="field-even">Playback mode<span class="colon">:</span></dt>
+<dd class="field-even"><p>Select the animation playback mode from <code class="docutils literal notranslate"><span class="pre">Default</span></code>, <code class="docutils literal notranslate"><span class="pre">Loop</span></code>, or <code class="docutils literal notranslate"><span class="pre">PingPong</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Normal playback. It is played only once.</p>
+</dd>
+<dt class="field-even">Loop<span class="colon">:</span></dt>
+<dd class="field-even"><p>let it loop.</p>
+</dd>
+<dt class="field-odd">PingPong<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Loop, but rewind the content of the animation like a toy yo-yo.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Seek position<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Switch animation playback position. It will be reflected in your animation project.</p>
+</dd>
+<dt class="field-even">Animation speed<span class="colon">:</span></dt>
+<dd class="field-even"><p>Adjust the playback speed of the animation.</p>
+</dd>
+<dt class="field-odd">Animation state (for registration)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Register the playback state in the animation project. Select one of the following from the combo box:</p>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id8">
+<h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">9.2.6. </span>Texture</a><a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
 <img alt="../_images/prop_obj_1.png" class="align-center" src="../_images/prop_obj_1.png" />
 <div class="line-block">
 <div class="line"><br /></div>

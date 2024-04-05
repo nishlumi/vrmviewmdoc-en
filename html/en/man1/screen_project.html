@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.5. Project setting screen &mdash; VRMViewMeister 2.5.1 documentation</title>
+  <title>6.5. Project setting screen &mdash; VRMViewMeister 2.6.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -54,10 +54,11 @@
 <li class="toctree-l2"><a class="reference internal" href="screen_appconfig.html">6.3. App settings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_vrminfo.html">6.4. VRM information screen</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">6.5. Project setting screen</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">6.5.1. Project information</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">6.5.2. Role management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">6.5.3. material</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id5">6.5.3.1. Add material</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#screen-projectdlg">6.5.1. Project information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vrmanimation">6.5.2. VRMAnimation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#screen-roledlg">6.5.3. Role management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#screen-materialdlg">6.5.4. material</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">6.5.4.1. Add material</a></li>
 </ul>
 </li>
 </ul>
@@ -85,13 +86,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">18. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">19. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">20. Others</a></li>
 </ul>
 
         </div>
@@ -120,10 +122,27 @@
            <div itemprop="articleBody">
              
   <section id="index-0">
-<span id="id1"></span><h1><span class="section-number">6.5. </span>Project setting screen<a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">6.5. </span>Project setting screen</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
 <p>This screen is used to set the role name of each object in the animation and to assign each object to the loaded role. (Animation will be discussed later)</p>
-<section id="id2">
-<h2><span class="section-number">6.5.1. </span>Project information<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#index-0" id="id6">Project setting screen</a></p>
+<ul>
+<li><p><a class="reference internal" href="#screen-projectdlg" id="id7">Project information</a></p></li>
+<li><p><a class="reference internal" href="#vrmanimation" id="id8">VRMAnimation</a></p></li>
+<li><p><a class="reference internal" href="#screen-roledlg" id="id9">Role management</a></p></li>
+<li><p><a class="reference internal" href="#screen-materialdlg" id="id10">material</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id5" id="id11">Add material</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="screen-projectdlg">
+<span id="id2"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">6.5.1. </span>Project information</a><a class="headerlink" href="#screen-projectdlg" title="Permalink to this heading"></a></h2>
 <p>This is a tab where you can make a note of the outline of the project file.</p>
 <img alt="../_images/screen_project1.png" class="align-center" src="../_images/screen_project1.png" />
 <div class="line-block">
@@ -153,8 +172,51 @@
 </dd>
 </dl>
 </section>
-<section id="id3">
-<h2><span class="section-number">6.5.2. </span>Role management<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<section id="vrmanimation">
+<span id="screen-vrmadlg"></span><h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">6.5.2. </span>VRMAnimation</a><a class="headerlink" href="#vrmanimation" title="Permalink to this heading"></a></h2>
+<p>You can manage opened VRMAnimations.</p>
+<img alt="../_images/screen_project7.png" class="align-center" src="../_images/screen_project7.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl class="field-list">
+<dt class="field-odd">File name<span class="colon">:</span></dt>
+<dd class="field-odd"><p>File nameof the Opened VRMAnimation</p>
+</dd>
+<dt class="field-even">Clip count<span class="colon">:</span></dt>
+<dd class="field-even"><p>Number of animation clips held by VRMAnimation</p>
+</dd>
+<dt class="field-odd">File path<span class="colon">:</span></dt>
+<dd class="field-odd"><p>VRMAnimation actual file path</p>
+</dd>
+<dt class="field-even">Storage type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Where VRMAnimation is stored.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>actual location</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>INTERNAL</p></td>
+<td><p>Internal storage</p></td>
+</tr>
+<tr class="row-odd"><td><p>LOCAL</p></td>
+<td><p>Terminal (PC, smartphone, VR device)</p></td>
+</tr>
+<tr class="row-even"><td><p>GOOGLEDRIVE</p></td>
+<td><p>Google Drive</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt class="field-odd">save to project<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Save the path information of the checked VRMAnimation in the project file.</p>
+</dd>
+</dl>
+</section>
+<section id="screen-roledlg">
+<span id="id3"></span><h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">6.5.3. </span>Role management</a><a class="headerlink" href="#screen-roledlg" title="Permalink to this heading"></a></h2>
 <p>This tab is used to select and manage roles (roles/timelines) within an animation project and casts (objects) assigned to them.</p>
 <img alt="../_images/screen_project2.png" class="align-center" src="../_images/screen_project2.png" />
 <div class="line-block">
@@ -172,8 +234,8 @@
 </dd>
 </dl>
 </section>
-<section id="id4">
-<h2><span class="section-number">6.5.3. </span>material<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<section id="screen-materialdlg">
+<span id="id4"></span><h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">6.5.4. </span>material</a><a class="headerlink" href="#screen-materialdlg" title="Permalink to this heading"></a></h2>
 <p>This tab manages materials such as textures in the app.</p>
 <img alt="../_images/screen_project3.png" class="align-center" src="../_images/screen_project3.png" />
 <div class="line-block">
@@ -207,7 +269,7 @@
 <p>Press the <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">Preview</span></code> button to load the image.</p>
 </div>
 <section id="id5">
-<h3><span class="section-number">6.5.3.1. </span>Add material<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">6.5.4.1. </span>Add material</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
 <p>This is a dedicated pop-up window for adding materials.</p>
 <img alt="../_images/screen_project6.png" class="align-center" src="../_images/screen_project6.png" />
 <div class="line-block">

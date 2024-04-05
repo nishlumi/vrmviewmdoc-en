@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12.4. Registering and setting keyframes &mdash; VRMViewMeister 2.5.1 documentation</title>
+  <title>12.4. Registering and setting keyframes &mdash; VRMViewMeister 2.6.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -87,13 +87,14 @@
 <li class="toctree-l2"><a class="reference internal" href="animation_tl.html">12.7. A few things about timeline display</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">13. Project settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">18. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">19. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">20. Others</a></li>
 </ul>
 
         </div>
@@ -205,6 +206,41 @@
 <li><p>Clicking a point with a registered keyframe selects both the frame position and the timeline (roll).</p></li>
 </ol>
 <img alt="../_images/register_6.png" class="align-center" src="../_images/register_6.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>When you hover your mouse cursor over a red cell, a popup will pop up and you can check the keyframe information.</p>
+<img alt="../_images/screen_timeline02.png" class="align-center" src="../_images/screen_timeline02.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Starting from the top line, the following is displayed.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Each display content</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Frame number] Total duration up to the current keyframe / Total duration of all keyframes: Memo</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+</tr>
+<tr class="row-even"><td><p>Duration: Duration from previous keyframe to current keyframe</p></td>
+</tr>
+<tr class="row-odd"><td><p>Easing: Type of easing when changing from previous keyframe to current keyframe</p></td>
+</tr>
+<tr class="row-even"><td></td>
+</tr>
+<tr class="row-odd"><td><p>Contents to be registered/IKMarker: Summary of IK markers and properties registered as motion among the current cast (object)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-duration admonition">
+<p class="admonition-title">Information on each interval (duration)</p>
+<p>It is now displayed from ver 2.6.0.</p>
+<p>Displays the total duration of the currently selected keyframe from the first keyframe. This allows you to check when the currently selected keyframe changes within the total number of seconds.</p>
+<p>This will make it easier to match the timing with the motion of other objects.</p>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -491,6 +527,13 @@
 <section id="index-8">
 <span id="id10"></span><h3><a class="toc-backref" href="#id32" role="doc-backlink"><span class="section-number">12.4.5.1. </span>write notes</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h3>
 <p>This can be set after registering the keyframe. It does not affect actual movement or properties. You can make a note of what movement will occur at that key frame.</p>
+<img alt="../_images/register_o.png" class="align-center" src="../_images/register_o.png" />
+<ol class="arabic simple">
+<li><p>Register a keyframe.</p></li>
+<li><p>Double-click the registered keyframe part to open the keyframe window.</p></li>
+<li><p>Open the General tab.</p></li>
+<li><p>メモの入力ボックスにモーションの内容などを入力します。</p></li>
+</ol>
 </section>
 <section id="index-9">
 <span id="id11"></span><h3><a class="toc-backref" href="#id33" role="doc-backlink"><span class="section-number">12.4.5.2. </span>Set easing</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h3>
@@ -506,6 +549,7 @@
 </figcaption>
 </figure>
 <ol class="arabic simple" start="3">
+<li><p>Open the General tab.</p></li>
 <li><p>Select the type of easing you like from the easing combo box.</p></li>
 </ol>
 <img alt="../_images/register_e.png" class="align-center" src="../_images/register_e.png" />
@@ -544,7 +588,8 @@
 </figcaption>
 </figure>
 <ol class="arabic simple" start="3">
-<li><p>Specify the number of seconds in the Duration field.</p></li>
+<li><p>Open the duration tab.</p></li>
+<li><p>Specify the interval (duration) field in seconds.</p></li>
 </ol>
 <img alt="../_images/register_f.png" class="align-center" src="../_images/register_f.png" />
 <div class="line-block">

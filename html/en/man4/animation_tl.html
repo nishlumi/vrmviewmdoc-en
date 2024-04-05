@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12.7. A few things about timeline display &mdash; VRMViewMeister 2.5.1 documentation</title>
+  <title>12.7. A few things about timeline display &mdash; VRMViewMeister 2.6.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -22,7 +22,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="13. Keyboard shortcut" href="../man5/special_operation.html" />
+    <link rel="next" title="13. Project settings" href="project.html" />
     <link rel="prev" title="12.6. Loading and saving animations" href="animation_loadsave.html" /> 
 </head>
 
@@ -64,13 +64,14 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">12.7. A few things about timeline display</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">13. Project settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">18. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">19. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">20. Others</a></li>
 </ul>
 
         </div>
@@ -105,15 +106,11 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<img alt="../_images/tl_2.png" class="align-center" src="../_images/tl_2.png" />
-<div class="line-block">
-<div class="line"><br /></div>
+<div class="admonition note" id="index-5">
+<p class="admonition-title">Note</p>
+<p>The <img alt="tlprev" src="../_images/tl_3.png" /> and <img alt="tlnext" src="../_images/tl_4.png" /> buttons have been removed because they can be replaced with other operations.</p>
 </div>
-<dl class="simple" id="index-5">
-<dt><img alt="tlprev" src="../_images/tl_3.png" /> <strong>Go back one timeline</strong></dt><dd><p>In the currently selected timeline, return to the closest registered keyframe before the current position. (Skip frames with nothing registered)</p>
-</dd>
-<dt><img alt="tlnext" src="../_images/tl_4.png" /> <strong>Move forward in timeline</strong></dt><dd><p>In the currently selected timeline, advance to the nearest registered keyframe after the current position. (Skip frames with nothing registered)</p>
-</dd>
+<dl class="simple">
 <dt><img alt="tlout" src="../_images/tl_5.png" /> <strong>Shrink timeline view</strong></dt><dd><p>Make the timeline display compact.</p>
 </dd>
 <dt><img alt="tlin" src="../_images/tl_6.png" /> <strong>Expand timeline view</strong></dt><dd><p>Resize the timeline display to normal size. This is the standard size.</p>
@@ -126,10 +123,14 @@
 <dl>
 <dt><img alt="tlplay" src="../_images/tl_8.png" /> <strong>play from beginning, play/pause, stop</strong></dt><dd><p>It has the same function as the button on the animation tab of the ribbon bar.</p>
 </dd>
-<dt><img alt="tlload" src="../_images/tl_9.png" /> <strong>load this frame</strong></dt><dd><div class="line-block">
-<div class="line">Immediately read the contents of the keyframes of all timelines (rolls) corresponding to the currently selected frame position, and restore poses and properties. Selecting a frame position normally restores it automatically, but this button manually calls it.</div>
-<div class="line">Mainly used when <code class="docutils literal notranslate"><span class="pre">Preview</span> <span class="pre">when</span> <span class="pre">selecting</span> <span class="pre">a</span> <span class="pre">frame</span></code> in the settings is off.</div>
-</div>
+<dt><img alt="tlload" src="../_images/tl_9.png" /> <strong>load this frame</strong></dt><dd><p>Immediately read the contents of the keyframes of all timelines (rolls) corresponding to the currently selected frame position, and restore poses and properties. Selecting a frame position normally restores it automatically, but this button manually calls it.</p>
+<p>※設定の <code class="docutils literal notranslate"><span class="pre">フレームを選択する時、プレビューする</span></code> がオフの場合のみ表示されます。</p>
+</dd>
+<dt><img alt="tlprop" src="../_images/tl_10.png" /> <strong>現座のキーフレームのプロパティを開く</strong></dt><dd><p>Opens the keyframe settings screen for the currently selected timeline.</p>
+</dd>
+<dt><img alt="tladdkey" src="../_images/tl_e.png" /> <strong>Register to key frame</strong></dt><dd><p>Registers a keyframe on the currently selected timeline. Unlike the same button on the ribbon bar, this one registers immediately without a registration window.</p>
+</dd>
+<dt><img alt="tldelkey" src="../_images/tl_f.png" /> <strong>Delete keyframe</strong></dt><dd><p>Deletes the currently selected timeline keyframe.</p>
 </dd>
 <dt><img alt="tlinsf" src="../_images/tl_c.png" /> <strong>Insert an empty frame at the current position</strong></dt><dd><p>Inserts an empty frame into all timelines at the position of the currently selected frame number. This shifts all keyframes after this frame number to the right by one.</p>
 </dd>
@@ -137,6 +138,8 @@
 <div class="line">Deletes the currently selected frame position of all timelines. Since this involves deleting a frame position, not just deleting a keyframe, all keyframes after this frame will be shifted one by one to the left.</div>
 <div class="line">Also, please note that if there is a keyframe at the current position, it will be deleted together.</div>
 </div>
+</dd>
+<dt><img alt="tlshowkey" src="../_images/tl_g.png" /> <strong>Currently selected frame number</strong></dt><dd><p>Displays the current frame number.</p>
 </dd>
 <dt><img alt="tlseek" src="../_images/tl_a.png" /> <strong>Seek Bar</strong></dt><dd><p>Move the frame position to any position on the timeline. The size of this seek bar does not change even if the number of frames increases or decreases.</p>
 <div class="line-block">
@@ -162,7 +165,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="animation_loadsave.html" class="btn btn-neutral float-left" title="12.6. Loading and saving animations" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../man5/special_operation.html" class="btn btn-neutral float-right" title="13. Keyboard shortcut" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="project.html" class="btn btn-neutral float-right" title="13. Project settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11.1. Save pose/motion &mdash; VRMViewMeister 2.5.1 documentation</title>
+  <title>11.1. Save pose/motion &mdash; VRMViewMeister 2.6.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -61,9 +61,10 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#id5">11.1.2. Save in various formats</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#index-2">11.1.2.1. save to disk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index-2">11.1.2.1. Save app poses and motions to disk</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#unity">11.1.2.2. Save the motion in a general format such as Unity</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#vrmanimation">11.1.2.3. Export in VRMAnimation format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index-5">11.1.2.4. Clear VRMAnimation keyframe data</a></li>
 </ul>
 </li>
 </ul>
@@ -73,13 +74,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">13. Keyboard shortcut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">14. Screenshot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">15. Video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">16. Edit Subtitles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">17. VR and AR</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">18. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">19. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">18. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/config.html">19. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">20. Others</a></li>
 </ul>
 
         </div>
@@ -108,23 +110,24 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">11.1. </span>Save pose/motion</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<h1><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">11.1. </span>Save pose/motion</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#id1" id="id7">Save pose/motion</a></p>
+<li><p><a class="reference internal" href="#id1" id="id8">Save pose/motion</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id2" id="id8">Save pose/motion</a></p>
+<li><p><a class="reference internal" href="#id2" id="id9">Save pose/motion</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id3" id="id9">save pose</a></p></li>
-<li><p><a class="reference internal" href="#savemotionfile" id="id10">save motion</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id10">save pose</a></p></li>
+<li><p><a class="reference internal" href="#savemotionfile" id="id11">save motion</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#id5" id="id11">Save in various formats</a></p>
+<li><p><a class="reference internal" href="#id5" id="id12">Save in various formats</a></p>
 <ul>
-<li><p><a class="reference internal" href="#index-2" id="id12">save to disk</a></p></li>
-<li><p><a class="reference internal" href="#unity" id="id13">Save the motion in a general format such as Unity</a></p></li>
-<li><p><a class="reference internal" href="#vrmanimation" id="id14">Export in VRMAnimation format</a></p></li>
+<li><p><a class="reference internal" href="#index-2" id="id13">Save app poses and motions to disk</a></p></li>
+<li><p><a class="reference internal" href="#unity" id="id14">Save the motion in a general format such as Unity</a></p></li>
+<li><p><a class="reference internal" href="#vrmanimation" id="id15">Export in VRMAnimation format</a></p></li>
+<li><p><a class="reference internal" href="#index-5" id="id16">Clear VRMAnimation keyframe data</a></p></li>
 </ul>
 </li>
 </ul>
@@ -132,45 +135,44 @@
 </ul>
 </nav>
 <section id="id2">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">11.1.1. </span>Save pose/motion</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">11.1.1. </span>Save pose/motion</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p>You can save poses and motions from the ribbon bar.</p>
 <p>Ribbon bar &gt; 3D Model tab &gt; Pose/Motion &gt; Save</p>
+<img alt="../_images/screen_ribbon_model_02.png" src="../_images/screen_ribbon_model_02.png" />
 <p>The menu is structured as follows.</p>
 <table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type of saving</p></th>
+<th class="head"><p>device storage</p></th>
+<th class="head"><p>Internal storage</p></th>
+<th class="head"><p>Google Drive</p></th>
+</tr>
+</thead>
 <tbody>
-<tr class="row-odd"><td rowspan="7"><p><img alt="posemenu" src="../_images/posing_2.png" /></p></td>
-<td><p>Type of saving</p></td>
-<td><p>Pose</p></td>
-<td><p>Motion</p></td>
-</tr>
-<tr class="row-even"><td><p>device storage</p></td>
+<tr class="row-even"><td><p>App pose</p></td>
+<td><p>o</p></td>
 <td><p>o</p></td>
 <td><p>o</p></td>
 </tr>
-<tr class="row-odd"><td><p>Internal storage</p></td>
+<tr class="row-odd"><td><p>App mlotion</p></td>
 <td><p>o</p></td>
-<td><p>o</p></td>
-</tr>
-<tr class="row-even"><td><p>Google Drive</p></td>
 <td><p>o</p></td>
 <td><p>o</p></td>
 </tr>
-<tr class="row-odd"><td><p>.bvh</p></td>
+<tr class="row-even"><td><p>General format (.bvh / .anim)</p></td>
+<td><p>o</p></td>
 <td><p>x</p></td>
-<td><p>o</p></td>
-</tr>
-<tr class="row-even"><td><p>.anim</p></td>
 <td><p>x</p></td>
-<td><p>o</p></td>
 </tr>
-<tr class="row-odd"><td><p>.vrma</p></td>
-<td><p>x</p></td>
+<tr class="row-odd"><td><p>VRMAnimation</p></td>
 <td><p>o</p></td>
+<td><p>o</p></td>
+<td><p>x</p></td>
 </tr>
 </tbody>
 </table>
 <section id="id3">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink"><span class="section-number">11.1.1.1. </span>save pose</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">11.1.1.1. </span>save pose</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
 <p>For VRoid/VRM only, the pose can save the state in which the IK markers of the whole body are moved. This is per single pose, not animation.</p>
 <ol class="arabic simple">
 <li><p>Make the VRoid/VRM pose.</p></li>
@@ -181,13 +183,14 @@
 </div>
 <ol class="arabic simple" start="2">
 <li><p>Click “Save” from <strong>Pose/Motion</strong> on the “3D Model” tab.</p></li>
+<li><p>Click an app pose.</p></li>
 </ol>
-<img alt="../_images/posing_2.png" class="align-center" src="../_images/posing_2.png" />
+<img alt="../_images/screen_ribbon_model_02.png" class="align-center" src="../_images/screen_ribbon_model_02.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple">
-<li><p>From the pause menu, select <code class="docutils literal notranslate"><span class="pre">Terminal</span></code> , <code class="docutils literal notranslate"><span class="pre">Internal</span> <span class="pre">Storage</span></code> , or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Drive</span></code> .</p></li>
+<ol class="arabic simple" start="3">
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Terminal</span></code>, <code class="docutils literal notranslate"><span class="pre">Internal</span> <span class="pre">Storage</span></code>, or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Drive</span></code> as the save destination.</p></li>
 <li><p>Enter the pose name.</p></li>
 </ol>
 <img alt="../_images/posing_3.png" class="align-center" src="../_images/posing_3.png" />
@@ -221,11 +224,15 @@
 </div>
 </section>
 <section id="savemotionfile">
-<span id="index-0"></span><span id="id4"></span><h3><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">11.1.1.2. </span>save motion</a><a class="headerlink" href="#savemotionfile" title="Permalink to this heading"></a></h3>
+<span id="index-0"></span><span id="id4"></span><h3><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">11.1.1.2. </span>save motion</a><a class="headerlink" href="#savemotionfile" title="Permalink to this heading"></a></h3>
 <p>For motion, all timeline (roll) types can be saved.</p>
 <ol class="arabic simple">
 <li><p>Select the timeline (roll) in which you want to save the motion from the timeline list.</p></li>
-<li><p>After this, the procedure is almost the same as the pose. In the menu after pressing the “Save” button, select from the menu under “Save Motion”.</p></li>
+<li><p>Click “Save” from <strong>Pose/Motion</strong> on the “3D Model” tab.</p></li>
+<li><p>Click an app motion.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Terminal</span></code>, <code class="docutils literal notranslate"><span class="pre">Internal</span> <span class="pre">Storage</span></code>, or <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Drive</span></code> as the save destination.</p></li>
+<li><p>Enter the motion name.</p></li>
+<li><p>The motion will be saved.</p></li>
 </ol>
 <p>There are no thumbnails for motion.</p>
 <div class="admonition warning" id="index-1">
@@ -258,26 +265,27 @@
 </section>
 </section>
 <section id="id5">
-<h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">11.1.2. </span>Save in various formats</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">11.1.2. </span>Save in various formats</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
 <section id="index-2">
-<span id="id6"></span><h3><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">11.1.2.1. </span>save to disk</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h3>
-<p>Even after saving to internal storage or Google Drive, you can save it back to your device.</p>
+<span id="id6"></span><h3><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">11.1.2.1. </span>Save app poses and motions to disk</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h3>
+<p>Even after saving to internal storage or Google Drive, you can save it back to your device. This is the procedure for using the conventional pose/motion list window.</p>
 <ol class="arabic simple">
-<li><p>Click “Pose List” on the “3D Model” tab.</p></li>
+<li><p>Click “Open” from <strong>Pose/Motion</strong> on the “3D Model” tab.</p></li>
+<li><p>Click on the app pose or app motion.</p></li>
 </ol>
-<img alt="../_images/posing_5.png" class="align-center" src="../_images/posing_5.png" />
+<img alt="../_images/screen_ribbon_model_01.png" class="align-center" src="../_images/screen_ribbon_model_01.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Select Pose or Motion on the right side of the toolbar.</p></li>
+<ol class="arabic simple" start="3">
+<li><p>A window with a list of poses and motions will open.</p></li>
+</ol>
+<img alt="../_images/posing_4.png" class="align-center" src="../_images/posing_4.png" />
+<ol class="arabic simple" start="4">
+<li><p>Select the Pose or Motion tab on the right side of the toolbar.</p></li>
 <li><p>Select the pose or motion you want to download.</p></li>
 <li><p>Click the Download button on the toolbar.</p></li>
 </ol>
-<img alt="../_images/posing_4.png" class="align-center" src="../_images/posing_4.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
 <dl class="field-list">
 <dt class="field-odd">Save format<span class="colon">:</span></dt>
 <dd class="field-odd"><table class="docutils align-default">
@@ -306,7 +314,7 @@
 </div>
 </section>
 <section id="unity">
-<span id="index-3"></span><h3><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">11.1.2.2. </span>Save the motion in a general format such as Unity</a><a class="headerlink" href="#unity" title="Permalink to this heading"></a></h3>
+<span id="index-3"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">11.1.2.2. </span>Save the motion in a general format such as Unity</a><a class="headerlink" href="#unity" title="Permalink to this heading"></a></h3>
 <p>Although only VRM is available, it is also possible to save in a general-purpose animation format.</p>
 <div class="admonition- admonition">
 <p class="admonition-title">Timing when general-purpose motion is registered</p>
@@ -316,7 +324,10 @@
 </ul>
 </div>
 <ol class="arabic simple">
-<li><p>Select one of the general motion menu formats: <code class="docutils literal notranslate"><span class="pre">.bvh</span></code>, <code class="docutils literal notranslate"><span class="pre">.anim</span></code>, or <code class="docutils literal notranslate"><span class="pre">.vrma</span></code>.</p></li>
+<li><p>Select the timeline (roll) in which you want to save the motion from the timeline list.</p></li>
+<li><p>Click “Save” from <strong>Pose/Motion</strong> on the “3D Model” tab.</p></li>
+<li><p>Click a Motion: general format.</p></li>
+<li><p>Choose <code class="docutils literal notranslate"><span class="pre">.bvh</span></code> or <code class="docutils literal notranslate"><span class="pre">.anim</span></code>.</p></li>
 <li><p>Enter the file name and press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button.</p></li>
 </ol>
 <dl class="field-list simple">
@@ -329,6 +340,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
+<li><p>General-purpose formats can only be saved to the device.</p></li>
 <li><p>.anim files are AnimationClip files that can be read directly by Unity.</p></li>
 </ul>
 </div>
@@ -336,20 +348,24 @@
 <p class="admonition-title">Warning</p>
 <ul class="simple">
 <li><p>When loading an existing project or motion, <strong>be sure to select the registered keyframes one by one</strong> to actually move the VRM. Otherwise, data in a generic format will not be saved.</p></li>
-<li><p>As of <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.4.0</span></code> of this application, .bvh cannot be selected because it is difficult to implement.</p></li>
+<li><p>As of this application <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.6.0</span></code>, .bvh cannot be selected because it is difficult to implement.</p></li>
 <li><p>.anim is currently in experimental operation, so we cannot guarantee its operation. The rotation of certain bones may be broken. note that.</p></li>
 <li><p>.anim files cannot be reloaded by this app.</p></li>
 </ul>
 </div>
 </section>
 <section id="vrmanimation">
-<span id="vrma-export"></span><span id="index-4"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">11.1.2.3. </span>Export in VRMAnimation format</a><a class="headerlink" href="#vrmanimation" title="Permalink to this heading"></a></h3>
+<span id="vrma-export"></span><span id="index-4"></span><h3><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">11.1.2.3. </span>Export in VRMAnimation format</a><a class="headerlink" href="#vrmanimation" title="Permalink to this heading"></a></h3>
 <p>.vrma file is a newly defined motion format exclusively for VRM in UniVRM.</p>
 <p>See below for details.</p>
 <p><a class="reference external" href="https://github.com/vrm-c/vrm-specification/blob/master/specification/VRMC_vrm_animation-1.0/README.ja.md">VRMC_vrm_animation - GitHub</a></p>
 <ol class="arabic simple">
-<li><p>Select <code class="docutils literal notranslate"><span class="pre">.vrma</span></code> from the general formats in the motion menu.</p></li>
-<li><p>Enter the file name and press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button.</p></li>
+<li><p>Select the timeline (roll) in which you want to save the motion from the timeline list.</p></li>
+<li><p>Click “Save” from <strong>Pose/Motion</strong> on the “3D Model” tab.</p></li>
+<li><p>Click VRMAnimation.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Terminal''</span> <span class="pre">or</span> <span class="pre">``Internal</span> <span class="pre">Storage</span></code> as the save location.</p></li>
+<li><p>Enter the motion clip name.</p></li>
+<li><p>Next, enter the file name and press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button.</p></li>
 </ol>
 <dl class="field-list simple">
 <dt class="field-odd">Save format<span class="colon">:</span></dt>
@@ -368,8 +384,24 @@
 <p class="admonition-title">Warning</p>
 <ul class="simple">
 <li><p>When loading an existing project or motion, <strong>be sure to select the registered keyframes one by one</strong> to actually move the VRM. Otherwise, data in a generic format will not be saved.</p></li>
-<li><p>Like .anim, .vrma is in experimental operation and cannot be guaranteed to work. The rotation of certain bones may be broken. note that.</p></li>
+<li><p>The first keyframe will not be registered correctly because the duration will be 0. Be sure to register the same motion second in succession. (The frame number can be anything)</p></li>
+<li><p>Like .anim, .vrma is in experimental operation and cannot be guaranteed to work.</p></li>
+<li><p>Although it is officially stated that LookAt and BlendShape are also supported, it is still difficult to implement as the code sample for the essential inclusion method has not been released. In this application, only bone movements other than LookAt and BlendShape can be saved as VRMAnimation.</p></li>
 </ul>
+</div>
+</section>
+<section id="index-5">
+<span id="id7"></span><h3><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">11.1.2.4. </span>Clear VRMAnimation keyframe data</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h3>
+<p>Delete the existing internally held keyframe data for VRMAnimation. If you register a key frame again for each frame, it will be easier to register from scratch.</p>
+<ol class="arabic simple">
+<li><p>Click <strong>Delete Keyframe</strong> on the Animation tab of the ribbon bar.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">only</span> <span class="pre">VRMAnimation</span></code> .</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Motion data for VRMAnimation is registered behind the system at the same time as the unique motion of this application is registered as a key frame.</p>
+<p>In principle, the same motion as the motion of this application will be registered, but it may not be completely the same because the types of bones to be registered are different. Sometimes there may be a slight shift or one frame may be missing.</p>
+<p>In such cases, this function deletes the existing keyframe data for VRMAnimation.</p>
 </div>
 </section>
 </section>
