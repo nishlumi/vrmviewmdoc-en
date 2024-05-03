@@ -22,7 +22,7 @@ copyright = '2023, ISHII Eiju'
 author = 'ISHII Eiju'
 
 # The full version, including alpha/beta/rc tags
-release = '2.3.1'
+release = '2.7.0'
 
 
 # -- General configuration ---------------------------------------------------

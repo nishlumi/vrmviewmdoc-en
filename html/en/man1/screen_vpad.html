@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.19. v-pad (control pad for main camera) &mdash; VRMViewMeister 2.6.0 documentation</title>
+  <title>6.19. v-pad (control pad for main camera) &mdash; VRMViewMeister 2.7.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -120,15 +120,28 @@
 <div class="line">I want to operate with one hand without using the keyboard! I want to use it on my tablet PC! You can also use it in such cases.</div>
 </div>
 <p>It can also be used on VR devices with controllers and hand tracking. You can make detailed adjustments to operate the WebGL screen. Also see <a class="reference internal" href="../man5/vrar_operation.html#vpad-for-vrar"><span class="std std-ref">V-pad</span></a> .</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">rotation<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Equivalent to moving the mouse up, down, left, or right while right-clicking.</p>
 </dd>
 <dt class="field-even">Forward<span class="colon">:</span></dt>
 <dd class="field-even"><p>Equivalent to moving the mouse wheel.</p>
 </dd>
-<dt class="field-odd">move<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Equivalent to moving the mouse up, down, left, or right while clicking the middle mouse button.</p>
+<dt class="field-odd">Camera and center point<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Move the main camera closer or farther away from the center point.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>bring closer</p></td>
+<td><p>Same as the <code class="docutils literal notranslate"><span class="pre">I</span></code> key on the keyboard</p></td>
+</tr>
+<tr class="row-even"><td><p>keep away</p></td>
+<td><p>Same as the <code class="docutils literal notranslate"><span class="pre">O</span></code> key on the keyboard</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt class="field-even">move<span class="colon">:</span></dt>
+<dd class="field-even"><p>Equivalent to moving the mouse up, down, left, or right while clicking the middle mouse button.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -143,14 +156,6 @@
 </div>
 </dd>
 </dl>
-<dl class="field-list simple">
-<dt class="field-odd"><img alt="sub2" src="../_images/screen_vpad_2.png" /> Close the distance between the camera and the center point<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Equivalent to the <code class="docutils literal notranslate"><span class="pre">I</span></code> key on a keyboard. Bring the main camera closer to the center point. When it reaches 0 distance, it will move away.</p>
-</dd>
-<dt class="field-even"><img alt="sub3" src="../_images/screen_vpad_3.png" /> Increase the distance between the camera and the center point<span class="colon">:</span></dt>
-<dd class="field-even"><p>Equivalent to the keyboard <code class="docutils literal notranslate"><span class="pre">O</span></code> key. Move the main camera away from the center point. It approaches when it reaches 0 distance.</p>
-</dd>
-</dl>
 <div class="admonition- admonition">
 <p class="admonition-title">About the speed of movement and rotation</p>
 <p>You can adjust the speed using the V-pad’s <code class="docutils literal notranslate"><span class="pre">Movement</span> <span class="pre">Speed</span></code> and <code class="docutils literal notranslate"><span class="pre">Rotation</span> <span class="pre">Speed</span></code> in the <code class="docutils literal notranslate"><span class="pre">Application</span></code> tab of the application settings.</p>
@@ -161,6 +166,11 @@
 <li><p>The forward panel can only be swiped up and down (drag).</p></li>
 <li><p>You can increase the screen size of the WebGL screen, but that may make it difficult to operate the mouse. In such a case, using this v-pad is convenient because you can finely adjust the display.</p></li>
 </ul>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>By collapsing the object list and property list panels on the left and right sides of the window, we have created a swipe panel that has the same functionality as the v-pad.</p>
+<p>See <a class="reference internal" href="screen_objlist.html#leftpanelclosing"><span class="std std-ref">When folding the panel</span></a> for functionality.</p>
 </div>
 </section>
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.14. Property list &mdash; VRMViewMeister 2.6.0 documentation</title>
+  <title>6.14. Property list &mdash; VRMViewMeister 2.7.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -62,7 +62,14 @@
 <li class="toctree-l2"><a class="reference internal" href="screen_video.html">6.11. Video player</a></li>
 <li class="toctree-l2"><a class="reference internal" href="menu.html">6.12. Menu structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_objlist.html">6.13. Object list</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.14. Property list</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.14. Property list</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">6.14.1. Each accordion panel</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">6.14.1.1. Swipe panel</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">6.14.2. When folding the panel</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="screen_timeline.html">6.15. Timeline</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_keyframereg.html">6.16. Keyframe registration window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_keyframe.html">6.17. Setting keyframes</a></li>
@@ -113,7 +120,22 @@
            <div itemprop="articleBody">
              
   <section id="index-0">
-<span id="id1"></span><h1><span class="section-number">6.14. </span>Property list<a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">6.14. </span>Property list</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#index-0" id="id5">Property list</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id2" id="id6">Each accordion panel</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id3" id="id7">Swipe panel</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id4" id="id8">When folding the panel</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
 <img alt="../_images/screen_prop.png" class="align-center" src="../_images/screen_prop.png" />
 <p>This is the list on the right side of the WebGL screen. Setting items for each loaded object are listed.</p>
 <div class="line-block">
@@ -124,8 +146,35 @@
 <dd class="field-odd"><p>When pressed, the property list can be collapsed and narrowed.</p>
 </dd>
 </dl>
-<p><strong>Each accordion panel:</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On mobile devices with screen resolutions below a certain size, the property list is displayed in an overlay format.</p>
+<p>This means that the panel will automatically collapse when you do something.</p>
+</div>
+<section id="id2">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">6.14.1. </span>Each accordion panel</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
 <p>Different properties are displayed depending on the object type.</p>
+<section id="id3">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">6.14.1.1. </span>Swipe panel</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Introduced from ver 2.7.0. You can increase/decrease the value in the numerical input box by swiping up/down/left/right. It is a white box directly below the input box.</p>
+<p>Swipe to see <code class="docutils literal notranslate"><span class="pre">+</span></code> or <code class="docutils literal notranslate"><span class="pre">-</span></code>.</p>
+<img alt="../_images/screen_prop_swipepanel01.png" class="align-center" src="../_images/screen_prop_swipepanel01.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Mainly effective for operation on mobile devices.</p>
+<p>The input box type UI installed in the property list automatically collapses the panel when input focus is applied to it for operation. If you do so, the panel may close immediately and you may not be able to operate it even though you want to operate it.</p>
+<p>By using this swipe panel, you can easily manipulate values even on mobile devices.</p>
+</div>
+</section>
+</section>
+<section id="id4">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">6.14.2. </span>When folding the panel</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
+<p>Introduced from ver 2.7.0. When the panel is folded, you can use the same functions as the v-pad.</p>
+<p>See <a class="reference internal" href="screen_objlist.html#leftpanelclosing"><span class="std std-ref">When folding the panel</span></a> for functionality.</p>
+</section>
 </section>
 
 
