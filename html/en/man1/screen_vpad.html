@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.19. v-pad (control pad for main camera) &mdash; VRMViewMeister 2.7.0 documentation</title>
+  <title>6.19. v-pad (control pad for main camera) &mdash; VRMViewMeister 2.8.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -67,7 +67,11 @@
 <li class="toctree-l2"><a class="reference internal" href="screen_keyframereg.html">6.16. Keyframe registration window</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_keyframe.html">6.17. Setting keyframes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_internaldlg.html">6.18. Internal storage dialog</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.19. v-pad (control pad for main camera)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.19. v-pad (control pad for main camera)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">6.19.1. V-pad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">6.19.2. other screen</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="screen_naviwin.html">6.20. Navigation</a></li>
 </ul>
 </li>
@@ -113,13 +117,36 @@
            <div itemprop="articleBody">
              
   <span class="target" id="index-0"></span><section id="v-pad">
-<span id="index-1"></span><h1><span class="section-number">6.19. </span>v-pad (control pad for main camera)<a class="headerlink" href="#v-pad" title="Permalink to this heading"></a></h1>
+<span id="index-1"></span><h1><a class="toc-backref" href="#id3" role="doc-backlink"><span class="section-number">6.19. </span>v-pad (control pad for main camera)</a><a class="headerlink" href="#v-pad" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#v-pad" id="id3">v-pad (control pad for main camera)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id4">V-pad</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id5">other screen</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="id1">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">6.19.1. </span>V-pad</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <img alt="../_images/screen_vpad.png" class="align-center" src="../_images/screen_vpad.png" />
 <div class="line-block">
-<div class="line">A virtual mouse pad that allows you to operate the image of the main camera instead of the mouse. If you swipe (drag with the mouse) up, down, left, or right in the square panel, the WebGL screen will move accordingly. The amount of rotation and movement is determined by the length of operation.</div>
-<div class="line">I want to operate with one hand without using the keyboard! I want to use it on my tablet PC! You can also use it in such cases.</div>
+<div class="line"><br /></div>
 </div>
-<p>It can also be used on VR devices with controllers and hand tracking. You can make detailed adjustments to operate the WebGL screen. Also see <a class="reference internal" href="../man5/vrar_operation.html#vpad-for-vrar"><span class="std std-ref">V-pad</span></a> .</p>
+<blockquote>
+<div><p>マウスやVRデバイスのコントローラの代わりにメインカメラの映像を操作できる機能です。四角のパネル内を上下左右にスワイプ（マウスでドラッグ）するとそのとおりにWebGL画面が動きます。操作の長さにより回転量・移動量は決まります。</p>
+<p>For explanation purposes: Can be used in the following cases:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>I want to operate with one hand without using a keyboard</p></li>
+<li><p>I want to use it on a tablet PC as well.</p></li>
+</ul>
+<blockquote>
+<div><p>VRデバイスでもコントローラやハンドトラッキングにより使うことができます。WebGL画面を操作するのに細かい調整ができます。</p>
+<p>Also see <a class="reference internal" href="../man5/vrar_operation.html#vpad-for-vrar"><span class="std std-ref">V-pad in VR/AR environment</span></a> .</p>
+</div></blockquote>
 <dl class="field-list">
 <dt class="field-odd">rotation<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Equivalent to moving the mouse up, down, left, or right while right-clicking.</p>
@@ -170,8 +197,22 @@
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>By collapsing the object list and property list panels on the left and right sides of the window, we have created a swipe panel that has the same functionality as the v-pad.</p>
-<p>See <a class="reference internal" href="screen_objlist.html#leftpanelclosing"><span class="std std-ref">When folding the panel</span></a> for functionality.</p>
+<p>See <a class="reference internal" href="screen_objlist.html#leftpanelclosing"><span class="std std-ref">V-pad (left)</span></a> for functionality.</p>
 </div>
+</section>
+<section id="id2">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">6.19.2. </span>other screen</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>Object list panel/properties panel collapsed</dt><dd><img alt="../_images/screen_objlist02.png" class="align-center" src="../_images/screen_objlist02.png" />
+</dd>
+<dt>Mobile viewing, portrait</dt><dd><p>It will be displayed at the bottom of the screen. The difference from normal V-pad is that there is no title bar for dragging.</p>
+<img alt="../_images/screen_vpadmobile01.png" class="align-center" src="../_images/screen_vpadmobile01.png" />
+</dd>
+<dt>Mobile viewing, landscape</dt><dd><p>It will be displayed at the edge of the screen.</p>
+<img alt="../_images/screen_vpadmobile02.png" class="align-center" src="../_images/screen_vpadmobile02.png" />
+</dd>
+</dl>
+</section>
 </section>
 
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.1. Main screen &mdash; VRMViewMeister 2.7.0 documentation</title>
+  <title>6.1. Main screen &mdash; VRMViewMeister 2.8.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -50,7 +50,11 @@
 <li class="toctree-l1"><a class="reference internal" href="feature.html">5. Feature</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="screen.html">6. Screen configuration</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. Main screen</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">6.1.1. App windows and sub windows</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#screenmain-normal">6.1.1. Main screen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#screenmain-mobile">6.1.1.1. Mobile viewing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">6.1.2. App windows and sub windows</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="screen_webgl.html">6.2. WebGL screen</a></li>
@@ -116,7 +120,24 @@
            <div itemprop="articleBody">
              
   <section id="index-0">
-<span id="id1"></span><h1><span class="section-number">6.1. </span>Main screen<a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">6.1. </span>Main screen</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#index-0" id="id5">Main screen</a></p>
+<ul>
+<li><p><a class="reference internal" href="#screenmain-normal" id="id6">Main screen</a></p>
+<ul>
+<li><p><a class="reference internal" href="#screenmain-mobile" id="id7">Mobile viewing</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#id4" id="id8">App windows and sub windows</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="screenmain-normal">
+<span id="id2"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">6.1.1. </span>Main screen</a><a class="headerlink" href="#screenmain-normal" title="Permalink to this heading"></a></h2>
 <img alt="../_images/screen_main.png" class="align-center" src="../_images/screen_main.png" />
 <div class="line-block">
 <div class="line"><br /></div>
@@ -145,54 +166,104 @@
 <li><p>B and D can be minimized with their rightmost buttons. (WebGL in C scales accordingly)</p></li>
 </ul>
 </div>
-<section id="id2">
-<h2><span class="section-number">6.1.1. </span>App windows and sub windows<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="screenmain-mobile">
+<span id="id3"></span><h3><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">6.1.1.1. </span>Mobile viewing</a><a class="headerlink" href="#screenmain-mobile" title="Permalink to this heading"></a></h3>
+<p>You can use this display mode with [URL]/mui.</p>
+<p>Mobile devices with narrow screens, such as smartphones, will display something like these. The left and right panels and timeline panels are initially hidden.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Devices for which this display mode is suitable<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Smartphones, tablets, phablets (e.g. Galaxy Fold, etc.)</p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Portrait</p></th>
+<th class="head"><p>Landscape</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><img alt="mblport" src="../_images/screen_mainmobile01.png" /></p></td>
+<td><p><img alt="mblland" src="../_images/screen_mainmobile02.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="field-list">
+<dt class="field-odd">bottom of screen<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The buttons are arranged in the following order from the left: This is the button for the function that you are likely to use most often.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Animation play/pause</p></td>
+<td><p>Key frame registration</p></td>
+<td><p>Object list panel display</p></td>
+<td><p>Timeline panel display (blue button)</p></td>
+<td><p>プロパティパネル表示</p></td>
+<td><p>V-pad panel display</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</section>
+</section>
+<section id="id4">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">6.1.2. </span>App windows and sub windows</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h2>
 <p>This application consists of a window showing this main screen and several sub-windows described later.</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>window name</p></th>
 <th class="head"><p>Window type (web application version)</p></th>
 <th class="head"><p>Window type (each OS version)</p></th>
+<th class="head"><p>Window type (mobile viewing)</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>main window</p></td>
 <td><p>browser tab or separate window</p></td>
 <td><p>other window</p></td>
+<td><p>browser tab</p></td>
 </tr>
 <tr class="row-odd"><td><p>Screenshot</p></td>
 <td><p>other window</p></td>
 <td><p>other window</p></td>
+<td><p>Separate tab</p></td>
 </tr>
 <tr class="row-even"><td><p>Pose list</p></td>
 <td><p>other window</p></td>
 <td><p>other window</p></td>
+<td><p>Separate tab</p></td>
 </tr>
 <tr class="row-odd"><td><p>Batch change of IK position</p></td>
 <td><p>other window</p></td>
 <td><p>other window</p></td>
+<td><p>Separate tab</p></td>
 </tr>
 <tr class="row-even"><td><p>gravity settings</p></td>
+<td><p>In-app window</p></td>
 <td><p>In-app window</p></td>
 <td><p>In-app window</p></td>
 </tr>
 <tr class="row-odd"><td><p>pose tracking</p></td>
 <td><p>other window</p></td>
 <td><p>other window</p></td>
+<td><p>Separate tab</p></td>
 </tr>
 <tr class="row-even"><td><p>Video player</p></td>
 <td><p>other window</p></td>
 <td><p>other window</p></td>
+<td><p>Separate tab</p></td>
 </tr>
 <tr class="row-odd"><td><p>Setting keyframes</p></td>
 <td><p>In-app window</p></td>
 <td><p>In-app window</p></td>
+<td><p>Other tab or in-app window</p></td>
 </tr>
 <tr class="row-even"><td><p>Internal storage dialog</p></td>
 <td><p>In-app window</p></td>
 <td><p>In-app window</p></td>
+<td><p>In-app window</p></td>
 </tr>
 <tr class="row-odd"><td><p>Nnavigation</p></td>
+<td><p>In-app window</p></td>
 <td><p>In-app window</p></td>
 <td><p>In-app window</p></td>
 </tr>
