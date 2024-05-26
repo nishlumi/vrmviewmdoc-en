@@ -125,6 +125,7 @@
 <div class="line"><br /></div>
 </div>
 <p>From ver 2.3.0, the pose list also supports motion management. A new window will open. It is a separate window from the app.</p>
+<p>From ver 2.9.0, it is now possible to display it inside the main window of the app by setting.</p>
 <ul class="simple">
 <li><p>You can save a single pose for VRoid/VRM.</p></li>
 <li><p>Motion can load all object (cast) types.</p></li>
@@ -132,8 +133,8 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p><strong>Top:</strong></p>
-<dl class="field-list">
+<dl>
+<dt>Toolbar</dt><dd><dl class="field-list simple">
 <dt class="field-odd">Reload<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Reload the pose list.</p>
 </dd>
@@ -149,8 +150,20 @@
 <dt class="field-odd">open from file<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Open the pose file from your terminal.</p>
 </dd>
-<dt class="field-even">Load location<span class="colon">:</span></dt>
-<dd class="field-even"><p>Select from Internal Storage, Google Drive, or Application.</p>
+</dl>
+</dd>
+<dt>Tab</dt><dd><dl class="field-list simple">
+<dt class="field-odd">Pose<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Switch list to pose</p>
+</dd>
+<dt class="field-even">Motion<span class="colon">:</span></dt>
+<dd class="field-even"><p>Switch list to motion</p>
+</dd>
+</dl>
+</dd>
+<dt>Combo-box</dt><dd><dl class="field-list">
+<dt class="field-odd">Load location<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Select from Internal Storage, Google Drive, or Application.</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Kind</p></th>
@@ -170,18 +183,14 @@
 </tbody>
 </table>
 </dd>
-<dt class="field-odd">Pose<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Switch list to pose</p>
-</dd>
-<dt class="field-even">Motion<span class="colon">:</span></dt>
-<dd class="field-even"><p>Switch list to motion</p>
-</dd>
 </dl>
-<p><strong>Bottom:</strong></p>
-<dl>
-<dt>Pose list</dt><dd><p>Displays saved poses and motions.</p>
+</dd>
+<dt>Bottom</dt><dd><dl>
+<dt>ポーズ・モーション一覧:</dt><dd><p>Displays saved poses and motions.</p>
 <p>The poses come with thumbnails. The pose name and the avatar (VRM) name at the time of saving are displayed next to the thumbnail.</p>
 <p>Motion displays the corresponding object type, format version, number of keyframes, start frame, and end frame.</p>
+</dd>
+</dl>
 </dd>
 </dl>
 <div class="line-block">
