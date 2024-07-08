@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7.2. App operation &mdash; VRMViewMeister 2.8.0 documentation</title>
+  <title>7.2. App operation &mdash; VRMViewMeister 2.10.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -80,7 +80,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">14. special operation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="photograph.html">15. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="videorec.html">16. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="texttrack.html">17. Edit Subtitles</a></li>
@@ -159,6 +159,8 @@
 <dl>
 <dt>VR/AR</dt><dd><p>Handling varies depending on the device.</p>
 <p>PICO4 can be installed as a PWA. However, it does not support multiple windows, so some small windows will overwrite the main screen of the app. You can go back by using the back button on your browser.</p>
+</dd>
+<dt>Smartphones, tablets</dt><dd><p>PWA installation is possible. The icon of this app will be displayed in the list of apps. After installing PWA, the display mode will be normal, but you can switch to the About this app screen. For details, see <a class="reference internal" href="../man1/screen_appdlg.html#changedisplaymode"><span class="std std-ref">Buttons</span></a> .</p>
 </dd>
 </dl>
 <div class="line-block">
@@ -251,7 +253,7 @@
 <section id="index-4">
 <span id="id6"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">7.2.5. </span>Operating the main camera</a><a class="headerlink" href="#index-4" title="Permalink to this heading"></a></h2>
 <p>In this app, the main camera always has a center point that serves as the axis of rotation. The display can be turned on and off by setting, but the display is turned on by default for clarity.</p>
-<p>Since keyboard operations are involved, please see <a class="reference internal" href="special_operation.html"><span class="doc">Keyboard shortcut</span></a> for detailed operation methods.</p>
+<p>Since keyboard operations are involved, please see <a class="reference internal" href="special_operation.html"><span class="doc">special operation</span></a> for detailed operation methods.</p>
 <img alt="center point" class="align-center" src="../_images/spcl_01.png" />
 <div class="line-block">
 <div class="line"><br /></div>
@@ -270,7 +272,7 @@
 <p>This is just a guideline. If you press the I and O keys, there will be a <strong>border between decreasing and increasing values</strong>. That is the point where the center point and the currently selected object overlap. If you rotate the camera there, you can rotate around the object relatively cleanly.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
-<p>The same operation can be performed with the buttons <img alt="sub2" src="../_images/screen_vpad_2.png" /> <img alt="sub3" src="../_images/screen_vpad_3.png" /> on the v-pad. <a class="reference internal" href="../man1/screen_vpad.html"><span class="doc">v-pad (control pad for main camera)</span></a></p>
+<p>This can be adjusted in the application settings <code class="docutils literal notranslate"><span class="pre">Distance</span> <span class="pre">between</span> <span class="pre">camera</span> <span class="pre">and</span> <span class="pre">center</span> <span class="pre">point</span></code> .</p>
 </div>
 </section>
 <section id="id8">
@@ -309,7 +311,7 @@
 </section>
 <section id="index-6">
 <span id="id10"></span><h2><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">7.2.6. </span>Objects and keyboard operations</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
-<p>For a detailed explanation of keyboard operations, please see <a class="reference internal" href="special_operation.html"><span class="doc">Keyboard shortcut</span></a> .</p>
+<p>For a detailed explanation of keyboard operations, please see <a class="reference internal" href="special_operation.html"><span class="doc">special operation</span></a> .</p>
 <dl>
 <dt>Standard of operation</dt><dd><p>This app is based on <strong>global coordinates</strong> .</p>
 <div class="admonition note">
@@ -381,12 +383,13 @@
 <p>This application moves the WebGL screen using a mouse or touch, but depending on the usage and environment, you may need to use keyboard operations such as the Ctrl key or SPACE key. A window called V-pad allows you to perform all mouse operations in environments where a keyboard cannot be used immediately.</p>
 <dl>
 <dt>V-pad</dt><dd><p>By using this window, you will be able to use the movement, rotation, zoom in and zoom out of the main camera in common without worrying about the mouse or touch environment.</p>
+<p>Starting with version 2.10.0, you can now move and rotate selected objects.</p>
 <p>This can also be used on mobile devices such as VR devices and smartphones. Operations that you wouldn’t know how to do with touch can be easily performed in this window by swiping the panel that suits your purpose.</p>
 <img alt="../_images/spcl_05.png" class="align-center" src="../_images/spcl_05.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>See <a class="reference internal" href="../man1/screen_vpad.html"><span class="doc">v-pad (control pad for main camera)</span></a> for how windows look and how to use them.</p>
+<p>See <a class="reference internal" href="../man1/screen_vpad.html"><span class="doc">v-pad (virtual control pad)</span></a> for how windows look and how to use them.</p>
 <div class="admonition- admonition">
 <p class="admonition-title">About the speed of movement and rotation</p>
 <p>You can adjust the speed using the V-pad’s <code class="docutils literal notranslate"><span class="pre">Movement</span> <span class="pre">Speed</span></code> and <code class="docutils literal notranslate"><span class="pre">Rotation</span> <span class="pre">Speed</span></code>’ in the <code class="docutils literal notranslate"><span class="pre">Application</span></code> tab of the application settings.</p>
@@ -395,8 +398,9 @@
 <dt>Various operation examples</dt><dd><ul class="simple">
 <li><p>Rotate the main camera using the mouse. Move the main camera using WASD FV keys</p></li>
 <li><p>General operations of the main camera can be performed using the V-pad, and detailed adjustments can be made using the mouse.</p></li>
-<li><p>Use your smartphone to operate the V-pad rotation panel with your left hand and the V-pad forward and movement panel with your right hand.</p></li>
+<li><p>スマートフォンで左手で V-pad の移動パネル、右手で V-padの回転パネルを操作する</p></li>
 </ul>
+<p>Gamepad support has been added since version 2.10.0. For details, please see <a class="reference internal" href="special_operation.html#operategamepad"><span class="std std-ref">Gamepad Controls</span></a>. The operation feel is the same as that of the V-pad.</p>
 </dd>
 </dl>
 <p>Try to find the operation method that suits you.</p>

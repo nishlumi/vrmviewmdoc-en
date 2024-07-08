@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7.1. User flow &mdash; VRMViewMeister 2.8.0 documentation</title>
+  <title>7.1. User flow &mdash; VRMViewMeister 2.10.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -63,7 +63,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">14. special operation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="photograph.html">15. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="videorec.html">16. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="texttrack.html">17. Edit Subtitles</a></li>
@@ -103,48 +103,51 @@
 <p>It is assumed that there are three steps to use this app.</p>
 <div class="mermaid">
             flowchart TB
-subgraph First
-    direction LR
-    input_vrm[[&quot;Load VRM&quot;]]
-    input_3d[[&quot;Load 3D model&quot;]]
-    open_internalobj[[&quot;Generate Light/Camera etc&quot;]]
+subgraph Open
+    direction TB
+    open_func[[&quot;Open&quot;]]
 
     file_vrm[(&quot;VRMs&quot;)]
     file_3d[(&quot;3D models&quot;)]
-    file_vrm -..-&gt; input_vrm
-    file_3d -..-&gt; input_3d
+    file_cam[(&quot;Camera&quot;)]
+    file_other[(&quot;etc...&quot;)]
+    file_vrm -..-&gt; open_func
+    file_3d -..-&gt; open_func
+    file_cam -..-&gt; open_func
+    file_other -..-&gt; open_func
 
-    style input_vrm fill:#FFFF00
-    style input_3d fill:#FFFF00
-    style open_internalobj fill:#FFFF00
+    style open_func fill:#FFFF00
 end
 
-subgraph Second
+subgraph Change
     direction TB
-    change_pose[[&quot;Change pose&quot;]]
-    change_transform[[&quot;Change transform&quot;]]
-    change_properties[[&quot;Change properties&quot;]]
+    chtarget_pose[&quot;Pose&quot;]
+    chtarget_transform[&quot;Transform&quot;]
+    chtarget_properties[&quot;Properties&quot;]
+    chtarget_resolution[&quot;Resolution&quot;]
+    change_duration[&quot;Duration&quot;]
+    change_easing[&quot;Easing&quot;]
+    change_syseff[&quot;SystemEffect&quot;]
 
-    data_vrm[(&quot;VRMs&quot;)]
-    data_3d[(&quot;3D models&quot;)]
-    data_camera[(&quot;Camera etc&quot;)]
+    change_func[[&quot;Change&quot;]]
 
-    %%data_vrm &amp; data_3d &amp; data_camera -..-&gt; change_pose &amp; change_properties
-    change_pose -..-&gt; data_vrm
-    change_transform &amp; change_properties -..-&gt; data_vrm &amp; data_3d &amp; data_camera
+    chtarget_pose -..-&gt; change_func
+    chtarget_transform -..-&gt; change_func
+    chtarget_properties -..-&gt; change_func
+    chtarget_resolution -..-&gt; change_func
+    change_duration -..-&gt; change_func
+    change_easing -..-&gt; change_func
+    change_syseff -..-&gt; change_func
 
-    style change_pose fill:#FFFF00
-    style change_transform fill:#FFFF00
-    style change_properties fill:#FFFF00
+    style change_func fill:#FFFF00
+
 end
 
 reg_keyframe[[&quot;Register a keyframe&quot;]]
 
-subgraph Next
+subgraph Play
     direction LR
 
-    change_duration[[&quot;Change a duration&quot;]]
-    change_easing[[&quot;Change an easing&quot;]]
     play_animation[[&quot;Play an animation&quot;]]
     get_screenshot[[&quot;Take screenshot&quot;]]
     get_movie[[&quot;Recording&quot;]]
@@ -153,32 +156,30 @@ subgraph Next
     file_picture[(&quot;Picture&quot;)]
     file_movie[(&quot;Video&quot;)]
 
-    change_duration &amp; change_easing -..-&gt; play_animation -..-&gt; get_movie -..-&gt; file_movie
+    play_animation -..-&gt; get_movie -..-&gt; file_movie
     play_vrar -..-&gt; get_movie -..-&gt; file_movie
     get_screenshot -..-&gt; file_picture
 
     style reg_keyframe fill:#FFFF00
-    style change_duration fill:#FFFF00
-    style change_easing fill:#FFFF00
     style play_animation fill:#FFFF00
     style get_screenshot fill:#FFFF00
     style get_movie fill:#FFFF00
     style play_vrar fill:#FFFF00
 end
 
-First ~~~ Second  ~~~ Next
+Open ~~~ Change  ~~~ Play
 
-First --&gt; Second
-Second ---&gt; reg_keyframe --&gt; Next
-Next --&gt; Second
+Open --&gt; Change
+Change ---&gt; reg_keyframe --&gt; Play
+Play --&gt; Change
         </div><dl class="field-list simple">
-<dt class="field-odd">First<span class="colon">:</span></dt>
+<dt class="field-odd">Open<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Open VRM, 3D models, and other objects. Preparation steps.</p>
 </dd>
-<dt class="field-even">Second<span class="colon">:</span></dt>
+<dt class="field-even">Change<span class="colon">:</span></dt>
 <dd class="field-even"><p>Change properties of each object. Steps to check and create</p>
 </dd>
-<dt class="field-odd">Next<span class="colon">:</span></dt>
+<dt class="field-odd">Play<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Execution steps such as playing animation, viewing in VR/AR space, and taking screenshots.</p>
 </dd>
 </dl>

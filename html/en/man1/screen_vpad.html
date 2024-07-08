@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.19. v-pad (control pad for main camera) &mdash; VRMViewMeister 2.8.0 documentation</title>
+  <title>6.20. v-pad (virtual control pad) &mdash; VRMViewMeister 2.10.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6.20. Navigation" href="screen_naviwin.html" />
-    <link rel="prev" title="6.18. Internal storage dialog" href="screen_internaldlg.html" /> 
+    <link rel="next" title="6.21. Navigation" href="screen_naviwin.html" />
+    <link rel="prev" title="6.19. Internal storage dialog" href="screen_internaldlg.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,29 +50,30 @@
 <li class="toctree-l1"><a class="reference internal" href="feature.html">5. Feature</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="screen.html">6. Screen configuration</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="screen_main.html">6.1. Main screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_webgl.html">6.2. WebGL screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_appconfig.html">6.3. App settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_vrminfo.html">6.4. VRM information screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_project.html">6.5. Project setting screen</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_scrshot.html">6.6. Screenshot</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_pose.html">6.7. Pose/Motion list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_ikmarker.html">6.8. Repositioning of IK markers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_gravity.html">6.9. gravity settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_mediapipe.html">6.10. pose tracking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_video.html">6.11. Video player</a></li>
-<li class="toctree-l2"><a class="reference internal" href="menu.html">6.12. Menu structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_objlist.html">6.13. Object list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_prop.html">6.14. Property list</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_timeline.html">6.15. Timeline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_keyframereg.html">6.16. Keyframe registration window</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_keyframe.html">6.17. Setting keyframes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="screen_internaldlg.html">6.18. Internal storage dialog</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">6.19. v-pad (control pad for main camera)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id1">6.19.1. V-pad</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">6.19.2. other screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_appdlg.html">6.2. About this app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_webgl.html">6.3. WebGL screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_appconfig.html">6.4. App settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_vrminfo.html">6.5. VRM information screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_project.html">6.6. Project setting screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_scrshot.html">6.7. Screenshot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_pose.html">6.8. Pose/Motion list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_ikmarker.html">6.9. Repositioning of IK markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_gravity.html">6.10. gravity settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_mediapipe.html">6.11. pose tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_video.html">6.12. Video player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html">6.13. Menu structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_objlist.html">6.14. Object list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_prop.html">6.15. Property list</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_timeline.html">6.16. Timeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_keyframereg.html">6.17. Keyframe registration window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_keyframe.html">6.18. Setting keyframes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_internaldlg.html">6.19. Internal storage dialog</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.20. v-pad (virtual control pad)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">6.20.1. V-pad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">6.20.2. other screen</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="screen_naviwin.html">6.20. Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_naviwin.html">6.21. Navigation</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
@@ -82,7 +83,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. special operation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
@@ -106,7 +107,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="screen.html"><span class="section-number">6. </span>Screen configuration</a> &raquo;</li>
-      <li><span class="section-number">6.19. </span>v-pad (control pad for main camera)</li>
+      <li><span class="section-number">6.20. </span>v-pad (virtual control pad)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man1/screen_vpad.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -117,11 +118,11 @@
            <div itemprop="articleBody">
              
   <span class="target" id="index-0"></span><section id="v-pad">
-<span id="index-1"></span><h1><a class="toc-backref" href="#id3" role="doc-backlink"><span class="section-number">6.19. </span>v-pad (control pad for main camera)</a><a class="headerlink" href="#v-pad" title="Permalink to this heading"></a></h1>
+<span id="index-1"></span><h1><a class="toc-backref" href="#id3" role="doc-backlink"><span class="section-number">6.20. </span>v-pad (virtual control pad)</a><a class="headerlink" href="#v-pad" title="Permalink to this heading"></a></h1>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#v-pad" id="id3">v-pad (control pad for main camera)</a></p>
+<li><p><a class="reference internal" href="#v-pad" id="id3">v-pad (virtual control pad)</a></p>
 <ul>
 <li><p><a class="reference internal" href="#id1" id="id4">V-pad</a></p></li>
 <li><p><a class="reference internal" href="#id2" id="id5">other screen</a></p></li>
@@ -130,45 +131,39 @@
 </ul>
 </nav>
 <section id="id1">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">6.19.1. </span>V-pad</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">6.20.1. </span>V-pad</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <img alt="../_images/screen_vpad.png" class="align-center" src="../_images/screen_vpad.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <blockquote>
-<div><p>マウスやVRデバイスのコントローラの代わりにメインカメラの映像を操作できる機能です。四角のパネル内を上下左右にスワイプ（マウスでドラッグ）するとそのとおりにWebGL画面が動きます。操作の長さにより回転量・移動量は決まります。</p>
-<p>For explanation purposes: Can be used in the following cases:</p>
+<div><p>This function allows you to control the image from the main camera instead of using a mouse or a VR device controller. Swipe (drag with the mouse) up, down, left, right, or right within the square panel and the WebGL screen will move accordingly. The amount of rotation and movement is determined by the length of the movement.</p>
 </div></blockquote>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<blockquote>
+<div><p>Starting with version 2.10.0, you can now switch the object of operation.</p>
+<ul class="simple">
+<li><p>Main camera</p></li>
+<li><p>Selected object</p></li>
+</ul>
+</div></blockquote>
+<p>For explanation purposes: Can be used in the following cases:</p>
+</div>
 <ul class="simple">
 <li><p>I want to operate with one hand without using a keyboard</p></li>
 <li><p>I want to use it on a tablet PC as well.</p></li>
 </ul>
 <blockquote>
-<div><p>VRデバイスでもコントローラやハンドトラッキングにより使うことができます。WebGL画面を操作するのに細かい調整ができます。</p>
+<div><p>It can also be used with VR devices using controllers and hand tracking, allowing fine adjustments to control the WebGL screen.</p>
 <p>Also see <a class="reference internal" href="../man5/vrar_operation.html#vpad-for-vrar"><span class="std std-ref">V-pad in VR/AR environment</span></a> .</p>
 </div></blockquote>
-<dl class="field-list">
-<dt class="field-odd">rotation<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Equivalent to moving the mouse up, down, left, or right while right-clicking.</p>
+<dl class="simple">
+<dt>: <img alt="sub4" src="../_images/screen_vpad_icon_move.png" /> Move:</dt><dd><p>Moves the target object forward, backward, left and right.</p>
 </dd>
-<dt class="field-even">Forward<span class="colon">:</span></dt>
-<dd class="field-even"><p>Equivalent to moving the mouse wheel.</p>
+<dt>: <img alt="sub5" src="../_images/screen_vpad_icon_updown.png" /> Up and Down:</dt><dd><p>Moves the target up or down.</p>
 </dd>
-<dt class="field-odd">Camera and center point<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Move the main camera closer or farther away from the center point.</p>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p>bring closer</p></td>
-<td><p>Same as the <code class="docutils literal notranslate"><span class="pre">I</span></code> key on the keyboard</p></td>
-</tr>
-<tr class="row-even"><td><p>keep away</p></td>
-<td><p>Same as the <code class="docutils literal notranslate"><span class="pre">O</span></code> key on the keyboard</p></td>
-</tr>
-</tbody>
-</table>
-</dd>
-<dt class="field-even">move<span class="colon">:</span></dt>
-<dd class="field-even"><p>Equivalent to moving the mouse up, down, left, or right while clicking the middle mouse button.</p>
+<dt>: <img alt="sub6" src="../_images/screen_vpad_icon_rotate.png" /> Rotation:</dt><dd><p>Rotates the object up, down, left and right.</p>
 </dd>
 </dl>
 <dl class="field-list simple">
@@ -182,6 +177,10 @@
 <div class="line">This is the same as the button on the screen tab of the ribbon bar.</div>
 </div>
 </dd>
+<dt>: <img alt="sub7" src="../_images/screen_vpad_icon_changetarget.png" /> Switching the operation target:</dt><dd><p>Switch between Camera (main camera) and Object (currently selected object). The one with the icon displayed is the current object to be controlled. Each time you press it, it switches.</p>
+</dd>
+<dt>: <img alt="sub8" src="../_images/screen_vpad_icon_changespace.png" /> Switching operation space:</dt><dd><p>This is only available when the object being operated is an <code class="docutils literal notranslate"><span class="pre">Object</span></code>. Switches the space of movement and rotation between World and Local. The space where the icon is displayed is the current space. Each time you press it, it switches.</p>
+</dd>
 </dl>
 <div class="admonition- admonition">
 <p class="admonition-title">About the speed of movement and rotation</p>
@@ -190,7 +189,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p>The forward panel can only be swiped up and down (drag).</p></li>
+<li><p>The top and bottom panels can only be swiped (dragged) up and down.</p></li>
 <li><p>You can increase the screen size of the WebGL screen, but that may make it difficult to operate the mouse. In such a case, using this v-pad is convenient because you can finely adjust the display.</p></li>
 </ul>
 </div>
@@ -201,15 +200,25 @@
 </div>
 </section>
 <section id="id2">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">6.19.2. </span>other screen</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">6.20.2. </span>other screen</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">FOCUS<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Focus the main camera on the selected object.</p>
+</dd>
+</dl>
 <dl>
 <dt>Object list panel/properties panel collapsed</dt><dd><img alt="../_images/screen_objlist02.png" class="align-center" src="../_images/screen_objlist02.png" />
 </dd>
-<dt>Mobile viewing, portrait</dt><dd><p>It will be displayed at the bottom of the screen. The difference from normal V-pad is that there is no title bar for dragging.</p>
+<dt>Mobile View</dt><dd><p>It will be displayed on the edge of the screen. From version 2.10.0, both portrait and landscape are in the same format.</p>
 <img alt="../_images/screen_vpadmobile01.png" class="align-center" src="../_images/screen_vpadmobile01.png" />
+<dl class="field-list simple">
+<dt class="field-odd">Left<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Up/down, movement, FOCUS, switching of operation target</p>
 </dd>
-<dt>Mobile viewing, landscape</dt><dd><p>It will be displayed at the edge of the screen.</p>
-<img alt="../_images/screen_vpadmobile02.png" class="align-center" src="../_images/screen_vpadmobile02.png" />
+<dt class="field-even">Right<span class="colon">:</span></dt>
+<dd class="field-even"><p>Rotation, Focus, and switching of operating space</p>
+</dd>
+</dl>
 </dd>
 </dl>
 </section>
@@ -219,8 +228,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="screen_internaldlg.html" class="btn btn-neutral float-left" title="6.18. Internal storage dialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="screen_naviwin.html" class="btn btn-neutral float-right" title="6.20. Navigation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="screen_internaldlg.html" class="btn btn-neutral float-left" title="6.19. Internal storage dialog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="screen_naviwin.html" class="btn btn-neutral float-right" title="6.21. Navigation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

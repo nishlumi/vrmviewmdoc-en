@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10.2. Texture &mdash; VRMViewMeister 2.8.0 documentation</title>
+  <title>10.2. Texture &mdash; VRMViewMeister 2.10.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -68,6 +68,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#ice">10.2.2.6. Ice</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#pixelizetexture">10.2.2.7. PixelizeTexture</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cutout">10.2.2.8. Cutout</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transparent">10.2.2.9. Transparent</a></li>
 </ul>
 </li>
 </ul>
@@ -89,7 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Keyboard shortcut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. special operation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
@@ -146,6 +147,7 @@
 <li><p><a class="reference internal" href="#ice" id="id18">Ice</a></p></li>
 <li><p><a class="reference internal" href="#pixelizetexture" id="id19">PixelizeTexture</a></p></li>
 <li><p><a class="reference internal" href="#cutout" id="id20">Cutout</a></p></li>
+<li><p><a class="reference internal" href="#transparent" id="id21">Transparent</a></p></li>
 </ul>
 </li>
 </ul>
@@ -223,7 +225,7 @@
 <li><p>The opacity of each color property may not be properly reflected in WebGL. note that.</p></li>
 <li><p>If you have multiple textures (meshes) that use the same material, only the settings of the last texture will be reflected in the final animation project. (e.g. if there are 3 textures using material A, the 3rd setting will be applied last)</p></li>
 <li><p>VRM 0.x models also follow the VRM 1.x specifications when loaded with this app. Therefore, basically use <code class="docutils literal notranslate"><span class="pre">VRM10/MToon10</span></code> shaders.</p></li>
-<li><p>Standard, VRM/MToon, VRM10/MToon10以外のシェーダーはUnityのバージョンやレンダリングの仕様により、変更する可能性があります。</p></li>
+<li><p>Shaders other than Standard, VRM/MToon, VRM10/MToon10 may change depending on the Unity version and rendering specifications.</p></li>
 </ul>
 </div>
 <section id="standard">
@@ -482,6 +484,10 @@
 <p class="admonition-title">Note</p>
 <p>When you press the <strong>Transparency</strong> button on the left hand virtual controller of VR/AR, the shader of all materials will be automatically switched to Cutout.</p>
 </div>
+</section>
+<section id="transparent">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">10.2.2.9. </span>Transparent</a><a class="headerlink" href="#transparent" title="Permalink to this heading"></a></h3>
+<p>This shader is the initial value for Image and UImage objects. When you load an image that has transparent parts, it displays it while maintaining its transparency.</p>
 </section>
 </section>
 </section>
