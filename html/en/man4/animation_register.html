@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12.4. Registering and setting keyframes &mdash; VRMViewMeister 2.10.0 documentation</title>
+  <title>12.4. Registering and setting keyframes &mdash; VRMViewMeister 2.11.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -66,20 +66,21 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#index-2">12.4.2. Registering/updating to a keyframe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#index-5">12.4.3. Delete keyframe</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#index-6">12.4.4. Change the registered keyframe position</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#index-7">12.4.5. Modifiable properties</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#index-8">12.4.5.1. write notes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#index-9">12.4.5.2. Set easing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#modifyeachduration">12.4.5.3. Set keyframe intervals</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#index-11">12.4.5.4. Copy intervals from another avatar’s timeline</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#index-12">12.4.5.5. Change position or rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-6">12.4.3. Delete keyframe</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-7">12.4.4. Change the registered keyframe position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-8">12.4.5. Manipulating multiple keyframes at once</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-9">12.4.6. Modifiable properties</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#index-10">12.4.6.1. write notes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index-11">12.4.6.2. Set easing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modifyeachduration">12.4.6.3. Set keyframe intervals</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index-13">12.4.6.4. Copy intervals from another avatar’s timeline</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#index-14">12.4.6.5. Change position or rotation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#index-13">12.4.6. Insert an empty frame at the current position</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#index-14">12.4.7. Delete current frame position</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#index-15">12.4.8. Cut/copy/paste keyframes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id19">12.4.9. Child key function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-15">12.4.7. Insert an empty frame at the current position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-16">12.4.8. Delete current frame position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-17">12.4.9. Cut/copy/paste keyframes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">12.4.10. Child key function</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="animation_play.html">12.5. Play and stop animation</a></li>
@@ -88,13 +89,15 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="project.html">13. Project settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. special operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Special operation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">18. VR and AR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/config.html">19. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">20. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/gen_use_cloud.html">20. Support for cloud storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vroidhub.html">21. VRoidHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">22. Others</a></li>
 </ul>
 
         </div>
@@ -123,41 +126,42 @@
            <div itemprop="articleBody">
              
   <section id="index-0">
-<span id="id1"></span><h1><a class="toc-backref" href="#id23" role="doc-backlink"><span class="section-number">12.4. </span>Registering and setting keyframes</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">12.4. </span>Registering and setting keyframes</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#index-0" id="id23">Registering and setting keyframes</a></p>
+<li><p><a class="reference internal" href="#index-0" id="id24">Registering and setting keyframes</a></p>
 <ul>
-<li><p><a class="reference internal" href="#index-1" id="id24">Select a frame</a></p>
+<li><p><a class="reference internal" href="#index-1" id="id25">Select a frame</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id3" id="id25">Select a frame position</a></p></li>
-<li><p><a class="reference internal" href="#id4" id="id26">Select timeline (role)</a></p></li>
-<li><p><a class="reference internal" href="#id5" id="id27">If a keyframe has been registered</a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id26">Select a frame position</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id27">Select timeline (role)</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id28">If a keyframe has been registered</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#index-2" id="id28">Registering/updating to a keyframe</a></p></li>
-<li><p><a class="reference internal" href="#index-5" id="id29">Delete keyframe</a></p></li>
-<li><p><a class="reference internal" href="#index-6" id="id30">Change the registered keyframe position</a></p></li>
-<li><p><a class="reference internal" href="#index-7" id="id31">Modifiable properties</a></p>
+<li><p><a class="reference internal" href="#index-2" id="id29">Registering/updating to a keyframe</a></p></li>
+<li><p><a class="reference internal" href="#index-6" id="id30">Delete keyframe</a></p></li>
+<li><p><a class="reference internal" href="#index-7" id="id31">Change the registered keyframe position</a></p></li>
+<li><p><a class="reference internal" href="#index-8" id="id32">Manipulating multiple keyframes at once</a></p></li>
+<li><p><a class="reference internal" href="#index-9" id="id33">Modifiable properties</a></p>
 <ul>
-<li><p><a class="reference internal" href="#index-8" id="id32">write notes</a></p></li>
-<li><p><a class="reference internal" href="#index-9" id="id33">Set easing</a></p></li>
-<li><p><a class="reference internal" href="#modifyeachduration" id="id34">Set keyframe intervals</a></p></li>
-<li><p><a class="reference internal" href="#index-11" id="id35">Copy intervals from another avatar’s timeline</a></p></li>
-<li><p><a class="reference internal" href="#index-12" id="id36">Change position or rotation</a></p></li>
+<li><p><a class="reference internal" href="#index-10" id="id34">write notes</a></p></li>
+<li><p><a class="reference internal" href="#index-11" id="id35">Set easing</a></p></li>
+<li><p><a class="reference internal" href="#modifyeachduration" id="id36">Set keyframe intervals</a></p></li>
+<li><p><a class="reference internal" href="#index-13" id="id37">Copy intervals from another avatar’s timeline</a></p></li>
+<li><p><a class="reference internal" href="#index-14" id="id38">Change position or rotation</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#index-13" id="id37">Insert an empty frame at the current position</a></p></li>
-<li><p><a class="reference internal" href="#index-14" id="id38">Delete current frame position</a></p></li>
-<li><p><a class="reference internal" href="#index-15" id="id39">Cut/copy/paste keyframes</a></p></li>
-<li><p><a class="reference internal" href="#id19" id="id40">Child key function</a></p></li>
+<li><p><a class="reference internal" href="#index-15" id="id39">Insert an empty frame at the current position</a></p></li>
+<li><p><a class="reference internal" href="#index-16" id="id40">Delete current frame position</a></p></li>
+<li><p><a class="reference internal" href="#index-17" id="id41">Cut/copy/paste keyframes</a></p></li>
+<li><p><a class="reference internal" href="#id20" id="id42">Child key function</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 <section id="index-1">
-<span id="id2"></span><h2><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">12.4.1. </span>Select a frame</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id25" role="doc-backlink"><span class="section-number">12.4.1. </span>Select a frame</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
 <p>This is the frame selection operation, which is the basic operation. There are two types of selection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Select frame number<span class="colon">:</span></dt>
@@ -168,7 +172,7 @@
 </dd>
 </dl>
 <section id="id3">
-<h3><a class="toc-backref" href="#id25" role="doc-backlink"><span class="section-number">12.4.1.1. </span>Select a frame position</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">12.4.1.1. </span>Select a frame position</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Click on the frame number at the top of the timeline to select it.</p></li>
 </ol>
@@ -182,7 +186,7 @@
 <p>If the keyframe is not registered, it will not be selected even if you click the keyframe part.</p>
 </section>
 <section id="id4">
-<h3><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">12.4.1.2. </span>Select timeline (role)</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id27" role="doc-backlink"><span class="section-number">12.4.1.2. </span>Select timeline (role)</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Click on the role name on the left of the timeline to select it.</p></li>
 </ol>
@@ -201,7 +205,7 @@
 </ol>
 </section>
 <section id="id5">
-<h3><a class="toc-backref" href="#id27" role="doc-backlink"><span class="section-number">12.4.1.3. </span>If a keyframe has been registered</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id28" role="doc-backlink"><span class="section-number">12.4.1.3. </span>If a keyframe has been registered</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Clicking a point with a registered keyframe selects both the frame position and the timeline (roll).</p></li>
 </ol>
@@ -247,7 +251,7 @@
 <span class="target" id="reg-anim"></span></section>
 </section>
 <section id="index-2">
-<span id="id6"></span><h2><a class="toc-backref" href="#id28" role="doc-backlink"><span class="section-number">12.4.2. </span>Registering/updating to a keyframe</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<span id="id6"></span><h2><a class="toc-backref" href="#id29" role="doc-backlink"><span class="section-number">12.4.2. </span>Registering/updating to a keyframe</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
 <p>We will register keyframes on the timeline. The contents that can be registered in key frames are as follows.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Contents that can be registered<span class="colon">:</span></dt>
@@ -269,10 +273,11 @@
 </div>
 <div class="admonition-ik admonition">
 <p class="admonition-title">Is it possible to register keyframes for each bone (IK marker)?</p>
-<p>It is not possible to register only specific bones like MMD. All IK parts must be registered for each frame. (In other words, save the current pose/state as a whole)</p>
 <p>From <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.1.0</span></code>, it is now possible to check the bones to be registered (called IK markers in this application) on the UI. In the future, we plan to make it possible to register keyframes for each bone in the same way as MMD/MMM.</p>
+<p>Starting with <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.11.0</span></code>, it is now possible to register only the movement of a specific bone (IK marker) to a keyframe, like MMD. Parts other than the registered IK marker will inherit the movement of the last registered keyframe.</p>
 </div>
-<ol class="arabic simple">
+<dl>
+<dt>Method of operation</dt><dd><ol class="arabic simple">
 <li><p>Click the keyframe number on the VRoid/VRM timeline to pose.</p></li>
 </ol>
 <img alt="../_images/register_1.png" class="align-center" src="../_images/register_1.png" />
@@ -297,7 +302,7 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<ol class="arabic simple">
+<ol class="arabic simple" start="4">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">keyframe</span> <span class="pre">registration</span> <span class="pre">window</span></code> will appear.</p></li>
 </ol>
 <p>In the keyframe registration window, you can see what you are about to register and the bones.</p>
@@ -320,82 +325,11 @@
 <p class="admonition-title">Hint</p>
 <p>You can display it by right-clicking anywhere in the ribbon bar (Control-click or double-tap on macOS).</p>
 </div>
-<dl id="index-3">
-<dt>Decide what to register</dt><dd><p>In <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">to</span> <span class="pre">register</span></code>, you can choose the following contents.</p>
-<table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p>Common (move)</p></td>
-<td><p>only register the movement of the IK marker. The <code class="docutils literal notranslate"><span class="pre">position</span></code> of the <code class="docutils literal notranslate"><span class="pre">common</span></code> tab in the property list.</p></td>
-</tr>
-<tr class="row-even"><td><p>Register common (other than movement)</p></td>
-<td><p>IK marker rotation, magnification, jump, and shake. It is the item with the same name on the <code class="docutils literal notranslate"><span class="pre">Common</span></code> tab of the property list.</p></td>
-</tr>
-<tr class="row-odd"><td><p>Property</p></td>
-<td><p>Register each property of the currently selected object. A non-common tab in the property list.</p></td>
-</tr>
-</tbody>
-</table>
-<ul class="simple">
-<li><p>Up to <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.0.3</span></code>, all three types were forcibly registered.</p></li>
-<li><p>In <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.1.0</span></code> or later, for example, if you change the blend shape in the first frame and want to continue to reflect that blend shape, you can uncheck the property and register it in the second frame and later. , you can leave it all the way to a keyframe that changes the property again. You can only need to modify the blendshape on frame 1 and then change again.</p></li>
-<li><p>There is no point in turning on or off the check for system effects and audio.</p></li>
-</ul>
-</dd>
-</dl>
-<dl>
-<dt>Check the IK marker to be registered</dt><dd><p>In <code class="docutils literal notranslate"><span class="pre">Bones</span> <span class="pre">to</span> <span class="pre">register</span></code>, you can check the IK markers that are actually registered. Note that the number of IK markers that can be checked differs between VRM and other objects.</p>
-<dl class="field-list">
-<dt class="field-odd">VRM<span class="colon">:</span></dt>
-<dd class="field-odd"><table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><img alt="vvmico_prop" src="../_images/vvmico_prop.png" /> Property</p></td>
-<td><p><img alt="vvmico_ikparent" src="../_images/vvmico_bn_ikparent.png" /> IKParent</p></td>
-<td><p><img alt="vvmico_head" src="../_images/vvmico_bn_head.png" /> Head</p></td>
-<td><p><img alt="vvmico_eye" src="../_images/vvmico_bn_eyeviewhandle.png" /> EyeViewHandle</p></td>
-<td><p><img alt="vvmico_lookat" src="../_images/vvmico_bn_lookat.png" /> LookAt</p></td>
-</tr>
-<tr class="row-even"><td><p><img alt="vvmico_chest" src="../_images/vvmico_bn_chest.png" /> Chest</p></td>
-<td><p><img alt="vvmico_aim" src="../_images/vvmico_bn_aim.png" /> Aim</p></td>
-<td><p><img alt="vvmico_pelvis" src="../_images/vvmico_bn_pelvis.png" /> Pelvis</p></td>
-<td><p><img alt="vvmico_leftsho" src="../_images/vvmico_bn_leftshoulder.png" /> LeftShoulder</p></td>
-<td><p><img alt="vvmico_rightsho" src="../_images/vvmico_bn_rightshoulder.png" /> RightShoulder</p></td>
-</tr>
-<tr class="row-odd"><td><p><img alt="vvmico_leftla" src="../_images/vvmico_bn_leftlowerarm.png" /> LeftLowerArm</p></td>
-<td><p><img alt="vvmico_lefthand" src="../_images/vvmico_bn_lefthand.png" /> LeftHand</p></td>
-<td><p><img alt="vvmico_rightla" src="../_images/vvmico_bn_rightlowerarm.png" /> RightLowerArm</p></td>
-<td><p><img alt="vvmico_righthand" src="../_images/vvmico_bn_righthand.png" /> RightHand</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p><img alt="vvmico_leftll" src="../_images/vvmico_bn_leftlowerleg.png" /> LeftLowerLeg</p></td>
-<td><p><img alt="vvmico_leftft" src="../_images/vvmico_bn_leftleg.png" /> LeftLeg</p></td>
-<td><p><img alt="vvmico_rightll" src="../_images/vvmico_bn_rightlowerleg.png" /> RightLowerLeg</p></td>
-<td><p><img alt="vvmico_rightft" src="../_images/vvmico_bn_rightleg.png" /> RightLeg</p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</dd>
-<dt class="field-even">Non-VRM<span class="colon">:</span></dt>
-<dd class="field-even"><table class="docutils align-default">
-<tbody>
-<tr class="row-odd"><td><p><img alt="vvmico_ikparent" src="../_images/vvmico_bn_ikparent.png" /> IKParent</p></td>
-<td><p><img alt="vvmico_prop" src="../_images/vvmico_prop.png" /> Property</p></td>
-</tr>
-</tbody>
-</table>
-</dd>
-</dl>
-<p>In addition, it is also expressed so that the parts can be identified with icons. This icon is also used in the keyframe content popup on the timeline.</p>
-<img alt="../_images/screen_timeline02.png" class="align-center" src="../_images/screen_timeline02.png" />
 </dd>
 </dl>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<dl class="simple">
-<dt>Right click to register</dt><dd><p><img alt="contextregist" src="../_images/register_5.png" /> Right-clicking on the object list and clicking <code class="docutils literal notranslate"><span class="pre">Register</span> <span class="pre">Pose</span> <span class="pre">in</span> <span class="pre">Current</span> <span class="pre">Frame</span></code> has the same function.</p>
-</dd>
-</dl>
 <ol class="arabic simple" start="6">
 <li><p>Confirm that the target keyframe in the timeline is filled.</p></li>
 </ol>
@@ -421,14 +355,109 @@
 <div class="line"><br /></div>
 </div>
 <p>Repeat for the length of the animation you want to create.</p>
-<div class="admonition- admonition" id="index-4">
+<dl class="simple">
+<dt>Right click to register</dt><dd><p><img alt="contextregist" src="../_images/register_5.png" /> Right-clicking on the object list and clicking <code class="docutils literal notranslate"><span class="pre">Register</span> <span class="pre">Pose</span> <span class="pre">in</span> <span class="pre">Current</span> <span class="pre">Frame</span></code> has the same function.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Register keyframe button on the toolbar (Mobile display mode)</dt><dd><p><img alt="mbltoolbarbtn" src="../_images/register_q.png" /> If you press this button, you can register immediately without displaying the keyframe registration window. It is just not displayed, but the IK marker of the <code class="docutils literal notranslate"><span class="pre">bone</span> <span class="pre">to</span> <span class="pre">register</span></code> is actually registered with a check mark, as shown below.</p>
+<ul class="simple">
+<li><p>IK marker registered in the previously selected keyframe</p></li>
+<li><p>IK marker checked in the keyframe registration window</p></li>
+</ul>
+</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<dl id="index-3">
+<dt>Decide what to register</dt><dd><p>In <code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">to</span> <span class="pre">register</span></code>, you can choose the following contents.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>Common (move)</p></td>
+<td><p>only register the movement of the IK marker. The <code class="docutils literal notranslate"><span class="pre">position</span></code> of the <code class="docutils literal notranslate"><span class="pre">common</span></code> tab in the property list.</p></td>
+</tr>
+<tr class="row-even"><td><p>Register common (other than movement)</p></td>
+<td><p>IK marker rotation, magnification, jump, and shake. It is the item with the same name on the <code class="docutils literal notranslate"><span class="pre">Common</span></code> tab of the property list.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Property</p></td>
+<td><p>Register each property of the currently selected object. A non-common tab in the property list.</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Up to <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.0.3</span></code>, all three types were forcibly registered.</p></li>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.1.0</span></code> or later, for example, if you change the blend shape in the first frame and want to continue to reflect that blend shape, you can uncheck the property and register it in the second frame and later. , you can leave it all the way to a keyframe that changes the property again. You can only need to modify the blendshape on frame 1 and then change again.</p></li>
+<li><p>There is no point in turning on or off the check for system effects and audio.</p></li>
+</ul>
+</dd>
+</dl>
+<dl id="index-4">
+<dt>Check the IK marker to be registered</dt><dd><p>In <code class="docutils literal notranslate"><span class="pre">Bones</span> <span class="pre">to</span> <span class="pre">register</span></code>, you can check the IK markers that are actually registered. Note that the number of IK markers that can be checked differs between VRM and other objects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you select a registered keyframe, only the IK markers registered to that keyframe will be checked until the next registered keyframe is selected.</p>
+<p>However, if no keyframes have been registered for any of the selected objects, all IK markers will be checked.</p>
+</div>
+<dl class="field-list">
+<dt class="field-odd">VRM<span class="colon">:</span></dt>
+<dd class="field-odd"><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img alt="vvmico_prop" src="../_images/vvmico_prop.png" /> Property</p></td>
+<td><p><img alt="vvmico_ikparent" src="../_images/vvmico_bn_ikparent1.png" /> IKParent</p></td>
+<td><p><img alt="vvmico_head" src="../_images/vvmico_bn_head1.png" /> Head</p></td>
+<td><p><img alt="vvmico_eye" src="../_images/vvmico_bn_eyeviewhandle1.png" /> EyeViewHandle</p></td>
+<td><p><img alt="vvmico_lookat" src="../_images/vvmico_bn_lookat1.png" /> LookAt</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="vvmico_chest" src="../_images/vvmico_bn_chest1.png" /> Chest</p></td>
+<td><p><img alt="vvmico_aim" src="../_images/vvmico_bn_aim1.png" /> Aim</p></td>
+<td><p><img alt="vvmico_pelvis" src="../_images/vvmico_bn_pelvis1.png" /> Pelvis</p></td>
+<td><p><img alt="vvmico_leftsho" src="../_images/vvmico_bn_leftshoulder1.png" /> LeftShoulder</p></td>
+<td><p><img alt="vvmico_rightsho" src="../_images/vvmico_bn_rightshoulder1.png" /> RightShoulder</p></td>
+</tr>
+<tr class="row-odd"><td><p><img alt="vvmico_leftla" src="../_images/vvmico_bn_leftlowerarm1.png" /> LeftLowerArm</p></td>
+<td><p><img alt="vvmico_lefthand" src="../_images/vvmico_bn_lefthand1.png" /> LeftHand</p></td>
+<td><p><img alt="vvmico_rightla" src="../_images/vvmico_bn_rightlowerarm1.png" /> RightLowerArm</p></td>
+<td><p><img alt="vvmico_righthand" src="../_images/vvmico_bn_righthand1.png" /> RightHand</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><img alt="vvmico_leftll" src="../_images/vvmico_bn_leftlowerleg1.png" /> LeftLowerLeg</p></td>
+<td><p><img alt="vvmico_leftft" src="../_images/vvmico_bn_leftleg1.png" /> LeftLeg</p></td>
+<td><p><img alt="vvmico_rightll" src="../_images/vvmico_bn_rightlowerleg1.png" /> RightLowerLeg</p></td>
+<td><p><img alt="vvmico_rightft" src="../_images/vvmico_bn_rightleg1.png" /> RightLeg</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt class="field-even">Non-VRM<span class="colon">:</span></dt>
+<dd class="field-even"><table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><img alt="vvmico_ikparent" src="../_images/vvmico_bn_ikparent1.png" /> IKParent</p></td>
+<td><p><img alt="vvmico_prop" src="../_images/vvmico_prop.png" /> Property</p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<p>In addition, it is also expressed so that the parts can be identified with icons. This icon is also used in the keyframe content popup on the timeline.</p>
+<img alt="../_images/screen_timeline02.png" class="align-center" src="../_images/screen_timeline02.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Starting with <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.11.0</span></code>, for VRM, it is now possible to register only specific bones (IK markers) shown above to keyframes.</p>
+<p>From the <code class="docutils literal notranslate"><span class="pre">Bone</span> <span class="pre">to</span> <span class="pre">Register</span></code> checkboxes, check only the IK markers you want to register.</p>
+<p>For information about the convenient selection buttons in the keyframe registration window, see <a class="reference internal" href="../man1/screen_keyframereg.html"><span class="doc">Keyframe registration window</span></a>. You can select only the gaze, only the upper body, etc.</p>
+</dd>
+</dl>
+<div class="admonition- admonition" id="index-5">
 <p class="admonition-title">What about the compensation between keyframes?</p>
 <p>Due to the effects of the library used by this application, the animation between registered keyframes is automatically corrected. (Some motions cannot be fully corrected)</p>
 <p>When you click on a frame number that has nothing registered, if it is between the registered keyframes, the pose in the middle of the animation will be reproduced. This will change depending on the easing and spacing described later.</p>
 </div>
 </section>
-<section id="index-5">
-<span id="id7"></span><h2><a class="toc-backref" href="#id29" role="doc-backlink"><span class="section-number">12.4.3. </span>Delete keyframe</a><a class="headerlink" href="#index-5" title="Permalink to this heading"></a></h2>
+<section id="index-6">
+<span id="id7"></span><h2><a class="toc-backref" href="#id30" role="doc-backlink"><span class="section-number">12.4.3. </span>Delete keyframe</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
 <p>The registered keyframes on the timeline are deleted.</p>
 <ol class="arabic simple">
 <li><p>Click to select the object you want to delete and the keyframe number.</p></li>
@@ -455,6 +484,9 @@
 <tr class="row-even"><td><p>Delete only properties</p></td>
 <td><p>deletes each property of <code class="docutils literal notranslate"><span class="pre">non-common</span></code> objects from the contents registered in the keyframe. Keyframes are not deleted.</p></td>
 </tr>
+<tr class="row-odd"><td><p>Delete only VRMAnimation</p></td>
+<td><p>It only deletes the temporary data for the VRMAnimation. When you select a keyframe, the temporary data will be generated again.</p></td>
+</tr>
 </tbody>
 </table>
 </div></blockquote>
@@ -466,17 +498,17 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="index-6">
-<span id="id8"></span><h2><a class="toc-backref" href="#id30" role="doc-backlink"><span class="section-number">12.4.4. </span>Change the registered keyframe position</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
+<section id="index-7">
+<span id="id8"></span><h2><a class="toc-backref" href="#id31" role="doc-backlink"><span class="section-number">12.4.4. </span>Change the registered keyframe position</a><a class="headerlink" href="#index-7" title="Permalink to this heading"></a></h2>
 <p>You can move the frame position of the registered keyframe.</p>
 <ol class="arabic simple">
 <li><p>Register a keyframe.</p></li>
 <li><p>Double-click the registered keyframe part.</p></li>
 </ol>
-<figure class="align-center" id="id20">
+<figure class="align-center" id="id21">
 <img alt="../_images/register_6.png" src="../_images/register_6.png" />
 <figcaption>
-<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <div class="line-block">
@@ -512,40 +544,63 @@
 </dd>
 </dl>
 </div>
+</section>
+<section id="index-8">
+<span id="id9"></span><h2><a class="toc-backref" href="#id32" role="doc-backlink"><span class="section-number">12.4.5. </span>Manipulating multiple keyframes at once</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h2>
+<p>Starting with version 2.11.0, you can now not only move keyframes, but also duplicate and delete multiple keyframes at the same time.</p>
+<img alt="../_images/register_p.png" class="align-center" src="../_images/register_p.png" />
+<dl class="field-list simple">
+<dt class="field-odd"><img alt="reg_move" src="../_images/register_p1.png" /><span class="colon">:</span></dt>
+<dd class="field-odd"><p>Moves the start frame to the end frame to the destination frame.</p>
+</dd>
+<dt class="field-even"><img alt="reg_dup" src="../_images/register_p2.png" /><span class="colon">:</span></dt>
+<dd class="field-even"><p>Duplicate the start frame to the end frame to the destination frame.</p>
+</dd>
+<dt class="field-odd"><img alt="reg_del" src="../_images/register_p3.png" /><span class="colon">:</span></dt>
+<dd class="field-odd"><p>Remove the start frame to the end frame.</p>
+</dd>
+</dl>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<ul class="simple">
+<li><p>If the destination frame is between the start and end frames, the Move and Duplicate buttons will be disabled.</p></li>
+<li><p>In the case of deletion, the destination frame is not used.</p></li>
+</ul>
+</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="index-7">
-<span id="id9"></span><h2><a class="toc-backref" href="#id31" role="doc-backlink"><span class="section-number">12.4.5. </span>Modifiable properties</a><a class="headerlink" href="#index-7" title="Permalink to this heading"></a></h2>
+<section id="index-9">
+<span id="id10"></span><h2><a class="toc-backref" href="#id33" role="doc-backlink"><span class="section-number">12.4.6. </span>Modifiable properties</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h2>
 <p>The properties that can be changed in the keyframe settings dialog are as follows. Any property can be changed many times at once by targeting multiple keyframes. I think there are many ways to use it.</p>
 <p>If you hover the mouse cursor over the registered key position, a popup will appear and you can check the interval and easing at that position.</p>
 <img alt="../_images/screen_timeline02.png" class="align-center" src="../_images/screen_timeline02.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="index-8">
-<span id="id10"></span><h3><a class="toc-backref" href="#id32" role="doc-backlink"><span class="section-number">12.4.5.1. </span>write notes</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h3>
+<section id="index-10">
+<span id="id11"></span><h3><a class="toc-backref" href="#id34" role="doc-backlink"><span class="section-number">12.4.6.1. </span>write notes</a><a class="headerlink" href="#index-10" title="Permalink to this heading"></a></h3>
 <p>This can be set after registering the keyframe. It does not affect actual movement or properties. You can make a note of what movement will occur at that key frame.</p>
 <img alt="../_images/register_o.png" class="align-center" src="../_images/register_o.png" />
 <ol class="arabic simple">
 <li><p>Register a keyframe.</p></li>
 <li><p>Double-click the registered keyframe part to open the keyframe window.</p></li>
 <li><p>Open the General tab.</p></li>
-<li><p>メモの入力ボックスにモーションの内容などを入力します。</p></li>
+<li><p>Enter the details of the motion in the memo input box.</p></li>
 </ol>
 </section>
-<section id="index-9">
-<span id="id11"></span><h3><a class="toc-backref" href="#id33" role="doc-backlink"><span class="section-number">12.4.5.2. </span>Set easing</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h3>
+<section id="index-11">
+<span id="id12"></span><h3><a class="toc-backref" href="#id35" role="doc-backlink"><span class="section-number">12.4.6.2. </span>Set easing</a><a class="headerlink" href="#index-11" title="Permalink to this heading"></a></h3>
 <p>It can be set after registering the keyframe. If you’re familiar with animation, you may already know this, but it’s a factor that affects how things move, such as how long it takes to change to a certain keyframe, and how fast it moves. Changing this will change the animation from a monotonous impression to a lively one.</p>
 <ol class="arabic simple">
 <li><p>Register a keyframe.</p></li>
 <li><p>Double-click the registered keyframe part to open the keyframe window.</p></li>
 </ol>
-<figure class="align-center" id="id21">
+<figure class="align-center" id="id22">
 <img alt="../_images/register_6.png" src="../_images/register_6.png" />
 <figcaption>
-<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="3">
@@ -572,7 +627,7 @@
 </div>
 </section>
 <section id="modifyeachduration">
-<span id="index-10"></span><span id="id13"></span><h3><a class="toc-backref" href="#id34" role="doc-backlink"><span class="section-number">12.4.5.3. </span>Set keyframe intervals</a><a class="headerlink" href="#modifyeachduration" title="Permalink to this heading"></a></h3>
+<span id="index-12"></span><span id="id14"></span><h3><a class="toc-backref" href="#id36" role="doc-backlink"><span class="section-number">12.4.6.3. </span>Set keyframe intervals</a><a class="headerlink" href="#modifyeachduration" title="Permalink to this heading"></a></h3>
 <p>It can be set after registering the keyframe. Sets the time to reach the corresponding keyframe. Basically it is calculated automatically, but you can also specify it manually.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>デフォルトの間隔(duration)・・・ [FPS / 6000] 秒
 </pre></div>
@@ -581,10 +636,10 @@
 <li><p>Register a keyframe.</p></li>
 <li><p>Double-click the registered keyframe part to open the keyframe window.</p></li>
 </ol>
-<figure class="align-center" id="id22">
+<figure class="align-center" id="id23">
 <img alt="../_images/register_6.png" src="../_images/register_6.png" />
 <figcaption>
-<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="3">
@@ -609,8 +664,8 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="index-11">
-<span id="id14"></span><h3><a class="toc-backref" href="#id35" role="doc-backlink"><span class="section-number">12.4.5.4. </span>Copy intervals from another avatar’s timeline</a><a class="headerlink" href="#index-11" title="Permalink to this heading"></a></h3>
+<section id="index-13">
+<span id="id15"></span><h3><a class="toc-backref" href="#id37" role="doc-backlink"><span class="section-number">12.4.6.4. </span>Copy intervals from another avatar’s timeline</a><a class="headerlink" href="#index-13" title="Permalink to this heading"></a></h3>
 <p>You can easily obtain the total interval from a specific range of keyframes on other timelines.</p>
 <blockquote>
 <div><img alt="../_images/register_g.png" class="align-center" src="../_images/register_g.png" />
@@ -630,14 +685,18 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="index-12">
-<span id="id15"></span><h3><a class="toc-backref" href="#id36" role="doc-backlink"><span class="section-number">12.4.5.5. </span>Change position or rotation</a><a class="headerlink" href="#index-12" title="Permalink to this heading"></a></h3>
+<section id="index-14">
+<span id="id16"></span><h3><a class="toc-backref" href="#id38" role="doc-backlink"><span class="section-number">12.4.6.5. </span>Change position or rotation</a><a class="headerlink" href="#index-14" title="Permalink to this heading"></a></h3>
 <p>It can be set after registering the keyframe. If the selected avatar is VRM, OtherObject, Camera, Light, or Effect, you can adjust the position and rotation of the object itself.</p>
 <ol class="arabic simple">
 <li><p>Fill in the input fields for the X, Y and Z axes of position or rotation.</p></li>
 <li><p>By default, changes are applied to target keyframes with relative position and relative angle.</p></li>
+<li><p>Click the Apply button at the bottom right.</p></li>
 </ol>
 <img alt="../_images/register_k.png" class="align-center" src="../_images/register_k.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Position<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Moves the object plus or minus from its current position. If 0, do not change.</p>
@@ -660,8 +719,8 @@
 </div>
 </section>
 </section>
-<section id="index-13">
-<span id="id16"></span><h2><a class="toc-backref" href="#id37" role="doc-backlink"><span class="section-number">12.4.6. </span>Insert an empty frame at the current position</a><a class="headerlink" href="#index-13" title="Permalink to this heading"></a></h2>
+<section id="index-15">
+<span id="id17"></span><h2><a class="toc-backref" href="#id39" role="doc-backlink"><span class="section-number">12.4.7. </span>Insert an empty frame at the current position</a><a class="headerlink" href="#index-15" title="Permalink to this heading"></a></h2>
 <p>Inserts an empty frame at the currently selected frame number and shifts all frames to the right by one.</p>
 <img alt="../_images/register_i.png" class="align-center" src="../_images/register_i.png" />
 <ol class="arabic simple">
@@ -669,8 +728,8 @@
 <li><p>Then, all frames to the right, including the currently selected frame position, will shift to the right by one, and the maximum number of frames will increase by one.</p></li>
 </ol>
 </section>
-<section id="index-14">
-<span id="id17"></span><h2><a class="toc-backref" href="#id38" role="doc-backlink"><span class="section-number">12.4.7. </span>Delete current frame position</a><a class="headerlink" href="#index-14" title="Permalink to this heading"></a></h2>
+<section id="index-16">
+<span id="id18"></span><h2><a class="toc-backref" href="#id40" role="doc-backlink"><span class="section-number">12.4.8. </span>Delete current frame position</a><a class="headerlink" href="#index-16" title="Permalink to this heading"></a></h2>
 <p>Deletes the currently selected frame position.</p>
 <img alt="../_images/register_j.png" class="align-center" src="../_images/register_j.png" />
 <ol class="arabic simple">
@@ -685,8 +744,8 @@
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="index-15">
-<span id="id18"></span><h2><a class="toc-backref" href="#id39" role="doc-backlink"><span class="section-number">12.4.8. </span>Cut/copy/paste keyframes</a><a class="headerlink" href="#index-15" title="Permalink to this heading"></a></h2>
+<section id="index-17">
+<span id="id19"></span><h2><a class="toc-backref" href="#id41" role="doc-backlink"><span class="section-number">12.4.9. </span>Cut/copy/paste keyframes</a><a class="headerlink" href="#index-17" title="Permalink to this heading"></a></h2>
 <p>You can copy, cut, paste, and move registered keyframes.</p>
 <img alt="../_images/register_m.png" class="align-center" src="../_images/register_m.png" />
 <ol class="arabic simple">
@@ -714,9 +773,12 @@
 <p>The destination timeline (role) must be the same.</p>
 <p>Even if the object type is the same, it cannot be pasted if the roles are different.</p>
 </div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 </section>
-<section id="id19">
-<h2><a class="toc-backref" href="#id40" role="doc-backlink"><span class="section-number">12.4.9. </span>Child key function</a><a class="headerlink" href="#id19" title="Permalink to this heading"></a></h2>
+<section id="id20">
+<h2><a class="toc-backref" href="#id42" role="doc-backlink"><span class="section-number">12.4.10. </span>Child key function</a><a class="headerlink" href="#id20" title="Permalink to this heading"></a></h2>
 <p>Deprecated in <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.2.0</span></code>. All motions now move smoothly by setting easing continuously. The child key function has been abolished as the original purpose has been achieved.</p>
 </section>
 </section>

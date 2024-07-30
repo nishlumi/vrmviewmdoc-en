@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>21. VRoidHub &mdash; VRMViewMeister 2.11.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+        <script src="../_static/js/mermaid.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="22. Others" href="other.html" />
+    <link rel="prev" title="20. Support for cloud storage" href="gen_use_cloud.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">table of contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../man1/initial.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/aboutuse.html">2. Prerequisites for Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/environ.html">3. Operating environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/install.html">4. How to install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/feature.html">5. Feature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man1/screen.html">6. Screen configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="general_use.html">7. General usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/object_about.html">8. Usable object</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/property.html">9. Property list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man2/operation.html">10. Manipulating Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="special_operation.html">14. Special operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="photograph.html">15. Screenshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="videorec.html">16. Video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texttrack.html">17. Edit Subtitles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vrar.html">18. VR and AR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">19. Setting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gen_use_cloud.html">20. Support for cloud storage</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">21. VRoidHub</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">21.1. Connecting to VRoidHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">21.2. Loading a model from VRoidHub</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="other.html">22. Others</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">VRMViewMeister</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li><span class="section-number">21. </span>VRoidHub</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/man5/vroidhub.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vroidhub">
+<span id="index-0"></span><h1><a class="toc-backref" href="#id3" role="doc-backlink"><span class="section-number">21. </span>VRoidHub</a><a class="headerlink" href="#vroidhub" title="Permalink to this heading"></a></h1>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#vroidhub" id="id3">VRoidHub</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id4">Connecting to VRoidHub</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id5">Loading a model from VRoidHub</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="id1">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">21.1. </span>Connecting to VRoidHub</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<p>From version 2.11.0, it is now possible to load VRM from VRoidHub.</p>
+<p>Please register for a VRoidHub account in advance.</p>
+<dl class="field-list simple">
+<dt class="field-odd">VRoidHub<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://hub.vroid.com/">https://hub.vroid.com/</a></p>
+</dd>
+</dl>
+<dl>
+<dt>For web apps</dt><dd><ol class="arabic simple">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">3D</span> <span class="pre">Model</span></code> tab on the ribbon bar of this app.</p></li>
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">Connect</span></code> button in the VRoidHub area.</p></li>
+</ol>
+<img alt="../_images/vroidhubmenu01.png" class="align-center" src="../_images/vroidhubmenu01.png" />
+<ol class="arabic simple" start="3">
+<li><p>This app will redirect you to the VRoidHub website.</p></li>
+</ol>
+<img alt="../_images/vroidhubmenu02.png" class="align-center" src="../_images/vroidhubmenu02.png" />
+<ol class="arabic simple" start="4">
+<li><p>Log in to VRoidHub and allow the connection between this app and VRoidHub.</p></li>
+</ol>
+<img alt="../_images/vroidhubmenu03.png" class="align-center" src="../_images/vroidhubmenu03.png" />
+<ol class="arabic simple" start="5">
+<li><p>After logging in, the app screen will be displayed again.</p></li>
+<li><p>The connection between this app and VRoidHub will be completed.</p></li>
+</ol>
+</dd>
+<dt>For each OS version</dt><dd><ol class="arabic simple">
+<li><p>Open the <code class="docutils literal notranslate"><span class="pre">3D</span> <span class="pre">Model</span></code> tab on the ribbon bar of this app.</p></li>
+<li><p>Press the <code class="docutils literal notranslate"><span class="pre">Connect</span></code> button in the VRoidHub area.</p></li>
+<li><p>The VRoidHub URL will be entered in the pop-up dialog, so copy it and open it in your browser.</p></li>
+</ol>
+<img alt="../_images/vroidhubmenu_pc01.png" class="align-center" src="../_images/vroidhubmenu_pc01.png" />
+<ol class="arabic simple" start="4">
+<li><p>Log in to VRoidHub and allow the connection between this app and VRoidHub.</p></li>
+<li><p>You will be shown a code on the web page, please copy it.</p></li>
+<li><p>Look at the app screen again and press the OK button on the pop-up dialog.</p></li>
+<li><p>Next, a pop-up dialog box for entering the code will open, so paste the code you copied and press the OK button.</p></li>
+</ol>
+<img alt="../_images/vroidhubmenu_pc02.png" class="align-center" src="../_images/vroidhubmenu_pc02.png" />
+<ol class="arabic simple" start="8">
+<li><p>The connection between this app and VRoidHub will be completed.</p></li>
+</ol>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>This application does not retain the user’s VRoidHub login information. Due to the specifications of VRoidHub, even if you connect to this application once, the connection will be automatically disconnected after a few minutes.</p>
+<p>In that case, you will need to reconnect.</p>
+</div>
+</section>
+<section id="id2">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">21.2. </span>Loading a model from VRoidHub</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>Once the connection is successful, you can browse the following types of models from the list menu:</p>
+<ul class="simple">
+<li><p>My registered models</p></li>
+<li><p>Favorite Models</p></li>
+<li><p>Model recommended by staff</p></li>
+</ul>
+<img alt="../_images/vroidhubmenu04.png" class="align-center" src="../_images/vroidhubmenu04.png" />
+<p>Clicking (tapping) on ​​a model will display a check mark to select it. Then, pressing the OK button will display a confirmation message, so you can proceed.</p>
+<p>After that, the VRM information screen will be displayed, just like when loading from a device, and you can check the license and terms of use.</p>
+<p>If you want to reload the rest of the list, press <img alt="reloadbtn" src="../_images/vroidhubmenu05.png" /> and the rest of the list will be loaded.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Models recommended by our staff appear randomly. Many of the models do not have the correct information set in the meta information inside the VRM, and may behave unexpectedly in this app.</p>
+<p>Please use models recommended by our staff at your own risk.</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gen_use_cloud.html" class="btn btn-neutral float-left" title="20. Support for cloud storage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="other.html" class="btn btn-neutral float-right" title="22. Others" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, ISHII Eiju.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

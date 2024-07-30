@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.17. Keyframe registration window &mdash; VRMViewMeister 2.10.0 documentation</title>
+  <title>6.17. Keyframe registration window &mdash; VRMViewMeister 2.11.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -79,13 +79,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/animation.html">12. Animation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man4/project.html">13. Project settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. special operation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/special_operation.html">14. Special operation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/photograph.html">15. Screenshot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/videorec.html">16. Video</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/texttrack.html">17. Edit Subtitles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/vrar.html">18. VR and AR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/config.html">19. Setting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">20. Others</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/gen_use_cloud.html">20. Support for cloud storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/vroidhub.html">21. VRoidHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../man5/other.html">22. Others</a></li>
 </ul>
 
         </div>
@@ -134,14 +136,54 @@
 <dd class="field-odd"><p>Registers the state of the currently selected object to the current keyframe. If you register again at the same keyframe position, it will be overwritten.</p>
 </dd>
 <dt class="field-even">upper right toolbar<span class="colon">:</span></dt>
-<dd class="field-even"><p>For use in future versions. I don’t use it yet.</p>
-<p>Deselect all bones from the left, select all bones, select IKParent, select upper body, select lower body</p>
+<dd class="field-even"><img alt="../_images/screen_ribbon_animation_keyframe3.png" src="../_images/screen_ribbon_animation_keyframe3.png" />
+<p>They are listed from left to right in the following order:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Deselect all bones<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Uncheck all bones.</p>
+</dd>
+<dt class="field-even">Select all bones<span class="colon">:</span></dt>
+<dd class="field-even"><p>Check all the bones checkboxes.</p>
+</dd>
+<dt class="field-odd">Select the gaze<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Only check <code class="docutils literal notranslate"><span class="pre">EyeViewHandle</span></code> and <code class="docutils literal notranslate"><span class="pre">LookAt</span></code>.</p>
+</dd>
+<dt class="field-even">Select the upper body<span class="colon">:</span></dt>
+<dd class="field-even"><p>Check the following bones:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Head</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Chest</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Aim</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LeftShoulder</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RightShoulder</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LeftLowerArm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RightLowerArm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LeftHand</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RightHand</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-odd">Select the lower body<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Check the following bones:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Pelvis</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LeftLowerLeg</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RightLowerLeg</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LeftLeg</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RightLeg</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<p>You cannot press Select upper body, Select lower body, or Select gaze related except for VRM.</p>
 </dd>
 <dt class="field-odd">Contents to register<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Select the content to be registered in the keyframe from move, other than move, or property.</p>
 </dd>
-<dt class="field-even">Bone to register<span class="colon">:</span></dt>
-<dd class="field-even"><p>You can check the bones (IK markers) registered in the keyframe. This number differs between VRM and non-VRM.</p>
+</dl>
+<dl class="field-list" id="index-1">
+<dt class="field-odd">Bone to register<span class="colon">:</span></dt>
+<dd class="field-odd"><p>You can check the bones (IK markers) registered in the keyframe. This number differs between VRM and non-VRM.</p>
+<p>Since VRM has each part of the body, it is possible to, for example, register only the movement of the Right Hand.</p>
+<p>There is only one IK marker other than VRM, so there is no point in unchecking it and registering anything other than movement/movement.</p>
 </dd>
 </dl>
 </section>
