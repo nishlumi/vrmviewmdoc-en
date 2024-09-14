@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>9.2. VRoid/VRM &mdash; VRMViewMeister 2.12.1 documentation</title>
+  <title>9.2. VRoid/VRM &mdash; VRMViewMeister 2.13.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -180,8 +180,18 @@
 <p>When either of these are turned on, unnecessary rotation operations after movement are unnecessary, resulting in more realistic movements. However, since finer control is not possible, they should basically be considered as auxiliary functions when creating motions.</p>
 </div>
 </dd>
+</dl>
+<dl class="field-list">
 <dt class="field-odd">Batch change of IK position<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Displays a window that allows you to specify the position and rotation of IK parts in a spreadsheet format.</p>
+<dd class="field-odd"><div class="line-block">
+<div class="line">IKマーカーの位置や回転を直接数値で指定したり、雛形となる動き方を選択して、一括で操作できるウィンドウを表示します。</div>
+<div class="line">ver 2.13.0より、従来のスプレッドシート形式は <strong>入力モード</strong> と命名しました。</div>
+</div>
+<ul class="simple">
+<li><p><img alt="ico_ikinputmode" src="../_images/prop_vrm_c.png" /> スプレッドシート形式で入力するウィンドウを表示します。</p></li>
+<li><p><img alt="ico_ikeasymode" src="../_images/prop_vrm_c2.png" /> 4種類の部位をそれぞれ選択するシンプルな形式のウィンドウを表示します。</p></li>
+</ul>
+<p>各ウィンドウ内のUIについては <a class="reference internal" href="../man1/screen_ikmarker.html"><span class="doc">Repositioning of IK markers</span></a> を御覧ください。</p>
 </dd>
 <dt class="field-even">Gravity settings<span class="colon">:</span></dt>
 <dd class="field-even"><p>Set the gravity for the bones that VRM has as standard.</p>
@@ -307,7 +317,7 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Due to VRM 1.x specifications, Expression and BlendShape behave differently. See <a class="reference internal" href="operation_vrm.html#blendshape-vrm"><span class="std std-ref">BlendShape</span></a> for details.</p>
+<p>Due to VRM 1.x specifications, Expression and BlendShape behave differently. See <a class="reference internal" href="operation_vrm2.html#blendshape-vrm"><span class="std std-ref">BlendShape</span></a> for details.</p>
 <p>With plain VRM1.x, the following BlendShapes tend not to work.</p>
 <ul class="simple">
 <li><p>Emotions (Type where eyebrows, eyes, and mouth all move, such as Fcl_All)</p></li>

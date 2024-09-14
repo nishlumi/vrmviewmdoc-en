@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7.4. How to use 3D model &mdash; VRMViewMeister 2.12.1 documentation</title>
+  <title>7.4. How to use 3D model &mdash; VRMViewMeister 2.13.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -162,14 +162,14 @@
 <dl class="simple">
 <dt>Basic explanation</dt><dd><p>See <a class="reference internal" href="../man4/about.html"><span class="doc">What is an animation project?</span></a> and <a class="reference internal" href="../man4/specification.html"><span class="doc">Animation project structure</span></a>.</p>
 </dd>
-<dt>Operation of VRM</dt><dd><p>See <a class="reference internal" href="../man2/operation_vrm.html"><span class="doc">VRoid/VRM</span></a> for more details. In addition, the pose is reflected immediately just by moving it without registering it in the key frame.</p>
+<dt>Operation of VRM</dt><dd><p>See <a class="reference internal" href="../man2/operation_vrm.html"><span class="doc">VRoid/VRM (1)</span></a> for more details. In addition, the pose is reflected immediately just by moving it without registering it in the key frame.</p>
 </dd>
 <dt>About registration of animation</dt><dd><p>See <a class="reference external" href="../man4/animation_register.html#index-2">Registering and updating keyframes</a>.</p>
 </dd>
 <dt>About VRMAnimation</dt><dd><p>From ver 2.4.0, it supports VRM-specific motion format <code class="docutils literal notranslate"><span class="pre">VRMAnimation</span></code>.</p>
 <ul class="simple">
 <li><p>For export see <a class="reference internal" href="../man3/posing_save.html#vrma-export"><span class="std std-ref">Export in VRMAnimation format</span></a></p></li>
-<li><p>For loading, see <a class="reference internal" href="../man2/operation_vrm.html#vrma-load"><span class="std std-ref">Play the VRMAnimation</span></a>.</p></li>
+<li><p>For loading, see <a class="reference internal" href="../man2/operation_vrm2.html#vrma-load"><span class="std std-ref">Play the VRMAnimation</span></a>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -188,7 +188,7 @@
 <div><p>This application provides the following methods to run VRM. Each has different characteristics and accuracy for posing.</p>
 <dl>
 <dt>IK marker</dt><dd><p>Basic operation method. By moving the IK marker, each part of the VRM moves and rotates toward that position and poses accordingly. High precision.</p>
-<p>See <a class="reference internal" href="../man2/operation_vrm.html#inputikasmarker"><span class="std std-ref">Working with VRM IK markers</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../man2/operation_vrm.html#inputikasmarker"><span class="std std-ref">About VRM IK markers</span></a> for more information.</p>
 <img alt="../_images/operation_vrm_6.jpg" class="align-center" src="../_images/operation_vrm_6.jpg" />
 <div class="line-block">
 <div class="line"><br /></div>
@@ -216,7 +216,7 @@
 <p>IK markers that move and rotate the VRM itself can be manipulated.</p>
 <p>While VRMAnimation is enabled, change the VRM pose depending on the motion seek position. Seek positions can be registered in key frames.</p>
 <p>If you want to do it, you can express new motions just by changing the seek position.</p>
-<p>See <a class="reference internal" href="../man2/operation_vrm.html#vrma-load"><span class="std std-ref">Play the VRMAnimation</span></a> for details.</p>
+<p>See <a class="reference internal" href="../man2/operation_vrm2.html#vrma-load"><span class="std std-ref">Play the VRMAnimation</span></a> for details.</p>
 </dd>
 </dl>
 </div></blockquote>

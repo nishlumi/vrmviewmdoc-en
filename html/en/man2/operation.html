@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10. Manipulating Objects &mdash; VRMViewMeister 2.12.1 documentation</title>
+  <title>10. Manipulating Objects &mdash; VRMViewMeister 2.13.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -55,18 +55,19 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">10. Manipulating Objects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="operation_initial.html">10.1. Basics of object manipulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operation_texture.html">10.2. Texture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html">10.3. VRoid/VRM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_obj.html">10.4. OtherObject</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_light.html">10.5. Light</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_camera.html">10.6. Camera</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_image.html">10.7. Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_effect.html">10.8. Effect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_text.html">10.9. Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_text3d.html">10.10. Text3D</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_uimage.html">10.11. UImage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_audio.html">10.12. Audio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_syseff.html">10.13. SystemEffect</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_stage.html">10.14. Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html">10.3. VRoid/VRM (1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm2.html">10.4. VRoid/VRM (2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_obj.html">10.5. OtherObject</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_light.html">10.6. Light</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_camera.html">10.7. Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_image.html">10.8. Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_effect.html">10.9. Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_text.html">10.10. Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_text3d.html">10.11. Text3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_uimage.html">10.12. UImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_audio.html">10.13. Audio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_syseff.html">10.14. SystemEffect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_stage.html">10.15. Stage</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../man3/posing.html">11. Pose and Motion</a></li>
@@ -131,43 +132,56 @@
 <li class="toctree-l2"><a class="reference internal" href="operation_texture.html#id4">10.2.2. Ttexture details</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="operation_vrm.html">10.3. VRoid/VRM</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="operation_vrm.html">10.3. VRoid/VRM (1)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#vrm">10.3.1. Check the usage conditions of VRM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#vrmik">10.3.2. Working with VRM IK markers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#index-9">10.3.3. Natural rotation of hands and ankles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#index-10">10.3.4. Operation of hand poses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#blendshape-vrm">10.3.5. BlendShape</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#index-13">10.3.6. wearing an object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#id14">10.3.7. gravity settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#id15">10.3.8. Texture</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#vrmanimation">10.3.9. Play the VRMAnimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#vrmik">10.3.2. About VRM IK markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#ik">10.3.3. Operation of each IK marker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#specialoperation-vrm">10.3.4. special operation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#vroid-vrm">10.3.5. Movement/rotation of VRoid/VRM itself</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#id2">10.3.6. Size of VRoid/VRM itself</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#t">10.3.7. Return all bones to T pose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#inputikasnumber">10.3.8. Numerical manipulation of IK markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#index-7">10.3.9. Using Easy IK Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#index-9">10.3.10. Adjust the restrictions of the movable range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#id8">10.3.11. Interlocking between IK markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm.html#index-10">10.3.12. Switch IK markers to different objects</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="operation_obj.html">10.4. OtherObject</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="operation_obj.html#index-2">10.4.1. Play animation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_obj.html#index-3">10.4.2. Texture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_vrm2.html">10.4. VRoid/VRM (2)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm2.html#index-0">10.4.1. Natural rotation of hands and ankles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm2.html#index-1">10.4.2. Operation of hand poses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm2.html#blendshape-vrm">10.4.3. BlendShape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm2.html#index-4">10.4.4. wearing an object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm2.html#id7">10.4.5. Gravity settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm2.html#id8">10.4.6. Texture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_vrm2.html#vrmanimation">10.4.7. Play the VRMAnimation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="operation_light.html">10.5. Light</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operation_camera.html">10.6. Camera</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="operation_camera.html#index-1">10.6.1. Render texture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_obj.html">10.5. OtherObject</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operation_obj.html#index-2">10.5.1. Play animation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_obj.html#index-3">10.5.2. Texture</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="operation_image.html">10.7. Image</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operation_effect.html">10.8. Effect</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="operation_effect.html#vrm">10.8.1. Collision properties with VRM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_light.html">10.6. Light</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_camera.html">10.7. Camera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operation_camera.html#index-1">10.7.1. Render texture</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="operation_text.html">10.9. Text</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operation_text3d.html">10.10. Text3D</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operation_uimage.html">10.11. UImage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operation_audio.html">10.12. Audio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operation_syseff.html">10.13. SystemEffect</a></li>
-<li class="toctree-l1"><a class="reference internal" href="operation_stage.html">10.14. Stage</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="operation_stage.html#id1">10.14.1. Stage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_stage.html#index-3">10.14.2. Lighting (directional light)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_stage.html#index-5">10.14.3. Wind</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operation_stage.html#operation-sky">10.14.4. Sky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_image.html">10.8. Image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_effect.html">10.9. Effect</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operation_effect.html#vrm">10.9.1. Collision properties with VRM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="operation_text.html">10.10. Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_text3d.html">10.11. Text3D</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_uimage.html">10.12. UImage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_audio.html">10.13. Audio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_syseff.html">10.14. SystemEffect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operation_stage.html">10.15. Stage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="operation_stage.html#id1">10.15.1. Stage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_stage.html#index-3">10.15.2. Lighting (directional light)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_stage.html#index-5">10.15.3. Wind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operation_stage.html#operation-sky">10.15.4. Sky</a></li>
 </ul>
 </li>
 </ul>
