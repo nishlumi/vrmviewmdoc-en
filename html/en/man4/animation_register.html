@@ -1,24 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12.4. Registering and setting keyframes &mdash; VRMViewMeister 2.13.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>12.4. Registering and setting keyframes &mdash; VRMViewMeister 2.15.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/mytheme.css?v=fb30eb3b" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-        <script>mermaid.initialize({startOnLoad:true});</script>
-        <script src="../_static/js/mermaid.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0a636f4a"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/js/mermaid.js?v=bf4167eb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VRMViewMeister
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -113,9 +115,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="animation.html"><span class="section-number">12. </span>Animation</a> &raquo;</li>
-      <li><span class="section-number">12.4. </span>Registering and setting keyframes</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="animation.html"><span class="section-number">12. </span>Animation</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">12.4. </span>Registering and setting keyframes</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man4/animation_register.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -126,7 +128,7 @@
            <div itemprop="articleBody">
              
   <section id="index-0">
-<span id="id1"></span><h1><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">12.4. </span>Registering and setting keyframes</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">12.4. </span>Registering and setting keyframes</a><a class="headerlink" href="#index-0" title="Link to this heading"></a></h1>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -161,7 +163,7 @@
 </ul>
 </nav>
 <section id="index-1">
-<span id="id2"></span><h2><a class="toc-backref" href="#id25" role="doc-backlink"><span class="section-number">12.4.1. </span>Select a frame</a><a class="headerlink" href="#index-1" title="Permalink to this heading"></a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id25" role="doc-backlink"><span class="section-number">12.4.1. </span>Select a frame</a><a class="headerlink" href="#index-1" title="Link to this heading"></a></h2>
 <p>This is the frame selection operation, which is the basic operation. There are two types of selection.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Select frame number<span class="colon">:</span></dt>
@@ -172,7 +174,7 @@
 </dd>
 </dl>
 <section id="id3">
-<h3><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">12.4.1.1. </span>Select a frame position</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">12.4.1.1. </span>Select a frame position</a><a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Click on the frame number at the top of the timeline to select it.</p></li>
 </ol>
@@ -186,7 +188,7 @@
 <p>If the keyframe is not registered, it will not be selected even if you click the keyframe part.</p>
 </section>
 <section id="id4">
-<h3><a class="toc-backref" href="#id27" role="doc-backlink"><span class="section-number">12.4.1.2. </span>Select timeline (role)</a><a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id27" role="doc-backlink"><span class="section-number">12.4.1.2. </span>Select timeline (role)</a><a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Click on the role name on the left of the timeline to select it.</p></li>
 </ol>
@@ -205,7 +207,7 @@
 </ol>
 </section>
 <section id="id5">
-<h3><a class="toc-backref" href="#id28" role="doc-backlink"><span class="section-number">12.4.1.3. </span>If a keyframe has been registered</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id28" role="doc-backlink"><span class="section-number">12.4.1.3. </span>If a keyframe has been registered</a><a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>Clicking a point with a registered keyframe selects both the frame position and the timeline (roll).</p></li>
 </ol>
@@ -248,10 +250,10 @@
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<span class="target" id="reg-anim"></span></section>
+</section>
 </section>
 <section id="index-2">
-<span id="id6"></span><h2><a class="toc-backref" href="#id29" role="doc-backlink"><span class="section-number">12.4.2. </span>Registering/updating to a keyframe</a><a class="headerlink" href="#index-2" title="Permalink to this heading"></a></h2>
+<span id="reg-anim"></span><span id="id6"></span><h2><a class="toc-backref" href="#id29" role="doc-backlink"><span class="section-number">12.4.2. </span>Registering/updating to a keyframe</a><a class="headerlink" href="#index-2" title="Link to this heading"></a></h2>
 <p>We will register keyframes on the timeline. The contents that can be registered in key frames are as follows.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Contents that can be registered<span class="colon">:</span></dt>
@@ -457,7 +459,7 @@
 </div>
 </section>
 <section id="index-6">
-<span id="id7"></span><h2><a class="toc-backref" href="#id30" role="doc-backlink"><span class="section-number">12.4.3. </span>Delete keyframe</a><a class="headerlink" href="#index-6" title="Permalink to this heading"></a></h2>
+<span id="id7"></span><h2><a class="toc-backref" href="#id30" role="doc-backlink"><span class="section-number">12.4.3. </span>Delete keyframe</a><a class="headerlink" href="#index-6" title="Link to this heading"></a></h2>
 <p>The registered keyframes on the timeline are deleted.</p>
 <ol class="arabic simple">
 <li><p>Click to select the object you want to delete and the keyframe number.</p></li>
@@ -499,7 +501,7 @@
 </div>
 </section>
 <section id="index-7">
-<span id="id8"></span><h2><a class="toc-backref" href="#id31" role="doc-backlink"><span class="section-number">12.4.4. </span>Change the registered keyframe position</a><a class="headerlink" href="#index-7" title="Permalink to this heading"></a></h2>
+<span id="id8"></span><h2><a class="toc-backref" href="#id31" role="doc-backlink"><span class="section-number">12.4.4. </span>Change the registered keyframe position</a><a class="headerlink" href="#index-7" title="Link to this heading"></a></h2>
 <p>You can move the frame position of the registered keyframe.</p>
 <ol class="arabic simple">
 <li><p>Register a keyframe.</p></li>
@@ -508,7 +510,7 @@
 <figure class="align-center" id="id21">
 <img alt="../_images/register_6.png" src="../_images/register_6.png" />
 <figcaption>
-<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id21" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <div class="line-block">
@@ -546,7 +548,7 @@
 </div>
 </section>
 <section id="index-8">
-<span id="id9"></span><h2><a class="toc-backref" href="#id32" role="doc-backlink"><span class="section-number">12.4.5. </span>Manipulating multiple keyframes at once</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h2>
+<span id="id9"></span><h2><a class="toc-backref" href="#id32" role="doc-backlink"><span class="section-number">12.4.5. </span>Manipulating multiple keyframes at once</a><a class="headerlink" href="#index-8" title="Link to this heading"></a></h2>
 <p>Starting with version 2.11.0, you can now not only move keyframes, but also duplicate and delete multiple keyframes at the same time.</p>
 <img alt="../_images/register_p.png" class="align-center" src="../_images/register_p.png" />
 <dl class="field-list simple">
@@ -572,7 +574,7 @@
 </div>
 </section>
 <section id="index-9">
-<span id="id10"></span><h2><a class="toc-backref" href="#id33" role="doc-backlink"><span class="section-number">12.4.6. </span>Modifiable properties</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h2>
+<span id="id10"></span><h2><a class="toc-backref" href="#id33" role="doc-backlink"><span class="section-number">12.4.6. </span>Modifiable properties</a><a class="headerlink" href="#index-9" title="Link to this heading"></a></h2>
 <p>The properties that can be changed in the keyframe settings dialog are as follows. Any property can be changed many times at once by targeting multiple keyframes. I think there are many ways to use it.</p>
 <p>If you hover the mouse cursor over the registered key position, a popup will appear and you can check the interval and easing at that position.</p>
 <img alt="../_images/screen_timeline02.png" class="align-center" src="../_images/screen_timeline02.png" />
@@ -580,7 +582,7 @@
 <div class="line"><br /></div>
 </div>
 <section id="index-10">
-<span id="id11"></span><h3><a class="toc-backref" href="#id34" role="doc-backlink"><span class="section-number">12.4.6.1. </span>write notes</a><a class="headerlink" href="#index-10" title="Permalink to this heading"></a></h3>
+<span id="id11"></span><h3><a class="toc-backref" href="#id34" role="doc-backlink"><span class="section-number">12.4.6.1. </span>write notes</a><a class="headerlink" href="#index-10" title="Link to this heading"></a></h3>
 <p>This can be set after registering the keyframe. It does not affect actual movement or properties. You can make a note of what movement will occur at that key frame.</p>
 <img alt="../_images/register_o.png" class="align-center" src="../_images/register_o.png" />
 <ol class="arabic simple">
@@ -591,7 +593,7 @@
 </ol>
 </section>
 <section id="index-11">
-<span id="id12"></span><h3><a class="toc-backref" href="#id35" role="doc-backlink"><span class="section-number">12.4.6.2. </span>Set easing</a><a class="headerlink" href="#index-11" title="Permalink to this heading"></a></h3>
+<span id="id12"></span><h3><a class="toc-backref" href="#id35" role="doc-backlink"><span class="section-number">12.4.6.2. </span>Set easing</a><a class="headerlink" href="#index-11" title="Link to this heading"></a></h3>
 <p>It can be set after registering the keyframe. If you’re familiar with animation, you may already know this, but it’s a factor that affects how things move, such as how long it takes to change to a certain keyframe, and how fast it moves. Changing this will change the animation from a monotonous impression to a lively one.</p>
 <ol class="arabic simple">
 <li><p>Register a keyframe.</p></li>
@@ -600,7 +602,7 @@
 <figure class="align-center" id="id22">
 <img alt="../_images/register_6.png" src="../_images/register_6.png" />
 <figcaption>
-<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="3">
@@ -627,7 +629,7 @@
 </div>
 </section>
 <section id="modifyeachduration">
-<span id="index-12"></span><span id="id14"></span><h3><a class="toc-backref" href="#id36" role="doc-backlink"><span class="section-number">12.4.6.3. </span>Set keyframe intervals</a><a class="headerlink" href="#modifyeachduration" title="Permalink to this heading"></a></h3>
+<span id="index-12"></span><span id="id14"></span><h3><a class="toc-backref" href="#id36" role="doc-backlink"><span class="section-number">12.4.6.3. </span>Set keyframe intervals</a><a class="headerlink" href="#modifyeachduration" title="Link to this heading"></a></h3>
 <p>It can be set after registering the keyframe. Sets the time to reach the corresponding keyframe. Basically it is calculated automatically, but you can also specify it manually.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>デフォルトの間隔(duration)・・・ [FPS / 6000] 秒
 </pre></div>
@@ -639,7 +641,7 @@
 <figure class="align-center" id="id23">
 <img alt="../_images/register_6.png" src="../_images/register_6.png" />
 <figcaption>
-<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
+<p><span class="caption-text">Make sure that the frame number is correctly selected for the keyframe at this time.</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple" start="3">
@@ -665,7 +667,7 @@
 </div>
 </section>
 <section id="index-13">
-<span id="id15"></span><h3><a class="toc-backref" href="#id37" role="doc-backlink"><span class="section-number">12.4.6.4. </span>Copy intervals from another avatar’s timeline</a><a class="headerlink" href="#index-13" title="Permalink to this heading"></a></h3>
+<span id="id15"></span><h3><a class="toc-backref" href="#id37" role="doc-backlink"><span class="section-number">12.4.6.4. </span>Copy intervals from another avatar’s timeline</a><a class="headerlink" href="#index-13" title="Link to this heading"></a></h3>
 <p>You can easily obtain the total interval from a specific range of keyframes on other timelines.</p>
 <blockquote>
 <div><img alt="../_images/register_g.png" class="align-center" src="../_images/register_g.png" />
@@ -686,7 +688,7 @@
 </div>
 </section>
 <section id="index-14">
-<span id="id16"></span><h3><a class="toc-backref" href="#id38" role="doc-backlink"><span class="section-number">12.4.6.5. </span>Change position or rotation</a><a class="headerlink" href="#index-14" title="Permalink to this heading"></a></h3>
+<span id="id16"></span><h3><a class="toc-backref" href="#id38" role="doc-backlink"><span class="section-number">12.4.6.5. </span>Change position or rotation</a><a class="headerlink" href="#index-14" title="Link to this heading"></a></h3>
 <p>It can be set after registering the keyframe. If the selected avatar is VRM, OtherObject, Camera, Light, or Effect, you can adjust the position and rotation of the object itself.</p>
 <ol class="arabic simple">
 <li><p>Fill in the input fields for the X, Y and Z axes of position or rotation.</p></li>
@@ -720,7 +722,7 @@
 </section>
 </section>
 <section id="index-15">
-<span id="id17"></span><h2><a class="toc-backref" href="#id39" role="doc-backlink"><span class="section-number">12.4.7. </span>Insert an empty frame at the current position</a><a class="headerlink" href="#index-15" title="Permalink to this heading"></a></h2>
+<span id="id17"></span><h2><a class="toc-backref" href="#id39" role="doc-backlink"><span class="section-number">12.4.7. </span>Insert an empty frame at the current position</a><a class="headerlink" href="#index-15" title="Link to this heading"></a></h2>
 <p>Inserts an empty frame at the currently selected frame number and shifts all frames to the right by one.</p>
 <img alt="../_images/register_i.png" class="align-center" src="../_images/register_i.png" />
 <ol class="arabic simple">
@@ -729,7 +731,7 @@
 </ol>
 </section>
 <section id="index-16">
-<span id="id18"></span><h2><a class="toc-backref" href="#id40" role="doc-backlink"><span class="section-number">12.4.8. </span>Delete current frame position</a><a class="headerlink" href="#index-16" title="Permalink to this heading"></a></h2>
+<span id="id18"></span><h2><a class="toc-backref" href="#id40" role="doc-backlink"><span class="section-number">12.4.8. </span>Delete current frame position</a><a class="headerlink" href="#index-16" title="Link to this heading"></a></h2>
 <p>Deletes the currently selected frame position.</p>
 <img alt="../_images/register_j.png" class="align-center" src="../_images/register_j.png" />
 <ol class="arabic simple">
@@ -745,7 +747,7 @@
 </div>
 </section>
 <section id="index-17">
-<span id="id19"></span><h2><a class="toc-backref" href="#id41" role="doc-backlink"><span class="section-number">12.4.9. </span>Cut/copy/paste keyframes</a><a class="headerlink" href="#index-17" title="Permalink to this heading"></a></h2>
+<span id="id19"></span><h2><a class="toc-backref" href="#id41" role="doc-backlink"><span class="section-number">12.4.9. </span>Cut/copy/paste keyframes</a><a class="headerlink" href="#index-17" title="Link to this heading"></a></h2>
 <p>You can copy, cut, paste, and move registered keyframes.</p>
 <img alt="../_images/register_m.png" class="align-center" src="../_images/register_m.png" />
 <ol class="arabic simple">
@@ -778,7 +780,7 @@
 </div>
 </section>
 <section id="id20">
-<h2><a class="toc-backref" href="#id42" role="doc-backlink"><span class="section-number">12.4.10. </span>Child key function</a><a class="headerlink" href="#id20" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id42" role="doc-backlink"><span class="section-number">12.4.10. </span>Child key function</a><a class="headerlink" href="#id20" title="Link to this heading"></a></h2>
 <p>Deprecated in <code class="docutils literal notranslate"><span class="pre">ver</span> <span class="pre">2.2.0</span></code>. All motions now move smoothly by setting easing continuously. The child key function has been abolished as the original purpose has been achieved.</p>
 </section>
 </section>

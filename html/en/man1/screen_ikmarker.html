@@ -1,24 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>6.9. Repositioning of IK markers &mdash; VRMViewMeister 2.13.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>6.9. Repositioning of IK markers &mdash; VRMViewMeister 2.15.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/mytheme.css?v=fb30eb3b" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-        <script>mermaid.initialize({startOnLoad:true});</script>
-        <script src="../_static/js/mermaid.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0a636f4a"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/js/mermaid.js?v=bf4167eb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VRMViewMeister
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -74,6 +76,7 @@
 <li class="toctree-l2"><a class="reference internal" href="screen_internaldlg.html">6.19. Internal storage dialog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_vpad.html">6.20. v-pad (virtual control pad)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="screen_naviwin.html">6.21. Navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="screen_transref.html">6.22. Position and rotation reference</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../man5/general_use.html">7. General usage</a></li>
@@ -107,9 +110,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="screen.html"><span class="section-number">6. </span>Screen configuration</a> &raquo;</li>
-      <li><span class="section-number">6.9. </span>Repositioning of IK markers</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="screen.html"><span class="section-number">6. </span>Screen configuration</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6.9. </span>Repositioning of IK markers</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man1/screen_ikmarker.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -120,7 +123,7 @@
            <div itemprop="articleBody">
              
   <section id="ik">
-<span id="index-0"></span><h1><a class="toc-backref" href="#id3" role="doc-backlink"><span class="section-number">6.9. </span>Repositioning of IK markers</a><a class="headerlink" href="#ik" title="Permalink to this heading"></a></h1>
+<span id="index-0"></span><h1><a class="toc-backref" href="#id3" role="doc-backlink"><span class="section-number">6.9. </span>Repositioning of IK markers</a><a class="headerlink" href="#ik" title="Link to this heading"></a></h1>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -133,7 +136,7 @@
 </ul>
 </nav>
 <section id="id1">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">6.9.1. </span>Input mode</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">6.9.1. </span>Input mode</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <img alt="../_images/screen_ikmarker.png" class="align-center" src="../_images/screen_ikmarker.png" />
 <p>This function is used for VRoid/VRM. You can directly specify the position and rotation of the body parts of the model used in this application. A new window will open. It is a separate window from the app.</p>
 <div class="line-block">
@@ -167,8 +170,8 @@
 </div>
 </section>
 <section id="id2">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">6.9.2. </span>Easy IK mode</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
-<p>Introduced in ver 2.13.0. This is a function that is only available for VRoid/VRM, but you can easily make the character take various poses by simply selecting the movement you like from four different body parts. It is a separate window from the input mode.</p>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">6.9.2. </span>Easy IK mode</a><a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Introduced in ver 2.13.0. This is a function that is only available for VRoid/VRM, but you can easily make the character take various poses by simply selecting the movement you like from four different body parts. This is a separate window from the input mode. This window is an internal window, but you can also display it as a separate window depending on the settings.</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>PC to Phablet</p></th>

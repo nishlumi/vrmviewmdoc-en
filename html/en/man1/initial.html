@@ -1,24 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>1. Introduction &mdash; VRMViewMeister 2.13.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>1. Introduction &mdash; VRMViewMeister 2.15.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/mytheme.css?v=fb30eb3b" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-        <script>mermaid.initialize({startOnLoad:true});</script>
-        <script src="../_static/js/mermaid.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0a636f4a"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/js/mermaid.js?v=bf4167eb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,11 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VRMViewMeister
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -83,8 +85,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li><span class="section-number">1. </span>Introduction</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Introduction</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man1/initial.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -95,19 +97,21 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h1>
+<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
 <p>This application was developed with the aim of making it easy to create and play animations with VRoid (VRM) like MMD. With this app, you can easily do the following things.</p>
 <ul class="simple">
 <li><p>You can take a screenshot by letting VRM take your favorite pose</p></li>
 <li><p>Animation can be created by moving VRM from scratch without using MMD, Unity editor, Blender, etc.</p></li>
 </ul>
 <p>We did not aim for a full-fledged 3D animation application, so it is not suitable for professional use. And animations made with this application can only be played with this application (for now). <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> However, it should be much easier than creating directly on the Unity editor. Also, since it is a web application, it can be used anywhere with a web browser. (Some features have technical limitations.)</p>
-<aside class="footnote brackets" id="id3" role="note">
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <p>From ver 2.0, we started to support exporting in <code class="docutils literal notranslate"><span class="pre">.anim</span></code> format on a trial basis.</p>
 </aside>
+</aside>
 <section id="vroid-vrm">
-<h2><span class="section-number">1.1. </span>What is VRoid (VRM)?<a class="headerlink" href="#vroid-vrm" title="Permalink to this heading"></a></h2>
+<h2><span class="section-number">1.1. </span>What is VRoid (VRM)?<a class="headerlink" href="#vroid-vrm" title="Link to this heading"></a></h2>
 <p>VRoid (VRM) is a new, easy-to-use 3D model standardized for use in VR applications and 3D games. VRM is widely open to the public with better specifications than the famous MMD, which contributed greatly to the world as a 3D model standard and animation tool, and is easy to use for general purposes. And the development and operation are actively continued, and the support side is also perfect.</p>
 <p>It seems that the number of compatible apps is comparable to the MMD model, and now it is developing a variety of fields such as smartphone apps such as Android / iOS, PC and VR device applications.</p>
 <p>It seems that it was originally created assuming the avatar of the VR application, but it is also possible to 3D animation with VRM alone. With the game creation environment called Unity, even at an individual level, you can use Unity’s animation function to move VRM limbs and pose and animate him.</p>

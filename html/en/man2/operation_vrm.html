@@ -1,24 +1,30 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10.3. VRoid/VRM (1) &mdash; VRMViewMeister 2.13.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>10.3. VRoid/VRM (1) &mdash; VRMViewMeister 2.15.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/mytheme.css?v=fb30eb3b" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-        <script>mermaid.initialize({startOnLoad:true});</script>
-        <script src="../_static/js/mermaid.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0a636f4a"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+      <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+      <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+      <script src="../_static/js/mermaid.js?v=bf4167eb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,11 +37,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VRMViewMeister
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -115,9 +125,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="operation.html"><span class="section-number">10. </span>Manipulating Objects</a> &raquo;</li>
-      <li><span class="section-number">10.3. </span>VRoid/VRM (1)</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="operation.html"><span class="section-number">10. </span>Manipulating Objects</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">10.3. </span>VRoid/VRM (1)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man2/operation_vrm.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -128,7 +138,7 @@
            <div itemprop="articleBody">
              
   <section id="vroid-vrm-1">
-<h1><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">10.3. </span>VRoid/VRM (1)</a><a class="headerlink" href="#vroid-vrm-1" title="Permalink to this heading"></a></h1>
+<h1><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">10.3. </span>VRoid/VRM (1)</a><a class="headerlink" href="#vroid-vrm-1" title="Link to this heading"></a></h1>
 <p>The main feature of this app is that you can read and take poses by reading VRoid/VRM, and you can enjoy the animation described below. I will explain a series of operations from reading VRM files to actual operation.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
@@ -138,31 +148,31 @@
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#vroid-vrm-1" id="id10">VRoid/VRM (1)</a></p>
+<li><p><a class="reference internal" href="#vroid-vrm-1" id="id11">VRoid/VRM (1)</a></p>
 <ul>
-<li><p><a class="reference internal" href="#vrm" id="id11">Check the usage conditions of VRM</a></p></li>
-<li><p><a class="reference internal" href="#vrmik" id="id12">About VRM IK markers</a></p></li>
-<li><p><a class="reference internal" href="#ik" id="id13">Operation of each IK marker</a></p></li>
-<li><p><a class="reference internal" href="#specialoperation-vrm" id="id14">special operation</a></p></li>
-<li><p><a class="reference internal" href="#vroid-vrm" id="id15">Movement/rotation of VRoid/VRM itself</a></p></li>
-<li><p><a class="reference internal" href="#id2" id="id16">Size of VRoid/VRM itself</a></p></li>
-<li><p><a class="reference internal" href="#t" id="id17">Return all bones to T pose</a></p></li>
-<li><p><a class="reference internal" href="#inputikasnumber" id="id18">Numerical manipulation of IK markers</a></p></li>
-<li><p><a class="reference internal" href="#index-7" id="id19">Using Easy IK Mode</a></p>
+<li><p><a class="reference internal" href="#vrm" id="id12">Check the usage conditions of VRM</a></p></li>
+<li><p><a class="reference internal" href="#vrmik" id="id13">About VRM IK markers</a></p></li>
+<li><p><a class="reference internal" href="#ik" id="id14">Operation of each IK marker</a></p></li>
+<li><p><a class="reference internal" href="#specialoperation-vrm" id="id15">special operation</a></p></li>
+<li><p><a class="reference internal" href="#vroid-vrm" id="id16">Movement/rotation of VRoid/VRM itself</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id17">Size of VRoid/VRM itself</a></p></li>
+<li><p><a class="reference internal" href="#t" id="id18">Return all bones to T pose</a></p></li>
+<li><p><a class="reference internal" href="#inputikasnumber" id="id19">Numerical manipulation of IK markers</a></p></li>
+<li><p><a class="reference internal" href="#index-7" id="id20">Using Easy IK Mode</a></p>
 <ul>
-<li><p><a class="reference internal" href="#id5" id="id20">Method of operation</a></p></li>
-<li><p><a class="reference internal" href="#index-8" id="id21">Prepare your own data</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id21">Method of operation</a></p></li>
+<li><p><a class="reference internal" href="#index-8" id="id22">Prepare your own data</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#index-9" id="id22">Adjust the restrictions of the movable range</a></p></li>
-<li><p><a class="reference internal" href="#id8" id="id23">Interlocking between IK markers</a></p></li>
-<li><p><a class="reference internal" href="#index-10" id="id24">Switch IK markers to different objects</a></p></li>
+<li><p><a class="reference internal" href="#index-9" id="id23">Adjust the restrictions of the movable range</a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id24">Interlocking between IK markers</a></p></li>
+<li><p><a class="reference internal" href="#index-10" id="id25">Switch IK markers to different objects</a></p></li>
 </ul>
 </li>
 </ul>
 </nav>
 <section id="vrm">
-<span id="index-0"></span><h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">10.3.1. </span>Check the usage conditions of VRM</a><a class="headerlink" href="#vrm" title="Permalink to this heading"></a></h2>
+<span id="index-0"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">10.3.1. </span>Check the usage conditions of VRM</a><a class="headerlink" href="#vrm" title="Link to this heading"></a></h2>
 <p>As the reading proceeds, the VRoid/VRM usage conditions confirmation screen will be displayed. If you read the VRM file of the creator other than yourself, check the terms of use and accept the” OK “button to complete the loading. please give me.</p>
 <img alt="../_images/operation_vrm_5.png" class="align-center" src="../_images/operation_vrm_5.png" />
 <p>After this, the desired VRoid/VRM will be displayed on the WebGL screen.</p>
@@ -179,7 +189,7 @@
 </div>
 </section>
 <section id="vrmik">
-<span id="inputikasmarker"></span><span id="index-1"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">10.3.2. </span>About VRM IK markers</a><a class="headerlink" href="#vrmik" title="Permalink to this heading"></a></h2>
+<span id="inputikasmarker"></span><span id="index-1"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">10.3.2. </span>About VRM IK markers</a><a class="headerlink" href="#vrmik" title="Link to this heading"></a></h2>
 <p>The imported VRoid/VRM has a semi-transparent figure called an IK marker as shown in the figure. Each part is linked to the movement of the next part. In addition, the type and shape of IK marker operations are determined for each part.</p>
 <p>From version 2.12.0, IK markers have been added to the toes. The toes can only be rotated on the X-axis.</p>
 <img alt="../_images/operation_vrm_6.jpg" class="align-center" src="../_images/operation_vrm_6.jpg" />
@@ -319,11 +329,11 @@
 <p>IK system changes (ver 2.4.0)</p>
 <blockquote>
 <div><p>Part of the IK system was changed to make it behave in accordance with the actual VRM bone hierarchy.</p>
-<div class="mermaid">
-            flowchart LR
+<pre  class="mermaid">
+        flowchart LR
 
 Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Head
-        </div><ul class="simple">
+    </pre><ul class="simple">
 <li><p>Moving Pelvis now also moves Aim, Chest, and Head.</p></li>
 <li><p>When you move the aim, the chest and head also move.</p></li>
 <li><p>Moving the Chest now also moves the Head.</p></li>
@@ -352,7 +362,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </div>
 </section>
 <section id="ik">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">10.3.3. </span>Operation of each IK marker</a><a class="headerlink" href="#ik" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">10.3.3. </span>Operation of each IK marker</a><a class="headerlink" href="#ik" title="Link to this heading"></a></h2>
 <p>Click each selected IK marker as shown. This is the operating handle.</p>
 <img alt="../_images/operation_vrm_7.png" src="../_images/operation_vrm_7.png" />
 <div class="line-block">
@@ -366,7 +376,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </dl>
 </section>
 <section id="specialoperation-vrm">
-<span id="index-3"></span><span id="id1"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">10.3.4. </span>special operation</a><a class="headerlink" href="#specialoperation-vrm" title="Permalink to this heading"></a></h2>
+<span id="index-3"></span><span id="id1"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">10.3.4. </span>special operation</a><a class="headerlink" href="#specialoperation-vrm" title="Link to this heading"></a></h2>
 <p>With an IK marker selected, you can use special functions by pressing the following keys:</p>
 <dl class="simple">
 <dt>Ctrl-click IK marker</dt><dd><p>Multiple IK markers can be selected. You can move multiple body parts at the same time by moving or rotating with multiple selected. In addition, since the operation handle also has a collision detection, please select only the IK marker by zooming the camera.</p>
@@ -389,7 +399,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </div>
 </section>
 <section id="vroid-vrm">
-<span id="index-4"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">10.3.5. </span>Movement/rotation of VRoid/VRM itself</a><a class="headerlink" href="#vroid-vrm" title="Permalink to this heading"></a></h2>
+<span id="index-4"></span><h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">10.3.5. </span>Movement/rotation of VRoid/VRM itself</a><a class="headerlink" href="#vroid-vrm" title="Link to this heading"></a></h2>
 <p>To move/rotate the selected VRoid/VRM itself, turn on “Movement mode” in the “IK, whole body” tab of the property on the right.</p>
 <img alt="../_images/operation_vrm_8.png" class="align-center" src="../_images/operation_vrm_8.png" />
 <div class="line-block">
@@ -408,7 +418,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 <p>If you move or rotate up, down, left, or right in this state, the VRoid/VRM itself will move accordingly. This can also be set numerically from the “Common” tab of the properties.</p>
 </section>
 <section id="id2">
-<h2><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">10.3.6. </span>Size of VRoid/VRM itself</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">10.3.6. </span>Size of VRoid/VRM itself</a><a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <img alt="../_images/prop_common_1.png" class="align-center" src="../_images/prop_common_1.png" />
 <p>You can also adjust the overall size of the VRoid/VRM from the common tab, but the ideal size of the VRoid/VRM is the size at the time of loading. We recommend that you do not change this ratio too drastically. (Because it does not follow the size of the IK marker itself, the position of the IK marker and the body part will be misaligned.)</p>
 <div class="line-block">
@@ -416,7 +426,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </div>
 </section>
 <section id="t">
-<span id="index-5"></span><h2><a class="toc-backref" href="#id17" role="doc-backlink"><span class="section-number">10.3.7. </span>Return all bones to T pose</a><a class="headerlink" href="#t" title="Permalink to this heading"></a></h2>
+<span id="index-5"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">10.3.7. </span>Return all bones to T pose</a><a class="headerlink" href="#t" title="Link to this heading"></a></h2>
 <p>If you mess with the IK markers too much and can’t return to the desired pose, you can return to the T pose (default pose) by pressing <strong>Reset all bones</strong> on the <strong>3D model</strong> tab of the ribbon bar.</p>
 <img alt="../_images/operation_vrm_a.png" class="align-center" src="../_images/operation_vrm_a.png" />
 <div class="line-block">
@@ -429,7 +439,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </div>
 </section>
 <section id="inputikasnumber">
-<span id="index-6"></span><span id="id3"></span><h2><a class="toc-backref" href="#id18" role="doc-backlink"><span class="section-number">10.3.8. </span>Numerical manipulation of IK markers</a><a class="headerlink" href="#inputikasnumber" title="Permalink to this heading"></a></h2>
+<span id="index-6"></span><span id="id3"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">10.3.8. </span>Numerical manipulation of IK markers</a><a class="headerlink" href="#inputikasnumber" title="Link to this heading"></a></h2>
 <p>In addition to manipulating IK markers with a mouse or touch, you can also manipulate them by entering actual numbers. Select the desired VRoid/VRM, and press the “<strong>IK position batch change</strong>” button on the “<strong>IK, whole body</strong>” tab of the properties on the right.</p>
 <img alt="../_images/operation_vrm_c.png" class="align-center" src="../_images/operation_vrm_c.png" />
 <div class="line-block">
@@ -496,8 +506,8 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </div>
 </section>
 <section id="index-7">
-<span id="id4"></span><h2><a class="toc-backref" href="#id19" role="doc-backlink"><span class="section-number">10.3.9. </span>Using Easy IK Mode</a><a class="headerlink" href="#index-7" title="Permalink to this heading"></a></h2>
-<p>Introduced in ver 2.13.0. This is a function that is only available for VRoid/VRM, but you can easily make your character take various poses by simply selecting your favorite movement from four different body parts.</p>
+<span id="id4"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">10.3.9. </span>Using Easy IK Mode</a><a class="headerlink" href="#index-7" title="Link to this heading"></a></h2>
+<p>Introduced in ver 2.13.0. This is a function that is only available for VRoid/VRM, but you can easily make your character take various poses by simply selecting your favorite movement from 6 different body parts.</p>
 <p>Clicking the button next to this will display a window.</p>
 <img alt="../_images/operation_vrm_c2.png" class="align-center" src="../_images/operation_vrm_c2.png" />
 <div class="line-block">
@@ -517,24 +527,28 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </table>
 <p>The key points in this feature are:</p>
 <dl class="field-list">
-<dt class="field-odd">4 parts<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Uses four types of parts: posture, line of sight, arms, and legs. If you do not select any part, no IK markers will be changed. These parts have an order in which they are applied as poses.</p>
+<dt class="field-odd">6 parts<span class="colon">:</span></dt>
+<dd class="field-odd"><p>It uses six types of parts: posture, gaze, right arm, left arm, right leg, and left leg. If you do not select any part, no IK markers will be changed. These parts have an order in which they are applied as poses.</p>
 <ol class="arabic simple">
 <li><p>posture</p></li>
-<li><p>line of sight, arm, leg</p></li>
+<li><p>Line of sight, right arm, left arm, right leg, left leg</p></li>
 </ol>
 <p>Posture is the most important part. It controls multiple upper body IK markers, including Pelvis and Aim.</p>
-<p>In addition to the posture, the line of sight, arms, and legs also move.</p>
+<p>In addition to the movements of the posture, the gaze, arms, and legs also move.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>On the screen, the order of the line-of-sight and posture combo boxes has been swapped to make it easier to understand the arrangement of VRM bones.</p>
+</div>
 </dd>
 <dt class="field-even">How to move<span class="colon">:</span></dt>
-<dd class="field-even"><p>It explains in one sentence how the four parts move.</p>
+<dd class="field-even"><p>It’s about how the six parts move.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can choose two arms and two legs.</p>
+<p>From version 2.15.0, the combo boxes for the arms and legs are now separated into left and right.</p>
 </div>
 </dd>
 <dt class="field-odd">Sample data<span class="colon">:</span></dt>
-<dd class="field-odd"><p>This app provides several movements for four different body parts.</p>
+<dd class="field-odd"><p>This app provides several movements for six different body parts.</p>
 </dd>
 <dt class="field-even">Starting with the T-pose<span class="colon">:</span></dt>
 <dd class="field-even"><p>Normally, each movement is applied based on the bone information of the current pose. If you check this box, the bone information of the T-pose will be used as the starting point.</p>
@@ -542,9 +556,9 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </dd>
 </dl>
 <section id="id5">
-<h3><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">10.3.9.1. </span>Method of operation</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">10.3.9.1. </span>Method of operation</a><a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <dl>
-<dt>Apply as a pose</dt><dd><p>Combine the four parts to create a pose.</p>
+<dt>Apply as a pose</dt><dd><p>The six parts are combined to create a pose.</p>
 <ol class="arabic simple">
 <li><p>Select VRM.</p></li>
 <li><p>From the properties panel on the right, open the <code class="docutils literal notranslate"><span class="pre">IK,</span> <span class="pre">Full</span> <span class="pre">Body</span></code> panel and click <img alt="ico_ikeasymode" src="../_images/prop_vrm_c2.png" /> .</p></li>
@@ -576,7 +590,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </div>
 </section>
 <section id="index-8">
-<span id="id6"></span><h3><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">10.3.9.2. </span>Prepare your own data</a><a class="headerlink" href="#index-8" title="Permalink to this heading"></a></h3>
+<span id="easyikmodecsv"></span><span id="id6"></span><h3><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">10.3.9.2. </span>Prepare your own data</a><a class="headerlink" href="#index-8" title="Link to this heading"></a></h3>
 <dl>
 <dt>Prepare your favorite moves</dt><dd><p>If you prepare a CSV file in the following format, you can load it into this app and create your own unique movements.</p>
 <p>Once you have prepared a CSV file in the format below, press the button <img alt="tool_ikopen" src="../_images/screen_ikmarker_4e.jpg" /> on the right side of the toolbar to open the file.</p>
@@ -595,7 +609,8 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 <p>You can download it directly from Google Drive.</p>
 </dd>
 </dl>
-<table class="docutils align-default">
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">csv-columns</span><a class="headerlink" href="#id10" title="Link to this table"></a></caption>
 <tbody>
 <tr class="row-odd"><td><p>kind</p></td>
 <td><p>name</p></td>
@@ -624,7 +639,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
 <td><p>Part Index</p></td>
-<td><p>0 - Posture 1 - line of sight 2 - Arms 3 - Legs</p></td>
+<td><p>0 - Posture 1 - Line of sight 2 - Left arm 3 - Left foot 4 - Right arm 5 - Right foot</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>Name of the movement</p></td>
@@ -699,7 +714,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 <p class="admonition-title">Caution</p>
 <p>Since certain IK markers are local coordinates from the parent IK marker, their position and rotation may be significantly distorted even if they are referenced as is.</p>
 <ul class="simple">
-<li><p>The X and Y coordinates of LeftShoulder and RightShoulder will not be helpful even if you use them as they are.</p></li>
+<li><p>The X/Y/Z coordinates of Head, Chest, Aim, LeftShoulder, and RightShoulder are not useful as they are. Use the values ​​multiplied by 0.1. (Example: <code class="docutils literal notranslate"><span class="pre">Pelvis_pos_y</span> <span class="pre">+</span> <span class="pre">(Aim_pos_y</span> <span class="pre">*</span> <span class="pre">0.1)</span></code> = Aim’s Y position)</p></li>
 <li><p>Since the Head, Chest, LeftShoulder, and RightShoulder move at the same time as the Pelvis moves, assigning values ​​to pos_x, pos_y, and pos_z will have no effect.</p></li>
 </ul>
 </div>
@@ -708,7 +723,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </section>
 </section>
 <section id="index-9">
-<span id="id7"></span><h2><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">10.3.10. </span>Adjust the restrictions of the movable range</a><a class="headerlink" href="#index-9" title="Permalink to this heading"></a></h2>
+<span id="id7"></span><h2><a class="toc-backref" href="#id23" role="doc-backlink"><span class="section-number">10.3.10. </span>Adjust the restrictions of the movable range</a><a class="headerlink" href="#index-9" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">In this app, VRM is standardized as standard, and some of the movable range is applied. VRM can easily reproduce the movement of the natural human body.</div>
 <div class="line">However, there are times when we compete with the IK of this application, which has a specification that cannot be reproduced by poses and animations. You can remove the restrictions on these IK markers.</div>
@@ -730,7 +745,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </div>
 </section>
 <section id="id8">
-<h2><a class="toc-backref" href="#id23" role="doc-backlink"><span class="section-number">10.3.11. </span>Interlocking between IK markers</a><a class="headerlink" href="#id8" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">10.3.11. </span>Interlocking between IK markers</a><a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">In this app, I use an IK marker to run the VRM bone, but when I move the IK marker in a specific part, another part works in conjunction.</div>
 <div class="line">Basically, it is only when operating an IK marker.</div>
@@ -765,7 +780,7 @@ Pelvis --&gt; Aim --&gt; Chest --&gt; LeftShoulder &amp; RightShoulder &amp; Hea
 </div>
 </section>
 <section id="index-10">
-<span id="id9"></span><h2><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">10.3.12. </span>Switch IK markers to different objects</a><a class="headerlink" href="#index-10" title="Permalink to this heading"></a></h2>
+<span id="id9"></span><h2><a class="toc-backref" href="#id25" role="doc-backlink"><span class="section-number">10.3.12. </span>Switch IK markers to different objects</a><a class="headerlink" href="#index-10" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">The VRM has IK markers set according to the parts mentioned above, and moving them changes the pose. A different object can be assigned to that IK marker that marks the movement of each part of the body.</div>
 <div class="line">I’ll explain what happens when I do this.</div>

@@ -1,24 +1,30 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12.2. Animation project structure &mdash; VRMViewMeister 2.13.0 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/mytheme.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>12.2. Animation project structure &mdash; VRMViewMeister 2.15.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/mytheme.css?v=fb30eb3b" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
-        <script>mermaid.initialize({startOnLoad:true});</script>
-        <script src="../_static/js/mermaid.js"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0a636f4a"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+      <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+      <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+      <script src="../_static/js/mermaid.js?v=bf4167eb"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,11 +37,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> VRMViewMeister
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            VRMViewMeister
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -93,9 +103,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="animation.html"><span class="section-number">12. </span>Animation</a> &raquo;</li>
-      <li><span class="section-number">12.2. </span>Animation project structure</li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="animation.html"><span class="section-number">12. </span>Animation</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">12.2. </span>Animation project structure</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/man4/specification.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -106,7 +116,7 @@
            <div itemprop="articleBody">
              
   <section id="index-0">
-<span id="id1"></span><h1><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">12.2. </span>Animation project structure</a><a class="headerlink" href="#index-0" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">12.2. </span>Animation project structure</a><a class="headerlink" href="#index-0" title="Link to this heading"></a></h1>
 <nav class="contents" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
@@ -119,8 +129,8 @@
 </ul>
 </nav>
 <p>We will explain the structure of the animation project. Roughly speaking, it goes like this:</p>
-<div class="mermaid">
-            flowchart LR
+<pre  class="mermaid">
+        flowchart LR
     subgraph File
         VRM[(VRM)]
         3dobj[(3D models)]
@@ -159,11 +169,11 @@
     tl2 ~~~ tl3
     VRM ==&gt; cast
     3dobj ==&gt; cast2
-        </div><section id="id2">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">12.2.1. </span>Each element</a><a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+    </pre><section id="id2">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">12.2.1. </span>Each element</a><a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <dl id="index-1">
-<dt>Timeline</dt><dd><div align="left" class="mermaid align-left">
-            flowchart LR
+<dt>Timeline</dt><dd><pre align="left" class="mermaid align-left">
+        flowchart LR
 subgraph tl1[Timeline 1]
     avatar1((Role))
 end
@@ -179,8 +189,7 @@ style avatar2 fill:#00FF00
 style avatar3 fill:#00FF00
 
 tl1 ~~~ tl2 ~~~ tl3
-        </div>
-        <div class="line-block">
+    </pre><div class="line-block">
 <div class="line">The timeline is the basic unit of animation. One timeline corresponds to one role and one cast.</div>
 <div class="line">The following roles are responsible for all of the actual functions.</div>
 </div>
@@ -195,8 +204,8 @@ tl1 ~~~ tl2 ~~~ tl3
 <div class="line"><br /></div>
 </div>
 <dl id="index-2">
-<dt>Role</dt><dd><div align="left" class="mermaid align-left">
-            flowchart LR
+<dt>Role</dt><dd><pre align="left" class="mermaid align-left">
+        flowchart LR
 subgraph role[Role]
     direction LR
     cast((Cast))
@@ -215,8 +224,7 @@ style keyframe fill:#FFFF25
 style keys1 fill:#FFFF00
 style keys2 fill:#FFFF00
 style keys3 fill:#FFFF00
-        </div>
-        <div class="line-block">
+    </pre><div class="line-block">
 <div class="line">A role is a collection of roles and character actions that determine how each object moves on the timeline.</div>
 <div class="line">Within the role there are casts to be assigned and keyframe data.</div>
 <div class="line">A role can be replaced with another object as long as it is of the same object type.</div>
@@ -231,16 +239,15 @@ style keys3 fill:#FFFF00
 <div class="line"><br /></div>
 </div>
 <dl id="index-3">
-<dt>Cast / object / avatar</dt><dd><div align="left" class="mermaid align-left">
-            flowchart LR
+<dt>Cast / object / avatar</dt><dd><pre align="left" class="mermaid align-left">
+        flowchart LR
 
     cast((Cast))
 
 
 
 style cast fill:#FF9090
-        </div>
-        <div class="line-block">
+    </pre><div class="line-block">
 <div class="line">A cast is an object assigned to a role. This is the substance of the actual VRoid/VRM, FBX, Light, Audio, and other objects.</div>
 <div class="line">In this application, they are simply referred to as OBJECT or AVATAR.</div>
 </div>
@@ -252,8 +259,8 @@ style cast fill:#FF9090
 <div class="line"><br /></div>
 </div>
 <dl id="index-4">
-<dt>Key frame</dt><dd><div align="left" class="mermaid align-left">
-            flowchart LR
+<dt>Key frame</dt><dd><pre align="left" class="mermaid align-left">
+        flowchart LR
 subgraph keyframe
     direction TB
     keys1{&quot; &quot;}
@@ -265,8 +272,7 @@ style keyframe fill:#FFFF25
 style keys1 fill:#FFFF00
 style keys2 fill:#FFFF00
 style keys3 fill:#FFFF00
-        </div>
-        <p>A keyframe is the actual movement data of the roll, the motion. This data is only held by the role, and in principle it does not depend on each object.</p>
+    </pre><p>A keyframe is the actual movement data of the roll, the motion. This data is only held by the role, and in principle it does not depend on each object.</p>
 </dd>
 </dl>
 <div class="line-block">
@@ -276,15 +282,15 @@ style keys3 fill:#FFFF00
 </div>
 </section>
 <section id="id3">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">12.2.2. </span>timeline role cast relationship</a><a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">12.2.2. </span>timeline role cast relationship</a><a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">The timeline is ultimately the same as the role. Then cast means the same as the actual object.</div>
 <div class="line">Roles are linked 1:1 with casts (objects). A role can be in an uncast state, but the role will not be animated at all.</div>
 </div>
 <p>You can later assign another cast (object) to the role.</p>
 <p>For example, it would be as follows. (colors and icons correspond to the example above)</p>
-<div class="mermaid">
-            flowchart LR
+<pre  class="mermaid">
+        flowchart LR
 subgraph File
     VRM1[(VRM 1)]
     VRM2[(VRM 2)]
@@ -311,7 +317,7 @@ style keys2 fill:#FFFF00
 style keys3 fill:#FFFF00
 
 VRM1 &amp; VRM2 ==&gt; cast
-        </div><dl class="field-list simple">
+    </pre><dl class="field-list simple">
 <dt class="field-odd">Role<span class="colon">:</span></dt>
 <dd class="field-odd"><p>anime and drama characters</p>
 </dd>
