@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10.2. Texture &mdash; VRMViewMeister 2.15.0 documentation</title>
+  <title>10.2. Texture &mdash; VRMViewMeister 2.16.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/mytheme.css?v=fb30eb3b" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=0a636f4a"></script>
+      <script src="../_static/documentation_options.js?v=981cb1a1"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/js/mermaid.js?v=bf4167eb"></script>
@@ -61,7 +61,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#id3">10.2.1.1. Apply to all parts</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">10.2.2. Ttexture details</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">10.2.2. Texture details</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#standard">10.2.2.1. Standard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#vrm10-mtoon10">10.2.2.2. VRM10/MToon10</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#water">10.2.2.3. Water</a></li>
@@ -142,7 +142,7 @@
 <li><p><a class="reference internal" href="#id3" id="id11">Apply to all parts</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#id4" id="id12">Ttexture details</a></p>
+<li><p><a class="reference internal" href="#id4" id="id12">Texture details</a></p>
 <ul>
 <li><p><a class="reference internal" href="#standard" id="id13">Standard</a></p></li>
 <li><p><a class="reference internal" href="#vrm10-mtoon10" id="id14">VRM10/MToon10</a></p></li>
@@ -217,7 +217,7 @@
 </section>
 </section>
 <section id="id4">
-<h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">10.2.2. </span>Ttexture details</a><a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id12" role="doc-backlink"><span class="section-number">10.2.2. </span>Texture details</a><a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Shader<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Choose one of the following: <code class="docutils literal notranslate"><span class="pre">Standard</span></code>, <code class="docutils literal notranslate"><span class="pre">VRM/MToon</span></code>, <code class="docutils literal notranslate"><span class="pre">VRM10/MToon1</span></code>, <code class="docutils literal notranslate"><span class="pre">Water</span></code>, <code class="docutils literal notranslate"><span class="pre">Sketch</span></code>, <code class="docutils literal notranslate"><span class="pre">PostSketch</span></code>, <code class="docutils literal notranslate"><span class="pre">Comic</span></code>, <code class="docutils literal notranslate"><span class="pre">Ice</span></code> , <code class="docutils literal notranslate"><span class="pre">Pixelize</span></code> , <code class="docutils literal notranslate"><span class="pre">Cutout</span></code></p>
@@ -263,6 +263,22 @@
 <dt>From camera <a class="footnote-reference brackets" href="#id8" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></dt><dd><p>Select a camera object that exists in your project. It is necessary to set the render texture separately on the camera object side.</p>
 </dd>
 </dl>
+</dd>
+<dt class="field-even">Ttexture tiling<span class="colon">:</span></dt>
+<dd class="field-even"><p>Specify the number of tiles to place with X and Y. The more the number, the more consecutive tiles of the same texture will be placed.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>x:y=1:1</p></td>
+<td><p><img alt="textiling01" src="../_images/operation_texture01.png" /></p></td>
+</tr>
+<tr class="row-even"><td><p>x:y=3:2</p></td>
+<td><p><img alt="textiling02" src="../_images/operation_texture02.png" /></p></td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt class="field-odd">Texture Offset<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The texture is offset in both X and Y.</p>
 </dd>
 </dl>
 <div class="admonition hint">
@@ -326,6 +342,12 @@
 <dd class="field-even"><p>Applies complex changes in color and transparency. For details, please search the explanation site of VRM/MToon.</p>
 </dd>
 <dt class="field-odd">Texture type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Same as Standard</p>
+</dd>
+<dt class="field-even">Ttexture tiling<span class="colon">:</span></dt>
+<dd class="field-even"><p>Same as Standard</p>
+</dd>
+<dt class="field-odd">Texture Offset<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Same as Standard</p>
 </dd>
 </dl>
