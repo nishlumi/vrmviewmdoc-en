@@ -14,7 +14,7 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=e9c9fbf8"></script>
-      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/js/mermaid.js?v=bf4167eb"></script>
     <script src="../_static/js/theme.js"></script>
@@ -122,8 +122,24 @@
 <span id="id1"></span><h1><span class="section-number">6.8. </span>Pose/Motion list<a class="headerlink" href="#index-0" title="Link to this heading"></a></h1>
 <table class="docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><img alt="posewin1" src="../_images/screen_pose.png" /></p></td>
+<tr class="row-odd"><td><p>Dialog (pause)</p></td>
+<td><p>Dialog (Motion)</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="posewin1" src="../_images/screen_pose.png" /></p></td>
 <td><p><img alt="posewin2" src="../_images/screen_pose2.png" /></p></td>
+</tr>
+</tbody>
+</table>
+<p>Starting with version 2.18.0, it can now be displayed in the same position as the timeline panel at the bottom of the main window.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>パネル(ポーズ)</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="posewin3" src="../_images/screen_pose4.png" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>Panel (Motion)</p></td>
+</tr>
+<tr class="row-even"><td><p><img alt="posewin4" src="../_images/screen_pose5.png" /></p></td>
 </tr>
 </tbody>
 </table>
@@ -141,20 +157,27 @@
 </div>
 <dl>
 <dt>Toolbar</dt><dd><dl class="field-list simple">
-<dt class="field-odd">Reload<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Reload the pose list.</p>
+<dt class="field-odd">Close<span class="colon">:</span></dt>
+<dd class="field-odd"><p>When the panel is visible, close it and return to the Timeline panel.</p>
 </dd>
-<dt class="field-even">Apply Pose<span class="colon">:</span></dt>
-<dd class="field-even"><p>Reflect the currently selected pose to the currently selected VRoid/VRM.</p>
+<dt class="field-even">Reload<span class="colon">:</span></dt>
+<dd class="field-even"><p>Reload the pose list.</p>
 </dd>
-<dt class="field-odd">delete pose<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Delete the currently selected pose.</p>
+<dt class="field-odd">Apply Pose<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Reflects the currently selected pose to the currently selected VRoid/VRM. You can also apply the pose/motion by double-clicking (double-tapping).</p>
 </dd>
-<dt class="field-even">Download as file<span class="colon">:</span></dt>
-<dd class="field-even"><p>Download the currently selected pose to a file.</p>
+<dt class="field-even">delete pose<span class="colon">:</span></dt>
+<dd class="field-even"><p>Delete the currently selected pose.</p>
+<ul class="simple">
+<li><p>When the panel is displayed, you can right-click on any pose or motion and select it from the menu that appears.</p></li>
+<li><p>Currently, you can only delete files from the internal storage when deleting them from the app.</p></li>
+</ul>
 </dd>
-<dt class="field-odd">open from file<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Open the pose file from your terminal.</p>
+<dt class="field-odd">Download as file<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Download the currently selected pose to a file. When the panel is displayed, you can right-click on any pose or motion and select it from the menu that appears.</p>
+</dd>
+<dt class="field-even">open from file<span class="colon">:</span></dt>
+<dd class="field-even"><p>Open the pose file from your terminal.</p>
 </dd>
 </dl>
 </dd>
@@ -192,7 +215,7 @@
 </dl>
 </dd>
 <dt>Bottom</dt><dd><dl>
-<dt>ポーズ・モーション一覧:</dt><dd><p>Displays saved poses and motions.</p>
+<dt>Pose/Motion list:</dt><dd><p>Displays saved poses and motions.</p>
 <p>The poses come with thumbnails. The pose name and the avatar (VRM) name at the time of saving are displayed next to the thumbnail.</p>
 <p>Motion displays the corresponding object type, format version, number of keyframes, start frame, and end frame.</p>
 </dd>
