@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11.3. Detect pauses with MediaPipe &mdash; VRMViewMeister 2.17.0 documentation</title>
+  <title>11.3. Detect pauses with MediaPipe &mdash; VRMViewMeister 2.18.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/mytheme.css?v=fb30eb3b" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=e9c9fbf8"></script>
+      <script src="../_static/documentation_options.js?v=5fda547c"></script>
       <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="../_static/js/mermaid.js?v=bf4167eb"></script>
@@ -173,13 +173,17 @@
 <h2><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">11.3.1. </span>save the pose</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <p>This is the normal procedure for obtaining a pose.</p>
 <ol class="arabic simple">
-<li><p>Click the blue button at the bottom right of the window.</p></li>
+<li><p>Click the blue SHUTTER button to the right of the center of the window.</p></li>
 </ol>
 <img alt="../_images/posing_e.png" class="align-center" src="../_images/posing_e.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The timer function has been discontinued in version 2.19.0.</p>
 <p>If you set the number of seconds for the timer to 1 or more, the timer will start after you press the button, and after that number of seconds the pose will be taken automatically.</p>
+</div>
 <ol class="arabic simple" start="2">
 <li><p>Confirm that the pose has been reflected on the main screen of this app.</p></li>
 </ol>
@@ -199,14 +203,14 @@
 <h2><a class="toc-backref" href="#id11" role="doc-backlink"><span class="section-number">11.3.2. </span>Always detect poses</a><a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <p>This is a function added from ver 2.0. The pose recognized by the webcam is <strong>always reflected</strong> on the currently selected VRM.</p>
 <ol class="arabic simple">
-<li><p>Click the red button in the lower right corner of the window.</p></li>
+<li><p>Click the AUTO button at the bottom center of the window.</p></li>
 </ol>
-<img alt="../_images/posing_e.png" class="align-center" src="../_images/posing_e.png" />
+<img alt="../_images/posing_e2.png" class="align-center" src="../_images/posing_e2.png" />
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Press the red button again to stop reflecting the pose.</p></li>
+<li><p>Pressing the AUTO button again will stop the pause from being reflected.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -227,27 +231,16 @@
 </div>
 </dd>
 </dl>
-<ol class="arabic simple" start="2">
-<li><p>Confirm that the pose is detected from another camera/image.</p></li>
-</ol>
-<img alt="../_images/posing_h.png" class="align-center" src="../_images/posing_h.png" />
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-<div class="line-block">
-<div class="line">Due to the high performance of MediaPipe, it is possible to detect the human body and acquire poses not only from photographs but also from illustrations.</div>
-<div class="line">Try using various images.</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In the case of illustrations and photos, the depth may not be fully reproduced. In that case, please modify each IK by operating VRM directly after saving the pose.</p>
-</div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
 <section id="id4">
 <h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">11.3.4. </span>Save pose with timer</a><a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature was discontinued in version 2.19.0.</p>
+</div>
 <p>With the timer function, the camera image can be automatically shot after the specified time and the pose can be detected.</p>
 <ol class="arabic simple">
 <li><p>Specify the number of seconds in “Save timer” in the tool window.</p></li>
@@ -277,6 +270,10 @@
 </section>
 <section id="id5">
 <h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">11.3.5. </span>Other functions</a><a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This feature was discontinued in version 2.19.0.</p>
+</div>
 <img alt="../_images/posing_k.png" class="align-center" src="../_images/posing_k.png" />
 <div class="line-block">
 <div class="line"><br /></div>
